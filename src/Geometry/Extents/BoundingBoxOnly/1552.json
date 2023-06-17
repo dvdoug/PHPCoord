@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1552",
+    "title": "Africa/Africa - Eritrea, Ethiopia and Sudan - 36°E to 42°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [36, 3.406666278839111], [42, 3.406666278839111], [42, 22.00111007690458], [36, 22.00111007690458], [36, 3.406666278839111]
+        ]
+    ]
+}

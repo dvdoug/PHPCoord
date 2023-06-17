@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2811",
+    "title": "Australasia and Oceania/French Polynesia - Society Islands - Moorea and Tahiti",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-149.9916815053215, -17.9208349477044], [-149.0966821421394, -17.9208349477044], [-149.0966821421394, -17.416803907276], [-149.9916815053215, -17.416803907276], [-149.9916815053215, -17.9208349477044]
+        ]
+    ]
+}

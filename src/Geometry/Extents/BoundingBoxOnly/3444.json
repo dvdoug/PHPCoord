@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3444",
+    "title": "South America/South America - 54°W to 48°W, S hemisphere and SIRGAS 2000 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-54, -54.17933464050293], [-47.99999999999994, -54.17933464050293], [-47.99999999999994, 7.035322189331112], [-54, 7.035322189331112], [-54, -54.17933464050293]
+        ]
+    ]
+}

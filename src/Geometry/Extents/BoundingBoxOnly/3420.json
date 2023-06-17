@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3420",
+    "title": "North America/North America - 66°W to 60°W and NAD83 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-66, 15.63216633531545], [-60, 15.63216633531545], [-60, 84], [-66, 84], [-66, 15.63216633531545]
+        ]
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1581",
+    "title": "Africa/Africa - Kenya, Tanzania and Uganda - south of equator and 30°E to 36°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [29.99999999999994, -11.6070842742917], [36, -11.6070842742917], [
+                36,
+                5.7e-14
+            ],
+            [
+                29.99999999999994,
+                5.7e-14
+            ],
+            [29.99999999999994, -11.6070842742917]
+        ]
+    ]
+}

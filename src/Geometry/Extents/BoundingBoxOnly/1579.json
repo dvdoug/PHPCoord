@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1579",
+    "title": "Africa/Africa - Tanzania and Uganda - south of equator and west of 30°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [29.34083175659213, -6.800935116004413], [30, -6.800935116004413], [30, 0], [29.34083175659213, 0], [29.34083175659213, -6.800935116004413]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2149",
+    "title": "North America/North America - 72°W to 66°W and NAD27 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-72, 33.61437418775871], [-66, 33.61437418775871], [-66, 83.16267232268933], [-72, 83.16267232268933], [-72, 33.61437418775871]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4453",
+    "title": "Australasia and Oceania/Australia - Western Australia - Lancelin",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [115.15, -31.48333333333333], [115.6166666666666, -31.48333333333333], [115.6166666666666, -30.71666666666666], [115.15, -30.71666666666666], [115.15, -31.48333333333333]
+        ]
+    ]
+}

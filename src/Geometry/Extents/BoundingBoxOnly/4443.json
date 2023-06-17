@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4443",
+    "title": "Australasia and Oceania/Australia - Western Australia - Collie",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [115.7333333333333, -34.66666666666666], [116.4, -34.66666666666666], [116.4, -33.25], [115.7333333333333, -33.25], [115.7333333333333, -34.66666666666666]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1504",
+    "title": "Australasia and Oceania/New Zealand - offshore 174°E to 180°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [174, -54.31753376097091], [180, -54.31753376097091], [180, -26.42132672326129], [174, -26.42132672326129], [174, -54.31753376097091]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4451",
+    "title": "Australasia and Oceania/Australia - Western Australia - Karratha",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [116.5833333333333, -20.91666666666666], [117.25, -20.91666666666666], [117.25, -20.25], [116.5833333333333, -20.25], [116.5833333333333, -20.91666666666666]
+        ]
+    ]
+}

@@ -16,7 +16,6 @@ use function str_starts_with;
 use function substr;
 use function unlink;
 use function sleep;
-use function in_array;
 
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READWRITE;
@@ -158,7 +157,7 @@ class EPSGImporter
                 SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
             );
 
-            $extentDB->exec('CREATE TABLE extent(extent_code INTEGER PRIMARY KEY, original TEXT, buffered TEXT, revision_date DATE)');
+            $extentDB->exec('CREATE TABLE extent(extent_code INTEGER PRIMARY KEY, original TEXT, buffered TEXT, bbox TEXT, revision_date DATE)');
         } else {
             $extentDB = new SQLite3(
                 $this->resourceDir . '/epsg/extents.sqlite',
@@ -189,11 +188,10 @@ class EPSGImporter
 
             if (!$existingExtent) {
                 echo $extentMetaData['extent_code'] . "\n";
-                $codeToUse = in_array($extentMetaData['extent_code'], [1263, 4205, 4393], true) ? 1262 : $extentMetaData['extent_code'];
-                $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/$codeToUse/polygon/");
+                $geoJson = file_get_contents("https://apps.epsg.org/api/v1/Extent/{$extentMetaData['extent_code']}/polygon/");
                 $upsertSQL = "
-                    INSERT INTO extent (extent_code, original, buffered, revision_date)
-                    VALUES ({$extentMetaData['extent_code']}, '{$geoJson}', NULL, '{$extentMetaData['revision_date']}')
+                    INSERT INTO extent (extent_code, original, buffered, bbox, revision_date)
+                    VALUES ({$extentMetaData['extent_code']}, '{$geoJson}', NULL, NULL, '{$extentMetaData['revision_date']}')
                     ON CONFLICT(extent_code) DO UPDATE SET original = excluded.original, revision_date=excluded.revision_date, buffered = excluded.buffered
                 ";
                 $extentDB->exec($upsertSQL);
@@ -202,6 +200,10 @@ class EPSGImporter
         }
 
         $extentDB->exec('UPDATE extent SET buffered = CASE WHEN ST_NPoints(GeomFromGeoJSON(original)) > ' . self::BUFFER_THRESHOLD . ' THEN AsGeoJSON(ST_Buffer(GeomFromGeoJSON(original), ' . self::BUFFER_SIZE . ')) ELSE original END WHERE buffered IS NULL');
+        $bboxes = $extentDB->query('SELECT extent_code, AsGeoJSON(Extent(GeomFromGeoJSON(original))) AS bbox FROM extent WHERE bbox IS NULL GROUP BY extent_code');
+        while ($bbox = $bboxes->fetchArray(SQLITE3_ASSOC)) {
+            $extentDB->exec("UPDATE extent SET bbox = '{$bbox['bbox']}' WHERE extent_code = {$bbox['extent_code']}");
+        }
 
         $extentDB->close();
         $dataDB->close();

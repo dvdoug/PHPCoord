@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3730",
+    "title": "Asia-ExFSU/Korea, Republic of (South Korea) - 126°E to 128°E mainland",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [126, 33.96720146762797], [128, 33.96720146762797], [128, 38.32332611083995], [126, 38.32332611083995], [126, 33.96720146762797]
+        ]
+    ]
+}

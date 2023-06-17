@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3875",
+    "title": "North America/Canada - Labrador - 63°W to 60°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-63, 52], [-60, 52], [-60, 58.91979871617482], [-63, 58.91979871617482], [-63, 52]
+        ]
+    ]
+}

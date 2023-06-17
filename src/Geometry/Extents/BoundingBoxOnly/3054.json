@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3054",
+    "title": "Antarctic/Antarctica - 76°S to 80°S, 12°W to 12°E (ST29-32)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-12, -80], [12, -80], [12, -76], [-12, -76], [-12, -80]
+        ]
+    ]
+}

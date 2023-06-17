@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3075",
+    "title": "Antarctic/Antarctica - 84°S to 88°S, 120°W to 60°W (SV11-20)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-120, -88], [-60, -88], [-60, -84], [-120, -84], [-120, -88]
+        ]
+    ]
+}

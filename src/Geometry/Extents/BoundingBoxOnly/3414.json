@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3414",
+    "title": "North America/Canada - 96°W to 90°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-96, 48.0319125625411], [-90, 48.0319125625411], [-90, 84], [-96, 84], [-96, 48.0319125625411]
+        ]
+    ]
+}

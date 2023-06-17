@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1578",
+    "title": "Africa/Uganda - north of equator and west of 30°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [29.71819305419921, 0], [30, 0], [30, 0.856463485431366], [29.71819305419921, 0.856463485431366], [29.71819305419921, 0]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4383",
+    "title": "Australasia and Oceania/Papua New Guinea - onshore south of 5°S and west of 144°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [140.8588562011722, -9.348503230999938], [144.0000000000001, -9.348503230999938], [144.0000000000001, -5], [140.8588562011722, -5], [140.8588562011722, -9.348503230999938]
+        ]
+    ]
+}

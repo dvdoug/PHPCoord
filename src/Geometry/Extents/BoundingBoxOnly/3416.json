@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3416",
+    "title": "North America/Canada - 84°W to 78°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84, 41.67555236816423], [-78, 41.67555236816423], [-78, 84], [-84, 84], [-84, 41.67555236816423]
+        ]
+    ]
+}

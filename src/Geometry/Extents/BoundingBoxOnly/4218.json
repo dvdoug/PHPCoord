@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4218",
+    "title": "Asia-ExFSU/Vietnam - Quang Ninh; Da Nang, Quang Nam; Ba Ria-Vung Tau, Dong Nai, Lam Dong",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [106.43913269, 8.578488504393192], [108.7558246273962, 8.578488504393192], [108.7558246273962, 21.66494560200004], [106.43913269, 21.66494560200004], [106.43913269, 8.578488504393192]
+        ]
+    ]
+}

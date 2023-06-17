@@ -21,7 +21,6 @@ use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
-use PHPCoord\Geometry\Extents\ExtentMap;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PhpCsFixer\AbstractFixer;
@@ -53,9 +52,12 @@ use function ucfirst;
 use function uasort;
 use function implode;
 use function asort;
-use function array_map;
 use function class_exists;
 use function str_ends_with;
+use function array_unique;
+use function explode;
+use function array_map;
+use function rtrim;
 
 use const PHP_EOL;
 
@@ -265,6 +267,9 @@ class Codegen
                 $subhead .= '| Method: ' . ucfirst(trim($row['method_name'])) . "\n";
             }
             if (isset($row['extent_description']) && $row['extent_description']) {
+                $row['extent_description'] = array_unique(explode('|', $row['extent_description']));
+                $row['extent_description'] = array_map(fn (string $extentDescription) => rtrim($extentDescription, '.'), $row['extent_description']);
+                $row['extent_description'] = implode(', ', $row['extent_description']);
                 $subhead .= '| Extent: ' . trim($row['extent_description']) . "\n";
             }
             if ($subhead) {
@@ -313,7 +318,6 @@ class Codegen
     {
         echo 'Updating coordinate conversion list...';
 
-        $extentMap = (new ExtentMap())();
         $transformations = [
             ...CRSTransformationsGlobal::getSupportedTransformations(),
             ...CRSTransformationsAfrica::getSupportedTransformations(),
@@ -373,7 +377,7 @@ class Codegen
                         $methodData = CoordinateOperationMethods::getMethodData($operation['method']);
                         $methodName = CoordinateOperationMethods::getFunctionName($operation['method']);
                         $params = CoordinateOperations::getParamData($operationSrid);
-                        $extentName = str_replace('"', '″', implode(', ', array_map(fn ($extent) => $extentMap[$extent]['name'], $operation['extent'])));
+                        $extentName = str_replace('"', '″', $operation['extent_name']);
                         $opTable .= '    "| Name: ' . $operation['name'] . "\n    | Code: ``{$operationSrid}``\n    | Extent: {$extentName}\",";
                         $opTable .= "\".. code-block:: php\n\n        \$point->" . $methodName . '(' . "\n";
                         $docParams = [

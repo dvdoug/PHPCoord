@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4439",
+    "title": "Australasia and Oceania/Australia - Western Australia - Albany",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [117.5499999999999, -35.2], [118.2166666666666, -35.2], [118.2166666666666, -34.75], [117.5499999999999, -34.75], [117.5499999999999, -35.2]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4448",
+    "title": "Australasia and Oceania/Australia - Western Australia - Exmouth",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [113.75, -22.41666666666666], [114.25, -22.41666666666666], [114.25, -21.75], [113.75, -21.75], [113.75, -22.41666666666666]
+        ]
+    ]
+}

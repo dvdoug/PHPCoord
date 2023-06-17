@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2141",
+    "title": "North America/North America - 120°W to 114°W and NAD27 by country - onshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-120, 26.932039982937], [-114, 26.932039982937], [-114, 78.12031047478598], [-120, 78.12031047478598], [-120, 26.932039982937]
+        ]
+    ]
+}

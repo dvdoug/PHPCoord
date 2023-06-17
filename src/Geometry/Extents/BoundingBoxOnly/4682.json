@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4682",
+    "title": "Europe-FSU/UK - London to Leamington Spa",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-2.25, 51.45], [-0.05, 51.45], [-0.05, 52.89999999999999], [-2.25, 52.89999999999999], [-2.25, 51.45]
+        ]
+    ]
+}

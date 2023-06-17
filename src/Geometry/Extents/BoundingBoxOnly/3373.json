@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3373",
+    "title": "North America/USA - 174°E to 180°E - AK, OCS",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [174, 47.92956], [180, 47.92956], [180, 56.66214], [174, 56.66214], [174, 47.92956]
+        ]
+    ]
+}

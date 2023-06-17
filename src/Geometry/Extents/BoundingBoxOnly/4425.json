@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4425",
+    "title": "Australasia and Oceania/Papua New Guinea - onshore - Central province and Gulf province east of 144°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [144.4029618340708, -10.41146648039506], [149.6670915696499, -10.41146648039506], [149.6670915696499, -6.676726922399041], [144.4029618340708, -6.676726922399041], [144.4029618340708, -10.41146648039506]
+        ]
+    ]
+}

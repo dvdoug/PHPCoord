@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use Composer\InstalledVersions;
 use Composer\Pcre\Preg;
 use Exception;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
@@ -24,13 +25,13 @@ use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
+use PHPCoord\Geometry\GeoJSON\GeoJSON;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
-use ReflectionClass;
 use SQLite3;
 
 use function array_map;
@@ -50,20 +51,12 @@ use function str_replace;
 use function ucwords;
 use function unlink;
 use function var_export;
-use function min;
-use function max;
-use function array_column;
-use function json_decode;
-use function substr;
 use function basename;
-use function class_exists;
-use function filemtime;
-use function touch;
-use function strtotime;
+use function addcslashes;
+use function preg_replace;
 
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
-use const JSON_THROW_ON_ERROR;
 use const PHP_EOL;
 
 class EPSGCodegenFromDataImport
@@ -935,7 +928,8 @@ class EPSGCodegenFromDataImport
                 d.frame_reference_epoch,
                 d.origin_description || '\n' || d.remarks AS constant_help,
                 d.datum_type AS type,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 d.origin_description || '\n' || d.remarks AS doc_help,
                 d.deprecated
             FROM epsg_datum d
@@ -1198,8 +1192,9 @@ class EPSGCodegenFromDataImport
                 horizontal.coord_ref_sys_kind AS horizontal_crs_type,
                 'urn:ogc:def:crs:EPSG::' || crs.cmpd_vertcrs_code AS vertical_crs,
                 crs.remarks AS constant_help,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1247,8 +1242,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.remarks AS constant_help,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1294,8 +1290,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.remarks AS constant_help,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1342,8 +1339,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.remarks AS constant_help,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1389,8 +1387,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || crs.base_crs_code AS base_crs,
                 'urn:ogc:def:coordinateOperation:EPSG::' || crs.projection_conv_code AS deriving_conversion,
                 crs.remarks AS constant_help,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1440,8 +1439,9 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code, crs_base2.datum_code) AS datum,
                 crs.remarks AS constant_help,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1490,7 +1490,8 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:cs:EPSG::' || crs.coord_sys_code AS coordinate_system,
                 'urn:ogc:def:datum:EPSG::' || COALESCE(crs.datum_code, crs_base.datum_code) AS datum,
                 crs.remarks AS constant_help,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
@@ -1587,7 +1588,6 @@ class EPSGCodegenFromDataImport
     public function generateDataCoordinateOperations(): void
     {
         $filenameToProviderMap = require 'FilenameToProviderMap.php';
-        $regionMap = (new RegionMap())();
 
         $blackListedOperations = $this->getBlacklistedOperations();
 
@@ -1598,7 +1598,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || o.source_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || o.target_crs_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 '' AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1622,7 +1622,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:crs:EPSG::' || projcrs.base_crs_code AS source_crs,
                 'urn:ogc:def:crs:EPSG::' || projcrs.coord_ref_sys_code AS target_crs,
                 COALESCE(o.coord_op_accuracy, 0) AS accuracy,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 '' AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived')
@@ -1643,7 +1643,7 @@ class EPSGCodegenFromDataImport
         $byRegion = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $extents = explode(',', $row['extent']);
-            $regions = array_unique(array_map(static fn ($extent) => $regionMap[$extent], $extents));
+            $regions = array_unique(array_map(static fn ($extent) => RegionMap::EXTENTS[$extent], $extents));
             assert(count($regions) === 1);
             unset($row['extent']);
             $byRegion[$regions[0]][] = $row;
@@ -1666,8 +1666,9 @@ class EPSGCodegenFromDataImport
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
                 m.coord_op_method_name AS method_name,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 o.remarks AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
@@ -1691,8 +1692,9 @@ class EPSGCodegenFromDataImport
                 o.coord_op_type AS type,
                 'urn:ogc:def:method:EPSG::' || o.coord_op_method_code AS method,
                 m.coord_op_method_name AS method_name,
-                GROUP_CONCAT(DISTINCT e.extent_code) AS extent,
-                REPLACE(GROUP_CONCAT(DISTINCT e.extent_description), '.,', ', ') AS extent_description,
+                GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
+                GROUP_CONCAT(e.extent_name, '|') AS extent_name,
+                GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 o.remarks AS doc_help
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived')
@@ -1806,20 +1808,9 @@ class EPSGCodegenFromDataImport
         echo 'Updating extents...';
 
         $boundingBoxOnly = $this->sourceDir . '/Geometry/Extents/BoundingBoxOnly/';
-        $builtInFull = $this->sourceDir . '/Geometry/Extents/';
-        $africa = $this->sourceDir . '/../vendor/php-coord/datapack-africa/src/Geometry/Extents/';
-        $antarctic = $this->sourceDir . '/../vendor/php-coord/datapack-antarctic/src/Geometry/Extents/';
-        $arctic = $this->sourceDir . '/../vendor/php-coord/datapack-arctic/src/Geometry/Extents/';
-        $asia = $this->sourceDir . '/../vendor/php-coord/datapack-asia/src/Geometry/Extents/';
-        $europe = $this->sourceDir . '/../vendor/php-coord/datapack-europe/src/Geometry/Extents/';
-        $northAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-northamerica/src/Geometry/Extents/';
-        $southAmerica = $this->sourceDir . '/../vendor/php-coord/datapack-southamerica/src/Geometry/Extents/';
-        $oceania = $this->sourceDir . '/../vendor/php-coord/datapack-oceania/src/Geometry/Extents/';
-
-        $regionMap = (new RegionMap())();
 
         $sql = "
-            SELECT e.extent_code, e.extent_name, e.revision_date
+            SELECT e.extent_code, e.extent_name, e.revision_date, 'urn:ogc:def:area:EPSG::' || e.extent_code AS extent_urn
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_code = crs.coord_ref_sys_code AND u.object_table_name = 'epsg_coordinatereferencesystem'
             JOIN epsg_extent e ON u.extent_code = e.extent_code
@@ -1829,7 +1820,7 @@ class EPSGCodegenFromDataImport
 
             UNION
 
-            SELECT e.extent_code, e.extent_name, e.revision_date
+            SELECT e.extent_code, e.extent_name, e.revision_date, 'urn:ogc:def:area:EPSG::' || e.extent_code AS extent_urn
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code AND sourcecrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND sourcecrs.deprecated = 0
             JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
@@ -1843,7 +1834,7 @@ class EPSGCodegenFromDataImport
 
             UNION
 
-            SELECT e.extent_code, e.extent_name, e.revision_date
+            SELECT e.extent_code, e.extent_name, e.revision_date, 'urn:ogc:def:area:EPSG::' || e.extent_code AS extent_urn
             FROM epsg_coordoperation o
             JOIN epsg_coordinatereferencesystem projcrs ON projcrs.projection_conv_code = o.coord_op_code AND projcrs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND projcrs.deprecated = 0
             JOIN epsg_usage u ON u.object_code = o.coord_op_code AND u.object_table_name = 'epsg_coordoperation'
@@ -1863,147 +1854,45 @@ class EPSGCodegenFromDataImport
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $extents[$row['extent_code']] = $row;
 
-            if (!isset($regionMap[$row['extent_code']])) {
-                throw new Exception("Unknown region for {$row['extent_code']}:{$row['extent_name']}");
+            if (!isset(RegionMap::EXTENTS[$row['extent_urn']])) {
+                throw new Exception("Unknown region for {$row['extent_urn']}:{$row['extent_name']}");
             }
         }
 
-        $this->codeGen->updateFileData($this->sourceDir . '/Geometry/Extents/ExtentMap.php', array_map(fn (array $extent) => ['name' => $extent['extent_name']], $extents));
-
         foreach ($extents as $extentCode => $extent) {
-            if (class_exists("PHPCoord\\Geometry\\Extents\\Extent{$extentCode}")) {
-                $reflectionClass = new ReflectionClass("PHPCoord\\Geometry\\Extents\\Extent{$extentCode}");
-                if (filemtime($reflectionClass->getFileName()) === strtotime($extent['revision_date'])) {
-                    continue;
-                }
-            }
-            echo $extentCode . ' ' . $extent['extent_name'] . PHP_EOL;
+            $region = RegionMap::EXTENTS[$extent['extent_urn']];
 
-            $region = $regionMap[$extentCode];
-            $originalPolygons = json_decode($this->extentDB->querySingle("SELECT original FROM extent WHERE extent_code = {$extentCode}"), true, 512, JSON_THROW_ON_ERROR);
-            $exportSimple = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents\BoundingBoxOnly;\n/**\n * {$region}/{$extent['extent_name']}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
+            $bboxGeoJSON = $this->extentDB->querySingle("SELECT bbox FROM extent WHERE extent_code = {$extentCode}");
+            $bboxGeoJSON = $this->addMetaDataToGeoJSON($bboxGeoJSON, $extent['extent_urn'], "{$region}/{$extent['extent_name']}");
+            $bboxGeoJSON = GeoJSON::format($bboxGeoJSON);
 
-            if ($originalPolygons['type'] === 'Polygon') {
-                $originalPolygons['coordinates'] = [$originalPolygons['coordinates']];
-            }
-
-            if (in_array($extentCode, [1262, 2346, 2830, 4520, 4523], true)) {
-                $originalPolygons['coordinates'] = [[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]]; // don't overcomplicate it!
-            }
-
-            foreach ($originalPolygons['coordinates'] as $polygon) {
-                $outerRingPoints = $polygon[0];
-                $xmin = min(array_column($outerRingPoints, 0));
-                $xmax = max(array_column($outerRingPoints, 0));
-                $ymin = min(array_column($outerRingPoints, 1));
-                $ymax = max(array_column($outerRingPoints, 1));
-                $exportSimple .= "            [\n                [\n                    ";
-                $exportSimple .= "[{$xmax}, {$ymax}], [{$xmin}, {$ymax}], [{$xmin}, {$ymin}], [{$xmax}, {$ymin}], [{$xmax}, {$ymax}],";
-                $exportSimple .= "\n                ],\n            ],\n";
-            }
-            $exportSimple .= "        ];\n    }\n}\n";
-
-            $bufferedPolygons = json_decode($this->extentDB->querySingle("SELECT buffered FROM extent WHERE extent_code = {$extentCode}"), true, 512, JSON_THROW_ON_ERROR);
-            $exportFull = "<?php\ndeclare(strict_types=1);\n\nnamespace PHPCoord\Geometry\Extents;\n/**\n * {$region}/{$extent['extent_name']}.\n * @internal\n */\nclass Extent{$extentCode}\n{\n    public function __invoke(): array\n    {\n        return\n        [\n";
-            if ($bufferedPolygons['type'] === 'Polygon') {
-                $bufferedPolygons['coordinates'] = [$bufferedPolygons['coordinates']];
-            }
-            if (in_array($extentCode, [1262, 2346, 2830, 4520, 4523], true)) {
-                $bufferedPolygons['coordinates'] = [[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]]; // don't overcomplicate it!
-            }
-            foreach ($bufferedPolygons['coordinates'] as $polygon) {
-                $exportFull .= "            [\n";
-
-                foreach ($polygon as $ring) {
-                    $exportFull .= "                [\n                    ";
-                    foreach ($ring as $point) {
-                        $exportFull .= '[' . $point[0] . ', ' . $point[1] . '], ';
-                    }
-                    $exportFull .= "\n                ],\n";
-                }
-                $exportFull .= "            ],\n";
-            }
-            $exportFull .= "        ];\n    }\n}\n";
+            $bufferedGeoJSON = $this->extentDB->querySingle("SELECT buffered FROM extent WHERE extent_code = {$extentCode}");
+            $bufferedGeoJSON = $this->addMetaDataToGeoJSON($bufferedGeoJSON, $extent['extent_urn'], "{$region}/{$extent['extent_name']}");
+            $bufferedGeoJSON = GeoJSON::format($bufferedGeoJSON);
+            $baseDir = InstalledVersions::getInstallPath(RegionMap::PACKAGES[$region]) . '/src/Geometry/Extents/';
 
             switch ($region) {
                 case RegionMap::REGION_GLOBAL:
-                    file_put_contents($builtInFull . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($builtInFull . "Extent{$extentCode}.php");
-                    touch($builtInFull . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_AFRICA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($africa . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($africa . "Extent{$extentCode}.php");
-                    touch($africa . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_ANTARCTIC:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($antarctic . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($antarctic . "Extent{$extentCode}.php");
-                    touch($antarctic . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_ARCTIC:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($arctic . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($arctic . "Extent{$extentCode}.php");
-                    touch($arctic . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_ASIA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($asia . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($asia . "Extent{$extentCode}.php");
-                    touch($asia . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_OCEANIA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($oceania . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($oceania . "Extent{$extentCode}.php");
-                    touch($oceania . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_EUROPE:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($europe . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($europe . "Extent{$extentCode}.php");
-                    touch($europe . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_NORTHAMERICA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($northAmerica . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($northAmerica . "Extent{$extentCode}.php");
-                    touch($northAmerica . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    break;
-                case RegionMap::REGION_SOUTHAMERICA:
-                    file_put_contents($boundingBoxOnly . "Extent{$extentCode}.php", $exportSimple);
-                    $this->codeGen->csFixFile($boundingBoxOnly . "Extent{$extentCode}.php");
-                    touch($boundingBoxOnly . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
-                    file_put_contents($southAmerica . "Extent{$extentCode}.php", $exportFull);
-                    $this->codeGen->csFixFile($southAmerica . "Extent{$extentCode}.php");
-                    touch($southAmerica . "Extent{$extentCode}.php", strtotime($extent['revision_date']));
+                    file_put_contents($baseDir . "{$extentCode}.json", $bufferedGeoJSON);
                     break;
                 default:
-                    throw new Exception("Unknown region: {$region}");
+                    file_put_contents($boundingBoxOnly . "{$extentCode}.json", $bboxGeoJSON);
+                    file_put_contents($baseDir . "{$extentCode}.json", $bufferedGeoJSON);
+                    break;
             }
         }
 
         // Remove unused extents
-        foreach ([$boundingBoxOnly, $builtInFull, $africa, $antarctic, $arctic, $asia, $europe, $northAmerica, $southAmerica, $oceania] as $extentType) {
-            foreach (glob($extentType . '/Extent[0-9]*.php') as $filename) {
-                $code = substr(basename($filename, '.php'), 6);
+        foreach (glob($boundingBoxOnly . '/[0-9]*.json') as $filename) {
+            $code = basename($filename, '.json');
+            if (!isset($extents[$code])) {
+                unlink($filename);
+            }
+        }
+        foreach (RegionMap::PACKAGES as $package) {
+            $baseDir = \Composer\InstalledVersions::getInstallPath($package) . '/src/Geometry/Extents/';
+            foreach (glob($baseDir . '/[0-9]*.json') as $filename) {
+                $code = basename($filename, '.json');
                 if (!isset($extents[$code])) {
                     unlink($filename);
                 }
@@ -2180,5 +2069,12 @@ class EPSGCodegenFromDataImport
         }
 
         return $data;
+    }
+
+    private function addMetaDataToGeoJSON(string $geoJSONString, string $urn, string $title): string
+    {
+        $title = addcslashes($title, '"\\');
+        // hack it in to get the sort ordering (up front), file will be pretty-printed later
+        return preg_replace('/^{/', "{\"id\": \"{$urn}\", \"title\": \"{$title}\",", $geoJSONString);
     }
 }

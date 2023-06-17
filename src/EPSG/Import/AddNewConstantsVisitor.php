@@ -24,6 +24,10 @@ use function strtoupper;
 use function trim;
 use function wordwrap;
 use function ucfirst;
+use function array_unique;
+use function array_map;
+use function rtrim;
+use function implode;
 
 class AddNewConstantsVisitor extends NodeVisitorAbstract
 {
@@ -122,6 +126,9 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                     $comment .= '* Type: ' . ucfirst(trim($data['type'])) . "\n";
                 }
                 if (isset($data['extent_description']) && $data['extent_description']) {
+                    $data['extent_description'] = array_unique(explode('|', $data['extent_description']));
+                    $data['extent_description'] = array_map(fn (string $extentDescription) => rtrim($extentDescription, '.'), $data['extent_description']);
+                    $data['extent_description'] = implode(', ', $data['extent_description']);
                     $extentLines = explode("\n", wordwrap('Extent: ' . $data['extent_description'], 112));
                     foreach ($extentLines as $extentLine) {
                         $comment .= '* ' . trim($extentLine) . "\n";

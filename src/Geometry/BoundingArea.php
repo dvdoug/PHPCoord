@@ -8,28 +8,31 @@ declare(strict_types=1);
 
 namespace PHPCoord\Geometry;
 
+use Composer\InstalledVersions;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Geometry\GeoJSON\GeoJSON;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use UnhandledMatchError;
 
-use function array_map;
-use function array_unique;
 use function assert;
-use function class_exists;
 use function count;
 use function implode;
 use function usort;
 use function in_array;
 use function array_keys;
-use function is_callable;
+use function str_replace;
+use function array_push;
+use function array_unique;
+use function file_exists;
 
 class BoundingArea
 {
     /**
-     * @var array<array<array<array{0: float, 1: float}>>>
+     * @var Polygon[]
      */
-    protected array $vertices;
+    protected array $polygons;
 
     protected string $region;
 
@@ -55,13 +58,13 @@ class BoundingArea
     private array $centre = [];
 
     /**
-     * @param array<array<array<array{0: float, 1: float}>>> $vertices
+     * @param Polygon[] $polygons
      */
-    protected function __construct(array $vertices, string $region)
+    protected function __construct(array $polygons, string $region)
     {
         // put largest polygon (outer ring size) first
-        usort($vertices, fn (array $polygonA, array $polygonB) => count($polygonB[0]) <=> count($polygonA[0]));
-        $this->vertices = $vertices;
+        usort($polygons, fn (Polygon $polygonA, Polygon $polygonB) => count($polygonB->coordinates[0]->coordinates) <=> count($polygonA->coordinates[0]->coordinates));
+        $this->polygons = $polygons;
         $this->region = $region;
     }
 
@@ -72,17 +75,30 @@ class BoundingArea
 
     /**
      * Vertices in GeoJSON-type format (an array of polygons, which is an array of rings which is an array of long,lat points).
-     * @param array<array<array<array{0: float, 1: float}>>> $vertices [[[long,lat], [long,lat]...]]
-     * @param RegionMap::REGION_*                            $region
+     * @param Polygon[]           $polygons
+     * @param RegionMap::REGION_* $region
      */
-    public static function createFromArray(array $vertices, string $region): self
+    public static function createFromPolygons(array $polygons, string $region): self
     {
-        return new self($vertices, $region);
+        return new self($polygons, $region);
     }
 
     public static function createWorld(): self
     {
-        return new self([[[[-180, -90], [-180, 90], [180, 90], [180, -90], [-180, -90]]]], RegionMap::REGION_GLOBAL);
+        return new self(
+            [
+                new Polygon(
+                    new LinearRing(
+                        new Position(-180, -90),
+                        new Position(-180, 90),
+                        new Position(180, 90),
+                        new Position(180, -90),
+                        new Position(-180, -90),
+                    )
+                ),
+            ],
+            RegionMap::REGION_GLOBAL
+        );
     }
 
     /**
@@ -93,22 +109,38 @@ class BoundingArea
     {
         $cacheKey = implode('|', $extentCodes);
         if (!isset(self::$cachedObjects[$cacheKey])) {
+            $regions = [];
+
+            /** @var Polygon[] $extents */
             $extents = [];
-            foreach ($extentCodes as $extentCode) {
-                $fullExtent = "PHPCoord\\Geometry\\Extents\\Extent{$extentCode}";
-                $basicExtent = "PHPCoord\\Geometry\\Extents\\BoundingBoxOnly\\Extent{$extentCode}";
-                $extentClass = class_exists($fullExtent) ? new $fullExtent() : new $basicExtent();
-                assert(is_callable($extentClass));
-                $extents = [...$extents, ...$extentClass()];
+            foreach ($extentCodes as $extentUrn) {
+                $region = RegionMap::EXTENTS[$extentUrn];
+                $regions[] = $region;
+
+                $filename = str_replace('urn:ogc:def:area:EPSG::', '', $extentUrn) . '.json';
+                $pathToExtent = __DIR__ . '/Extents/BoundingBoxOnly/' . $filename;
+                if (InstalledVersions::isInstalled(RegionMap::PACKAGES[$region])) {
+                    $baseDir = InstalledVersions::getInstallPath(RegionMap::PACKAGES[$region]) . '/src/Geometry/Extents/';
+                    if (file_exists($baseDir . $filename)) {
+                        $pathToExtent = $baseDir . $filename;
+                    }
+                }
+
+                $extent = GeoJSON::readFile($pathToExtent);
+                match ($extent::class) {
+                    Polygon::class => $extents[] = $extent,
+                    MultiPolygon::class => array_push($extents, ...$extent->coordinates),
+                    default => throw new UnhandledMatchError()
+                };
             }
 
-            $regionMap = (new RegionMap())();
-            $regions = array_unique(array_map(static fn ($extent) => $regionMap[(int) $extent], $extentCodes));
-            assert(count($regions) === 1);
+            assert(count(array_unique($regions)) === 1);
 
-            $extentData = self::createFromArray($extents, $regions[0]);
+            /** @var RegionMap::REGION_* $region */
+            $region = $regions[0];
+            $extentData = self::createFromPolygons($extents, $region);
 
-            if (in_array(1352, $extentCodes)) {
+            if (in_array('urn:ogc:def:area:EPSG::1352', $extentCodes)) {
                 $extentData->pointInside = [new Degree(60.202778), new Degree(11.083889)];
             }
 
@@ -154,16 +186,16 @@ class BoundingArea
          */
         foreach ($pointsToCheck as $pointToCheck) {
             [$x, $y] = $pointToCheck;
-            foreach ($this->vertices as $polygon) {
-                $vertices = $polygon[0]; // this algo works on simple polygons (no holes)
+            foreach ($this->polygons as $polygon) {
+                $vertices = $polygon->coordinates[0]->coordinates; // this algo works on simple polygons (no holes)
 
                 $n = count($vertices);
                 $inside = false;
                 for ($i = 0, $j = $n - 1; $i < $n; $j = $i++) {
-                    $xi = $vertices[$i][0];
-                    $yi = $vertices[$i][1];
-                    $xj = $vertices[$j][0];
-                    $yj = $vertices[$j][1];
+                    $xi = $vertices[$i]->x;
+                    $yi = $vertices[$i]->y;
+                    $xj = $vertices[$j]->x;
+                    $yj = $vertices[$j]->y;
 
                     $intersect = (($yi > $y) !== ($yj > $y)) // horizontal ray from $y, intersects if vertices are on opposite sides of it
                         && ($x < ($xj - $xi) * ($y - $yi) / ($yj - $yi) + $xi);
@@ -188,7 +220,7 @@ class BoundingArea
     public function getPointInside(): array
     {
         if (!isset($this->pointInside)) {
-            foreach (array_keys($this->vertices) as $polygonId) {
+            foreach (array_keys($this->polygons) as $polygonId) {
                 $point = $this->getCentre($polygonId);
                 $this->pointInside = $point;
                 if ($this->containsPoint(new GeographicValue($point[0], $point[1], null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE)))) {
@@ -209,27 +241,27 @@ class BoundingArea
     {
         if (!isset($this->centre[$polygonId])) {
             // Calculates the "centre" (centroid) of a polygon.
-            $vertices = $this->vertices[$polygonId][0]; // only consider outer ring
+            $vertices = $this->polygons[$polygonId]->coordinates[0]->coordinates; // only consider outer ring
             $n = count($vertices) - 1;
             $area = 0;
 
             for ($i = 0; $i < $n; ++$i) {
-                $area += $vertices[$i][0] * $vertices[$i + 1][1];
+                $area += $vertices[$i]->x * $vertices[$i + 1]->y;
             }
-            $area += $vertices[$n][0] * $vertices[0][1];
+            $area += $vertices[$n]->x * $vertices[0]->y;
 
             for ($i = 0; $i < $n; ++$i) {
-                $area -= $vertices[$i + 1][0] * $vertices[$i][1];
+                $area -= $vertices[$i + 1]->x * $vertices[$i]->y;
             }
-            $area -= $vertices[0][0] * $vertices[$n][1];
+            $area -= $vertices[0]->x * $vertices[$n]->y;
             $area /= 2;
 
             $latitude = 0;
             $longitude = 0;
 
             for ($i = 0; $i < $n; ++$i) {
-                $latitude += ($vertices[$i][1] + $vertices[$i + 1][1]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
-                $longitude += ($vertices[$i][0] + $vertices[$i + 1][0]) * ($vertices[$i][0] * $vertices[$i + 1][1] - $vertices[$i + 1][0] * $vertices[$i][1]);
+                $latitude += ($vertices[$i]->y + $vertices[$i + 1]->y) * ($vertices[$i]->x * $vertices[$i + 1]->y - $vertices[$i + 1]->x * $vertices[$i]->y);
+                $longitude += ($vertices[$i]->x + $vertices[$i + 1]->x) * ($vertices[$i]->x * $vertices[$i + 1]->y - $vertices[$i + 1]->x * $vertices[$i]->y);
             }
             $latitude = new Degree($latitude / 6 / $area);
             $longitude = new Degree($longitude / 6 / $area);
@@ -242,13 +274,13 @@ class BoundingArea
 
     private function checkLongitudeWrapAround(): void
     {
-        foreach ($this->vertices as $polygon) {
-            foreach ($polygon as $ring) {
-                foreach ($ring as $vertex) {
-                    if ($vertex[0] >= 180) {
+        foreach ($this->polygons as $polygon) {
+            foreach ($polygon->coordinates as $ring) {
+                foreach ($ring->coordinates as $vertex) {
+                    if ($vertex->x >= 180) {
                         $this->longitudeExtendsFurtherThanPlus180 = true;
                     }
-                    if ($vertex[0] <= -180) {
+                    if ($vertex->x <= -180) {
                         $this->longitudeExtendsFurtherThanMinus180 = true;
                     }
                 }

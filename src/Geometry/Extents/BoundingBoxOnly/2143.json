@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2143",
+    "title": "North America/North America - 108°W to 102°W and NAD27 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-108, 17.86819877145774], [-102, 17.86819877145774], [-102, 79.4185264387554], [-108, 79.4185264387554], [-108, 17.86819877145774]
+        ]
+    ]
+}

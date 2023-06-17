@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4176",
+    "title": "Australasia and Oceania/Australasia - Australia and Christmas Island - 108°E to 114°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [108, -37.8321363540744], [114.0000000000003, -37.8321363540744], [114.0000000000003, -10.72919066300602], [108, -10.72919066300602], [108, -37.8321363540744]
+        ]
+    ]
+}

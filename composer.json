@@ -13,12 +13,14 @@
     "license": "(MIT and proprietary)",
     "require": {
         "php": "^8.0",
-        "composer/pcre": "^3.1"
+        "composer-runtime-api": "^2.1",
+        "composer/pcre": "^3.1",
+        "opis/json-schema": "^2.3"
     },
     "require-dev": {
         "ext-json": "*",
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^3.13.2",
+        "friendsofphp/php-cs-fixer": "^3.17",
         "nikic/php-parser": "^4.15",
         "php-coord/datapack-africa": "dev-master",
         "php-coord/datapack-antarctic": "dev-master",

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1647",
+    "title": "Asia-ExFSU/Indonesia - west of 96°E, N hemisphere",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [92.01935358600025, 0], [96, 0], [96, 7.783333123000318], [92.01935358600025, 7.783333123000318], [92.01935358600025, 0]
+        ]
+    ]
+}

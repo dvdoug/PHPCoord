@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2280",
+    "title": "North America/Canada - Quebec and Ontario - 78°W to 75°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-78, 43.63332748413114], [-75, 43.63332748413114], [-75, 62.64298467151545], [-78, 62.64298467151545], [-78, 43.63332748413114]
+        ]
+    ]
+}

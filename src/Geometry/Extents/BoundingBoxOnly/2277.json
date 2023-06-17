@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2277",
+    "title": "North America/Canada - Quebec and Labrador - 66°W to 63°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-66, 47.95277157650355], [-63, 47.95277157650355], [-63, 60.51237975743793], [-66, 60.51237975743793], [-66, 47.95277157650355]
+        ]
+    ]
+}

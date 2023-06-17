@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3508",
+    "title": "Australasia and Oceania/New Zealand - offshore Pacific Ocean, Southern Ocean",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [155.0000000000001, -59.99999999999991], [190, -59.99999999999991], [190, -25.00000000000003], [155.0000000000001, -25.00000000000003], [155.0000000000001, -59.99999999999991]
+        ]
+    ]
+}

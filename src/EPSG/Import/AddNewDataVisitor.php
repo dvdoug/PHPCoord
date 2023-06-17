@@ -18,6 +18,11 @@ use PhpParser\NodeVisitorAbstract;
 use function array_unshift;
 use function ksort;
 use function str_replace;
+use function array_unique;
+use function explode;
+use function array_map;
+use function rtrim;
+use function implode;
 
 use const SORT_NATURAL;
 
@@ -41,6 +46,16 @@ class AddNewDataVisitor extends NodeVisitorAbstract
             unset($dataRow['method_name']);
             if (isset($dataRow['name'])) {
                 $dataRow['name'] = str_replace('_LOWERCASE', '', $dataRow['name']);
+            }
+            if (isset($dataRow['extent_name'])) {
+                $dataRow['extent_name'] = array_unique(explode('|', $dataRow['extent_name']));
+                $dataRow['extent_name'] = array_map(fn (string $extentName) => rtrim($extentName, '.'), $dataRow['extent_name']);
+                $dataRow['extent_name'] = implode(', ', $dataRow['extent_name']);
+            }
+            if (isset($dataRow['extent_description'])) {
+                $dataRow['extent_description'] = array_unique(explode('|', $dataRow['extent_description']));
+                $dataRow['extent_description'] = array_map(fn (string $extentDescription) => rtrim($extentDescription, '.'), $dataRow['extent_description']);
+                $dataRow['extent_description'] = implode(', ', $dataRow['extent_description']);
             }
         }
         ksort($this->data, SORT_NATURAL);

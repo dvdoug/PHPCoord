@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4687",
+    "title": "Europe-FSU/UK - Shrewsbury to Aberystwyth",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-4.15, 52.37916667000007], [-2.6, 52.37916667000007], [-2.6, 52.7625], [-4.15, 52.7625], [-4.15, 52.37916667000007]
+        ]
+    ]
+}

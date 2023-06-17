@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1837",
+    "title": "South America/South America - 36°W to 30°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-36, -20.10411262512207], [-30, -20.10411262512207], [-30, 0], [-36, 0], [-36, -20.10411262512207]
+        ]
+    ]
+}

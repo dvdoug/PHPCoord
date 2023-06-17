@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2880",
+    "title": "Antarctic/Antarctica - Australian sector north of 80°S",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [45, -80], [160, -80], [160, -60], [45, -60], [45, -80]
+        ]
+    ]
+}

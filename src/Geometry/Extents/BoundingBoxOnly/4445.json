@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4445",
+    "title": "Australasia and Oceania/Australia - Western Australia - Esperance",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [121.5666666666666, -34.5], [122.2, -34.5], [122.2, -33.33333333333333], [121.5666666666666, -33.33333333333333], [121.5666666666666, -34.5]
+        ]
+    ]
+}

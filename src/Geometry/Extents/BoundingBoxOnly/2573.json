@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2573",
+    "title": "North America/Greenland - southwest coast 54°W to 48°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-54, 60.63761252503864], [-48, 60.63761252503864], [-48, 73.04114477793782], [-54, 73.04114477793782], [-54, 60.63761252503864]
+        ]
+    ]
+}

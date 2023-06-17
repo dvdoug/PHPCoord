@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1654",
+    "title": "Asia-ExFSU/Indonesia - 108°E to 114°E, S hemisphere",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [108, -12.06515196684387], [114, -12.06515196684387], [114, 0], [108, 0], [108, -12.06515196684387]
+        ]
+    ]
+}

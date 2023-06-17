@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2987",
+    "title": "Africa/Libya - Amal",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [20.8, 29.1], [21.4, 29.1], [21.4, 29.8], [20.8, 29.8], [20.8, 29.1]
+        ]
+    ]
+}

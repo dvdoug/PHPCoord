@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4196",
+    "title": "Australasia and Oceania/Australia - 156°E to 162°E including Macquarie",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [156, -60.55358359999996], [162.0000000000001, -60.55358359999996], [162.0000000000001, -14.08167743173498], [156, -14.08167743173498], [156, -60.55358359999996]
+        ]
+    ]
+}

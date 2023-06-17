@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2831",
+    "title": "North America/Canada - Atlantic offshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-67.74305555978304, 40], [-44, 40], [-44, 64.20520882416194], [-67.74305555978304, 64.20520882416194], [-67.74305555978304, 40]
+        ]
+    ]
+}

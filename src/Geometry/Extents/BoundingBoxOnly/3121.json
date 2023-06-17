@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3121",
+    "title": "Australasia and Oceania/French Polynesia - 150°W to 144°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-150, -31.19756090151495], [-144, -31.19756090151495], [-144, -7.298594709105899], [-150, -7.298594709105899], [-150, -31.19756090151495]
+        ]
+    ]
+}

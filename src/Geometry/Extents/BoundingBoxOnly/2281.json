@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2281",
+    "title": "North America/Canada - Quebec and Ontario - MTM zone 10",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81, 42.26050805968953], [-78, 42.26050805968953], [-78, 62.44087853303523], [-81, 62.44087853303523], [-81, 42.26050805968953]
+        ]
+    ]
+}

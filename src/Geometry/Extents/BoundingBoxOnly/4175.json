@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4175",
+    "title": "Australasia and Oceania/Australasia - Australia and Norfolk Island - 162°E to 168°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [162.0000000000001, -59.38109927660343], [168, -59.38109927660343], [168, -25.94201353737827], [162.0000000000001, -25.94201353737827], [162.0000000000001, -59.38109927660343]
+        ]
+    ]
+}

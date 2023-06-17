@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3032",
+    "title": "Antarctic/Antarctica - 72°S to 76°S, 108°W to 90°W (SS13-15)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-108, -76], [-90, -76], [-90, -72], [-108, -72], [-108, -76]
+        ]
+    ]
+}

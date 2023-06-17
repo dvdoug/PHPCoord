@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3428",
+    "title": "South America/Latin America - 90°W to 84°W; N hemisphere and SIRGAS 2000 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-90, 0], [-83.99999999999994, 0], [-83.99999999999994, 25.76186561584484], [-90, 25.76186561584484], [-90, 0]
+        ]
+    ]
+}

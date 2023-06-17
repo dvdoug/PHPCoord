@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1497",
+    "title": "Asia-ExFSU/Korea, Republic of (South Korea) - 126°E to 128°E onshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [126, 33.14227123375434], [128, 33.14227123375434], [128, 38.32332611083995], [126, 38.32332611083995], [126, 33.14227123375434]
+        ]
+    ]
+}

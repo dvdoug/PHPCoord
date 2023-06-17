@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2993",
+    "title": "Antarctic/Antarctica - 60°S to 64°S, 48°W to 36°W (SP23-24)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-48, -64], [-36, -64], [-36, -60], [-48, -60], [-48, -64]
+        ]
+    ]
+}

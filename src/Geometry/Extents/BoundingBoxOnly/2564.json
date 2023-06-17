@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2564",
+    "title": "North America/Greenland - west - 75°N to 78°N",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-72.78895055286358, 75], [-44, 75], [-44, 78], [-72.78895055286358, 78], [-72.78895055286358, 75]
+        ]
+    ]
+}

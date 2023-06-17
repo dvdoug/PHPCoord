@@ -1,0 +1,21 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1580",
+    "title": "Africa/Africa - Kenya and Uganda - north of equator and 30°E to 36°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [
+                29.99999999999994,
+                5.7e-14
+            ],
+            [
+                36,
+                5.7e-14
+            ],
+            [36, 4.622499465942781], [29.99999999999994, 4.622499465942781], [
+                29.99999999999994,
+                5.7e-14
+            ]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1278",
+    "title": "Antarctic/Antarctica - Australian sector",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [45, -90], [160, -90], [160, -60], [45, -60], [45, -90]
+        ]
+    ]
+}

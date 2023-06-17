@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2795",
+    "title": "Europe-FSU/UK - Shetland Islands onshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-1.773894, 59.833216], [-0.674088, 59.833216], [-0.674088, 60.862596], [-1.773894, 60.862596], [-1.773894, 59.833216]
+        ]
+    ]
+}

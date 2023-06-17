@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2995",
+    "title": "Antarctic/Antarctica - 64°S to 68°S, 72°W to 60°W (SQ19-20)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-72, -68], [-60, -68], [-60, -64], [-72, -64], [-72, -68]
+        ]
+    ]
+}

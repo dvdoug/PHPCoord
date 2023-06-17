@@ -17,6 +17,9 @@ use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\LinearRing;
+use PHPCoord\Geometry\Polygon;
+use PHPCoord\Geometry\Position;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Length\Length;
 
@@ -52,10 +55,36 @@ class UTMPoint extends ProjectedPoint
 
         $longitudeOrigin = $zone * 6 - 3;
         if ($hemisphere === self::HEMISPHERE_NORTH) {
-            $boundingArea = BoundingArea::createFromArray([[[[$longitudeOrigin, 0], [$longitudeOrigin, 90], [$longitudeOrigin + 6, 90], [$longitudeOrigin + 6, 0]]]], RegionMap::REGION_GLOBAL);
+            $boundingArea = BoundingArea::createFromPolygons(
+                [
+                    new Polygon(
+                        new LinearRing(
+                            new Position($longitudeOrigin, 0),
+                            new Position($longitudeOrigin, 90),
+                            new Position($longitudeOrigin + 6, 90),
+                            new Position($longitudeOrigin + 6, 0),
+                            new Position($longitudeOrigin, 0),
+                        )
+                    ),
+                ],
+                RegionMap::REGION_GLOBAL
+            );
             $derivingConversion = 'urn:ogc:def:coordinateOperation:EPSG::' . ($zone + 16000);
         } else {
-            $boundingArea = BoundingArea::createFromArray([[[[$longitudeOrigin, -90], [$longitudeOrigin, 0], [$longitudeOrigin + 6, 0], [$longitudeOrigin + 6, -90]]]], RegionMap::REGION_GLOBAL);
+            $boundingArea = BoundingArea::createFromPolygons(
+                [
+                    new Polygon(
+                        new LinearRing(
+                            new Position($longitudeOrigin, -90),
+                            new Position($longitudeOrigin, 0),
+                            new Position($longitudeOrigin + 6, 0),
+                            new Position($longitudeOrigin + 6, -90),
+                            new Position($longitudeOrigin, -90),
+                        )
+                    ),
+                ],
+                RegionMap::REGION_GLOBAL
+            );
             $derivingConversion = 'urn:ogc:def:coordinateOperation:EPSG::' . ($zone + 16100);
         }
 

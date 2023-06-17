@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2139",
+    "title": "North America/North America - 132°W to 126°W and NAD27 by country - onshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-132, 49.18033645844497], [-126, 49.18033645844497], [-126, 72.02049145501358], [-132, 72.02049145501358], [-132, 49.18033645844497]
+        ]
+    ]
+}

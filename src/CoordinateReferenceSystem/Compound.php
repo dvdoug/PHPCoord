@@ -67,7 +67,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * CR-SIRGAS / CRTM05 + DACR52 height
-     * Extent: Costa Rica - onshore.
+     * Extent: Costa Rica - onshore
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
      */
     public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
@@ -114,28 +114,28 @@ class Compound extends CoordinateReferenceSystem
     /**
      * DB_REF2003 zone 2
      * Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen,
-     * Rheinland-Pfalz, Saarland.
+     * Rheinland-Pfalz, Saarland
      * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).
      */
     public const EPSG_DB_REF2003_ZONE_2 = 'urn:ogc:def:crs:EPSG::9928';
 
     /**
      * DB_REF2003 zone 3
-     * Extent: Germany - onshore between 7°30'E and 10°30'E.
+     * Extent: Germany - onshore between 7°30'E and 10°30'E
      * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).
      */
     public const EPSG_DB_REF2003_ZONE_3 = 'urn:ogc:def:crs:EPSG::9929';
 
     /**
      * DB_REF2003 zone 4
-     * Extent: Germany - onshore between 10°30'E and 13°30'E.
+     * Extent: Germany - onshore between 10°30'E and 13°30'E
      * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).
      */
     public const EPSG_DB_REF2003_ZONE_4 = 'urn:ogc:def:crs:EPSG::9930';
 
     /**
      * DB_REF2003 zone 5
-     * Extent: Germany - onshore east of 13°30'E.
+     * Extent: Germany - onshore east of 13°30'E
      * On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).
      */
     public const EPSG_DB_REF2003_ZONE_5 = 'urn:ogc:def:crs:EPSG::9931';
@@ -143,28 +143,28 @@ class Compound extends CoordinateReferenceSystem
     /**
      * DB_REF2016 zone 2
      * Extent: Germany - former West Germany onshore west of 7°30'E - states of Niedersachsen, Nordrhein-Westfalen,
-     * Rheinland-Pfalz, Saarland.
+     * Rheinland-Pfalz, Saarland
      * Replaces DB_REF2003 zone 2 (compound CRS code 9928).
      */
     public const EPSG_DB_REF2016_ZONE_2 = 'urn:ogc:def:crs:EPSG::9932';
 
     /**
      * DB_REF2016 zone 3
-     * Extent: Germany - onshore between 7°30'E and 10°30'E.
+     * Extent: Germany - onshore between 7°30'E and 10°30'E
      * Replaces DB_REF2003 zone 3 (compound CRS code 9929).
      */
     public const EPSG_DB_REF2016_ZONE_3 = 'urn:ogc:def:crs:EPSG::9933';
 
     /**
      * DB_REF2016 zone 4
-     * Extent: Germany - onshore between 10°30'E and 13°30'E.
+     * Extent: Germany - onshore between 10°30'E and 13°30'E
      * Replaces DB_REF2003 zone 4 (compound CRS code 9930).
      */
     public const EPSG_DB_REF2016_ZONE_4 = 'urn:ogc:def:crs:EPSG::9934';
 
     /**
      * DB_REF2016 zone 5
-     * Extent: Germany - onshore east of 13°30'E.
+     * Extent: Germany - onshore east of 13°30'E
      * Replaces DB_REF2003 zone 5 (compound CRS code 9931).
      */
     public const EPSG_DB_REF2016_ZONE_5 = 'urn:ogc:def:crs:EPSG::9935';
@@ -298,7 +298,7 @@ class Compound extends CoordinateReferenceSystem
      * Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
      * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
-     * City State.
+     * City State
      * Replaced by ETRS89 + EVRF2007 height (CRS code 7423).
      */
     public const EPSG_ETRS89_PLUS_EVRF2000_HEIGHT = 'urn:ogc:def:crs:EPSG::7409';
@@ -309,7 +309,7 @@ class Compound extends CoordinateReferenceSystem
      * Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
      * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
-     * City State.
+     * City State
      * Replaces ETRS89 + EVRF2000 height (CRS code 7409).
      */
     public const EPSG_ETRS89_PLUS_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::7423';
@@ -320,7 +320,7 @@ class Compound extends CoordinateReferenceSystem
      * Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great
-     * Britain mainland; Vatican City State.
+     * Britain mainland; Vatican City State
      * Replaces ETRS89 + EVRF2007 height (CRS code 7423). See also ETRS89 + EVRF2019 mean-tide height (CRS code 9423).
      */
     public const EPSG_ETRS89_PLUS_EVRF2019_HEIGHT = 'urn:ogc:def:crs:EPSG::9422';
@@ -331,7 +331,7 @@ class Compound extends CoordinateReferenceSystem
      * Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great
-     * Britain mainland; Vatican City State.
+     * Britain mainland; Vatican City State
      * See also ETRS89 + EVRF2019 (CRS code 9422).
      */
     public const EPSG_ETRS89_PLUS_EVRF2019_MEAN_TIDE_HEIGHT = 'urn:ogc:def:crs:EPSG::9423';
@@ -405,7 +405,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 + NN54 height
-     * Extent: Norway - onshore.
+     * Extent: Norway - onshore
      * Replaced by ETRS89 + NN2000 height (compound CRS code 5942).
      */
     public const EPSG_ETRS89_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6144';
@@ -486,7 +486,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / Faroe TM + FVR09 height
-     * Extent: Faroe Islands - onshore.
+     * Extent: Faroe Islands - onshore
      * Introduced in 2010.
      */
     public const EPSG_ETRS89_FAROE_TM_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5318';
@@ -523,7 +523,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 10 + NN54 height
-     * Extent: Norway - onshore - between 10°E and 11°E.
+     * Extent: Norway - onshore - between 10°E and 11°E
      * Replaced by ETRS89 / NTM zone 10 + NN2000 height (compound CRS code 5950).
      */
     public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6150';
@@ -536,7 +536,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 11 + NN54 height
-     * Extent: Norway - onshore - between 11°E and 12°E.
+     * Extent: Norway - onshore - between 11°E and 12°E
      * Replaced by ETRS89 / NTM zone 11 + NN2000 height (compound CRS code 5951).
      */
     public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6151';
@@ -549,7 +549,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 12 + NN54 height
-     * Extent: Norway - onshore - between 12°E and 13°E.
+     * Extent: Norway - onshore - between 12°E and 13°E
      * Replaced by ETRS89 / NTM zone 12 + NN2000 height (compound CRS code 5952).
      */
     public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6152';
@@ -562,7 +562,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 13 + NN54 height
-     * Extent: Norway - onshore - between 13°E and 14°E.
+     * Extent: Norway - onshore - between 13°E and 14°E
      * Replaced by ETRS89 / NTM zone 13 + NN2000 height (compound CRS code 5953).
      */
     public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6153';
@@ -575,7 +575,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 14 + NN54 height
-     * Extent: Norway - onshore - between 14°E and 15°E.
+     * Extent: Norway - onshore - between 14°E and 15°E
      * Replaced by ETRS89 / NTM zone 14 + NN2000 height (compound CRS code 5954).
      */
     public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6154';
@@ -588,7 +588,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 15 + NN54 height
-     * Extent: Norway - onshore - between 15°E and 16°E.
+     * Extent: Norway - onshore - between 15°E and 16°E
      * Replaced by ETRS89 / NTM zone 15 + NN2000 height (compound CRS code 5955).
      */
     public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6155';
@@ -601,7 +601,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 16 + NN54 height
-     * Extent: Norway - onshore - between 16°E and 17°E.
+     * Extent: Norway - onshore - between 16°E and 17°E
      * Replaced by ETRS89 / NTM zone 16 + NN2000 height (compound CRS code 5956).
      */
     public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6156';
@@ -614,7 +614,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 17 + NN54 height
-     * Extent: Norway - onshore - between 17°E and 18°E.
+     * Extent: Norway - onshore - between 17°E and 18°E
      * Replaced by ETRS89 / NTM zone 17 + NN2000 height (compound CRS code 5957).
      */
     public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6157';
@@ -627,7 +627,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 18 + NN54 height
-     * Extent: Norway - onshore - between 18°E and 19°E.
+     * Extent: Norway - onshore - between 18°E and 19°E
      * Replaced by ETRS89 / NTM zone 18 + NN2000 height (compound CRS code 5958).
      */
     public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6158';
@@ -640,7 +640,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 19 + NN54 height
-     * Extent: Norway - onshore - between 19°E and 20°E.
+     * Extent: Norway - onshore - between 19°E and 20°E
      * Replaced by ETRS89 / NTM zone 19 + NN2000 height (compound CRS code 5959).
      */
     public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6159';
@@ -653,7 +653,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 20 + NN54 height
-     * Extent: Norway - onshore - between 20°E and 21°E.
+     * Extent: Norway - onshore - between 20°E and 21°E
      * Replaced by ETRS89 / NTM zone 20 + NN2000 height (compound CRS code 5960).
      */
     public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6160';
@@ -666,7 +666,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 21 + NN54 height
-     * Extent: Norway - onshore - between 21°E and 22°E.
+     * Extent: Norway - onshore - between 21°E and 22°E
      * Replaced by ETRS89 / NTM zone 21 + NN2000 height (compound CRS code 5961).
      */
     public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6161';
@@ -679,7 +679,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 22 + NN54 height
-     * Extent: Norway - onshore - between 22°E and 23°E.
+     * Extent: Norway - onshore - between 22°E and 23°E
      * Replaced by ETRS89 / NTM zone 22 + NN2000 height (compound CRS code 5962).
      */
     public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6162';
@@ -692,7 +692,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 23 + NN54 height
-     * Extent: Norway - onshore - between 23°E and 24°E.
+     * Extent: Norway - onshore - between 23°E and 24°E
      * Replaced by ETRS89 / NTM zone 23 + NN2000 height (compound CRS code 5963).
      */
     public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6163';
@@ -705,7 +705,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 24 + NN54 height
-     * Extent: Norway - onshore - between 24°E and 25°E.
+     * Extent: Norway - onshore - between 24°E and 25°E
      * Replaced by ETRS89 / NTM zone 24 + NN2000 height (compound CRS code 5964).
      */
     public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6164';
@@ -718,7 +718,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 25 + NN54 height
-     * Extent: Norway - onshore - between 25°E and 26°E.
+     * Extent: Norway - onshore - between 25°E and 26°E
      * Replaced by ETRS89 / NTM zone 25 + NN2000 height (compound CRS code 5965).
      */
     public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6165';
@@ -731,7 +731,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 26 + NN54 height
-     * Extent: Norway - onshore - between 26°E and 27°E.
+     * Extent: Norway - onshore - between 26°E and 27°E
      * Replaced by ETRS89 / NTM zone 26 + NN2000 height (compound CRS code 5966).
      */
     public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6166';
@@ -744,7 +744,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 27 + NN54 height
-     * Extent: Norway - onshore - between 27°E and 28°E.
+     * Extent: Norway - onshore - between 27°E and 28°E
      * Replaced by ETRS89 / NTM zone 27 + NN2000 height (compound CRS code 5967).
      */
     public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6167';
@@ -757,7 +757,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 28 + NN54 height
-     * Extent: Norway - onshore - between 28°E and 29°E.
+     * Extent: Norway - onshore - between 28°E and 29°E
      * Replaced by ETRS89 / NTM zone 28 + NN2000 height (compound CRS code 5968).
      */
     public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6168';
@@ -770,7 +770,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 29 + NN54 height
-     * Extent: Norway - onshore - between 29°E and 30°E.
+     * Extent: Norway - onshore - between 29°E and 30°E
      * Replaced by ETRS89 / NTM zone 29 + NN2000 height (compound CRS code 5969).
      */
     public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6169';
@@ -783,7 +783,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 30 + NN54 height
-     * Extent: Norway - onshore - east of 30°E.
+     * Extent: Norway - onshore - east of 30°E
      * Replaced by ETRS89 / NTM zone 30 + NN2000 height (compound CRS code 5970).
      */
     public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6170';
@@ -796,7 +796,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 5 + NN54 height
-     * Extent: Norway - onshore - west of 6°E.
+     * Extent: Norway - onshore - west of 6°E
      * Replaced by ETRS89 / NTM zone 5 + NN2000 height (compound CRS code 5945).
      */
     public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6145';
@@ -809,7 +809,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 6 + NN54 height
-     * Extent: Norway - onshore - between 6°E and 7°E.
+     * Extent: Norway - onshore - between 6°E and 7°E
      * Replaced by ETRS89 / NTM zone 6 + NN2000 height (compound CRS code 5946).
      */
     public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6146';
@@ -822,7 +822,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 7 + NN54 height
-     * Extent: Norway - onshore - between 7°E and 8°E.
+     * Extent: Norway - onshore - between 7°E and 8°E
      * Replaced by ETRS89 / NTM zone 7 + NN2000 height (compound CRS code 5947).
      */
     public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6147';
@@ -835,7 +835,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 8 + NN54 height
-     * Extent: Norway - onshore - between 8°E and 9°E.
+     * Extent: Norway - onshore - between 8°E and 9°E
      * Replaced by ETRS89 / NTM zone 8 + NN2000 height (compound CRS code 5948).
      */
     public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6148';
@@ -848,21 +848,21 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / NTM zone 9 + NN54 height
-     * Extent: Norway - onshore - between 9°E and 10°E.
+     * Extent: Norway - onshore - between 9°E and 10°E
      * Replaced by ETRS89 / NTM zone 9 + NN2000 height (compound CRS code 5949).
      */
     public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6149';
 
     /**
      * ETRS89 / TM35FIN(N,E) + N2000 height
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore
      * Replaces ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
      */
     public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
 
     /**
      * ETRS89 / TM35FIN(N,E) + N60 height
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore
      * Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-TM35FIN(N,E)/N2000 (CRS code 3903).
      */
     public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
@@ -881,7 +881,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 31N + NN54 height
-     * Extent: Norway - onshore - west of 6°E.
+     * Extent: Norway - onshore - west of 6°E
      * Replaced by ETRS89 / UTM zone 31N + NN2000 height (compound CRS code 5971).
      */
     public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6171';
@@ -906,7 +906,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 32N + NN54 height
-     * Extent: Norway - onshore - between 6°E and 12°E.
+     * Extent: Norway - onshore - between 6°E and 12°E
      * Replaced by ETRS89 / UTM zone 32N + NN2000 height (compound CRS code 5972).
      */
     public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6172';
@@ -931,7 +931,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 33N + NN54 height
-     * Extent: Norway - onshore - between 12°E and 18°E.
+     * Extent: Norway - onshore - between 12°E and 18°E
      * Replaced by ETRS89 / UTM zone 33N + NN2000 height (compound CRS code 5973).
      */
     public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6173';
@@ -944,7 +944,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 34N + NN54 height
-     * Extent: Norway - onshore - between 18°E and 24°E.
+     * Extent: Norway - onshore - between 18°E and 24°E
      * Replaced by ETRS89 / UTM zone 34N + NN2000 height (compound CRS code 5974).
      */
     public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6174';
@@ -957,7 +957,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 35N + NN54 height
-     * Extent: Norway - onshore - between 24°E and 30°E.
+     * Extent: Norway - onshore - between 24°E and 30°E
      * Replaced by ETRS89 / UTM zone 35N + NN2000 height (compound CRS code 5975).
      */
     public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6175';
@@ -970,7 +970,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 36N + NN54 height
-     * Extent: Norway - onshore - east of 30°E.
+     * Extent: Norway - onshore - east of 30°E
      * Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
      */
     public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
@@ -1038,14 +1038,14 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * GR96 + GVR2000 height
-     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
+     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W
      * Replaced by GR96 + GVR2016 height (CRS code 8350).
      */
     public const EPSG_GR96_PLUS_GVR2000_HEIGHT = 'urn:ogc:def:crs:EPSG::8349';
 
     /**
      * GR96 + GVR2016 height
-     * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
+     * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W
      * Replaces GR96 + GVR2000 height (CRS code 8349).
      */
     public const EPSG_GR96_PLUS_GVR2016_HEIGHT = 'urn:ogc:def:crs:EPSG::8350';
@@ -1072,7 +1072,7 @@ class Compound extends CoordinateReferenceSystem
     /**
      * HS2 Survey Grid + HS2-VRF height
      * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
-     * Crewe.
+     * Crewe
      * Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.
      */
     public const EPSG_HS2_SURVEY_GRID_PLUS_HS2_VRF_HEIGHT = 'urn:ogc:def:crs:EPSG::9306';
@@ -1085,14 +1085,14 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ISN2004 + ISH2004 height
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Replaces ISN93 + ISH2004 height (CRS code 9948). Replaced by ISN2016 + ISH2004 height (CRS code 9950).
      */
     public const EPSG_ISN2004_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9949';
 
     /**
      * ISN2004 / Lambert 2004 + ISH2004 height
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Replaces ISN93 / Lambert 1993 + ISH2004 height (CRS code 9951). Replaced by ISN2016 / Lambert 2016 + ISH2004
      * height (CRS code 9953).
      */
@@ -1100,28 +1100,28 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ISN2016 + ISH2004 height
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Replaces ISN2004 + ISH2004 height (CRS code 9949).
      */
     public const EPSG_ISN2016_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9950';
 
     /**
      * ISN2016 / Lambert 2016 + ISH2004 height
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Replaces ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
      */
     public const EPSG_ISN2016_LAMBERT_2016_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9953';
 
     /**
      * ISN93 + ISH2004 height
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Replaced by ISN2004 + ISH2004 height (CRS code 9949).
      */
     public const EPSG_ISN93_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9948';
 
     /**
      * ISN93 / Lambert 1993 + ISH2004 height
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Replaced by ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).
      */
     public const EPSG_ISN93_LAMBERT_1993_PLUS_ISH2004_HEIGHT = 'urn:ogc:def:crs:EPSG::9951';
@@ -1134,7 +1134,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * JGD2000 + JGD2000 (vertical) height
-     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu
      * Replaces Tokyo + JSLD69 height and Tokyo + JSLD72 height (CRS codes 7414 and 6700) from April 2002. Replaced by
      * JGD2011 + JGD2011 (vertical) height (CRS code 6697) with effect from 21st October 2011.
      */
@@ -1142,7 +1142,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * JGD2011 + JGD2011 (vertical) height
-     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu
      * Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21st October 2011.
      */
     public const EPSG_JGD2011_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6697';
@@ -1234,14 +1234,13 @@ class Compound extends CoordinateReferenceSystem
     /**
      * JGD2011 / Japan Plane Rectangular CS XIII + JGD2011 (vertical) height
      * Extent: Japan - onshore - Hokkaido east of approximately 143°E - Kitami city; Obihiro city; Kushiro city;
-     * Abashiri city; Nemuro city; Nemuro-shicho; Kushiro-shicho; Abashiri-shicho (except Monbetsu-gun);
-     * Tokachi-shicho.
+     * Abashiri city; Nemuro city; Nemuro-shicho; Kushiro-shicho; Abashiri-shicho (except Monbetsu-gun); Tokachi-shicho.
      */
     public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10174';
 
     /**
      * KKJ / Finland Uniform Coordinate System + N60 height
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore
      * Replaced by ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
      */
     public const EPSG_KKJ_FINLAND_UNIFORM_COORDINATE_SYSTEM_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3901';
@@ -1254,7 +1253,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * LUREF / Luxembourg TM + NG95 height
-     * Extent: Luxembourg.
+     * Extent: Luxembourg
      * For purposes with lower height accuracy requirements, may be approximated (to 5-15cm in height) by projected 3D
      * CRS code 9895.
      */
@@ -1294,8 +1293,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * MWC18 Grid + ODN height
-     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
-     * Chester.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.
      */
     public const EPSG_MWC18_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::20003';
 
@@ -1305,8 +1303,7 @@ class Compound extends CoordinateReferenceSystem
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
      * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
-     * Wyoming.
+     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAD27_PLUS_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::7406';
 
@@ -1584,8 +1581,7 @@ class Compound extends CoordinateReferenceSystem
     /**
      * NAD83 / Idaho West (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon;
-     * Clearwater; Elmore; Gem; Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley;
-     * Washington.
+     * Clearwater; Elmore; Gem; Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington.
      */
     public const EPSG_NAD83_IDAHO_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8732';
 
@@ -1692,8 +1688,7 @@ class Compound extends CoordinateReferenceSystem
      * NAD83 / Louisiana North (ftUS) + NAVD88 height (ftUS)
      * Extent: United States (USA) - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula;
      * Claiborne; Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse;
-     * Natchitoches; Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll;
-     * Winn.
+     * Natchitoches; Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn.
      */
     public const EPSG_NAD83_LOUISIANA_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8743';
 
@@ -2276,7 +2271,7 @@ class Compound extends CoordinateReferenceSystem
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming.
+     * West Virginia; Wisconsin; Wyoming
      * Replaces NAD83(NSRS2007) + NAVD88 height.
      */
     public const EPSG_NAD83_2011_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::6349';
@@ -2342,7 +2337,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height
-     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario.
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario
      * Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT = 'urn:ogc:def:crs:EPSG::9715';
@@ -2453,8 +2448,7 @@ class Compound extends CoordinateReferenceSystem
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
      * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
-     * Wyoming.
+     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAD83_HARN_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5499';
 
@@ -2476,8 +2470,7 @@ class Compound extends CoordinateReferenceSystem
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
      * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
-     * Wyoming.
+     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAD83_NSRS2007_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5500';
 
@@ -2540,7 +2533,7 @@ class Compound extends CoordinateReferenceSystem
     /**
      * OSGB36 / British National Grid + BI height
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
-     * Great Britain (England, Wales and Scotland). Isle of Man onshore.
+     * Great Britain (England, Wales and Scotland). Isle of Man onshore
      * BI height is based on an ensemble including ODN, ODN (Offshore) and island vertical datums.
      */
     public const EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9920';
@@ -2722,7 +2715,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * RT90 + RH70 height
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - onshore
      * When combined with geoid model RN92 forms geographic 3D CRS RR92.
      */
     public const EPSG_RT90_PLUS_RH70_HEIGHT = 'urn:ogc:def:crs:EPSG::7404';
@@ -2910,14 +2903,14 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * Tokyo + JSLD69 height
-     * Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
+     * Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu
      * Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
      */
     public const EPSG_TOKYO_PLUS_JSLD69_HEIGHT = 'urn:ogc:def:crs:EPSG::7414';
 
     /**
      * Tokyo + JSLD72 height
-     * Extent: Japan - onshore mainland - Hokkaido.
+     * Extent: Japan - onshore mainland - Hokkaido
      * Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).
      */
     public const EPSG_TOKYO_PLUS_JSLD72_HEIGHT = 'urn:ogc:def:crs:EPSG::6700';
@@ -2936,14 +2929,14 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * WGS 84 + MSL height
-     * Extent: World.
+     * Extent: World
      * Component vertical CRS is not specific to any location or epoch.
      */
     public const EPSG_WGS_84_PLUS_MSL_HEIGHT = 'urn:ogc:def:crs:EPSG::9705';
 
     /**
      * WGS 84 / World Mercator + EGM2008 height
-     * Extent: World.
+     * Extent: World
      * Note: for preliminary concept visualisation only. Detailed design will require use of appropriate low-distortion
      * local projected and vertical CRSs.
      */

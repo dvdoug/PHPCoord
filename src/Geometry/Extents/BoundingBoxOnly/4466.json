@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4466",
+    "title": "Australasia and Oceania/Australia - Western Australia - Port Hedland",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [118.25, -20.78333333333333], [118.9666666666666, -20.78333333333333], [118.9666666666666, -20.1], [118.25, -20.1], [118.25, -20.78333333333333]
+        ]
+    ]
+}

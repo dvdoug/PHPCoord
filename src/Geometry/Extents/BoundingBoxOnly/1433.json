@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1433",
+    "title": "North America/Canada - Ontario - MTM zone 12",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.5, 46], [-79.5, 46], [-79.5, 55.20520142533661], [-82.5, 55.20520142533661], [-82.5, 46]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3971",
+    "title": "Australasia and Oceania/New Zealand - nearshore 168°E to 174°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [168, -47.63445111869307], [174, -47.63445111869307], [174, -33.8985353901853], [168, -33.8985353901853], [168, -47.63445111869307]
+        ]
+    ]
+}

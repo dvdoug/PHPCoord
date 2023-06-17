@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4678",
+    "title": "Europe-FSU/UK - Chester to Shrewsbury",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-3.15, 52.5], [-2.65, 52.5], [-2.65, 53.25], [-3.15, 53.25], [-3.15, 52.5]
+        ]
+    ]
+}

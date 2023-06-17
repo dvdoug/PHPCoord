@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3129",
+    "title": "Australasia and Oceania/French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-140.3061346303215, -9.560436676020345], [-139.4474395475284, -9.560436676020345], [-139.4474395475284, -8.728194784046138], [-140.3061346303215, -8.728194784046138], [-140.3061346303215, -9.560436676020345]
+        ]
+    ]
+}

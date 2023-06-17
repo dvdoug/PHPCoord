@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1576",
+    "title": "Africa/Africa - Botswana, Zambia and Zimbabwe - 24°E to 30°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [24, -25.83222579956054], [30, -25.83222579956054], [30, -8.310270152833372], [24, -8.310270152833372], [24, -25.83222579956054]
+        ]
+    ]
+}

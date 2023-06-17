@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3854",
+    "title": "Antarctic/Antarctica - Borchgrevink Coast region",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [157, -76], [173, -76], [173, -73], [157, -73], [157, -76]
+        ]
+    ]
+}

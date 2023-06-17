@@ -1,6 +1,6 @@
 ATRF2014
 --------
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
 
 .. code-block:: php
 
@@ -14,7 +14,7 @@ ATRF2014
 
 Australian Antarctic
 --------------------
-| Extent: Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector.
+| Extent: Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector
 
 .. code-block:: php
 
@@ -28,7 +28,7 @@ Australian Antarctic
 
 BDA2000
 -------
-| Extent: Bermuda - onshore and offshore.
+| Extent: Bermuda - onshore and offshore
 
 .. code-block:: php
 
@@ -42,7 +42,7 @@ BDA2000
 
 BGS2005
 -------
-| Extent: Bulgaria - onshore and offshore.
+| Extent: Bulgaria - onshore and offshore
 
 .. code-block:: php
 
@@ -57,7 +57,7 @@ Adopted 2010-07-29.
 
 BH_ETRS89
 ---------
-| Extent: Bosnia and Herzegovina.
+| Extent: Bosnia and Herzegovina
 
 .. code-block:: php
 
@@ -71,7 +71,7 @@ BH_ETRS89
 
 CGRS93
 ------
-| Extent: Cyprus - onshore.
+| Extent: Cyprus - onshore
 
 .. code-block:: php
 
@@ -85,7 +85,7 @@ CGRS93
 
 CHTRS95
 -------
-| Extent: Liechtenstein; Switzerland.
+| Extent: Liechtenstein; Switzerland
 
 .. code-block:: php
 
@@ -100,7 +100,7 @@ Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral
 
 CIGD11
 ------
-| Extent: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac.
+| Extent: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac
 
 .. code-block:: php
 
@@ -114,7 +114,7 @@ CIGD11
 
 CR-SIRGAS
 ---------
-| Extent: Costa Rica - onshore and offshore.
+| Extent: Costa Rica - onshore and offshore
 
 .. code-block:: php
 
@@ -129,7 +129,7 @@ Replaces CR05 (CRS code 5364) from April 2018.
 
 CR05
 ----
-| Extent: Costa Rica - onshore and offshore.
+| Extent: Costa Rica - onshore and offshore
 
 .. code-block:: php
 
@@ -144,7 +144,7 @@ Replaced by CR-SIRGAS (CRS code 8906) from April 2018.
 
 Cadastre 1997
 -------------
-| Extent: Mayotte - onshore.
+| Extent: Mayotte - onshore
 
 .. code-block:: php
 
@@ -158,7 +158,7 @@ Cadastre 1997
 
 China Geodetic Coordinate System 2000
 -------------------------------------
-| Extent: China - onshore and offshore.
+| Extent: China - onshore and offshore
 
 .. code-block:: php
 
@@ -172,7 +172,7 @@ China Geodetic Coordinate System 2000
 
 DB_REF
 ------
-| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.
+| Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen
 
 .. code-block:: php
 
@@ -187,7 +187,7 @@ Geometric component of both DB_REF2003 and DB_REF2016 systems.
 
 DGN95
 -----
-| Extent: Indonesia - onshore and offshore.
+| Extent: Indonesia - onshore and offshore
 
 .. code-block:: php
 
@@ -201,7 +201,7 @@ DGN95
 
 DRUKREF 03
 ----------
-| Extent: Bhutan.
+| Extent: Bhutan
 
 .. code-block:: php
 
@@ -215,7 +215,7 @@ DRUKREF 03
 
 EST97
 -----
-| Extent: Estonia - onshore and offshore.
+| Extent: Estonia - onshore and offshore
 
 .. code-block:: php
 
@@ -229,7 +229,7 @@ EST97
 
 ETRF2000
 --------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -244,7 +244,7 @@ Replaces ETRF97 (code 7929). On the publication of ETRF2005 (code 8399), the EUR
 
 ETRF2000-PL
 -----------
-| Extent: Poland - onshore and offshore.
+| Extent: Poland - onshore and offshore
 
 .. code-block:: php
 
@@ -259,7 +259,7 @@ Adopted from 2012-12-01.
 
 ETRF2005
 --------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -274,7 +274,7 @@ On publication in 2007 of this CRS, the EUREF Technical Working Group recommende
 
 ETRF2014
 --------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -289,7 +289,7 @@ Replaces ETRF2005 (code 8399). ETRF2014 is technically superior to ETRF2000 but 
 
 ETRF89
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -304,7 +304,7 @@ Replaced by ETRF90 (code 7917).
 
 ETRF90
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -319,7 +319,7 @@ Replaces ETRF89 (code 7915). Replaced by ETRF91 (code 7919).
 
 ETRF91
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -334,7 +334,7 @@ Replaces ETRF90 (code 7917). Replaced by ETRF92 (code 7921).
 
 ETRF92
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -349,7 +349,7 @@ Replaces ETRF91 (code 7919). Replaced by ETRF93 (code 7923).
 
 ETRF93
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -364,7 +364,7 @@ Replaces ETRF92 (code 7921). Replaced by ETRF94 (code 7925).
 
 ETRF94
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -379,7 +379,7 @@ Replaces ETRF93 (code 7923). Replaced by ETRF96 (code 7927).
 
 ETRF96
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -394,7 +394,7 @@ Replaces ETRF94 (code 7925). Replaced by ETRF97 (code 7929).
 
 ETRF97
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -409,7 +409,7 @@ Replaces ETRF96 (code 7927). Replaced by ETRF2000 (code 7931).
 
 ETRS89
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -424,7 +424,7 @@ Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96
 
 ETRS89/DREF91/2016
 ------------------
-| Extent: Germany - onshore and offshore.
+| Extent: Germany - onshore and offshore
 
 .. code-block:: php
 
@@ -439,7 +439,7 @@ German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 f
 
 FEH2010
 -------
-| Extent: Fehmarnbelt area of Denmark and Germany.
+| Extent: Fehmarnbelt area of Denmark and Germany
 
 .. code-block:: php
 
@@ -453,7 +453,7 @@ FEH2010
 
 GDA2020
 -------
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
 
 .. code-block:: php
 
@@ -467,7 +467,7 @@ GDA2020
 
 GDA94
 -----
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
 
 .. code-block:: php
 
@@ -481,7 +481,7 @@ GDA94
 
 GDBD2009
 --------
-| Extent: Brunei Darussalam - onshore and offshore.
+| Extent: Brunei Darussalam - onshore and offshore
 
 .. code-block:: php
 
@@ -495,7 +495,7 @@ GDBD2009
 
 GDM2000
 -------
-| Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.
+| Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak
 
 .. code-block:: php
 
@@ -509,7 +509,7 @@ GDM2000
 
 GR96
 ----
-| Extent: Greenland - onshore and offshore.
+| Extent: Greenland - onshore and offshore
 
 .. code-block:: php
 
@@ -523,7 +523,7 @@ GR96
 
 GSK-2011
 --------
-| Extent: Russian Federation - onshore and offshore.
+| Extent: Russian Federation - onshore and offshore
 
 .. code-block:: php
 
@@ -537,7 +537,7 @@ GSK-2011
 
 HTRS96
 ------
-| Extent: Croatia - onshore and offshore.
+| Extent: Croatia - onshore and offshore
 
 .. code-block:: php
 
@@ -551,7 +551,7 @@ HTRS96
 
 Hartebeesthoek94
 ----------------
-| Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.
+| Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore
 
 .. code-block:: php
 
@@ -565,7 +565,7 @@ Hartebeesthoek94
 
 Hong Kong Geodetic CS
 ---------------------
-| Extent: China - Hong Kong - onshore and offshore.
+| Extent: China - Hong Kong - onshore and offshore
 
 .. code-block:: php
 
@@ -580,7 +580,7 @@ Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correc
 
 IG05 Intermediate CRS
 ---------------------
-| Extent: Israel - onshore; Palestine Territory - onshore.
+| Extent: Israel - onshore; Palestine Territory - onshore
 
 .. code-block:: php
 
@@ -595,7 +595,7 @@ Intermediate system not used for spatial referencing - use IGD05 (CRS code 6979)
 
 IG05/12 Intermediate CRS
 ------------------------
-| Extent: Israel - onshore; Palestine Territory - onshore.
+| Extent: Israel - onshore; Palestine Territory - onshore
 
 .. code-block:: php
 
@@ -610,7 +610,7 @@ Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 69
 
 IGD05
 -----
-| Extent: Israel - onshore and offshore.
+| Extent: Israel - onshore and offshore
 
 .. code-block:: php
 
@@ -625,7 +625,7 @@ Replaced by IGD05/12 (CRS code 7138).
 
 IGD05/12
 --------
-| Extent: Israel - onshore and offshore.
+| Extent: Israel - onshore and offshore
 
 .. code-block:: php
 
@@ -640,7 +640,7 @@ Replaces IGD05 (CRS code 7135).
 
 IGM95
 -----
-| Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+| Extent: Italy - onshore and offshore; San Marino, Vatican City State
 
 .. code-block:: php
 
@@ -655,7 +655,7 @@ Replaced by RDN2008 (CRS code 6705) from 2011-11-10.
 
 IGRS
 ----
-| Extent: Iraq - onshore and offshore.
+| Extent: Iraq - onshore and offshore
 
 .. code-block:: php
 
@@ -669,7 +669,7 @@ IGRS
 
 IGS00
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -684,7 +684,7 @@ Adopted by the International GNSS Service (IGS) from 2001-12-02 through 2004-01-
 
 IGS05
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -699,7 +699,7 @@ Adopted by the International GNSS Service (IGS) from 2006-11-05 through 2011-04-
 
 IGS08
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -714,7 +714,7 @@ Used for products from International GNSS Service (IGS) analysis centres from 20
 
 IGS14
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -729,7 +729,7 @@ Used for products from the International GNSS Service (IGS) from 2017-01-29 to 2
 
 IGS20
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -744,7 +744,7 @@ Used for products from the International GNSS Service (IGS) from 2022-11-27. Rep
 
 IGS97
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -759,7 +759,7 @@ Adopted by the International GNSS Service (IGS) from 2000-06-04 through 2001-12-
 
 IGb00
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -774,7 +774,7 @@ Adopted by the International GNSS Service (IGS) from 2004-01-11 through 2006-11-
 
 IGb08
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -789,7 +789,7 @@ Adopted by the International GNSS Service (IGS) from 2012-10-07 through 2017-01-
 
 IGb14
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -804,7 +804,7 @@ Used for products from the International GNSS Service (IGS) from 2020-05-17. Rep
 
 IRENET95
 --------
-| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -818,7 +818,7 @@ IRENET95
 
 ISN2004
 -------
-| Extent: Iceland - onshore and offshore.
+| Extent: Iceland - onshore and offshore
 
 .. code-block:: php
 
@@ -833,7 +833,7 @@ Replaces ISN93 (CRS code 4945). Replaced by ISN2016 (CRS code 8085).
 
 ISN2016
 -------
-| Extent: Iceland - onshore and offshore.
+| Extent: Iceland - onshore and offshore
 
 .. code-block:: php
 
@@ -848,7 +848,7 @@ Replaces ISN2004 (CRS code 5323) from September 2017.
 
 ISN93
 -----
-| Extent: Iceland - onshore and offshore.
+| Extent: Iceland - onshore and offshore
 
 .. code-block:: php
 
@@ -863,7 +863,7 @@ Replaced by ISN2004 (CRS code 5323).
 
 ITRF2000
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -878,7 +878,7 @@ Replaces ITRF97 (code 7908). Replaced by ITRF2005 (code 7910).
 
 ITRF2005
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -893,7 +893,7 @@ Replaces ITRF2000 (code 7909). Replaced by ITRF2008 (code 7911).
 
 ITRF2008
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -908,7 +908,7 @@ Replaces ITRF2005 (code 7910). Replaced by ITRF2014 (code 7912).
 
 ITRF2014
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -923,7 +923,7 @@ Replaces ITRF2008 (code 7911). Replaced by ITRF2020 (CRS code 9989).
 
 ITRF2020
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -938,7 +938,7 @@ Replaces ITRF2014 (code 7912).
 
 ITRF88
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -953,7 +953,7 @@ Replaced by ITRF89 (code 7901).
 
 ITRF89
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -968,7 +968,7 @@ Replaces ITRF88 (code 7900). Replaced by ITRF90 (code 7902).
 
 ITRF90
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -983,7 +983,7 @@ Replaces ITRF89 (code 7901). Replaced by ITRF91 (code 7903).
 
 ITRF91
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -998,7 +998,7 @@ Replaces ITRF90 (code 7902). Replaced by ITRF92 (code 7904).
 
 ITRF92
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1013,7 +1013,7 @@ Replaces ITRF91 (code 7903). Replaced by ITRF93 (code 7905).
 
 ITRF93
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1028,7 +1028,7 @@ Replaces ITRF92 (code 7904). Replaced by ITRF94 (code 7906).
 
 ITRF94
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1043,7 +1043,7 @@ Replaces ITRF93 (code 7905). Replaced by ITRF96 (code 7907).
 
 ITRF96
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1058,7 +1058,7 @@ Replaces ITRF94 (code 7906). Replaced by ITRF97 (code 7908).
 
 ITRF97
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1073,7 +1073,7 @@ Replaces ITRF96 (code 7907). Replaced by ITRF2000 (code 7909).
 
 JAD2001
 -------
-| Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.
+| Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays
 
 .. code-block:: php
 
@@ -1087,7 +1087,7 @@ JAD2001
 
 JGD2000
 -------
-| Extent: Japan - onshore and offshore.
+| Extent: Japan - onshore and offshore
 
 .. code-block:: php
 
@@ -1102,7 +1102,7 @@ From 21st October 2011 replaced by JGD2011 (CRS code 6667).
 
 JGD2011
 -------
-| Extent: Japan - onshore and offshore.
+| Extent: Japan - onshore and offshore
 
 .. code-block:: php
 
@@ -1117,7 +1117,7 @@ Replaces JGD2000 (CRS code 4947) with effect from 21st October 2011.
 
 KOSOVAREF01
 -----------
-| Extent: Kosovo.
+| Extent: Kosovo
 
 .. code-block:: php
 
@@ -1131,7 +1131,7 @@ KOSOVAREF01
 
 KSA-GRF17
 ---------
-| Extent: Saudi Arabia - onshore and offshore.
+| Extent: Saudi Arabia - onshore and offshore
 
 .. code-block:: php
 
@@ -1145,7 +1145,7 @@ KSA-GRF17
 
 Korea 2000
 ----------
-| Extent: Republic of Korea (South Korea) - onshore and offshore.
+| Extent: Republic of Korea (South Korea) - onshore and offshore
 
 .. code-block:: php
 
@@ -1159,7 +1159,7 @@ Korea 2000
 
 Kyrg-06
 -------
-| Extent: Kyrgyzstan.
+| Extent: Kyrgyzstan
 
 .. code-block:: php
 
@@ -1173,7 +1173,7 @@ Kyrg-06
 
 LGD2006
 -------
-| Extent: Libya - onshore and offshore.
+| Extent: Libya - onshore and offshore
 
 .. code-block:: php
 
@@ -1187,7 +1187,7 @@ LGD2006
 
 LKS-2020
 --------
-| Extent: Latvia - onshore and offshore.
+| Extent: Latvia - onshore and offshore
 
 .. code-block:: php
 
@@ -1202,7 +1202,7 @@ Replaces LKS-92 (CRS code 4949).
 
 LKS-92
 ------
-| Extent: Latvia - onshore and offshore.
+| Extent: Latvia - onshore and offshore
 
 .. code-block:: php
 
@@ -1217,7 +1217,7 @@ Replaced by LKS-2020 (CRS code 10304).
 
 LKS94
 -----
-| Extent: Lithuania - onshore and offshore.
+| Extent: Lithuania - onshore and offshore
 
 .. code-block:: php
 
@@ -1231,7 +1231,7 @@ LKS94
 
 LTF2004(G)
 ----------
-| Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+| Extent: France and Italy - on or related to the rail route from Lyon to Turin
 
 .. code-block:: php
 
@@ -1245,7 +1245,7 @@ LTF2004(G)
 
 LUREF
 -----
-| Extent: Luxembourg.
+| Extent: Luxembourg
 
 .. code-block:: php
 
@@ -1260,7 +1260,7 @@ Ellipsoidal height approximates to NG95 gravity-related heights to within 5-15cm
 
 Lao 1993
 --------
-| Extent: Laos.
+| Extent: Laos
 
 .. code-block:: php
 
@@ -1275,7 +1275,7 @@ Replaced by Lao 1997. Lao 1993 coordinate values are within 1m of Lao 1997 value
 
 Lao 1997
 --------
-| Extent: Laos.
+| Extent: Laos
 
 .. code-block:: php
 
@@ -1290,7 +1290,7 @@ Replaces Lao 1993. Lao 1993 coordinate values are within 1m of Lao 1997 values.
 
 MACARIO SOLIS
 -------------
-| Extent: Panama - onshore and offshore.
+| Extent: Panama - onshore and offshore
 
 .. code-block:: php
 
@@ -1305,7 +1305,7 @@ Densification of SIRGAS 2000 within Panama.
 
 MAGNA-SIRGAS
 ------------
-| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.
+| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank
 
 .. code-block:: php
 
@@ -1320,7 +1320,7 @@ For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20045).
 
 MAGNA-SIRGAS 2018
 -----------------
-| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.
+| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank
 
 .. code-block:: php
 
@@ -1334,7 +1334,7 @@ MAGNA-SIRGAS 2018
 
 MARGEN
 ------
-| Extent: Bolivia.
+| Extent: Bolivia
 
 .. code-block:: php
 
@@ -1348,7 +1348,7 @@ MARGEN
 
 MGI
 ---
-| Extent: Austria.
+| Extent: Austria
 
 .. code-block:: php
 
@@ -1363,7 +1363,7 @@ Created retrospectively to support geoid model based on Bessel ellipsoid.
 
 MOLDREF99
 ---------
-| Extent: Moldova.
+| Extent: Moldova
 
 .. code-block:: php
 
@@ -1377,7 +1377,7 @@ MOLDREF99
 
 MTRF-2000
 ---------
-| Extent: Saudi Arabia - onshore and offshore.
+| Extent: Saudi Arabia - onshore and offshore
 
 .. code-block:: php
 
@@ -1391,7 +1391,7 @@ MTRF-2000
 
 Macao 2008
 ----------
-| Extent: China - Macao - onshore and offshore.
+| Extent: China - Macao - onshore and offshore
 
 .. code-block:: php
 
@@ -1406,7 +1406,7 @@ Locally sometimes referred to as ITRF2005, this is not strictly correct.
 
 Mauritania 1999
 ---------------
-| Extent: Mauritania - onshore and offshore.
+| Extent: Mauritania - onshore and offshore
 
 .. code-block:: php
 
@@ -1420,7 +1420,7 @@ Mauritania 1999
 
 Mexico ITRF2008
 ---------------
-| Extent: Mexico - onshore and offshore.
+| Extent: Mexico - onshore and offshore
 
 .. code-block:: php
 
@@ -1435,7 +1435,7 @@ Replaces Mexico ITRF92 (CRS code 4482) from December 2010.
 
 Mexico ITRF92
 -------------
-| Extent: Mexico - onshore and offshore.
+| Extent: Mexico - onshore and offshore
 
 .. code-block:: php
 
@@ -1450,7 +1450,7 @@ Replaced by Mexico ITRF2008 (CRS code 6364) from December 2010.
 
 Moznet
 ------
-| Extent: Mozambique - onshore and offshore.
+| Extent: Mozambique - onshore and offshore
 
 .. code-block:: php
 
@@ -1464,7 +1464,7 @@ Moznet
 
 NAD83(2011)
 -----------
-| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
 
 .. code-block:: php
 
@@ -1479,7 +1479,7 @@ Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(CORS9
 
 NAD83(CORS96)
 -------------
-| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
 
 .. code-block:: php
 
@@ -1494,7 +1494,7 @@ Note: this CRS includes POSITIVE EAST longitudes. Replaced by NAD83(2011) (CRS c
 
 NAD83(CSRS)
 -----------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1509,7 +1509,7 @@ Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific i
 
 NAD83(CSRS)v2
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1524,7 +1524,7 @@ Adopted by the Canadian federal government from 1998-01-01 and by the provincial
 
 NAD83(CSRS)v3
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1539,7 +1539,7 @@ Adopted by the Canadian federal government from 1999-01-01 and by the provincial
 
 NAD83(CSRS)v4
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1554,7 +1554,7 @@ Adopted by the Canadian federal government from 2002-01-01 and by the provincial
 
 NAD83(CSRS)v5
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1569,7 +1569,7 @@ Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)
 
 NAD83(CSRS)v6
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1584,7 +1584,7 @@ Adopted by the Canadian federal government from 2010-01-01 and the provincial go
 
 NAD83(CSRS)v7
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1599,7 +1599,7 @@ Adopted by the Canadian federal government from 2017-05-01 and the provincial go
 
 NAD83(CSRS96)
 -------------
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1614,7 +1614,7 @@ Adopted by the Canadian federal government from 1996-01-01. Replaced by NAD83(CS
 
 NAD83(FBN)
 ----------
-| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore.
+| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -1629,7 +1629,7 @@ Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Cont
 
 NAD83(HARN Corrected)
 ---------------------
-| Extent: Puerto Rico and US Virgin Islands - onshore.
+| Extent: Puerto Rico and US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -1644,7 +1644,7 @@ Note: this CRS includes POSITIVE EAST longitudes. In PRVI replaces NAD83(HARN) =
 
 NAD83(HARN)
 -----------
-| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore.
+| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -1659,7 +1659,7 @@ In CONUS and Hawaii replaces NAD83 for applications with an accuracy of better t
 
 NAD83(MA11)
 -----------
-| Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+| Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
 
 .. code-block:: php
 
@@ -1674,7 +1674,7 @@ Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN)
 
 NAD83(MARP00)
 -------------
-| Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+| Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
 
 .. code-block:: php
 
@@ -1689,7 +1689,7 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).
 
 NAD83(NSRS2007)
 ---------------
-| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
 
 .. code-block:: php
 
@@ -1704,7 +1704,7 @@ Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN)
 
 NAD83(PA11)
 -----------
-| Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.
+| Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore
 
 .. code-block:: php
 
@@ -1719,7 +1719,7 @@ Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN)
 
 NAD83(PACP00)
 -------------
-| Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.
+| Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore
 
 .. code-block:: php
 
@@ -1734,7 +1734,7 @@ Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NA
 
 NZGD2000
 --------
-| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
 
 .. code-block:: php
 
@@ -1748,7 +1748,7 @@ NZGD2000
 
 ONGD14
 ------
-| Extent: Oman - onshore and offshore.
+| Extent: Oman - onshore and offshore
 
 .. code-block:: php
 
@@ -1763,7 +1763,7 @@ In Oman replaces usage of WGS 84 (G873) from 2014. Replaced by ONGD17 (CRS code 
 
 ONGD17
 ------
-| Extent: Oman - onshore and offshore.
+| Extent: Oman - onshore and offshore
 
 .. code-block:: php
 
@@ -1778,7 +1778,7 @@ Replaces ONGD14 (CRS code 7372) from March 2019.
 
 PNG94
 -----
-| Extent: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands.
+| Extent: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands
 
 .. code-block:: php
 
@@ -1792,7 +1792,7 @@ PNG94
 
 POSGAR 2007
 -----------
-| Extent: Argentina - onshore and offshore.
+| Extent: Argentina - onshore and offshore
 
 .. code-block:: php
 
@@ -1807,7 +1807,7 @@ Adopted as official replacement of POSGAR 94 in May 2009. Also replaces de facto
 
 POSGAR 94
 ---------
-| Extent: Argentina - onshore and offshore.
+| Extent: Argentina - onshore and offshore
 
 .. code-block:: php
 
@@ -1822,7 +1822,7 @@ Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many pract
 
 POSGAR 98
 ---------
-| Extent: Argentina - onshore and offshore.
+| Extent: Argentina - onshore and offshore
 
 .. code-block:: php
 
@@ -1837,7 +1837,7 @@ Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for
 
 PRS92
 -----
-| Extent: Philippines - onshore and offshore.
+| Extent: Philippines - onshore and offshore
 
 .. code-block:: php
 
@@ -1851,7 +1851,7 @@ PRS92
 
 PTRA08
 ------
-| Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.
+| Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens
 
 .. code-block:: php
 
@@ -1865,7 +1865,7 @@ PTRA08
 
 PZ-90
 -----
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1880,7 +1880,7 @@ Replaced by PZ-90.02 from 2007-09-20.
 
 PZ-90.02
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1895,7 +1895,7 @@ Replaces PZ-90 (CRS code 4923) from 2007-09-20. Replaced by PZ-90.11 (CRS code 7
 
 PZ-90.11
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -1910,7 +1910,7 @@ Replaces PZ-90.02 (CRS code 7678) from 2014-01-15.
 
 Peru96
 ------
-| Extent: Peru - onshore and offshore.
+| Extent: Peru - onshore and offshore
 
 .. code-block:: php
 
@@ -1924,7 +1924,7 @@ Peru96
 
 RDN2008
 -------
-| Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+| Extent: Italy - onshore and offshore; San Marino, Vatican City State
 
 .. code-block:: php
 
@@ -1939,7 +1939,7 @@ Replaces IGM95 (CRS code 4983) from 2011-11-10.
 
 REDGEOMIN
 ---------
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -1953,7 +1953,7 @@ REDGEOMIN
 
 REGCAN95
 --------
-| Extent: Spain - Canary Islands onshore and offshore.
+| Extent: Spain - Canary Islands onshore and offshore
 
 .. code-block:: php
 
@@ -1967,7 +1967,7 @@ REGCAN95
 
 REGVEN
 ------
-| Extent: Venezuela - onshore and offshore.
+| Extent: Venezuela - onshore and offshore
 
 .. code-block:: php
 
@@ -1982,7 +1982,7 @@ Densification in Venezuela of SIRGAS.
 
 RGAF09
 ------
-| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
 
 .. code-block:: php
 
@@ -1997,7 +1997,7 @@ Replaces RRAF 1991 (CRS code 4557). See CRS code 7085 for alternate system with 
 
 RGAF09 (lon-lat)
 ----------------
-| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
 
 .. code-block:: php
 
@@ -2012,7 +2012,7 @@ Replaces RRAF 1991 (CRS code 4557). See CRS code 5488 for system with horizontal
 
 RGF93 v1
 --------
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -2027,7 +2027,7 @@ See CRS code 7042 for alternate system with horizontal axes reversed used by IGN
 
 RGF93 v1 (lon-lat)
 ------------------
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -2042,7 +2042,7 @@ See CRS code 4965 for system with horizontal axes in sequence lat-lon to be used
 
 RGF93 v2
 --------
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -2057,7 +2057,7 @@ Replaces RGF93 v1 CRS code 4965) from 2010-06-18 . Replaced by RGF93 v2b (CRS co
 
 RGF93 v2 (lon-lat)
 ------------------
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -2072,7 +2072,7 @@ Replaces RGF93 v1 (lon-lat) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CR
 
 RGF93 v2b
 ---------
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -2087,7 +2087,7 @@ Replaces RGF93 v2 (CRS code 9776) from 2021-01-05. See CRS code 9783 for alterna
 
 RGF93 v2b (lon-lat)
 -------------------
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -2102,7 +2102,7 @@ Replaces RGF93 v2 (lon-lat) (CRS code 9778) from 2021-01-05. See CRS code 9781 f
 
 RGFG95
 ------
-| Extent: French Guiana - onshore and offshore.
+| Extent: French Guiana - onshore and offshore
 
 .. code-block:: php
 
@@ -2117,7 +2117,7 @@ See CRS code 7040 for alternate system with horizontal axes reversed used by IGN
 
 RGFG95 (lon-lat)
 ----------------
-| Extent: French Guiana - onshore and offshore.
+| Extent: French Guiana - onshore and offshore
 
 .. code-block:: php
 
@@ -2132,7 +2132,7 @@ See CRS code 4967 for system with horizontal axes in sequence lat-lon to be used
 
 RGM04
 -----
-| Extent: Mayotte - onshore and offshore.
+| Extent: Mayotte - onshore and offshore
 
 .. code-block:: php
 
@@ -2147,7 +2147,7 @@ See CRS code 7038 for alternate system with horizontal axes reversed used by IGN
 
 RGM04 (lon-lat)
 ---------------
-| Extent: Mayotte - onshore and offshore.
+| Extent: Mayotte - onshore and offshore
 
 .. code-block:: php
 
@@ -2162,7 +2162,7 @@ See CRS code 4469 for system with horizontal axes in sequence lat-lon to be used
 
 RGNC15
 ------
-| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
 
 .. code-block:: php
 
@@ -2177,7 +2177,7 @@ Replaces RGNC91-93 (CRS code 4907). See CRS code 10311 for alternate system with
 
 RGNC15 (lon-lat)
 ----------------
-| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
 
 .. code-block:: php
 
@@ -2192,7 +2192,7 @@ Replaces RGNC91-93 (lon-lat) (CRS code 10300). See CRS code 10309 for system wit
 
 RGNC91-93
 ---------
-| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
 
 .. code-block:: php
 
@@ -2207,7 +2207,7 @@ Replaces older systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, 
 
 RGNC91-93 (lon-lat)
 -------------------
-| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.
+| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
 
 .. code-block:: php
 
@@ -2222,7 +2222,7 @@ See CRS code 4907 for system with horizontal axes in sequence lat-lon to be used
 
 RGPF
 ----
-| Extent: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands.
+| Extent: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands
 
 .. code-block:: php
 
@@ -2236,7 +2236,7 @@ RGPF
 
 RGR92
 -----
-| Extent: Reunion - onshore and offshore.
+| Extent: Reunion - onshore and offshore
 
 .. code-block:: php
 
@@ -2251,7 +2251,7 @@ See CRS code 7036 for alternate system with horizontal axes reversed used by IGN
 
 RGR92 (lon-lat)
 ---------------
-| Extent: Reunion - onshore and offshore.
+| Extent: Reunion - onshore and offshore
 
 .. code-block:: php
 
@@ -2266,7 +2266,7 @@ See CRS code 4971 for system with horizontal axes in sequence lat-lon to be used
 
 RGRDC 2005
 ----------
-| Extent: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore.
+| Extent: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore
 
 .. code-block:: php
 
@@ -2280,7 +2280,7 @@ RGRDC 2005
 
 RGSH2020
 --------
-| Extent: Algeria - onshore and offshore.
+| Extent: Algeria - onshore and offshore
 
 .. code-block:: php
 
@@ -2294,7 +2294,7 @@ RGSH2020
 
 RGSPM06
 -------
-| Extent: St Pierre and Miquelon - onshore and offshore.
+| Extent: St Pierre and Miquelon - onshore and offshore
 
 .. code-block:: php
 
@@ -2309,7 +2309,7 @@ See CRS code 7034 for alternate system with horizontal axes reversed used by IGN
 
 RGSPM06 (lon-lat)
 -----------------
-| Extent: St Pierre and Miquelon - onshore and offshore.
+| Extent: St Pierre and Miquelon - onshore and offshore
 
 .. code-block:: php
 
@@ -2324,7 +2324,7 @@ See CRS code 4466 for system with horizontal axes in sequence lat-lon to be used
 
 RGTAAF07
 --------
-| Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area.
+| Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area
 
 .. code-block:: php
 
@@ -2339,7 +2339,7 @@ See CRS code 7087 for alternate system with horizontal axes reversed used by IGN
 
 RGTAAF07 (lon-lat)
 ------------------
-| Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area.
+| Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area
 
 .. code-block:: php
 
@@ -2354,7 +2354,7 @@ See CRS code 7072 for alternate system with horizontal axes in sequence lat-lon 
 
 RGWF96
 ------
-| Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
+| Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi
 
 .. code-block:: php
 
@@ -2369,7 +2369,7 @@ See CRS code 8901 for alternate system with horizontal axes reversed used by IGN
 
 RGWF96 (lon-lat)
 ----------------
-| Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
+| Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi
 
 .. code-block:: php
 
@@ -2384,7 +2384,7 @@ See CRS code 8899 for system with horizontal axes in sequence lat-lon to be used
 
 RRAF 1991
 ---------
-| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
 
 .. code-block:: php
 
@@ -2399,7 +2399,7 @@ Replaces older local 2D systems Fort Marigot and Sainte Anne CRS (codes 4621-22)
 
 RSAO13
 ------
-| Extent: Angola - onshore and offshore.
+| Extent: Angola - onshore and offshore
 
 .. code-block:: php
 
@@ -2427,7 +2427,7 @@ RSRGD2000
 
 SHGD2015
 --------
-| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
 
 .. code-block:: php
 
@@ -2442,7 +2442,7 @@ Closely aligned to SHGD2015 (CRS code xxxx) with difference attributable to diff
 
 SIRGAS 1995
 -----------
-| Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.
+| Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore
 
 .. code-block:: php
 
@@ -2457,7 +2457,7 @@ Replaced by SIRGAS 2000 (CRS code 4989).
 
 SIRGAS 2000
 -----------
-| Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.
+| Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore
 
 .. code-block:: php
 
@@ -2472,7 +2472,7 @@ Replaces SIRGAS 1995 system (CRS code 4975) for South America; expands SIRGAS to
 
 SIRGAS-CON DGF00P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2487,7 +2487,7 @@ Replaced by SIRGAS-CON DGF01P01 (CRS code 8918).
 
 SIRGAS-CON DGF01P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2502,7 +2502,7 @@ Replaces SIRGAS-CON DGF00P01 (CRS code 8916). Replaced by SIRGAS-CON DGF01P02 (C
 
 SIRGAS-CON DGF01P02
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2517,7 +2517,7 @@ Replaces SIRGAS-CON DGF01P01 (CRS code 8918). Replaced by SIRGAS-CON DGF02P01 (C
 
 SIRGAS-CON DGF02P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2532,7 +2532,7 @@ Replaces SIRGAS-CON DGF01P02 (CRS code 8920). Replaced by SIRGAS-CON DGF04P01 (C
 
 SIRGAS-CON DGF04P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2547,7 +2547,7 @@ Replaces SIRGAS-CON DGF02P01 (CRS code 8922). Replaced by SIRGAS-CON DGF05P01 (C
 
 SIRGAS-CON DGF05P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2562,7 +2562,7 @@ Replaces SIRGAS-CON DGF04P01 (CRS code 8924). Replaced by SIRGAS-CON DGF06P01 (C
 
 SIRGAS-CON DGF06P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2577,7 +2577,7 @@ Replaces SIRGAS-CON DGF05P01 (CRS code 8926). Replaced by SIRGAS-CON DGF07P01 (C
 
 SIRGAS-CON DGF07P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2592,7 +2592,7 @@ Replaces SIRGAS-CON DGF06P01 (CRS code 8928). Replaced by SIRGAS-CON DGF08P01 (C
 
 SIRGAS-CON DGF08P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2607,7 +2607,7 @@ Replaces SIRGAS-CON DGF07P01 (CRS code 8930). Replaced by SIRGAS-CON SIR09P01 (C
 
 SIRGAS-CON SIR09P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2622,7 +2622,7 @@ Replaces SIRGAS-CON DGF08P01 (CRS code 8932). Replaced by SIRGAS-CON SIR10P01 (C
 
 SIRGAS-CON SIR10P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2637,7 +2637,7 @@ Replaces SIRGAS-CON SIR09P01 (CRS code 8934). Replaced by SIRGAS-CON SIR11P01 (C
 
 SIRGAS-CON SIR11P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2652,7 +2652,7 @@ Replaces SIRGAS-CON SIR10P01 (CRS code 8936). Replaced by SIRGAS-CON SIR13P01 (C
 
 SIRGAS-CON SIR13P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2667,7 +2667,7 @@ Replaces SIRGAS-CON SIR11P01 (CRS code 8938). Replaced by SIRGAS-CON SIR14P01 (C
 
 SIRGAS-CON SIR14P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2682,7 +2682,7 @@ Replaces SIRGAS-CON SIR13P01 (CRS code 8940). Replaced by SIRGAS-CON SIR15P01 (C
 
 SIRGAS-CON SIR15P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2697,7 +2697,7 @@ Replaces SIRGAS-CON SIR14P01 (CRS code 8942). Replaced by SIRGAS-CON SIR17P01 (C
 
 SIRGAS-CON SIR17P01
 -------------------
-| Extent: Latin America - Central America and South America, onshore and offshore.
+| Extent: Latin America - Central America and South America, onshore and offshore
 
 .. code-block:: php
 
@@ -2712,7 +2712,7 @@ Replaces SIRGAS-CON SIR15P01 (CRS code 8944).
 
 SIRGAS-Chile 2002
 -----------------
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -2727,7 +2727,7 @@ Densification of SIRGAS 2000 within Chile. Replaced by SIRGAS-Chile 2010 (CRS co
 
 SIRGAS-Chile 2010
 -----------------
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -2742,7 +2742,7 @@ Densification of SIRGAS-CON within Chile at epoch 2010.00. Replaces SIRGAS-Chile
 
 SIRGAS-Chile 2013
 -----------------
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -2757,7 +2757,7 @@ Densification of SIRGAS-CON within Chile at epoch 2013.00. Replaces SIRGAS-Chile
 
 SIRGAS-Chile 2016
 -----------------
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -2772,7 +2772,7 @@ Densification of SIRGAS-CON within Chile at epoch 2016.00. Replaces SIRGAS-Chile
 
 SIRGAS-Chile 2021
 -----------------
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -2787,7 +2787,7 @@ Densification of SIRGAS-CON within Chile at epoch 2021.00. Replaces SIRGAS-Chile
 
 SIRGAS-ROU98
 ------------
-| Extent: Uruguay - onshore and offshore.
+| Extent: Uruguay - onshore and offshore
 
 .. code-block:: php
 
@@ -2802,7 +2802,7 @@ Densification of SIRGAS 1995 in Uruguay.
 
 SIRGAS_ES2007.8
 ---------------
-| Extent: El Salvador - onshore and offshore.
+| Extent: El Salvador - onshore and offshore
 
 .. code-block:: php
 
@@ -2817,7 +2817,7 @@ Densification of SIRGAS 2000 within El Salvador.
 
 SRB_ETRS89
 ----------
-| Extent: Serbia including Vojvodina.
+| Extent: Serbia including Vojvodina
 
 .. code-block:: php
 
@@ -2832,7 +2832,7 @@ Replaces SREF98 (CRS code 4074).
 
 SREF98
 ------
-| Extent: Serbia including Vojvodina.
+| Extent: Serbia including Vojvodina
 
 .. code-block:: php
 
@@ -2847,7 +2847,7 @@ Replaced by SRB_ETRS89 (STRS00) (CRS code 8684).
 
 SRGI2013
 --------
-| Extent: Indonesia - onshore and offshore.
+| Extent: Indonesia - onshore and offshore
 
 .. code-block:: php
 
@@ -2862,7 +2862,7 @@ Supports horizontal component of national horizontal control network (JKHN). Ado
 
 SWEREF99
 --------
-| Extent: Sweden - onshore and offshore.
+| Extent: Sweden - onshore and offshore
 
 .. code-block:: php
 
@@ -2876,7 +2876,7 @@ SWEREF99
 
 Slovenia 1996
 -------------
-| Extent: Slovenia - onshore and offshore.
+| Extent: Slovenia - onshore and offshore
 
 .. code-block:: php
 
@@ -2890,7 +2890,7 @@ Slovenia 1996
 
 St. Helena Tritan
 -----------------
-| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+| Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
 
 .. code-block:: php
 
@@ -2905,7 +2905,7 @@ Closely aligned to SHGD2015 (CRS code 7885) with difference attributable to diff
 
 TGD2005
 -------
-| Extent: Tonga - onshore and offshore.
+| Extent: Tonga - onshore and offshore
 
 .. code-block:: php
 
@@ -2919,7 +2919,7 @@ TGD2005
 
 TUREF
 -----
-| Extent: Türkiye (Turkey) - onshore and offshore.
+| Extent: Türkiye (Turkey) - onshore and offshore
 
 .. code-block:: php
 
@@ -2933,7 +2933,7 @@ TUREF
 
 TWD97
 -----
-| Extent: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands.
+| Extent: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands
 
 .. code-block:: php
 
@@ -2947,7 +2947,7 @@ TWD97
 
 UCS-2000
 --------
-| Extent: Ukraine - onshore and offshore.
+| Extent: Ukraine - onshore and offshore
 
 .. code-block:: php
 
@@ -2962,7 +2962,7 @@ Adopted 1st January 2007.
 
 WGS 66
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -2977,7 +2977,7 @@ Replaced by WGS 72.
 
 WGS 72
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -2992,7 +2992,7 @@ Replaced by WGS 84.
 
 WGS 72BE
 --------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3007,7 +3007,7 @@ Broadcast ephemeris. Replaced by WGS 84.
 
 WGS 84
 ------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3021,7 +3021,7 @@ WGS 84
 
 WGS 84 (G1150)
 --------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3036,7 +3036,7 @@ Replaces WGS 84 (G873) (CRS code 7659) from 2002-01-20. Replaced by WGS 84 (G167
 
 WGS 84 (G1674)
 --------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3051,7 +3051,7 @@ Replaces WGS 84 (G1150) (CRS code 7661) from 2012-02-08. Replaced by WGS 84 (G17
 
 WGS 84 (G1762)
 --------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3066,7 +3066,7 @@ Replaces WGS 84 (G1674) (CRS code 7663) from 2013-10-16. Redesignated WGS 84 (G1
 
 WGS 84 (G2139)
 --------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3081,7 +3081,7 @@ Replaces WGS 84 (G1762) (CRS code 7665) from 2021-01-03.
 
 WGS 84 (G730)
 -------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3096,7 +3096,7 @@ Replaces WGS 84 (Transit) (CRS code 7816) from 1994-06-29. Replaced by WGS84 (G8
 
 WGS 84 (G873)
 -------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3111,7 +3111,7 @@ Replaces WGS 84 (G730) (CRS code 7657) from 1997-01-29. Replaced by WGS 84 (G115
 
 WGS 84 (Transit)
 ----------------
-| Extent: World.
+| Extent: World
 
 .. code-block:: php
 
@@ -3126,7 +3126,7 @@ Replaced by WGS84 (G730) (CRS code 7657) from 1994-06-29.
 
 Yemen NGN96
 -----------
-| Extent: Yemen - onshore and offshore.
+| Extent: Yemen - onshore and offshore
 
 .. code-block:: php
 

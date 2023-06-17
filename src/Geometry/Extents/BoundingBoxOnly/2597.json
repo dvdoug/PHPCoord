@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2597",
+    "title": "South America/Argentina - Tierra del Fuego offshore east of 66°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-66, -54.92301559448242], [-61.49960136413574, -54.92301559448242], [-61.49960136413574, -51.36596298217773], [-66, -51.36596298217773], [-66, -54.92301559448242]
+        ]
+    ]
+}

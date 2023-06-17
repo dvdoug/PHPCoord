@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3853",
+    "title": "Antarctic/Antarctica - McMurdo Sound region",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [153, -81], [173, -81], [173, -76], [153, -76], [153, -81]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2290",
+    "title": "North America/Canada - Quebec, Newfoundland and Labrador - MTM zone 3",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-60, 47.50733851947097], [-57.10980594563824, 47.50733851947097], [-57.10980594563824, 55.37763769034285], [-60, 55.37763769034285], [-60, 47.50733851947097]
+        ]
+    ]
+}

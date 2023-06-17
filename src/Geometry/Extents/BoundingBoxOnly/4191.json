@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4191",
+    "title": "Australasia and Oceania/Australasia - Australia and Christmas Island - west of 108°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [102.1493325950007, -34.67199909615123], [108.0000000000001, -34.67199909615123], [108.0000000000001, -8.87058779099982], [102.1493325950007, -8.87058779099982], [102.1493325950007, -34.67199909615123]
+        ]
+    ]
+}

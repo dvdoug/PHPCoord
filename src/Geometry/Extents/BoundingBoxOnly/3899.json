@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3899",
+    "title": "Europe-FSU/Europe - South Permian basin",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-1.67, 50.5], [22, 50.5], [22, 56], [-1.67, 56], [-1.67, 50.5]
+        ]
+    ]
+}

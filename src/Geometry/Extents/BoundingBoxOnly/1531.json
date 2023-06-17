@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1531",
+    "title": "North America/Canada - Maritime Provinces - west of 66°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-69, 43.64226570637299], [-66, 43.64226570637299], [-66, 48.06933074432695], [-69, 48.06933074432695], [-69, 43.64226570637299]
+        ]
+    ]
+}

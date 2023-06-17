@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2812",
+    "title": "Australasia and Oceania/French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea, Tahaa",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-151.9055155212004, -16.95445006000904], [-150.8961212837143, -16.95445006000904], [-150.8961212837143, -16.17729121439535], [-151.9055155212004, -16.17729121439535], [-151.9055155212004, -16.95445006000904]
+        ]
+    ]
+}

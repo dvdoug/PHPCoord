@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4436",
+    "title": "Australasia and Oceania/Australia - Western Australia - Kalgoorlie",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [121, -32.25], [121.8333333333333, -32.25], [121.8333333333333, -28.75], [121, -28.75], [121, -32.25]
+        ]
+    ]
+}

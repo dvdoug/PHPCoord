@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4133",
+    "title": "South America/Brazil - 42°W to 36°W and north of 0°N",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-42, 0], [-38.22070884704584, 0], [-38.22070884704584, 0.732652664184684], [-42, 0.732652664184684], [-42, 0]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4665",
+    "title": "Europe-FSU/UK - Motherwell to Inverness",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-4.4, 55.7], [-3.3, 55.7], [-3.3, 57.54999999999999], [-4.4, 57.54999999999999], [-4.4, 55.7]
+        ]
+    ]
+}

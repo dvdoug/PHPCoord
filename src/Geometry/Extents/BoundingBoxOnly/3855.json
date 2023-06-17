@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3855",
+    "title": "Antarctic/Antarctica - Pennell Coast region",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [160, -73], [172, -73], [172, -69.5], [160, -69.5], [160, -73]
+        ]
+    ]
+}

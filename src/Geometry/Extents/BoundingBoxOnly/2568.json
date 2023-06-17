@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2568",
+    "title": "North America/Greenland - west - 63°N to 66°N",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-53.69830870767563, 63], [-46, 63], [-46, 66], [-53.69830870767563, 66], [-53.69830870767563, 63]
+        ]
+    ]
+}

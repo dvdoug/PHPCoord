@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3794",
+    "title": "Australasia and Oceania/New Zealand - South Island - Jacksons Bay mc",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [168.0218836736816, -44.39573343], [170.00946864, -44.39573343], [170.00946864, -43.67025741578471], [168.0218836736816, -43.67025741578471], [168.0218836736816, -44.39573343]
+        ]
+    ]
+}

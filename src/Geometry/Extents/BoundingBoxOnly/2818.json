@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2818",
+    "title": "Antarctic/Antarctica - Adelie Land coastal area",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [136, -67.12875002003835], [142, -67.12875002003835], [142, -65.61930934277731], [136, -65.61930934277731], [136, -67.12875002003835]
+        ]
+    ]
+}

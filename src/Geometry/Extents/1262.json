@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1262",
+    "title": "Global/World",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-180, -90], [180, -90], [180, 90], [-180, 90], [-180, -90]
+        ]
+    ]
+}

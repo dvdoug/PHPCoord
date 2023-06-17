@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1832",
+    "title": "South America/South America - 60°W to 54°W, S hemisphere",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-60, -44.8198013305664], [-54, -44.8198013305664], [-54, 0], [-60, 0], [-60, -44.8198013305664]
+        ]
+    ]
+}

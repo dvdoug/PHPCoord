@@ -29,7 +29,7 @@ class Geographic2D extends Geographic
 
     /**
      * AGD84
-     * Extent: Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E.
+     * Extent: Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E
      * National system replacing AGD66 but officially adopted only in Queensland, South Australia and Western
      * Australia. Replaced by GDA94.
      */
@@ -37,7 +37,7 @@ class Geographic2D extends Geographic
 
     /**
      * ATF (Paris)
-     * Extent: France - mainland onshore.
+     * Extent: France - mainland onshore
      * ProjCRS covering all mainland France based on this datum used Bonne projection. In Alsace, suspected to be an
      * extension of core network based on transformation of old German system.
      */
@@ -52,14 +52,14 @@ class Geographic2D extends Geographic
 
     /**
      * ATS77
-     * Extent: Canada - New Brunswick; Nova Scotia; Prince Edward Island.
+     * Extent: Canada - New Brunswick; Nova Scotia; Prince Edward Island
      * In use from 1979. To be phased out in late 1990's.
      */
     public const EPSG_ATS77 = 'urn:ogc:def:crs:EPSG::4122';
 
     /**
      * AbInvA96_2020-IRF
-     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / AbInvA96_2020 SnakeGrid projected CRS
      * through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) used in conjunction with the AbInvA96_2020-TM
      * map projection (code 9385).
@@ -68,14 +68,14 @@ class Geographic2D extends Geographic
 
     /**
      * Abidjan 1987
-     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore.
+     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore
      * Replaces Locodjo 1965 (EPSG code 4142).
      */
     public const EPSG_ABIDJAN_1987 = 'urn:ogc:def:crs:EPSG::4143';
 
     /**
      * Accra
-     * Extent: Ghana - onshore and offshore.
+     * Extent: Ghana - onshore and offshore
      * Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet.
      * Replaced by Leigon (code 4250) in 1978.
      */
@@ -89,7 +89,7 @@ class Geographic2D extends Geographic
 
     /**
      * Adindan
-     * Extent: Eritrea; Ethiopia; South Sudan; Sudan.
+     * Extent: Eritrea; Ethiopia; South Sudan; Sudan
      * The 12th parallel traverse of 1966-70 (geogCRS Point 58, code 4620) is connected to the Blue Nile 1958 network
      * in western Sudan. This has given rise to misconceptions that the Blue Nile 1958 network is used in west Africa.
      */
@@ -115,7 +115,7 @@ class Geographic2D extends Geographic
 
     /**
      * Albanian 1987
-     * Extent: Albania - onshore.
+     * Extent: Albania - onshore
      * Replaced by KRGJSH-2010.
      */
     public const EPSG_ALBANIAN_1987 = 'urn:ogc:def:crs:EPSG::4191';
@@ -128,7 +128,7 @@ class Geographic2D extends Geographic
 
     /**
      * Amersfoort
-     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
+     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone
      * Use of geographic2D CRS Amersfoort (code 4289) for spatial referencing is discouraged. Use projected CRS
      * Amersfoort / RD New (code 28992).
      */
@@ -178,7 +178,7 @@ class Geographic2D extends Geographic
 
     /**
      * Astro DOS 71
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Used between 1972 and 2015. Replaced by SHGD2015 (CRS code 7886) from 2015.
      */
     public const EPSG_ASTRO_DOS_71 = 'urn:ogc:def:crs:EPSG::4710';
@@ -197,35 +197,35 @@ class Geographic2D extends Geographic
 
     /**
      * Azores Central 1948
-     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.
+     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira
      * Replaced by 1995 system (CRS code 4665).
      */
     public const EPSG_AZORES_CENTRAL_1948 = 'urn:ogc:def:crs:EPSG::4183';
 
     /**
      * Azores Central 1995
-     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.
+     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira
      * Replaces 1948 system (CRS code 4183). Replaced by PTRA08 (CRS code 5013).
      */
     public const EPSG_AZORES_CENTRAL_1995 = 'urn:ogc:def:crs:EPSG::4665';
 
     /**
      * Azores Occidental 1939
-     * Extent: Portugal - western Azores onshore - Flores, Corvo.
+     * Extent: Portugal - western Azores onshore - Flores, Corvo
      * Replaced by PTRA08 (CRS code 5013).
      */
     public const EPSG_AZORES_OCCIDENTAL_1939 = 'urn:ogc:def:crs:EPSG::4182';
 
     /**
      * Azores Oriental 1940
-     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.
+     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas
      * Replaced by 1995 system (CRS code 4664).
      */
     public const EPSG_AZORES_ORIENTAL_1940 = 'urn:ogc:def:crs:EPSG::4184';
 
     /**
      * Azores Oriental 1995
-     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.
+     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas
      * Replaces 1948 system (CRS code 4184). Replaced by PTRA08 (CRS code 5013).
      */
     public const EPSG_AZORES_ORIENTAL_1995 = 'urn:ogc:def:crs:EPSG::4664';
@@ -250,21 +250,21 @@ class Geographic2D extends Geographic
 
     /**
      * BDA2000
-     * Extent: Bermuda - onshore and offshore.
+     * Extent: Bermuda - onshore and offshore
      * Replaces Bermuda 1957 (CRS code 4216).
      */
     public const EPSG_BDA2000 = 'urn:ogc:def:crs:EPSG::4762';
 
     /**
      * BGS2005
-     * Extent: Bulgaria - onshore and offshore.
+     * Extent: Bulgaria - onshore and offshore
      * Adopted 2010-07-29. Replaces earlier systems.
      */
     public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7798';
 
     /**
      * BH_ETRS89
-     * Extent: Bosnia and Herzegovina.
+     * Extent: Bosnia and Herzegovina
      * In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
      */
     public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10328';
@@ -296,7 +296,7 @@ class Geographic2D extends Geographic
 
     /**
      * Beijing 1954
-     * Extent: China - onshore and offshore.
+     * Extent: China - onshore and offshore
      * In 1982 replaced by Xian 1980 (CRS code 4610) and New Beijing (CRS code 4555).
      */
     public const EPSG_BEIJING_1954 = 'urn:ogc:def:crs:EPSG::4214';
@@ -315,7 +315,7 @@ class Geographic2D extends Geographic
 
     /**
      * Bermuda 1957
-     * Extent: Bermuda - onshore.
+     * Extent: Bermuda - onshore
      * Replaced by BDA2000 (CRS code 4762).
      */
     public const EPSG_BERMUDA_1957 = 'urn:ogc:def:crs:EPSG::4216';
@@ -328,7 +328,7 @@ class Geographic2D extends Geographic
 
     /**
      * Bern 1938
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Used for the geographic coordinates overprinted on topographic maps constructed on the CH1903 / LV03 projected
      * CS (code 21781).
      */
@@ -348,14 +348,14 @@ class Geographic2D extends Geographic
 
     /**
      * Bogota 1975
-     * Extent: Colombia - mainland and offshore Caribbean.
+     * Extent: Colombia - mainland and offshore Caribbean
      * Replaces earlier 3 adjustments of 1951, 1944 and 1941. Replaced by MAGNA-SIRGAS (CRS code 4685).
      */
     public const EPSG_BOGOTA_1975 = 'urn:ogc:def:crs:EPSG::4218';
 
     /**
      * Bogota 1975 (Bogota)
-     * Extent: Colombia - mainland onshore.
+     * Extent: Colombia - mainland onshore
      * Replaces earlier 3 adjustments of 1951, 1944 and 1941.
      */
     public const EPSG_BOGOTA_1975_BOGOTA = 'urn:ogc:def:crs:EPSG::4802';
@@ -368,21 +368,21 @@ class Geographic2D extends Geographic
 
     /**
      * CGRS93
-     * Extent: Cyprus - onshore.
+     * Extent: Cyprus - onshore
      * Adopted by DLS in 1993 for new survey plans and maps.
      */
     public const EPSG_CGRS93 = 'urn:ogc:def:crs:EPSG::6311';
 
     /**
      * CH1903
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Replaced by CH1903+.
      */
     public const EPSG_CH1903 = 'urn:ogc:def:crs:EPSG::4149';
 
     /**
      * CH1903+
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Replaces CH1903.
      */
     public const EPSG_CH1903_PLUS = 'urn:ogc:def:crs:EPSG::4150';
@@ -401,7 +401,7 @@ class Geographic2D extends Geographic
 
     /**
      * CNH22-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CNH22 SnakeGrid projected CRS through
      * transformation ETRS89 to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map projection (code
      * 10193).
@@ -410,14 +410,14 @@ class Geographic2D extends Geographic
 
     /**
      * CR-SIRGAS
-     * Extent: Costa Rica - onshore and offshore.
+     * Extent: Costa Rica - onshore and offshore
      * Replaces CR05 (CRS code 5365) from April 2018.
      */
     public const EPSG_CR_SIRGAS = 'urn:ogc:def:crs:EPSG::8907';
 
     /**
      * CR05
-     * Extent: Costa Rica - onshore and offshore.
+     * Extent: Costa Rica - onshore and offshore
      * Replaces Ocotepeque (CRS code 5451) in Costa Rica from March 2007. Replaced by CR-SIRGAS (CRS code 8907) from
      * April 2018.
      */
@@ -431,7 +431,7 @@ class Geographic2D extends Geographic
 
     /**
      * CWS13-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+     * Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CWS13 SnakeGrid projected CRS through
      * transformation ETRS89 to CWS13-IRF (1) (code 10197) used in conjunction with the CWS13-TM map projection (code
      * 10198).
@@ -440,14 +440,14 @@ class Geographic2D extends Geographic
 
     /**
      * Cadastre 1997
-     * Extent: Mayotte - onshore.
+     * Extent: Mayotte - onshore
      * Replaces Combani 1950 (CRS code 4632) for cadastral purposes only. For other purposes see RGM04 (CRS code 4470).
      */
     public const EPSG_CADASTRE_1997 = 'urn:ogc:def:crs:EPSG::4475';
 
     /**
      * Camacupa 1948
-     * Extent: Angola - Angola proper - onshore and offshore.
+     * Extent: Angola - Angola proper - onshore and offshore
      * Provisional adjustment. Coastal stations used for offshore radio-navigation positioning and determination of
      * transformations to WGS. Differs from second adjustment (Camacupa 2015, CRS code 8694), which is not used for
      * offshore E&P, by up to 25m.
@@ -456,7 +456,7 @@ class Geographic2D extends Geographic
 
     /**
      * Camacupa 2015
-     * Extent: Angola - onshore and offshore.
+     * Extent: Angola - onshore and offshore
      * Camacupa 1948 (CRS code 4220) is used for offshore oil and gas exploration and production. Camacupa 2015 differs
      * from Camacupa 1948 by up to 25m.
      */
@@ -464,7 +464,7 @@ class Geographic2D extends Geographic
 
     /**
      * Camp Area Astro
-     * Extent: Antarctica - McMurdo Sound, Camp McMurdo area.
+     * Extent: Antarctica - McMurdo Sound, Camp McMurdo area
      * Replaced by RSRGD2000 (CRS code 4764). The relationship to this is variable. See Land Information New Zealand
      * LINZS25001.
      */
@@ -478,7 +478,7 @@ class Geographic2D extends Geographic
 
     /**
      * Cape
-     * Extent: Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland.
+     * Extent: Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland
      * Replaced by Hartbeesthoek94 from 1999.
      */
     public const EPSG_CAPE = 'urn:ogc:def:crs:EPSG::4222';
@@ -497,36 +497,35 @@ class Geographic2D extends Geographic
 
     /**
      * Carthage (Paris)
-     * Extent: Tunisia - onshore.
+     * Extent: Tunisia - onshore
      * Replaced by Greenwich-based Carthage geogCRS.
      */
     public const EPSG_CARTHAGE_PARIS = 'urn:ogc:def:crs:EPSG::4816';
 
     /**
      * Chatham Islands 1971
-     * Extent: New Zealand - Chatham Islands group - onshore.
+     * Extent: New Zealand - Chatham Islands group - onshore
      * Replaced by CI1979.
      */
     public const EPSG_CHATHAM_ISLANDS_1971 = 'urn:ogc:def:crs:EPSG::4672';
 
     /**
      * Chatham Islands 1979
-     * Extent: New Zealand - Chatham Islands group - onshore.
+     * Extent: New Zealand - Chatham Islands group - onshore
      * Replaces CI1971. Replaced by NZGD2000 from March 2000.
      */
     public const EPSG_CHATHAM_ISLANDS_1979 = 'urn:ogc:def:crs:EPSG::4673';
 
     /**
      * China Geodetic Coordinate System 2000
-     * Extent: China - onshore and offshore.
+     * Extent: China - onshore and offshore
      * Adopted July 2008. Replaces Xian 1980 (CRS code 4610).
      */
     public const EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000 = 'urn:ogc:def:crs:EPSG::4490';
 
     /**
      * Chos Malal 1914
-     * Extent: Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro
-     * province.
+     * Extent: Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro province
      * Replaced by Campo Inchauspe (geogCRS code 4221) for topographic mapping, use for oil exploration and production
      * continues.
      */
@@ -534,7 +533,7 @@ class Geographic2D extends Geographic
 
     /**
      * Chua
-     * Extent: Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north.
+     * Extent: Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north
      * The Chua origin and associated network is in Brazil with a connecting traverse through northern Paraguay. In
      * Brazil used only as input into the Corrego Allegre adjustment (CRS code 4225), except for government work
      * including SICAD in Distrito Federal.
@@ -549,7 +548,7 @@ class Geographic2D extends Geographic
 
     /**
      * Combani 1950
-     * Extent: Mayotte - onshore.
+     * Extent: Mayotte - onshore
      * Replaced by Cadastre 1997 (CRS code 4475) for cadastral purposes only and by RGM04 (CRS code 4470) for all other
      * purposes.
      */
@@ -557,14 +556,14 @@ class Geographic2D extends Geographic
 
     /**
      * Conakry 1905
-     * Extent: Guinea - onshore.
+     * Extent: Guinea - onshore
      * Replaced by Dabola 1981 (EPSG code 4155).
      */
     public const EPSG_CONAKRY_1905 = 'urn:ogc:def:crs:EPSG::4315';
 
     /**
      * Corrego Alegre 1961
-     * Extent: Brazil - onshore - between 18°S and 27°30'S, also east of 54°W between 15°S and 18°S.
+     * Extent: Brazil - onshore - between 18°S and 27°30'S, also east of 54°W between 15°S and 18°S
      * Replaced by Corrego Alegre 1970-72 (CRS code 4225).
      */
     public const EPSG_CORREGO_ALEGRE_1961 = 'urn:ogc:def:crs:EPSG::5524';
@@ -572,7 +571,7 @@ class Geographic2D extends Geographic
     /**
      * Corrego Alegre 1970-72
      * Extent: Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also
-     * east of 42°W.
+     * east of 42°W
      * Replaces 1961 adjustment (CRS code 5524). Replaced by SAD69 (CRS code 4291).
      */
     public const EPSG_CORREGO_ALEGRE_1970_72 = 'urn:ogc:def:crs:EPSG::4225';
@@ -581,7 +580,7 @@ class Geographic2D extends Geographic
      * DB_REF
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Schleswig-Holstein, Thuringen
      * Geometric component of both DB_REF2003 and DB_REF2016 systems. Differs from DHDN by 0.5-1m in former West
      * Germany and by a maximum of 3m in former East Germany.
      */
@@ -589,7 +588,7 @@ class Geographic2D extends Geographic
 
     /**
      * DGN95
-     * Extent: Indonesia - onshore and offshore.
+     * Extent: Indonesia - onshore and offshore
      * Replaces ID74.
      */
     public const EPSG_DGN95 = 'urn:ogc:def:crs:EPSG::4755';
@@ -597,7 +596,7 @@ class Geographic2D extends Geographic
     /**
      * DHDN
      * Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen,
-     * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
+     * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein
      * See also RD/83 for Saxony and PD/83 for Thuringen. For national digital cartographic purposes used across all
      * German states.
      */
@@ -605,7 +604,7 @@ class Geographic2D extends Geographic
 
     /**
      * DIBA15-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DIBA15 SnakeGrid projected CRS through
      * transformation ETRS89 to DIBA15-IRF (1) (code 10205) used in conjunction with the DIBA15-TM map projection (code
      * 10206).
@@ -620,7 +619,7 @@ class Geographic2D extends Geographic
 
     /**
      * Dabola 1981
-     * Extent: Guinea - onshore.
+     * Extent: Guinea - onshore
      * Replaces Conakry 1905 (EPSG code 4315).
      */
     public const EPSG_DABOLA_1981 = 'urn:ogc:def:crs:EPSG::4155';
@@ -633,7 +632,7 @@ class Geographic2D extends Geographic
 
     /**
      * Dealul Piscului 1930
-     * Extent: Romania - onshore.
+     * Extent: Romania - onshore
      * Replaced by Pulkovo 1942(58) (geogCRS code 4179).
      */
     public const EPSG_DEALUL_PISCULUI_1930 = 'urn:ogc:def:crs:EPSG::4316';
@@ -658,7 +657,7 @@ class Geographic2D extends Geographic
 
     /**
      * DoPw22-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DoPw22 SnakeGrid projected CRS through
      * transformation ETRS89 to DoPw22-IRF (1) (code 10181) used in conjunction with the DoPw22-TM map projection (code
      * 10182).
@@ -673,14 +672,14 @@ class Geographic2D extends Geographic
 
     /**
      * Douala 1948
-     * Extent: Cameroon - coastal area.
+     * Extent: Cameroon - coastal area
      * Replaced by Manoca 1962 (code 4193).
      */
     public const EPSG_DOUALA_1948 = 'urn:ogc:def:crs:EPSG::4192';
 
     /**
      * EBBWV14-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through
      * transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection
      * (code 9942).
@@ -690,7 +689,7 @@ class Geographic2D extends Geographic
     /**
      * ECML14_NB-IRF
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
-     * Junction, and the section from Bedlington to Morpeth.
+     * Junction, and the section from Bedlington to Morpeth
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_NB SnakeGrid projected CRS
      * through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) used in conjunction with the ECML14_NB-TM map
      * projection (code 9760).
@@ -745,14 +744,14 @@ class Geographic2D extends Geographic
 
     /**
      * EST92
-     * Extent: Estonia - onshore.
+     * Extent: Estonia - onshore
      * This name is also used for a projected CRS (see projCRS code 3300). Replaced by EST97 (code 4180).
      */
     public const EPSG_EST92 = 'urn:ogc:def:crs:EPSG::4133';
 
     /**
      * EST97
-     * Extent: Estonia - onshore and offshore.
+     * Extent: Estonia - onshore and offshore
      * This name is also used for a projected CRS (see projCRS code 3301). Replaces EST92 (code 4133).
      */
     public const EPSG_EST97 = 'urn:ogc:def:crs:EPSG::4180';
@@ -764,7 +763,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF97 (code 9066). On the publication of ETRF2005 (code 9068), the EUREF Technical Working Group
      * recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 9069) is technically superior to all
      * earlier realizations of ETRS89.
@@ -784,7 +783,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * On publication in 2007 of this CRS, the EUREF Technical Working Group recommended that ETRF2000 (EPSG code 9067)
      * remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 9069).
      */
@@ -797,7 +796,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF2005 (code 9068). ETRF2014 is technically superior to ETRF2000 but ETRF2000 and other previous
      * realizations may be preferred for backward compatibility reasons. Differences between ETRF2014 and ETRF2000 can
      * reach 7cm.
@@ -811,7 +810,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaced by ETRF90 (code 9060).
      */
     public const EPSG_ETRF89 = 'urn:ogc:def:crs:EPSG::9059';
@@ -823,7 +822,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF89 (code 9059). Replaced by ETRF91 (code 9061).
      */
     public const EPSG_ETRF90 = 'urn:ogc:def:crs:EPSG::9060';
@@ -835,7 +834,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF90 (code 9060). Replaced by ETRF92 (code 9062).
      */
     public const EPSG_ETRF91 = 'urn:ogc:def:crs:EPSG::9061';
@@ -847,7 +846,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF91 (code 9061). Replaced by ETRF93 (code 9063).
      */
     public const EPSG_ETRF92 = 'urn:ogc:def:crs:EPSG::9062';
@@ -859,7 +858,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF92 (code 9062). Replaced by ETRF94 (code 9064).
      */
     public const EPSG_ETRF93 = 'urn:ogc:def:crs:EPSG::9063';
@@ -871,7 +870,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF93 (code 9063). Replaced by ETRF96 (code 9065).
      */
     public const EPSG_ETRF94 = 'urn:ogc:def:crs:EPSG::9064';
@@ -883,7 +882,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF94 (code 9064). Replaced by ETRF97 (code 9066).
      */
     public const EPSG_ETRF96 = 'urn:ogc:def:crs:EPSG::9065';
@@ -895,7 +894,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Replaces ETRF96 (code 9065). Replaced by ETRF2000 (code 9067).
      */
     public const EPSG_ETRF97 = 'urn:ogc:def:crs:EPSG::9066';
@@ -907,7 +906,7 @@ class Geographic2D extends Geographic
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and
      * ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
      */
@@ -915,7 +914,7 @@ class Geographic2D extends Geographic
 
     /**
      * ETRS89/DREF91/2016
-     * Extent: Germany - onshore and offshore.
+     * Extent: Germany - onshore and offshore
      * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
      */
     public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10284';
@@ -923,7 +922,7 @@ class Geographic2D extends Geographic
     /**
      * EWR2-IRF
      * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
-     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through
      * transformation ETRS89 to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code
      * 9765).
@@ -944,7 +943,7 @@ class Geographic2D extends Geographic
 
     /**
      * Egypt 1930
-     * Extent: Egypt - onshore.
+     * Extent: Egypt - onshore
      * Note that Egypt 1930 uses the International 1924 ellipsoid, unlike the Egypt 1907 CRS (code 4229) which uses the
      * Helmert ellipsoid. Oil industry references to the Egypt 1930 name and the Helmert ellipsoid probably mean Egypt
      * 1907.
@@ -953,14 +952,14 @@ class Geographic2D extends Geographic
 
     /**
      * Egypt Gulf of Suez S-650 TL
-     * Extent: Egypt - Gulf of Suez.
+     * Extent: Egypt - Gulf of Suez
      * Differs from Egypt 1907 (CRS code 4229) by approximately 20m.
      */
     public const EPSG_EGYPT_GULF_OF_SUEZ_S_650_TL = 'urn:ogc:def:crs:EPSG::4706';
 
     /**
      * FD54
-     * Extent: Faroe Islands - onshore.
+     * Extent: Faroe Islands - onshore
      * Except for cadastral survey, replaced by ED50 in the late 1970's. For cadastral survey, replaced by fk89 (CRS
      * code 4753).
      */
@@ -975,14 +974,14 @@ class Geographic2D extends Geographic
 
     /**
      * FEH2010
-     * Extent: Fehmarnbelt area of Denmark and Germany.
+     * Extent: Fehmarnbelt area of Denmark and Germany
      * Created for engineering survey and construction of Fehmarnbelt tunnel.
      */
     public const EPSG_FEH2010 = 'urn:ogc:def:crs:EPSG::5593';
 
     /**
      * FNL22-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through
      * transformation ETRS89 to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code
      * 9976).
@@ -991,14 +990,14 @@ class Geographic2D extends Geographic
 
     /**
      * Fahud
-     * Extent: Oman - mainland onshore.
+     * Extent: Oman - mainland onshore
      * Since 1993 replaced by PSD93 geogCRS (code 4134). Maximum differences to Fahud adjustment are 20 metres.
      */
     public const EPSG_FAHUD = 'urn:ogc:def:crs:EPSG::4232';
 
     /**
      * Fatu Iva 72
-     * Extent: French Polynesia - Marquesas Islands - Fatu Hiva.
+     * Extent: French Polynesia - Marquesas Islands - Fatu Hiva
      * Recomputed by IGN in 1972 using origin and observations of 1953-1955 Mission Hydrographique des Etablissement
      * Francais d'Oceanie (MHEFO 55). Replaced by RGPF, CRS code 4687.
      */
@@ -1007,7 +1006,7 @@ class Geographic2D extends Geographic
     /**
      * Fiji 1956
      * Extent: Fiji - onshore - Vanua Levu, Taveuni, Viti Levu and and immediately adjacent smaller islands of Yasawa
-     * and Kandavu groups.
+     * and Kandavu groups
      * For topographic mapping replaces Viti Levu 1912 (CRS code 4752) and Vanua Levu 1915 (CRS code 4748). Replaced by
      * Fiji 1986 (CRS code 4720).
      */
@@ -1016,14 +1015,14 @@ class Geographic2D extends Geographic
     /**
      * Fiji 1986
      * Extent: Fiji - onshore. Includes Viti Levu, Vanua Levu, Taveuni, the Yasawa Group, the Kadavu Group, the Lau
-     * Islands and Rotuma Islands.
+     * Islands and Rotuma Islands
      * Replaces Viti Levu 1912 (CRS code 4752), Vanua Levu 1915 (CRS code 4748) and Fiji 1956 (CRS code 4721).
      */
     public const EPSG_FIJI_1986 = 'urn:ogc:def:crs:EPSG::4720';
 
     /**
      * Fort Marigot
-     * Extent: Guadeloupe - onshore - St Martin and St Barthélemy islands.
+     * Extent: Guadeloupe - onshore - St Martin and St Barthélemy islands
      * Replaced by RRAF 1991 (CRS code 4558).
      */
     public const EPSG_FORT_MARIGOT = 'urn:ogc:def:crs:EPSG::4621';
@@ -1031,7 +1030,7 @@ class Geographic2D extends Geographic
     /**
      * GBK19-IRF
      * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
-     * branch to East Kilbride.
+     * branch to East Kilbride
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / GBK19 SnakeGrid projected CRS through
      * transformation ETRS89 to GBK19-IRF (1) (code 9454) used in conjunction with the GBK19-TM map projection (code
      * 9455).
@@ -1040,7 +1039,7 @@ class Geographic2D extends Geographic
 
     /**
      * GCGD59
-     * Extent: Cayman Islands - Grand Cayman.
+     * Extent: Cayman Islands - Grand Cayman
      * Superseded by CIGD11 (CRS code 6135).
      */
     public const EPSG_GCGD59 = 'urn:ogc:def:crs:EPSG::4723';
@@ -1061,14 +1060,14 @@ class Geographic2D extends Geographic
 
     /**
      * GDBD2009
-     * Extent: Brunei Darussalam - onshore and offshore.
+     * Extent: Brunei Darussalam - onshore and offshore
      * Introduced from July 2009 to replace Timbalai 1948 (CRS code 4298) for government purposes.
      */
     public const EPSG_GDBD2009 = 'urn:ogc:def:crs:EPSG::5246';
 
     /**
      * GDM2000
-     * Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.
+     * Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak
      * Replaces all earlier Malaysian geographic CRSs.
      */
     public const EPSG_GDM2000 = 'urn:ogc:def:crs:EPSG::4742';
@@ -1081,14 +1080,14 @@ class Geographic2D extends Geographic
 
     /**
      * GR96
-     * Extent: Greenland - onshore and offshore.
+     * Extent: Greenland - onshore and offshore
      * Replaces all earlier Greenland geographic CRSs.
      */
     public const EPSG_GR96 = 'urn:ogc:def:crs:EPSG::4747';
 
     /**
      * GS-IRF
-     * Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+     * Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Generalstabens
      * System and ETRS89 through CT ETRS89 to GS-IRF (1) (code 10259) used in conjunction with the GS LCC map
      * projection (code 10257).
@@ -1097,7 +1096,7 @@ class Geographic2D extends Geographic
 
     /**
      * GSB-IRF
-     * Extent: Denmark - Bornholm onshore.
+     * Extent: Denmark - Bornholm onshore
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Generalstabens
      * System and ETRS89 through CT ETRS89 to GSB-IRF (1) (code 10263) used in conjunction with the GSB-reconstruction
      * map projection (code 10261).
@@ -1106,14 +1105,14 @@ class Geographic2D extends Geographic
 
     /**
      * GSK-2011
-     * Extent: Russian Federation - onshore and offshore.
+     * Extent: Russian Federation - onshore and offshore
      * Replaces Pulkovo 1995 (CRS code 4200) with effect from 21st October 2011.
      */
     public const EPSG_GSK_2011 = 'urn:ogc:def:crs:EPSG::7683';
 
     /**
      * GWPBS22-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWPBS22 SnakeGrid projected CRS through
      * transformation ETRS89 to GWPBS22-IRF (1) (code 10210) used in conjunction with the GW22-LCC map projection (code
      * 10211).
@@ -1122,7 +1121,7 @@ class Geographic2D extends Geographic
 
     /**
      * GWWAB22-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+     * Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWAB22 SnakeGrid projected CRS through
      * transformation ETRS89 to GWWAB22-IRF (1) (code 10215) used in conjunction with the GW22-LCC map projection (code
      * 10211).
@@ -1132,7 +1131,7 @@ class Geographic2D extends Geographic
     /**
      * GWWWA22-IRF
      * Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and
-     * Fishguard.
+     * Fishguard
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWWA22 SnakeGrid projected CRS through
      * transformation ETRS89 to GWWWA22-IRF (1) (code 10220) used in conjunction with the GW22-LCC map projection (code
      * 10211).
@@ -1147,7 +1146,7 @@ class Geographic2D extends Geographic
 
     /**
      * Gan 1970
-     * Extent: Maldives - onshore.
+     * Extent: Maldives - onshore
      * In some references incorrectly named "Gandajika 1970". See CRS "Gandajika", code 4685, from the Democratic
      * Republic of the Congo (Zaire).
      */
@@ -1185,14 +1184,14 @@ class Geographic2D extends Geographic
 
     /**
      * Guadeloupe 1948
-     * Extent: Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes.
+     * Extent: Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes
      * Replaced by RRAF 1991 (CRS code 4558).
      */
     public const EPSG_GUADELOUPE_1948 = 'urn:ogc:def:crs:EPSG::4622';
 
     /**
      * Guam 1963
-     * Extent: Guam - onshore. Northern Mariana Islands - onshore.
+     * Extent: Guam - onshore. Northern Mariana Islands - onshore
      * Replaced by NAD83(HARN) alias Guam Geodetic Network 1993 (CRS code 4152) from 1995.
      */
     public const EPSG_GUAM_1963 = 'urn:ogc:def:crs:EPSG::4675';
@@ -1211,7 +1210,7 @@ class Geographic2D extends Geographic
 
     /**
      * HD1909
-     * Extent: Hungary.
+     * Extent: Hungary
      * Replaced earlier HD1863 adjustment also on Bessel ellipsoid. Both HD1863 and HD1909 were originally on Ferro
      * Prime Meridian but subsequently converted to Greenwich. Replaced by HD72 (CRS code 4237).
      */
@@ -1219,7 +1218,7 @@ class Geographic2D extends Geographic
 
     /**
      * HD72
-     * Extent: Hungary.
+     * Extent: Hungary
      * Replaced HD1909 (EPSG CRS code 3819).
      */
     public const EPSG_HD72 = 'urn:ogc:def:crs:EPSG::4237';
@@ -1227,7 +1226,7 @@ class Geographic2D extends Geographic
     /**
      * HS2-IRF
      * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
-     * Crewe.
+     * Crewe
      * Intermediate CRS created to assist the emulation of the ETRS89 / HS2P1+14 SnakeGrid projected CRS through
      * transformation HS2-IRF to ETRS89 (1) (code 9302) used in conjunction with the HS2-TM map projection (code 9301).
      */
@@ -1241,7 +1240,7 @@ class Geographic2D extends Geographic
 
     /**
      * HULLEE13-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS
      * through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map
      * projection (code 9966).
@@ -1250,14 +1249,14 @@ class Geographic2D extends Geographic
 
     /**
      * Hanoi 1972
-     * Extent: Vietnam - onshore.
+     * Extent: Vietnam - onshore
      * Replaces use of Indian 1960. Replaced by VN-2000 (CRS code 4756).
      */
     public const EPSG_HANOI_1972 = 'urn:ogc:def:crs:EPSG::4147';
 
     /**
      * Hartebeesthoek94
-     * Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.
+     * Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore
      * Replaces Cape (code 4222) from 1999.
      */
     public const EPSG_HARTEBEESTHOEK94 = 'urn:ogc:def:crs:EPSG::4148';
@@ -1289,7 +1288,7 @@ class Geographic2D extends Geographic
 
     /**
      * Hong Kong 1963
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * Replaced by Hong Kong 1963(67) (CRS code 4839) for military purposes only. For all purposes, replaced by Hong
      * Kong 1980 (CRS code 4611).
      */
@@ -1297,21 +1296,21 @@ class Geographic2D extends Geographic
 
     /**
      * Hong Kong 1963(67)
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * For military purposes only, replaces Hong Kong 1963. Replaced by Hong Kong 1980 (CRS code 4611).
      */
     public const EPSG_HONG_KONG_1963_67 = 'urn:ogc:def:crs:EPSG::4739';
 
     /**
      * Hong Kong 1980
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * Replaces Hong Kong 1963 and Hong Kong 1963(67).
      */
     public const EPSG_HONG_KONG_1980 = 'urn:ogc:def:crs:EPSG::4611';
 
     /**
      * Hong Kong Geodetic CS
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct.
      */
     public const EPSG_HONG_KONG_GEODETIC_CS = 'urn:ogc:def:crs:EPSG::8427';
@@ -1324,14 +1323,14 @@ class Geographic2D extends Geographic
 
     /**
      * ID74
-     * Extent: Indonesia - onshore.
+     * Extent: Indonesia - onshore
      * Replaced by DGN95.
      */
     public const EPSG_ID74 = 'urn:ogc:def:crs:EPSG::4238';
 
     /**
      * IG05 Intermediate CRS
-     * Extent: Israel - onshore; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Palestine Territory - onshore
      * Intermediate system not used for spatial referencing - use IGD05 (CRS code 6980). Referred to in Israeli
      * documentation as "in GRS80".
      */
@@ -1339,7 +1338,7 @@ class Geographic2D extends Geographic
 
     /**
      * IG05/12 Intermediate CRS
-     * Extent: Israel - onshore; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Palestine Territory - onshore
      * Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 6987). Referred to in Israeli
      * documentation as "in GRS80".
      */
@@ -1360,35 +1359,35 @@ class Geographic2D extends Geographic
 
     /**
      * IGD05
-     * Extent: Israel - onshore and offshore.
+     * Extent: Israel - onshore and offshore
      * Replaces Israel 1993 (CRS code 4141) from January 2005. Replaced by IGD05/12 (CRS code 7139) from March 2012.
      */
     public const EPSG_IGD05 = 'urn:ogc:def:crs:EPSG::7136';
 
     /**
      * IGD05/12
-     * Extent: Israel - onshore and offshore.
+     * Extent: Israel - onshore and offshore
      * Replaces IGD05 (CRS code 7136) from March 2012.
      */
     public const EPSG_IGD05_12 = 'urn:ogc:def:crs:EPSG::7139';
 
     /**
      * IGM95
-     * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+     * Extent: Italy - onshore and offshore; San Marino, Vatican City State
      * Replaced by RDN2008 (CRS code 6706) from 2011-11-10.
      */
     public const EPSG_IGM95 = 'urn:ogc:def:crs:EPSG::4670';
 
     /**
      * IGN 1962 Kerguelen
-     * Extent: French Southern Territories - Kerguelen onshore.
+     * Extent: French Southern Territories - Kerguelen onshore
      * Replaced by RGTAAF07 (CRS code 7073).
      */
     public const EPSG_IGN_1962_KERGUELEN = 'urn:ogc:def:crs:EPSG::4698';
 
     /**
      * IGN Astro 1960
-     * Extent: Mauritania - onshore.
+     * Extent: Mauritania - onshore
      * Mining title descriptions referring only to "Clarke 1880 ellipsoid" should be assumed to be referenced to this
      * CRS. Oil industry considers Mining Cadastre 1999 to be exactly defined through tfm codes 15857-9. Replaced by
      * Mauritania 1999 (code 4702).
@@ -1397,35 +1396,35 @@ class Geographic2D extends Geographic
 
     /**
      * IGN53 Mare
-     * Extent: New Caledonia - Loyalty Islands - Mare.
+     * Extent: New Caledonia - Loyalty Islands - Mare
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_IGN53_MARE = 'urn:ogc:def:crs:EPSG::4641';
 
     /**
      * IGN56 Lifou
-     * Extent: New Caledonia - Loyalty Islands - Lifou.
+     * Extent: New Caledonia - Loyalty Islands - Lifou
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_IGN56_LIFOU = 'urn:ogc:def:crs:EPSG::4633';
 
     /**
      * IGN63 Hiva Oa
-     * Extent: French Polynesia - Marquesas Islands - Hiva Oa and Tahuata.
+     * Extent: French Polynesia - Marquesas Islands - Hiva Oa and Tahuata
      * Replaced by RGPF, CRS code 4687.
      */
     public const EPSG_IGN63_HIVA_OA = 'urn:ogc:def:crs:EPSG::4689';
 
     /**
      * IGN72 Grande Terre
-     * Extent: New Caledonia - Grande Terre.
+     * Extent: New Caledonia - Grande Terre
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_IGN72_GRANDE_TERRE = 'urn:ogc:def:crs:EPSG::4662';
 
     /**
      * IGN72 Nuku Hiva
-     * Extent: French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou.
+     * Extent: French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou
      * Replaced by RGPF, CRS code 4687.
      */
     public const EPSG_IGN72_NUKU_HIVA = 'urn:ogc:def:crs:EPSG::4630';
@@ -1438,7 +1437,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGS00
-     * Extent: World.
+     * Extent: World
      * Adopted by the International GNSS Service (IGS) from 2001-12-02 through 2004-01-10. Replaces IGS97, replaced by
      * IGb00 (CRS codes 9003 and 9009). For all practical purposes IGS00 is equivalent to ITRF2000.
      */
@@ -1446,7 +1445,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGS05
-     * Extent: World.
+     * Extent: World
      * Adopted by the International GNSS Service (IGS) from 2006-11-05 through 2011-04-16. Replaces IGb00, replaced by
      * IGS08 (CRS codes 9009 and 9014). For all practical purposes IGS05 is equivalent to ITRF2005.
      */
@@ -1454,7 +1453,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGS08
-     * Extent: World.
+     * Extent: World
      * Used for products from International GNSS Service (IGS) analysis centres from 2011-04-17 through 2012-10-06.
      * Replaces IGS05 (code 9012). Replaced by IGb08 (code 9017). For most practical purposes IGS08 is equivalent to
      * ITRF2008.
@@ -1463,7 +1462,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGS14
-     * Extent: World.
+     * Extent: World
      * Used for products from the International GNSS Service (IGS) from 2017-01-29 to 2020-05-16. Replaces IGb08 (code
      * 9017), replaced by IGb14 (code 9380). For most practical purposes IGS14 is equivalent to ITRF2014.
      */
@@ -1471,7 +1470,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGS20
-     * Extent: World.
+     * Extent: World
      * Used for products from the International GNSS Service (IGS) from 2022-11-27. Replaces IGb14 (code 9380). For
      * most practical purposes IGS20 is equivalent to ITRF2020.
      */
@@ -1479,7 +1478,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGS97
-     * Extent: World.
+     * Extent: World
      * Adopted by the International GNSS Service (IGS) from 2000-06-04 through 2001-12-01. Replaced by IGS00 (CRS code
      * 9006). For all practical purposes IGS97 is equivalent to ITRF97.
      */
@@ -1487,7 +1486,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGb00
-     * Extent: World.
+     * Extent: World
      * Adopted by the International GNSS Service (IGS) from 2004-01-11 through 2006-11-04. Replaces IGS00, replaced by
      * IGS05 (CRS codes 9006 and 9012). For all practical purposes IGb00 is equivalent to ITRF2000.
      */
@@ -1495,7 +1494,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGb08
-     * Extent: World.
+     * Extent: World
      * Adopted by the International GNSS Service (IGS) from 2012-10-07 through 2017-01-28. Replaces IGS08, replaced by
      * IGS14 (CRS codes 9014 and 9019). For all practical purposes IGb08 is equivalent to ITRF2008.
      */
@@ -1503,7 +1502,7 @@ class Geographic2D extends Geographic
 
     /**
      * IGb14
-     * Extent: World.
+     * Extent: World
      * Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 9019),
      * replaced by IGS20 (code 10178). For most practical purposes IGb14 is equivalent to ITRF2014.
      */
@@ -1523,119 +1522,119 @@ class Geographic2D extends Geographic
 
     /**
      * ISN2004
-     * Extent: Iceland - onshore and offshore.
+     * Extent: Iceland - onshore and offshore
      * Replaces ISN93 (CRS code 4659). Replaced by ISN2016 (CRS code 8086).
      */
     public const EPSG_ISN2004 = 'urn:ogc:def:crs:EPSG::5324';
 
     /**
      * ISN2016
-     * Extent: Iceland - onshore and offshore.
+     * Extent: Iceland - onshore and offshore
      * Replaces ISN2004 (CRS code 5324) from September 2017.
      */
     public const EPSG_ISN2016 = 'urn:ogc:def:crs:EPSG::8086';
 
     /**
      * ISN93
-     * Extent: Iceland - onshore and offshore.
+     * Extent: Iceland - onshore and offshore
      * Replaced by ISN2004 (CRS code 5324).
      */
     public const EPSG_ISN93 = 'urn:ogc:def:crs:EPSG::4659';
 
     /**
      * ITRF2000
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF97 (code 8996). Replaced by ITRF2005 (code 8998).
      */
     public const EPSG_ITRF2000 = 'urn:ogc:def:crs:EPSG::8997';
 
     /**
      * ITRF2005
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF2000 (code 8997). Replaced by ITRF2008 (code 8999).
      */
     public const EPSG_ITRF2005 = 'urn:ogc:def:crs:EPSG::8998';
 
     /**
      * ITRF2008
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF2005 (code 8998). Replaced by ITRF2014 (code 9000).
      */
     public const EPSG_ITRF2008 = 'urn:ogc:def:crs:EPSG::8999';
 
     /**
      * ITRF2014
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF2008 (code 8999). Replaced by ITRF2020 (CRS code 9990).
      */
     public const EPSG_ITRF2014 = 'urn:ogc:def:crs:EPSG::9000';
 
     /**
      * ITRF2020
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF2014 (code 9000).
      */
     public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9990';
 
     /**
      * ITRF88
-     * Extent: World.
+     * Extent: World
      * Replaced by ITRF89 (code 8989).
      */
     public const EPSG_ITRF88 = 'urn:ogc:def:crs:EPSG::8988';
 
     /**
      * ITRF89
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF88 (code 8988). Replaced by ITRF90 (code 8990).
      */
     public const EPSG_ITRF89 = 'urn:ogc:def:crs:EPSG::8989';
 
     /**
      * ITRF90
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF89 (code 8989). Replaced by ITRF91 (code 8991).
      */
     public const EPSG_ITRF90 = 'urn:ogc:def:crs:EPSG::8990';
 
     /**
      * ITRF91
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF90 (code 8990). Replaced by ITRF92 (code 8992).
      */
     public const EPSG_ITRF91 = 'urn:ogc:def:crs:EPSG::8991';
 
     /**
      * ITRF92
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF91 (code 8991). Replaced by ITRF93 (code 8993).
      */
     public const EPSG_ITRF92 = 'urn:ogc:def:crs:EPSG::8992';
 
     /**
      * ITRF93
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF92 (code 8992). Replaced by ITRF94 (code 8994).
      */
     public const EPSG_ITRF93 = 'urn:ogc:def:crs:EPSG::8993';
 
     /**
      * ITRF94
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF93 (code 8993). Replaced by ITRF96 (code 8995).
      */
     public const EPSG_ITRF94 = 'urn:ogc:def:crs:EPSG::8994';
 
     /**
      * ITRF96
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF94 (code 8994). Replaced by ITRF97 (code 8996).
      */
     public const EPSG_ITRF96 = 'urn:ogc:def:crs:EPSG::8995';
 
     /**
      * ITRF97
-     * Extent: World.
+     * Extent: World
      * Replaces ITRF96 (code 8995). Replaced by ITRF2000 (code 8997).
      */
     public const EPSG_ITRF97 = 'urn:ogc:def:crs:EPSG::8996';
@@ -1660,7 +1659,7 @@ class Geographic2D extends Geographic
 
     /**
      * Israel 1993
-     * Extent: Israel - onshore; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Palestine Territory - onshore
      * Replaces Palestine 1923 (CRS code 4281) from June 1998. Replaced by IGD05 (CRS code 6980) from January 2005.
      */
     public const EPSG_ISRAEL_1993 = 'urn:ogc:def:crs:EPSG::4141';
@@ -1673,28 +1672,28 @@ class Geographic2D extends Geographic
 
     /**
      * JAD2001
-     * Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.
+     * Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays
      * Replaces JAD69 (CRS code 4242).
      */
     public const EPSG_JAD2001 = 'urn:ogc:def:crs:EPSG::4758';
 
     /**
      * JAD69
-     * Extent: Jamaica - onshore.
+     * Extent: Jamaica - onshore
      * Replaced by JAD2001 (CRS code 4758).
      */
     public const EPSG_JAD69 = 'urn:ogc:def:crs:EPSG::4242';
 
     /**
      * JGD2000
-     * Extent: Japan - onshore and offshore.
+     * Extent: Japan - onshore and offshore
      * Replaces Tokyo (CRS code 4301) from April 2002. From 21st October 2011 replaced by JGD2011 (CRS code 6668).
      */
     public const EPSG_JGD2000 = 'urn:ogc:def:crs:EPSG::4612';
 
     /**
      * JGD2011
-     * Extent: Japan - onshore and offshore.
+     * Extent: Japan - onshore and offshore
      * Replaces JGD2000 (CRS code 4612) with effect from 21st October 2011.
      */
     public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6668';
@@ -1713,14 +1712,14 @@ class Geographic2D extends Geographic
 
     /**
      * Jouik 1961
-     * Extent: Mauritania - coastal area north of Cape Timiris.
+     * Extent: Mauritania - coastal area north of Cape Timiris
      * Replaced by Mauritania 1999 (CRS code 4702).
      */
     public const EPSG_JOUIK_1961 = 'urn:ogc:def:crs:EPSG::4679';
 
     /**
      * KK-IRF
-     * Extent: Denmark - onshore - Copenhagen and surrounding area.
+     * Extent: Denmark - onshore - Copenhagen and surrounding area
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Københavns
      * Kommunes CRS and ETRS89 through CT ETRS89 to KK-IRF (1) (code 10267) used in conjunction with the GS LCC map
      * projection (code 10257).
@@ -1741,7 +1740,7 @@ class Geographic2D extends Geographic
 
     /**
      * KOSOVAREF01
-     * Extent: Kosovo.
+     * Extent: Kosovo
      * In Kosovo replaces MGI 1901 (CRS code 3906).
      */
     public const EPSG_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9140';
@@ -1767,21 +1766,21 @@ class Geographic2D extends Geographic
     /**
      * Kalianpur 1937
      * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar - onshore and Moattama area offshore; Pakistan -
-     * onshore.
+     * onshore
      * Adopts 1937 metric conversion of 0.30479841 metres per Indian foot.
      */
     public const EPSG_KALIANPUR_1937 = 'urn:ogc:def:crs:EPSG::4144';
 
     /**
      * Kalianpur 1962
-     * Extent: Pakistan - onshore and offshore.
+     * Extent: Pakistan - onshore and offshore
      * Adopts 1962 metric conversion of 0.3047996 metres per Indian foot.
      */
     public const EPSG_KALIANPUR_1962 = 'urn:ogc:def:crs:EPSG::4145';
 
     /**
      * Kalianpur 1975
-     * Extent: India - mainland onshore.
+     * Extent: India - mainland onshore
      * Adopts 1975 metric conversion of 0.3047995 metres per Indian foot.
      */
     public const EPSG_KALIANPUR_1975 = 'urn:ogc:def:crs:EPSG::4146';
@@ -1794,7 +1793,7 @@ class Geographic2D extends Geographic
 
     /**
      * Karbala 1979
-     * Extent: Iraq - onshore.
+     * Extent: Iraq - onshore
      * Geodetic network established by Polservice consortium. Replaces Nahrwan 1934 (CRS code 4744). Replaced by IGRS
      * (CRS code 3889). At time of record population, information regarding usage within oil sector is not available.
      */
@@ -1814,7 +1813,7 @@ class Geographic2D extends Geographic
 
     /**
      * Kertau (RSO)
-     * Extent: Malaysia - West Malaysia; Singapore.
+     * Extent: Malaysia - West Malaysia; Singapore
      * Used only for metrication of RSO grid. See Kertau 1968 (CRS code 4245) for other purposes. Replaced by GDM2000
      * (CRS code 4742).
      */
@@ -1822,7 +1821,7 @@ class Geographic2D extends Geographic
 
     /**
      * Kertau 1968
-     * Extent: Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore.
+     * Extent: Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore
      * Not used for metrication of RSO grid - see Kertau (RSO) (CRS code 4751). Replaced by GDM2000 (CRS code 4742).
      */
     public const EPSG_KERTAU_1968 = 'urn:ogc:def:crs:EPSG::4245';
@@ -1835,7 +1834,7 @@ class Geographic2D extends Geographic
 
     /**
      * Korean 1985
-     * Extent: Republic of Korea (South Korea) - onshore.
+     * Extent: Republic of Korea (South Korea) - onshore
      * Replaces use of Tokyo datum.
      */
     public const EPSG_KOREAN_1985 = 'urn:ogc:def:crs:EPSG::4162';
@@ -1860,28 +1859,28 @@ class Geographic2D extends Geographic
 
     /**
      * Kyrg-06
-     * Extent: Kyrgyzstan.
+     * Extent: Kyrgyzstan
      * Replaces usage of Pulkovo 1942 in Kyrgyzstan from 7th October 2010.
      */
     public const EPSG_KYRG_06 = 'urn:ogc:def:crs:EPSG::7686';
 
     /**
      * LGD2006
-     * Extent: Libya - onshore and offshore.
+     * Extent: Libya - onshore and offshore
      * Replaces ELD79.
      */
     public const EPSG_LGD2006 = 'urn:ogc:def:crs:EPSG::4754';
 
     /**
      * LKS-2020
-     * Extent: Latvia - onshore and offshore.
+     * Extent: Latvia - onshore and offshore
      * Replaces LKS-92 (CRS code 4661).
      */
     public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10305';
 
     /**
      * LKS-92
-     * Extent: Latvia - onshore and offshore.
+     * Extent: Latvia - onshore and offshore
      * Replaced by LKS-2020 (CRS code 10305).
      */
     public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4661';
@@ -1906,7 +1905,7 @@ class Geographic2D extends Geographic
 
     /**
      * La Canoa
-     * Extent: Venezuela - onshore.
+     * Extent: Venezuela - onshore
      * This CRS is incorporated within PSAD56. See CRS code 4248.
      */
     public const EPSG_LA_CANOA = 'urn:ogc:def:crs:EPSG::4247';
@@ -1919,14 +1918,14 @@ class Geographic2D extends Geographic
 
     /**
      * Lao 1993
-     * Extent: Laos.
+     * Extent: Laos
      * Replaces Vientiane 1982. Replaced by Lao 1997. Lao 1993 coordinate values are within 1m of Lao 1997 values.
      */
     public const EPSG_LAO_1993 = 'urn:ogc:def:crs:EPSG::4677';
 
     /**
      * Lao 1997
-     * Extent: Laos.
+     * Extent: Laos
      * Replaces Lao 1993 which in turn replaced Vientiane 1982. Lao 1993 coordinate values are within 1m of Lao 1997
      * values. Vientiane 1982 coordinate values are within 3m of Lao 1997 values.
      */
@@ -1934,7 +1933,7 @@ class Geographic2D extends Geographic
 
     /**
      * Le Pouce 1934
-     * Extent: Mauritius - mainland onshore.
+     * Extent: Mauritius - mainland onshore
      * Densified with a GPS-derived coordinate set for 80 stations in 1994. This 1994 coordinate set is sometimes
      * referred to as "Mauritius 1994".
      */
@@ -1942,7 +1941,7 @@ class Geographic2D extends Geographic
 
     /**
      * Leigon
-     * Extent: Ghana - onshore and offshore.
+     * Extent: Ghana - onshore and offshore
      * Replaced Accra (code 4168) from 1978.
      */
     public const EPSG_LEIGON = 'urn:ogc:def:crs:EPSG::4250';
@@ -1955,14 +1954,14 @@ class Geographic2D extends Geographic
 
     /**
      * Lisbon
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Replaces Lisbon 1890 system which used Bessel 1841 ellipsoid (code 4666). Replaced by Datum 73 (code 4274).
      */
     public const EPSG_LISBON = 'urn:ogc:def:crs:EPSG::4207';
 
     /**
      * Lisbon (Lisbon)
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Replaces Lisbon 1890 (Lisbon) system which used Bessel 1841 ellipsoid (code 4904). Replaced by Datum 73 (code
      * 4274).
      */
@@ -1970,28 +1969,28 @@ class Geographic2D extends Geographic
 
     /**
      * Lisbon 1890
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Replaced by Lisbon 1937 system which uses International 1924 ellipsoid (code 4207).
      */
     public const EPSG_LISBON_1890 = 'urn:ogc:def:crs:EPSG::4666';
 
     /**
      * Lisbon 1890 (Lisbon)
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Replaced by Lisbon 1937 system which uses International 1924 ellipsoid (code 4803).
      */
     public const EPSG_LISBON_1890_LISBON = 'urn:ogc:def:crs:EPSG::4904';
 
     /**
      * Locodjo 1965
-     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore.
+     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore
      * Replaced by Abidjan 1987 (EPSG code 4143).
      */
     public const EPSG_LOCODJO_1965 = 'urn:ogc:def:crs:EPSG::4142';
 
     /**
      * Loma Quintana
-     * Extent: Venezuela - onshore north of approximately 7°45'N.
+     * Extent: Venezuela - onshore north of approximately 7°45'N
      * Replaced by La Canoa (code 4247).
      */
     public const EPSG_LOMA_QUINTANA = 'urn:ogc:def:crs:EPSG::4288';
@@ -2004,7 +2003,7 @@ class Geographic2D extends Geographic
 
     /**
      * Luzon 1911
-     * Extent: Philippines - onshore.
+     * Extent: Philippines - onshore
      * Replaced by PRS92 (CRS code 4683).
      */
     public const EPSG_LUZON_1911 = 'urn:ogc:def:crs:EPSG::4253';
@@ -2024,7 +2023,7 @@ class Geographic2D extends Geographic
     /**
      * MAGNA-SIRGAS
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
-     * Serrana Bank and Serranilla Bank.
+     * Serrana Bank and Serranilla Bank
      * Replaces Bogota 1975 (CRS code 4218). For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20046).
      */
     public const EPSG_MAGNA_SIRGAS = 'urn:ogc:def:crs:EPSG::4686';
@@ -2032,7 +2031,7 @@ class Geographic2D extends Geographic
     /**
      * MAGNA-SIRGAS 2018
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
-     * Serrana Bank and Serranilla Bank.
+     * Serrana Bank and Serranilla Bank
      * Replaces MAGNA-SIRGAS (CRS code 4686) for high accuracy purposes. Change is approximately 0.31m in latitude,
      * 0.02m in longitude. For mapping and cadastral purposes considered equivalent.
      */
@@ -2040,7 +2039,7 @@ class Geographic2D extends Geographic
 
     /**
      * MALS09-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MALS09 SnakeGrid projected CRS through
      * transformation ETRS89 to MALS09-IRF (1) (code 10225) used in conjunction with the MALS09-TM map projection (code
      * 10226).
@@ -2049,14 +2048,14 @@ class Geographic2D extends Geographic
 
     /**
      * MARGEN
-     * Extent: Bolivia.
+     * Extent: Bolivia
      * Replaces PSAD56 (CRS code 4248) in Bolivia.
      */
     public const EPSG_MARGEN = 'urn:ogc:def:crs:EPSG::5354';
 
     /**
      * MGI
-     * Extent: Austria.
+     * Extent: Austria
      * Retrospectively defined as derived after the introduction of geographic 3D CRS (code 9267).
      */
     public const EPSG_MGI = 'urn:ogc:def:crs:EPSG::4312';
@@ -2064,7 +2063,7 @@ class Geographic2D extends Geographic
     /**
      * MGI (Ferro)
      * Extent: Austria. Bosnia and Herzegovina. Croatia - onshore. Kosovo. Montenegro - onshore. North Macedonia.
-     * Serbia. Slovenia - onshore.
+     * Serbia. Slovenia - onshore
      * Replaced by MGI (CRS code 4312) in Austria and MGI 1901 (CRS code 3906) in former Yugoslavia.
      */
     public const EPSG_MGI_FERRO = 'urn:ogc:def:crs:EPSG::4805';
@@ -2072,7 +2071,7 @@ class Geographic2D extends Geographic
     /**
      * MGI 1901
      * Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
-     * Slovenia - onshore.
+     * Slovenia - onshore
      * Adopted in 1924 replacing MGI (Ferro) (CRS code 4805). Densified in 1948. In Slovenia replaced by D96 (CRS code
      * 4765). In Croatia replaced by HTRS96 (CRS code 4761). In Serbia replaced by SREF98 and then by SRB_ETRS89
      * (STRS00) (CRS codes 4075 and 8691).
@@ -2081,7 +2080,7 @@ class Geographic2D extends Geographic
 
     /**
      * MML07-IRF
-     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS t(code
      * 9373) hrough transformation ETRS89 to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map
      * projection (code 9370).
@@ -2103,7 +2102,7 @@ class Geographic2D extends Geographic
     /**
      * MOLDOR11-IRF
      * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
-     * Valley to Dore Junction.
+     * Valley to Dore Junction
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS
      * through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map
      * projection (code 9879).
@@ -2118,7 +2117,7 @@ class Geographic2D extends Geographic
 
     /**
      * MOP78
-     * Extent: Wallis and Futuna - Wallis.
+     * Extent: Wallis and Futuna - Wallis
      * Replaced by RGWF96 (CRS code 8900) for geodetic survey and RGWF96 (lon-lat) (CRS code 8902) for GIS.
      */
     public const EPSG_MOP78 = 'urn:ogc:def:crs:EPSG::4639';
@@ -2126,7 +2125,7 @@ class Geographic2D extends Geographic
     /**
      * MRH21-IRF
      * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
-     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through
      * transformation ETRS89 to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code
      * 9868).
@@ -2135,15 +2134,14 @@ class Geographic2D extends Geographic
 
     /**
      * MTRF-2000
-     * Extent: Saudi Arabia - onshore and offshore.
+     * Extent: Saudi Arabia - onshore and offshore
      * Replaces Ain el Abd (CRS 4204) in Saudi Arabia.
      */
     public const EPSG_MTRF_2000 = 'urn:ogc:def:crs:EPSG::8818';
 
     /**
      * MWC18-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
-     * Chester.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MWC18 SnakeGrid projected CRS through
      * transformation ETRS89 to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map projection (code
      * 10127).
@@ -2158,28 +2156,28 @@ class Geographic2D extends Geographic
 
     /**
      * Macao 2008
-     * Extent: China - Macao - onshore and offshore.
+     * Extent: China - Macao - onshore and offshore
      * Locally sometimes referred to as ITRF2005, this is not strictly correct.
      */
     public const EPSG_MACAO_2008 = 'urn:ogc:def:crs:EPSG::8431';
 
     /**
      * Madrid 1870 (Madrid)
-     * Extent: Spain - mainland onshore.
+     * Extent: Spain - mainland onshore
      * Replaced by ED50 in 1970.
      */
     public const EPSG_MADRID_1870_MADRID = 'urn:ogc:def:crs:EPSG::4903';
 
     /**
      * Madzansua
-     * Extent: Mozambique - west - Tete province.
+     * Extent: Mozambique - west - Tete province
      * Replaced by values transformed to Tete GeogCRS (code 4127).
      */
     public const EPSG_MADZANSUA = 'urn:ogc:def:crs:EPSG::4128';
 
     /**
      * Mahe 1971
-     * Extent: Seychelles - Mahe Island.
+     * Extent: Seychelles - Mahe Island
      * This CRS has no known local application. South East Island 1943 (CRS codes 6892 and 6915) is used for
      * topographic mapping, cadastral and hydrographic survey.
      */
@@ -2199,7 +2197,7 @@ class Geographic2D extends Geographic
 
     /**
      * Malongo 1987
-     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.
+     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
      * Replaced Mhast (offshore) (CRS code 4705) in 1987. References to "Mhast" since 1987 often should have stated
      * "Malongo 1987".
      */
@@ -2207,7 +2205,7 @@ class Geographic2D extends Geographic
 
     /**
      * Manoca 1962
-     * Extent: Cameroon - coastal area.
+     * Extent: Cameroon - coastal area
      * Replaces Doula 1948 (code 4192). The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS)
      * ellipsoid (code 7012) but in practice this CRS has used the IGN version.
      */
@@ -2227,7 +2225,7 @@ class Geographic2D extends Geographic
 
     /**
      * Martinique 1938
-     * Extent: Martinique - onshore.
+     * Extent: Martinique - onshore
      * Replaced by RRAF 1991 (CRS code 4558).
      */
     public const EPSG_MARTINIQUE_1938 = 'urn:ogc:def:crs:EPSG::4625';
@@ -2240,14 +2238,14 @@ class Geographic2D extends Geographic
 
     /**
      * Maupiti 83
-     * Extent: French Polynesia - Society Islands - Maupiti.
+     * Extent: French Polynesia - Society Islands - Maupiti
      * Replaced by RGPF, CRS code 4687.
      */
     public const EPSG_MAUPITI_83 = 'urn:ogc:def:crs:EPSG::4692';
 
     /**
      * Mauritania 1999
-     * Extent: Mauritania - onshore and offshore.
+     * Extent: Mauritania - onshore and offshore
      * Replaces all earlier CRSs.
      */
     public const EPSG_MAURITANIA_1999 = 'urn:ogc:def:crs:EPSG::4702';
@@ -2260,21 +2258,21 @@ class Geographic2D extends Geographic
 
     /**
      * Mexico ITRF2008
-     * Extent: Mexico - onshore and offshore.
+     * Extent: Mexico - onshore and offshore
      * Replaces Mexico ITRF92 (CRS code 4483) from December 2010.
      */
     public const EPSG_MEXICO_ITRF2008 = 'urn:ogc:def:crs:EPSG::6365';
 
     /**
      * Mexico ITRF92
-     * Extent: Mexico - onshore and offshore.
+     * Extent: Mexico - onshore and offshore
      * Replaces NAD27 (CRS code 4267). Replaced by Mexico ITRF2008 (CRS code 6365) from December 2010.
      */
     public const EPSG_MEXICO_ITRF92 = 'urn:ogc:def:crs:EPSG::4483';
 
     /**
      * Mhast (offshore)
-     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.
+     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
      * Used by CABGOC. Differs from Mhast (onshore) by approximately 10m. Replaced by Malongo 1987 (CRS code 4259) in
      * 1987.
      */
@@ -2283,7 +2281,7 @@ class Geographic2D extends Geographic
     /**
      * Mhast (onshore)
      * Extent: Angola (Cabinda) - onshore and offshore; The Democratic Republic of the Congo (Zaire) - onshore coastal
-     * area and offshore.
+     * area and offshore
      * Adopted by CABGOC with intention of being Mhast 1951 (CRS code 4703) but because it uses a different ellipsoid
      * it is a different system. From 1979, offshore use replaced by Mhast (offshore) (CRS code 4705) from which this
      * CRS differes by approx. 10m.
@@ -2292,7 +2290,7 @@ class Geographic2D extends Geographic
 
     /**
      * Mhast 1951
-     * Extent: Angola - Cabinda.
+     * Extent: Angola - Cabinda
      * A variation of this system has been adopted by the oil industry but using the International 1924 ellipsoid - see
      * Mhast (onshore) and Mhast (offshore) (codes 4704 and 4705).
      */
@@ -2330,7 +2328,7 @@ class Geographic2D extends Geographic
 
     /**
      * Moorea 87
-     * Extent: French Polynesia - Society Islands - Moorea.
+     * Extent: French Polynesia - Society Islands - Moorea
      * Replaces Tahiti 52 (CRS code 4628) in Moorea. Replaced by RGPF (CRS code 4687).
      */
     public const EPSG_MOOREA_87 = 'urn:ogc:def:crs:EPSG::4691';
@@ -2360,7 +2358,7 @@ class Geographic2D extends Geographic
      * Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York,
      * North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota,
      * Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US
-     * Virgin Islands - onshore.
+     * Virgin Islands - onshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaced by NAD27(76) (code 4608) in Ontario, CGQ77
      * (code 4609) in Quebec, Mexican Datum of 1993 (code 4483) in Mexico, NAD83 (code 4269) in Canada (excl. Ontario &
      * Quebec) & USA.
@@ -2369,14 +2367,14 @@ class Geographic2D extends Geographic
 
     /**
      * NAD27(76)
-     * Extent: Canada - Ontario.
+     * Extent: Canada - Ontario
      * Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_NAD27_76 = 'urn:ogc:def:crs:EPSG::4608';
 
     /**
      * NAD27(CGQ77)
-     * Extent: Canada - Quebec.
+     * Extent: Canada - Quebec
      * Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_NAD27_CGQ77 = 'urn:ogc:def:crs:EPSG::4609';
@@ -2390,7 +2388,7 @@ class Geographic2D extends Geographic
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.
+     * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands
      * Longitude is POSITIVE EAST. The adjustment included connections to Greenland and Mexico but the system was not
      * adopted there. For applications with an accuracy of better than 1m replaced by NAD83(HARN) in the US and PRVI
      * and by NAD83(CSRS) in Canada.
@@ -2404,7 +2402,7 @@ class Geographic2D extends Geographic
      * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(CORS96) and NAD83(NSRS2007) (CRS
      * codes 6783 and 4759).
      */
@@ -2417,7 +2415,7 @@ class Geographic2D extends Geographic
      * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
      * Note: this CRS includes POSITIVE EAST longitudes. Replaced by NAD83(2011) (CRS code 6318) from 2011-09-06.
      */
     public const EPSG_NAD83_CORS96 = 'urn:ogc:def:crs:EPSG::6783';
@@ -2426,7 +2424,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific identification. As such it has an
      * accuracy of approximately 1m. Note: this CRS includes longitudes which are POSITIVE EAST.
      */
@@ -2436,7 +2434,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)v2
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British
      * Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3
      * (code 8240). Longitudes are POSITIVE EAST.
@@ -2447,7 +2445,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)v3
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British
      * Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2.
      * Replaced by NAD83(CSRS)v4.
@@ -2458,7 +2456,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)v4
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and
      * British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5 (CRS code 8249). Longitudes are POSITIVE
      * EAST.
@@ -2469,7 +2467,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)v5
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6
      * (CRS code 8252). Longitudes are POSITIVE EAST.
      */
@@ -2479,7 +2477,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)v6
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British
      * Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces
      * NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.
@@ -2490,7 +2488,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS)v7
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
      * NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
      */
@@ -2500,7 +2498,7 @@ class Geographic2D extends Geographic
      * NAD83(CSRS96)
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Adopted by the Canadian federal government from 1996-01-01. Replaced by NAD83(CSRS)v2 (CRS code 8237). Note:
      * this CRS includes longitudes which are POSITIVE EAST.
      */
@@ -2515,7 +2513,7 @@ class Geographic2D extends Geographic
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
      * Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM
-     * OCS). US Virgin Islands - onshore.
+     * OCS). US Virgin Islands - onshore
      * In Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Continental US, Puerto Rico and
      * US Virgin Islands replaced by NAD83(NSRS2007). In American Samoa and Hawaii replaced by NAD83(PA11). In Guam/NMI
      * replaced by NAD83(MA11).
@@ -2524,7 +2522,7 @@ class Geographic2D extends Geographic
 
     /**
      * NAD83(HARN Corrected)
-     * Extent: Puerto Rico and US Virgin Islands - onshore.
+     * Extent: Puerto Rico and US Virgin Islands - onshore
      * Note: this CRS includes POSITIVE EAST longitudes. In PRVI replaces NAD83(HARN) = NAD83(1993 PRVI) to correct
      * errors. Replaced by NAD83(FBN) = NAD83(2002 PRVI).
      */
@@ -2539,7 +2537,7 @@ class Geographic2D extends Geographic
      * Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North
      * Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas,
      * Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental
-     * shelf (GoM OCS). US Virgin Islands - onshore.
+     * shelf (GoM OCS). US Virgin Islands - onshore
      * In CONUS, AK, HI and PRVI replaces NAD83 for applications with an accuracy of better than 1m. Replaced by
      * NAD83(FBN) in CONUS, American Samoa and Guam / NMI, by NAD83(NSRS2007) in Alaska, by NAD83(PA11) in Hawaii and
      * by NAD83(HARN Corrected) in PRVI.
@@ -2548,14 +2546,14 @@ class Geographic2D extends Geographic
 
     /**
      * NAD83(MA11)
-     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam.
      */
     public const EPSG_NAD83_MA11 = 'urn:ogc:def:crs:EPSG::6325';
 
     /**
      * NAD83(MARP00)
-     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
      * Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).
      */
     public const EPSG_NAD83_MARP00 = 'urn:ogc:def:crs:EPSG::9072';
@@ -2567,7 +2565,7 @@ class Geographic2D extends Geographic
      * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
      * Note: this CRS includes POSITIVE EAST longitudes. Replaces NAD83(HARN) and NAD83(FBN). Replaced by NAD83(2011).
      */
     public const EPSG_NAD83_NSRS2007 = 'urn:ogc:def:crs:EPSG::4759';
@@ -2575,7 +2573,7 @@ class Geographic2D extends Geographic
     /**
      * NAD83(PA11)
      * Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands;
-     * onshore and offshore.
+     * onshore and offshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and
      * American Samoa.
      */
@@ -2584,7 +2582,7 @@ class Geographic2D extends Geographic
     /**
      * NAD83(PACP00)
      * Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands;
-     * onshore and offshore.
+     * onshore and offshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and
      * American Samoa. Replaced by NAD83(PA11).
      */
@@ -2592,7 +2590,7 @@ class Geographic2D extends Geographic
 
     /**
      * NEA74 Noumea
-     * Extent: New Caledonia - Grande Terre - Noumea district.
+     * Extent: New Caledonia - Grande Terre - Noumea district
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_NEA74_NOUMEA = 'urn:ogc:def:crs:EPSG::4644';
@@ -2636,21 +2634,21 @@ class Geographic2D extends Geographic
     /**
      * NZGD2000
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
-     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
      * Replaces NZGD49 (code 4272) and CI79 (code 4673) from March 2000.
      */
     public const EPSG_NZGD2000 = 'urn:ogc:def:crs:EPSG::4167';
 
     /**
      * NZGD49
-     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore and nearshore.
+     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore and nearshore
      * Replaced by NZGD2000 (CRS code 4167) in March 2000.
      */
     public const EPSG_NZGD49 = 'urn:ogc:def:crs:EPSG::4272';
 
     /**
      * Nahrwan 1934
-     * Extent: Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
+     * Extent: Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq
      * In Iran, replaced by FD58. In Iraq, replaced by Karbala 1979.
      */
     public const EPSG_NAHRWAN_1934 = 'urn:ogc:def:crs:EPSG::4744';
@@ -2670,35 +2668,35 @@ class Geographic2D extends Geographic
 
     /**
      * Naparima 1955
-     * Extent: Trinidad and Tobago - Trinidad - onshore.
+     * Extent: Trinidad and Tobago - Trinidad - onshore
      * Extended to Tobago as Naparima 1972. (Note: Naparima 1972 is not used in Trinidad).
      */
     public const EPSG_NAPARIMA_1955 = 'urn:ogc:def:crs:EPSG::4158';
 
     /**
      * Naparima 1972
-     * Extent: Trinidad and Tobago - Tobago - onshore.
+     * Extent: Trinidad and Tobago - Tobago - onshore
      * Naparima 1972 is an extension to Tobago of the Naparima 1955 network of Trinidad.
      */
     public const EPSG_NAPARIMA_1972 = 'urn:ogc:def:crs:EPSG::4271';
 
     /**
      * Nepal 1981
-     * Extent: Nepal.
+     * Extent: Nepal
      * Adopts 1937 metric conversion of 0.30479841 metres per Indian foot.
      */
     public const EPSG_NEPAL_1981 = 'urn:ogc:def:crs:EPSG::6207';
 
     /**
      * New Beijing
-     * Extent: China - onshore.
+     * Extent: China - onshore
      * Replaces Beijing 1954 (CRS code 4214). Replaced by CGCS2000 (code 4490).
      */
     public const EPSG_NEW_BEIJING = 'urn:ogc:def:crs:EPSG::4555';
 
     /**
      * Nord Sahara 1959
-     * Extent: Algeria - onshore and offshore.
+     * Extent: Algeria - onshore and offshore
      * Sometimes incorrectly referred to as Voirol Unifie 1960: this is NOT a GeogCRS but two projected CRSs based on
      * Nord Sahara 1959 (codes 30791-92). Strictly applicable only to north of 32°N but extended southwards
      * non-homogoneously by oil industry.
@@ -2707,21 +2705,21 @@ class Geographic2D extends Geographic
 
     /**
      * Nouakchott 1965
-     * Extent: Mauritania - coastal area south of Cape Timiris.
+     * Extent: Mauritania - coastal area south of Cape Timiris
      * Replaced by Mauritania 1999 (CRS code 4702).
      */
     public const EPSG_NOUAKCHOTT_1965 = 'urn:ogc:def:crs:EPSG::4680';
 
     /**
      * ONGD14
-     * Extent: Oman - onshore and offshore.
+     * Extent: Oman - onshore and offshore
      * In Oman replaces usage of WGS 84 (G873) from 2014. Replaced by ONGD17 (CRS code 9294) from March 2019.
      */
     public const EPSG_ONGD14 = 'urn:ogc:def:crs:EPSG::7373';
 
     /**
      * ONGD17
-     * Extent: Oman - onshore and offshore.
+     * Extent: Oman - onshore and offshore
      * Replaces ONGD14 (CRS code 7373) from March 2019.
      */
     public const EPSG_ONGD17 = 'urn:ogc:def:crs:EPSG::9294';
@@ -2749,21 +2747,21 @@ class Geographic2D extends Geographic
 
     /**
      * OSNI 1952
-     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Replaced by 1975 Mapping Adjustment alias TM75. See CRS code 4300.
      */
     public const EPSG_OSNI_1952 = 'urn:ogc:def:crs:EPSG::4188';
 
     /**
      * Observatario
-     * Extent: Mozambique - south.
+     * Extent: Mozambique - south
      * Replaced by values transformed to Tete geogCRS (code 4127).
      */
     public const EPSG_OBSERVATARIO = 'urn:ogc:def:crs:EPSG::4129';
 
     /**
      * Ocotepeque 1935
-     * Extent: Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua.
+     * Extent: Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua
      * Replaced in Costa Rica by Costa Rica 2005 (CR05) from March 2007 and replaced in El Salvador by SIRGAS_ES2007
      * from August 2007.
      */
@@ -2771,7 +2769,7 @@ class Geographic2D extends Geographic
 
     /**
      * Old Hawaiian
-     * Extent: United States (USA) - Hawaii - main islands onshore.
+     * Extent: United States (USA) - Hawaii - main islands onshore
      * Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_OLD_HAWAIIAN = 'urn:ogc:def:crs:EPSG::4135';
@@ -2779,7 +2777,7 @@ class Geographic2D extends Geographic
     /**
      * Ostenfeld-IRF
      * Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border
-     * near the Kongea river).
+     * near the Kongea river)
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Ostenfeld CRS
      * and ETRS89 through transformation ETRS89 to Ostenfeld-IRF (1) (code 10271) used with the
      * Ostenfeld-reconstruction map projection (code 10269).
@@ -2788,7 +2786,7 @@ class Geographic2D extends Geographic
 
     /**
      * OxWo08-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through
      * transformation ETRS89 to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM map projection (code
      * 10234).
@@ -2797,7 +2795,7 @@ class Geographic2D extends Geographic
 
     /**
      * PD/83
-     * Extent: Germany - Thuringen.
+     * Extent: Germany - Thuringen
      * Consistent with DHDN (CRS code 4314) at the 1-metre level. For low accuracy applications PD/83 can be considered
      * the same as DHDN.
      */
@@ -2805,7 +2803,7 @@ class Geographic2D extends Geographic
 
     /**
      * PN68
-     * Extent: Spain - Canary Islands onshore.
+     * Extent: Spain - Canary Islands onshore
      * On western islands (El Hierro, La Gomera, La Palma and Tenerife) replaced by PN84 (CRS code 4728) and later by
      * REGCAN95 (CRS code 4081). On eastern islands (Fuerteventura, Gran Canaria and Lanzarote) replaced by REGCAN95
      * (CRS code 4081).
@@ -2814,7 +2812,7 @@ class Geographic2D extends Geographic
 
     /**
      * PN84
-     * Extent: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore.
+     * Extent: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore
      * Replaces PN68 (CRS code 9403) only on western islands (El Hierro, La Gomera, La Palma and Tenerife). Replaced by
      * REGCAN95 (CRS code 4081).
      */
@@ -2824,14 +2822,14 @@ class Geographic2D extends Geographic
      * PNG94
      * Extent: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty
      * Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland,
-     * Woodlark, and associated islands.
+     * Woodlark, and associated islands
      * Adopted 1996, replacing AGD66.
      */
     public const EPSG_PNG94 = 'urn:ogc:def:crs:EPSG::5546';
 
     /**
      * POSGAR 2007
-     * Extent: Argentina - onshore and offshore.
+     * Extent: Argentina - onshore and offshore
      * Adopted as official replacement of POSGAR 94 in May 2009. Also replaces de facto use of POSGAR 98 as of same
      * date.
      */
@@ -2839,7 +2837,7 @@ class Geographic2D extends Geographic
 
     /**
      * POSGAR 94
-     * Extent: Argentina - onshore and offshore.
+     * Extent: Argentina - onshore and offshore
      * Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many practical purposes until May 2009.
      * Officially replaced by POSGAR 2007 in May 2009.
      */
@@ -2847,7 +2845,7 @@ class Geographic2D extends Geographic
 
     /**
      * POSGAR 98
-     * Extent: Argentina - onshore and offshore.
+     * Extent: Argentina - onshore and offshore
      * Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but
      * not as the legal system). POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.
      */
@@ -2855,7 +2853,7 @@ class Geographic2D extends Geographic
 
     /**
      * PRS92
-     * Extent: Philippines - onshore and offshore.
+     * Extent: Philippines - onshore and offshore
      * Replaces Luzon 19111 (CRS code 4253).
      */
     public const EPSG_PRS92 = 'urn:ogc:def:crs:EPSG::4683';
@@ -2864,7 +2862,7 @@ class Geographic2D extends Geographic
      * PSAD56
      * Extent: Aruba - onshore; Bolivia; Bonaire - onshore; Brazil - offshore - Amazon Cone shelf; Chile - onshore
      * north of 43°30'S; Curacao - onshore; Ecuador - mainland onshore; Guyana - onshore; Peru - onshore; Venezuela -
-     * onshore.
+     * onshore
      * Incorporates La Canoa (CRS code 4247) and within Venezuela (but not beyond) the names La Canoa and PSAD56 are
      * synonymous.
      */
@@ -2872,7 +2870,7 @@ class Geographic2D extends Geographic
 
     /**
      * PSD93
-     * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
+     * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands
      * Replaced Fahud geogCRS (code 4232) in 1993. Maximum differences to Fahud adjustment are 20 metres.
      */
     public const EPSG_PSD93 = 'urn:ogc:def:crs:EPSG::4134';
@@ -2880,7 +2878,7 @@ class Geographic2D extends Geographic
     /**
      * PTRA08
      * Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao
-     * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.
+     * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens
      * Replaces Azores Occidental 1939, Azores Central 1995, Azores Oriental 1995 and Porto Santo 1995 (CRS codes 4182
      * and 4663-65).
      */
@@ -2888,21 +2886,21 @@ class Geographic2D extends Geographic
 
     /**
      * PZ-90
-     * Extent: World.
+     * Extent: World
      * Used by the Glonass satellite navigation system prior to 2007-09-20.
      */
     public const EPSG_PZ_90 = 'urn:ogc:def:crs:EPSG::4740';
 
     /**
      * PZ-90.02
-     * Extent: World.
+     * Extent: World
      * Replaces PZ-90 (CRS code 4740) from 2007-09-20. Replaced by PZ-90.11 (CRS code 9475) from 2014-01-15.
      */
     public const EPSG_PZ_90_02 = 'urn:ogc:def:crs:EPSG::9474';
 
     /**
      * PZ-90.11
-     * Extent: World.
+     * Extent: World
      * Replaces PZ-90.02 (CRS code 9474) from 2014-01-15.
      */
     public const EPSG_PZ_90_11 = 'urn:ogc:def:crs:EPSG::9475';
@@ -2916,7 +2914,7 @@ class Geographic2D extends Geographic
     /**
      * Pampa del Castillo
      * Extent: Argentina - Chibut province south of approximately 42°30'S and Santa Cruz province north of
-     * approximately 50°20'S.
+     * approximately 50°20'S
      * Replaced by Campo Inchauspe (geogCRS code 4221) for topographic mapping, use for oil exploration and production
      * in Golfo San Jorge basin (44°S to 47.5°S) continues.
      */
@@ -2930,21 +2928,21 @@ class Geographic2D extends Geographic
 
     /**
      * Perroud 1950
-     * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E.
+     * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E
      * Replaced by RGTAAF07 (CRS code 7073).
      */
     public const EPSG_PERROUD_1950 = 'urn:ogc:def:crs:EPSG::4637';
 
     /**
      * Peru96
-     * Extent: Peru - onshore and offshore.
+     * Extent: Peru - onshore and offshore
      * Replaces PSAD56 (CRS code 4248) in Peru.
      */
     public const EPSG_PERU96 = 'urn:ogc:def:crs:EPSG::5373';
 
     /**
      * Petrels 1972
-     * Extent: Antarctica - Adelie Land - Petrels island.
+     * Extent: Antarctica - Adelie Land - Petrels island
      * Replaced by RGTAAF07 (CRS code 7073).
      */
     public const EPSG_PETRELS_1972 = 'urn:ogc:def:crs:EPSG::4636';
@@ -2957,14 +2955,14 @@ class Geographic2D extends Geographic
 
     /**
      * Pitcairn 1967
-     * Extent: Pitcairn - Pitcairn Island.
+     * Extent: Pitcairn - Pitcairn Island
      * Replced by Pitcairn 2006 (CRS code 4763).
      */
     public const EPSG_PITCAIRN_1967 = 'urn:ogc:def:crs:EPSG::4729';
 
     /**
      * Pitcairn 2006
-     * Extent: Pitcairn - Pitcairn Island.
+     * Extent: Pitcairn - Pitcairn Island
      * Replaces Pitcairn 1967 (CRS code 4729). For practical purposes may be considered to be WGS 84.
      */
     public const EPSG_PITCAIRN_2006 = 'urn:ogc:def:crs:EPSG::4763';
@@ -2972,7 +2970,7 @@ class Geographic2D extends Geographic
     /**
      * Point 58
      * Extent: Senegal - central, Mali - southwest, Burkina Faso - central, Niger - southwest, Nigeria - north, Chad -
-     * central. All in proximity to the parallel of latitude of 12°N.
+     * central. All in proximity to the parallel of latitude of 12°N
      * The 12th parallel traverse of 1966-70 is connected to the Blue Nile 1958 (Adindan) network in western Sudan
      * (geogCRS code 4201).
      */
@@ -2986,14 +2984,14 @@ class Geographic2D extends Geographic
 
     /**
      * Porto Santo
-     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
+     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
      * Replaced by 1995 system (CRS code 4663).
      */
     public const EPSG_PORTO_SANTO = 'urn:ogc:def:crs:EPSG::4615';
 
     /**
      * Porto Santo 1995
-     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
+     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
      * Replaces 1936 system (CRS code 4615). Replaced by PTRA08 (CRS code 5013).
      */
     public const EPSG_PORTO_SANTO_1995 = 'urn:ogc:def:crs:EPSG::4663';
@@ -3006,7 +3004,7 @@ class Geographic2D extends Geographic
 
     /**
      * Puerto Rico
-     * Extent: Puerto Rico, US Virgin Islands and British Virgin Islands - onshore.
+     * Extent: Puerto Rico, US Virgin Islands and British Virgin Islands - onshore
      * NAD27 (CRS code 4267) used for military purposes. Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_PUERTO_RICO = 'urn:ogc:def:crs:EPSG::4139';
@@ -3015,7 +3013,7 @@ class Geographic2D extends Geographic
      * Pulkovo 1942
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
-     * onshore; Uzbekistan.
+     * onshore; Uzbekistan
      * Extended to Eastern Europe through Uniform Astro-Geodetic Network (UAGN) of 1956 - see CRS code 4179.
      */
     public const EPSG_PULKOVO_1942 = 'urn:ogc:def:crs:EPSG::4284';
@@ -3023,7 +3021,7 @@ class Geographic2D extends Geographic
     /**
      * Pulkovo 1942(58)
      * Extent: Onshore: Bulgaria, Czechia, Germany (former DDR), Hungary, Poland and Slovakia. Onshore and offshore:
-     * Albania and Romania.
+     * Albania and Romania
      * Shares same origin definition as Pulkovo 1942 (CRS code 4284) and for low accuracy purposes these systems can be
      * considered consistent with each other. Locally densified during 1957 and 1958. Replaced by 1983 adjustment (CRS
      * code 4178).
@@ -3032,7 +3030,7 @@ class Geographic2D extends Geographic
 
     /**
      * Pulkovo 1942(83)
-     * Extent: Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia.
+     * Extent: Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia
      * Replaces 1956 adjustment (CRS code 4179). In Brandenburg replaced by ETRS89. In Sachsen and Thuringen replaced
      * by RD83 and PD/83 which for practical purposes may be considered to be the same as DHDN.
      */
@@ -3040,7 +3038,7 @@ class Geographic2D extends Geographic
 
     /**
      * Pulkovo 1995
-     * Extent: Russian Federation - onshore and offshore.
+     * Extent: Russian Federation - onshore and offshore
      * Decree #1463 of 2012-12-28 announced that S-95 to be phased out and replaced by GSK-11 (CRS code 7683) by 2017.
      */
     public const EPSG_PULKOVO_1995 = 'urn:ogc:def:crs:EPSG::4200';
@@ -3071,7 +3069,7 @@ class Geographic2D extends Geographic
 
     /**
      * RBEPP12-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / RBEPP12 SnakeGrid projected CRS through
      * transformation ETRS89 to RBEPP12-IRF (1) (code 10278) used in conjunction with the RBEPP12-LCC map projection
      * (code 10279).
@@ -3080,7 +3078,7 @@ class Geographic2D extends Geographic
 
     /**
      * RD/83
-     * Extent: Germany - Sachsen.
+     * Extent: Germany - Sachsen
      * Consistent with DHDN (CRS code 4314) at the 1-metre level. For low accuracy applications RD/83 can be considered
      * the same as DHDN.
      */
@@ -3088,7 +3086,7 @@ class Geographic2D extends Geographic
 
     /**
      * RDN2008
-     * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+     * Extent: Italy - onshore and offshore; San Marino, Vatican City State
      * Replaces IGM95 (CRS code 4670) from 2011-11-10.
      */
     public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6706';
@@ -3102,14 +3100,14 @@ class Geographic2D extends Geographic
 
     /**
      * REGCAN95
-     * Extent: Spain - Canary Islands onshore and offshore.
+     * Extent: Spain - Canary Islands onshore and offshore
      * Replaces Pico de las Nieves 1984 (PN84).
      */
     public const EPSG_REGCAN95 = 'urn:ogc:def:crs:EPSG::4081';
 
     /**
      * REGVEN
-     * Extent: Venezuela - onshore and offshore.
+     * Extent: Venezuela - onshore and offshore
      * Densification in Venezuela of SIRGAS.
      */
     public const EPSG_REGVEN = 'urn:ogc:def:crs:EPSG::4189';
@@ -3117,7 +3115,7 @@ class Geographic2D extends Geographic
     /**
      * RGAF09
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
      * Replaces RRAF 1991. See CRS code 7086 for alternate system with axes reversed used by IGN for GIS purposes.
      */
     public const EPSG_RGAF09 = 'urn:ogc:def:crs:EPSG::5489';
@@ -3125,7 +3123,7 @@ class Geographic2D extends Geographic
     /**
      * RGAF09 (lon-lat)
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
      * Replaces RRAF 1991. See CRS code 5489 for system with axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
      */
@@ -3133,7 +3131,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v1
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2
      * (CRS code 9777) from 2010-06-18.
      */
@@ -3141,7 +3139,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v1 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
      * safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
      */
@@ -3149,7 +3147,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See
      * CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
      */
@@ -3157,7 +3155,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2 (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from
      * 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea
      * navigation and safety of life purposes.
@@ -3166,7 +3164,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2b
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed
      * used by IGN for GIS purposes.
      */
@@ -3174,7 +3172,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGF93 v2b (lon-lat)
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence
      * lat-lon to be used for air, land and sea navigation and safety of life purposes.
      */
@@ -3182,14 +3180,14 @@ class Geographic2D extends Geographic
 
     /**
      * RGFG95
-     * Extent: French Guiana - onshore and offshore.
+     * Extent: French Guiana - onshore and offshore
      * See CRS code 7041 for alternate system with axes reversed used by IGN for GIS purposes.
      */
     public const EPSG_RGFG95 = 'urn:ogc:def:crs:EPSG::4624';
 
     /**
      * RGFG95 (lon-lat)
-     * Extent: French Guiana - onshore and offshore.
+     * Extent: French Guiana - onshore and offshore
      * See CRS code 4624 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
      * safety of life purposes.
      */
@@ -3197,7 +3195,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGM04
-     * Extent: Mayotte - onshore and offshore.
+     * Extent: Mayotte - onshore and offshore
      * Replaces Combani 1950 (CRS code 4632) except for cadastral purposes which uses Cadastre 1997 (CRS code 4475).
      * See CRS code 7039 for alternate system with axes reversed used by IGN for GIS purposes.
      */
@@ -3205,7 +3203,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGM04 (lon-lat)
-     * Extent: Mayotte - onshore and offshore.
+     * Extent: Mayotte - onshore and offshore
      * Replaces Combani 1950 (CRS code 4632) except for cadastral purposes which use Cadastre 1997 (CRS code 4475). See
      * CRS code 4470 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of
      * life purposes.
@@ -3215,7 +3213,7 @@ class Geographic2D extends Geographic
     /**
      * RGNC15
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
-     * Chesterfield Islands, and Walpole.
+     * Chesterfield Islands, and Walpole
      * Replaces RGNC91-93 (CRS code 4749). See CRS code 10312 for alternate system with axes reversed used by DITTT for
      * GIS purposes.
      */
@@ -3224,7 +3222,7 @@ class Geographic2D extends Geographic
     /**
      * RGNC15 (lon-lat)
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
-     * Chesterfield Islands, and Walpole.
+     * Chesterfield Islands, and Walpole
      * Replaces RGNC91-93 (lon-lat) (CRS code 10307). See CRS code 10310 for system with axes in sequence lat-lon to be
      * used for air, land and sea navigation and safety of life purposes.
      */
@@ -3233,7 +3231,7 @@ class Geographic2D extends Geographic
     /**
      * RGNC91-93
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
-     * Chesterfield Islands, and Walpole.
+     * Chesterfield Islands, and Walpole
      * Replaces older systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep
      * and NEA74 Noumea. Replaced by RGNC15 (CRS 10310). See CRS code 10307 for alternate system with axes reversed
      * used by DITTT for GIS purposes.
@@ -3243,7 +3241,7 @@ class Geographic2D extends Geographic
     /**
      * RGNC91-93 (lon-lat)
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
-     * Chesterfield Islands, and Walpole.
+     * Chesterfield Islands, and Walpole
      * See CRS code 4749 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
      * safety of life purposes. Replaced by RGNC15 (lon-lat) (CRS code 10312).
      */
@@ -3252,7 +3250,7 @@ class Geographic2D extends Geographic
     /**
      * RGPF
      * Extent: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas
-     * Islands, Gambier Islands and Austral Islands.
+     * Islands, Gambier Islands and Austral Islands
      * Replaces Tahaa 54 (CRS code 4629), IGN 63 Hiva Oa (4689), IGN 72 Nuku Hiva (4630), Maupiti 83 (4692), MHEFO 55
      * (4688), Moorea 87 (4691) and Tahiti 79 (4690).
      */
@@ -3260,7 +3258,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGR92
-     * Extent: Reunion - onshore and offshore.
+     * Extent: Reunion - onshore and offshore
      * Replaces Piton des Neiges (code 4626). See CRS code 7037 for alternate system with axes reversed used by IGN for
      * GIS purposes.
      */
@@ -3268,7 +3266,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGR92 (lon-lat)
-     * Extent: Reunion - onshore and offshore.
+     * Extent: Reunion - onshore and offshore
      * Replaces Piton des Neiges (code 4626). See CRS code 4627 for system with axes in sequence lat-lon to be used for
      * air, land and sea navigation and safety of life purposes.
      */
@@ -3289,7 +3287,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGSPM06
-     * Extent: St Pierre and Miquelon - onshore and offshore.
+     * Extent: St Pierre and Miquelon - onshore and offshore
      * Replaces Saint Pierre et Miquelon 1950 (CRS code 4638). See CRS code 7035 for alternate system with axes
      * reversed used by IGN for GIS purposes.
      */
@@ -3297,7 +3295,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGSPM06 (lon-lat)
-     * Extent: St Pierre and Miquelon - onshore and offshore.
+     * Extent: St Pierre and Miquelon - onshore and offshore
      * Replaces Saint Pierre et Miquelon 1950 (CRS code 4638). See CRS code 4463 for system with axes in sequence
      * lat-lon to be used for air, land and sea navigation and safety of life purposes.
      */
@@ -3306,7 +3304,7 @@ class Geographic2D extends Geographic
     /**
      * RGTAAF07
      * Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen.
-     * Antarctica - Adelie Land coastal area.
+     * Antarctica - Adelie Land coastal area
      * Replaces various local systems on several French overseas territories. See CRS code 7133 for alternate system
      * with axes reversed used by IGN for GIS purposes.
      */
@@ -3315,7 +3313,7 @@ class Geographic2D extends Geographic
     /**
      * RGTAAF07 (lon-lat)
      * Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen.
-     * Antarctica - Adelie Land coastal area.
+     * Antarctica - Adelie Land coastal area
      * Replaces various local systems on several French overseas territories. See CRS code 7073 for alternate system
      * with axes in sequence lat-lon to be used for air, land and sea navigation purposes.
      */
@@ -3323,7 +3321,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGWF96
-     * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
+     * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi
      * See CRS code 8902 for alternate system with axes reversed used by IGN for GIS purposes. On Wallis island,
      * replaces MOP78 (CRS code 4639) for geodetic purposes.
      */
@@ -3331,7 +3329,7 @@ class Geographic2D extends Geographic
 
     /**
      * RGWF96 (lon-lat)
-     * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
+     * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi
      * See CRS code 8900 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
      * safety of life purposes. On Wallis island, replaces MOP78 (CRS code 4639) for GIS purposes.
      */
@@ -3340,7 +3338,7 @@ class Geographic2D extends Geographic
     /**
      * RRAF 1991
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
      * Replaces older local systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix (CRS
      * code 4625) in Martinique. Replaced by RGAF09 (CRS code 5489).
      */
@@ -3387,21 +3385,21 @@ class Geographic2D extends Geographic
 
     /**
      * Reunion 1947
-     * Extent: Reunion - onshore.
+     * Extent: Reunion - onshore
      * Replaced by RGR92 (code 4627).
      */
     public const EPSG_REUNION_1947 = 'urn:ogc:def:crs:EPSG::4626';
 
     /**
      * Reykjavik 1900
-     * Extent: Iceland - mainland.
+     * Extent: Iceland - mainland
      * See ellipsoid remarks.
      */
     public const EPSG_REYKJAVIK_1900 = 'urn:ogc:def:crs:EPSG::4657';
 
     /**
      * S-JTSK
-     * Extent: Czechia; Slovakia.
+     * Extent: Czechia; Slovakia
      * Greenwich-referenced equivalent to S-JTSK (CRS code 4818). Technically improved and replaced through JTSK/05 in
      * the Czech Republic and S-JTSK [JTSK03] in Slovakia, CRSs 5228 and 5229 (CZ) and 8351 (SK).
      */
@@ -3409,7 +3407,7 @@ class Geographic2D extends Geographic
 
     /**
      * S-JTSK (Ferro)
-     * Extent: Czechia; Slovakia.
+     * Extent: Czechia; Slovakia
      * Initial realization, observed and calculated in projected CRS domain (CRS code 2065). Later densification
      * introduced distortion with inaccuracy of several decimetres. In Slovakia has been deprecated and replaced by
      * Greenwich equivalent, CRS code 4156.
@@ -3418,7 +3416,7 @@ class Geographic2D extends Geographic
 
     /**
      * S-JTSK [JTSK03]
-     * Extent: Slovakia.
+     * Extent: Slovakia
      * Defined by transfomation from ETRS89 (ETRF2000 realization) (transformation code 8365) to improve the scale and
      * homogeneity of S-JTSK (CRS 4156) within Slovakia.
      */
@@ -3426,7 +3424,7 @@ class Geographic2D extends Geographic
 
     /**
      * S-JTSK/05
-     * Extent: Czechia.
+     * Extent: Czechia
      * Derived through projCRS 5515 to improve the scale and homogeneity of CRS 4156 within the Czech Republic. See CRS
      * code 5229 for Ferro-referenced alternative.
      */
@@ -3434,7 +3432,7 @@ class Geographic2D extends Geographic
 
     /**
      * S-JTSK/05 (Ferro)
-     * Extent: Czechia.
+     * Extent: Czechia
      * Derived through projCRS 5224 to improve the scale and homogeneity of CRS 4818 within the Czech Republic. See CRS
      * code 5228 for Greenwich-referenced alternative.
      */
@@ -3442,7 +3440,7 @@ class Geographic2D extends Geographic
 
     /**
      * S34J-IRF
-     * Extent: Denmark - Jutland and Funen - onshore.
+     * Extent: Denmark - Jutland and Funen - onshore
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S34J CRS and
      * ETRS89 through transformation ETRS89 to S34J-IRF (1) (code 10161) used in conjunction with the
      * S34-reconstruction map projection (code 10159).
@@ -3451,7 +3449,7 @@ class Geographic2D extends Geographic
 
     /**
      * S34S-IRF
-     * Extent: Denmark - Zealand and Lolland (onshore).
+     * Extent: Denmark - Zealand and Lolland (onshore)
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S34S CRS and
      * ETRS89 through CT ETRS89 to S34S-IRF (1) (code 10251) used in conjunction with the S34-reconstruction map
      * projection (code 10159).
@@ -3460,7 +3458,7 @@ class Geographic2D extends Geographic
 
     /**
      * S45B-IRF
-     * Extent: Denmark - Bornholm onshore.
+     * Extent: Denmark - Bornholm onshore
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic S45 CRS and
      * ETRS89 through transformation ETRS89 to S45B-IRF (1) (code 10255) used in conjunction with the
      * S45B-reconstruction map projection (code 10253).
@@ -3470,7 +3468,7 @@ class Geographic2D extends Geographic
     /**
      * SAD69
      * Extent: Brazil - onshore and offshore. In rest of South America - onshore north of approximately 45°S and
-     * Tierra del Fuego.
+     * Tierra del Fuego
      * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil only, replaced by SAD69(96) (CRS code
      * 5527).
      */
@@ -3479,7 +3477,7 @@ class Geographic2D extends Geographic
     /**
      * SAD69(96)
      * Extent: Brazil - onshore and offshore. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim
-     * Vaz and Sao Pedro e Sao Paulo.
+     * Vaz and Sao Pedro e Sao Paulo
      * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 original adjustment (CRS code 4618)
      * only in Brazil.
      */
@@ -3488,7 +3486,7 @@ class Geographic2D extends Geographic
     /**
      * SCM22-IRF
      * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
-     * Perth and Pitlochry to Inverness.
+     * Perth and Pitlochry to Inverness
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through
      * transformation ETRS89 to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code
      * 9971).
@@ -3503,133 +3501,133 @@ class Geographic2D extends Geographic
 
     /**
      * SIGD61
-     * Extent: Cayman Islands - Little Cayman and Cayman Brac.
+     * Extent: Cayman Islands - Little Cayman and Cayman Brac
      * Superseded by CIGD11 (CRS code 6135).
      */
     public const EPSG_SIGD61 = 'urn:ogc:def:crs:EPSG::4726';
 
     /**
      * SIRGAS 1995
-     * Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.
+     * Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore
      * Replaced by SIRGAS 2000 (CRS code 4674).
      */
     public const EPSG_SIRGAS_1995 = 'urn:ogc:def:crs:EPSG::4170';
 
     /**
      * SIRGAS 2000
-     * Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.
+     * Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore
      * Replaces SIRGAS 1995 system (CRS code 4179) for South America; expands SIRGAS to Central America.
      */
     public const EPSG_SIRGAS_2000 = 'urn:ogc:def:crs:EPSG::4674';
 
     /**
      * SIRGAS-CON DGF00P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaced by SIRGAS-CON DGF01P01 (CRS code 8973).
      */
     public const EPSG_SIRGAS_CON_DGF00P01 = 'urn:ogc:def:crs:EPSG::8972';
 
     /**
      * SIRGAS-CON DGF01P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF00P01 (CRS code 8972). Replaced by SIRGAS-CON DGF01P02 (CRS code 8974).
      */
     public const EPSG_SIRGAS_CON_DGF01P01 = 'urn:ogc:def:crs:EPSG::8973';
 
     /**
      * SIRGAS-CON DGF01P02
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF01P01 (CRS code 8973). Replaced by SIRGAS-CON DGF02P01 (CRS code 8975).
      */
     public const EPSG_SIRGAS_CON_DGF01P02 = 'urn:ogc:def:crs:EPSG::8974';
 
     /**
      * SIRGAS-CON DGF02P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF01P02 (CRS code 8974). Replaced by SIRGAS-CON DGF04P01 (CRS code 8976).
      */
     public const EPSG_SIRGAS_CON_DGF02P01 = 'urn:ogc:def:crs:EPSG::8975';
 
     /**
      * SIRGAS-CON DGF04P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF02P01 (CRS code 8975). Replaced by SIRGAS-CON DGF05P01 (CRS code 8977).
      */
     public const EPSG_SIRGAS_CON_DGF04P01 = 'urn:ogc:def:crs:EPSG::8976';
 
     /**
      * SIRGAS-CON DGF05P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF04P01 (CRS code 8976). Replaced by SIRGAS-CON DGF06P01 (CRS code 8978).
      */
     public const EPSG_SIRGAS_CON_DGF05P01 = 'urn:ogc:def:crs:EPSG::8977';
 
     /**
      * SIRGAS-CON DGF06P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF05P01 (CRS code 8977). Replaced by SIRGAS-CON DGF07P01 (CRS code 8979).
      */
     public const EPSG_SIRGAS_CON_DGF06P01 = 'urn:ogc:def:crs:EPSG::8978';
 
     /**
      * SIRGAS-CON DGF07P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF06P01 (CRS code 8978). Replaced by SIRGAS-CON DGF08P01 (CRS code 8980).
      */
     public const EPSG_SIRGAS_CON_DGF07P01 = 'urn:ogc:def:crs:EPSG::8979';
 
     /**
      * SIRGAS-CON DGF08P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF07P01 (CRS code 8979). Replaced by SIRGAS-CON SIR09P01 (CRS code 8981).
      */
     public const EPSG_SIRGAS_CON_DGF08P01 = 'urn:ogc:def:crs:EPSG::8980';
 
     /**
      * SIRGAS-CON SIR09P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON DGF08P01 (CRS code 8980). Replaced by SIRGAS-CON SIR10P01 (CRS code 8982).
      */
     public const EPSG_SIRGAS_CON_SIR09P01 = 'urn:ogc:def:crs:EPSG::8981';
 
     /**
      * SIRGAS-CON SIR10P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON SIR09P01 (CRS code 8981). Replaced by SIRGAS-CON SIR11P01 (CRS code 8983).
      */
     public const EPSG_SIRGAS_CON_SIR10P01 = 'urn:ogc:def:crs:EPSG::8982';
 
     /**
      * SIRGAS-CON SIR11P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON SIR10P01 (CRS code 8982). Replaced by SIRGAS-CON SIR13P01 (CRS code 8984).
      */
     public const EPSG_SIRGAS_CON_SIR11P01 = 'urn:ogc:def:crs:EPSG::8983';
 
     /**
      * SIRGAS-CON SIR13P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON SIR11P01 (CRS code 8983). Replaced by SIRGAS-CON SIR14P01 (CRS code 8985).
      */
     public const EPSG_SIRGAS_CON_SIR13P01 = 'urn:ogc:def:crs:EPSG::8984';
 
     /**
      * SIRGAS-CON SIR14P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON SIR13P01 (CRS code 8984). Replaced by SIRGAS-CON SIR15P01 (CRS code 8986).
      */
     public const EPSG_SIRGAS_CON_SIR14P01 = 'urn:ogc:def:crs:EPSG::8985';
 
     /**
      * SIRGAS-CON SIR15P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON SIR14P01 (CRS code 8985). Replaced by SIRGAS-CON SIR17P01 (CRS code 8987).
      */
     public const EPSG_SIRGAS_CON_SIR15P01 = 'urn:ogc:def:crs:EPSG::8986';
 
     /**
      * SIRGAS-CON SIR17P01
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Replaces SIRGAS-CON SIR15P01 (CRS code 8986).
      */
     public const EPSG_SIRGAS_CON_SIR17P01 = 'urn:ogc:def:crs:EPSG::8987';
@@ -3637,7 +3635,7 @@ class Geographic2D extends Geographic
     /**
      * SIRGAS-Chile 2002
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (CRS code 6248) in Chile, HITO XVIII (CRS code 6254)
      * in Chilean Tierra del Fuego and Easter Island 1967 (CRS code 6719) in Easter Island. Replaced by SIRGAS-Chile
      * 2010 (CRS code 8949).
@@ -3647,7 +3645,7 @@ class Geographic2D extends Geographic
     /**
      * SIRGAS-Chile 2010
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Densification within Chile of SIRGAS-CON at epoch 2010.00. Replaces SIRGAS-Chile 2002 (CRS code 5360) due to
      * significant tectonic deformation. Replaced by SIRGAS-Chile 2013 (CRS code 9148).
      */
@@ -3656,7 +3654,7 @@ class Geographic2D extends Geographic
     /**
      * SIRGAS-Chile 2013
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Densification within Chile of SIRGAS-CON at epoch 2013.00. Replaces SIRGAS-Chile 2010 (CRS code 8949) due to
      * significant tectonic deformation. Replaced by SIRGAS-Chile 2016 (CRS code 9153).
      */
@@ -3665,7 +3663,7 @@ class Geographic2D extends Geographic
     /**
      * SIRGAS-Chile 2016
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Densification within Chile of SIRGAS-CON at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9148), replaced
      * by SIRGAS-Chile 2021 (CRS code 20041) due to significant tectonic deformation.
      */
@@ -3674,7 +3672,7 @@ class Geographic2D extends Geographic
     /**
      * SIRGAS-Chile 2021
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Densification within Chile of SIRGAS-CON at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9153) due to
      * significant tectonic deformation.
      */
@@ -3682,7 +3680,7 @@ class Geographic2D extends Geographic
 
     /**
      * SIRGAS-ROU98
-     * Extent: Uruguay - onshore and offshore.
+     * Extent: Uruguay - onshore and offshore
      * Replaces Yacare (CRS code 4309) in Uruguay.
      */
     public const EPSG_SIRGAS_ROU98 = 'urn:ogc:def:crs:EPSG::5381';
@@ -3701,7 +3699,7 @@ class Geographic2D extends Geographic
 
     /**
      * SMITB20-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SMITB20 SnakeGrid projected CRS through
      * transformation ETRS89 to SMITB20-IRF (1) (code 10273) used in conjunction with the SMITB20-TM map projection
      * (code 10274).
@@ -3710,21 +3708,21 @@ class Geographic2D extends Geographic
 
     /**
      * SRB_ETRS89
-     * Extent: Serbia including Vojvodina.
+     * Extent: Serbia including Vojvodina
      * In Serbia replaces MGI 1901 and SREF98 (CRS codes 3906 and 4075).
      */
     public const EPSG_SRB_ETRS89 = 'urn:ogc:def:crs:EPSG::8685';
 
     /**
      * SREF98
-     * Extent: Serbia including Vojvodina.
+     * Extent: Serbia including Vojvodina
      * Replaces MGI 1901 (CRS code 3906) in Serbia. Replaced by SRB_ETRS89 (STRS00) (CRS code 8685).
      */
     public const EPSG_SREF98 = 'urn:ogc:def:crs:EPSG::4075';
 
     /**
      * SRGI2013
-     * Extent: Indonesia - onshore and offshore.
+     * Extent: Indonesia - onshore and offshore
      * Supports horizontal component of national horizontal control network (JKHN). Adopted 2013-10-11. Replaces DGN95
      * and all older systems.
      */
@@ -3732,21 +3730,21 @@ class Geographic2D extends Geographic
 
     /**
      * ST71 Belep
-     * Extent: New Caledonia - Belep.
+     * Extent: New Caledonia - Belep
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_ST71_BELEP = 'urn:ogc:def:crs:EPSG::4643';
 
     /**
      * ST84 Ile des Pins
-     * Extent: New Caledonia - Ile des Pins.
+     * Extent: New Caledonia - Ile des Pins
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_ST84_ILE_DES_PINS = 'urn:ogc:def:crs:EPSG::4642';
 
     /**
      * ST87 Ouvea
-     * Extent: New Caledonia - Loyalty Islands - Ouvea.
+     * Extent: New Caledonia - Loyalty Islands - Ouvea
      * Replaced by RGNC91-93 (CRS code 4749).
      */
     public const EPSG_ST87_OUVEA = 'urn:ogc:def:crs:EPSG::4750';
@@ -3765,7 +3763,7 @@ class Geographic2D extends Geographic
 
     /**
      * SYC20-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SYC20 SnakeGrid projected CRS through
      * transformation ETRS89 to SYC20-IRF (1) (code 10238) used in conjunction with the SYC20-TM map projection (code
      * 10239).
@@ -3774,7 +3772,7 @@ class Geographic2D extends Geographic
 
     /**
      * Saint Pierre et Miquelon 1950
-     * Extent: St Pierre and Miquelon - onshore.
+     * Extent: St Pierre and Miquelon - onshore
      * Replaced by RGSPM06 (CRS code 4463).
      */
     public const EPSG_SAINT_PIERRE_ET_MIQUELON_1950 = 'urn:ogc:def:crs:EPSG::4638';
@@ -3838,7 +3836,7 @@ class Geographic2D extends Geographic
 
     /**
      * ShAb07-IRF
-     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / ShAb07 SnakeGrid projected CRS through
      * transformation ETRS89 to ShAb07-IRF (1) (code 10186) used in conjunction with the ShAb07-TM map projection (code
      * 10187).
@@ -3853,21 +3851,21 @@ class Geographic2D extends Geographic
 
     /**
      * Sierra Leone 1924
-     * Extent: Sierra Leone - Freetown Peninsula.
+     * Extent: Sierra Leone - Freetown Peninsula
      * Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet; 1 Gold Coast foot = 0.3047997101815 m.
      */
     public const EPSG_SIERRA_LEONE_1924 = 'urn:ogc:def:crs:EPSG::4174';
 
     /**
      * Sierra Leone 1968
-     * Extent: Sierra Leone - onshore.
+     * Extent: Sierra Leone - onshore
      * Replaces Sierra Leone 1960. The 1968 readjustment coordinates are within 3m of the 1960 provisional adjustment.
      */
     public const EPSG_SIERRA_LEONE_1968 = 'urn:ogc:def:crs:EPSG::4175';
 
     /**
      * Slovenia 1996
-     * Extent: Slovenia - onshore and offshore.
+     * Extent: Slovenia - onshore and offshore
      * Replaces MG! alias D48 (CRS code 4312).
      */
     public const EPSG_SLOVENIA_1996 = 'urn:ogc:def:crs:EPSG::4765';
@@ -3900,14 +3898,14 @@ class Geographic2D extends Geographic
 
     /**
      * St. George Island
-     * Extent: United States (USA) - Alaska - Pribilof Islands - St George Island.
+     * Extent: United States (USA) - Alaska - Pribilof Islands - St George Island
      * Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_ST_GEORGE_ISLAND = 'urn:ogc:def:crs:EPSG::4138';
 
     /**
      * St. Helena Tritan
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Replaced by SHGD2015 (CRS code 7886) from 2015.
      */
     public const EPSG_ST_HELENA_TRITAN = 'urn:ogc:def:crs:EPSG::7881';
@@ -3920,7 +3918,7 @@ class Geographic2D extends Geographic
 
     /**
      * St. Lawrence Island
-     * Extent: United States (USA) - Alaska - St Lawrence Island.
+     * Extent: United States (USA) - Alaska - St Lawrence Island
      * Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_ST_LAWRENCE_ISLAND = 'urn:ogc:def:crs:EPSG::4136';
@@ -3933,7 +3931,7 @@ class Geographic2D extends Geographic
 
     /**
      * St. Paul Island
-     * Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island.
+     * Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island
      * Note: this CRS includes longitudes which are POSITIVE EAST.
      */
     public const EPSG_ST_PAUL_ISLAND = 'urn:ogc:def:crs:EPSG::4137';
@@ -3964,7 +3962,7 @@ class Geographic2D extends Geographic
 
     /**
      * TM65
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Replaced by 1975 Mapping Adjustment alias TM75 (CRS code 4300). Not to be confused with the Geodetic Datum of
      * 1965 (datum code 6300) which is used by TM75.
      */
@@ -3972,7 +3970,7 @@ class Geographic2D extends Geographic
 
     /**
      * TM75
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Uses Geodetic Datum of 1965 which should not be confused with the 1965 adjustment (TM65, datum code 6299 and CRS
      * code 4299). Replaces OSNI52 (CRS code 4188) and TM65 (CRS code 4299). Replaced by IRENET95 (CRS code 4173).
      */
@@ -3981,7 +3979,7 @@ class Geographic2D extends Geographic
     /**
      * TPEN11-IRF
      * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
-     * Bradford and Leeds.
+     * Bradford and Leeds
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / TPEN11 SnakeGrid projected CRS through
      * transformation ETRS89 to TPEN11-IRF (1) (code 9365) used in conjunction with the TPEN11-TM map projection (code
      * 9366).
@@ -3996,7 +3994,7 @@ class Geographic2D extends Geographic
 
     /**
      * TWD67
-     * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.
+     * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands
      * Shares the same origin point with the earlier Hu Tzu Shan system (CRS code 4236) but away from this point
      * coordinates differ. Do not confuse!
      */
@@ -4010,21 +4008,21 @@ class Geographic2D extends Geographic
 
     /**
      * Tahaa 54
-     * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa.
+     * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa
      * Replaced by RGPF, CRS code 4687.
      */
     public const EPSG_TAHAA_54 = 'urn:ogc:def:crs:EPSG::4629';
 
     /**
      * Tahiti 52
-     * Extent: French Polynesia - Society Islands - Moorea and Tahiti.
+     * Extent: French Polynesia - Society Islands - Moorea and Tahiti
      * Replaced by Tahiti 79 (CRS code 4690) in Tahiti and Moorea 87 (CRS code 4691) in Moorea.
      */
     public const EPSG_TAHITI_52 = 'urn:ogc:def:crs:EPSG::4628';
 
     /**
      * Tahiti 79
-     * Extent: French Polynesia - Society Islands - Tahiti.
+     * Extent: French Polynesia - Society Islands - Tahiti
      * Replaces Tahiti 52 (CRS code 4628) in Tahiti. Replaced by RGPF (CRS code 4687).
      */
     public const EPSG_TAHITI_79 = 'urn:ogc:def:crs:EPSG::4690';
@@ -4043,7 +4041,7 @@ class Geographic2D extends Geographic
 
     /**
      * Tapi Aike
-     * Extent: Argentina - Santa Cruz province south of approximately 50°20'S.
+     * Extent: Argentina - Santa Cruz province south of approximately 50°20'S
      * Replaced by Campo Inchauspe (geogCRS code 4221) for topographic mapping, use for oil exploration and production
      * continues.
      */
@@ -4063,7 +4061,7 @@ class Geographic2D extends Geographic
 
     /**
      * Timbalai 1948
-     * Extent: Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore.
+     * Extent: Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore
      * Adopts metric conversion of 39.370147 inches per metre. Replaced by GDM2000 (CRS code 4742) in East Malaysia and
      * by GDBD2009 (CRS code 5247) in Brunei.
      */
@@ -4071,7 +4069,7 @@ class Geographic2D extends Geographic
 
     /**
      * Tokyo
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore.
+     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
      * In Japan, replaces Tokyo 1892 (CRS code 5132) and replaced by JGD2000 (code 4612) from April 2002. In Korea used
      * only for geodetic applications before being replaced by Korean 1985 (code 4162).
      */
@@ -4079,7 +4077,7 @@ class Geographic2D extends Geographic
 
     /**
      * Tokyo 1892
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore.
+     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
      * Extended from Japan to Korea in 1898. In Japan, replaced by Tokyo 1918 (CRS code 4301). In South Korea replaced
      * by Tokyo 1918 only for geodetic applications; for all other purposes replaced by Korean 1985 (code 4162).
      */
@@ -4100,21 +4098,21 @@ class Geographic2D extends Geographic
 
     /**
      * UCS-2000
-     * Extent: Ukraine - onshore and offshore.
+     * Extent: Ukraine - onshore and offshore
      * Adopted 1st January 2007, replacing Pulkovo 1942 (CRS 4284).
      */
     public const EPSG_UCS_2000 = 'urn:ogc:def:crs:EPSG::5561';
 
     /**
      * VN-2000
-     * Extent: Vietnam - onshore.
+     * Extent: Vietnam - onshore
      * Replaces Hanoi 1972 (CRS code 4147).
      */
     public const EPSG_VN_2000 = 'urn:ogc:def:crs:EPSG::4756';
 
     /**
      * Vanua Levu 1915
-     * Extent: Fiji - Vanua Levu and Taveuni.
+     * Extent: Fiji - Vanua Levu and Taveuni
      * For topographic mapping, replaced by Fiji 1956 (CRS code 4721). For other purposes, replaced by Fiji 1986 (CRS
      * code 4720).
      */
@@ -4122,14 +4120,14 @@ class Geographic2D extends Geographic
 
     /**
      * Vientiane 1982
-     * Extent: Laos.
+     * Extent: Laos
      * Replaced by Lao 1993 and then by Lao 1997. Vientiane 1982 coordinate values are within 3m of Lao 1997 values.
      */
     public const EPSG_VIENTIANE_1982 = 'urn:ogc:def:crs:EPSG::4676';
 
     /**
      * Viti Levu 1912
-     * Extent: Fiji - Viti Levu island.
+     * Extent: Fiji - Viti Levu island
      * For topographic mapping, replaced by Fiji 1956 (CRS code 4721). For other purposes, replaced by Fiji 1986 (CRS
      * code 4720).
      */
@@ -4137,7 +4135,7 @@ class Geographic2D extends Geographic
 
     /**
      * Voirol 1875
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * The appropriate usage of CRSs using the Voirol 1875 and 1879 datums is lost in antiquity. They differ by about 9
      * metres. Oil industry references to one could in reality be to either. All replaced by Nord Sahara 1959 (CRS code
      * 4307).
@@ -4146,7 +4144,7 @@ class Geographic2D extends Geographic
 
     /**
      * Voirol 1875 (Paris)
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * The appropriate usage of CRSs using the Voirol 1875 and 1879 datums is lost in antiquity. They differ by about 9
      * metres. Oil industry references to one could in reality be to either. All replaced by Nord Sahara 1959 (CRS code
      * 4307).
@@ -4155,7 +4153,7 @@ class Geographic2D extends Geographic
 
     /**
      * Voirol 1879
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * The appropriate usage of CRSs using the Voirol 1875 and 1879 datums is lost in antiquity. They differ by about 9
      * metres. Oil industry references to one could in reality be to either. All replaced by Nord Sahara 1959 (CRS code
      * 4307).
@@ -4164,7 +4162,7 @@ class Geographic2D extends Geographic
 
     /**
      * Voirol 1879 (Paris)
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * The appropriate usage of CRSs using the Voirol 1875 and 1879 datums is lost in antiquity. They differ by about 9
      * metres. Oil industry references to one could in reality be to either. All replaced by Nord Sahara 1959 (CRS code
      * 4307).
@@ -4173,21 +4171,21 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 66
-     * Extent: World.
+     * Extent: World
      * Replaced by WGS 72.
      */
     public const EPSG_WGS_66 = 'urn:ogc:def:crs:EPSG::4760';
 
     /**
      * WGS 72
-     * Extent: World.
+     * Extent: World
      * Replaced by WGS 84.
      */
     public const EPSG_WGS_72 = 'urn:ogc:def:crs:EPSG::4322';
 
     /**
      * WGS 72BE
-     * Extent: World.
+     * Extent: World
      * Broadcast ephemeris. Replaced by WGS 84.
      */
     public const EPSG_WGS_72BE = 'urn:ogc:def:crs:EPSG::4324';
@@ -4200,7 +4198,7 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 84 (G1150)
-     * Extent: World.
+     * Extent: World
      * Replaces WGS 84 (G873) (CRS code 9054) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 9056) from
      * 2012-02-08.
      */
@@ -4208,7 +4206,7 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 84 (G1674)
-     * Extent: World.
+     * Extent: World
      * Replaces WGS 84 (G1150) (CRS code 9055) from 2012-02-08. Replaced by WGS 84 (G1762) (CRS code 9057) from
      * 2013-10-16.
      */
@@ -4216,7 +4214,7 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 84 (G1762)
-     * Extent: World.
+     * Extent: World
      * Replaces WGS 84 (G1674) (CRS code 9056) from 2013-10-16. Redesignated WGS 84 (G1762') in 2015 after changes to 7
      * NGA tracking station locations and antennas. Replaced by WGS 84 (G2139) (CRS code 9755) from 2021-01-03.
      */
@@ -4224,14 +4222,14 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 84 (G2139)
-     * Extent: World.
+     * Extent: World
      * Replaces WGS 84 (G1762) (CRS code 9057) from 2021-01-03.
      */
     public const EPSG_WGS_84_G2139 = 'urn:ogc:def:crs:EPSG::9755';
 
     /**
      * WGS 84 (G730)
-     * Extent: World.
+     * Extent: World
      * Replaces WGS 84 (Transit) (CRS code 8888) from 1994-06-29. Replaced by WGS84 (G873) (CRS code 9054) from
      * 1997-01-29.
      */
@@ -4239,7 +4237,7 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 84 (G873)
-     * Extent: World.
+     * Extent: World
      * Replaces WGS 84 (G730) (CRS code 9053) from 1997-01-29. Replaced by WGS 84 (G1150) (CRS code 9055) from
      * 2002-01-20.
      */
@@ -4247,7 +4245,7 @@ class Geographic2D extends Geographic
 
     /**
      * WGS 84 (Transit)
-     * Extent: World.
+     * Extent: World
      * Replaced by WGS84 (G730) (CRS code 9053) from 1994-06-29.
      */
     public const EPSG_WGS_84_TRANSIT = 'urn:ogc:def:crs:EPSG::8888';
@@ -4260,14 +4258,14 @@ class Geographic2D extends Geographic
 
     /**
      * Xian 1980
-     * Extent: China - onshore.
+     * Extent: China - onshore
      * Replaces Beijing 1954 (CRS code 4214). Replaced by CGCS2000(CRS code 4490).
      */
     public const EPSG_XIAN_1980 = 'urn:ogc:def:crs:EPSG::4610';
 
     /**
      * Yacare
-     * Extent: Uruguay - onshore.
+     * Extent: Uruguay - onshore
      * Replaced by SIRGAS-ROU98 (CRS code 5381).
      */
     public const EPSG_YACARE = 'urn:ogc:def:crs:EPSG::4309';
@@ -4286,14 +4284,14 @@ class Geographic2D extends Geographic
 
     /**
      * Zanderij
-     * Extent: Suriname - onshore and offshore.
+     * Extent: Suriname - onshore and offshore
      * Introduced in 1975.
      */
     public const EPSG_ZANDERIJ = 'urn:ogc:def:crs:EPSG::4311';
 
     /**
      * Fk89
-     * Extent: Faroe Islands - onshore.
+     * Extent: Faroe Islands - onshore
      * Replaces FD54 (CRS code 4741). Coordinate differences are less than 0.05 seconds (2m). The name of this system
      * is also used for the dependent projected CRS - see CRS code 3173.
      */

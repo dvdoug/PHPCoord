@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3830",
+    "title": "South America/South America - 84°W to 78°W, N hemisphere and SAD69 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-80.17820739746092, 0], [-78, 0], [-78, 2.697473526000977], [-80.17820739746092, 2.697473526000977], [-80.17820739746092, 0]
+        ]
+    ]
+}

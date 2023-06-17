@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3834",
+    "title": "South America/South America - 72°W to 66°W, N hemisphere onshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-72, 0], [-66, 0], [-66, 12.51333427429199], [-72, 12.51333427429199], [-72, 0]
+        ]
+    ]
+}

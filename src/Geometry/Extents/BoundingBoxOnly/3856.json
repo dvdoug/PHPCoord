@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3856",
+    "title": "Antarctic/Antarctica - Ross Ice Shelf Region",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [150, -90], [210, -90], [210, -76], [150, -76], [150, -90]
+        ]
+    ]
+}

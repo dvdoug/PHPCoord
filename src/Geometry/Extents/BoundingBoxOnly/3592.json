@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3592",
+    "title": "Antarctic/Antarctica - Darwin Glacier region",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [145, -81], [169, -81], [169, -76], [145, -76], [145, -81]
+        ]
+    ]
+}

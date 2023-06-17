@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3040",
+    "title": "Antarctic/Antarctica - 72°S to 76°S, 54°E to 72°E (SS40-42)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [54, -76], [72, -76], [72, -72], [54, -72], [54, -76]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2325",
+    "title": "South America/Argentina - Neuquen province Auca Mahuida area",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-69.49999999999994, -38.74999999999994], [-68.25, -38.74999999999994], [-68.25, -37.5], [-69.49999999999994, -37.5], [-69.49999999999994, -38.74999999999994]
+        ]
+    ]
+}

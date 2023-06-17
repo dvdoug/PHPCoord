@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3460",
+    "title": "North America/Greenland - 12°W to 6°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-12, 72.43988391895797], [-6, 72.43988391895797], [-6, 84], [-12, 84], [-12, 72.43988391895797]
+        ]
+    ]
+}

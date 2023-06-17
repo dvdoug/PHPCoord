@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3867",
+    "title": "North America/North America - 138°W to 132°W and NAD83 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-138, 48.06562160476247], [-132, 48.06562160476247], [-132, 79.41717084388002], [-138, 79.41717084388002], [-138, 48.06562160476247]
+        ]
+    ]
+}

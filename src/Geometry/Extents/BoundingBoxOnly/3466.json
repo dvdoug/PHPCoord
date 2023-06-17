@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3466",
+    "title": "Asia-ExFSU/China - Ordos basin",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [107, 35], [110.00709632, 35], [110.00709632, 39], [107, 39], [107, 35]
+        ]
+    ]
+}

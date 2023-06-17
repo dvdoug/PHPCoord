@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4686",
+    "title": "Europe-FSU/UK - Dovey Junction to Pwllheli",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-4.5, 52.45], [-3.8, 52.45], [-3.8, 53.00000000000017], [-4.5, 53.00000000000017], [-4.5, 52.45]
+        ]
+    ]
+}

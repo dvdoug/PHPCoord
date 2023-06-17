@@ -8,16 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\Geometry;
 
+use Composer\InstalledVersions;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\Datum\Datum;
-use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2157;
-use PHPCoord\Geometry\Extents\BoundingBoxOnly\Extent2706;
-use PHPCoord\Geometry\Extents\Extent1275;
-use PHPCoord\Geometry\Extents\Extent3914;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPUnit\Framework\TestCase;
-
-use function class_exists;
 
 class BoundingAreaTest extends TestCase
 {
@@ -33,17 +28,17 @@ class BoundingAreaTest extends TestCase
 
     public function testGB(): void
     {
-        $polygon = BoundingArea::createFromArray(
+        $polygon = BoundingArea::createFromPolygons(
             [
-                [
-                    [
-                        [-9, 49.75],
-                        [-9, 61.01],
-                        [2.01, 61.01],
-                        [2.01, 49.75],
-                        [-9, 49.75],
-                    ],
-                ],
+                new Polygon(
+                    new LinearRing(
+                        new Position(-9, 49.75),
+                        new Position(-9, 61.01),
+                        new Position(2.01, 61.01),
+                        new Position(2.01, 49.75),
+                        new Position(-9, 49.75),
+                    ),
+                ),
           ],
             RegionMap::REGION_EUROPE
         );
@@ -57,17 +52,17 @@ class BoundingAreaTest extends TestCase
 
     public function testNZ(): void
     {
-        $polygon = BoundingArea::createFromArray(
+        $polygon = BoundingArea::createFromPolygons(
             [
-                [
-                    [
-                        [160.6, -55.95],
-                        [188.8, -55.95],
-                        [188.8, -25.88],
-                        [160.6, -25.88],
-                        [160.6, -55.95],
-                    ],
-                ],
+                new Polygon(
+                    new LinearRing(
+                        new Position(160.6, -55.95),
+                        new Position(188.8, -55.95),
+                        new Position(188.8, -25.88),
+                        new Position(160.6, -25.88),
+                        new Position(160.6, -55.95),
+                    ),
+                ),
             ],
             RegionMap::REGION_OCEANIA
         );
@@ -82,7 +77,7 @@ class BoundingAreaTest extends TestCase
     public function testPolygonWithHole(): void
     {
         $this->markTestSkipped();
-        $polygon = BoundingArea::createFromArray((new Extent3914())(), RegionMap::REGION_GLOBAL);
+        $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::3914']);
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(41), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.8), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
@@ -91,22 +86,22 @@ class BoundingAreaTest extends TestCase
 
     public function testAreaCrossesNegativeAntimeridian(): void
     {
-        $polygon = BoundingArea::createFromArray((new Extent2157())(), RegionMap::REGION_NORTHAMERICA);
+        $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::2157']);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(52.5), new Degree(-186.5), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(52.5), new Degree(173.5), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
 
     public function testAreaCrossesPositiveAntimeridian(): void
     {
-        $polygon = BoundingArea::createFromArray((new Extent2706())(), RegionMap::REGION_EUROPE);
-        self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(65), new Degree(181), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
-        self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(65), new Degree(-179), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
+        $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::2706']);
+        self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(66), new Degree(181), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
+        self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(66), new Degree(-179), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
 
     public function testNetherlandsBufferedCorrectly(): void
     {
-        if (class_exists(Extent1275::class)) {
-            $polygon = BoundingArea::createFromArray((new Extent1275())(), RegionMap::REGION_EUROPE);
+        if (InstalledVersions::isInstalled(RegionMap::PACKAGES[RegionMap::REGION_EUROPE])) {
+            $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::1275']);
             self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50.965613067768), new Degree(5.8249181759236), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         }
     }

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3795",
+    "title": "Australasia and Oceania/New Zealand - South Island - Lindis Peak mc",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [168.6224215799999, -45.39688749], [170.2373536799999, -45.39688749], [170.2373536799999, -43.71951249], [168.6224215799999, -43.71951249], [168.6224215799999, -45.39688749]
+        ]
+    ]
+}

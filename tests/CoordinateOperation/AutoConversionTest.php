@@ -37,6 +37,7 @@ use function class_exists;
 use function explode;
 use function fgetcsv;
 use function fopen;
+use function array_map;
 
 class AutoConversionTest extends TestCase
 {
@@ -607,7 +608,7 @@ class AutoConversionTest extends TestCase
 
         $dataFile = fopen(__DIR__ . '/EPSGConcatenatedOperations.csv', 'rb');
         while ($data = fgetcsv($dataFile)) {
-            $toTest[$data[0] . ':' . $data[1]] = [$data[2], $data[3], array_unique(explode('|', $data[4])), (bool) $data[5]];
+            $toTest[$data[0] . ':' . $data[1]] = [$data[2], $data[3], array_map(fn (string $code) => 'urn:ogc:def:area:EPSG::' . $code, array_unique(explode('|', $data[4]))), (bool) $data[5]];
         }
 
         return $toTest;

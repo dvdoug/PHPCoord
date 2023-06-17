@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4444",
+    "title": "Australasia and Oceania/Australia - Western Australia - Kalbarri",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [113.9, -28.5], [114.75, -28.5], [114.75, -27.16666666666666], [113.9, -27.16666666666666], [113.9, -28.5]
+        ]
+    ]
+}

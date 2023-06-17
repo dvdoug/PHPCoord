@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3081",
+    "title": "Antarctic/Antarctica - Transantarctic mountains north of 80°S",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [149.8366592084352, -80], [174.0042691683424, -80], [174.0042691683424, -68.60756062695388], [149.8366592084352, -68.60756062695388], [149.8366592084352, -80]
+        ]
+    ]
+}

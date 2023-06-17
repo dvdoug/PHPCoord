@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4442",
+    "title": "Australasia and Oceania/Australia - Western Australia - Carnarvon",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [113.3333333333333, -25.5], [114, -25.5], [114, -23], [113.3333333333333, -23], [113.3333333333333, -25.5]
+        ]
+    ]
+}

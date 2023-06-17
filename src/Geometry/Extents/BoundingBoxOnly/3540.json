@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3540",
+    "title": "North America/Canada - Alberta - west of 118.5°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-120, 52.88435745239257], [-118.5, 52.88435745239257], [-118.5, 60], [-120, 60], [-120, 52.88435745239257]
+        ]
+    ]
+}

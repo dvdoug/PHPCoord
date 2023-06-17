@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1834",
+    "title": "South America/South America - 54°W to 48°W, S hemisphere",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-54, -39.94895935058593], [-48, -39.94895935058593], [-48, 0], [-54, 0], [-54, -39.94895935058593]
+        ]
+    ]
+}

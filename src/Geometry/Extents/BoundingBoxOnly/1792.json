@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1792",
+    "title": "Europe-FSU/Europe - 12°E to 18°E onshore and S-42(58) by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [12, 45.78388214111328], [18, 45.78388214111328], [18, 54.88165306480841], [12, 54.88165306480841], [12, 45.78388214111328]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4681",
+    "title": "Europe-FSU/UK - Didcot to Banbury",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-1.45, 51.57916667000006], [-1.15, 51.57916667000006], [-1.15, 52.1], [-1.45, 52.1], [-1.45, 51.57916667000006]
+        ]
+    ]
+}

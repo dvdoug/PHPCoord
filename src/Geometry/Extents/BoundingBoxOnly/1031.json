@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1031",
+    "title": "Antarctic/Antarctica",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-180, -90], [180, -90], [180, -60], [-180, -60], [-180, -90]
+        ]
+    ]
+}

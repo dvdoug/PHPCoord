@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2997",
+    "title": "Antarctic/Antarctica - 64°S to 68°S, 36°E to 48°E (SQ37-38)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [36, -68], [48, -68], [48, -64], [36, -64], [36, -68]
+        ]
+    ]
+}

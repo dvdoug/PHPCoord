@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3122",
+    "title": "Australasia and Oceania/French Polynesia - 144°W to 138°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-144, -31.23619091299969], [-138, -31.23619091299969], [-138, -4.526477887999704], [-144, -4.526477887999704], [-144, -31.23619091299969]
+        ]
+    ]
+}

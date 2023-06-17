@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4438",
+    "title": "Australasia and Oceania/Australia - Western Australia - Barrow",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [114.9, -22.19999999999999], [115.5833333333333, -22.19999999999999], [115.5833333333333, -20.21666666666666], [114.9, -20.21666666666666], [114.9, -22.19999999999999]
+        ]
+    ]
+}

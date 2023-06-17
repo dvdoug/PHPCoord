@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3632",
+    "title": "Europe-FSU/Denmark - onshore Jutland east of 9°E and Funen",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [9, 54.67507534571819], [11.28839974272835, 54.67507534571819], [11.28839974272835, 57.79587254958823], [9, 57.79587254958823], [9, 54.67507534571819]
+        ]
+    ]
+}

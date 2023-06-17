@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3991",
+    "title": "Asia-ExFSU/Indonesia - 132°E to 138°E, S hemisphere onshore",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [132, -8.485385141295069], [138, -8.485385141295069], [138, -0.294183457485815], [132, -0.294183457485815], [132, -8.485385141295069]
+        ]
+    ]
+}

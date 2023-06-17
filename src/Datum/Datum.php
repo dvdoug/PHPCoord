@@ -21,7 +21,7 @@ class Datum
     /**
      * AIOC 1995
      * Type: Vertical
-     * Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal.
+     * Extent: Azerbaijan - Caspian offshore and onshore Sangachal terminal
      * Average level of Caspian Sea at the Oil Rocks tide gauge June-September 1995.
      * AIOC 1995 datum is 1.7m above Caspian datum and 26.3m below Baltic datum.
      */
@@ -30,7 +30,7 @@ class Datum
     /**
      * AbInvA96_2020 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.
+     * Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness
      * Defined through the application of the AbInvA96_2000 NTv2 transformation (code 9386) to ETRS89 as realized
      * through OSNet v2009 CORS.
      * Created in 2020 to support intermediate CRS "AbInvA96_2020-IRF" in the emulation of the AbInvA96_2020 Snake map
@@ -41,7 +41,7 @@ class Datum
     /**
      * Abidjan 1987
      * Type: Geodetic
-     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore.
+     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore
      * Fundamental point: Abidjan I. Latitude: 5°18'51.01"N, longitude: 4°02'06.04"W (of Greenwich).
      */
     public const EPSG_ABIDJAN_1987 = 'urn:ogc:def:datum:EPSG::6143';
@@ -49,7 +49,7 @@ class Datum
     /**
      * Accra
      * Type: Geodetic
-     * Extent: Ghana - onshore and offshore.
+     * Extent: Ghana - onshore and offshore
      * Fundamental point: GCS Station 547. Latitude: 5°23'43.3"N, longitude: 0°11'52.3"W (of Greenwich).
      * Replaced in 1978 by Leigon datum (code 6250).
      */
@@ -65,7 +65,7 @@ class Datum
     /**
      * Adindan
      * Type: Geodetic
-     * Extent: Eritrea; Ethiopia; South Sudan; Sudan.
+     * Extent: Eritrea; Ethiopia; South Sudan; Sudan
      * Fundamental point: Station 15; Adindan. Latitude: 22°10'07.110"N, longitude: 31°29'21.608"E (of Greenwich).
      * The 12th parallel traverse of 1966-70 (Point 58 datum, code 6620) is connected to the Blue Nile 1958 network in
      * western Sudan. This has given rise to misconceptions that the Blue Nile network is used in west Africa.
@@ -89,7 +89,7 @@ class Datum
     /**
      * Ain el Abd 1970
      * Type: Geodetic
-     * Extent: Bahrain, Kuwait and Saudi Arabia - onshore.
+     * Extent: Bahrain, Kuwait and Saudi Arabia - onshore
      * Fundamental point: Ain El Abd.  Latitude: 28°14'06.171"N, longitude: 48°16'20.906"E (of Greenwich).
      */
     public const EPSG_AIN_EL_ABD_1970 = 'urn:ogc:def:datum:EPSG::6204';
@@ -104,7 +104,7 @@ class Datum
     /**
      * Alicante
      * Type: Vertical
-     * Extent: Gibraltar - onshore; Spain - mainland onshore.
+     * Extent: Gibraltar - onshore; Spain - mainland onshore
      * Mean Sea Level at Alicante between 1870 and 1872.
      * Orthometric heights.
      */
@@ -113,7 +113,7 @@ class Datum
     /**
      * American Samoa 1962
      * Type: Geodetic
-     * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega and Ta'u islands.
+     * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega and Ta'u islands
      * Fundamental point: Betty 13 eccentric. Latitude: 14°20'08.34"S, longitude: 170°42'52.25"W (of Greenwich).
      */
     public const EPSG_AMERICAN_SAMOA_1962 = 'urn:ogc:def:datum:EPSG::6169';
@@ -121,7 +121,7 @@ class Datum
     /**
      * American Samoa Vertical Datum of 2002
      * Type: Vertical
-     * Extent: American Samoa - Tutuila island.
+     * Extent: American Samoa - Tutuila island
      * Mean sea level at Pago Pago harbor, Tutuila. Benchmark 1770000 S TIDAL = 1.364m relative to National Tidal Datum
      * Epoch 1983-2001.
      * Replaces Tutuila vertical datum of 1962 (datum code 1121). Replaced by Pago Pago local tidal datum (datum code
@@ -132,7 +132,7 @@ class Datum
     /**
      * Amersfoort
      * Type: Geodetic
-     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
+     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone
      * Originally defined through fundamental point Amersfoort, latitude 52°09'22.178"N, longitude 5°23'15.478"E (of
      * Greenwich). Since 2000-10-01 has been redefined as derived from ETRS89 by application of the official
      * transformation RDNAPTRANS(TM).
@@ -149,7 +149,7 @@ class Datum
     /**
      * Ancienne Triangulation Francaise (Paris)
      * Type: Geodetic
-     * Extent: France - mainland onshore.
+     * Extent: France - mainland onshore
      * Uses the RGS value for the Paris meridian. In Alsace, data suspected to be transformation of German network into
      * ATF. Replaced by Nouvelle Triangulation Francaise (Paris) (code 6807) which uses the 1936 IGN value for the
      * Paris meridian.
@@ -159,7 +159,7 @@ class Datum
     /**
      * Anguilla 1957
      * Type: Geodetic
-     * Extent: Anguilla - onshore.
+     * Extent: Anguilla - onshore
      * Fundamental point: station A4, Police.
      */
     public const EPSG_ANGUILLA_1957 = 'urn:ogc:def:datum:EPSG::6600';
@@ -167,7 +167,7 @@ class Datum
     /**
      * Antalya
      * Type: Vertical
-     * Extent: Türkiye (Turkey) - onshore.
+     * Extent: Türkiye (Turkey) - onshore
      * Mean sea Level at Antalya 1936-71.
      * Orthometric heights.
      */
@@ -176,7 +176,7 @@ class Datum
     /**
      * Antigua 1943
      * Type: Geodetic
-     * Extent: Antigua island - onshore.
+     * Extent: Antigua island - onshore
      * Fundamental point: station A14.
      */
     public const EPSG_ANTIGUA_1943 = 'urn:ogc:def:datum:EPSG::6601';
@@ -191,7 +191,7 @@ class Datum
     /**
      * Arc 1950
      * Type: Geodetic
-     * Extent: Botswana; Malawi; Zambia; Zimbabwe.
+     * Extent: Botswana; Malawi; Zambia; Zimbabwe
      * Fundamental point: Buffelsfontein. Latitude: 33°59'32.000"S, longitude: 25°30'44.622"E (of Greenwich).
      */
     public const EPSG_ARC_1950 = 'urn:ogc:def:datum:EPSG::6209';
@@ -199,7 +199,7 @@ class Datum
     /**
      * Arc 1960
      * Type: Geodetic
-     * Extent: Burundi, Kenya, Rwanda, Tanzania and Uganda.
+     * Extent: Burundi, Kenya, Rwanda, Tanzania and Uganda
      * Fundamental point: Buffelsfontein. Latitude: 33°59'32.000"S, longitude: 25°30'44.622"E (of Greenwich).
      */
     public const EPSG_ARC_1960 = 'urn:ogc:def:datum:EPSG::6210';
@@ -214,7 +214,7 @@ class Datum
     /**
      * Astro DOS 71
      * Type: Geodetic
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Fundamental point: DOS 71/4, Ladder Hill Fort, latitude: 15°55'30"S, longitude: 5°43'25"W (of Greenwich).
      */
     public const EPSG_ASTRO_DOS_71 = 'urn:ogc:def:datum:EPSG::6710';
@@ -222,7 +222,7 @@ class Datum
     /**
      * Auckland 1946
      * Type: Vertical
-     * Extent: New Zealand - North Island - Auckland vertical CRS area.
+     * Extent: New Zealand - North Island - Auckland vertical CRS area
      * MSL at Auckland harbour 1909-1923.
      */
     public const EPSG_AUCKLAND_1946 = 'urn:ogc:def:datum:EPSG::5157';
@@ -237,7 +237,7 @@ class Datum
     /**
      * Australian Geodetic Datum 1966
      * Type: Geodetic
-     * Extent: Australia - onshore and offshore. Papua New Guinea - onshore.
+     * Extent: Australia - onshore and offshore. Papua New Guinea - onshore
      * Fundamental point: Johnson Memorial Cairn. Latitude: 25°56'54.5515"S, longitude: 133°12'30.0771"E (of
      * Greenwich).
      */
@@ -246,7 +246,7 @@ class Datum
     /**
      * Australian Geodetic Datum 1984
      * Type: Geodetic
-     * Extent: Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E.
+     * Extent: Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E
      * Fundamental point: Johnson Memorial Cairn. Latitude: 25°56'54.5515"S, longitude: 133°12'30.0771"E (of
      * Greenwich).
      * Uses all data from 1966 adjustment with additional observations, improved software and a geoid model.
@@ -258,7 +258,7 @@ class Datum
      * Type: Vertical
      * Extent: Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South
      * Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling
-     * Islands - onshore.
+     * Islands - onshore
      * Mainland: MSL 1966-68 at 30 gauges around coast. Tasmania: MSL 1972 at Hobart and Burnie. Christmas Island: MSL
      * (details unspecified). Cocos and Keeling Islands: MSL (details unspecified).
      * Normal-orthometric heights. Initially defined for mainland only, with independent height datums for Australian
@@ -270,7 +270,7 @@ class Datum
     /**
      * Australian Height Datum (Tasmania)
      * Type: Vertical
-     * Extent: Australia - Tasmania mainland - onshore.
+     * Extent: Australia - Tasmania mainland - onshore
      * MSL 1972 at Hobart and Burnie.
      */
     public const EPSG_AUSTRALIAN_HEIGHT_DATUM_TASMANIA = 'urn:ogc:def:datum:EPSG::5112';
@@ -279,7 +279,7 @@ class Datum
      * Australian Terrestrial Reference Frame 2014
      * Type: Dynamic geodetic
      * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
-     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
      * ITRF2014 at epoch 2020.0.
      * Densification of ITRF2014 in the Australian region.
      */
@@ -289,7 +289,7 @@ class Datum
      * Australian Vertical Working Surface
      * Type: Vertical
      * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
-     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
      * Realized by the Australian gravimetric quasi-geoid (AGQG).
      * Normal heights. Extends gravity-related heights to offshore. See AHD (datum code 5111) for cadastral survey or
      * local engineering survey including construction or mining.
@@ -300,7 +300,7 @@ class Datum
      * Autonomous Regions of Portugal 2008
      * Type: Geodetic
      * Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao
-     * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.
+     * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens
      * ITRF93 as derived from the 1994 TransAtlantic Network for Geodynamics and Oceanography (TANGO) project.
      * Replaces older classical datums for Azores and Madeira archipelagos.
      */
@@ -309,7 +309,7 @@ class Datum
     /**
      * Average Terrestrial System 1977
      * Type: Geodetic
-     * Extent: Canada - New Brunswick; Nova Scotia; Prince Edward Island.
+     * Extent: Canada - New Brunswick; Nova Scotia; Prince Edward Island
      * In use from 1979. To be phased out in late 1990's.
      */
     public const EPSG_AVERAGE_TERRESTRIAL_SYSTEM_1977 = 'urn:ogc:def:datum:EPSG::6122';
@@ -317,7 +317,7 @@ class Datum
     /**
      * Ayabelle Lighthouse
      * Type: Geodetic
-     * Extent: Djibouti - onshore and offshore.
+     * Extent: Djibouti - onshore and offshore
      * Fundamental point: Ayabelle Lighthouse.
      */
     public const EPSG_AYABELLE_LIGHTHOUSE = 'urn:ogc:def:datum:EPSG::6713';
@@ -325,7 +325,7 @@ class Datum
     /**
      * Azores Central Islands 1948
      * Type: Geodetic
-     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.
+     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira
      * Fundamental point: Graciosa south west base. Latitude: 39°03'54.934"N, longitude: 28°02'23.882"W (of
      * Greenwich).
      * Replaced by 1995 adjustment (datum code 6665).
@@ -335,7 +335,7 @@ class Datum
     /**
      * Azores Central Islands 1995
      * Type: Geodetic
-     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.
+     * Extent: Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira
      * Fundamental point: Graciosa south west base. Origin and orientation constrained to those of the 1948 adjustment.
      * Classical and GPS observations. Replaces 1948 adjustment (datum code 6183).
      */
@@ -344,7 +344,7 @@ class Datum
     /**
      * Azores Occidental Islands 1939
      * Type: Geodetic
-     * Extent: Portugal - western Azores onshore - Flores, Corvo.
+     * Extent: Portugal - western Azores onshore - Flores, Corvo
      * Fundamental point: Observatario Meteorologico Flores.
      */
     public const EPSG_AZORES_OCCIDENTAL_ISLANDS_1939 = 'urn:ogc:def:datum:EPSG::6182';
@@ -352,7 +352,7 @@ class Datum
     /**
      * Azores Oriental Islands 1940
      * Type: Geodetic
-     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.
+     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas
      * Fundamental point: Forte de São Bras.
      * Replaced by 1995 adjustment (datum code 6664).
      */
@@ -361,7 +361,7 @@ class Datum
     /**
      * Azores Oriental Islands 1995
      * Type: Geodetic
-     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.
+     * Extent: Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas
      * Fundamental point: Forte de São Bras. Origin and orientation constrained to those of the 1940 adjustment.
      * Classical and GPS observations. Replaces 1940 adjustment (datum code 6184).
      */
@@ -370,7 +370,7 @@ class Datum
     /**
      * BH_ETRS89
      * Type: Geodetic
-     * Extent: Bosnia and Herzegovina.
+     * Extent: Bosnia and Herzegovina
      * Densification of ETRF2000 in Bosnia and Herzegovina at epoch 2011.307.
      * ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 stations of the GNSS active FBiHPOS
      * network in conjunction with 17 stations of the Serbia SRPOS network.
@@ -380,7 +380,7 @@ class Datum
     /**
      * Baltic 1957
      * Type: Vertical
-     * Extent: Czechia; Slovakia.
+     * Extent: Czechia; Slovakia
      * Datum: average water level at Kronstadt 1833. Network adjusted in 1957 as Uniform Precise Leveling Network of
      * Eastern Europe (EPNN).
      * Uses Normal heights.
@@ -392,7 +392,7 @@ class Datum
      * Type: Vertical
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
-     * onshore; Uzbekistan.
+     * onshore; Uzbekistan
      * Datum: average water level at Kronstadt 1833. Network adjusted in 1974-78 as Uniform Precise Leveling Network of
      * Eastern Europe (EPNN).
      * Uses Normal heights. Adjustment also included former Czechoslovakia but was not adopted there, the 1957
@@ -403,7 +403,7 @@ class Datum
     /**
      * Baltic 1980
      * Type: Vertical
-     * Extent: Hungary.
+     * Extent: Hungary
      * Uses Normal heights.
      */
     public const EPSG_BALTIC_1980 = 'urn:ogc:def:datum:EPSG::5185';
@@ -411,7 +411,7 @@ class Datum
     /**
      * Baltic 1982
      * Type: Vertical
-     * Extent: Bulgaria - onshore.
+     * Extent: Bulgaria - onshore
      * Network adjusted in 1982. Height at reference point Varna defined as 1958 value from the UPLN adjustment. Datum
      * at Kronstadt is mean sea level of Baltic in 1833.
      * Uses Normal heights.
@@ -421,7 +421,7 @@ class Datum
     /**
      * Baltic 1986
      * Type: Vertical
-     * Extent: Poland - onshore.
+     * Extent: Poland - onshore
      * Mean sea level of Baltic at Kronstadt in 1833. Network adjusted in 1982.
      *
      * Uses Normal heights. Adopted in 1986.
@@ -431,7 +431,7 @@ class Datum
     /**
      * Bandar Abbas
      * Type: Vertical
-     * Extent: Iran - onshore.
+     * Extent: Iran - onshore
      * Average sea level at Bandar Abbas 1995-2001.
      * Replaces Fao (datum code 5149) in Iran.
      */
@@ -440,7 +440,7 @@ class Datum
     /**
      * Barbados 1938
      * Type: Geodetic
-     * Extent: Barbados - onshore.
+     * Extent: Barbados - onshore
      * Fundamental point: HMS Challenger astro station M1, St. Anne's Tower. Latitude 13°04'32.53"N, longitude
      * 59°36'29.34"W (of Greenwich).
      */
@@ -450,7 +450,7 @@ class Datum
      * Batavia
      * Type: Geodetic
      * Extent: Indonesia - Bali, Java and western Sumatra onshore, offshore southern Java Sea, Madura Strait and
-     * western Bali Sea.
+     * western Bali Sea
      * Fundamental point: Longitude at Batavia Astro. Station. Latitude: 6°07'39.522"S, longitude: 106°48'27.790"E
      * (of Greenwich). Latitude and azimuth at Genuk.
      */
@@ -459,7 +459,7 @@ class Datum
     /**
      * Batavia (Jakarta)
      * Type: Geodetic
-     * Extent: Indonesia - onshore - Bali, Java and western Sumatra.
+     * Extent: Indonesia - onshore - Bali, Java and western Sumatra
      * Fundamental point: Longitude at Batavia astronomical station. Latitude: 6°07'39.522"S, longitude: 0°00'00.0"E
      * (of Jakarta). Latitude and azimuth at Genuk.
      */
@@ -475,7 +475,7 @@ class Datum
     /**
      * Beijing 1954
      * Type: Geodetic
-     * Extent: China - onshore and offshore.
+     * Extent: China - onshore and offshore
      * Pulkovo, transferred through Russian triangulation.
      * Scale determined through three baselines in northeast China. Discontinuities at boundaries of adjustment blocks.
      * From 1982 replaced by Xian 1980 and New Beijing.
@@ -492,7 +492,7 @@ class Datum
     /**
      * Belfast Lough
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Mean sea level between 1951 and 1956 at Clarendon Dock, Belfast. Initially realised through levelling network
      * adjustment, from 2002 redefined to be realised through OSGM geoid model.
      * Orthometric heights. Malin Head (datum code 5130) used for 1:50,000 and smaller mapping.
@@ -502,7 +502,7 @@ class Datum
     /**
      * Bellevue
      * Type: Geodetic
-     * Extent: Vanuatu - southern islands - Aneityum, Efate, Erromango and Tanna.
+     * Extent: Vanuatu - southern islands - Aneityum, Efate, Erromango and Tanna
      * Datum covers all the major islands of Vanuatu in two different adjustment blocks, but practical usage is as
      * given in the area of use.
      */
@@ -511,7 +511,7 @@ class Datum
     /**
      * Bermuda 1957
      * Type: Geodetic
-     * Extent: Bermuda - onshore.
+     * Extent: Bermuda - onshore
      * Fundamental point: Fort George base. Latitude 32°22'44.36"N, longitude 64°40'58.11"W (of Greenwich).
      */
     public const EPSG_BERMUDA_1957 = 'urn:ogc:def:datum:EPSG::6216';
@@ -519,7 +519,7 @@ class Datum
     /**
      * Bermuda 2000
      * Type: Geodetic
-     * Extent: Bermuda - onshore and offshore.
+     * Extent: Bermuda - onshore and offshore
      * ITRF96 at epoch 2000.0.
      */
     public const EPSG_BERMUDA_2000 = 'urn:ogc:def:datum:EPSG::6762';
@@ -527,7 +527,7 @@ class Datum
     /**
      * Bern 1938
      * Type: Geodetic
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Fundamental point: Old Bern observatory. Latitude: 46°57'07.890"N, longitude: 7°26'22.335"E (of Greenwich).
      * This redetermination of the coordinates of fundamental point is used for scientific purposes and as the
      * graticule overprinted on topographic maps constructed on the CH1903 / LV03 projected CS (code 21781).
@@ -537,7 +537,7 @@ class Datum
     /**
      * Bhutan National Geodetic Datum
      * Type: Geodetic
-     * Extent: Bhutan.
+     * Extent: Bhutan
      * ITRF2000 at epoch 2003.87.
      */
     public const EPSG_BHUTAN_NATIONAL_GEODETIC_DATUM = 'urn:ogc:def:datum:EPSG::1058';
@@ -559,7 +559,7 @@ class Datum
     /**
      * Black Sea
      * Type: Vertical
-     * Extent: Georgia - onshore and offshore.
+     * Extent: Georgia - onshore and offshore
      * Black Sea datum is 0.4m below Baltic datum.
      */
     public const EPSG_BLACK_SEA = 'urn:ogc:def:datum:EPSG::5134';
@@ -567,7 +567,7 @@ class Datum
     /**
      * Bluff 1955
      * Type: Vertical
-     * Extent: New Zealand - South Island - Bluff vertical CRS area.
+     * Extent: New Zealand - South Island - Bluff vertical CRS area
      * MSL at Invercargill harbour over 8 years between 1918 and 1934.
      */
     public const EPSG_BLUFF_1955 = 'urn:ogc:def:datum:EPSG::5158';
@@ -575,7 +575,7 @@ class Datum
     /**
      * Bogota 1975
      * Type: Geodetic
-     * Extent: Colombia - mainland and offshore Caribbean.
+     * Extent: Colombia - mainland and offshore Caribbean
      * Fundamental point: Bogota observatory. Latitude: 4°35'56.570"N, longitude: 74°04'51.300"W (of Greenwich).
      * Replaces 1951 adjustment. Replaced by MAGNA-SIRGAS (datum code 6685).
      */
@@ -584,7 +584,7 @@ class Datum
     /**
      * Bogota 1975 (Bogota)
      * Type: Geodetic
-     * Extent: Colombia - mainland onshore.
+     * Extent: Colombia - mainland onshore
      * Fundamental point: Bogota observatory. Latitude: 4°35'56.570"N, longitude: 0°E (of Bogota).
      */
     public const EPSG_BOGOTA_1975_BOGOTA = 'urn:ogc:def:datum:EPSG::6802';
@@ -592,7 +592,7 @@ class Datum
     /**
      * Bora Bora SAU 2001
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Bora Bora.
+     * Extent: French Polynesia - Society Islands - Bora Bora
      * Fundamental benchmark: Vaitape quay SHOM benchmark B.
      * Included as part of NGPF - see datum code 5195.
      */
@@ -602,7 +602,7 @@ class Datum
      * British Isles height ensemble
      * Type: Ensemble
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
-     * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
+     * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore
      * Ensemble of 9 independent vertical datums now all defined through OS geoid model OSGM15.
      * Orthometric heights.
      */
@@ -611,7 +611,7 @@ class Datum
     /**
      * Bukit Rimpah
      * Type: Geodetic
-     * Extent: Indonesia - Banga and Belitung Islands.
+     * Extent: Indonesia - Banga and Belitung Islands
      * 2°00'40.16"S, 105°51'39.76"E (of Greenwich).
      */
     public const EPSG_BUKIT_RIMPAH = 'urn:ogc:def:datum:EPSG::6219';
@@ -619,7 +619,7 @@ class Datum
     /**
      * Bulgaria Geodetic System 2005
      * Type: Geodetic
-     * Extent: Bulgaria - onshore and offshore.
+     * Extent: Bulgaria - onshore and offshore
      * Densification of ETRS89 realised through network of 112 permanent GNSS reference stations in ETRF2000@2005.0.
      * Adopted as official Bulgarian reference datum through decree 153 of 2010-07-29.
      */
@@ -628,7 +628,7 @@ class Datum
     /**
      * Bulgarian Height System 2005
      * Type: Vertical
-     * Extent: Bulgaria - onshore.
+     * Extent: Bulgaria - onshore
      * Bulgarian realisation of EVRF2007. EVRF2007 heights of 58 points in Bulgaria held fixed.
      * Uses Normal heights. Adopted as official Bulgarian height reference datum through decree 153 of 2010-07-29.
      */
@@ -637,7 +637,7 @@ class Datum
     /**
      * CH1903
      * Type: Geodetic
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Fundamental point: Old Bern observatory. Latitude: 46°57'08.660"N, longitude: 7°26'22.500"E (of Greenwich).
      */
     public const EPSG_CH1903 = 'urn:ogc:def:datum:EPSG::6149';
@@ -645,7 +645,7 @@ class Datum
     /**
      * CH1903 (Bern)
      * Type: Geodetic
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Fundamental point: Old Bern observatory. Latitude: 46°57'08.660"N, longitude: 0°E (of Bern).
      */
     public const EPSG_CH1903_BERN = 'urn:ogc:def:datum:EPSG::6801';
@@ -653,7 +653,7 @@ class Datum
     /**
      * CH1903+
      * Type: Geodetic
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Fundamental point: Zimmerwald observatory.
      */
     public const EPSG_CH1903_PLUS = 'urn:ogc:def:datum:EPSG::6150';
@@ -661,7 +661,7 @@ class Datum
     /**
      * CNH22 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead
      * Defined through the application of the CNH22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CNH22 Snake map projection.
      */
@@ -670,7 +670,7 @@ class Datum
     /**
      * CR-SIRGAS
      * Type: Geodetic
-     * Extent: Costa Rica - onshore and offshore.
+     * Extent: Costa Rica - onshore and offshore
      * ITRF2008 (IGb08) at epoch 2014.59. Network of 42 GNSS stations of the passive and active reference system.
      * Replaces CR05 from April 2018.
      */
@@ -679,7 +679,7 @@ class Datum
     /**
      * CWS13 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.
+     * Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury
      * Defined through the application of the CWS13 NTv2 transformation (code 10197) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS CWS13-IRF in the emulation of the CWS13 Snake map projection.
@@ -689,7 +689,7 @@ class Datum
     /**
      * Cadastre 1997
      * Type: Geodetic
-     * Extent: Mayotte - onshore.
+     * Extent: Mayotte - onshore
      * Coordinates of 1 station of Combani 1950 adjustment held fixed.
      * Derived by adjustment of GPS-observed network which was constrained to Combani 1950 coordinates of one station.
      */
@@ -698,7 +698,7 @@ class Datum
     /**
      * Cagliari 1956
      * Type: Vertical
-     * Extent: Italy - Sardinia onshore.
+     * Extent: Italy - Sardinia onshore
      * Mean Sea Level at Cagliari 1955-1957.
      * Orthometric heights.
      */
@@ -707,7 +707,7 @@ class Datum
     /**
      * Cais da Figueirinha - Angra do Heroismo
      * Type: Vertical
-     * Extent: Portugal - central Azores - Terceira island onshore.
+     * Extent: Portugal - central Azores - Terceira island onshore
      * Mean Sea Level during 1951 at Cais da Figueirinha - Angra do Heroísmo.
      * Orthometric heights.
      */
@@ -716,7 +716,7 @@ class Datum
     /**
      * Cais da Madalena
      * Type: Vertical
-     * Extent: Portugal - central Azores - Pico island onshore.
+     * Extent: Portugal - central Azores - Pico island onshore
      * Mean Sea Level during 1937 at Cais da Madalena.
      * Orthometric heights.
      */
@@ -725,7 +725,7 @@ class Datum
     /**
      * Cais da Pontinha - Funchal
      * Type: Vertical
-     * Extent: Portugal - Madeira and Desertas islands - onshore.
+     * Extent: Portugal - Madeira and Desertas islands - onshore
      * Mean Sea Level during 1913 at Cais da Pontinha, Funchal.
      * Orthometric heights.
      */
@@ -734,7 +734,7 @@ class Datum
     /**
      * Cais da Vila - Porto Santo
      * Type: Vertical
-     * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore.
+     * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore
      * Mean Sea Level during 1936 at Cais da Vila, Porto Santo.
      * Orthometric heights.
      */
@@ -743,7 +743,7 @@ class Datum
     /**
      * Cais da Vila do Porto
      * Type: Vertical
-     * Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas.
+     * Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas
      * Mean Sea Level during 1965 at Cais da Vila, Porto.
      * Orthometric heights.
      */
@@ -752,7 +752,7 @@ class Datum
     /**
      * Cais das Velas
      * Type: Vertical
-     * Extent: Portugal - central Azores - Sao Jorge island onshore.
+     * Extent: Portugal - central Azores - Sao Jorge island onshore
      * Mean Sea Level during 1937 at Cais das Velas.
      * Orthometric heights.
      */
@@ -761,7 +761,7 @@ class Datum
     /**
      * Camacupa 1948
      * Type: Geodetic
-     * Extent: Angola - Angola proper - onshore and offshore.
+     * Extent: Angola - Angola proper - onshore and offshore
      * Fundamental point: Campo de Aviaçao. Latitude: 12°01'09.070"S, Longitude = 17°27'19.800"E (of Greenwich).
      * Provisional adjustment, replaced in 2015 for onshore use by Camacupa 2015.
      */
@@ -770,7 +770,7 @@ class Datum
     /**
      * Camacupa 2015
      * Type: Geodetic
-     * Extent: Angola - onshore and offshore.
+     * Extent: Angola - onshore and offshore
      * Fundamental point: Campo de Aviaçao. Latitude: 12°01'08.702"S, Longitude = 17°27'19.515"E (of Greenwich).
      * Second adjustment. Not used for offshore oil and gas exploration and production.
      */
@@ -786,7 +786,7 @@ class Datum
     /**
      * Campo Inchauspe
      * Type: Geodetic
-     * Extent: Argentina - mainland onshore and Atlantic offshore Tierra del Fuego.
+     * Extent: Argentina - mainland onshore and Atlantic offshore Tierra del Fuego
      * Fundamental point: Campo Inchauspe. Latitude: 35°58'16.56"S, longitude: 62°10'12.03"W (of Greenwich).
      */
     public const EPSG_CAMPO_INCHAUSPE = 'urn:ogc:def:datum:EPSG::6221';
@@ -797,7 +797,7 @@ class Datum
      * Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest
      * Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of
      * 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N;
-     * Yukon.
+     * Yukon
      * Based on the mean sea level determined from several tidal gauges located in strategic areas of the country.
      * From November 2013 replaced by CGVD2013 (datum code 1127).
      */
@@ -808,7 +808,7 @@ class Datum
      * Type: Vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
      * sea level for North America, realized through the Canadian gravimetric geoid (CGG) 2013 at epoch 2010.0.
      * Replaces CGVD28 from November 2013. Replaced by CGVD2013(CGG2013a) epoch 2010 from December 2015, supplemented
@@ -822,7 +822,7 @@ class Datum
      * Type: Vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
      * sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 1997.0.
      * CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to
@@ -836,7 +836,7 @@ class Datum
      * Type: Vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
      * sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 2002.
      * CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to
@@ -850,7 +850,7 @@ class Datum
      * Type: Vertical
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean
      * sea level for North America, realized through CGG2013a at epoch 2010.0. Geoid velocity defined as zero with
      * respect to NAD83(CSRS).
@@ -863,7 +863,7 @@ class Datum
     /**
      * Cape
      * Type: Geodetic
-     * Extent: Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland.
+     * Extent: Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland
      * Fundamental point: Buffelsfontein. Latitude: 33°59'32.000"S, longitude: 25°30'44.622"E (of Greenwich).
      */
     public const EPSG_CAPE = 'urn:ogc:def:datum:EPSG::6222';
@@ -871,7 +871,7 @@ class Datum
     /**
      * Cape Canaveral
      * Type: Geodetic
-     * Extent: North America - onshore - Bahamas and USA - Florida (east).
+     * Extent: North America - onshore - Bahamas and USA - Florida (east)
      * Fundamental point: Central 1950.  Latitude: 28°29'32.36555"N, longitude 80°34'38.77362"W (of Greenwich).
      */
     public const EPSG_CAPE_CANAVERAL = 'urn:ogc:def:datum:EPSG::6717';
@@ -879,7 +879,7 @@ class Datum
     /**
      * Carthage
      * Type: Geodetic
-     * Extent: Tunisia - onshore and offshore.
+     * Extent: Tunisia - onshore and offshore
      * Fundamental point: Carthage. Latitude: 40.9464506g = 36°51'06.50"N, longitude: 8.8724368g E of Paris =
      * 10°19'20.72"E (of Greenwich).
      * Fundamental point astronomic coordinates determined in 1878.
@@ -889,7 +889,7 @@ class Datum
     /**
      * Carthage (Paris)
      * Type: Geodetic
-     * Extent: Tunisia - onshore.
+     * Extent: Tunisia - onshore
      * Fundamental point: Carthage. Latitude: 40.9464506g N, longitude: 8.8724368g E (of Paris).
      * Fundamental point astronomic coordinates determined in 1878.
      */
@@ -898,7 +898,7 @@ class Datum
     /**
      * Cascais
      * Type: Vertical
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Mean Sea Level at Cascais 1938.
      * Orthometric heights.
      */
@@ -907,7 +907,7 @@ class Datum
     /**
      * Caspian Sea
      * Type: Vertical
-     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.
+     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore
      * Defined as -28.0m Baltic datum.
      */
     public const EPSG_CASPIAN_SEA = 'urn:ogc:def:datum:EPSG::5106';
@@ -915,7 +915,7 @@ class Datum
     /**
      * Catania 1965
      * Type: Vertical
-     * Extent: Italy - Sicily onshore.
+     * Extent: Italy - Sicily onshore
      * Mean Sea Level at Catania in 1965.
      * Orthometric heights.
      */
@@ -931,7 +931,7 @@ class Datum
     /**
      * Cayman Islands Geodetic Datum 2011
      * Type: Geodetic
-     * Extent: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac.
+     * Extent: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac
      * ITRF2005 at epoch 2011.0
      * Replaces GCGD59 (datum code 6723) and SIGD61 (datum code 6726).
      */
@@ -940,7 +940,7 @@ class Datum
     /**
      * Centre Spatial Guyanais 1967
      * Type: Geodetic
-     * Extent: French Guiana - coastal area.
+     * Extent: French Guiana - coastal area
      * Fundamental point: Kourou-Diane. Latitude: 5°15'53.699"N, longitude: 52°48'09.149"W (of Greenwich).
      * Replaced by RGFG95 (code 6624).
      */
@@ -949,7 +949,7 @@ class Datum
     /**
      * Ceuta 2
      * Type: Vertical
-     * Extent: Spain - Ceuta onshore.
+     * Extent: Spain - Ceuta onshore
      * Mean Sea Level at Ceuta harbour between March 1944 and December 2006.
      * Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.
      */
@@ -959,7 +959,7 @@ class Datum
      * Chart Datum UK & Ireland VORF08
      * Type: Vertical
      * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
-     * offshore.
+     * offshore
      * CD UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008.
      * By international agreement, Chart Datum is defined as a level so low that the tide will not frequently fall
      * below it. In the United Kingdom and Ireland, this level is normally the level of approximate Lowest Astronomical
@@ -970,7 +970,7 @@ class Datum
     /**
      * Chatham Islands Datum 1971
      * Type: Geodetic
-     * Extent: New Zealand - Chatham Islands group - onshore.
+     * Extent: New Zealand - Chatham Islands group - onshore
      * Replaced by Chatham Islands Datum 1979 (code 6673).
      */
     public const EPSG_CHATHAM_ISLANDS_DATUM_1971 = 'urn:ogc:def:datum:EPSG::6672';
@@ -978,7 +978,7 @@ class Datum
     /**
      * Chatham Islands Datum 1979
      * Type: Geodetic
-     * Extent: New Zealand - Chatham Islands group - onshore.
+     * Extent: New Zealand - Chatham Islands group - onshore
      * Fundamental point: station Astro. Latitude: 43°57'23.60"S, longitude: 176°34'28.65"W (of Greenwich).
      * Replaces Chatham Islands Datum 1971 (code 6672). Replaced by New Zealand Geodetic Datum 2000 (code 6167) from
      * March 2000.
@@ -988,7 +988,7 @@ class Datum
     /**
      * China 2000
      * Type: Geodetic
-     * Extent: China - onshore and offshore.
+     * Extent: China - onshore and offshore
      * ITRF97 at epoch 2000.0
      * Combined adjustment of astro-geodetic observations as used for Xian 1980 and GPS control network observed
      * 2000-2003. Adopted July 2008.
@@ -998,8 +998,7 @@ class Datum
     /**
      * Chos Malal 1914
      * Type: Geodetic
-     * Extent: Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro
-     * province.
+     * Extent: Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro province
      * Chos Malal police station.
      * Also known as Quini-Huao. Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil
      * exploration and production continues.
@@ -1009,7 +1008,7 @@ class Datum
     /**
      * Chua
      * Type: Geodetic
-     * Extent: Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north.
+     * Extent: Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north
      * Fundamental point: Chua. Latitude: 19°45'41.160"S, longitude: 48°06'07.560"W (of Greenwich).
      * The Chua origin and associated network is in Brazil with a connecting traverse through northern Paraguay. It was
      * used in Brazil only as input into the Corrego Allegre adjustment and for government work in Distrito Federal.
@@ -1019,7 +1018,7 @@ class Datum
     /**
      * Cocos Islands 1965
      * Type: Geodetic
-     * Extent: Cocos (Keeling) Islands - onshore.
+     * Extent: Cocos (Keeling) Islands - onshore
      * Fundamental point: Anna 1.
      */
     public const EPSG_COCOS_ISLANDS_1965 = 'urn:ogc:def:datum:EPSG::6708';
@@ -1027,7 +1026,7 @@ class Datum
     /**
      * Combani 1950
      * Type: Geodetic
-     * Extent: Mayotte - onshore.
+     * Extent: Mayotte - onshore
      * Combani South Base.
      * Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).
      */
@@ -1036,7 +1035,7 @@ class Datum
     /**
      * Conakry 1905
      * Type: Geodetic
-     * Extent: Guinea - onshore.
+     * Extent: Guinea - onshore
      * Fundamental point: Conakry. Latitude: 10.573766g N, longitude: 17.833682g W (of Paris).
      */
     public const EPSG_CONAKRY_1905 = 'urn:ogc:def:datum:EPSG::6315';
@@ -1044,7 +1043,7 @@ class Datum
     /**
      * Congo 1960 Pointe Noire
      * Type: Geodetic
-     * Extent: Congo - onshore and offshore.
+     * Extent: Congo - onshore and offshore
      * Fundamental point: Point Noire Astro. Latitude: 4°47'00.10"S, longitude: 11°51'01.55"E (of Greenwich).
      */
     public const EPSG_CONGO_1960_POINTE_NOIRE = 'urn:ogc:def:datum:EPSG::6282';
@@ -1052,7 +1051,7 @@ class Datum
     /**
      * Constanta
      * Type: Vertical
-     * Extent: Romania - onshore.
+     * Extent: Romania - onshore
      * Mean Sea Level at Constanta.
      * Normal-orthometric heights.
      */
@@ -1061,7 +1060,7 @@ class Datum
     /**
      * Copenhagen Commune Intermediate Datum
      * Type: Geodetic
-     * Extent: Denmark - onshore - Copenhagen and surrounding area.
+     * Extent: Denmark - onshore - Copenhagen and surrounding area
      * Arbitrary origin, apparently based on monument coordinates given in the Generalstabens System.
      * Created in 2022 to support intermediate CRS KK-IRF in the transformation of coordinates between the historic
      * Copenhagen Commune CRS and ETRS89. The data are reconstructions based on information synthesized in historical
@@ -1072,7 +1071,7 @@ class Datum
     /**
      * Corrego Alegre 1961
      * Type: Geodetic
-     * Extent: Brazil - onshore - between 18°S and 27°30'S, also east of 54°W between 15°S and 18°S.
+     * Extent: Brazil - onshore - between 18°S and 27°30'S, also east of 54°W between 15°S and 18°S
      * Fundamental point: Corrego Alegre. Latitude: 19°50'14.91"S, longitude: 48°57'41.98"W (of Greenwich).
      * Replaced by Corrego Alegre 1970-72 (datum code 6225). NIMA gives coordinates of origin as latitude:
      * 19°50'15.14"S, longitude: 48°57'42.75"W.
@@ -1083,7 +1082,7 @@ class Datum
      * Corrego Alegre 1970-72
      * Type: Geodetic
      * Extent: Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also
-     * east of 42°W.
+     * east of 42°W
      * Fundamental point: Corrego Alegre. Latitude: 19°50'14.91"S, longitude: 48°57'41.98"W (of Greenwich).
      * Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coordinates of origin as latitude:
      * 19°50'15.14"S, longitude: 48°57'42.75"W; these may refer to 1961 adjustment.
@@ -1093,7 +1092,7 @@ class Datum
     /**
      * Costa Rica 2005
      * Type: Geodetic
-     * Extent: Costa Rica - onshore and offshore.
+     * Extent: Costa Rica - onshore and offshore
      * ITRF2000 at epoch 2005.83.  Network of 34 GPS stations throughout the country, five of which were connected to
      * four Caribbean area ITRF stations.
      * Replaces Ocotepeque (datum code 1070) in Costa Rica from March 2007.
@@ -1103,7 +1102,7 @@ class Datum
     /**
      * Croatian Terrestrial Reference System
      * Type: Geodetic
-     * Extent: Croatia - onshore and offshore.
+     * Extent: Croatia - onshore and offshore
      * Densification of ETRS89 in Croatia at epoch 1995.55.
      * Based on 78 control points with coordinates determined in ETRS89.
      */
@@ -1112,7 +1111,7 @@ class Datum
     /**
      * Croatian Vertical Reference Datum 1971
      * Type: Vertical
-     * Extent: Croatia - onshore.
+     * Extent: Croatia - onshore
      * Mean sea level at five tide gauges in Dubrovnik, Split, Bakar, Rovinj and Kopar at epoch 1971.5
      * Replaces Trieste (datum code 1050).
      */
@@ -1121,7 +1120,7 @@ class Datum
     /**
      * Cyprus Geodetic Reference System 1993
      * Type: Geodetic
-     * Extent: Cyprus - onshore.
+     * Extent: Cyprus - onshore
      * Station Chionistra (Mount Troodos). Network scale and orientation determined by connection of six stations to
      * ITRF91 in Europe at epoch 1993.1.
      * Survey plans and maps produced by DLS after 1993.
@@ -1131,7 +1130,7 @@ class Datum
     /**
      * DIBA15 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury
      * Defined through the application of the DIBA15 NTv2 transformation (code 10205) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS DIBA15-IRF in the emulation of the DIBA15 Snake map projection.
@@ -1148,7 +1147,7 @@ class Datum
     /**
      * Danger 1950
      * Type: Vertical
-     * Extent: St Pierre and Miquelon - onshore.
+     * Extent: St Pierre and Miquelon - onshore
      * Marker near tide gauge at port of Saint Pierre. Height is 1.26 metres above zero of tide gauge.
      */
     public const EPSG_DANGER_1950 = 'urn:ogc:def:datum:EPSG::5190';
@@ -1156,7 +1155,7 @@ class Datum
     /**
      * Dansk Normal Nul
      * Type: Vertical
-     * Extent: Denmark - onshore.
+     * Extent: Denmark - onshore
      * Mean Sea Level at 10 gauges.
      * Orthometric heights.
      */
@@ -1165,7 +1164,7 @@ class Datum
     /**
      * Dansk Vertikal Reference 1990
      * Type: Vertical
-     * Extent: Denmark - onshore.
+     * Extent: Denmark - onshore
      * Benchmark at Århus cathedral referenced to mean sea level determined during 1990 at 10 tide gauges: Esbjerg,
      * Fredericia, Frederikshavn, Gedser, Hirtshals, Hornbæk, Korsør, København, Slipshavn and Århus.
      * Normal Orthometric heights.
@@ -1175,7 +1174,7 @@ class Datum
     /**
      * Datum 73
      * Type: Geodetic
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Fundamental point:  TF4, Melrica. Latitude: 39°41'37.30"N, longitude: 8°07'53.31"W (of Greenwich).
      */
     public const EPSG_DATUM_73 = 'urn:ogc:def:datum:EPSG::6274';
@@ -1183,7 +1182,7 @@ class Datum
     /**
      * Datum Altimetrico de Costa Rica 1952
      * Type: Vertical
-     * Extent: Costa Rica - onshore.
+     * Extent: Costa Rica - onshore
      * Mean Sea Level 1941-1952 at Puntarenas.
      * Orthometric heights.
      */
@@ -1192,7 +1191,7 @@ class Datum
     /**
      * Datum Geodesi Nasional 1995
      * Type: Geodetic
-     * Extent: Indonesia - onshore and offshore.
+     * Extent: Indonesia - onshore and offshore
      * ITRF91at epoch 1992.0.
      * Replaces ID74 and all older datums.
      */
@@ -1201,7 +1200,7 @@ class Datum
     /**
      * Dealul Piscului 1930
      * Type: Geodetic
-     * Extent: Romania - onshore.
+     * Extent: Romania - onshore
      * Fundamental point: latitude 44°24'33.9606"N, longitude 26°06'44.8772"E (of Greenwich).
      * Replaced by Pulkovo 1942(58) (datum code 6179).
      */
@@ -1217,7 +1216,7 @@ class Datum
     /**
      * Deir ez Zor
      * Type: Geodetic
-     * Extent: Lebanon - onshore. Syrian Arab Republic - onshore.
+     * Extent: Lebanon - onshore. Syrian Arab Republic - onshore
      * Fundamental point: Trig. 254 Deir. Latitude: 35°21'49.975"N, longitude: 40°05'46.770"E (of Greenwich).
      */
     public const EPSG_DEIR_EZ_ZOR = 'urn:ogc:def:datum:EPSG::6227';
@@ -1227,7 +1226,7 @@ class Datum
      * Type: Geodetic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Schleswig-Holstein, Thuringen
      * Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across
      * all German states.
      */
@@ -1237,7 +1236,7 @@ class Datum
      * Deutsches Hauptdreiecksnetz
      * Type: Geodetic
      * Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen,
-     * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
+     * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein
      * Fundamental point: Rauenberg. Latitude: 52°27'12.021"N, longitude: 13°22'04.928"E (of Greenwich).  This
      * station was destroyed in 1910 and the station at Potsdam substituted as the fundamental point.
      */
@@ -1248,7 +1247,7 @@ class Datum
      * Type: Vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Schleswig-Holstein, Thuringen
      * Height of reference point "Normalnullpunkt" at Berlin Observatory defined as 37.000m above MSL in 1879
      * (transferred to benchmarks near Hoppegarten in Müncheberg in 1912). Datum at Normaal Amsterdams Peil (NAP) is
      * mean high tide in 1684.
@@ -1260,7 +1259,7 @@ class Datum
      * Deutsches Haupthoehennetz 1985
      * Type: Vertical
      * Extent: Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen,
-     * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.
+     * Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein
      * Network adjusted in 1985. Height of reference point Wallenhorst defined as value from 1928 adjustment. Datum at
      * Normaal Amsterdams Peil (NAP) is mean high tide in 1684.
      * Replaced by DHHN92. Uses Normal-orthometric heights.
@@ -1272,7 +1271,7 @@ class Datum
      * Type: Vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Schleswig-Holstein, Thuringen
      * Network adjusted in 1992. Geopotential number at reference point Wallenhorst defined as value from the
      * UELN-73/86 adjustment. Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684.
      * Replaces DHHN85 in West Germany and SNN76 in East Germany. Uses Normal heights.
@@ -1282,7 +1281,7 @@ class Datum
     /**
      * Deutsches Haupthoehennetz 2016
      * Type: Vertical
-     * Extent: Germany - onshore and offshore.
+     * Extent: Germany - onshore and offshore
      * 2006-2012 levelling network adjusted to 72 points of the DHHN92. Datum at Normaal Amsterdams Peil (NAP) is mean
      * high tide in 1684. Extension offshore defined by the GCG2016 quasi-geoid model (CT code 9925).
      * Uses Normal heights in the mean tidal system.
@@ -1292,7 +1291,7 @@ class Datum
     /**
      * Diego Garcia 1969
      * Type: Geodetic
-     * Extent: British Indian Ocean Territory - Chagos Archipelago - Diego Garcia.
+     * Extent: British Indian Ocean Territory - Chagos Archipelago - Diego Garcia
      * Fundamental point: ISTS 073.
      */
     public const EPSG_DIEGO_GARCIA_1969 = 'urn:ogc:def:datum:EPSG::6724';
@@ -1300,7 +1299,7 @@ class Datum
     /**
      * DoPw22 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli
      * Defined through the application of the DoPw22 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS DoPw22-IRF in the emulation of the DoPw22 Snake map projection.
@@ -1310,7 +1309,7 @@ class Datum
     /**
      * Dominica 1945
      * Type: Geodetic
-     * Extent: Dominica - onshore.
+     * Extent: Dominica - onshore
      * Fundamental point: station M12.
      */
     public const EPSG_DOMINICA_1945 = 'urn:ogc:def:datum:EPSG::6602';
@@ -1318,7 +1317,7 @@ class Datum
     /**
      * Douala 1948
      * Type: Geodetic
-     * Extent: Cameroon - coastal area.
+     * Extent: Cameroon - coastal area
      * South pillar of Douala base; 4°00'40.64"N, 9°42'30.41"E (of Greenwich).
      * Replaced by Manoca 1962 datum (code 6193).
      */
@@ -1327,7 +1326,7 @@ class Datum
     /**
      * Douglas
      * Type: Vertical
-     * Extent: Isle of Man - onshore.
+     * Extent: Isle of Man - onshore
      * Mean Sea Level at Douglas 1865. Initially realised through levelling network adjustment, from 2002 redefined to
      * be realised through OSGM geoid model.
      * Orthometric heights.
@@ -1337,7 +1336,7 @@ class Datum
     /**
      * Dunedin 1958
      * Type: Vertical
-     * Extent: New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area.
+     * Extent: New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area
      * MSL at Dunedin harbour 1918-1937.
      */
     public const EPSG_DUNEDIN_1958 = 'urn:ogc:def:datum:EPSG::5159';
@@ -1345,7 +1344,7 @@ class Datum
     /**
      * Dunedin-Bluff 1960
      * Type: Vertical
-     * Extent: New Zealand - South Island - Dunedin-Bluff vertical CRS area.
+     * Extent: New Zealand - South Island - Dunedin-Bluff vertical CRS area
      * Common adjustment of Dunedin 1958 and Bluff 1955 networks.
      */
     public const EPSG_DUNEDIN_BLUFF_1960 = 'urn:ogc:def:datum:EPSG::1040';
@@ -1353,7 +1352,7 @@ class Datum
     /**
      * Durres
      * Type: Vertical
-     * Extent: Albania - onshore.
+     * Extent: Albania - onshore
      * Mean Sea Level at Durres.
      * Normal-orthometric heights.
      */
@@ -1362,7 +1361,7 @@ class Datum
     /**
      * EBBWV14 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale
      * Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.
@@ -1373,7 +1372,7 @@ class Datum
      * ECML14_NB Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
-     * Junction, and the section from Bedlington to Morpeth.
+     * Junction, and the section from Bedlington to Morpeth
      * Defined through the application of the ECML14_NB NTv2 transformation (code 9759) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2021 to support intermediate CRS "ECML14_NB-IRF" in the emulation of the ECML14_NB Snake map
@@ -1384,7 +1383,7 @@ class Datum
     /**
      * EGM2008 geoid
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Derived through EGM2008 geoid undulation model consisting of spherical harmonic coefficients to degree 2190 and
      * order 2159 applied to the WGS 84 ellipsoid.
      * Replaces EGM96 geoid (datum code 5171). See transformation codes 3858 and 3859 for 2.5x2.5 and 1x1 arc minute
@@ -1395,7 +1394,7 @@ class Datum
     /**
      * EGM84 geoid
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order
      * 180 applied to the WGS 84 ellipsoid.
      * Replaced by EGM96 geoid (datum code 5171).
@@ -1405,7 +1404,7 @@ class Datum
     /**
      * EGM96 geoid
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order
      * 360 applied to the WGS 84 ellipsoid.
      * Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).
@@ -1427,7 +1426,7 @@ class Datum
     /**
      * ETRF2000 Poland
      * Type: Geodetic
-     * Extent: Poland - onshore and offshore.
+     * Extent: Poland - onshore and offshore
      * Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network constrained to 35 EPN stations
      * in ETRF2000@2011.0.
      * Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th
@@ -1438,7 +1437,7 @@ class Datum
     /**
      * ETRS89/DREF91 Realization 2016
      * Type: Geodetic
-     * Extent: Germany - onshore and offshore.
+     * Extent: Germany - onshore and offshore
      * Realized by GNSS campaign 2008. Results were transformed from IGS05 epoch 2008.46 to ITRF2005 to ETRF2000,
      * subsequently to ETRS89/DREF91 Realization 2002 (former German ETRS89 realization) by 3 rotation parameters.
      * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
@@ -1449,7 +1448,7 @@ class Datum
      * EWR2 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester,
-     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.
+     * Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough
      * Defined through the application of the EWR2 NTv2 transformation (code 9763) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the EWR2 Snake map projection.
@@ -1466,7 +1465,7 @@ class Datum
     /**
      * Egypt 1907
      * Type: Geodetic
-     * Extent: Egypt - onshore and offshore.
+     * Extent: Egypt - onshore and offshore
      * Fundamental point: Station F1 (Venus). Latitude: 30°01'42.86"N, longitude: 31°16'33.60"E (of Greenwich).
      */
     public const EPSG_EGYPT_1907 = 'urn:ogc:def:datum:EPSG::6229';
@@ -1474,7 +1473,7 @@ class Datum
     /**
      * Egypt 1930
      * Type: Geodetic
-     * Extent: Egypt - onshore.
+     * Extent: Egypt - onshore
      * Fundamental point: Station F1 (Venus). Latitude: 30°01'42.86"N, longitude: 31°16'37.05"E (of Greenwich).
      * Note that Egypt 1930 uses the International 1924 ellipsoid, unlike the Egypt 1907 datum (code 6229) which uses
      * the Helmert ellipsoid. Oil industry references to the Egypt 1930 datum name and the Helmert ellipsoid probably
@@ -1485,7 +1484,7 @@ class Datum
     /**
      * Egypt Gulf of Suez S-650 TL
      * Type: Geodetic
-     * Extent: Egypt - Gulf of Suez.
+     * Extent: Egypt - Gulf of Suez
      * Fundamental point: Station S-650 DMX. Adopted coordinates: latitude: 28°19'02.1907"N, longitude:
      * 33°06'36.6344"E (of Greenwich). The proper Egypt 1907 coordinates for S-650 differ from these by about 20m.
      * A coherent set of stations bordering the Gulf of Suez coordinated by Transit translocation ("TL") between 1980
@@ -1497,7 +1496,7 @@ class Datum
     /**
      * El Hierro
      * Type: Vertical
-     * Extent: Spain - Canary Islands - El Hierro onshore.
+     * Extent: Spain - Canary Islands - El Hierro onshore
      * Mean Sea Level at La Estaca harbour in 2000.
      * Orthometric heights.
      */
@@ -1506,7 +1505,7 @@ class Datum
     /**
      * Estonia 1992
      * Type: Geodetic
-     * Extent: Estonia - onshore.
+     * Extent: Estonia - onshore
      * Densification from 4 ETRS89 points.
      * Based on ETRS89 as established during the 1992 Baltic campaign. Replaced by Estonia 1997 adjustment (code 6180).
      */
@@ -1515,7 +1514,7 @@ class Datum
     /**
      * Estonia 1997
      * Type: Geodetic
-     * Extent: Estonia - onshore and offshore.
+     * Extent: Estonia - onshore and offshore
      * Densification of ETRS89 during EUREF-ESTONIA97 campaign through transformation from ITRF96 at epoch 1997.56.
      * Replaces Estonia 1992 adjustment (code 6133).
      */
@@ -1524,7 +1523,7 @@ class Datum
     /**
      * Estonian Height System 2000
      * Type: Vertical
-     * Extent: Estonia - onshore.
+     * Extent: Estonia - onshore
      * Estonian realisation of EVRF2007. Relevelling observed  2004-2013 and reduced to epoch 2000 using the NKG2005LU
      * empirical land uplift model. EVRF2007 height of Poltsamaa fundamental bench mark (H=55.2114m) held fixed.
      * Uses Normal heights.
@@ -1539,7 +1538,7 @@ class Datum
      * Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including
      * Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore
      * and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt
-     * - Western Desert; Iraq - onshore; Jordan.
+     * - Western Desert; Iraq - onshore; Jordan
      * Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22'51.4456"N, longitude: 13°03'58.9283"E (of
      * Greenwich).
      */
@@ -1548,7 +1547,7 @@ class Datum
     /**
      * European Datum 1950(1977)
      * Type: Geodetic
-     * Extent: Iran - onshore and offshore.
+     * Extent: Iran - onshore and offshore
      * Extension of ED50 over Iran.
      * Sometimes referred to as ED50-ED77.
      */
@@ -1557,7 +1556,7 @@ class Datum
     /**
      * European Datum 1979
      * Type: Geodetic
-     * Extent: Europe - west.
+     * Extent: Europe - west
      * Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22'51.4456"N, longitude: 13°03'58.9283"E (of
      * Greenwich).
      * Replaced by 1987 adjustment.
@@ -1567,7 +1566,7 @@ class Datum
     /**
      * European Datum 1987
      * Type: Geodetic
-     * Extent: Europe - west.
+     * Extent: Europe - west
      * Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22'51.4456"N, longitude: 13°03'58.9283"E (of
      * Greenwich).
      */
@@ -1576,7 +1575,7 @@ class Datum
     /**
      * European Libyan Datum 1979
      * Type: Geodetic
-     * Extent: Libya - onshore and offshore.
+     * Extent: Libya - onshore and offshore
      * Extension of ED50 over Libya.
      */
     public const EPSG_EUROPEAN_LIBYAN_DATUM_1979 = 'urn:ogc:def:datum:EPSG::6159';
@@ -1589,7 +1588,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the AM02 geophysical model.
      * Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).
@@ -1604,7 +1603,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * AM02 geophysical model.
@@ -1621,7 +1620,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * AM02 geophysical model.
@@ -1638,7 +1637,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1 geophysical model.
@@ -1655,7 +1654,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * ITRF93 velocity field.
@@ -1672,7 +1671,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1A geophysical model.
@@ -1689,7 +1688,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1A geophysical model.
@@ -1706,7 +1705,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1A geophysical model.
@@ -1723,7 +1722,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * ITRF2000 velocity field.
@@ -1741,7 +1740,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * ITRF2005 velocity field.
@@ -1759,7 +1758,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the ITRF2014 velocity field.
      * Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically
@@ -1775,7 +1774,7 @@ class Datum
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State.
+     * of Man; Vatican City State
      * Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and
      * ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
      */
@@ -1788,7 +1787,7 @@ class Datum
      * Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
      * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
-     * City State.
+     * City State
      * Height at Normaal Amsterdams Peil (NAP) is zero, defined through height at UELN bench mark 13600 (52°22'53"N
      * 4°54'34"E) of 0.71599m. Datum at NAP is mean high tide in 1684.
      * Realized by geopotential numbers and Normal heights of the United European Levelling Network. Replaced by
@@ -1799,7 +1798,7 @@ class Datum
     /**
      * European Vertical Reference Frame 2000 Austria
      * Type: Vertical
-     * Extent: Austria.
+     * Extent: Austria
      * Geopotential numbers of the EVRF2000 (UELN95/98) node points in Austria converted to orthometric heights using a
      * digital surface model.
      * Geoid surface is smoother than the EVRF2000 quasigeoid.
@@ -1813,7 +1812,7 @@ class Datum
      * Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
      * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
-     * City State.
+     * City State
      * Least squares fit to 13 stations of the EVRF2000 solution. Reduced to epoch 2000.0 for Nordic countries using
      * the NKG2005LU uplift model.
      * Realized by geopotential numbers and Normal heights of the United European Levelling Network. Replaces EVRF2000
@@ -1824,7 +1823,7 @@ class Datum
     /**
      * European Vertical Reference Frame 2007 Poland
      * Type: Vertical
-     * Extent: Poland - onshore.
+     * Extent: Poland - onshore
      * Origin: Mean North Sea Level at Amsterdam tide gauge. Normal heights obtained from adjustment of precise
      * leveling campaigns conducted during 1998 - 2012 reduced to epoch 2008.00.
      *
@@ -1839,7 +1838,7 @@ class Datum
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
      * Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden;
-     * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
+     * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State
      * Fixed to geopotential values of 12 stable stations of the EVRF2007 solution. Re-adjusted in September 2020.
      * Reduced to epoch 2000.0 for Nordic countries and Russia using the NKG2016LU_lev uplift model and for Switzerland
      * using CHVRF15 velocities.
@@ -1854,7 +1853,7 @@ class Datum
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
      * Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden;
-     * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.
+     * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State
      * Derived from 2020-09 zero-tide EVRF2019 adjustment by Cmean = Czero + (0.28841*sin^2(phi)) +
      * (0.00195*sin^4(phi)) - 0.09722 - 0.08432 kgal.m. The offset of 0.08432 forces the mean-tide height to the
      * zero-tide height at the EVRF2000 origin in Amsterdam.
@@ -1866,7 +1865,7 @@ class Datum
     /**
      * FNL22 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick
      * Defined through the application of the FNL22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL22 Snake map projection.
      */
@@ -1875,7 +1874,7 @@ class Datum
     /**
      * Fahud
      * Type: Geodetic
-     * Extent: Oman - mainland onshore.
+     * Extent: Oman - mainland onshore
      * Fundamental point: Station NO68-024 Fahud. Latitude: 22°17'31.182"N, longitude: 56°29'18.820"E (of Greenwich).
      * Replaced by PSD93 (code 6134).
      */
@@ -1884,7 +1883,7 @@ class Datum
     /**
      * Fahud Height Datum
      * Type: Vertical
-     * Extent: Oman - mainland onshore.
+     * Extent: Oman - mainland onshore
      * Single MSL determination at Mina Al Fahal.
      * Based on reciprocal trigonometric heighting. Replaced by PHD93 Datum (code 5123) in 1993.
      */
@@ -1893,7 +1892,7 @@ class Datum
     /**
      * Fair Isle
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore
      * Orthometric heights.
      */
     public const EPSG_FAIR_ISLE = 'urn:ogc:def:datum:EPSG::5139';
@@ -1901,7 +1900,7 @@ class Datum
     /**
      * Famagusta 1960
      * Type: Vertical
-     * Extent: Cyprus - onshore.
+     * Extent: Cyprus - onshore
      * Mean sea level at Famagusta Harbour.
      * Orthometric heights.
      */
@@ -1910,7 +1909,7 @@ class Datum
     /**
      * Fao
      * Type: Vertical
-     * Extent: Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
+     * Extent: Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq
      * Established by Hunting Surveys for IPC. In Iran replaced by Bandar Abbas (code 5150). At time of record creation
      * NIOC data in Ahwaz area still usually referenced to Fao. In Iraq replaced by Fao 1979 (code 1028).
      */
@@ -1919,7 +1918,7 @@ class Datum
     /**
      * Fao 1979
      * Type: Vertical
-     * Extent: Iraq - onshore.
+     * Extent: Iraq - onshore
      * Average sea level at Fao during two-year period in mid/late 1970s.
      * Levelling network established by Polservice consortium. Replaces Fao (datum code 5149) in Iraq.
      */
@@ -1928,7 +1927,7 @@ class Datum
     /**
      * Faroe Datum 1954
      * Type: Geodetic
-     * Extent: Faroe Islands - onshore.
+     * Extent: Faroe Islands - onshore
      * Astronomical observations at 3 points.
      * Replaced by ED50 in late 1970's for all purposes other than cadastre. Replaced by fk89 for cadastre.
      */
@@ -1937,7 +1936,7 @@ class Datum
     /**
      * Faroe Islands Vertical Reference 2009
      * Type: Vertical
-     * Extent: Faroe Islands - onshore.
+     * Extent: Faroe Islands - onshore
      * Mean Tidal Height System.
      */
     public const EPSG_FAROE_ISLANDS_VERTICAL_REFERENCE_2009 = 'urn:ogc:def:datum:EPSG::1059';
@@ -1945,7 +1944,7 @@ class Datum
     /**
      * Fatu Iva 72
      * Type: Geodetic
-     * Extent: French Polynesia - Marquesas Islands - Fatu Hiva.
+     * Extent: French Polynesia - Marquesas Islands - Fatu Hiva
      * Fundamental point: Latitude: 9°25'58.00"S, longitude: 138°55'06.25"W (of Greenwich).
      * Recomputed by IGN in 1972 using origin and observations of 1953-1955 Mission Hydrographique des Establissements
      * Francais d'Oceanie (MHEFO 55). Replaced by RGPF (datum code 6687).
@@ -1955,7 +1954,7 @@ class Datum
     /**
      * Fehmarnbelt Datum 2010
      * Type: Geodetic
-     * Extent: Fehmarnbelt area of Denmark and Germany.
+     * Extent: Fehmarnbelt area of Denmark and Germany
      * ITRF2005 at epoch 2010.14.
      * Defined through coordinates of four permanant GNSS stations.
      */
@@ -1964,7 +1963,7 @@ class Datum
     /**
      * Fehmarnbelt Vertical Reference 2010
      * Type: Vertical
-     * Extent: Fehmarnbelt area of Denmark and Germany.
+     * Extent: Fehmarnbelt area of Denmark and Germany
      * Realised by precise levelling between tide gauges at Marienleuchte (Germany), Rodbyhavn (Denmark) and four
      * Fehmarnbelt project GNSS stations.
      */
@@ -1974,7 +1973,7 @@ class Datum
      * Fiji 1956
      * Type: Geodetic
      * Extent: Fiji - onshore - Vanua Levu, Taveuni, Viti Levu and and immediately adjacent smaller islands of Yasawa
-     * and Kandavu groups.
+     * and Kandavu groups
      * Latitude origin was obtained astronomically at station Rasusuva = 17°49'03.13"S,  longitude origin was obtained
      * astronomically at station Suva = 178°25'35.835"E (of Greenwich).
      * For topographic mapping replaces Viti Levu 1912 and Vanua Levu 1915. Replaced by Fiji Geodetic Datum 1986.
@@ -1985,7 +1984,7 @@ class Datum
      * Fiji Geodetic Datum 1986
      * Type: Geodetic
      * Extent: Fiji - onshore. Includes Viti Levu, Vanua Levu, Taveuni, the Yasawa Group, the Kadavu Group, the Lau
-     * Islands and Rotuma Islands.
+     * Islands and Rotuma Islands
      * NWL 9D coordinates of 6 stations on Vitu Levu and Vanua Levu.
      * Replaces Viti Levu 1912, Vanua Levu 1915 and Fiji 1956.
      */
@@ -1995,7 +1994,7 @@ class Datum
      * Final Datum 1958
      * Type: Geodetic
      * Extent: Iran - Arwaz area and onshore Gulf coast west of 54°E, Lavan Island, offshore Balal field and South
-     * Pars blocks 2 and 3.
+     * Pars blocks 2 and 3
      * Fundamental point: Maniyur.  Latitude: 31°23'59.19"N, longitude: 48°32'31.38"E (of Greenwich).
      * Network included in Nahrwan 1967 adjustment.
      */
@@ -2004,7 +2003,7 @@ class Datum
     /**
      * Flannan Isles
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore
      * Orthometric heights.
      */
     public const EPSG_FLANNAN_ISLES = 'urn:ogc:def:datum:EPSG::5146';
@@ -2012,7 +2011,7 @@ class Datum
     /**
      * Fort Marigot
      * Type: Geodetic
-     * Extent: Guadeloupe - onshore - St Martin and St Barthélemy islands.
+     * Extent: Guadeloupe - onshore - St Martin and St Barthélemy islands
      * Replaced by RRAF 1991 (datum code 1047).
      */
     public const EPSG_FORT_MARIGOT = 'urn:ogc:def:datum:EPSG::6621';
@@ -2020,7 +2019,7 @@ class Datum
     /**
      * Foula
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore
      * Orthometric heights.
      */
     public const EPSG_FOULA = 'urn:ogc:def:datum:EPSG::5141';
@@ -2028,7 +2027,7 @@ class Datum
     /**
      * Fuerteventura
      * Type: Vertical
-     * Extent: Spain - Canary Islands - Fuerteventura onshore.
+     * Extent: Spain - Canary Islands - Fuerteventura onshore
      * Mean Sea Level at Puerto del Rosario harbour between 1999-09-08 and 2000-12-31.
      * Orthometric heights.
      */
@@ -2038,7 +2037,7 @@ class Datum
      * GBK19 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the
-     * branch to East Kilbride.
+     * branch to East Kilbride
      * Defined through the application of the GBK19 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the combined GBK19 Snake map
@@ -2051,7 +2050,7 @@ class Datum
      * Type: Vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Schleswig-Holstein, Thuringen
      * Surface defined by the EGG97 quasi-geoid model modified in GNTRANS to achieve absolute position optimised for
      * use with DB_REF.
      * Implemented in GNTRANS. The GNTRANS height surface is available only through the GNTRANS application. Replaced
@@ -2064,7 +2063,7 @@ class Datum
      * Type: Vertical
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
-     * Schleswig-Holstein, Thuringen.
+     * Schleswig-Holstein, Thuringen
      * Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
      * Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but
      * unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide
@@ -2075,7 +2074,7 @@ class Datum
     /**
      * GWPBS22 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea
      * Defined through the application of the GWPBS22 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS GWPBS22-IRF in the emulation of the GWPBS22 Snake map projection.
@@ -2085,7 +2084,7 @@ class Datum
     /**
      * GWWAB22 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.
+     * Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys
      * Defined through the application of the GWWAB22 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS GWWAB22-IRF in the emulation of the GWWAB22 Snake map projection.
@@ -2096,7 +2095,7 @@ class Datum
      * GWWWA22 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and
-     * Fishguard.
+     * Fishguard
      * Defined through the application of the GWWWA22 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS GWWWA22-IRF in the emulation of the GWWWA22 Snake map projection.
@@ -2113,7 +2112,7 @@ class Datum
     /**
      * Gan 1970
      * Type: Geodetic
-     * Extent: Maldives - onshore.
+     * Extent: Maldives - onshore
      * In some references incorrectly named "Gandajika 1970". See datum code 6685.
      */
     public const EPSG_GAN_1970 = 'urn:ogc:def:datum:EPSG::6684';
@@ -2121,7 +2120,7 @@ class Datum
     /**
      * Garoua
      * Type: Geodetic
-     * Extent: Cameroon - Garoua area.
+     * Extent: Cameroon - Garoua area
      * Fundamental point: IGN astronomical station and benchmark no. 16 at Tongo. Latitude 8°55'08.74"N, longitude
      * 13°30'43.19"E (of Greenwich).
      */
@@ -2130,7 +2129,7 @@ class Datum
     /**
      * Gebrauchshohen ADRIA
      * Type: Vertical
-     * Extent: Austria.
+     * Extent: Austria
      * Reference point Hutbiegl defined relative to mean sea level at Trieste in 1875.
      * Normal-orthometric heights.
      */
@@ -2139,7 +2138,7 @@ class Datum
     /**
      * Generalstabens System Bornholm Intermediate Datum
      * Type: Geodetic
-     * Extent: Denmark - Bornholm onshore.
+     * Extent: Denmark - Bornholm onshore
      * The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the
      * observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
      * Created in 2022 to support intermediate CRS GSB-IRF in the transformation of coordinates between the historic
@@ -2151,7 +2150,7 @@ class Datum
     /**
      * Generalstabens System Intermediate Datum
      * Type: Geodetic
-     * Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland.
+     * Extent: Denmark - onshore Jutland, Funen, Zealand and Lolland
      * The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the
      * observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
      * Created in 2022 to support intermediate CRS GS-IRF in the transformation of coordinates between the historic
@@ -2163,7 +2162,7 @@ class Datum
     /**
      * Genoa 1942
      * Type: Vertical
-     * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
+     * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily
      * Mean Sea Level at Genoa (Ponte Morosini) 1937-1946.
      * Orthometric heights.
      */
@@ -2172,7 +2171,7 @@ class Datum
     /**
      * Geocentric Datum Brunei Darussalam 2009
      * Type: Geodetic
-     * Extent: Brunei Darussalam - onshore and offshore.
+     * Extent: Brunei Darussalam - onshore and offshore
      * ITRF2005 at epoch 2009.45
      * Replaces use of Timbalai from July 2009.
      */
@@ -2182,7 +2181,7 @@ class Datum
      * Geocentric Datum of Australia 1994
      * Type: Geodetic
      * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
-     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
      * ITRF92 at epoch 1994.0.
      */
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_1994 = 'urn:ogc:def:datum:EPSG::6283';
@@ -2191,7 +2190,7 @@ class Datum
      * Geocentric Datum of Australia 2020
      * Type: Geodetic
      * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
-     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.
+     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
      * ITRF2014 at epoch 2020.0.
      */
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_2020 = 'urn:ogc:def:datum:EPSG::1168';
@@ -2199,7 +2198,7 @@ class Datum
     /**
      * Geocentric datum of Korea
      * Type: Geodetic
-     * Extent: Republic of Korea (South Korea) - onshore and offshore.
+     * Extent: Republic of Korea (South Korea) - onshore and offshore
      * ITRF2000 at epoch 2002.0.
      */
     public const EPSG_GEOCENTRIC_DATUM_OF_KOREA = 'urn:ogc:def:datum:EPSG::6737';
@@ -2207,7 +2206,7 @@ class Datum
     /**
      * Geodetic Datum of 1965
      * Type: Geodetic
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Adjusted to best mean fit 9 stations of the OSNI 1952 primary adjustment in Northern Ireland plus the 1965
      * values of 3 stations in the Republic of Ireland.
      * Differences from the 1965 adjustment (datum code 6299) are: average difference in Eastings 0.092m; average
@@ -2218,7 +2217,7 @@ class Datum
     /**
      * Geodetic Datum of Malaysia 2000
      * Type: Geodetic
-     * Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.
+     * Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak
      * ITRF2000, epoch 2000.0.
      * Replaces all older Malaysian datums.
      */
@@ -2227,7 +2226,7 @@ class Datum
     /**
      * Geodezicheskaya Sistema Koordinat 2011
      * Type: Geodetic
-     * Extent: Russian Federation - onshore and offshore.
+     * Extent: Russian Federation - onshore and offshore
      * Coordinates of the Russian fundamental astronomic-geodetic network (about 50 stations) at epoch 2011.0.
      */
     public const EPSG_GEODEZICHESKAYA_SISTEMA_KOORDINAT_2011 = 'urn:ogc:def:datum:EPSG::1159';
@@ -2235,7 +2234,7 @@ class Datum
     /**
      * Gisborne 1926
      * Type: Vertical
-     * Extent: New Zealand - North Island - Gisborne vertical CRS area.
+     * Extent: New Zealand - North Island - Gisborne vertical CRS area
      * MSL at Gisborne harbour 1926.
      */
     public const EPSG_GISBORNE_1926 = 'urn:ogc:def:datum:EPSG::5160';
@@ -2243,7 +2242,7 @@ class Datum
     /**
      * Gran Canaria
      * Type: Vertical
-     * Extent: Spain - Canary Islands - Gran Canaria onshore.
+     * Extent: Spain - Canary Islands - Gran Canaria onshore
      * Mean Sea Level at Las Palmas de Gran Canaria harbour between 1992 and 1997.
      * Orthometric heights.
      */
@@ -2252,7 +2251,7 @@ class Datum
     /**
      * Grand Cayman Geodetic Datum 1959
      * Type: Geodetic
-     * Extent: Cayman Islands - Grand Cayman.
+     * Extent: Cayman Islands - Grand Cayman
      * Fundamental point: GC1. Latitude: 19°17'54.43"N, longitude: 81°22'37.17"W (of Greenwich).
      * Replaced by CIGD11 (datum code 1100).
      */
@@ -2268,7 +2267,7 @@ class Datum
     /**
      * Grand Comoros
      * Type: Geodetic
-     * Extent: Comoros - Njazidja (Grande Comore).
+     * Extent: Comoros - Njazidja (Grande Comore)
      * Fundamental point: M'Tsaoueni.  Latitude: 11°28'32.200"S, longitude: 43°15'42.315"E (of Greenwich).
      */
     public const EPSG_GRAND_COMOROS = 'urn:ogc:def:datum:EPSG::6646';
@@ -2276,7 +2275,7 @@ class Datum
     /**
      * Greek
      * Type: Geodetic
-     * Extent: Greece - onshore.
+     * Extent: Greece - onshore
      * Fundamental point: Athens Observatory. Latitude 37°58'20.132"N, longitude 23°42'58.815"E (of Greenwich)
      * See geodetic datum alias 6404. Used as basis of topographic mapping based on Hatt projection. Replaced by GGRS87
      * (code 6121).
@@ -2286,7 +2285,7 @@ class Datum
     /**
      * Greek (Athens)
      * Type: Geodetic
-     * Extent: Greece - onshore.
+     * Extent: Greece - onshore
      * Fundamental point: Athens Observatory. Latitude 37°58'20.132"N, longitude 0°E (of Athens).
      * See geodetic datum alias 6404. Used as basis of topographic mapping based on Hatt projection.
      */
@@ -2295,7 +2294,7 @@ class Datum
     /**
      * Greek Geodetic Reference System 1987
      * Type: Geodetic
-     * Extent: Greece - onshore.
+     * Extent: Greece - onshore
      * Fundamental point: Dionysos. Latitude 38°04'33.8"N, longitude 23°55'51.0"E of Greenwich; geoid height 7.0 m.
      * Replaced (old) Greek datum. Oil industry work based on ED50.
      */
@@ -2304,7 +2303,7 @@ class Datum
     /**
      * Greenland 1996
      * Type: Geodetic
-     * Extent: Greenland - onshore and offshore.
+     * Extent: Greenland - onshore and offshore
      * ITRF94 at epoch 1996.62
      * Replaces Ammassalik 1958, Qornoq 1927 and Scoresbysund 1952.
      */
@@ -2313,7 +2312,7 @@ class Datum
     /**
      * Greenland Vertical Reference 2000
      * Type: Vertical
-     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.
+     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W
      * Defined through the gravimetric geoid 2000 model locally aligned with MSL at a number of sites.
      * Orthometric heights. Replaced by GVR2016.
      */
@@ -2322,7 +2321,7 @@ class Datum
     /**
      * Greenland Vertical Reference 2016
      * Type: Vertical
-     * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.
+     * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W
      * Defined through the gravimetric geoid 2016 model locally aligned to MSL as measured at Nuuk during the 1960s.
      * Orthometric heights. Replaces GVR2000.
      */
@@ -2331,7 +2330,7 @@ class Datum
     /**
      * Grenada 1953
      * Type: Geodetic
-     * Extent: Grenada and southern Grenadine Islands - onshore.
+     * Extent: Grenada and southern Grenadine Islands - onshore
      * Fundamental point: station GS8, Sante Marie.
      */
     public const EPSG_GRENADA_1953 = 'urn:ogc:def:datum:EPSG::6603';
@@ -2339,7 +2338,7 @@ class Datum
     /**
      * Guadeloupe 1948
      * Type: Geodetic
-     * Extent: Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes.
+     * Extent: Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes
      * Replaced by RRAF 1991 (datum code 1047).
      */
     public const EPSG_GUADELOUPE_1948 = 'urn:ogc:def:datum:EPSG::6622';
@@ -2347,7 +2346,7 @@ class Datum
     /**
      * Guadeloupe 1951
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+     * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre
      * Mean sea level July 1947 to June 1948 at Pointe-Fouillole (Pointe-à-Pitre harbour). Origin = marker AO'-12 with
      * height of 1.917m above msl.
      * Orthometric heights. Replaced by Guadeloupe 1988 (datum code 5155). Guadeloupe 1951 height 0.00m is 0.629m above
@@ -2358,7 +2357,7 @@ class Datum
     /**
      * Guadeloupe 1988
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre.
+     * Extent: Guadeloupe - onshore - Basse-Terre and Grande-Terre
      * Mean sea level July 1947 to June 1948 at Pointe-Fouillole (Pointe-à-Pitre harbour). Origin = marker GO-7
      * (formerly AO'-5) with defined height of 2.67m above msl adopted from 1951 value. Guadeloupe 1988 height 0.00m is
      * 0.46m above 1984 sounding datum.
@@ -2369,7 +2368,7 @@ class Datum
     /**
      * Guam 1963
      * Type: Geodetic
-     * Extent: Guam - onshore. Northern Mariana Islands - onshore.
+     * Extent: Guam - onshore. Northern Mariana Islands - onshore
      * Fundamental point: Tagcha. Latitude: 13°22'38.49"N, longitude: 144°45'51.56"E (of Greenwich).
      * Replaced by NAD83(HARN).
      */
@@ -2378,7 +2377,7 @@ class Datum
     /**
      * Guam Vertical Datum of 1963
      * Type: Vertical
-     * Extent: Guam - onshore.
+     * Extent: Guam - onshore
      * Mean sea level at Apra harbor, Guam, 1949-1962. Benchmark NO 5 1949 = 0.599m.
      * Replaced by Guam vertical datum of 2004 (datum code 1126).
      */
@@ -2387,7 +2386,7 @@ class Datum
     /**
      * Guam Vertical Datum of 2004
      * Type: Vertical
-     * Extent: Guam - onshore.
+     * Extent: Guam - onshore
      * Mean sea level at Apra harbor, Guam. Benchmark 1630000 TIDAL 4 = 2.170m relative to US National Tidal Datum
      * Epoch 1983-2001. MSL is 0.419m above MLLW and the BM is 2.589m above MLLW.
      * Replaces Guam Vertical Datum of 1963 (datum code 1122).
@@ -2397,7 +2396,7 @@ class Datum
     /**
      * Gulshan 303
      * Type: Geodetic
-     * Extent: Bangladesh - onshore and offshore.
+     * Extent: Bangladesh - onshore and offshore
      * Gulshan garden, Dhaka.
      * Network of more than 140 control points observed and adjusted in 1995 by Japan International Cooperation Agency
      * (JICA).
@@ -2408,7 +2407,7 @@ class Datum
      * Gunung Segara
      * Type: Geodetic
      * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
-     * areas.
+     * areas
      * Station P5 (Gunung Segara). Latitude 0°32'12.83"S, longitude 117°08'48.47"E (of Greenwich).
      */
     public const EPSG_GUNUNG_SEGARA = 'urn:ogc:def:datum:EPSG::6613';
@@ -2417,7 +2416,7 @@ class Datum
      * Gunung Segara (Jakarta)
      * Type: Geodetic
      * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
-     * areas.
+     * areas
      * Station P5 (Gunung Segara) 0°32'12.83"S, 117°08'48.47"E (of Greenwich). Longitude 8°20'20.68"E (of Jakarta).
      */
     public const EPSG_GUNUNG_SEGARA_JAKARTA = 'urn:ogc:def:datum:EPSG::6820';
@@ -2425,7 +2424,7 @@ class Datum
     /**
      * Gusterberg (Ferro)
      * Type: Geodetic
-     * Extent: Austria - Upper Austria and Salzburg provinces. Czechia - Bohemia.
+     * Extent: Austria - Upper Austria and Salzburg provinces. Czechia - Bohemia
      * Fundamental point: Gusterberg. Latitude: 48°02'18.47"N, longitude: 31°48'15.05"E (of Ferro).
      */
     public const EPSG_GUSTERBERG_FERRO = 'urn:ogc:def:datum:EPSG::1188';
@@ -2434,7 +2433,7 @@ class Datum
      * HS2 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
-     * Crewe.
+     * Crewe
      * Defined through application of the HS2TN02 transformation to ETRS89 as realized through OSNet v2001 CORS.
      * Subsequently realized through application of the HS2TN15 transformation to ETRS89 as realized through OSNet
      * v2009 CORS.
@@ -2446,7 +2445,7 @@ class Datum
      * HS2 Vertical Reference Frame
      * Type: Vertical
      * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
-     * Crewe.
+     * Crewe
      * Equivalent to Ordnance Datum Newlyn as realized through OSNet v2001 and OSGM02.
      * After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the HS2 VRF is maintained equivalent
      * to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).
@@ -2456,7 +2455,7 @@ class Datum
     /**
      * HULLEE13 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.
+     * Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull
      * Defined through the application of the HULLEE13 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of the HULLEE13 Snake map
@@ -2467,7 +2466,7 @@ class Datum
     /**
      * Ha Tien 1960
      * Type: Vertical
-     * Extent: Cambodia - mainland onshore; Vietnam - mainland onshore.
+     * Extent: Cambodia - mainland onshore; Vietnam - mainland onshore
      * In Vietnam replaced by Hon Dau in 1992.
      */
     public const EPSG_HA_TIEN_1960 = 'urn:ogc:def:datum:EPSG::5125';
@@ -2482,7 +2481,7 @@ class Datum
     /**
      * Hartebeesthoek94
      * Type: Geodetic
-     * Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.
+     * Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore
      * Coincident with ITRF91 at epoch 1994.0 at Hartebeesthoek astronomical observatory near Pretoria.
      * Replaces Cape datum (code 6222).
      */
@@ -2498,7 +2497,7 @@ class Datum
     /**
      * Helsinki 1943
      * Type: Vertical
-     * Extent: Finland - onshore mainland south of approximately 66°N.
+     * Extent: Finland - onshore mainland south of approximately 66°N
      * MSL at Helsinki during 1943.
      * Uses orthometric heights. Effect of the land uplift during the 2nd national levelling was not taken into
      * account. Replaced by N60 (datum code 5116).
@@ -2508,7 +2507,7 @@ class Datum
     /**
      * Helsinki 1960
      * Type: Vertical
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore
      * MSL at Helsinki during 1960.
      * Uses orthometric heights. Replaced by N2000 (datum code 1030).
      */
@@ -2517,7 +2516,7 @@ class Datum
     /**
      * Herat North
      * Type: Geodetic
-     * Extent: Afghanistan.
+     * Extent: Afghanistan
      * Fundamental point: Herat North. Latitude: 34°23'09.08"N, longitude: 64°10'58.94"E (of Greenwich).
      */
     public const EPSG_HERAT_NORTH = 'urn:ogc:def:datum:EPSG::6255';
@@ -2525,7 +2524,7 @@ class Datum
     /**
      * High Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The highest water level reached at a place in one tidal cycle. When used on inland (non-tidal) waters it is
      * generally defined as a level which the daily mean water level exceeds less than 5% of the time.
@@ -2535,7 +2534,7 @@ class Datum
     /**
      * Higher High Water Large Tide
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average of the highest high waters, one from each of 19 years of observations.
      */
@@ -2544,7 +2543,7 @@ class Datum
     /**
      * Highest Astronomical Tide
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The highest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
@@ -2555,7 +2554,7 @@ class Datum
      * Hito XVIII 1963
      * Type: Geodetic
      * Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, onshore and offshore Atlantic west of
-     * 66°W.
+     * 66°W
      * Chile-Argentina boundary survey.
      * Used in Tierra del Fuego.
      */
@@ -2564,7 +2563,7 @@ class Datum
     /**
      * Hjorsey 1955
      * Type: Geodetic
-     * Extent: Iceland - mainland.
+     * Extent: Iceland - mainland
      * Fundamental point:  Latitude: 64°31'29.26"N, longitude: 22°22'05.84"W (of Greenwich).
      */
     public const EPSG_HJORSEY_1955 = 'urn:ogc:def:datum:EPSG::6658';
@@ -2572,7 +2571,7 @@ class Datum
     /**
      * Hon Dau 1992
      * Type: Vertical
-     * Extent: Vietnam - mainland onshore.
+     * Extent: Vietnam - mainland onshore
      * Replaces Ha Tien in Vietnam.
      */
     public const EPSG_HON_DAU_1992 = 'urn:ogc:def:datum:EPSG::5126';
@@ -2580,7 +2579,7 @@ class Datum
     /**
      * Hong Kong 1963
      * Type: Geodetic
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
      * Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by Hong Kong 1980.
@@ -2590,7 +2589,7 @@ class Datum
     /**
      * Hong Kong 1963(67)
      * Type: Geodetic
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
      * Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kong 1980.
@@ -2600,7 +2599,7 @@ class Datum
     /**
      * Hong Kong 1980
      * Type: Geodetic
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
      * Replaces Hong Kong 1963 and Hong Kong 1963(67).
@@ -2610,7 +2609,7 @@ class Datum
     /**
      * Hong Kong Chart Datum
      * Type: Vertical
-     * Extent: China - Hong Kong - offshore.
+     * Extent: China - Hong Kong - offshore
      * Approximates to Lowest Astronomic Tide level (LAT).
      * Chart datum is 0.15 metres below Hong Kong Principal Datum (code 5135) and 1.38m below MSL at Quarry Bay.
      */
@@ -2619,7 +2618,7 @@ class Datum
     /**
      * Hong Kong Geodetic
      * Type: Geodetic
-     * Extent: China - Hong Kong - onshore and offshore.
+     * Extent: China - Hong Kong - onshore and offshore
      * ITRF96 at epoch 1998.121
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch
      * 1998.121 and ignores subsequent tectonic plate motion.
@@ -2629,7 +2628,7 @@ class Datum
     /**
      * Hong Kong Principal Datum
      * Type: Vertical
-     * Extent: China - Hong Kong - onshore.
+     * Extent: China - Hong Kong - onshore
      * 1.23m below the mean of 19 years (1965-83) observations of tide levels at North Point, Victoria Harbour.
      */
     public const EPSG_HONG_KONG_PRINCIPAL_DATUM = 'urn:ogc:def:datum:EPSG::5135';
@@ -2637,7 +2636,7 @@ class Datum
     /**
      * Horta
      * Type: Vertical
-     * Extent: Portugal - central Azores - Faial island onshore.
+     * Extent: Portugal - central Azores - Faial island onshore
      * Mean Sea Level during 1935 at Horta.
      * Orthometric heights.
      */
@@ -2646,7 +2645,7 @@ class Datum
     /**
      * Hu Tzu Shan 1950
      * Type: Geodetic
-     * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.
+     * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands
      * Fundamental point: Hu Tzu Shan. Latitude: 23°58'32.34"N, longitude: 120°58'25.975"E (of Greenwich).
      */
     public const EPSG_HU_TZU_SHAN_1950 = 'urn:ogc:def:datum:EPSG::6236';
@@ -2654,7 +2653,7 @@ class Datum
     /**
      * Huahine SAU 2001
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Huahine.
+     * Extent: French Polynesia - Society Islands - Huahine
      * Fundamental benchmark: SHOM B3
      * Included as part of NGPF - see datum code 5195.
      */
@@ -2663,7 +2662,7 @@ class Datum
     /**
      * Hungarian Datum 1909
      * Type: Geodetic
-     * Extent: Hungary.
+     * Extent: Hungary
      * Fundamental point not given in information source, but presumably Szolohegy which is origin of later HD72.
      * Replaced earlier HD1863 adjustment also on Bessel ellipsoid. Both HD1863 and HD1909 were originally on Ferro
      * Prime Meridian but subsequently converted to Greenwich. Replaced by HD72 (datum code 6237).
@@ -2673,7 +2672,7 @@ class Datum
     /**
      * Hungarian Datum 1972
      * Type: Geodetic
-     * Extent: Hungary.
+     * Extent: Hungary
      * Fundamental point: Szolohegy. Latitude: 47°17'32,6156"N, longitude 19°36'09.9865"E (of Greenwich); geoid
      * height 6.56m.
      * Replaced Hungarian Datum 1909 (EPSG datum code 1024).
@@ -2683,7 +2682,7 @@ class Datum
     /**
      * IG05 Intermediate Datum
      * Type: Geodetic
-     * Extent: Israel - onshore; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Palestine Territory - onshore
      * Defined by transformation from IGD05 at epoch 2004.75.
      */
     public const EPSG_IG05_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1142';
@@ -2691,7 +2690,7 @@ class Datum
     /**
      * IG05/12 Intermediate Datum
      * Type: Geodetic
-     * Extent: Israel - onshore; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Palestine Territory - onshore
      * Defined by transformation from IGD05/12 at epoch 2012.00.
      */
     public const EPSG_IG05_12_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1144';
@@ -2699,7 +2698,7 @@ class Datum
     /**
      * IGC 1962 Arc of the 6th Parallel South
      * Type: Geodetic
-     * Extent: The Democratic Republic of the Congo (Zaire) - adjacent to 6th parallel south traverse.
+     * Extent: The Democratic Republic of the Congo (Zaire) - adjacent to 6th parallel south traverse
      * Coordinates of 3 stations determined with respect to Arc 1950: Mulungu 4°47'39.2325"S, 29°59'37.5864"E;
      * Nyakawembe 4°14'57.3618"S, 29°42'52.8032"E; Kavula 4°35'15.8634"S, 29°41'14.2693"E (all longitude w.r.t.
      * Greenwich).
@@ -2709,7 +2708,7 @@ class Datum
     /**
      * IGN 1962 Kerguelen
      * Type: Geodetic
-     * Extent: French Southern Territories - Kerguelen onshore.
+     * Extent: French Southern Territories - Kerguelen onshore
      * K0 1949.
      */
     public const EPSG_IGN_1962_KERGUELEN = 'urn:ogc:def:datum:EPSG::6698';
@@ -2717,7 +2716,7 @@ class Datum
     /**
      * IGN 1966
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Tahiti.
+     * Extent: French Polynesia - Society Islands - Tahiti
      * Fundamental benchmark: RN501
      * Included as part of NGPF - see datum code 5195.
      */
@@ -2726,7 +2725,7 @@ class Datum
     /**
      * IGN 1988 LS
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - Les Saintes.
+     * Extent: Guadeloupe - onshore - Les Saintes
      * Mean sea level 1984 at Terre de Haut. Origin = marker O de -5 with defined height of 1.441m above msl. IGN 1988
      * LS height 0.00m is 0.46m above 1987 sounding datum; this approximately corresponds with msl at Pointe-à-Pitre
      * (see datum code 5155, CRS 5757).
@@ -2737,7 +2736,7 @@ class Datum
     /**
      * IGN 1988 MG
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - Marie-Galante.
+     * Extent: Guadeloupe - onshore - Marie-Galante
      * Mean sea level 1987 at Grand-Bourg. Origin = marker M0-I with defined height of 0.832m above msl. IGN 1988 MG
      * height 0.00m is 0.46m above 1987 sounding datum; this approximately corresponds with msl at Pointe-à-Pitre (see
      * datum code 5155, CRS code 5757).
@@ -2748,7 +2747,7 @@ class Datum
     /**
      * IGN 1988 SB
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - St Barthelemy island.
+     * Extent: Guadeloupe - onshore - St Barthelemy island
      * Mean sea level 1988 at port of Gustavia. Origin = marker A.ef-2 with defined height of 0.621m above msl. IGN
      * 1988 SB height 0.00m deduced to be 0.201m above mean sea level at Pointe-à-Pitre.
      * Orthometric heights.
@@ -2758,7 +2757,7 @@ class Datum
     /**
      * IGN 1988 SM
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - St Martin island.
+     * Extent: Guadeloupe - onshore - St Martin island
      * Mean sea level 1949-1950 deduced at Fort Marigot. Origin = marker AS-13 with defined height of 6.990m above msl.
      * IGN 1988 SM height 0.00m deduced to be 0.41m above sounding datum.
      * Orthometric heights.
@@ -2768,7 +2767,7 @@ class Datum
     /**
      * IGN 1992 LD
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - La Desirade.
+     * Extent: Guadeloupe - onshore - La Desirade
      * Mean sea level at Pointe-à-Pitre. Origin = marker A with defined height of 0.792m above msl. IGN 1992 LD height
      * 0.00m is 0.629m above sounding datum at Pointe-à-Pitre.
      * Orthometric heights. Replaced by IGN 2008 LD (datum code 1250).
@@ -2778,7 +2777,7 @@ class Datum
     /**
      * IGN 2008 LD
      * Type: Vertical
-     * Extent: Guadeloupe - onshore - La Desirade.
+     * Extent: Guadeloupe - onshore - La Desirade
      * Mean sea level at Pointe-à-Pitre. Origin = IGN Marker 20A with defined height of 0.50 m above msl of 1987.
      * Orthometric heights. Replaces IGN 1992 LD (datum code 5212).
      */
@@ -2787,7 +2786,7 @@ class Datum
     /**
      * IGN Astro 1960
      * Type: Geodetic
-     * Extent: Mauritania - onshore.
+     * Extent: Mauritania - onshore
      * Realised through a set of independent astronomically-positioned points.
      * Observed during 1959-1960. Independent points not connected through a network. Relative accuracy estimated at
      * 50-100m. Replaced by Mauritania 1999 (datum code 6702).
@@ -2797,7 +2796,7 @@ class Datum
     /**
      * IGN53 Mare
      * Type: Geodetic
-     * Extent: New Caledonia - Loyalty Islands - Mare.
+     * Extent: New Caledonia - Loyalty Islands - Mare
      * South-east end of the La Roche base.
      */
     public const EPSG_IGN53_MARE = 'urn:ogc:def:datum:EPSG::6641';
@@ -2805,7 +2804,7 @@ class Datum
     /**
      * IGN56 Lifou
      * Type: Geodetic
-     * Extent: New Caledonia - Loyalty Islands - Lifou.
+     * Extent: New Caledonia - Loyalty Islands - Lifou
      * South end of the Goume base.
      */
     public const EPSG_IGN56_LIFOU = 'urn:ogc:def:datum:EPSG::6633';
@@ -2813,7 +2812,7 @@ class Datum
     /**
      * IGN63 Hiva Oa
      * Type: Geodetic
-     * Extent: French Polynesia - Marquesas Islands - Hiva Oa and Tahuata.
+     * Extent: French Polynesia - Marquesas Islands - Hiva Oa and Tahuata
      * Fundamental point: Atuona. Latitude: 9°48'27.20"S, longitude: 139°02'15.45"W (of Greenwich).
      * Replaced by RGPF (datum code 6687).
      */
@@ -2822,7 +2821,7 @@ class Datum
     /**
      * IGN72 Grande Terre
      * Type: Geodetic
-     * Extent: New Caledonia - Grande Terre.
+     * Extent: New Caledonia - Grande Terre
      * North end of Gomen base.
      */
     public const EPSG_IGN72_GRANDE_TERRE = 'urn:ogc:def:datum:EPSG::6634';
@@ -2830,7 +2829,7 @@ class Datum
     /**
      * IGN72 Nuku Hiva
      * Type: Geodetic
-     * Extent: French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou.
+     * Extent: French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou
      * Fundamental point: Taiohae. Latitude: 8°55'03.97"S, longitude: 140°05'36.24"W (of Greenwich).
      * Replaced by RGPF (datum code 6687).
      */
@@ -2839,7 +2838,7 @@ class Datum
     /**
      * IGS00
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF2000 at epoch 1998.00 through a subset of 54 stable IGS station coordinates. Preserves the ITRF
      * origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
      * Used for IGS products from GPS week 1143 through GPS week 1252 (2001-12-02 through 2004-01-10). Replaces IGS97,
@@ -2850,7 +2849,7 @@ class Datum
     /**
      * IGS05
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF2005 at epoch 2000.00 through a subset of 139 stable IGS station coordinates. Preserves the
      * ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic
      * techniques.
@@ -2862,7 +2861,7 @@ class Datum
     /**
      * IGS08
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF2008 at epoch 2005.00 through a subset of 232 stable IGS station coordinates. Preserves the
      * ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic
      * techniques.
@@ -2874,7 +2873,7 @@ class Datum
     /**
      * IGS14
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF2014 at epoch 2010.00 through a subset of 252 stable IGS station coordinates. Preserves the
      * ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic
      * techniques.
@@ -2886,7 +2885,7 @@ class Datum
     /**
      * IGS20
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * A subset of 332 stable, well-performing IGS stations from ITRF2020.
      * Used for IGS products from GPS week 2238 (2022-11-27). Replaces IGb14. Compared to IGb14, IGS20 contains 98 new
      * stations, mostly in previously sparsely covered areas, but with 25 IGb14 sites removed. For all practical
@@ -2897,7 +2896,7 @@ class Datum
     /**
      * IGS97
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF97 at epoch 1997.00 through a subset of stable IGS station coordinates. Preserves the ITRF
      * origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
      * Used for IGS products from GPS week 1065 through GPS week 1142 (2000-06-04 to 2001-12-01). Replaced by IGS00.
@@ -2908,7 +2907,7 @@ class Datum
     /**
      * IGb00
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF2000 at epoch 1998.00 through a subset of 99 stable IGS station coordinates. Preserves the ITRF
      * origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
      * Used for IGS products from GPS week 1253 through GPS week 1399 (2004-01-11 to 2006-11-04). Replaces IGS00,
@@ -2919,7 +2918,7 @@ class Datum
     /**
      * IGb08
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Derived from ITRF2008 at epoch 2005.00 through a subset of 232 stable IGS station coordinates. Preserves the
      * ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic
      * techniques.
@@ -2931,7 +2930,7 @@ class Datum
     /**
      * IGb14
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Daily IGS combined operational solutions of GPS weeks 730 to 2092. IGb14 is aligned in origin, scale and
      * orientation to IGS14 via a subset of 233 selected stations. As IGS14 is aligned to ITRF2014, IGb14 is also
      * aligned to ITRF2014.
@@ -2944,7 +2943,7 @@ class Datum
     /**
      * IRENET95
      * Type: Geodetic
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * ETRS89 stations in Ireland
      * Densification of ETRS89.
      */
@@ -2953,7 +2952,7 @@ class Datum
     /**
      * Ibiza
      * Type: Vertical
-     * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+     * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore
      * Mean Sea Level at Ibiza harbour between January 2003 and December 2005.
      * Orthometric heights.
      */
@@ -2962,7 +2961,7 @@ class Datum
     /**
      * Incheon
      * Type: Vertical
-     * Extent: Republic of Korea (South Korea) - mainland onshore.
+     * Extent: Republic of Korea (South Korea) - mainland onshore
      * MSL 1913-1916 at Incheon Bay.
      */
     public const EPSG_INCHEON = 'urn:ogc:def:datum:EPSG::1049';
@@ -2970,7 +2969,7 @@ class Datum
     /**
      * Indian 1954
      * Type: Geodetic
-     * Extent: Myanmar (Burma) - onshore; Thailand - onshore.
+     * Extent: Myanmar (Burma) - onshore; Thailand - onshore
      * Extension of Kalianpur 1937 over Myanmar and Thailand.
      */
     public const EPSG_INDIAN_1954 = 'urn:ogc:def:datum:EPSG::6239';
@@ -2978,7 +2977,7 @@ class Datum
     /**
      * Indian 1960
      * Type: Geodetic
-     * Extent: Cambodia - onshore; Vietnam - onshore and offshore Cuu Long basin.
+     * Extent: Cambodia - onshore; Vietnam - onshore and offshore Cuu Long basin
      * DMA extension over IndoChina of the Indian 1954 network adjusted  to better fit local geoid.
      * Also known as Indian (DMA Reduced).
      */
@@ -2987,7 +2986,7 @@ class Datum
     /**
      * Indian 1975
      * Type: Geodetic
-     * Extent: Thailand - onshore plus offshore Gulf of Thailand.
+     * Extent: Thailand - onshore plus offshore Gulf of Thailand
      * Fundamental point: Khau Sakaerang.
      */
     public const EPSG_INDIAN_1975 = 'urn:ogc:def:datum:EPSG::6240';
@@ -2995,7 +2994,7 @@ class Datum
     /**
      * Indian Spring Low Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The level below MSL equal to the sum of the amplitudes of the harmonic constituents M2, S2, K1 and O1. It
      * approximates mean lower low water spring tides (MLLWS).
@@ -3005,7 +3004,7 @@ class Datum
     /**
      * Indonesian Datum 1974
      * Type: Geodetic
-     * Extent: Indonesia - onshore.
+     * Extent: Indonesia - onshore
      * Fundamental point: Padang. Latitude: 0°56'38.414"S, longitude: 100°22' 8.804"E (of Greenwich). Ellipsoidal
      * height 3.190m, gravity-related height 14.0m above mean sea level.
      * Replaced by DGN95.
@@ -3015,7 +3014,7 @@ class Datum
     /**
      * Indonesian Geoid 2020 version 1
      * Type: Vertical
-     * Extent: Indonesia - onshore and offshore.
+     * Extent: Indonesia - onshore and offshore
      * Defined by INAGeoid2020 gravimetric geoid model v1 applied to SRGI2013.
      * Uses gravity data observed to 2019 fitted to control points on Java and Bali.
      */
@@ -3024,7 +3023,7 @@ class Datum
     /**
      * Indonesian Geoid 2020 version 2
      * Type: Vertical
-     * Extent: Indonesia - onshore and offshore.
+     * Extent: Indonesia - onshore and offshore
      * Defined by INAGeoid2020 gravimetric geoid model v2 applied to SRGI2013.
      * Uses gravity data observed to 2021 fitted to tide gauge benchmarks across Indonesia.
      */
@@ -3033,7 +3032,7 @@ class Datum
     /**
      * Instantaneous Water Level
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Instantaneous water level uncorrected for tide.
      * Not specific to any location or epoch.
      */
@@ -3051,7 +3050,7 @@ class Datum
     /**
      * International Great Lakes Datum 1955
      * Type: Vertical
-     * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
+     * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway
      * Mean water level 1941-1956 at Pointe-au-Père (Father's Point), Quebec. Benchmark 1248-G = 3.794m.
      * Dynamic heights. Adopted in 1962. Replaced by IGLD 1985 in January 1992.
      */
@@ -3060,7 +3059,7 @@ class Datum
     /**
      * International Great Lakes Datum 1985
      * Type: Vertical
-     * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.
+     * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway
      * Mean water level 1970-1983 at Pointe-au-Père (Father's Point) and 1984-1988 at Rimouski, Quebec. Benchmark
      * 1250-G = 6.273m.
      * Dynamic heights. Replaces IGLD 1955 from January 1992.
@@ -3070,7 +3069,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1988
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS).
      * Realization of the IERS Terrestrial Reference System (ITRS) at epoch 1988.0. Replaced by ITRF89 (code 6648).
@@ -3080,7 +3079,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1989
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from April 1991. Replaces ITRF88 (code 6647).
@@ -3091,7 +3090,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1990
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from December 1991. Replaces ITRF89 (code 6648).
@@ -3102,7 +3101,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1991
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from October 1992. Replaces ITRF90 (code 6649).
@@ -3113,7 +3112,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1992
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 287
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from October 1993. Replaces ITRF91 (code 6650).
@@ -3124,7 +3123,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1993
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1993.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from October 1994. Replaces ITRF92 (code 6651).
@@ -3135,7 +3134,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1994
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1993.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from March 1996. Replaces ITRF93 (code 6652).
@@ -3146,7 +3145,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1996
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1997.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from May 1998. Replaces ITRF94 (code 6653). Replaced
@@ -3157,7 +3156,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 1997
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1997.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from May 1999. Replaces ITRF96 (code 6654). Replaced
@@ -3168,7 +3167,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 2000
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of
      * 3-dimensional Cartesian station coordinates (SCS) for epoch 1997.0.
      * Realization of the IERS Terrestrial Reference System (ITRS) from 2004. Replaces ITRF97 (code 6655). Replaced by
@@ -3179,7 +3178,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 2005
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre, originally orientated to the BIH Terrestrial System at epoch 1984.0 then adjusted to ensure
      * zero net rotation to earth's overall tectonic motion. Defined by time series of Cartesian station coordinates
      * for epoch 2000.0.
@@ -3191,7 +3190,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 2008
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre. The ITRF2008 origin is defined in such a way that there are null translation parameters at
      * epoch 2005.0 and null translation rates between the ITRF2008 and the ILRS SLR time series.
      * Realization of the IERS Terrestrial Reference System (ITRS) from 2012. Replaces ITRF2005 (code 6896).
@@ -3201,7 +3200,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 2014
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2010.0. Zero scale and scale rate between
      * ITRF2014 and the average of VLBI and SLR scales/rates. Orientation = ITRF2008@ 2010.0 with zero rotation rates
      * between the ITRF2014 and ITRF2008.
@@ -3213,7 +3212,7 @@ class Datum
     /**
      * International Terrestrial Reference Frame 2020
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between
      * ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates
      * between the ITRF2020 and ITRF2014.
@@ -3225,7 +3224,7 @@ class Datum
     /**
      * Iraq-Kuwait Boundary Datum 1992
      * Type: Geodetic
-     * Extent: Iraq - Kuwait boundary.
+     * Extent: Iraq - Kuwait boundary
      * Four stations established between September and December 1991 determined by GPS and Doppler observations.
      */
     public const EPSG_IRAQ_KUWAIT_BOUNDARY_DATUM_1992 = 'urn:ogc:def:datum:EPSG::6667';
@@ -3233,7 +3232,7 @@ class Datum
     /**
      * Iraqi Geospatial Reference System
      * Type: Geodetic
-     * Extent: Iraq - onshore and offshore.
+     * Extent: Iraq - onshore and offshore
      * ITRF2000 at epoch 1997.0.
      */
     public const EPSG_IRAQI_GEOSPATIAL_REFERENCE_SYSTEM = 'urn:ogc:def:datum:EPSG::1029';
@@ -3241,7 +3240,7 @@ class Datum
     /**
      * Islands Net 1993
      * Type: Geodetic
-     * Extent: Iceland - onshore and offshore.
+     * Extent: Iceland - onshore and offshore
      * ITRF93 at epoch 1993.6.
      * Replaced by ISN2004 (datum code 1060).
      */
@@ -3250,7 +3249,7 @@ class Datum
     /**
      * Islands Net 2004
      * Type: Geodetic
-     * Extent: Iceland - onshore and offshore.
+     * Extent: Iceland - onshore and offshore
      * ITRF2000 at epoch 2004.6.
      * Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).
      */
@@ -3259,7 +3258,7 @@ class Datum
     /**
      * Islands Net 2016
      * Type: Geodetic
-     * Extent: Iceland - onshore and offshore.
+     * Extent: Iceland - onshore and offshore
      * ITRF2014 at epoch 2016.5.
      * Replaces ISN2004 from September 2017.
      */
@@ -3268,7 +3267,7 @@ class Datum
     /**
      * Israel 1993
      * Type: Geodetic
-     * Extent: Israel - onshore; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Palestine Territory - onshore
      * Fundamental point:  Latitude: 31°44'03.817"N, longitude: 35°12'16.261"E (of Greenwich).
      * Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).
      */
@@ -3277,7 +3276,7 @@ class Datum
     /**
      * Israeli Geodetic Datum 2005
      * Type: Geodetic
-     * Extent: Israel - onshore and offshore.
+     * Extent: Israel - onshore and offshore
      * Defined by coordinates of 13 Active Positioning Network (APN) stations in ITRF2000 at epoch 2004.75. A further
      * five APN stations were added in 2006.
      * Replaces Israel 1993 (datum code 6141). Replaced by IGD05/12 (datum code 1115).
@@ -3287,7 +3286,7 @@ class Datum
     /**
      * Israeli Geodetic Datum 2005(2012)
      * Type: Geodetic
-     * Extent: Israel - onshore and offshore.
+     * Extent: Israel - onshore and offshore
      * Datum updated in 2012 with four APN stations removed from definition. Coordinate epoch remains ITRF2000 at epoch
      * 2004.75.
      * Replaces IGD05 (datum code 1114).
@@ -3297,7 +3296,7 @@ class Datum
     /**
      * Istituto Geografico Militaire 1995
      * Type: Geodetic
-     * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+     * Extent: Italy - onshore and offshore; San Marino, Vatican City State
      * Densification of ETRF89 in Italy. Network of 1296 points observed 1992-1995 adjusted in 1996 constrained to 9
      * ETRF89 points at epoch 1989.0. By April 2021 the framework was composed of 3104 points of the fundamental
      * network and 3819 densification points.
@@ -3308,7 +3307,7 @@ class Datum
     /**
      * Iwo Jima 1945
      * Type: Geodetic
-     * Extent: Japan - Iwo Jima island.
+     * Extent: Japan - Iwo Jima island
      * Fundamental point: Beacon "E".
      */
     public const EPSG_IWO_JIMA_1945 = 'urn:ogc:def:datum:EPSG::6709';
@@ -3316,7 +3315,7 @@ class Datum
     /**
      * Jamaica 1875
      * Type: Geodetic
-     * Extent: Jamaica - onshore.
+     * Extent: Jamaica - onshore
      * Fundamental point: Fort Charles Flagstaff. Latitude: 17°55'55.800"N, longitude: 76°56'37.260"W (of Greenwich).
      */
     public const EPSG_JAMAICA_1875 = 'urn:ogc:def:datum:EPSG::6241';
@@ -3324,7 +3323,7 @@ class Datum
     /**
      * Jamaica 1969
      * Type: Geodetic
-     * Extent: Jamaica - onshore.
+     * Extent: Jamaica - onshore
      * Fundamental point: Fort Charles Flagstaff. Latitude: 17°55'55.800"N, longitude: 76°56'37.260"W (of Greenwich).
      */
     public const EPSG_JAMAICA_1969 = 'urn:ogc:def:datum:EPSG::6242';
@@ -3332,7 +3331,7 @@ class Datum
     /**
      * Jamaica 2001
      * Type: Geodetic
-     * Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.
+     * Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays
      * Aligned to WGS 84.
      */
     public const EPSG_JAMAICA_2001 = 'urn:ogc:def:datum:EPSG::6758';
@@ -3340,7 +3339,7 @@ class Datum
     /**
      * Jamestown 1971
      * Type: Vertical
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * MSL at Jamestown 1971 defined through elevation of triangulation station Astro DOS 71/4 Ladder Hill Fort being
      * 267.858 metres above MSL.
      */
@@ -3349,7 +3348,7 @@ class Datum
     /**
      * Japanese Geodetic Datum 2000
      * Type: Geodetic
-     * Extent: Japan - onshore and offshore.
+     * Extent: Japan - onshore and offshore
      * ITRF94 at epoch 1997.0. Fundamental point: Tokyo-Taisho, latitude: 35°39'29.1572"N, longitude:
      * 139°44'28.8759"E (of Greenwich).
      * Instigated under amendment to the Japanese Surveying Law with effect from April 2002. Replaces Tokyo datum (code
@@ -3360,7 +3359,7 @@ class Datum
     /**
      * Japanese Geodetic Datum 2000 (vertical)
      * Type: Vertical
-     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu
      * 24.4140 metres above mean sea level Tokyo Bay.
      * Orthometric heights. Replaces JSLD69 and JSLD72 with effect from April 2002. Replaced by JGD2011 (vertical)
      * (datum code 1131) with effect from 21st October 2011.
@@ -3370,7 +3369,7 @@ class Datum
     /**
      * Japanese Geodetic Datum 2011
      * Type: Geodetic
-     * Extent: Japan - onshore and offshore.
+     * Extent: Japan - onshore and offshore
      * ITRF94 at epoch 1997.0 except for northern Honshu area impacted by 2011 Tohoku earthquake which is ITRF2008 at
      * epoch 2011.395. Fundamental point: Tokyo-Taisho, latitude: 35°39'29.1572"N, longitude: 139°44'28.8869"E (of
      * Greenwich).
@@ -3382,7 +3381,7 @@ class Datum
     /**
      * Japanese Geodetic Datum 2011 (vertical)
      * Type: Vertical
-     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.
+     * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu
      * 24.3900 metres above mean sea level Tokyo Bay.
      * Orthometric heights. Replaces JGD2000 (vertical) (datum code 1130) with effect from 21st October 2011.
      */
@@ -3391,7 +3390,7 @@ class Datum
     /**
      * Japanese Standard Levelling Datum 1969
      * Type: Vertical
-     * Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu.
+     * Extent: Japan - onshore mainland - Honshu, Shikoku, Kyushu
      * 24.4140 metres above mean sea level Tokyo Bay.
      * Normal-orthometric heights. Replaces JSLD49. Replaced by JGD2000 (vertical) (datum code 1130) from April 2002.
      */
@@ -3400,7 +3399,7 @@ class Datum
     /**
      * Japanese Standard Levelling Datum 1972
      * Type: Vertical
-     * Extent: Japan - onshore mainland - Hokkaido.
+     * Extent: Japan - onshore mainland - Hokkaido
      * Mean sea level Oshoro 1963-72.
      * Normal-orthometric heights. Replaced by JGD2000 (vertical) (datum code 1130) with effect from April 2002.
      */
@@ -3416,7 +3415,7 @@ class Datum
     /**
      * Jouik 1961
      * Type: Geodetic
-     * Extent: Mauritania - coastal area north of Cape Timiris.
+     * Extent: Mauritania - coastal area north of Cape Timiris
      * Replaced by Mauritania 1999 (datum code 6702).
      */
     public const EPSG_JOUIK_1961 = 'urn:ogc:def:datum:EPSG::6679';
@@ -3424,7 +3423,7 @@ class Datum
     /**
      * KOC Construction Datum
      * Type: Vertical
-     * Extent: Kuwait - onshore.
+     * Extent: Kuwait - onshore
      * Approximately 1.52m below MSL. Created for the construction of the Mina al Ahmadi refinery.
      */
     public const EPSG_KOC_CONSTRUCTION_DATUM = 'urn:ogc:def:datum:EPSG::5188';
@@ -3432,7 +3431,7 @@ class Datum
     /**
      * KOC Well Datum
      * Type: Vertical
-     * Extent: Kuwait - onshore.
+     * Extent: Kuwait - onshore
      * Approximately 3.22m above MSL.
      */
     public const EPSG_KOC_WELL_DATUM = 'urn:ogc:def:datum:EPSG::5187';
@@ -3440,7 +3439,7 @@ class Datum
     /**
      * Kalianpur 1880
      * Type: Geodetic
-     * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar (Burma) - onshore; Pakistan - onshore.
+     * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar (Burma) - onshore; Pakistan - onshore
      * Fundamental point: Kalianpur. Latitude: 24°07'11.260"N, longitude: 77°39'17.570"E (of Greenwich).
      * Includes 1916 extension into Burma (Myanmar). Replaced by 1937 adjustment.
      */
@@ -3450,7 +3449,7 @@ class Datum
      * Kalianpur 1937
      * Type: Geodetic
      * Extent: Bangladesh - onshore; India - mainland onshore; Myanmar - onshore and Moattama area offshore; Pakistan -
-     * onshore.
+     * onshore
      * Fundamental point: Kalianpur. Latitude: 24° 07'11.260"N, longitude: 77°39'17.570"E (of Greenwich).
      * Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh and Pakistan by 1962 metrication
      * conversion and in India by 1975 metrication conversion.
@@ -3460,7 +3459,7 @@ class Datum
     /**
      * Kalianpur 1962
      * Type: Geodetic
-     * Extent: Pakistan - onshore and offshore.
+     * Extent: Pakistan - onshore and offshore
      * Fundamental point: Kalianpur. Latitude: 24° 07'11.260"N, longitude: 77°39'17.570"E (of Greenwich).
      * 1937 adjustment rescaled by ratio metric conversions of Indian foot (1937) to Indian foot (1962).
      */
@@ -3469,7 +3468,7 @@ class Datum
     /**
      * Kalianpur 1975
      * Type: Geodetic
-     * Extent: India - mainland onshore.
+     * Extent: India - mainland onshore
      * Fundamental point: Kalianpur. Latitude: 24° 07'11.260"N, longitude: 77°39'17.570"E (of Greenwich).
      * 1937 adjustment rescaled by ratio metric conversions of Indian foot (1937) to Indian foot (1975).
      */
@@ -3478,7 +3477,7 @@ class Datum
     /**
      * Kandawala
      * Type: Geodetic
-     * Extent: Sri Lanka - onshore.
+     * Extent: Sri Lanka - onshore
      * Fundamental point: Kandawala. Latitude: 7°14'06.838"N, longitude: 79°52'36.670"E.
      */
     public const EPSG_KANDAWALA = 'urn:ogc:def:datum:EPSG::6244';
@@ -3486,7 +3485,7 @@ class Datum
     /**
      * Karbala 1979
      * Type: Geodetic
-     * Extent: Iraq - onshore.
+     * Extent: Iraq - onshore
      * Fundamental point: Karbala. Latitude: 32°34'14.4941"N, longitude: 44°00'49.6379"E.
      * National geodetic network established by Polservice consortium.
      */
@@ -3495,7 +3494,7 @@ class Datum
     /**
      * Kartastokoordinaattijarjestelma (1966)
      * Type: Geodetic
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore
      * Adjustment with fundamental point SF31 based on ED50 transformed to best fit the older VVJ adjustment.
      * Adopted in 1970.
      */
@@ -3504,7 +3503,7 @@ class Datum
     /**
      * Kasai 1953
      * Type: Geodetic
-     * Extent: The Democratic Republic of the Congo (Zaire) - Kasai - south of 5°S and east of 21°30'E.
+     * Extent: The Democratic Republic of the Congo (Zaire) - Kasai - south of 5°S and east of 21°30'E
      * Two stations of the Katanga triangulation with ellipsoid change applied: Kabila, latitude 6°58'34.023"S,
      * longitude 23°50'24.028"E (of Greenwich); and Gandajika NW base, latitude 6°45'01.057"S, longitude
      * 23°57'03.038"E (of Greenwich).
@@ -3515,7 +3514,7 @@ class Datum
     /**
      * Katanga 1955
      * Type: Geodetic
-     * Extent: The Democratic Republic of the Congo (Zaire) - Katanga.
+     * Extent: The Democratic Republic of the Congo (Zaire) - Katanga
      * Fundamental point: Tshinsenda A. Latitude: 12°30'31.568"S, longitude: 28°01'02.971"E (of Greenwich).
      * Replaces earlier adjustments.
      */
@@ -3524,7 +3523,7 @@ class Datum
     /**
      * Kertau (RSO)
      * Type: Geodetic
-     * Extent: Malaysia - West Malaysia; Singapore.
+     * Extent: Malaysia - West Malaysia; Singapore
      * Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncation of the Sears 1922 ratio.
      */
     public const EPSG_KERTAU_RSO = 'urn:ogc:def:datum:EPSG::6751';
@@ -3532,7 +3531,7 @@ class Datum
     /**
      * Kertau 1968
      * Type: Geodetic
-     * Extent: Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore.
+     * Extent: Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore
      * Fundamental point: Kertau. Latitude: 3°27'50.710"N, longitude: 102°37'24.550"E (of Greenwich).
      * Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 inches per metre. Not used for
      * 1969 metrication of RSO grid - see Kertau (RSO) (code 6751).
@@ -3542,7 +3541,7 @@ class Datum
     /**
      * Kingdom of Saudi Arabia Geodetic Reference Frame 2017
      * Type: Geodetic
-     * Extent: Saudi Arabia - onshore and offshore.
+     * Extent: Saudi Arabia - onshore and offshore
      * ITRF2014 at epoch 2017.00.
      * Realized by 333 GNSS stations in Saudi Arabia aligned to ITRF2014 through core network of 46 stations adjusted
      * to 15 IGS stations.
@@ -3552,7 +3551,7 @@ class Datum
     /**
      * Kingdom of Saudi Arabia Vertical Reference Frame Jeddah 2014
      * Type: Vertical
-     * Extent: Saudi Arabia - onshore.
+     * Extent: Saudi Arabia - onshore
      * Jeddah tide gauge bench mark TGBM-B height of 1.7446m at 2014.75.
      */
     public const EPSG_KINGDOM_OF_SAUDI_ARABIA_VERTICAL_REFERENCE_FRAME_JEDDAH_2014 = 'urn:ogc:def:datum:EPSG::1269';
@@ -3560,7 +3559,7 @@ class Datum
     /**
      * Kiunga
      * Type: Vertical
-     * Extent: Papua New Guinea - onshore south of 5°S and west of 144°E.
+     * Extent: Papua New Guinea - onshore south of 5°S and west of 144°E
      * PSM 9465 at Kiunga Airport. Propagated through bilinear interpolation of EGM2008 geoid model (transformation
      * code 3858) reduced to PSM 9465 by offset of -3.0m.
      */
@@ -3569,7 +3568,7 @@ class Datum
     /**
      * Korean Datum 1985
      * Type: Geodetic
-     * Extent: Republic of Korea (South Korea) - onshore.
+     * Extent: Republic of Korea (South Korea) - onshore
      * Fundamental point: Suwon. Latitude 37°16'31.9034"N, longitude 127°03'05.1451"E of Greenwich. This is
      * consistent with the Tokyo 1918 datum latitude and longitude.
      * Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
@@ -3586,7 +3585,7 @@ class Datum
     /**
      * Kosovo Reference System 2001
      * Type: Geodetic
-     * Extent: Kosovo.
+     * Extent: Kosovo
      * Densification of ETRF97 in Kosovo at epoch 2001.25.
      * First order network of 32 stations connected to 8 EUREF Permanant Network (EPN) stations observed march-April
      * 2001. Densified in 2012.
@@ -3596,7 +3595,7 @@ class Datum
     /**
      * Kousseri
      * Type: Geodetic
-     * Extent: Cameroon - N'Djamena area.
+     * Extent: Cameroon - N'Djamena area
      * IGN astronomical station Dabanga; 11°55'05.9"N  14°38'40.8"E (of Greenwich).
      */
     public const EPSG_KOUSSERI = 'urn:ogc:def:datum:EPSG::6198';
@@ -3604,7 +3603,7 @@ class Datum
     /**
      * Kumul 34
      * Type: Vertical
-     * Extent: Papua New Guinea - Papuan fold and thrust belt.
+     * Extent: Papua New Guinea - Papuan fold and thrust belt
      * Kumul Platform Station 34. Propagated through bilinear interpolation of EGM96 geoid model (transformation code
      * 10084) reduced to Kumul 34 by offset of -0.87m.
      */
@@ -3620,7 +3619,7 @@ class Datum
     /**
      * Kuwait Oil Company
      * Type: Geodetic
-     * Extent: Kuwait - onshore.
+     * Extent: Kuwait - onshore
      * Fundamental point: K28.  Latitude: 29°03'42.348"N, longitude: 48°08'42.558"E (of Greenwich).
      */
     public const EPSG_KUWAIT_OIL_COMPANY = 'urn:ogc:def:datum:EPSG::6246';
@@ -3628,7 +3627,7 @@ class Datum
     /**
      * Kuwait PWD
      * Type: Vertical
-     * Extent: Kuwait - onshore.
+     * Extent: Kuwait - onshore
      * Mean Low Low Water (MLLW) at Kuwait City.
      * Approximately 1.03m below MSL.
      */
@@ -3644,7 +3643,7 @@ class Datum
     /**
      * Kyrgyzstan Geodetic Datum 2006
      * Type: Geodetic
-     * Extent: Kyrgyzstan.
+     * Extent: Kyrgyzstan
      * 6 stations of the Kyrgyzstan zero-order network tied to ITRF2005 at epoch 2006.70.
      * The accuracy in the connection to ITRF2005 is estimated to be 5 mm in horizontal and 10-20 mm in height (95%
      * confidence).
@@ -3654,7 +3653,7 @@ class Datum
     /**
      * La Canoa
      * Type: Geodetic
-     * Extent: Venezuela - onshore.
+     * Extent: Venezuela - onshore
      * Fundamental point: La Canoa. Latitude: 8°34'17.170"N, longitude: 63°51'34.880"W (of Greenwich).
      * Origin and network incorporated within PSAD56 (datum code 6248).
      */
@@ -3663,7 +3662,7 @@ class Datum
     /**
      * La Gomera
      * Type: Vertical
-     * Extent: Spain - Canary Islands - La Gomera onshore.
+     * Extent: Spain - Canary Islands - La Gomera onshore
      * Mean Sea Level at San Sebastian de la Gomera harbour.
      * Orthometric heights.
      */
@@ -3672,7 +3671,7 @@ class Datum
     /**
      * La Palma
      * Type: Vertical
-     * Extent: Spain - Canary Islands - La Palma onshore.
+     * Extent: Spain - Canary Islands - La Palma onshore
      * Mean Sea Level at Santa Cruz de la Palma harbour in 1997.
      * Orthometric heights.
      */
@@ -3681,7 +3680,7 @@ class Datum
     /**
      * Lagos 1955
      * Type: Vertical
-     * Extent: Nigeria - onshore.
+     * Extent: Nigeria - onshore
      * Mean sea level at Lagos, 1912-1928.
      */
     public const EPSG_LAGOS_1955 = 'urn:ogc:def:datum:EPSG::5194';
@@ -3689,7 +3688,7 @@ class Datum
     /**
      * Lake
      * Type: Geodetic
-     * Extent: Venezuela - Lake Maracaibo area, onshore and offshore in lake.
+     * Extent: Venezuela - Lake Maracaibo area, onshore and offshore in lake
      * Fundamental point: Maracaibo Cathedral. Latitude: 10°38'34.678"N, longitude: 71°36'20.224"W (of Greenwich).
      */
     public const EPSG_LAKE = 'urn:ogc:def:datum:EPSG::6249';
@@ -3697,7 +3696,7 @@ class Datum
     /**
      * Landeshohennetz 1995
      * Type: Vertical
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Origin at Repere Pierre du Niton (RPN) defined as 373.6 metres above msl. This value derived from msl at
      * Marseille in 1897 through the French Lallemand network.
      * Orthometric heights. For scientific purposes only, replaces LN02.
@@ -3707,7 +3706,7 @@ class Datum
     /**
      * Landesnivellement 1902
      * Type: Vertical
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * Origin at Repere Pierre du Niton (RPN) defined as 373.6 metres above msl. This value derived from msl at
      * Marseille in 1897 through the French Lallemand network.
      * Levelling observations not corrected for gravity field. For scientific purposes, replaced by LHHN95.
@@ -3717,7 +3716,7 @@ class Datum
     /**
      * Landshaedarkerfi Islands 2004
      * Type: Vertical
-     * Extent: Iceland - onshore.
+     * Extent: Iceland - onshore
      * Adjustment is referenced to mean sea level at Reykjavík epoch 2004.6.
      */
     public const EPSG_LANDSHAEDARKERFI_ISLANDS_2004 = 'urn:ogc:def:datum:EPSG::1190';
@@ -3725,7 +3724,7 @@ class Datum
     /**
      * Lanzarote
      * Type: Vertical
-     * Extent: Spain - Canary Islands - Lanzarote onshore.
+     * Extent: Spain - Canary Islands - Lanzarote onshore
      * Mean Sea Level at Naos harbour, Arrecife, between 1994 and 1995.
      * Orthometric heights.
      */
@@ -3734,7 +3733,7 @@ class Datum
     /**
      * Lao 1993
      * Type: Geodetic
-     * Extent: Laos.
+     * Extent: Laos
      * Fundamental point: Lao 1982 coordinates of Pakxa pillar. Latitude: 18°23'57.0056"N, longitude:
      * 103°38'41.8020"E (of Greenwich). Orientation parallel with WGS 84.
      * Replaces Vientiane 1982. Replaced by Lao 1997.
@@ -3744,7 +3743,7 @@ class Datum
     /**
      * Lao National Datum 1997
      * Type: Geodetic
-     * Extent: Laos.
+     * Extent: Laos
      * Fundamental point: Vientiane (Nongteng) Astro Pillar. Latitude: 18°01'31.3480"N, longitude: 102°30'57.1376"E
      * (of Greenwich).
      * Replaces Lao 1993.
@@ -3754,7 +3753,7 @@ class Datum
     /**
      * Latvian Height System 2000
      * Type: Vertical
-     * Extent: Latvia - onshore.
+     * Extent: Latvia - onshore
      * Latvian realisation of EVRF2007. Observed from 2000-2010 and reduced to epoch 2000.5 using empirical land uplift
      * model of Latvia. EVRF2007 heights of 16 points around Latvia held fixed.
      * Uses Normal heights.
@@ -3764,7 +3763,7 @@ class Datum
     /**
      * Latvian coordinate system 2020
      * Type: Geodetic
-     * Extent: Latvia - onshore and offshore.
+     * Extent: Latvia - onshore and offshore
      * Aligned with ETRF2014 at epoch 2020.28. Derived at 5 well-distributed base stations of the Latvian GNSS
      * permanent network (LATREF) in IGb14, transformed to ETRF2014 using EUREF parameters (CT code 8366).
      * LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661).
@@ -3774,7 +3773,7 @@ class Datum
     /**
      * Latvian geodetic coordinate system 1992
      * Type: Geodetic
-     * Extent: Latvia - onshore and offshore.
+     * Extent: Latvia - onshore and offshore
      * Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
      * Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code
      * 1356).
@@ -3784,7 +3783,7 @@ class Datum
     /**
      * Le Pouce 1934
      * Type: Geodetic
-     * Extent: Mauritius - mainland onshore.
+     * Extent: Mauritius - mainland onshore
      * Fundamental point: Le Pouce. Latitude: 20°11'42.25"S, longitude: 57°31'18.58"E (of Greenwich).
      */
     public const EPSG_LE_POUCE_1934 = 'urn:ogc:def:datum:EPSG::6699';
@@ -3792,7 +3791,7 @@ class Datum
     /**
      * Leigon
      * Type: Geodetic
-     * Extent: Ghana - onshore and offshore.
+     * Extent: Ghana - onshore and offshore
      * Fundamental point: GCS Station 121, Leigon. Latitude: 5°38'52.27"N, longitude: 0°11'46.08"W (of Greenwich).
      * Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental point defined as Accra datum
      * values for that point.
@@ -3802,7 +3801,7 @@ class Datum
     /**
      * Lerwick
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore
      * Mean Sea Level at Lerwick 1979 correlated to pre-1900. Initially realised through levelling network adjustment,
      * from 2002 redefined to be realised through OSGM geoid model.
      * Orthometric heights.
@@ -3812,7 +3811,7 @@ class Datum
     /**
      * Liberia 1964
      * Type: Geodetic
-     * Extent: Liberia - onshore.
+     * Extent: Liberia - onshore
      * Fundamental point: Robertsfield. Latitude: 6°13'53.02"N, longitude: 10°21'35.44"W (of Greenwich).
      */
     public const EPSG_LIBERIA_1964 = 'urn:ogc:def:datum:EPSG::6251';
@@ -3820,7 +3819,7 @@ class Datum
     /**
      * Libyan Geodetic Datum 2006
      * Type: Geodetic
-     * Extent: Libya - onshore and offshore.
+     * Extent: Libya - onshore and offshore
      * 5 stations tied to ITRF2000 through 8 days of continuous observations in May 2006.
      * Replaces ELD79.
      */
@@ -3829,7 +3828,7 @@ class Datum
     /**
      * Lisbon 1890
      * Type: Geodetic
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42'43.631"N, longitude: 9°07'54.862"W of Greenwich.
      * Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).
      */
@@ -3838,7 +3837,7 @@ class Datum
     /**
      * Lisbon 1890 (Lisbon)
      * Type: Geodetic
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42'43.631"N, longitude: 0°E (of Lisbon).
      * Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).
      */
@@ -3847,7 +3846,7 @@ class Datum
     /**
      * Lisbon 1937
      * Type: Geodetic
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42'43.631"N, longitude: 9°07'54.862"W (of
      * Greenwich).
      * Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).
@@ -3857,7 +3856,7 @@ class Datum
     /**
      * Lisbon 1937 (Lisbon)
      * Type: Geodetic
-     * Extent: Portugal - mainland - onshore.
+     * Extent: Portugal - mainland - onshore
      * Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42'43.631"N, longitude: 0°E (of Lisbon).
      * Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).
      */
@@ -3866,7 +3865,7 @@ class Datum
     /**
      * Lithuania 1994 (ETRS89)
      * Type: Geodetic
-     * Extent: Lithuania - onshore and offshore.
+     * Extent: Lithuania - onshore and offshore
      * Constrained to 4 ETRS89 points in Lithuania from the EUREF Baltic 1992 campaign.
      * Densification of ETRS89 during the 1992 Baltic campaign.
      */
@@ -3875,7 +3874,7 @@ class Datum
     /**
      * Lithuanian Height System 2007
      * Type: Vertical
-     * Extent: Lithuania - onshore.
+     * Extent: Lithuania - onshore
      * Lithuanian realisation of EVRF2007. EVRF2007 heights of 10 points in Lithuania held fixed.
      * Uses Normal heights.
      */
@@ -3891,7 +3890,7 @@ class Datum
     /**
      * Local Tidal Datum at Pago Pago 2020
      * Type: Vertical
-     * Extent: American Samoa - Tutuila island.
+     * Extent: American Samoa - Tutuila island
      * MSL at Pago Pago 2011–2016.
      * Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 after the ASVD02 benchmarks were
      * destroyed by earthquake activity.
@@ -3901,7 +3900,7 @@ class Datum
     /**
      * Locodjo 1965
      * Type: Geodetic
-     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore.
+     * Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore
      * Fundamental point: T5 Banco. Latitude: 5°18'50.5"N, longitude: 4°02'05.1"W (of Greenwich).
      */
     public const EPSG_LOCODJO_1965 = 'urn:ogc:def:datum:EPSG::6142';
@@ -3909,7 +3908,7 @@ class Datum
     /**
      * Loma Quintana
      * Type: Geodetic
-     * Extent: Venezuela - onshore north of approximately 7°45'N.
+     * Extent: Venezuela - onshore north of approximately 7°45'N
      * Fundamental point: Loma Quintana.
      * Replaced by La Canoa (code 6247).
      */
@@ -3925,7 +3924,7 @@ class Datum
     /**
      * Low Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The lowest level reached by the water surface in one tidal cycle. When used in inland (non-tidal) waters it is
      * generally defined as a level which the daily mean water level would fall below less than 5% of the time. On a
@@ -3936,7 +3935,7 @@ class Datum
     /**
      * Lower Low Water Large Tide
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average of the lowest low waters, one from each of 19 years of observations.
      */
@@ -3945,7 +3944,7 @@ class Datum
     /**
      * Lowest Astronomical Tide
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The lowest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
@@ -3955,7 +3954,7 @@ class Datum
     /**
      * Lowest Astronomical Tide Netherlands
      * Type: Vertical
-     * Extent: Netherlands - offshore North Sea.
+     * Extent: Netherlands - offshore North Sea
      * Surface defined through the nllat hydroid model applied to ETRS89.
      * The lowest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
@@ -3965,7 +3964,7 @@ class Datum
     /**
      * Luxembourg Reference Frame
      * Type: Geodetic
-     * Extent: Luxembourg.
+     * Extent: Luxembourg
      * Fundamental point of 1930 triangulation: northern station of Habay-la-Neuve baseline in Belgium. Latitude:
      * 49°43'24.408"N, longitude: 5°38'22.470"E (of Greenwich). Since 2006 LUREF has been realized by GNSS station
      * positions and transformation from ETRF.
@@ -3976,7 +3975,7 @@ class Datum
     /**
      * Luzon 1911
      * Type: Geodetic
-     * Extent: Philippines - onshore.
+     * Extent: Philippines - onshore
      * Fundamental point: Balacan. Latitude: 13°33'41.000"N, longitude: 121°52'03.000"E (of Greenwich).
      * Replaced by Philippine Reference system of 1992 (datum code 6683).
      */
@@ -3985,7 +3984,7 @@ class Datum
     /**
      * Lyon Turin Ferroviaire 2004
      * Type: Geodetic
-     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin
      * Densification of ETRS89 realised through network of 40 stations adjusted to 7 EUREF reference stations in
      * ETRF2000@2002.0.
      */
@@ -3994,7 +3993,7 @@ class Datum
     /**
      * Lyttelton 1937
      * Type: Vertical
-     * Extent: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area.
+     * Extent: New Zealand - South Island - between approximately 41°20'S and 45°S - Lyttleton vertical CRS area
      * MSL at Lyttelton harbour over 9 years between 1918 and 1933.
      */
     public const EPSG_LYTTELTON_1937 = 'urn:ogc:def:datum:EPSG::5161';
@@ -4009,7 +4008,7 @@ class Datum
     /**
      * MALS09 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.
+     * Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa
      * Defined through the application of the MALS09 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS MALS09-IRF in the emulation of the MALS09 Snake map projection.
@@ -4020,7 +4019,7 @@ class Datum
      * MGI 1901
      * Type: Geodetic
      * Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
-     * Slovenia - onshore.
+     * Slovenia - onshore
      * Fundamental point: Hermannskogel. Latitude: 48°16'15.29"N, longitude: 16°17'55.04"E (of Greenwich).
      * The longitude of the datum origin equates to the Albrecht 1902 value for the Ferro meridian of 17°39'46.02"
      * west of Greenwich. Densified in 1948.
@@ -4030,7 +4029,7 @@ class Datum
     /**
      * MML07 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.
+     * Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London
      * Defined through the application of the MML07 NTv2 transformation (code 9369) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the MML07 Snake map projection.
@@ -4041,7 +4040,7 @@ class Datum
      * MOLDOR11 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope
-     * Valley to Dore Junction.
+     * Valley to Dore Junction
      * Defined through the application of the MOLDOR11 NTv2 transformation (code 9878) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of the MOLDOR11 Snake map
@@ -4052,7 +4051,7 @@ class Datum
     /**
      * MOLDREF99
      * Type: Geodetic
-     * Extent: Moldova.
+     * Extent: Moldova
      * Densification of ETRS89.
      */
     public const EPSG_MOLDREF99 = 'urn:ogc:def:datum:EPSG::1032';
@@ -4060,7 +4059,7 @@ class Datum
     /**
      * MOMRA Terrestrial Reference Frame 2000
      * Type: Geodetic
-     * Extent: Saudi Arabia - onshore and offshore.
+     * Extent: Saudi Arabia - onshore and offshore
      * ITRF2000 at epoch 2004.00.
      * 13 CORS Fiducial Stations linked to 7 IGS stations by 10-day long GPS survey.
      */
@@ -4069,7 +4068,7 @@ class Datum
     /**
      * MOMRA Vertical Geodetic Control
      * Type: Vertical
-     * Extent: Saudi Arabia - onshore.
+     * Extent: Saudi Arabia - onshore
      * Mean sea level Jeddah 1969.
      */
     public const EPSG_MOMRA_VERTICAL_GEODETIC_CONTROL = 'urn:ogc:def:datum:EPSG::1219';
@@ -4085,7 +4084,7 @@ class Datum
      * MRH21 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol,
-     * Gloucester, Derby, Birmingham, Leicester, and Lincoln.
+     * Gloucester, Derby, Birmingham, Leicester, and Lincoln
      * Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
      * Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.
      */
@@ -4094,8 +4093,7 @@ class Datum
     /**
      * MWC18 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to
-     * Chester.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester
      * Defined through the application of the MWC18 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS MWC18-IRF in the emulation of the MWC18 Snake map projection.
      */
@@ -4104,7 +4102,7 @@ class Datum
     /**
      * Macao 1920
      * Type: Geodetic
-     * Extent: China - Macao - onshore and offshore.
+     * Extent: China - Macao - onshore and offshore
      * Fundamental point: Avenida Conselheiro Borja base A, later transferred to Monte da Barra, latitude
      * 22°11'03.139"N, longitude 113°31'43.625"E (of Greenwich).
      * Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unresolvable conflicts and the 1920
@@ -4115,7 +4113,7 @@ class Datum
     /**
      * Macao Geodetic Datum 2008
      * Type: Geodetic
-     * Extent: China - Macao - onshore and offshore.
+     * Extent: China - Macao - onshore and offshore
      * ITRF2005 at epoch 2008.38.
      * Locally sometimes referred to as ITRF2005, this is not strictly correct as it applies only at epoch 2008.38 and
      * ignores subsequent tectonic plate motion.
@@ -4125,7 +4123,7 @@ class Datum
     /**
      * Macao Height Datum
      * Type: Vertical
-     * Extent: China - Macao - onshore and offshore.
+     * Extent: China - Macao - onshore and offshore
      * Mean sea level Ma Kau Seak 1925-1964.
      */
     public const EPSG_MACAO_HEIGHT_DATUM = 'urn:ogc:def:datum:EPSG::1210';
@@ -4133,7 +4131,7 @@ class Datum
     /**
      * Madrid 1870 (Madrid)
      * Type: Geodetic
-     * Extent: Spain - mainland onshore.
+     * Extent: Spain - mainland onshore
      * Fundamental point: Retiro observatory, Madrid.
      * Replaced by ED50.
      */
@@ -4142,7 +4140,7 @@ class Datum
     /**
      * Madzansua
      * Type: Geodetic
-     * Extent: Mozambique - west - Tete province.
+     * Extent: Mozambique - west - Tete province
      * Fundamental point: Madzansua.
      * Replaced by transformation to Tete datum (datum code 6127).
      */
@@ -4151,7 +4149,7 @@ class Datum
     /**
      * Mahe 1971
      * Type: Geodetic
-     * Extent: Seychelles - Mahe Island.
+     * Extent: Seychelles - Mahe Island
      * Fundamental point: Station SITE. Latitude: 4°40'14.644"S, longitude: 55°28'44.488"E (of Greenwich).
      * South East Island 1943 (datum code 1138) used for topographic mapping, cadastral and hydrographic survey.
      */
@@ -4160,7 +4158,7 @@ class Datum
     /**
      * Makassar
      * Type: Geodetic
-     * Extent: Indonesia - south west Sulawesi.
+     * Extent: Indonesia - south west Sulawesi
      * Fundamental point: station P1, Moncongloe. Latitude: 5°08'41.42"S, long 119°24'14.94"E (of Greenwich).
      */
     public const EPSG_MAKASSAR = 'urn:ogc:def:datum:EPSG::6257';
@@ -4168,7 +4166,7 @@ class Datum
     /**
      * Makassar (Jakarta)
      * Type: Geodetic
-     * Extent: Indonesia - south west Sulawesi.
+     * Extent: Indonesia - south west Sulawesi
      * Fundamental point: station P1, Moncongloe. Latitude 5°08'41.42"S, longitude 12°35'47.15"E (of Jakarta).
      */
     public const EPSG_MAKASSAR_JAKARTA = 'urn:ogc:def:datum:EPSG::6804';
@@ -4176,7 +4174,7 @@ class Datum
     /**
      * Malin Head
      * Type: Vertical
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Mean sea level between January 1960 and December 1969. Initially realised through levelling network adjustment,
      * from 2002 redefined to be realised through OSGM geoid model.
      * Orthometric heights.
@@ -4186,7 +4184,7 @@ class Datum
     /**
      * Mallorca
      * Type: Vertical
-     * Extent: Spain - Balearic Islands - Mallorca onshore.
+     * Extent: Spain - Balearic Islands - Mallorca onshore
      * Mean Sea Level at Palma de Mallorca harbour between April 1997 and December 2006.
      * Orthometric heights.
      */
@@ -4195,7 +4193,7 @@ class Datum
     /**
      * Malongo 1987
      * Type: Geodetic
-     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.
+     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
      * Fundamental point: Station Y at Malongo base camp. Latitude: 5°23'30.810"S, longitude: 12°12'01.590"E (of
      * Greenwich).
      * Replaced Mhast (offshore) (code 6705) in 1987. Origin coordinates constrained to those of Mhast (offshore) but
@@ -4206,7 +4204,7 @@ class Datum
     /**
      * Manoca 1962
      * Type: Geodetic
-     * Extent: Cameroon - coastal area.
+     * Extent: Cameroon - coastal area
      * Reservoir centre at the  Manoca tower ("tube Suel"), 3°51'49.896"N, 9°36'49.347"E (of Greenwich).
      * The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) ellipsoid (code 7012) but in
      * practice this datum has used the IGN version. Replaces Douala 1948 (code 6192).
@@ -4216,7 +4214,7 @@ class Datum
     /**
      * Maputo
      * Type: Vertical
-     * Extent: Mozambique - onshore.
+     * Extent: Mozambique - onshore
      * Mean sea level at Maputo.
      */
     public const EPSG_MAPUTO = 'urn:ogc:def:datum:EPSG::5121';
@@ -4225,7 +4223,7 @@ class Datum
      * Marco Geocentrico Nacional de Referencia
      * Type: Geodetic
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
-     * Serrana Bank and Serranilla Bank.
+     * Serrana Bank and Serranilla Bank
      * Densification of SIRGAS95 (ITRF94 at epoch 1995.4) in Colombia. Bogota observatory coordinates: Latitude:
      * 4°35'46.3215"N, longitude: 74°04'39.0285"W (of Greenwich).
      * Densification of SIRGAS 1995 within Colombia. Replaces Bogota 1975 (datum code 6218).
@@ -4236,7 +4234,7 @@ class Datum
      * Marco Geocentrico Nacional de Referencia 2018
      * Type: Geodetic
      * Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank,
-     * Serrana Bank and Serranilla Bank.
+     * Serrana Bank and Serranilla Bank
      * Densification of ITRF2014 at epoch 2018.0 in Colombia. Bogota observatory coordinates: Latitude:
      * 4°35'46.33160"N, longitude: 74°04'39.02797"W (of Greenwich).
      * Active network referenced to ITRF2008@2011.76 and passive network referenced to ITRF94@1995.4 updated to
@@ -4248,7 +4246,7 @@ class Datum
     /**
      * Marco Geodesico Nacional de Bolivia
      * Type: Geodetic
-     * Extent: Bolivia.
+     * Extent: Bolivia
      * IGS05 (ITRF2005) at epoch 2010.2.  Densification of SIRGAS95 network in Bolivia, consisting of 125 passive
      * geodetic stations and 8 continuous recording GPS stations.
      * Densification of SIRGAS 1995 within Bolivia. Replaces PSAD56 (datum code 6248) in Bolivia.
@@ -4258,7 +4256,7 @@ class Datum
     /**
      * Marcus Island 1952
      * Type: Geodetic
-     * Extent: Japan - onshore - Tokyo-to south of 28°N and east of 143°E - Minamitori-shima (Marcus Island).
+     * Extent: Japan - onshore - Tokyo-to south of 28°N and east of 143°E - Minamitori-shima (Marcus Island)
      * Marcus Island Astronomic Station.
      */
     public const EPSG_MARCUS_ISLAND_1952 = 'urn:ogc:def:datum:EPSG::6711';
@@ -4273,7 +4271,7 @@ class Datum
     /**
      * Martinique 1938
      * Type: Geodetic
-     * Extent: Martinique - onshore.
+     * Extent: Martinique - onshore
      * Fundamental point: Fort Desaix. Latitude: 14°36'54.090"N, longitude: 61°04'04.030"W (of Greenwich).
      * Replaced by RRAF 1991 (datum code 1047).
      */
@@ -4282,7 +4280,7 @@ class Datum
     /**
      * Martinique 1955
      * Type: Vertical
-     * Extent: Martinique - onshore.
+     * Extent: Martinique - onshore
      * Mean sea level at Fort de France 1939. Marker DO-4-II on quay wall with elevation of 1.38m above msl.
      * Orthometric heights. Replaced by Martinique 1987 (datum code 5154).
      */
@@ -4291,7 +4289,7 @@ class Datum
     /**
      * Martinique 1987
      * Type: Vertical
-     * Extent: Martinique - onshore.
+     * Extent: Martinique - onshore
      * Mean sea level 1939 at Fort de France. Origin = marker Nbc2 on rebuilt quay wall with defined elevation of 1.38m
      * above msl. Martinique 1987 height 0.00m is 0.56m above SHOM sounding datum.
      * Orthometric heights. Replaces Martinique 1955 (datum code 5192).
@@ -4308,7 +4306,7 @@ class Datum
     /**
      * Maupiti 83
      * Type: Geodetic
-     * Extent: French Polynesia - Society Islands - Maupiti.
+     * Extent: French Polynesia - Society Islands - Maupiti
      * Fundamental point: Pitiahe South Base. Latitude: 16°28'28.942"S, longitude: 152°14'55.059"W (of Greenwich).
      * Replaced by RGPF (datum code 6687).
      */
@@ -4317,7 +4315,7 @@ class Datum
     /**
      * Maupiti SAU 2001
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Maupiti.
+     * Extent: French Polynesia - Society Islands - Maupiti
      * Fundamental benchmark: RN11
      * Included as part of NGPF - see datum code 5195.
      */
@@ -4326,7 +4324,7 @@ class Datum
     /**
      * Mauritania 1999
      * Type: Geodetic
-     * Extent: Mauritania - onshore and offshore.
+     * Extent: Mauritania - onshore and offshore
      * ITRF96 at epoch 1997.0
      * A network of 36 GPS stations tied to ITRF96, 8 of which are IGN 1962 astronomic points.
      */
@@ -4335,7 +4333,7 @@ class Datum
     /**
      * Mayotte 1950
      * Type: Vertical
-     * Extent: Mayotte - onshore.
+     * Extent: Mayotte - onshore
      * IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge.
      * SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
      * Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou
@@ -4346,7 +4344,7 @@ class Datum
     /**
      * Mean High Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the high waters over a 19-year period.
      */
@@ -4355,7 +4353,7 @@ class Datum
     /**
      * Mean High Water Spring Tides
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the high waters of spring tides.
      */
@@ -4364,7 +4362,7 @@ class Datum
     /**
      * Mean Higher High Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the higher high waters over a 19-year period.
      */
@@ -4373,7 +4371,7 @@ class Datum
     /**
      * Mean Low Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of all low waters over a 19-year period.
      */
@@ -4382,7 +4380,7 @@ class Datum
     /**
      * Mean Low Water Spring Tides
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the low waters of spring tides.
      */
@@ -4391,7 +4389,7 @@ class Datum
     /**
      * Mean Lower Low Water
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the lower low waters over a 19-year period.
      */
@@ -4400,7 +4398,7 @@ class Datum
     /**
      * Mean Lower Low Water Spring Tides
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the lower low water spring tides.
      */
@@ -4409,7 +4407,7 @@ class Datum
     /**
      * Mean Sea Level
      * Type: Vertical
-     * Extent: World.
+     * Extent: World
      * Not specific to any location or epoch.
      * The average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period,
      * usually determined from hourly height readings measured from a fixed predetermined reference level. Approximates
@@ -4420,7 +4418,7 @@ class Datum
     /**
      * Mean Sea Level Netherlands
      * Type: Vertical
-     * Extent: Netherlands - offshore North Sea.
+     * Extent: Netherlands - offshore North Sea
      * Surface defined through the nlgeo geoid model applied to ETRS89.
      * Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.
      */
@@ -4430,7 +4428,7 @@ class Datum
      * Mean Sea Level UK & Ireland VORF08
      * Type: Vertical
      * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
-     * offshore.
+     * offshore
      * MSL UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008. MSL UK & Ireland VORF08
      * is reduced to epoch 2000.0.
      * OSGM05 model used.
@@ -4440,7 +4438,7 @@ class Datum
     /**
      * Menorca
      * Type: Vertical
-     * Extent: Spain - Balearic Islands - Menorca onshore.
+     * Extent: Spain - Balearic Islands - Menorca onshore
      * Mean Sea Level at Ciutadella harbour between June 2007 and June 2008.
      * Orthometric heights.
      */
@@ -4449,7 +4447,7 @@ class Datum
     /**
      * Merchich
      * Type: Geodetic
-     * Extent: Africa - Morocco and Western Sahara - onshore.
+     * Extent: Africa - Morocco and Western Sahara - onshore
      * Fundamental point: Merchich. Latitude: 33°26'59.672"N, longitude: 7°33'27.295"W (of Greenwich).
      */
     public const EPSG_MERCHICH = 'urn:ogc:def:datum:EPSG::6261';
@@ -4457,7 +4455,7 @@ class Datum
     /**
      * Mexico ITRF2008
      * Type: Geodetic
-     * Extent: Mexico - onshore and offshore.
+     * Extent: Mexico - onshore and offshore
      * ITRF2008 at epoch 2010.00.
      * Realised by a frame of 15 active GPS stations observed and adjusted in the ITRF2008. Includes ties to tide
      * gauges. Replaces Mexico ITRF92 (datum code 1042).
@@ -4467,7 +4465,7 @@ class Datum
     /**
      * Mexico ITRF92
      * Type: Geodetic
-     * Extent: Mexico - onshore and offshore.
+     * Extent: Mexico - onshore and offshore
      * ITRF1992 at epoch 1988.00.
      * Realized by a frame of 15 active GPS stations observed and adjusted in the ITRF1992. Includes ties to tide
      * gauges. Replaces NAD27 (datum code 6267). Replaced by Mexico ITRF2008 (datum code 1120) from December 2010.
@@ -4477,7 +4475,7 @@ class Datum
     /**
      * Mhast (offshore)
      * Type: Geodetic
-     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.
+     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
      * Fundamental point: Station Y at Malongo base camp. Latitude: 5°23'30.810"S, longitude: 12°12'01.590"E (of
      * Greenwich).
      * Origin coordinates determined by Transit single point position using 32 passes and transformed from WGS72BE
@@ -4490,7 +4488,7 @@ class Datum
      * Mhast (onshore)
      * Type: Geodetic
      * Extent: Angola (Cabinda) - onshore and offshore; The Democratic Republic of the Congo (Zaire) - onshore coastal
-     * area and offshore.
+     * area and offshore
      * Probably adopted a Mhast 1951 coordinate set but associated an incorrect ellipsoid with it.
      * Adopted by oil industry with intention of being Mhast 1951 (code 6703) but incorrectly (for Mhast 1951) used the
      * International 1924 ellipsoid. This datum differs by about 400 metres from the Portuguese Mhast 1951 and Camacupa
@@ -4508,7 +4506,7 @@ class Datum
     /**
      * Militar-Geographische Institut
      * Type: Geodetic
-     * Extent: Austria.
+     * Extent: Austria
      * Fundamental point: Hermannskogel. Latitude: 48°16'15.29"N, longitude: 16°17'41.06"E (of Greenwich).
      * The longitude of the datum origin equates to a value for the Ferro meridian of 17°40' exactly west of
      * Greenwich.
@@ -4519,7 +4517,7 @@ class Datum
      * Militar-Geographische Institut (Ferro)
      * Type: Geodetic
      * Extent: Austria. Bosnia and Herzegovina. Croatia - onshore. Kosovo. Montenegro - onshore. North Macedonia.
-     * Serbia. Slovenia - onshore.
+     * Serbia. Slovenia - onshore
      * Fundamental point: Hermannskogel. Latitude: 48°16'15.29"N, longitude: 33°57'41.06"E (of Ferro).
      * Replaced by MGI in Austria and MGI 1901 in former Yugoslavia.
      */
@@ -4528,7 +4526,7 @@ class Datum
     /**
      * Ministerio de Marina Norte
      * Type: Geodetic
-     * Extent: Argentina - Tierra del Fuego onshore.
+     * Extent: Argentina - Tierra del Fuego onshore
      * Developed by the Servicio de Hidrografia Naval.
      */
     public const EPSG_MINISTERIO_DE_MARINA_NORTE = 'urn:ogc:def:datum:EPSG::1258';
@@ -4536,7 +4534,7 @@ class Datum
     /**
      * Ministerio de Marina Sur
      * Type: Geodetic
-     * Extent: Argentina - Tierra del Fuego onshore.
+     * Extent: Argentina - Tierra del Fuego onshore
      * Developed by the Servicio de Hidrografia Naval.
      */
     public const EPSG_MINISTERIO_DE_MARINA_SUR = 'urn:ogc:def:datum:EPSG::1259';
@@ -4544,7 +4542,7 @@ class Datum
     /**
      * Minna
      * Type: Geodetic
-     * Extent: Nigeria - onshore and offshore.
+     * Extent: Nigeria - onshore and offshore
      * Fundamental point: Minna base station L40. Latitude: 9°38'08.87"N, longitude: 6°30'58.76"E (of Greenwich).
      */
     public const EPSG_MINNA = 'urn:ogc:def:datum:EPSG::6263';
@@ -4552,7 +4550,7 @@ class Datum
     /**
      * Missao Hidrografico Angola y Sao Tome 1951
      * Type: Geodetic
-     * Extent: Angola - Cabinda.
+     * Extent: Angola - Cabinda
      * Extension of Camacupa datum into Cabinda.
      * A variation of this datum has been adopted by the oil industry but incorrectly using the International 1924
      * ellipsoid and not tied to the official Portuguese triangulation - see Mhast (onshore) and Mhast (offshore)
@@ -4563,7 +4561,7 @@ class Datum
     /**
      * Monte Mario
      * Type: Geodetic
-     * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+     * Extent: Italy - onshore and offshore; San Marino, Vatican City State
      * Fundamental point: Monte Mario. Latitude: 41°55'25.51"N, longitude: 12°27'08.4"E (of Greenwich).
      * Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.
      */
@@ -4572,7 +4570,7 @@ class Datum
     /**
      * Monte Mario (Rome)
      * Type: Geodetic
-     * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+     * Extent: Italy - onshore and offshore; San Marino, Vatican City State
      * Fundamental point: Monte Mario. Latitude: 41°55'25.51"N, longitude: 0°00' 00.00"E (of Rome).
      * Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.
      */
@@ -4581,7 +4579,7 @@ class Datum
     /**
      * Montserrat 1958
      * Type: Geodetic
-     * Extent: Montserrat - onshore.
+     * Extent: Montserrat - onshore
      * Fundamental point: station M36.
      */
     public const EPSG_MONTSERRAT_1958 = 'urn:ogc:def:datum:EPSG::6604';
@@ -4589,7 +4587,7 @@ class Datum
     /**
      * Moorea 87
      * Type: Geodetic
-     * Extent: French Polynesia - Society Islands - Moorea.
+     * Extent: French Polynesia - Society Islands - Moorea
      * Two stations on Tahiti whose coordinates from the Tahiti 1979 adjustment were held fixed.
      * Replaces Tahiti 52 (datum code 6628) in Moorea. Replaced by RGPF (datum code 6687).
      */
@@ -4598,7 +4596,7 @@ class Datum
     /**
      * Moorea SAU 1981
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Moorea.
+     * Extent: French Polynesia - Society Islands - Moorea
      * Fundamental benchmark: RN225
      * Included as part of NGPF - see datum code 5195.
      */
@@ -4607,7 +4605,7 @@ class Datum
     /**
      * Moturiki 1953
      * Type: Vertical
-     * Extent: New Zealand - North Island - Moturiki vertical CRS area.
+     * Extent: New Zealand - North Island - Moturiki vertical CRS area
      * MSL at Moturiki Island February 1949 to December 1952.
      */
     public const EPSG_MOTURIKI_1953 = 'urn:ogc:def:datum:EPSG::5162';
@@ -4615,7 +4613,7 @@ class Datum
     /**
      * Mount Dillon
      * Type: Geodetic
-     * Extent: Trinidad and Tobago - Tobago - onshore.
+     * Extent: Trinidad and Tobago - Tobago - onshore
      * Fundamental point: Mount Dillon triangulation station. Latitude: 11°15'07.843"N, longitude: 60°41'09.632"W (of
      * Greenwich).
      */
@@ -4624,7 +4622,7 @@ class Datum
     /**
      * Moznet (ITRF94)
      * Type: Geodetic
-     * Extent: Mozambique - onshore and offshore.
+     * Extent: Mozambique - onshore and offshore
      * ITRF94 at epoch 1996.9.
      */
     public const EPSG_MOZNET_ITRF94 = 'urn:ogc:def:datum:EPSG::6130';
@@ -4632,7 +4630,7 @@ class Datum
     /**
      * N2000
      * Type: Vertical
-     * Extent: Finland - onshore.
+     * Extent: Finland - onshore
      * Height at Metsaahovi (latitude 60.21762°N, longitude 24.39517°E) of 54.4233m related to EVRF2000 origin
      * through Baltic Levelling Ring adjustment at epoch 2000.0.
      * Realized through the third precise levelling network. Uses normal heights. Replaces N43 and N60 (datum codes
@@ -4648,7 +4646,7 @@ class Datum
      * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
      * Defined by time-dependent transformations from ITRF (see CT codes 6864-6866). The ITRF realization used has been
      * changed periodically; ITRF96 in years 1997 through 1999, ITRF97 in 2000 and 2001 and ITRF2000 from 2002.
      * Replaced by NAD83(2011) from 2011-09-06.
@@ -4665,7 +4663,7 @@ class Datum
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
      * Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM
-     * OCS). US Virgin Islands - onshore.
+     * OCS). US Virgin Islands - onshore
      * A collection of individual state-wide adjustments including GPS observations made between 1997 and 2004.
      * In CA CT FL ID MA ME MT NC NH NJ NV NY OR RI SC TN VT WA and WI, replaces the early 1990s HARN adjustment. In
      * rest of CONUS the difference between the HARN and FBN adjustments was under 5cm and the original HARN
@@ -4676,7 +4674,7 @@ class Datum
     /**
      * NAD83 (High Accuracy Reference Network - Corrected)
      * Type: Geodetic
-     * Extent: Puerto Rico and US Virgin Islands - onshore.
+     * Extent: Puerto Rico and US Virgin Islands - onshore
      * In PRVI replaces NAD83(HARN) to correct errors. Replaced by NAD83(FBN).
      */
     public const EPSG_NAD83_HIGH_ACCURACY_REFERENCE_NETWORK_CORRECTED = 'urn:ogc:def:datum:EPSG::1212';
@@ -4691,7 +4689,7 @@ class Datum
      * Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North
      * Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas,
      * Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental
-     * shelf (GoM OCS). US Virgin Islands - onshore.
+     * shelf (GoM OCS). US Virgin Islands - onshore
      * A collection of individual state-wide adjustments including GPS observations made between 1991 and 1996.
      * In CONUS, American Samoa and Guam replaced by NAD83(FBN). In Alaska replaced by NAD83(NSRS2007). In Hawaii
      * replaced by NAD83(PA11). In Puerto Rico and US Virgin Islands replaced by NAD83(HARN Corrected).
@@ -4706,7 +4704,7 @@ class Datum
      * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
      * Coordinates of 486 national continually operating reference system (CORS) and 195 collaborative GPS (CGPS) sites
      * constrained to their CORS96 values, ITRF2000 at epoch 2002.0.
      * Replaced by NAD83 (National Spatial Reference System 2011), datum code 1116.
@@ -4721,7 +4719,7 @@ class Datum
      * Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana;
      * Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma;
      * Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia;
-     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.
+     * Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
      * Coordinates of a nationwide adjustment of 79,546 NGS "passive" control stations in CONUS and Alaska, constrained
      * to 1,171 current CORS station coordinates at epoch 2010.0.
      * Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to underlay the CORS station
@@ -4732,7 +4730,7 @@ class Datum
     /**
      * NAD83 (National Spatial Reference System MA11)
      * Type: Geodetic
-     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
      * Coordinates of a nationwide adjustment including 171 NGS "passive" control stations constrained to 24 current
      * Pacific CORS station coordinates at epoch 2010.0.
      * Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. ITRF2008 is understood to underlay the latest CORS station
@@ -4744,7 +4742,7 @@ class Datum
      * NAD83 (National Spatial Reference System PA11)
      * Type: Geodetic
      * Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands;
-     * onshore and offshore.
+     * onshore and offshore
      * Coordinates of a nationwide adjustment including 345 NGS "passive" control stations constrained to 24 current
      * Pacific CORS station coordinates at epoch 2010.0.
      * Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. ITRF2008 is understood to underlay the latest
@@ -4757,7 +4755,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific identification. As such it has an
      * accuracy of approximately 1m.
      */
@@ -4766,7 +4764,7 @@ class Datum
     /**
      * NEA74 Noumea
      * Type: Geodetic
-     * Extent: New Caledonia - Grande Terre - Noumea district.
+     * Extent: New Caledonia - Grande Terre - Noumea district
      * Noumea old signal station.
      */
     public const EPSG_NEA74_NOUMEA = 'urn:ogc:def:datum:EPSG::6644';
@@ -4774,7 +4772,7 @@ class Datum
     /**
      * NGO 1948
      * Type: Geodetic
-     * Extent: Norway - onshore.
+     * Extent: Norway - onshore
      * Fundamental point: Oslo observatory. Latitude: 59°54'43.7"N, longitude: 10°43'22.5"E (of Greenwich).
      */
     public const EPSG_NGO_1948 = 'urn:ogc:def:datum:EPSG::6273';
@@ -4782,7 +4780,7 @@ class Datum
     /**
      * NGO 1948 (Oslo)
      * Type: Geodetic
-     * Extent: Norway - onshore.
+     * Extent: Norway - onshore
      * Fundamental point: Oslo observatory. Latitude: 59°54'43.7"N, longitude: 0°00'00.0"E (of Oslo).
      */
     public const EPSG_NGO_1948_OSLO = 'urn:ogc:def:datum:EPSG::6817';
@@ -4790,7 +4788,7 @@ class Datum
     /**
      * NSWC 9Z-2
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Transit precise ephemeris before 1991.
      */
     public const EPSG_NSWC_9Z_2 = 'urn:ogc:def:datum:EPSG::6276';
@@ -4798,7 +4796,7 @@ class Datum
     /**
      * Nahrwan 1934
      * Type: Geodetic
-     * Extent: Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq.
+     * Extent: Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq
      * Fundamental point: Nahrwan south base.  Latitude: 33°19'10.87"N, longitude: 44°43'25.54"E (of Greenwich).
      * This adjustment later discovered to have a significant orientation error. In Iran replaced by FD58. In Iraq,
      * replaced by Karbala 1979.
@@ -4809,7 +4807,7 @@ class Datum
      * Nahrwan 1967
      * Type: Geodetic
      * Extent: Arabian Gulf; Qatar - offshore; United Arab Emirates (UAE) - Abu Dhabi; Dubai; Sharjah; Ajman; Fujairah;
-     * Ras Al Kaimah; Umm Al Qaiwain - onshore and offshore.
+     * Ras Al Kaimah; Umm Al Qaiwain - onshore and offshore
      * Fundamental point: Nahrwan south base.  Latitude: 33°19'10.87"N, longitude: 44°43'25.54"E (of Greenwich).
      */
     public const EPSG_NAHRWAN_1967 = 'urn:ogc:def:datum:EPSG::6270';
@@ -4817,7 +4815,7 @@ class Datum
     /**
      * Nakhl-e Ghanem
      * Type: Geodetic
-     * Extent: Iran - Kangan district.
+     * Extent: Iran - Kangan district
      * Coordinates of two stations determined with respect to ITRF 2000 at epoch 2005.2: BMT1 latitude
      * 27°42'09.8417"N, longitude 52°12'11.0362"E (of Greenwich); Total1 latitude 27°31'03.8896"N, longitude
      * 52°36'13.1312"E (of Greenwich).
@@ -4827,7 +4825,7 @@ class Datum
     /**
      * Naparima 1955
      * Type: Geodetic
-     * Extent: Trinidad and Tobago - Trinidad - onshore.
+     * Extent: Trinidad and Tobago - Trinidad - onshore
      * Fundamental point: Naparima. Latitude: 10°16'44.860"N, longitude: 61°27'34.620"W (of Greenwich).
      * Extended to Tobago as Naparima 1972. (Note: Naparima 1972 is not used in Trinidad).
      */
@@ -4836,7 +4834,7 @@ class Datum
     /**
      * Naparima 1972
      * Type: Geodetic
-     * Extent: Trinidad and Tobago - Tobago - onshore.
+     * Extent: Trinidad and Tobago - Tobago - onshore
      * Fundamental point: Naparima. Latitude: 10°16'44.860"N, longitude: 61°27'34.620"W (of Greenwich).
      * Naparima 1972 is an extension to Tobago of the Naparima 1955 network of Trinidad.
      */
@@ -4845,7 +4843,7 @@ class Datum
     /**
      * Napier 1962
      * Type: Vertical
-     * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area.
+     * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area
      * MSL at Napier harbour. Period of derivation unknown.
      */
     public const EPSG_NAPIER_1962 = 'urn:ogc:def:datum:EPSG::5163';
@@ -4853,7 +4851,7 @@ class Datum
     /**
      * National Geodetic Network
      * Type: Geodetic
-     * Extent: Kuwait - onshore.
+     * Extent: Kuwait - onshore
      * Replaces 1984 adjustment which used the WGS72 ellipsoid.
      */
     public const EPSG_NATIONAL_GEODETIC_NETWORK = 'urn:ogc:def:datum:EPSG::6318';
@@ -4865,8 +4863,7 @@ class Datum
      * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
      * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
      * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin;
-     * Wyoming.
+     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
      * 26 tide gauges in the US and Canada.
      * Normal orthometric heights.
      */
@@ -4875,7 +4872,7 @@ class Datum
     /**
      * National Vertical Datum 1992
      * Type: Vertical
-     * Extent: Bangladesh - onshore.
+     * Extent: Bangladesh - onshore
      * Mean Sea Level 1992-1994 at tidal station at Rangadia, Chittagong.
      */
     public const EPSG_NATIONAL_VERTICAL_DATUM_1992 = 'urn:ogc:def:datum:EPSG::1303';
@@ -4883,7 +4880,7 @@ class Datum
     /**
      * Nelson 1955
      * Type: Vertical
-     * Extent: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area.
+     * Extent: New Zealand - South Island - north of approximately 42°20'S - Nelson vertical CRS area
      * MSL at Nelson harbour 1939-1942.
      */
     public const EPSG_NELSON_1955 = 'urn:ogc:def:datum:EPSG::5164';
@@ -4891,7 +4888,7 @@ class Datum
     /**
      * Nepal 1981
      * Type: Geodetic
-     * Extent: Nepal.
+     * Extent: Nepal
      * Fundamental point: Station 12/157 Nagarkot. Latitude: 27°41'31.04"N, longitude: 85°31'20.23"E (of Greenwich).
      */
     public const EPSG_NEPAL_1981 = 'urn:ogc:def:datum:EPSG::1111';
@@ -4899,7 +4896,7 @@ class Datum
     /**
      * New Beijing
      * Type: Geodetic
-     * Extent: China - onshore.
+     * Extent: China - onshore
      * Derived by conformal transformation of Xian 1980 adjustment onto Krassowsky ellipsoid.
      * From 1982 replaces Beijing 1954.
      */
@@ -4908,7 +4905,7 @@ class Datum
     /**
      * New Zealand Geodetic Datum 1949
      * Type: Geodetic
-     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore and nearshore.
+     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore and nearshore
      * Fundamental point: Papatahi. Latitude: 41°19' 8.900"S, longitude: 175°02'51.000"E (of Greenwich).
      * Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.
      */
@@ -4918,7 +4915,7 @@ class Datum
      * New Zealand Geodetic Datum 2000
      * Type: Geodetic
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
-     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
      * Based on ITRF96 at epoch 2000.0
      * Replaces New Zealand Geodetic Datum 1949 (code 6272) and Chatham Islands Datum 1979 (code 6673) from March 2000.
      */
@@ -4928,7 +4925,7 @@ class Datum
      * New Zealand Vertical Datum 2009
      * Type: Vertical
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
-     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
      * New Zealand Quasigeoid 2009 which is defined by the application of the NZ geoid 2009 grid to NZGD2000
      * ellipsoidal heights. See transformation code 4459.
      */
@@ -4938,7 +4935,7 @@ class Datum
      * New Zealand Vertical Datum 2016
      * Type: Vertical
      * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
-     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.
+     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
      * New Zealand quasigeoid 2016 which is defined by the application of the NZ geoid 2016 grid to NZGD2000
      * ellipsoidal heights. See transformation code 7840.
      */
@@ -4947,7 +4944,7 @@ class Datum
     /**
      * Nivellement General Guyanais 1977
      * Type: Vertical
-     * Extent: French Guiana - onshore.
+     * Extent: French Guiana - onshore
      * Mean sea level 1936 at Cayenne. Origin = marker BM35 on stone on St Francois battery, Cayenne, with defined
      * elevation of 1.64m above msl. NGG1977 height 0.00m is 1.96m above sounding datum defined at Cayenne in 1936 by
      * SHM.
@@ -4958,7 +4955,7 @@ class Datum
     /**
      * Nivellement General de Nouvelle Caledonie
      * Type: Vertical
-     * Extent: New Caledonia - Grande Terre.
+     * Extent: New Caledonia - Grande Terre
      * Rivet AB01 established by SHOM (Service Hydrographique de la Marine)  in 1937 on the Quai des Volontaires in
      * Noumea. Height i: 1.885 metre above mean sea level.
      * Orthometric heights.
@@ -4968,7 +4965,7 @@ class Datum
     /**
      * Nivellement General de Nouvelle Caledonie 2008
      * Type: Vertical
-     * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).
+     * Extent: New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea)
      * Normal heights.
      */
     public const EPSG_NIVELLEMENT_GENERAL_DE_NOUVELLE_CALEDONIE_2008 = 'urn:ogc:def:datum:EPSG::1255';
@@ -4976,7 +4973,7 @@ class Datum
     /**
      * Nivellement General de Polynesie Francaise
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti.
+     * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti
      * The collection of heterogeneous levelling networks throughout the Society Islands of French Polynesia.
      */
     public const EPSG_NIVELLEMENT_GENERAL_DE_POLYNESIE_FRANCAISE = 'urn:ogc:def:datum:EPSG::5195';
@@ -4984,7 +4981,7 @@ class Datum
     /**
      * Nivellement General de l'Algerie 2022
      * Type: Vertical
-     * Extent: Algeria - onshore.
+     * Extent: Algeria - onshore
      * Fundamental benchmark attached to the tide gauge at basin of Algiers old port with defined height of 1.1168m.
      * Orthometric heights.
      */
@@ -4993,7 +4990,7 @@ class Datum
     /**
      * Nivellement General de la Corse 1948
      * Type: Vertical
-     * Extent: France - Corsica onshore.
+     * Extent: France - Corsica onshore
      * Mean sea level at Ajaccio between 1912 and 1937.
      * Replaced by IGN78 Corsica (datum 5120).
      */
@@ -5002,7 +4999,7 @@ class Datum
     /**
      * Nivellement General de la France - IGN69
      * Type: Vertical
-     * Extent: France - mainland onshore.
+     * Extent: France - mainland onshore
      * Rivet number M.ac O-VIII on the Marseille tide gauge site, with the height fixed in 1897 at 1.661 metre above
      * mean sea level between February 2nd 1885 and January 1st 1897.
      * Uses Normal heights.
@@ -5012,7 +5009,7 @@ class Datum
     /**
      * Nivellement General de la France - IGN78
      * Type: Vertical
-     * Extent: France - Corsica onshore.
+     * Extent: France - Corsica onshore
      * Marker MM3 situated on the tide gauge site of Ajaccio. Height is 3.640 metre above mean sea level.
      * Uses Normal heights. Replaces NGC (datum code 5189).
      */
@@ -5021,7 +5018,7 @@ class Datum
     /**
      * Nivellement General de la France - Lallemand
      * Type: Vertical
-     * Extent: France - mainland onshore.
+     * Extent: France - mainland onshore
      * Rivet number M.ac O-VIII on the Marseille tide gauge site, with the height fixed in 1897 at 1.661 metre above
      * mean sea level between February 2nd 1885 and January 1st 1897.
      * Orthometric heights.
@@ -5031,7 +5028,7 @@ class Datum
     /**
      * Nivellement General du Luxembourg 1995
      * Type: Vertical
-     * Extent: Luxembourg.
+     * Extent: Luxembourg
      * Reference point Wemperhardt defined as 528.030m above Normaal Amsterdams Peil (NAP). Datum at NAP is mean high
      * tide in 1684. Network adjusted in 1995.
      * Pseudo-orthometric heights.
@@ -5041,7 +5038,7 @@ class Datum
     /**
      * Nord Sahara 1959
      * Type: Geodetic
-     * Extent: Algeria - onshore and offshore.
+     * Extent: Algeria - onshore and offshore
      * Coordinates of primary network readjusted on ED50 datum and then transformed conformally to Clarke 1880 (RGS)
      * ellipsoid.
      * Adjustment includes Morocco and Tunisia but use only in Algeria. Within Algeria the adjustment is north of 32°N
@@ -5053,7 +5050,7 @@ class Datum
     /**
      * Normaal Amsterdams Peil
      * Type: Vertical
-     * Extent: Netherlands - onshore and offshore.
+     * Extent: Netherlands - onshore and offshore
      * Mean high tide at Amsterdam in 1684. Onshore NAP is defined by the published heights of benchmarks and since
      * 2018 extended offshore defined by the application of the official transformation from ETRS89, RDNAPTRANS(TM).
      * Orthometric heights. From 2018, use has been extended from Netherlands onshore to Netherlands onshore and
@@ -5075,7 +5072,7 @@ class Datum
      * Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York,
      * North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota,
      * Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US
-     * Virgin Islands - onshore.
+     * Virgin Islands - onshore
      * Fundamental point: Meade's Ranch. Latitude: 39°13'26.686"N, longitude: 98°32'30.506"W (of Greenwich).
      * In United States (USA) and Canada, replaced by North American Datum 1983 (NAD83) (code 6269) ; in Mexico,
      * replaced by Mexican Datum of 1993 (code 1042).
@@ -5085,7 +5082,7 @@ class Datum
     /**
      * North American Datum 1927 (1976)
      * Type: Geodetic
-     * Extent: Canada - Ontario.
+     * Extent: Canada - Ontario
      * Fundamental point: Meade's Ranch. Latitude: 39°13'26.686"N, longitude: 98°32'30.506"W (of Greenwich).
      * NAD27(76) used in Ontario for all maps at scale 1/20 000 and larger; elsewhere in Canada for selected purposes.
      */
@@ -5094,7 +5091,7 @@ class Datum
     /**
      * North American Datum 1927 (CGQ77)
      * Type: Geodetic
-     * Extent: Canada - Quebec.
+     * Extent: Canada - Quebec
      * Fundamental point: Meade's Ranch. Latitude: 39°13'26.686"N, longitude: 98°32'30.506"W (of Greenwich).
      * NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generally for maps issued by the Quebec
      * cartography office whose reference system is CGQ77.
@@ -5111,7 +5108,7 @@ class Datum
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.
+     * West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands
      * NAD83 Doppler Transit stations in NWL 9D were aligned with the BIH Conventional Terrestrial Reference Frame
      * (BTS) at epoch 1984.0 using an internationally adopted transformation. NAD83 is now known to be non-geocentric
      * by about 2.2 meters.
@@ -5125,7 +5122,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta,
@@ -5139,7 +5136,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of
@@ -5153,7 +5150,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of
@@ -5167,7 +5164,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by
@@ -5180,7 +5177,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba
@@ -5194,7 +5191,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of
@@ -5207,7 +5204,7 @@ class Datum
      * Type: Geodetic
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon.
+     * Yukon
      * Defined at epoch 1988.0 by a transformation from ITRF92, the definition superseded by a transformation from
      * ITRF93 and then by a transformation from ITRF94. (See transformation codes 8256-58).
      * Adopted by the Canadian federal government from 1996-01-01. Replaces NAD83 [sometimes called NAD83(Original)].
@@ -5218,7 +5215,7 @@ class Datum
     /**
      * North American Datum of 1983 (MARP00)
      * Type: Geodetic
-     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore.
+     * Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
      * Defined by a time-dependent seven parameter transformation of ITRF2000 3D geocentric Cartesian coordinates and
      * velocities at reference epoch 1993.62, aligned to the Mariana plate at other epochs based on an Euler pole
      * rotation.
@@ -5230,7 +5227,7 @@ class Datum
      * North American Datum of 1983 (PACP00)
      * Type: Geodetic
      * Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands;
-     * onshore and offshore.
+     * onshore and offshore
      * Defined by a time-dependent seven parameter transformation of ITRF2000 3D geocentric Cartesian coordinates and
      * velocities at reference epoch 1993.62, aligned to the Pacific plate at other epochs based on an Euler pole
      * rotation.
@@ -5246,7 +5243,7 @@ class Datum
      * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
      * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
      * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming.
+     * West Virginia; Wisconsin; Wyoming
      * Mean water level 1970-1983 at Pointe-au-Père (Father's Point) and 1984-1988 at Rimouski, Quebec. Benchmark
      * 1250-G = 6.273m.
      * Helmert orthometric heights.
@@ -5256,7 +5253,7 @@ class Datum
     /**
      * North Rona
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore
      * Orthometric heights.
      */
     public const EPSG_NORTH_RONA = 'urn:ogc:def:datum:EPSG::5143';
@@ -5264,7 +5261,7 @@ class Datum
     /**
      * Northern Marianas Vertical Datum of 2003
      * Type: Vertical
-     * Extent: Northern Mariana Islands - onshore - Rota, Saipan and Tinian.
+     * Extent: Northern Mariana Islands - onshore - Rota, Saipan and Tinian
      * Mean sea level at Tanapag harbor, Saipan. Benchmark 1633227 TIDAL UH-2C = 1.657m relative to National Tidal
      * Datum Epoch 1983-2001. Transferred to Rota (East Harbor, BM TIDAL 3 = 1.482m) and Tinian (Harbor BM TIDAL 1 =
      * 2.361m).
@@ -5275,7 +5272,7 @@ class Datum
     /**
      * Norway Normal Null 1954
      * Type: Vertical
-     * Extent: Norway - onshore.
+     * Extent: Norway - onshore
      * MSL defined by regression at 7 gauges with between 17 and 67 years observations.
      * Includes initial NN1954 system and NNN1957 system. Former name retained. Normal-orthometric heights. Replaced by
      * NN2000.
@@ -5285,7 +5282,7 @@ class Datum
     /**
      * Norway Normal Null 2000
      * Type: Vertical
-     * Extent: Norway - onshore.
+     * Extent: Norway - onshore
      * Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements
      * caused by isostatic rebound, heights are reduced to epoch 2000.0 using values computed from the NKG2005LU uplift
      * model.
@@ -5296,7 +5293,7 @@ class Datum
     /**
      * Norwegian Chart Datum
      * Type: Vertical
-     * Extent: Norway (offshore) and Svalbard and Jan Mayen (offshore).
+     * Extent: Norway (offshore) and Svalbard and Jan Mayen (offshore)
      * LAT (sum of all harmonic constituents) with an added safety margin in areas where low water levels frequently
      * deviate from LAT. The safety margin is 20 cm from Utsira to the Swedish border and 30 cm in the inner part of
      * the Oslofjord (north of Drøbak).
@@ -5309,7 +5306,7 @@ class Datum
     /**
      * Not specified (based on Airy 1830 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5318,7 +5315,7 @@ class Datum
     /**
      * Not specified (based on Airy Modified 1849 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5327,7 +5324,7 @@ class Datum
     /**
      * Not specified (based on Australian National Spheroid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5336,7 +5333,7 @@ class Datum
     /**
      * Not specified (based on Average Terrestrial System 1977 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5345,7 +5342,7 @@ class Datum
     /**
      * Not specified (based on Bessel 1841 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5354,7 +5351,7 @@ class Datum
     /**
      * Not specified (based on Bessel Modified ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5363,7 +5360,7 @@ class Datum
     /**
      * Not specified (based on Bessel Namibia ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5372,7 +5369,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1858 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5381,7 +5378,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1866 Authalic Sphere)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5390,7 +5387,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1866 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5399,7 +5396,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (Arc) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5408,7 +5405,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (Benoit) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5417,7 +5414,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (IGN) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5426,7 +5423,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (RGS) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5435,7 +5432,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 (SGA 1922) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5444,7 +5441,7 @@ class Datum
     /**
      * Not specified (based on Clarke 1880 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5453,7 +5450,7 @@ class Datum
     /**
      * Not specified (based on Everest (1830 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5462,7 +5459,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1937 Adjustment) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5471,7 +5468,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1962 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5480,7 +5477,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1967 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5489,7 +5486,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 (1975 Definition) ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5498,7 +5495,7 @@ class Datum
     /**
      * Not specified (based on Everest 1830 Modified ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5507,7 +5504,7 @@ class Datum
     /**
      * Not specified (based on GEM 10C ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5516,7 +5513,7 @@ class Datum
     /**
      * Not specified (based on GRS 1967 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5525,7 +5522,7 @@ class Datum
     /**
      * Not specified (based on GRS 1980 Authalic Sphere)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5534,7 +5531,7 @@ class Datum
     /**
      * Not specified (based on GRS 1980 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5543,7 +5540,7 @@ class Datum
     /**
      * Not specified (based on Helmert 1906 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5552,7 +5549,7 @@ class Datum
     /**
      * Not specified (based on Hughes 1980 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5561,7 +5558,7 @@ class Datum
     /**
      * Not specified (based on Indonesian National Spheroid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5570,7 +5567,7 @@ class Datum
     /**
      * Not specified (based on International 1924 Authalic Sphere)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5579,7 +5576,7 @@ class Datum
     /**
      * Not specified (based on International 1924 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5588,7 +5585,7 @@ class Datum
     /**
      * Not specified (based on Krassowsky 1940 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5597,7 +5594,7 @@ class Datum
     /**
      * Not specified (based on NWL 9D ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5606,7 +5603,7 @@ class Datum
     /**
      * Not specified (based on OSU86F ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5615,7 +5612,7 @@ class Datum
     /**
      * Not specified (based on OSU91A ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5624,7 +5621,7 @@ class Datum
     /**
      * Not specified (based on Plessis 1817 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5633,7 +5630,7 @@ class Datum
     /**
      * Not specified (based on Struve 1860 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5642,7 +5639,7 @@ class Datum
     /**
      * Not specified (based on WGS 72 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5651,7 +5648,7 @@ class Datum
     /**
      * Not specified (based on WGS 84 ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5660,7 +5657,7 @@ class Datum
     /**
      * Not specified (based on War Office ellipsoid)
      * Type: Geodetic
-     * Extent: World.
+     * Extent: World
      * Included for coordinate reference systems where datum is unknown.
      * @deprecated
      */
@@ -5669,7 +5666,7 @@ class Datum
     /**
      * Nouakchott 1965
      * Type: Geodetic
-     * Extent: Mauritania - coastal area south of Cape Timiris.
+     * Extent: Mauritania - coastal area south of Cape Timiris
      * Nouakchott astronomical point.
      * Triangulation limited to environs of Nouakchott. Extended in 1982 by satellite translocation from a single
      * station "Ruines" to support Syledis chain for offshore operations. Replaced by Mauritania 1999 (datum code
@@ -5680,7 +5677,7 @@ class Datum
     /**
      * Nouvelle Triangulation Francaise
      * Type: Geodetic
-     * Extent: France - onshore - mainland and Corsica.
+     * Extent: France - onshore - mainland and Corsica
      * Fundamental point: Pantheon. Latitude: 48°50'46.522"N, longitude: 2°20'48.667"E (of Greenwich).
      */
     public const EPSG_NOUVELLE_TRIANGULATION_FRANCAISE = 'urn:ogc:def:datum:EPSG::6275';
@@ -5688,7 +5685,7 @@ class Datum
     /**
      * Nouvelle Triangulation Francaise (Paris)
      * Type: Geodetic
-     * Extent: France - onshore - mainland and Corsica.
+     * Extent: France - onshore - mainland and Corsica
      * Fundamental point: Pantheon. Latitude: 54.273618g N, longitude: 0.0106921g E (of Paris).
      */
     public const EPSG_NOUVELLE_TRIANGULATION_FRANCAISE_PARIS = 'urn:ogc:def:datum:EPSG::6807';
@@ -5697,7 +5694,7 @@ class Datum
      * OS (SN) 1980
      * Type: Geodetic
      * Extent: Ireland - onshore. United Kingdom (UK) - onshore - England; Scotland; Wales; Northern Ireland. Isle of
-     * Man.
+     * Man
      * Fundamental point: Herstmonceux. Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich).
      */
     public const EPSG_OS_SN_1980 = 'urn:ogc:def:datum:EPSG::6279';
@@ -5706,7 +5703,7 @@ class Datum
      * OSGB 1970 (SN)
      * Type: Geodetic
      * Extent: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles
-     * nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore.
+     * nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore
      * Fundamental point: Herstmonceux. Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E (of Greenwich).
      */
     public const EPSG_OSGB_1970_SN = 'urn:ogc:def:datum:EPSG::6278';
@@ -5714,7 +5711,7 @@ class Datum
     /**
      * OSNI 1952
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Position fixed to the coordinates from the 19th century Principle Triangulation of station Divis. Scale and
      * orientation controlled by position of Principle Triangulation stations Knocklayd and Trostan.
      * Replaced by Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum code 6300).
@@ -5724,7 +5721,7 @@ class Datum
     /**
      * Observatario
      * Type: Geodetic
-     * Extent: Mozambique - south.
+     * Extent: Mozambique - south
      * Fundamental point: Campos Rodrigues observatory, Maputo.
      * Replaced by transformation to Tete datum (datum code 6127).
      */
@@ -5733,7 +5730,7 @@ class Datum
     /**
      * Ocotepeque 1935
      * Type: Geodetic
-     * Extent: Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua.
+     * Extent: Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua
      * Fundamental point: Base Norte. Latitude: 14°26'20.168"N, longitude: 89°11'33.964"W.
      * Replaced in Costa Rica by Costa Rica 2005 (CR05) from March 2007 and replaced in El Salvador by SIRGAS_ES2007
      * from August 2007.
@@ -5743,7 +5740,7 @@ class Datum
     /**
      * Old Hawaiian
      * Type: Geodetic
-     * Extent: United States (USA) - Hawaii - main islands onshore.
+     * Extent: United States (USA) - Hawaii - main islands onshore
      * Fundamental point: Oahu West Base Astro.  Latitude: 21°18'13.89"N, longitude 157°50'55.79"W (of Greenwich)
      * Hawaiian Islands were never on NAD27 but rather on Old Hawaiian Datum. NADCON conversion program provides
      * transformation from Old Hawaiian Datum to NAD83 (original 1986 realization) but making the transformation appear
@@ -5754,7 +5751,7 @@ class Datum
     /**
      * Oman National Geodetic Datum 2014
      * Type: Geodetic
-     * Extent: Oman - onshore and offshore.
+     * Extent: Oman - onshore and offshore
      * 20 stations of the Oman primary network tied to ITRF2008 at epoch 2013.15.
      * Replaces WGS 84 (G873). Replaced by ONGD17.
      */
@@ -5763,7 +5760,7 @@ class Datum
     /**
      * Oman National Geodetic Datum 2017
      * Type: Geodetic
-     * Extent: Oman - onshore and offshore.
+     * Extent: Oman - onshore and offshore
      * Oman primary network of 39 stations tied to ITRF2014 at epoch 2017.24.
      * Replaces ONGD14 from March 2019.
      */
@@ -5772,7 +5769,7 @@ class Datum
     /**
      * One Tree Point 1964
      * Type: Vertical
-     * Extent: New Zealand - North Island - One Tree Point vertical CRS area.
+     * Extent: New Zealand - North Island - One Tree Point vertical CRS area
      * MSL at Whangarei harbour 1960-1963.
      */
     public const EPSG_ONE_TREE_POINT_1964 = 'urn:ogc:def:datum:EPSG::5165';
@@ -5781,7 +5778,7 @@ class Datum
      * Ordnance Datum Newlyn
      * Type: Vertical
      * Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and
-     * Inner Hebrides.
+     * Inner Hebrides
      * Mean Sea Level at Newlyn between 1915 and 1921. Initially realised through 1921 and then 1956 levelling network
      * adjustments. From 2002 redefined to be realised through OSGM geoid models.
      * Orthometric heights.
@@ -5792,7 +5789,7 @@ class Datum
      * Ordnance Datum Newlyn (Offshore)
      * Type: Vertical
      * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and
-     * 9°W to 2°E.
+     * 9°W to 2°E
      * Defined by OSGM geoid model.
      * Extension of Ordnance Datum Newlyn offshore through geoid model. Orthometric heights.
      */
@@ -5801,7 +5798,7 @@ class Datum
     /**
      * Ordnance Datum Newlyn (Orkney Isles)
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore
      * Connected to Newlyn datum by triangulation from the British mainland. Initially realised through levelling
      * network adjustment, from 2002 redefined to be realised through OSGM geoid model.
      * Considered as separate from Newlyn because the accuracy of the trigonometric connection across the Pentland
@@ -5813,7 +5810,7 @@ class Datum
      * Ordnance Survey of Great Britain 1936
      * Type: Geodetic
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
-     * Great Britain (England, Wales and Scotland). Isle of Man onshore.
+     * Great Britain (England, Wales and Scotland). Isle of Man onshore
      * Prior to 2002 fundamental point: Herstmonceux, Latitude: 50°51'55.271"N, longitude: 0°20'45.882"E,
      * triangulation adjustment started 1936, completed 1962. From April 2002 the datum is defined through the
      * application of the OSTN transformation from ETRS89.
@@ -5826,7 +5823,7 @@ class Datum
     /**
      * Ostend
      * Type: Vertical
-     * Extent: Belgium - onshore.
+     * Extent: Belgium - onshore
      * Mean low water at Ostend 1855-78 transferred to benchmark GIKMN at Uccle.
      * Realized through the second general levelling (DNG or TAW) 1981-1999.
      */
@@ -5836,7 +5833,7 @@ class Datum
      * Ostenfeld  Intermediate Datum
      * Type: Geodetic
      * Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border
-     * near the Kongea river).
+     * near the Kongea river)
      * Origin of historic system is near the German village Ostenfeld.  This Danish reconstruction defined/derived
      * through inversion of an older transformation.
      * Created in 2022 to support intermediate CRS OS-IRF in the transformation of coordinates between the historic
@@ -5848,7 +5845,7 @@ class Datum
     /**
      * OxWo08 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester
      * Defined through the application of the OxWo08 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS OxWo08-IRF in the emulation of the OxWo08 Snake map projection.
@@ -5858,7 +5855,7 @@ class Datum
     /**
      * PDO Height Datum 1993
      * Type: Vertical
-     * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
+     * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands
      * Misclosure between Muscat and Salalah less than .5 meters with differences from of up to 5 meters from old Fahud
      * Datum. The PHD93 adjustment was initially known as the Spine. Replaces Fahud Vertical Datum (code 5124) from
      * 1993.
@@ -5868,7 +5865,7 @@ class Datum
     /**
      * PDO Survey Datum 1993
      * Type: Geodetic
-     * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.
+     * Extent: Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands
      * Adjustment best fitted to Fahud network.
      * Replaces Fahud datum (code 6232). Maximum differences to Fahud adjustment are 20 metres.
      */
@@ -5877,7 +5874,7 @@ class Datum
     /**
      * PNG08
      * Type: Vertical
-     * Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore.
+     * Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore
      * Mean sea level at 8 tide gauges around PNG, defined through application of PNG08 geoid model (transformation
      * code 7655) to PNG94 (CRS code 5545).
      */
@@ -5886,7 +5883,7 @@ class Datum
     /**
      * Palestine 1923
      * Type: Geodetic
-     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore
      * Fundamental point: Point 82'M  Jerusalem. Latitude: 31°44' 2.749"N, longitude: 35°12'43.490"E (of Greenwich).
      */
     public const EPSG_PALESTINE_1923 = 'urn:ogc:def:datum:EPSG::6281';
@@ -5895,7 +5892,7 @@ class Datum
      * Pampa del Castillo
      * Type: Geodetic
      * Extent: Argentina - Chibut province south of approximately 42°30'S and Santa Cruz province north of
-     * approximately 50°20'S.
+     * approximately 50°20'S
      * Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exploration and production in Golfo
      * San Jorge basin (44°S to 47.5°S) continues.
      */
@@ -5904,7 +5901,7 @@ class Datum
     /**
      * Panama-Colon 1911
      * Type: Geodetic
-     * Extent: Panama - onshore.
+     * Extent: Panama - onshore
      * Fundamental point: Balboa Hill. Latitude: 09°04'57.637"N, longtitude: 79°43'50.313"W.
      * Reports of the existence of an Ancon datum are probably erroneous, considering that the origin of the
      * Panamá-Colón Datum of 1911 is at Balboa Hill and the access road up the hill is from the town of Ancon, Canal
@@ -5917,7 +5914,7 @@ class Datum
      * Type: Geodetic
      * Extent: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty
      * Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland,
-     * Woodlark, and associated islands.
+     * Woodlark, and associated islands
      * ITRF92 at epoch 1994.0.
      * Adopted 1996. Coincident with WGS 84 in 1994 but rapidly divergent due to significant tectonic motion in PNG.
      */
@@ -5926,7 +5923,7 @@ class Datum
     /**
      * Parametry Zemli 1990
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of stations of the satellite geodetic network (SGN) in Russia at epoch 1990.0.
      * Replaced by PZ-90.02 from 2007-09-20.
      */
@@ -5935,7 +5932,7 @@ class Datum
     /**
      * Parametry Zemli 1990.02
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 33 stations of the satellite geodetic network (SGN) in Russia and Antarctica
      * adjusted to a subset of 14 IGS stations in Russia at epoch 2002.0. The IGS station coordinates are considered to
      * be equivalent to ITRF2000.
@@ -5946,7 +5943,7 @@ class Datum
     /**
      * Parametry Zemli 1990.11
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 33 stations of the satellite geodetic network (SGN) in Russia and Antarctica
      * adjusted to a subset of 14 IGS stations in Russia at epoch 2010.0. The IGS station coordinates are considered to
      * be equivalent to ITRF2008.
@@ -5957,7 +5954,7 @@ class Datum
     /**
      * Peru96
      * Type: Geodetic
-     * Extent: Peru - onshore and offshore.
+     * Extent: Peru - onshore and offshore
      * Densification of SIRGAS95 network (ITRF94 at epoch 1995.4) in Peru, consisting of 47 passive geodetic stations
      * and 3 continuous recording GPS stations.
      * Densification of SIRGAS 1995 within Peru. Replaces PSAD56 (datum code 6248) in Peru.
@@ -5967,7 +5964,7 @@ class Datum
     /**
      * Petrels 1972
      * Type: Geodetic
-     * Extent: Antarctica - Adelie Land - Petrels island.
+     * Extent: Antarctica - Adelie Land - Petrels island
      * Fundamental point: Astro station DZ on Ile de Petrels. Latitude: 66°40'00"S, longitude: 140°00'46"E (of
      * Greenwich).
      */
@@ -5976,7 +5973,7 @@ class Datum
     /**
      * Philippine Reference System 1992
      * Type: Geodetic
-     * Extent: Philippines - onshore and offshore.
+     * Extent: Philippines - onshore and offshore
      * Fundamental point: Balacan. Latitude: 13°33'41.000"N, longitude: 121°52'03.000"E (of Greenwich),
      * geoid-ellipsoid separation 0.34m.
      * Replaces Luzon 1911 datum (code 6253).
@@ -5993,7 +5990,7 @@ class Datum
     /**
      * Pico de las Nieves 1968
      * Type: Geodetic
-     * Extent: Spain - Canary Islands onshore.
+     * Extent: Spain - Canary Islands onshore
      * Pico de las Nieves mountain, Gran Canaria. The fundamental point is a different station to that for PN84.
      * Replaced by PN84 only on western islands (El Hierro, La Gomera, La Palma and Tenerife). Both PN68 and PN84
      * replaced by REGCAN95.
@@ -6003,7 +6000,7 @@ class Datum
     /**
      * Pico de las Nieves 1984
      * Type: Geodetic
-     * Extent: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore.
+     * Extent: Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore
      * Pico de las Nieves mountain, Gran Canaria. The fundamental point is a different station to that for PN68.
      * Replaces Pico de las Nieves 1968 (PN68) only on western islands (El Hierro, La Gomera, La Palma and Tenerife).
      * Replaced by REGCAN95.
@@ -6013,7 +6010,7 @@ class Datum
     /**
      * Piraeus Harbour 1986
      * Type: Vertical
-     * Extent: Greece - onshore.
+     * Extent: Greece - onshore
      * MSL determined during 1986.
      */
     public const EPSG_PIRAEUS_HARBOUR_1986 = 'urn:ogc:def:datum:EPSG::5115';
@@ -6021,7 +6018,7 @@ class Datum
     /**
      * Pitcairn 1967
      * Type: Geodetic
-     * Extent: Pitcairn - Pitcairn Island.
+     * Extent: Pitcairn - Pitcairn Island
      * Fundamental point: Pitcairn Astro. Latitude: 25°04'06.87"S, longitude: 130°06'47.83"W (of Greenwich).
      * Replaced by Pitcairn 2006.
      */
@@ -6030,7 +6027,7 @@ class Datum
     /**
      * Pitcairn 2006
      * Type: Geodetic
-     * Extent: Pitcairn - Pitcairn Island.
+     * Extent: Pitcairn - Pitcairn Island
      * Fundamental point: Pitcairn Astro. Latitude: 25°04'06.7894"S, longitude: 130°06'46.6816"W (of Greenwich),
      * derived by single point GPS oberservations.
      * Replaces Pitcairn 1967.
@@ -6041,7 +6038,7 @@ class Datum
      * Point 58
      * Type: Geodetic
      * Extent: Senegal - central, Mali - southwest, Burkina Faso - central, Niger - southwest, Nigeria - north, Chad -
-     * central. All in proximity to the parallel of latitude of 12°N.
+     * central. All in proximity to the parallel of latitude of 12°N
      * Fundamental point: Point 58. Latitude: 12°52'44.045"N, longitude: 3°58'37.040"E (of Greenwich).
      * Used as the basis for computation of the 12th Parallel traverse conducted 1966-70 from Senegal to Chad and
      * connecting to the Blue Nile 1958 (Adindan) triangulation in Sudan.
@@ -6051,7 +6048,7 @@ class Datum
     /**
      * Pointe Geologie Perroud 1950
      * Type: Geodetic
-     * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E.
+     * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E
      * Fundamental point: Astro station G.0 on Pointe Geologie. Latitude: 66°39'30"S, longitude: 140°01'00"E (of
      * Greenwich).
      */
@@ -6060,7 +6057,7 @@ class Datum
     /**
      * Ponta Delgada
      * Type: Vertical
-     * Extent: Portugal - eastern Azores - Sao Miguel island onshore.
+     * Extent: Portugal - eastern Azores - Sao Miguel island onshore
      * Mean Sea Level during 1991 at Ponta Delgada.
      * Orthometric heights.
      */
@@ -6069,7 +6066,7 @@ class Datum
     /**
      * Poolbeg
      * Type: Vertical
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Low water mark of the spring tide on the 8 April 1837 at Poolbeg Lighthouse, Dublin.
      * Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of Ireland. Replaced by Belfast
      * Lough and Malin Head (datum codes 5130-31).
@@ -6080,7 +6077,7 @@ class Datum
      * Port Moresby 1996
      * Type: Vertical
      * Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital
-     * District.
+     * District
      * BM198 (adjacent to the Port Moresby tide gauge) height of 3.02 above MSL as determined by CSIRO in 1990.
      * Propagated through bilinear interpolation of EGM96 geoid model (transformation code 10084) reduced by offset of
      * -1.58m.
@@ -6092,7 +6089,7 @@ class Datum
      * Port Moresby 2008
      * Type: Vertical
      * Extent: Papua New Guinea - onshore - Gulf province east of 144°24'E, Central province and National Capital
-     * District.
+     * District
      * BM198 (adjacent to the Port Moresby tide gauge) height of 3.02 above MSL as determined by CSIRO in 1990.
      * Propagated through bilinear interpolation of EGM2008 geoid model (transformation code 3858 or 3859) reduced by
      * offset of -0.93m.
@@ -6104,7 +6101,7 @@ class Datum
     /**
      * Porto Santo 1936
      * Type: Geodetic
-     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
+     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
      * SE Base on Porto Santo island.
      * Replaced by 1995 adjustment (datum code 6663). For Selvagens see Selvagem Grande (code 6616).
      */
@@ -6113,7 +6110,7 @@ class Datum
     /**
      * Porto Santo 1995
      * Type: Geodetic
-     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
+     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
      * SE Base on Porto Santo island. Origin and orientation constrained to those of the 1936 adjustment.
      * Classical and GPS observations. Replaces 1936 adjustment (datum code 6615).
      * For Selvagens see Selvagem Grande (datum code 6616).
@@ -6123,7 +6120,7 @@ class Datum
     /**
      * Posiciones Geodesicas Argentinas 1994
      * Type: Geodetic
-     * Extent: Argentina - onshore and offshore.
+     * Extent: Argentina - onshore and offshore
      * WGS 84 coordinates at time of survey of a geodetic network of 127 points defining the National Geodetic System
      * (Sistema Geodésico Nacional). Surveyed between February and April 1993 and between March and May 1994.
      * Adopted as defining the National Geodetic Reference Network from 9th May 1997. Technically, but not legally,
@@ -6135,7 +6132,7 @@ class Datum
     /**
      * Posiciones Geodesicas Argentinas 1998
      * Type: Geodetic
-     * Extent: Argentina - onshore and offshore.
+     * Extent: Argentina - onshore and offshore
      * A geodetic network of 136 high accuracy surveyed points. Densification of SIRGAS 1995; ITRF94 at epoch 1995.4.
      * Replaced POSGAR 1994 (datum code 6694) for technical, but not legal, purposes. Replaced by POSGAR 2007 (datum
      * code 1062) from May 2009.
@@ -6145,7 +6142,7 @@ class Datum
     /**
      * Posiciones Geodesicas Argentinas 2007
      * Type: Geodetic
-     * Extent: Argentina - onshore and offshore.
+     * Extent: Argentina - onshore and offshore
      * Coordinates of the geodetic network of 211 high accuracy surveyed points (178 passive and 33 continuously
      * operating) defining the National Geodetic System (Sistema Geodésico Nacional) based on ITRF2005 at epoch
      * 2006.632.
@@ -6157,7 +6154,7 @@ class Datum
     /**
      * Potsdam Datum/83
      * Type: Geodetic
-     * Extent: Germany - Thuringen.
+     * Extent: Germany - Thuringen
      * Fundamental point: Rauenberg. Latitude: 52°27'12.021"N, longitude: 13°22'04.928"E (of Greenwich). This station
      * was destroyed in 1910 and the station at Potsdam substituted as the fundamental point.
      * PD/83 is the realization of DHDN in Thuringen. It is the resultant of applying a transformation derived at 13
@@ -6168,7 +6165,7 @@ class Datum
     /**
      * Principe
      * Type: Geodetic
-     * Extent: Sao Tome and Principe - onshore - Principe.
+     * Extent: Sao Tome and Principe - onshore - Principe
      * Fundamental point: Morro do Papagaio. Latitude: 1°36'46.87"N, longitude: 7°23'39.65"E (of Greenwich).
      */
     public const EPSG_PRINCIPE = 'urn:ogc:def:datum:EPSG::1046';
@@ -6178,7 +6175,7 @@ class Datum
      * Type: Geodetic
      * Extent: Aruba - onshore; Bolivia; Bonaire - onshore; Brazil - offshore - Amazon Cone shelf; Chile - onshore
      * north of 43°30'S; Curacao - onshore; Ecuador - mainland onshore; Guyana - onshore; Peru - onshore; Venezuela -
-     * onshore.
+     * onshore
      * Fundamental point: La Canoa. Latitude: 8°34'17.170"N, longitude: 63°51'34.880"W (of Greenwich).
      * Same origin as La Canoa datum.
      */
@@ -6187,7 +6184,7 @@ class Datum
     /**
      * Puerto Rico
      * Type: Geodetic
-     * Extent: Puerto Rico, US Virgin Islands and British Virgin Islands - onshore.
+     * Extent: Puerto Rico, US Virgin Islands and British Virgin Islands - onshore
      * Fundamental point: Cardona Island Lighthouse. Latitude:17°57'31.40"N, longitude: 66°38'07.53"W (of Greenwich).
      * NADCON conversion program provides transformation from Puerto Rico Datum to NAD83 (original 1986 realization)
      * but making the transformation appear to user as if from NAD27.
@@ -6197,7 +6194,7 @@ class Datum
     /**
      * Puerto Rico Vertical Datum of 2002
      * Type: Vertical
-     * Extent: Puerto Rico - onshore.
+     * Extent: Puerto Rico - onshore
      * Mean sea level at San Juan. Benchmark 9756371 A TIDAL = 1.334m relative to National Tidal Datum Epoch 1960-1978.
      * Replaces all earlier vertical datums for Puerto Rico.
      */
@@ -6208,7 +6205,7 @@ class Datum
      * Type: Geodetic
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
      * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
-     * onshore; Uzbekistan.
+     * onshore; Uzbekistan
      * Fundamental point: Pulkovo observatory. Latitude: 59°46'18.550"N, longitude: 30°19'42.090"E (of Greenwich).
      */
     public const EPSG_PULKOVO_1942 = 'urn:ogc:def:datum:EPSG::6284';
@@ -6217,7 +6214,7 @@ class Datum
      * Pulkovo 1942(58)
      * Type: Geodetic
      * Extent: Onshore: Bulgaria, Czechia, Germany (former DDR), Hungary, Poland and Slovakia. Onshore and offshore:
-     * Albania and Romania.
+     * Albania and Romania
      * Fundamental point: Pulkovo observatory. Latitude: 59°46'18.550"N, longitude: 30°19'42.090"E (of Greenwich).
      * 1956 international adjustment of Uniform Astro-Geodetic Network of countries of central and eastern Europe.
      * Locally densified during 1957 and 1958.
@@ -6227,7 +6224,7 @@ class Datum
     /**
      * Pulkovo 1942(83)
      * Type: Geodetic
-     * Extent: Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia.
+     * Extent: Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia
      * Fundamental point: Pulkovo observatory. Latitude: 59°46'18.550"N, longitude: 30°19'42.090"E (of Greenwich).
      * 1983 international adjustment of Uniform Astro-Geodetic Network of countries of central and eastern Europe.
      */
@@ -6236,7 +6233,7 @@ class Datum
     /**
      * Pulkovo 1995
      * Type: Geodetic
-     * Extent: Russian Federation - onshore and offshore.
+     * Extent: Russian Federation - onshore and offshore
      * Fundamental point: Pulkovo observatory. Latitude: 59°46'15.359"N, longitude: 30°19'28.318"E (of Greenwich).
      */
     public const EPSG_PULKOVO_1995 = 'urn:ogc:def:datum:EPSG::6200';
@@ -6244,7 +6241,7 @@ class Datum
     /**
      * Qatar 1948
      * Type: Geodetic
-     * Extent: Qatar - onshore.
+     * Extent: Qatar - onshore
      * Fundamental point: Sokey 0 M. Latitude: 25°22'56.500"N, longitude: 50°45'41.000"E (of Greenwich).
      */
     public const EPSG_QATAR_1948 = 'urn:ogc:def:datum:EPSG::6286';
@@ -6252,7 +6249,7 @@ class Datum
     /**
      * Qatar 1974
      * Type: Geodetic
-     * Extent: Qatar - onshore and offshore.
+     * Extent: Qatar - onshore and offshore
      * Fundamental point: Station G3.
      */
     public const EPSG_QATAR_1974 = 'urn:ogc:def:datum:EPSG::6285';
@@ -6260,7 +6257,7 @@ class Datum
     /**
      * Qatar National Datum 1995
      * Type: Geodetic
-     * Extent: Qatar - onshore.
+     * Extent: Qatar - onshore
      * Defined by transformation from WGS 84 - see coordinate operation code 1840.
      */
     public const EPSG_QATAR_NATIONAL_DATUM_1995 = 'urn:ogc:def:datum:EPSG::6614';
@@ -6268,7 +6265,7 @@ class Datum
     /**
      * Qornoq 1927
      * Type: Geodetic
-     * Extent: Greenland - west coast onshore.
+     * Extent: Greenland - west coast onshore
      * Fundamental point: Station 7008. Latitude: 64°31'06.27"N, longitude: 51°12'24.86"W (of Greenwich).
      */
     public const EPSG_QORNOQ_1927 = 'urn:ogc:def:datum:EPSG::6194';
@@ -6276,7 +6273,7 @@ class Datum
     /**
      * RBEPP12 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance
      * Defined through the application of the RBEPP12 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS RBEPP12-IRF in the emulation of the RBEPP12 Snake map projection.
@@ -6286,7 +6283,7 @@ class Datum
     /**
      * Raiatea SAU 2001
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Raiatea.
+     * Extent: French Polynesia - Society Islands - Raiatea
      * Fundamental benchmark: RN1
      * Included as part of NGPF - see datum code 5195.
      */
@@ -6295,7 +6292,7 @@ class Datum
     /**
      * Ras Ghumays
      * Type: Vertical
-     * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore.
+     * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore
      * Mean Sea Level at Ras Ghumays 1978 and 1979.
      * Orthometric heights.
      */
@@ -6304,7 +6301,7 @@ class Datum
     /**
      * Rassadiran
      * Type: Geodetic
-     * Extent: Iran - Taheri refinery site.
+     * Extent: Iran - Taheri refinery site
      * Fundamental point: Total1. Latitude: 27°31'07.784"N, longitude: 52°36'12.741"E (of Greenwich).
      */
     public const EPSG_RASSADIRAN = 'urn:ogc:def:datum:EPSG::6153';
@@ -6312,7 +6309,7 @@ class Datum
     /**
      * Rauenberg Datum/83
      * Type: Geodetic
-     * Extent: Germany - Sachsen.
+     * Extent: Germany - Sachsen
      * Fundamental point: Rauenberg. Latitude: 52°27'12.021"N, longitude: 13°22'04.928"E (of Greenwich). This station
      * was destroyed in 1910 and the station at Potsdam substituted as the fundamental point.
      * RD/83 is the realization of DHDN in Saxony. It is the resultant of applying a transformation derived at 106
@@ -6324,7 +6321,7 @@ class Datum
      * Red Geodesica Para Mineria en Chile
      * Type: Dynamic geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Realized through 26 stations in the IGS (SIRGAS-CON) active reference station network in Chile.
      */
     public const EPSG_RED_GEODESICA_PARA_MINERIA_EN_CHILE = 'urn:ogc:def:datum:EPSG::1304';
@@ -6332,7 +6329,7 @@ class Datum
     /**
      * Red Geodesica Venezolana
      * Type: Geodetic
-     * Extent: Venezuela - onshore and offshore.
+     * Extent: Venezuela - onshore and offshore
      * Realised by a frame of 67 stations observed in 1995 as a densification of the SIRGAS campaign and adjusted in
      * the ITRF94 at epoch 1995.4.
      */
@@ -6341,7 +6338,7 @@ class Datum
     /**
      * Red Geodesica de Canarias 1995
      * Type: Geodetic
-     * Extent: Spain - Canary Islands onshore and offshore.
+     * Extent: Spain - Canary Islands onshore and offshore
      * ITRF93 at epoch 1994.9 at VLBI station INTA at the Canary Spatial Centre (CEC) at Maspalomas on Grand Canary.
      * Replaces Pico de las Nieves 1968 (PN68) and Pico de las Nieves 1984 (PN84).
      */
@@ -6350,7 +6347,7 @@ class Datum
     /**
      * Reference System de Angola 2013
      * Type: Geodetic
-     * Extent: Angola - onshore and offshore.
+     * Extent: Angola - onshore and offshore
      * Network of 18 stations throughout Angola referenced to ITRF2008 @ 2010.90.
      * Established through daily PPP solutions in GPS week G1610.
      */
@@ -6359,7 +6356,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v1
      * Type: Geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Coincident with ETRS89 at epoch 1993.0. Derived from long-term GNSS observations at 23 points aligned to ETRF93.
      * @ 1993.0 through fundamental points at Grasse, Toulouse and Brest. Network supplemented in 1994 and 1995 by
      * approx. 1000 additional stations.
@@ -6370,7 +6367,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v2
      * Type: Geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and
      * the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network
      * (RBF) from 2000 to 2011.
@@ -6382,7 +6379,7 @@ class Datum
     /**
      * Reseau Geodesique Francais 1993 v2b
      * Type: Geodetic
-     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).
+     * Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
      * Aligned with ETRF2000 at epoch 2019.0. Derived through reprocessing of the French GNSS permanent network (RGP)
      * in IGS14.
      * RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93 v2 (datum code 1312) from
@@ -6393,7 +6390,7 @@ class Datum
     /**
      * Reseau Geodesique Francais Guyane 1995
      * Type: Geodetic
-     * Extent: French Guiana - onshore and offshore.
+     * Extent: French Guiana - onshore and offshore
      * ITRF93 at epoch 1995.0
      * Replaces CSG67 (datum code 6623).
      */
@@ -6402,7 +6399,7 @@ class Datum
     /**
      * Reseau Geodesique de Mayotte 2004
      * Type: Geodetic
-     * Extent: Mayotte - onshore and offshore.
+     * Extent: Mayotte - onshore and offshore
      * ITRF2000 at epoch 2004.0
      * Replaces Combani 1950 (datum code 6632) except for cadastral purposes. (Cadastre 1997 (datum code 1037) used for
      * cadastral purposes).
@@ -6413,7 +6410,7 @@ class Datum
      * Reseau Geodesique de Nouvelle Caledonie 2015
      * Type: Geodetic
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
-     * Chesterfield Islands, and Walpole.
+     * Chesterfield Islands, and Walpole
      * Aligned with ITRF2008 at epoch 2015.0.
      * Replaces RGNC91-93.
      */
@@ -6423,7 +6420,7 @@ class Datum
      * Reseau Geodesique de Nouvelle Caledonie 91-93
      * Type: Geodetic
      * Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago,
-     * Chesterfield Islands, and Walpole.
+     * Chesterfield Islands, and Walpole
      * ITRF90 at epoch 1989.0.
      * Replaced by RGNC15 (datum code 1357).
      */
@@ -6432,7 +6429,7 @@ class Datum
     /**
      * Reseau Geodesique de Saint Pierre et Miquelon 2006
      * Type: Geodetic
-     * Extent: St Pierre and Miquelon - onshore and offshore.
+     * Extent: St Pierre and Miquelon - onshore and offshore
      * ITRF2000 at epoch 2006.0
      * Replaces Saint Pierre et Miquelon 1950 (datum code 6638).
      */
@@ -6441,7 +6438,7 @@ class Datum
     /**
      * Reseau Geodesique de Wallis et Futuna 1996
      * Type: Geodetic
-     * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.
+     * Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi
      * Coincident with ITRF94 at epoch 1993.00.
      */
     public const EPSG_RESEAU_GEODESIQUE_DE_WALLIS_ET_FUTUNA_1996 = 'urn:ogc:def:datum:EPSG::1223';
@@ -6450,7 +6447,7 @@ class Datum
      * Reseau Geodesique de la Polynesie Francaise
      * Type: Geodetic
      * Extent: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas
-     * Islands, Gambier Islands and Austral Islands.
+     * Islands, Gambier Islands and Austral Islands
      * ITRF92 at epoch 1993.0. Densification by GPS of the Reference Network of French Polynesia, a coordinate set of
      * 13 stations determined through DORIS observations.
      * Replaces Tahaa 54 (datum code 6629), IGN 63 Hiva Oa (6689), IGN 72 Nuku Hiva (6630), Maupiti 83 (6692), MHEFO 55
@@ -6462,7 +6459,7 @@ class Datum
      * Reseau Geodesique de la RDC 2005
      * Type: Geodetic
      * Extent: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto -
-     * onshore and offshore.
+     * onshore and offshore
      * ITRF2000 at epoch 2005.4.
      */
     public const EPSG_RESEAU_GEODESIQUE_DE_LA_RDC_2005 = 'urn:ogc:def:datum:EPSG::1033';
@@ -6470,7 +6467,7 @@ class Datum
     /**
      * Reseau Geodesique de la Reunion 1992
      * Type: Geodetic
-     * Extent: Reunion - onshore and offshore.
+     * Extent: Reunion - onshore and offshore
      * ITRF91 at epoch 1993.0
      * Replaces Piton des Neiges (code 6626).
      */
@@ -6480,7 +6477,7 @@ class Datum
      * Reseau Geodesique des Antilles Francaises 2009
      * Type: Geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
      * ITRF2005 at epoch 2009.0
      * Replaces RRAF91 in Martinique and Guadeloupe.
      */
@@ -6490,7 +6487,7 @@ class Datum
      * Reseau Geodesique des Terres Australes et Antarctiques Francaises 2007
      * Type: Geodetic
      * Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen.
-     * Antarctica - Adelie Land coastal area.
+     * Antarctica - Adelie Land coastal area
      * ITRF2005 at epoch 2007.274
      * Replaces IGN 1963-64 on Amsterdam, Saint-Paul 1969 on St Paul, IGN64 on Crozet, MHM 1954 on Europa, IGN 1962 on
      * Kerguelen, and Petrels 1972 and Perroud 1950 in Adelie Land.
@@ -6500,7 +6497,7 @@ class Datum
     /**
      * Reseau National Belge 1950
      * Type: Geodetic
-     * Extent: Belgium - onshore.
+     * Extent: Belgium - onshore
      * Fundamental point: Lommel (tower). Latitude: 51°13'47.334"N, longitude: 5°18'49.483"E (of Greenwich).
      */
     public const EPSG_RESEAU_NATIONAL_BELGE_1950 = 'urn:ogc:def:datum:EPSG::6215';
@@ -6508,7 +6505,7 @@ class Datum
     /**
      * Reseau National Belge 1950 (Brussels)
      * Type: Geodetic
-     * Extent: Belgium - onshore.
+     * Extent: Belgium - onshore
      * Fundamental point: Lommel (tower). Latitude: 51°13'47.334"N, longitude: 0°56'44.773"E (of Brussels).
      */
     public const EPSG_RESEAU_NATIONAL_BELGE_1950_BRUSSELS = 'urn:ogc:def:datum:EPSG::6809';
@@ -6516,7 +6513,7 @@ class Datum
     /**
      * Reseau National Belge 1972
      * Type: Geodetic
-     * Extent: Belgium - onshore.
+     * Extent: Belgium - onshore
      * Fundamental point: Uccle observatory. Latitude: 50°47'57.704"N, longitude: 4°21'24.983"E (of Greenwich).
      */
     public const EPSG_RESEAU_NATIONAL_BELGE_1972 = 'urn:ogc:def:datum:EPSG::6313';
@@ -6525,7 +6522,7 @@ class Datum
      * Reseau de Reference des Antilles Francaises 1991
      * Type: Geodetic
      * Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante,
-     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.
+     * Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
      * WGS 84 coordinates of a single station determined during the 1988 Tango mission.
      * Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fort Desaix (datum code 6625) in
      * Martinique. Replaced by Reseau Geodesique des Antilles Francaises 2009 (datum code 1073).
@@ -6535,7 +6532,7 @@ class Datum
     /**
      * Rete Dinamica Nazionale 2008
      * Type: Geodetic
-     * Extent: Italy - onshore and offshore; San Marino, Vatican City State.
+     * Extent: Italy - onshore and offshore; San Marino, Vatican City State
      * Italian densification of ETRS89 realised through network of 99 permanent reference stations in ETRF2000@2008.0.
      * Adopted as official Italian reference datum 10/11/2011. Replaces IGM95 (datum code 6670).
      */
@@ -6544,7 +6541,7 @@ class Datum
     /**
      * Reunion 1947
      * Type: Geodetic
-     * Extent: Reunion - onshore.
+     * Extent: Reunion - onshore
      * Fundamental point: Piton des Neiges (Borne). Latitude: 21°05'13.119"S, longitude: 55°29'09.193"E (of
      * Greenwich).
      * Replaced by RGR92 (datum code 6627).
@@ -6554,7 +6551,7 @@ class Datum
     /**
      * Reunion 1989
      * Type: Vertical
-     * Extent: Reunion - onshore.
+     * Extent: Reunion - onshore
      * Mean sea level during part of November 1949 at port of Saint-Pierre. Origin = marker AB-100 with defined
      * elevation of 13.808m above msl.
      * Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains height from 1958 adjustment.
@@ -6564,7 +6561,7 @@ class Datum
     /**
      * Reykjavik 1900
      * Type: Geodetic
-     * Extent: Iceland - mainland.
+     * Extent: Iceland - mainland
      * Fundamental point:  Latitude: 64°08'31.88"N, longitude: 21°55'51.15"W (of Greenwich).
      */
     public const EPSG_REYKJAVIK_1900 = 'urn:ogc:def:datum:EPSG::6657';
@@ -6572,7 +6569,7 @@ class Datum
     /**
      * Rikets hojdsystem 1900
      * Type: Vertical
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - onshore
      * Adjustment is referenced to mean sea level at Slussen, Stockholm.
      * Realized through the first precise levelling network of 1886-1905. Replaced by RH70.
      */
@@ -6581,7 +6578,7 @@ class Datum
     /**
      * Rikets hojdsystem 1970
      * Type: Vertical
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - onshore
      * Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements
      * caused by isostatic rebound, heights are reduced to epoch 1970.0 using uplift values computed from repeated
      * levelling observations.
@@ -6593,7 +6590,7 @@ class Datum
     /**
      * Rikets hojdsystem 2000
      * Type: Vertical
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - onshore
      * Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements
      * caused by isostatic rebound, heights are reduced to epoch 2000.0 using values computed from the RH 2000 LU
      * (=NKG2005LU) uplift model.
@@ -6605,7 +6602,7 @@ class Datum
     /**
      * Rikets koordinatsystem 1990
      * Type: Geodetic
-     * Extent: Sweden - onshore and offshore.
+     * Extent: Sweden - onshore and offshore
      * Replaces RT38 adjustment (datum code 6308).
      */
     public const EPSG_RIKETS_KOORDINATSYSTEM_1990 = 'urn:ogc:def:datum:EPSG::6124';
@@ -6623,7 +6620,7 @@ class Datum
      * SCM22 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through
-     * Perth and Pitlochry to Inverness.
+     * Perth and Pitlochry to Inverness
      * Defined through the application of the SCM22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the SCM22 Snake map projection.
      */
@@ -6632,7 +6629,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF00P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF97 at epoch 2000.40. Realized by a frame of 31 continuously operating stations using GPS
      * observations from June 1996 to February 2000. Velocity model VEMOS2003 used to propagate coordinates to the
      * frame reference epoch.
@@ -6644,7 +6641,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF01P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF2000 at epoch 2000.00. Realized by a frame of 48 continuously operating stations using GPS
      * observations from June 1996 to April 2001. Velocity model VEMOS2003 used to propagate coordinates to the frame
      * reference epoch.
@@ -6655,7 +6652,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF01P02
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF2000 at epoch 1998.40. Realized by a frame of 49 continuously operating stations using GPS
      * observations from June 1996 to October 2001. Velocity model VEMOS2003 used to propagate coordinates to the frame
      * reference epoch.
@@ -6666,7 +6663,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF02P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF2000 at epoch 2000.00. Realized by a frame of 53 continuously operating stations using GPS
      * observations from June 1996 to July 2002. Velocity model VEMOS2003 used to propagate coordinates to the frame
      * reference epoch.
@@ -6677,7 +6674,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF04P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF2000 at epoch 2003.00. Realized by a frame of 69 continuously operating stations using GPS
      * observations from June 1996 to July 2004. Velocity model VEMOS2003 used to propagate coordinates to the frame
      * reference epoch.
@@ -6688,7 +6685,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF05P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF2000 at epoch 2004.00. Realized by a frame of 95 continuously operating stations using GPS
      * observations from June 1996 to September 2005. Velocity model VEMOS2003 used to propagate coordinates to the
      * frame reference epoch.
@@ -6699,7 +6696,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF06P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF2000 at epoch 2004.00. Realized by a frame of 94 continuously operating stations using GPS
      * observations from June 1996 to June 2006. Velocity model VEMOS2003 used to propagate coordinates to the frame
      * reference epoch.
@@ -6710,7 +6707,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF07P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGS05 at epoch 2004.50. Realized by a frame of 106 continuously operating stations using GPS
      * observations in 3 periods between December 2001 and October 2007. Velocity model VEMOS2003 used to propagate
      * coordinates to the frame reference epoch.
@@ -6721,7 +6718,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network DGF08P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGS05 at epoch 2004.50. Realized by a frame of 126 continuously operating stations using GPS
      * observations from December 2002 to March 2008. Velocity model VEMOS2003 used to propagate coordinates to the
      * frame reference epoch.
@@ -6732,7 +6729,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR09P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGS05 at epoch 2005.00. Realized by a frame of 128 continuously operating stations using GPS
      * observations from January 2000 to January 2009. Velocity model VEMOS2009 used to propagate coordinates to the
      * frame reference epoch.
@@ -6743,7 +6740,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR10P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF08 at epoch 2005.00. Realized by a frame of 183 continuously operating stations using GPS
      * observations from January 2000 to June 2010. Velocity model VEMOS2009 used to propagate coordinates to the frame
      * reference epoch.
@@ -6754,7 +6751,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR11P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to ITRF08 at epoch 2005.00. Realized by a frame of 230 continuously operating stations using GPS
      * observations from January 2000 to April 2011. Velocity model VEMOS2009 used to propagate coordinates to the
      * frame reference epoch.
@@ -6766,7 +6763,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR13P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGb08 at epoch 2012.00. Realized by a frame of 108 continuously operating stations using GPS
      * observations from April 2010 to June 2013. Velocity model VEMOS2009 used to propagate coordinates to the frame
      * reference epoch.
@@ -6778,7 +6775,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR14P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGb08 at epoch 2013.00. Realized by a frame of 242 continuously operating stations using GNSS
      * observations from April 2010 to July 2014. Velocity model VEMOS2009 used to propagate coordinates to the frame
      * reference epoch.
@@ -6789,7 +6786,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR15P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGb08 at epoch 2013.00. Realized by a frame of 303 continuously operating stations using GNSS
      * observations from March 2010 to April 2015. Velocity model VEMOS2015 used to propagate coordinates to the frame
      * reference epoch.
@@ -6800,7 +6797,7 @@ class Datum
     /**
      * SIRGAS Continuously Operating Network SIR17P01
      * Type: Dynamic geodetic
-     * Extent: Latin America - Central America and South America, onshore and offshore.
+     * Extent: Latin America - Central America and South America, onshore and offshore
      * Aligned to IGS14 at epoch 2015.00. Realized by a frame of 345 continuously operating stations using GNSS
      * observations from April 2011 to January 2017. Velocity model VEMOS2017 used to propagate coordinates to the
      * frame reference epoch.
@@ -6812,7 +6809,7 @@ class Datum
      * SIRGAS-Chile realization 1 epoch 2002
      * Type: Geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * ITRF2000 at epoch 2002.0.  Densification of SIRGAS 2000 network in Chile, consisting of 650 monumented stations.
      * Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (datum code 6248) in Chile, HITO XVIII (datum code
      * 6254) in Chilean Tierra del Fuego and Easter Island 1967 (datum code 6719) in Easter Island. Replaced by
@@ -6824,7 +6821,7 @@ class Datum
      * SIRGAS-Chile realization 2 epoch 2010
      * Type: Geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * IGS08 at epoch 2010.00. Densification of SIRGAS-CON network in Chile, consisting of 120 monumented stations.
      * Replaces SIRGAS-Chile realization 1 epoch 2002, following significant tectonic deformation. Replaced by
      * SIRGAS-Chile realization 3 epoch 2013.
@@ -6835,7 +6832,7 @@ class Datum
      * SIRGAS-Chile realization 3 epoch 2013
      * Type: Geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * IGb08 at epoch 2013.00. Densification of SIRGAS-CON network in Chile, consisting of 130 monumented stations.
      * Replaces SIRGAS-Chile realization 2 epoch 2010, following significant tectonic deformation. Replaced by
      * SIRGAS-Chile realization 4 epoch 2016.
@@ -6846,7 +6843,7 @@ class Datum
      * SIRGAS-Chile realization 4 epoch 2016
      * Type: Geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * IGb08 at epoch 2016.00. Densification of SIRGAS-CON network in Chile, consisting of 200 monumented stations.
      * Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realization 5 epoch 2021 due to
      * significant tectonic deformation.
@@ -6857,7 +6854,7 @@ class Datum
      * SIRGAS-Chile realization 5 epoch 2021
      * Type: Geodetic
      * Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y
-     * Gomez.
+     * Gomez
      * Densification of SIRGAS-CON network in Chile, consisting of 97 stations forming the active CORS network (RGN)
      * referenced to IGb2014 (ITRF2014) at epoch 2021.00. Passive stations used in previous realizations have been
      * removed from this solution.
@@ -6869,7 +6866,7 @@ class Datum
     /**
      * SIRGAS-ROU98
      * Type: Geodetic
-     * Extent: Uruguay - onshore and offshore.
+     * Extent: Uruguay - onshore and offshore
      * Densification of SIRGAS95 network in Uruguay, consisting of 17 passive geodetic stations and 3 continuous
      * recording GPS stations. ITRF94 at epoch 1995.4.
      * Densification of SIRGAS 1995 within Uruguay. Replaces Yacare (datum code 6309) in Uruguay. Uruguay documentation
@@ -6880,7 +6877,7 @@ class Datum
     /**
      * SIRGAS_ES2007.8
      * Type: Geodetic
-     * Extent: El Salvador - onshore and offshore.
+     * Extent: El Salvador - onshore and offshore
      * ITRF2005 at epoch 2007.85.  Densification of SIRGAS-CON network in El Salvador, consisting of 38 monumented
      * stations.
      * SIRGAS-ES2007.8 is the national SIRGAS densification.
@@ -6890,7 +6887,7 @@ class Datum
     /**
      * SMITB20 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone
      * Defined through the application of the SMITB20 NTv2 transformation to ETRS89 as realized through OSNet v2009
      * CORS.
      * Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the SMITB20 Snake map projection.
@@ -6907,7 +6904,7 @@ class Datum
     /**
      * ST84 Ile des Pins
      * Type: Geodetic
-     * Extent: New Caledonia - Ile des Pins.
+     * Extent: New Caledonia - Ile des Pins
      * Fundamental point: Pic Nga.
      */
     public const EPSG_ST84_ILE_DES_PINS = 'urn:ogc:def:datum:EPSG::6642';
@@ -6915,7 +6912,7 @@ class Datum
     /**
      * ST87 Ouvea
      * Type: Geodetic
-     * Extent: New Caledonia - Loyalty Islands - Ouvea.
+     * Extent: New Caledonia - Loyalty Islands - Ouvea
      * Ouloup.
      */
     public const EPSG_ST87_OUVEA = 'urn:ogc:def:datum:EPSG::6750';
@@ -6923,7 +6920,7 @@ class Datum
     /**
      * SVY21
      * Type: Geodetic
-     * Extent: Singapore - onshore and offshore.
+     * Extent: Singapore - onshore and offshore
      * Fundamental point: Base 7 at Pierce Reservoir. Latitude: 1°22'02.9154"N, longitude: 103°49'31.9752"E (of
      * Greenwich).
      * Replaces Kertau 1968 for cadastral purposes from August 2004.
@@ -6933,7 +6930,7 @@ class Datum
     /**
      * SWEREF99
      * Type: Geodetic
-     * Extent: Sweden - onshore and offshore.
+     * Extent: Sweden - onshore and offshore
      * Densification of ETRS89.
      * The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been corrected to ETRS89 in accordance
      * with guidelines given by EUREF.
@@ -6943,7 +6940,7 @@ class Datum
     /**
      * SYC20 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe
      * Defined through the application of the SYC20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SYC20 Snake map projection.
      */
@@ -6952,7 +6949,7 @@ class Datum
     /**
      * Saint Pierre et Miquelon 1950
      * Type: Geodetic
-     * Extent: St Pierre and Miquelon - onshore.
+     * Extent: St Pierre and Miquelon - onshore
      * Replaced by RGSPM06 (datum code 1038).
      */
     public const EPSG_SAINT_PIERRE_ET_MIQUELON_1950 = 'urn:ogc:def:datum:EPSG::6638';
@@ -6960,7 +6957,7 @@ class Datum
     /**
      * Santa Cruz da Graciosa
      * Type: Vertical
-     * Extent: Portugal - central Azores - Graciosa island onshore.
+     * Extent: Portugal - central Azores - Graciosa island onshore
      * Mean Sea Level during 1938 at Santa Cruz da Graciosa.
      * Orthometric heights.
      */
@@ -6969,7 +6966,7 @@ class Datum
     /**
      * Santa Cruz das Flores
      * Type: Vertical
-     * Extent: Portugal - western Azores onshore - Flores, Corvo.
+     * Extent: Portugal - western Azores onshore - Flores, Corvo
      * Mean Sea Level during 1965 at Santa Cruz das Flores.
      * Orthometric heights.
      */
@@ -6979,7 +6976,7 @@ class Datum
      * Santo 1965
      * Type: Geodetic
      * Extent: Vanuatu - northern islands - Aese, Ambrym, Aoba, Epi, Espiritu Santo, Maewo, Malo, Malkula, Paama,
-     * Pentecost, Shepherd and Tutuba.
+     * Pentecost, Shepherd and Tutuba
      * Datum covers all the major islands of Vanuatu in two different adjustment blocks, but practical usage is as
      * given in the area of use.
      */
@@ -6988,7 +6985,7 @@ class Datum
     /**
      * Sao Tome
      * Type: Geodetic
-     * Extent: Sao Tome and Principe - onshore - Sao Tome.
+     * Extent: Sao Tome and Principe - onshore - Sao Tome
      * Fundamental point: Fortaleza. Latitude: 0°20'49.02"N, longitude: 6°44'41.85"E (of Greenwich).
      */
     public const EPSG_SAO_TOME = 'urn:ogc:def:datum:EPSG::1044';
@@ -7003,7 +7000,7 @@ class Datum
     /**
      * Schwarzeck
      * Type: Geodetic
-     * Extent: Namibia - onshore and offshore.
+     * Extent: Namibia - onshore and offshore
      * Fundamental point: Schwarzeck. Latitude: 22°45'35.820"S, longitude: 18°40'34.549"E (of Greenwich). Fixed
      * during German South West Africa-British Bechuanaland boundary survey of 1898-1903.
      */
@@ -7026,7 +7023,7 @@ class Datum
     /**
      * Serbian Reference Network 1998
      * Type: Geodetic
-     * Extent: Serbia including Vojvodina.
+     * Extent: Serbia including Vojvodina
      * Densification of ETRS89 in Serbia at epoch 1998.7 based on coordinates of 6 stations in Serbia of Yugoslav
      * Reference Frame (YUREF) 1998 campaign.
      * Observed 1998-2003.
@@ -7036,7 +7033,7 @@ class Datum
     /**
      * Serbian Spatial Reference System 2000
      * Type: Geodetic
-     * Extent: Serbia including Vojvodina.
+     * Extent: Serbia including Vojvodina
      * Densification of ETRF2000 in Serbia at epoch 2010.63.
      * Replaces SREF98.
      */
@@ -7045,7 +7042,7 @@ class Datum
     /**
      * Serbian Vertical Reference System 2012
      * Type: Vertical
-     * Extent: Serbia including Vojvodina.
+     * Extent: Serbia including Vojvodina
      * Mean sea level of Adriatic Sea in 1971.
      * Normal heights above quasi-geoid. In Serbia replaces Trieste (datum code 1050).
      */
@@ -7054,7 +7051,7 @@ class Datum
     /**
      * Serindung
      * Type: Geodetic
-     * Extent: Indonesia - west Kalimantan - onshore coastal area.
+     * Extent: Indonesia - west Kalimantan - onshore coastal area
      * Fundamental point: Ep A. Latitude: 1°06'10.60"N, longitude: 105°00'59.82"E (of Greenwich).
      */
     public const EPSG_SERINDUNG = 'urn:ogc:def:datum:EPSG::6295';
@@ -7062,7 +7059,7 @@ class Datum
     /**
      * ShAb07 Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.
+     * Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth
      * Defined through the application of the ShAb07 NTv2 transformation (code 10186) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2022 to support intermediate CRS ShAb07-IRF in the emulation of the ShAb07 Snake map projection.
@@ -7072,7 +7069,7 @@ class Datum
     /**
      * Sibun Gorge 1922
      * Type: Geodetic
-     * Extent: Belize - onshore.
+     * Extent: Belize - onshore
      * Latitude: 17º03'40.471"N, longitude: 88º37'54.687"W.
      */
     public const EPSG_SIBUN_GORGE_1922 = 'urn:ogc:def:datum:EPSG::1071';
@@ -7080,7 +7077,7 @@ class Datum
     /**
      * Sierra Leone 1968
      * Type: Geodetic
-     * Extent: Sierra Leone - onshore.
+     * Extent: Sierra Leone - onshore
      * Fundamental point: SLX2 Astro. Latitude: 8°27'17.567"N, longitude: 12°49'40.186"W (of Greenwich).
      * Extension and readjustment with additional observations of 1960 network. Coordinates of 1960 stations change by
      * less than 3 metres.
@@ -7090,7 +7087,7 @@ class Datum
     /**
      * Sierra Leone Colony 1924
      * Type: Geodetic
-     * Extent: Sierra Leone - Freetown Peninsula.
+     * Extent: Sierra Leone - Freetown Peninsula
      * Fundamental point: Kortright. Latitude: 8°28'44.4"N, longitude: 13°13'03.81"W (of Greenwich).
      */
     public const EPSG_SIERRA_LEONE_COLONY_1924 = 'urn:ogc:def:datum:EPSG::6174';
@@ -7098,7 +7095,7 @@ class Datum
     /**
      * Singapore Height Datum
      * Type: Vertical
-     * Extent: Singapore - onshore and offshore.
+     * Extent: Singapore - onshore and offshore
      * Mean sea level determined at Victoria Dock tide gauge 1935-1937.
      * Orthometric heights. Network readjusted in 2009.
      */
@@ -7107,7 +7104,7 @@ class Datum
     /**
      * Sistem Referensi Geospasial Indonesia 2013
      * Type: Dynamic geodetic
-     * Extent: Indonesia - onshore and offshore.
+     * Extent: Indonesia - onshore and offshore
      * ITRF2008 at epoch 2012.0.
      * Semi-dynamic datum. Geometric element of geodetic control network (JKG). Replaces DGN95 and all older datums.
      */
@@ -7116,7 +7113,7 @@ class Datum
     /**
      * Sistema Geodesico Nacional de Panama MACARIO SOLIS
      * Type: Geodetic
-     * Extent: Panama - onshore and offshore.
+     * Extent: Panama - onshore and offshore
      * ITRF2000 at epoch 2000.0. Densification of SIRGAS 2000 network in Panama, consisting of 20 GPS stations
      * throughout the country.
      */
@@ -7125,7 +7122,7 @@ class Datum
     /**
      * Sistema de Referencia Geocentrico para America del Sur 1995
      * Type: Geodetic
-     * Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.
+     * Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore
      * ITRF94 at epoch 1995.4.
      * Realized by a frame of 58 stations observed in 1995 and adjusted in ITRF94. Provisional NIMA adjustment
      * reference epoch was 1995.42 but final report accepted value is 1995.40. Replaced by SIRGAS 2000.
@@ -7135,7 +7132,7 @@ class Datum
     /**
      * Sistema de Referencia Geocentrico para las AmericaS 2000
      * Type: Geodetic
-     * Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.
+     * Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore
      * ITRF2000 at epoch 2000.40.
      * Realized by a frame of 184 stations observed in 2000 and adjusted in the ITRF2000. Includes ties to tide gauges.
      * Replaces SIRGAS 1995 system for South America; expands SIRGAS to Central America. Name changed in 2001 for use
@@ -7146,7 +7143,7 @@ class Datum
     /**
      * Sistema de Referencia Vertical Nacional 2016
      * Type: Vertical
-     * Extent: Argentina - onshore.
+     * Extent: Argentina - onshore
      * Mean Sea Level 1923 at Mar del Plata defined at station 71 (C = 121.64978 m^2s^-2) = 12.43m for mainland,
      * Ushuaia station PF1N(383) (C = 38.427 m^2s^-2) =  3.915m for Tierra del Fuego. These geopotential numbers
      * correspond with historic values.
@@ -7157,7 +7154,7 @@ class Datum
     /**
      * Sister Islands Geodetic Datum 1961
      * Type: Geodetic
-     * Extent: Cayman Islands - Little Cayman and Cayman Brac.
+     * Extent: Cayman Islands - Little Cayman and Cayman Brac
      * Fundamental point: LC5. Latitude: 19°39'46.324"N, longitude: 80°03'47.910"W (of Greenwich).
      * Replaced by CIGD11 (datum code 1100).
      */
@@ -7166,7 +7163,7 @@ class Datum
     /**
      * Slovenia Geodetic Datum 1996
      * Type: Geodetic
-     * Extent: Slovenia - onshore and offshore.
+     * Extent: Slovenia - onshore and offshore
      * Densification of ETRS89, based on ITRS89 at epoch 1995.55.
      */
     public const EPSG_SLOVENIA_GEODETIC_DATUM_1996 = 'urn:ogc:def:datum:EPSG::6765';
@@ -7174,7 +7171,7 @@ class Datum
     /**
      * Slovenian Vertical System 2000
      * Type: Vertical
-     * Extent: Slovenia - onshore.
+     * Extent: Slovenia - onshore
      * Reference point Ruse defined relative to mean sea level at Trieste in 1875.
      * Normal-orthometric heights. Promulgated through the National Vertical Network adjustment of 1999.
      */
@@ -7183,7 +7180,7 @@ class Datum
     /**
      * Slovenian Vertical System 2010
      * Type: Vertical
-     * Extent: Slovenia - onshore.
+     * Extent: Slovenia - onshore
      * Mean sea level at Koper over 18.6 years, selected epoch is 2010-10-10.
      * Normal heights. Replaces SVS2000 from 2019-01.
      */
@@ -7193,7 +7190,7 @@ class Datum
      * Solomon 1968
      * Type: Geodetic
      * Extent: Solomon Islands - onshore southern Solomon Islands, primarily Guadalcanal, Malaita, San Cristobel, Santa
-     * Isobel, Choiseul, Makira-Ulawa.
+     * Isobel, Choiseul, Makira-Ulawa
      * Fundamental point: GUX 1.
      */
     public const EPSG_SOLOMON_1968 = 'urn:ogc:def:datum:EPSG::6718';
@@ -7201,7 +7198,7 @@ class Datum
     /**
      * Sonatrach Reference Frame 2020
      * Type: Geodetic
-     * Extent: Algeria - onshore and offshore.
+     * Extent: Algeria - onshore and offshore
      * Aligned with IGS14 at epoch 2020.15.  RGSH2020 primary network of 22 stations throughout Algeria connected to 15
      * IGS stations.
      * Internal accuracy of network is 6-8mm.
@@ -7211,7 +7208,7 @@ class Datum
     /**
      * South Africa Land Levelling Datum
      * Type: Vertical
-     * Extent: South Africa - mainland onshore.
+     * Extent: South Africa - mainland onshore
      * Mean Sea Level at Cape Town harbour 1900 and 1907, referred to Datum Benchmark BM1.
      * Orthometric heights.
      */
@@ -7221,7 +7218,7 @@ class Datum
      * South American Datum 1969
      * Type: Geodetic
      * Extent: Brazil - onshore and offshore. In rest of South America - onshore north of approximately 45°S and
-     * Tierra del Fuego.
+     * Tierra del Fuego
      * Fundamental point: Chua. Geodetic latitude: 19°45'41.6527"S; geodetic longitude: 48°06'04.0639"W (of
      * Greenwich). (Astronomic coordinates: Latitude 19°45'41.34"S +/- 0.05", longitude 48°06'07.80"W +/- 0.08").
      * SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. In Brazil only, replaced by SAD69(96)
@@ -7233,7 +7230,7 @@ class Datum
      * South American Datum 1969(96)
      * Type: Geodetic
      * Extent: Brazil - onshore and offshore. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim
-     * Vaz and Sao Pedro e Sao Paulo.
+     * Vaz and Sao Pedro e Sao Paulo
      * Fundamental point: Chua. Geodetic latitude: 19°45'41.6527"S; geodetic longitude: 48°06'04.0639"W (of
      * Greenwich). (Astronomic coordinates: Latitude 19°45'41.34"S +/- 0.05", longitude 48°06'07.80"W +/- 0.08").
      * SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. Replaces original 1969 adjustment (datum
@@ -7245,7 +7242,7 @@ class Datum
      * South East Island 1943
      * Type: Geodetic
      * Extent: Seychelles - Mahe, Silhouette, North, Aride Island, Praslin, La Digue and Frigate islands including
-     * adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island.
+     * adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island
      * Fundamental point: Challenger Astro near Port Victoria lighthouse. Latitude: 4°40'39.460"S, longitude:
      * 55°32'00.166"E (of Greenwich).
      * Network readjusted in 1958-59 and extended to Bird and Denis islands in 1975.
@@ -7255,7 +7252,7 @@ class Datum
     /**
      * South Georgia 1968
      * Type: Geodetic
-     * Extent: South Georgia and the South Sandwich Islands - South Georgia onshore.
+     * Extent: South Georgia and the South Sandwich Islands - South Georgia onshore
      * Fundamental point: ISTS 061.
      */
     public const EPSG_SOUTH_GEORGIA_1968 = 'urn:ogc:def:datum:EPSG::6722';
@@ -7270,7 +7267,7 @@ class Datum
     /**
      * Sri Lanka Datum 1999
      * Type: Geodetic
-     * Extent: Sri Lanka - onshore.
+     * Extent: Sri Lanka - onshore
      * Fundamental point: ISM Diyatalawa. Latitude: 6°49'02.687"N, longitude: 80°57'40.880"E.
      * Introduced in 2000.
      */
@@ -7279,7 +7276,7 @@ class Datum
     /**
      * Sri Lanka Vertical Datum
      * Type: Vertical
-     * Extent: Sri Lanka - onshore.
+     * Extent: Sri Lanka - onshore
      * MSL at Colombo 1884-1889.
      * Normal-orthometric heights, but often referred to as "orthometric".
      */
@@ -7288,7 +7285,7 @@ class Datum
     /**
      * St. George Island
      * Type: Geodetic
-     * Extent: United States (USA) - Alaska - Pribilof Islands - St George Island.
+     * Extent: United States (USA) - Alaska - Pribilof Islands - St George Island
      * Fundamental point latitude: 56°36'11.31"N, longitude: 169°32'36.00"W (of Greenwich).
      * Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides
      * transformation from St. George Island Datum to NAD83 (original 1986 realization) - making the transformation
@@ -7299,7 +7296,7 @@ class Datum
     /**
      * St. Helena Geodetic Datum 2015
      * Type: Geodetic
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * ITRF2008 at epoch 2015.0. ITRF2008 coordinates (15°56'33.1198"S, 5°40'02.4412"W, 453.183m ellipsoid height) of
      * Longwood IGS CORS station STHL on 1st January 2015.
      * Developed by Richard Stanaway, Quickclose Pty Ltd, superseding Astro DOS 71 from 1st January 2016.
@@ -7309,7 +7306,7 @@ class Datum
     /**
      * St. Helena Tritan
      * Type: Geodetic
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * WGS 84(G1150) at epoch 2011.773. WGS 84 coordinates (15°56'33.1217"S, 5°40'02.4436"W, 453.288m ellipsoid
      * height) of Longwood IGS CORS station STHL on 9th October 2011.
      */
@@ -7318,7 +7315,7 @@ class Datum
     /**
      * St. Helena Tritan Vertical Datum 2011
      * Type: Vertical
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * MSL defined by Longwood IGS station STHL reference level of 436.215m.
      * Defined by offset of -17.073m applied to St. Helena Tritan ellipsiodal height (CRS code 7880).
      */
@@ -7327,7 +7324,7 @@ class Datum
     /**
      * St. Helena Vertical Datum 2015
      * Type: Vertical
-     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
+     * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Longwood IGS station STHL reference level of 436.312m.
      * Defined by SHGEOID15 geoid model (transformation code 7891) applied to SHGD2015 (CRS code 7885).
      */
@@ -7336,7 +7333,7 @@ class Datum
     /**
      * St. Kilda
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore
      * Orthometric heights.
      */
     public const EPSG_ST_KILDA = 'urn:ogc:def:datum:EPSG::5145';
@@ -7344,7 +7341,7 @@ class Datum
     /**
      * St. Kitts 1955
      * Type: Geodetic
-     * Extent: St Kitts and Nevis - onshore.
+     * Extent: St Kitts and Nevis - onshore
      * Fundamental point: station K12.
      */
     public const EPSG_ST_KITTS_1955 = 'urn:ogc:def:datum:EPSG::6605';
@@ -7352,7 +7349,7 @@ class Datum
     /**
      * St. Lawrence Island
      * Type: Geodetic
-     * Extent: United States (USA) - Alaska - St Lawrence Island.
+     * Extent: United States (USA) - Alaska - St Lawrence Island
      * Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides
      * transformation from St. Lawrence Island Datum to NAD83 (original 1986 realization) - making the transformation
      * appear to user as if from NAD27.
@@ -7362,7 +7359,7 @@ class Datum
     /**
      * St. Lucia 1955
      * Type: Geodetic
-     * Extent: St Lucia - onshore.
+     * Extent: St Lucia - onshore
      * Fundamental point: station DCS3.
      */
     public const EPSG_ST_LUCIA_1955 = 'urn:ogc:def:datum:EPSG::6606';
@@ -7370,7 +7367,7 @@ class Datum
     /**
      * St. Marys
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
+     * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore
      * Mean Sea Level at St. Marys 1887. Initially realised through levelling network adjustment, from 2002 redefined
      * to be realised through OSGM geoid model.
      * Orthometric heights.
@@ -7380,7 +7377,7 @@ class Datum
     /**
      * St. Paul Island
      * Type: Geodetic
-     * Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island.
+     * Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island
      * Fundamental point latitude: 57°07'16.86"N, longitude: 170°16'24.00"W (of Greenwich).
      * Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides
      * transformation from St. Paul Island Datum to NAD83 (original 1986 realization) - making the transformation
@@ -7391,7 +7388,7 @@ class Datum
     /**
      * St. Stephen (Ferro)
      * Type: Geodetic
-     * Extent: Austria - Lower Austria. Czechia - Moravia and Czech Silesia.
+     * Extent: Austria - Lower Austria. Czechia - Moravia and Czech Silesia
      * Fundamental point: St. Stephen's cathedral, Vienna. Latitude: 48°12'31.54"N, longitude: 34°02'27.32"E (of
      * Ferro).
      */
@@ -7400,7 +7397,7 @@ class Datum
     /**
      * St. Vincent 1945
      * Type: Geodetic
-     * Extent: St Vincent and the northern Grenadine Islands - onshore.
+     * Extent: St Vincent and the northern Grenadine Islands - onshore
      * Fundamental point: station V1, Fort Charlotte.
      */
     public const EPSG_ST_VINCENT_1945 = 'urn:ogc:def:datum:EPSG::6607';
@@ -7409,7 +7406,7 @@ class Datum
      * Staatlichen Nivellementnetzes 1976
      * Type: Vertical
      * Extent: Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen;
-     * Sachsen-Anhalt; Thuringen.
+     * Sachsen-Anhalt; Thuringen
      * Network adjusted in 1976. Height at reference point Hoppegarten defined as 1957 value from the UPLN adjustment.
      * Datum at Kronstadt is mean sea level of Baltic in 1833.
      * Introduced in 1979. Uses Normal heights. Replaced by DHHN92.
@@ -7419,7 +7416,7 @@ class Datum
     /**
      * Stewart Island 1977
      * Type: Vertical
-     * Extent: New Zealand - Stewart Island.
+     * Extent: New Zealand - Stewart Island
      * MSL at 3-5 high and low tides at two different locations.
      */
     public const EPSG_STEWART_ISLAND_1977 = 'urn:ogc:def:datum:EPSG::5170';
@@ -7427,7 +7424,7 @@ class Datum
     /**
      * Stockholm 1938
      * Type: Geodetic
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - onshore
      * Fundamental point: Stockholm observatory.
      * Replaced by RT90 adjustment (datum code 6124).
      */
@@ -7436,7 +7433,7 @@ class Datum
     /**
      * Stockholm 1938 (Stockholm)
      * Type: Geodetic
-     * Extent: Sweden - onshore.
+     * Extent: Sweden - onshore
      * Fundamental point: Stockholm observatory
      * Replaced by RT90 adjustment (datum code 6124).
      */
@@ -7445,7 +7442,7 @@ class Datum
     /**
      * Stornoway
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore
      * Mean Sea Level at Stornoway 1977 correlated to pre-1900. Initially realised through levelling network
      * adjustment, from 2002 redefined to be realised through OSGM geoid model.
      * Orthometric heights.
@@ -7455,7 +7452,7 @@ class Datum
     /**
      * Sule Skerry
      * Type: Vertical
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore.
+     * Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore
      * Orthometric heights.
      */
     public const EPSG_SULE_SKERRY = 'urn:ogc:def:datum:EPSG::5142';
@@ -7463,7 +7460,7 @@ class Datum
     /**
      * Svalbard vertical datum 2006
      * Type: Vertical
-     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N.
+     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N
      * Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006
      * (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 -
      * 0.8986m.
@@ -7473,7 +7470,7 @@ class Datum
     /**
      * Swiss Terrestrial Reference System 1995
      * Type: Geodetic
-     * Extent: Liechtenstein; Switzerland.
+     * Extent: Liechtenstein; Switzerland
      * ETRF89 at epoch 1993.0.
      * First realized through CHTRF95 and subsequently CHTRF98, 2004, 2010 and 2016 with an aim to re-measure every 6
      * years.
@@ -7483,7 +7480,7 @@ class Datum
     /**
      * System 34 Jylland Intermediate Datum
      * Type: Geodetic
-     * Extent: Denmark - Jutland and Funen - onshore.
+     * Extent: Denmark - Jutland and Funen - onshore
      * S34 fundamental point: Agri Bavnehøj, latitude 56°13'48.217"N, longitude 2°02'22.629"W of Copenhagen meridian
      * where FE=FN=200000m. This reconstruction's origin in central Zealand was obtained from inversion of an older
      * polynomial transformation to ED50.
@@ -7496,7 +7493,7 @@ class Datum
     /**
      * System 34 Sjaelland Intermediate Datum
      * Type: Geodetic
-     * Extent: Denmark - Zealand and Lolland (onshore).
+     * Extent: Denmark - Zealand and Lolland (onshore)
      * S34 fundamental point: Agri Bavnehøj, latitude 56°13'48.217"N, longitude 2°02'22.629"W of Copenhagen meridian
      * where FE=FN=200000m. This reconstruction's origin in central Zealand was obtained from inversion of an older
      * polynomial transformation to ED50.
@@ -7509,7 +7506,7 @@ class Datum
     /**
      * System 45 Bornholm Intermediate Datum
      * Type: Geodetic
-     * Extent: Denmark - Bornholm onshore.
+     * Extent: Denmark - Bornholm onshore
      * Pseudo origin south of Bornholm, obtained from inversion of an older transformation. The historical Danish
      * System 45 was ad-hoc and not based on any formal datum and projection definitions.
      * Created in 2022 to support intermediate CRS S45B-IRF in the transformation of coordinates between the historic
@@ -7521,7 +7518,7 @@ class Datum
     /**
      * System of the Unified Trigonometrical Cadastral Network
      * Type: Geodetic
-     * Extent: Czechia; Slovakia.
+     * Extent: Czechia; Slovakia
      * Modification of Austrian MGI datum, code 6312.
      */
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK = 'urn:ogc:def:datum:EPSG::6156';
@@ -7529,7 +7526,7 @@ class Datum
     /**
      * System of the Unified Trigonometrical Cadastral Network (Ferro)
      * Type: Geodetic
-     * Extent: Czechia; Slovakia.
+     * Extent: Czechia; Slovakia
      * Modification of Austrian MGI (Ferro) datum.
      */
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK_FERRO = 'urn:ogc:def:datum:EPSG::6818';
@@ -7544,7 +7541,7 @@ class Datum
     /**
      * System of the Unified Trigonometrical Cadastral Network/05
      * Type: Geodetic
-     * Extent: Czechia.
+     * Extent: Czechia
      * Constrained to S-JTSK but realised through readjustment in projected CRS domain. Related to ETRS89 R05
      * realisation through transformation code 5226.
      */
@@ -7553,7 +7550,7 @@ class Datum
     /**
      * System of the Unified Trigonometrical Cadastral Network/05 (Ferro)
      * Type: Geodetic
-     * Extent: Czechia.
+     * Extent: Czechia
      * Constrained to S-JTSK but realised through readjustment in projected CRS domain.
      */
     public const EPSG_SYSTEM_OF_THE_UNIFIED_TRIGONOMETRICAL_CADASTRAL_NETWORK_05_FERRO = 'urn:ogc:def:datum:EPSG::1055';
@@ -7561,7 +7558,7 @@ class Datum
     /**
      * TM65
      * Type: Geodetic
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.
+     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
      * Adjusted to best mean fit 12 stations of the OSNI 1952 primary adjustment.
      * Differences between OSNI 1952 and TM65 at these stations are RMS 0.25m east, 0.23m north, maximum vector 0.57m.
      * TM65 replaced by and not to be confused with Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum
@@ -7573,7 +7570,7 @@ class Datum
      * TPEN11 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to
-     * Bradford and Leeds.
+     * Bradford and Leeds
      * Defined through the application of the TPEN11 NTv2 transformation (code 9365) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2020 to support intermediate CRS "TPEN11-IRF" in the emulation of the combined TPEN11 Snake and
@@ -7584,7 +7581,7 @@ class Datum
     /**
      * Tahaa 54
      * Type: Geodetic
-     * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa.
+     * Extent: French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa
      * Fundamental point: Tahaa East Base. Latitude: 16°33'20.97"S, longitude: 151°29'06.25"W (of Greenwich).
      * Replaced by RGPF (datum code 6687).
      */
@@ -7593,7 +7590,7 @@ class Datum
     /**
      * Tahaa SAU 2001
      * Type: Vertical
-     * Extent: French Polynesia - Society Islands - Tahaa.
+     * Extent: French Polynesia - Society Islands - Tahaa
      * Fundamental benchmark: RN16
      * Included as part of NGPF - see datum code 5195.
      */
@@ -7602,7 +7599,7 @@ class Datum
     /**
      * Tahiti 52
      * Type: Geodetic
-     * Extent: French Polynesia - Society Islands - Moorea and Tahiti.
+     * Extent: French Polynesia - Society Islands - Moorea and Tahiti
      * Fundamental point: Tahiti North Base. Latitude: 17°38'10.0"S, longitude: 149°36'57.8"W (of Greenwich).
      * Replaced by Tahiti 79 (datum code 6690) in Tahiti and Moorea 87 (code 6691) in Moorea.
      */
@@ -7611,7 +7608,7 @@ class Datum
     /**
      * Tahiti 79
      * Type: Geodetic
-     * Extent: French Polynesia - Society Islands - Tahiti.
+     * Extent: French Polynesia - Society Islands - Tahiti
      * Fundamental point: Tahiti North Base. Latitude: 17°38'10.0"S, longitude: 149°36'57.8"W (of Greenwich).
      * Replaces Tahiti 52 (datum code 6628) in Tahiti. Replaced by RGPF (datum code 6687).
      */
@@ -7620,7 +7617,7 @@ class Datum
     /**
      * Taiwan Datum 1967
      * Type: Geodetic
-     * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.
+     * Extent: Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands
      * Fundamental point: Hu Tzu Shan. Latitude: 23°58'32.34"N, longitude: 120°58'25.975"E (of Greenwich).
      * Adopted in 1980. TWD67 uses the GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places.
      */
@@ -7629,7 +7626,7 @@ class Datum
     /**
      * Taiwan Datum 1997
      * Type: Geodetic
-     * Extent: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands.
+     * Extent: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands
      * ITRF94 at epoch 1997.0
      * Adopted in 1998.
      */
@@ -7638,7 +7635,7 @@ class Datum
     /**
      * Taiwan Vertical Datum 2001
      * Type: Vertical
-     * Extent: Taiwan, Republic of China - onshore - Taiwan Island.
+     * Extent: Taiwan, Republic of China - onshore - Taiwan Island
      * Mean Sea Level at Keelung between 1957 and 1991.
      * Orthometric heights.
      */
@@ -7647,7 +7644,7 @@ class Datum
     /**
      * Tananarive 1925
      * Type: Geodetic
-     * Extent: Madagascar - onshore and nearshore.
+     * Extent: Madagascar - onshore and nearshore
      * Fundamental point: Tananarive observatory. Latitude: 18°55'02.10"S, longitude: 47°33'06.75"E (of Greenwich).
      */
     public const EPSG_TANANARIVE_1925 = 'urn:ogc:def:datum:EPSG::6297';
@@ -7655,7 +7652,7 @@ class Datum
     /**
      * Tananarive 1925 (Paris)
      * Type: Geodetic
-     * Extent: Madagascar - onshore.
+     * Extent: Madagascar - onshore
      * Fundamental point: Tananarive observatory. Latitude: 21.0191667g S, longitude: 50.23849537g E (of Paris).
      */
     public const EPSG_TANANARIVE_1925_PARIS = 'urn:ogc:def:datum:EPSG::6810';
@@ -7663,7 +7660,7 @@ class Datum
     /**
      * Tapi Aike
      * Type: Geodetic
-     * Extent: Argentina - Santa Cruz province south of approximately 50°20'S.
+     * Extent: Argentina - Santa Cruz province south of approximately 50°20'S
      * Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exploration and production
      * continues.
      */
@@ -7672,7 +7669,7 @@ class Datum
     /**
      * Taranaki 1970
      * Type: Vertical
-     * Extent: New Zealand - North Island - Taranaki vertical CRS area.
+     * Extent: New Zealand - North Island - Taranaki vertical CRS area
      * MSL at Taranaki harbour 1918-1921.
      */
     public const EPSG_TARANAKI_1970 = 'urn:ogc:def:datum:EPSG::5167';
@@ -7680,7 +7677,7 @@ class Datum
     /**
      * Tararu 1952
      * Type: Vertical
-     * Extent: New Zealand - North Island - Tararu vertical CRS area.
+     * Extent: New Zealand - North Island - Tararu vertical CRS area
      * MSL at Tararu Point 1922-1923.
      */
     public const EPSG_TARARU_1952 = 'urn:ogc:def:datum:EPSG::5166';
@@ -7688,7 +7685,7 @@ class Datum
     /**
      * Tenerife
      * Type: Vertical
-     * Extent: Spain - Canary Islands - Tenerife onshore.
+     * Extent: Spain - Canary Islands - Tenerife onshore
      * Mean Sea Level at Santa Cruz de Tenerife harbour between 1960 and 1970.
      * Orthometric heights.
      */
@@ -7697,7 +7694,7 @@ class Datum
     /**
      * Tern Island 1961
      * Type: Geodetic
-     * Extent: United States (USA) - Hawaii - Tern Island and Sorel Atoll.
+     * Extent: United States (USA) - Hawaii - Tern Island and Sorel Atoll
      * Fundamental point: station FRIG on tern island, station B4 on Sorol Atoll.
      * Two independent astronomic determinations considered to be consistent through adoption of common transformation
      * to WGS 84 (see tfm code 15795).
@@ -7707,7 +7704,7 @@ class Datum
     /**
      * Tete
      * Type: Geodetic
-     * Extent: Mozambique - onshore.
+     * Extent: Mozambique - onshore
      * Fundamental point: Tete.
      */
     public const EPSG_TETE = 'urn:ogc:def:datum:EPSG::6127';
@@ -7715,7 +7712,7 @@ class Datum
     /**
      * Timbalai 1948
      * Type: Geodetic
-     * Extent: Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore.
+     * Extent: Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore
      * Fundamental point: Station P85 at Timbalai. Latitude: 5°17' 3.548"N, longitude: 115°10'56.409"E (of
      * Greenwich).
      * In 1968, the original adjustment was densified in Sarawak and extended to Sabah.
@@ -7725,7 +7722,7 @@ class Datum
     /**
      * Tokyo
      * Type: Geodetic
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore.
+     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
      * Fundamental point: Nikon-Keido-Genten. Latitude: 35°39'17.5148"N, longitude: 139°44'40.5020"E (of Greenwich).
      * Longitude derived in 1918.
      * In Japan, replaces Tokyo 1892 (code 1048) and replaced by Japanese Geodetic Datum 2000 (code 6611). In Korea
@@ -7736,7 +7733,7 @@ class Datum
     /**
      * Tokyo 1892
      * Type: Geodetic
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore.
+     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
      * Fundamental point: Nikon-Keido-Genten. Latitude: 35°39'17.5148"N, longitude: 139°44'30.0970"E (of Greenwich).
      * Longitude derived in 1892.
      * Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum code 6301). In South Korea replaced
@@ -7748,7 +7745,7 @@ class Datum
     /**
      * Tonga Geodetic Datum 2005
      * Type: Geodetic
-     * Extent: Tonga - onshore and offshore.
+     * Extent: Tonga - onshore and offshore
      * Based on ITRF2000 at epoch 2005.0.
      */
     public const EPSG_TONGA_GEODETIC_DATUM_2005 = 'urn:ogc:def:datum:EPSG::1095';
@@ -7757,7 +7754,7 @@ class Datum
      * Trieste
      * Type: Vertical
      * Extent: Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia;
-     * Slovenia - onshore.
+     * Slovenia - onshore
      * Reference point HM1(BV1)-Trieste defined relative to mean sea level at Trieste in 1875.
      * Normal-orthometric heights. In Croatia replaced by HVRS71 (datum code 5207).
      */
@@ -7766,7 +7763,7 @@ class Datum
     /**
      * Trinidad 1903
      * Type: Geodetic
-     * Extent: Trinidad and Tobago - Trinidad - onshore and offshore.
+     * Extent: Trinidad and Tobago - Trinidad - onshore and offshore
      * Station 00, Harbour Master's Flagstaff, Port of Spain.
      * Trinidad 1903 / Trinidad Grid coordinates (Clarke's links): 333604.30 E, 436366.91 N (Latitude: 10°38'39.01"N,
      * Longitude: 61°30'38.00"W of Greenwich).
@@ -7784,7 +7781,7 @@ class Datum
     /**
      * Trucial Coast 1948
      * Type: Geodetic
-     * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore and Dubai onshore.
+     * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore and Dubai onshore
      * Fundamental point: TC1. Latitude: 25°23'50.190"N, longitude: 55°26'43.950"E (of Greenwich).
      */
     public const EPSG_TRUCIAL_COAST_1948 = 'urn:ogc:def:datum:EPSG::6303';
@@ -7792,7 +7789,7 @@ class Datum
     /**
      * Turkish National Reference Frame
      * Type: Geodetic
-     * Extent: Türkiye (Turkey) - onshore and offshore.
+     * Extent: Türkiye (Turkey) - onshore and offshore
      * ITRF96 at epoch 2005.0.
      */
     public const EPSG_TURKISH_NATIONAL_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1057';
@@ -7800,7 +7797,7 @@ class Datum
     /**
      * Tutuila Vertical Datum of 1962
      * Type: Vertical
-     * Extent: American Samoa - Tutuila island.
+     * Extent: American Samoa - Tutuila island
      * Mean sea level at Pago Pago harbor, Tutuila, over 10 years 1949-1955 and 1957-1959. Benchmark NO 2 1948 =
      * 7.67ftUS.
      * Replaced by American Samoa Vertical Datum of 2002 (datum code 1125).
@@ -7810,7 +7807,7 @@ class Datum
     /**
      * Ukraine 2000
      * Type: Geodetic
-     * Extent: Ukraine - onshore and offshore.
+     * Extent: Ukraine - onshore and offshore
      * Orientation and scale constrained to be same as ITRF2000 at epoch 2005.0. Position is minimised deviation
      * between reference ellipsoid and quasigeoid in territory of Ukraine.
      */
@@ -7819,7 +7816,7 @@ class Datum
     /**
      * Vanua Levu 1915
      * Type: Geodetic
-     * Extent: Fiji - Vanua Levu and Taveuni.
+     * Extent: Fiji - Vanua Levu and Taveuni
      * Latitude origin was obtained astronomically at station Numuiloa = 16°23'38.36"S, longitude origin was obtained
      * astronomically at station Suva = 178°25'35.835"E.
      * For topographic mapping, replaced by Fiji 1956. For other purposes, replaced by Fiji 1986.
@@ -7829,7 +7826,7 @@ class Datum
     /**
      * Vientiane 1982
      * Type: Geodetic
-     * Extent: Laos.
+     * Extent: Laos
      * Fundamental point: Vientiane (Nongteng) Astro Pillar. Latitude: 18°01'31.6301"N, longitude: 102°30'56.6999"E
      * (of Greenwich).
      * Replaced by Lao 1993.
@@ -7839,7 +7836,7 @@ class Datum
     /**
      * Vietnam 2000
      * Type: Geodetic
-     * Extent: Vietnam - onshore.
+     * Extent: Vietnam - onshore
      * Point N00, located in the premises of the Land Administration Research Institute, Hoang Quoc Viet Street, Hanoi.
      * Replaces Hanoi 1972.
      */
@@ -7848,7 +7845,7 @@ class Datum
     /**
      * Virgin Islands Vertical Datum of 2009
      * Type: Vertical
-     * Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas.
+     * Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas
      * Mean sea level for National Tidal Datum Epoch 1983–2001 at (i) Lime Tree Bay, St. Croix (BM 9751401 M =
      * 3.111m) , (ii) Lameshur Bay, St. John (BM 9751381 TIDAL A = 1.077m) , and (iii) Charlotte Amalie, St. Thomas (BM
      * 9751639 F = 1.552m).
@@ -7859,7 +7856,7 @@ class Datum
     /**
      * Viti Levu 1912
      * Type: Geodetic
-     * Extent: Fiji - Viti Levu island.
+     * Extent: Fiji - Viti Levu island
      * Latitude origin was obtained astronomically at station Monavatu = 17°53'28.285"S, longitude origin was obtained
      * astronomically at station Suva = 178°25'35.835"E.
      * For topographic mapping, replaced by Fiji 1956. For other purposes, replaced by Fiji 1986.
@@ -7869,7 +7866,7 @@ class Datum
     /**
      * Voirol 1875
      * Type: Geodetic
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * Fundamental point: Voirol. Latitude: 36°45'07.927"N, longitude: 3°02'49.435"E of Greenwich. Uses RGS (and old
      * IGN) value of 2°20'13.95"for Greenwich-Paris meridian difference.
      * Replaced by Voirol 1879 (code 6671).
@@ -7879,7 +7876,7 @@ class Datum
     /**
      * Voirol 1875 (Paris)
      * Type: Geodetic
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * Fundamental point: Voirol. Latitude: 40.83578 grads N, longitude: 0.78873 grads E (of Paris).
      */
     public const EPSG_VOIROL_1875_PARIS = 'urn:ogc:def:datum:EPSG::6811';
@@ -7887,7 +7884,7 @@ class Datum
     /**
      * Voirol 1879
      * Type: Geodetic
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * Fundamental point: Voirol. Latitude: 36°45'08.199"N, longitude: 3°02'49.435"E (of Greenwich). Uses RGS (and
      * old IGN) value of 2°20'13.95"for Greenwich-Paris meridian difference.
      * Replaces Voirol 1875 (code 6304).
@@ -7897,7 +7894,7 @@ class Datum
     /**
      * Voirol 1879 (Paris)
      * Type: Geodetic
-     * Extent: Algeria - onshore north of 32°N.
+     * Extent: Algeria - onshore north of 32°N
      * Fundamental point: Voirol. Latitude: 40.835864 grads N, longitude: 0.788735 grads E (of Paris).
      * Replaces Voirol 1875 (Paris) (code 6811).
      */
@@ -7906,7 +7903,7 @@ class Datum
     /**
      * WGS 72 Transit Broadcast Ephemeris
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Alleged datum for use with Transit broadcast ephemeris prior to 1989. Relationship to WGS 72 has changed over
      * time.
      */
@@ -7915,7 +7912,7 @@ class Datum
     /**
      * Waitangi (Chatham Island) 1959
      * Type: Vertical
-     * Extent: New Zealand - Chatham Island - onshore.
+     * Extent: New Zealand - Chatham Island - onshore
      * MSL at Waitangi harbour collected in 1959.
      */
     public const EPSG_WAITANGI_CHATHAM_ISLAND_1959 = 'urn:ogc:def:datum:EPSG::5169';
@@ -7930,7 +7927,7 @@ class Datum
     /**
      * Wellington 1953
      * Type: Vertical
-     * Extent: New Zealand - North Island - Wellington vertical CRS area.
+     * Extent: New Zealand - North Island - Wellington vertical CRS area
      * MSL at Wellington harbour 1909-1946.
      */
     public const EPSG_WELLINGTON_1953 = 'urn:ogc:def:datum:EPSG::5168';
@@ -7938,7 +7935,7 @@ class Datum
     /**
      * Wiener Null
      * Type: Vertical
-     * Extent: Austria - Vienna city state.
+     * Extent: Austria - Vienna city state
      * Historic benchmark on the Schwedenbrücke over an artificial channel of River Danube (Donaukanal) with GHA
      * height of 156.680m.
      */
@@ -7947,7 +7944,7 @@ class Datum
     /**
      * World Geodetic System 1966
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Developed from a worldwide distribution of terrestrial and geodetic satellite observations and defined through a
      * set of station coordinates.
      * A worldwide 5° × 5° mean free air gravity anomaly field provided the basic data for producing the WGS 66
@@ -7958,7 +7955,7 @@ class Datum
     /**
      * World Geodetic System 1972
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Developed from a worldwide distribution of terrestrial and geodetic satellite observations and defined through a
      * set of station coordinates.
      * Used by GPS before 1987. For Transit satellite positioning see also WGS 72BE.
@@ -7968,7 +7965,7 @@ class Datum
     /**
      * World Geodetic System 1984 (G1150)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 17 GPS tracking stations adjusted to a subset of 49 IGS stations. Observations
      * made in February 2001. The reference epoch for ITRF2000 is 1997.0; station coordinates were transformed to
      * 2001.0 using IERS station velocities.
@@ -7980,7 +7977,7 @@ class Datum
     /**
      * World Geodetic System 1984 (G1674)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 15 GPS tracking stations adjusted to a subset of IGS stations at epoch 2005.0.
      * The IGS station coordinates are considered to be equivalent to ITRF2008.
      * Replaces World Geodetic System 1984 (G1150) from 2012-02-08. Replaced by World Geodetic System 1984 (G1762) from
@@ -7991,7 +7988,7 @@ class Datum
     /**
      * World Geodetic System 1984 (G1762)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb08 stations at epoch 2005.0
      * using observations made in May 2013. The IGb08 coordinates are considered to be equivalent to ITRF2008.
      * Replaces WGS 84 (G1674) from 2013-10-16. Frame was redesignated WGS 84 (G1762') after coordinates of 7 NGA
@@ -8003,7 +8000,7 @@ class Datum
     /**
      * World Geodetic System 1984 (G2139)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0.
      * The IGb14 station coordinates are considered to be equivalent to ITRF2014.
      * Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28
@@ -8014,7 +8011,7 @@ class Datum
     /**
      * World Geodetic System 1984 (G730)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 10 GPS tracking stations adjusted to a subset of ITRF92 stations at epoch 1994.0.
      * The reference epoch for ITRF92 is 1988.0; the ITRF92 station coordinates were transformed to 1994.0 using the
      * NNR-NUVEL1 plate motion model.
@@ -8026,7 +8023,7 @@ class Datum
     /**
      * World Geodetic System 1984 (G873)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 13 GPS tracking stations adjusted to a subset of ITRF94 stations at epoch 1997.0.
      * The reference epoch for the adjustment was 1994.0 and the coordinates were propagated to 1997.0 using the
      * NNR-NUVEL-1A plate motion model.
@@ -8038,7 +8035,7 @@ class Datum
     /**
      * World Geodetic System 1984 (Transit)
      * Type: Dynamic geodetic
-     * Extent: World.
+     * Extent: World
      * Defined through coordinates of 5 GPS tracking stations in the Transit doppler positioning NSWC 9Z-2 reference
      * frame transformed to be aligned to the BIH Conventional Terrestrial Reference Frame (BTS) at epoch 1984.0.
      * The NSWC 9Z-2 origin shifted by -4.5 m along the Z-axis, scale changed by -0.6 x 10E-6 and the reference
@@ -8050,7 +8047,7 @@ class Datum
     /**
      * World Geodetic System 1984 ensemble
      * Type: Ensemble
-     * Extent: World.
+     * Extent: World
      * EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent
      * (G730, G873, G1150, G1674, G1762 and G2139) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of
      * the then current ITRF.
@@ -8060,7 +8057,7 @@ class Datum
     /**
      * Xian 1980
      * Type: Geodetic
-     * Extent: China - onshore.
+     * Extent: China - onshore
      * Xian observatory.
      */
     public const EPSG_XIAN_1980 = 'urn:ogc:def:datum:EPSG::6610';
@@ -8068,7 +8065,7 @@ class Datum
     /**
      * Yacare
      * Type: Geodetic
-     * Extent: Uruguay - onshore.
+     * Extent: Uruguay - onshore
      * Fundamental point: Yacare. Latitude: 30°35'53.68"S, longitude: 57°25'01.30"W (of Greenwich).
      */
     public const EPSG_YACARE = 'urn:ogc:def:datum:EPSG::6309';
@@ -8076,7 +8073,7 @@ class Datum
     /**
      * Yellow Sea 1956
      * Type: Vertical
-     * Extent: China - onshore.
+     * Extent: China - onshore
      * 2 years tide readings at Qingdao.
      * Replaced by Yellow Sea 1985 datum.
      */
@@ -8085,7 +8082,7 @@ class Datum
     /**
      * Yellow Sea 1985
      * Type: Vertical
-     * Extent: China - onshore.
+     * Extent: China - onshore
      * 20 years tide readings at Qingdao.
      * Replaces Yellow Sea 1956 datum.
      */
@@ -8094,7 +8091,7 @@ class Datum
     /**
      * Yemen National Geodetic Network 1996
      * Type: Geodetic
-     * Extent: Yemen - onshore and offshore.
+     * Extent: Yemen - onshore and offshore
      * Sana'a IGN reference marker.
      */
     public const EPSG_YEMEN_NATIONAL_GEODETIC_NETWORK_1996 = 'urn:ogc:def:datum:EPSG::6163';
@@ -8102,7 +8099,7 @@ class Datum
     /**
      * Yoff
      * Type: Geodetic
-     * Extent: Senegal - onshore and offshore.
+     * Extent: Senegal - onshore and offshore
      * Fundamental point: Yoff. Latitude: 14°44'41.62"N, longitude: 17°29'07.02"W (of Greenwich).
      */
     public const EPSG_YOFF = 'urn:ogc:def:datum:EPSG::6310';
@@ -8117,7 +8114,7 @@ class Datum
     /**
      * Fk89
      * Type: Geodetic
-     * Extent: Faroe Islands - onshore.
+     * Extent: Faroe Islands - onshore
      * Replaces FD54 for cadastre.
      */
     public const EPSG_FK89 = 'urn:ogc:def:datum:EPSG::6753';
@@ -8158,7 +8155,8 @@ class Datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Hungary.',
+            'extent_name' => 'Hungary',
+            'extent_description' => 'Hungary',
             'help' => 'Fundamental point not given in information source, but presumably Szolohegy which is origin of later HD72.
 Replaced earlier HD1863 adjustment also on Bessel ellipsoid. Both HD1863 and HD1909 were originally on Ferro Prime Meridian but subsequently converted to Greenwich. Replaced by HD72 (datum code 6237).',
         ],
@@ -8169,7 +8167,8 @@ Replaced earlier HD1863 adjustment also on Bessel ellipsoid. Both HD1863 and HD1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.',
+            'extent_name' => 'Taiwan - onshore - mainland and Penghu',
+            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands',
             'help' => 'Fundamental point: Hu Tzu Shan. Latitude: 23°58\'32.34"N, longitude: 120°58\'25.975"E (of Greenwich).
 Adopted in 1980. TWD67 uses the GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places.',
         ],
@@ -8180,7 +8179,8 @@ Adopted in 1980. TWD67 uses the GRS 1967 ellipsoid but with 1/f to exactly 2 dec
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands.',
+            'extent_name' => 'Taiwan',
+            'extent_description' => 'Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands',
             'help' => 'ITRF94 at epoch 1997.0
 Adopted in 1998.',
         ],
@@ -8191,7 +8191,8 @@ Adopted in 1998.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived through EGM2008 geoid undulation model consisting of spherical harmonic coefficients to degree 2190 and order 2159 applied to the WGS 84 ellipsoid.
 Replaces EGM96 geoid (datum code 5171). See transformation codes 3858 and 3859 for 2.5x2.5 and 1x1 arc minute geoid undulation grid files derived from the spherical harmonic coefficients.',
         ],
@@ -8202,7 +8203,8 @@ Replaces EGM96 geoid (datum code 5171). See transformation codes 3858 and 3859 f
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iraq - onshore.',
+            'extent_name' => 'Iraq - onshore',
+            'extent_description' => 'Iraq - onshore',
             'help' => 'Average sea level at Fao during two-year period in mid/late 1970s.
 Levelling network established by Polservice consortium. Replaces Fao (datum code 5149) in Iraq.',
         ],
@@ -8213,7 +8215,8 @@ Levelling network established by Polservice consortium. Replaces Fao (datum code
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iraq - onshore and offshore.',
+            'extent_name' => 'Iraq',
+            'extent_description' => 'Iraq - onshore and offshore',
             'help' => 'ITRF2000 at epoch 1997.0
 ',
         ],
@@ -8224,7 +8227,8 @@ Levelling network established by Polservice consortium. Replaces Fao (datum code
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Finland - onshore.',
+            'extent_name' => 'Finland - onshore',
+            'extent_description' => 'Finland - onshore',
             'help' => 'Height at Metsaahovi (latitude 60.21762°N, longitude 24.39517°E) of 54.4233m related to EVRF2000 origin through Baltic Levelling Ring adjustment at epoch 2000.0.
 Realized through the third precise levelling network. Uses normal heights. Replaces N43 and N60 (datum codes 1213 and 5116). To account for isostatic land uplift use NKG2005 model.',
         ],
@@ -8235,7 +8239,8 @@ Realized through the third precise levelling network. Uses normal heights. Repla
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore.',
+            'extent_name' => 'Europe - former Yugoslavia onshore',
+            'extent_description' => 'Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore',
             'help' => 'Fundamental point: Hermannskogel. Latitude: 48°16\'15.29"N, longitude: 16°17\'55.04"E (of Greenwich).
 The longitude of the datum origin equates to the Albrecht 1902 value for the Ferro meridian of 17°39\'46.02" west of Greenwich. Densified in 1948.',
         ],
@@ -8246,7 +8251,8 @@ The longitude of the datum origin equates to the Albrecht 1902 value for the Fer
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Moldova.',
+            'extent_name' => 'Moldova',
+            'extent_description' => 'Moldova',
             'help' => 'Densification of ETRS89.
 ',
         ],
@@ -8257,7 +8263,8 @@ The longitude of the datum origin equates to the Albrecht 1902 value for the Fer
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore.',
+            'extent_name' => 'Congo DR (Zaire) - south',
+            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2005.4.
 ',
         ],
@@ -8268,7 +8275,8 @@ The longitude of the datum origin equates to the Albrecht 1902 value for the Fer
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Serbia including Vojvodina.',
+            'extent_name' => 'Serbia',
+            'extent_description' => 'Serbia including Vojvodina',
             'help' => 'Densification of ETRS89 in Serbia at epoch 1998.7 based on coordinates of 6 stations in Serbia of Yugoslav Reference Frame (YUREF) 1998 campaign.
 Observed 1998-2003.',
         ],
@@ -8279,7 +8287,8 @@ Observed 1998-2003.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands onshore and offshore.',
+            'extent_name' => 'Spain - Canary Islands',
+            'extent_description' => 'Spain - Canary Islands onshore and offshore',
             'help' => 'ITRF93 at epoch 1994.9 at VLBI station INTA at the Canary Spatial Centre (CEC) at Maspalomas on Grand Canary.
 Replaces Pico de las Nieves 1968 (PN68) and Pico de las Nieves 1984 (PN84).',
         ],
@@ -8290,7 +8299,8 @@ Replaces Pico de las Nieves 1968 (PN68) and Pico de las Nieves 1984 (PN84).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mayotte - onshore and offshore.',
+            'extent_name' => 'Mayotte',
+            'extent_description' => 'Mayotte - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2004.0
 Replaces Combani 1950 (datum code 6632) except for cadastral purposes. (Cadastre 1997 (datum code 1037) used for cadastral purposes).',
         ],
@@ -8301,7 +8311,8 @@ Replaces Combani 1950 (datum code 6632) except for cadastral purposes. (Cadastre
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mayotte - onshore.',
+            'extent_name' => 'Mayotte - onshore',
+            'extent_description' => 'Mayotte - onshore',
             'help' => 'Coordinates of 1 station of Combani 1950 adjustment held fixed.
 Derived by adjustment of GPS-observed network which was constrained to Combani 1950 coordinates of one station.',
         ],
@@ -8312,7 +8323,8 @@ Derived by adjustment of GPS-observed network which was constrained to Combani 1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Pierre and Miquelon - onshore and offshore.',
+            'extent_name' => 'St Pierre and Miquelon',
+            'extent_description' => 'St Pierre and Miquelon - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2006.0
 Replaces Saint Pierre et Miquelon 1950 (datum code 6638).',
         ],
@@ -8323,7 +8335,8 @@ Replaces Saint Pierre et Miquelon 1950 (datum code 6638).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.',
+            'extent_name' => 'New Zealand',
+            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands',
             'help' => 'New Zealand Quasigeoid 2009 which is defined by the application of the NZ geoid 2009 grid to NZGD2000 ellipsoidal heights. See transformation code 4459.
 ',
         ],
@@ -8334,7 +8347,8 @@ Replaces Saint Pierre et Miquelon 1950 (datum code 6638).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - South Island - Dunedin-Bluff vertical CRS area.',
+            'extent_name' => 'New Zealand - South Island - Dunedin-Bluff vcrs',
+            'extent_description' => 'New Zealand - South Island - Dunedin-Bluff vertical CRS area',
             'help' => 'Common adjustment of Dunedin 1958 and Bluff 1955 networks.
 ',
         ],
@@ -8345,7 +8359,8 @@ Replaces Saint Pierre et Miquelon 1950 (datum code 6638).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens.',
+            'extent_name' => 'Portugal - Azores and Madeira',
+            'extent_description' => 'Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens',
             'help' => 'ITRF93 as derived from the 1994 TransAtlantic Network for Geodynamics and Oceanography (TANGO) project.
 Replaces older classical datums for Azores and Madeira archipelagos.',
         ],
@@ -8356,7 +8371,8 @@ Replaces older classical datums for Azores and Madeira archipelagos.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mexico - onshore and offshore.',
+            'extent_name' => 'Mexico',
+            'extent_description' => 'Mexico - onshore and offshore',
             'help' => 'ITRF1992 at epoch 1988.00.
 Realized by a frame of 15 active GPS stations observed and adjusted in the ITRF1992. Includes ties to tide gauges. Replaces NAD27 (datum code 6267). Replaced by Mexico ITRF2008 (datum code 1120) from December 2010.',
         ],
@@ -8367,7 +8383,8 @@ Realized by a frame of 15 active GPS stations observed and adjusted in the ITRF1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - onshore and offshore.',
+            'extent_name' => 'China',
+            'extent_description' => 'China - onshore and offshore',
             'help' => 'ITRF97 at epoch 2000.0
 Combined adjustment of astro-geodetic observations as used for Xian 1980 and GPS control network observed 2000-2003. Adopted July 2008.',
         ],
@@ -8378,7 +8395,8 @@ Combined adjustment of astro-geodetic observations as used for Xian 1980 and GPS
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sao Tome and Principe - onshore - Sao Tome.',
+            'extent_name' => 'Sao Tome and Principe - onshore - Sao Tome',
+            'extent_description' => 'Sao Tome and Principe - onshore - Sao Tome',
             'help' => 'Fundamental point: Fortaleza. Latitude: 0°20\'49.02"N, longitude: 6°44\'41.85"E (of Greenwich).
 ',
         ],
@@ -8389,7 +8407,8 @@ Combined adjustment of astro-geodetic observations as used for Xian 1980 and GPS
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - onshore.',
+            'extent_name' => 'China - onshore',
+            'extent_description' => 'China - onshore',
             'help' => 'Derived by conformal transformation of Xian 1980 adjustment onto Krassowsky ellipsoid.
 From 1982 replaces Beijing 1954.',
         ],
@@ -8400,7 +8419,8 @@ From 1982 replaces Beijing 1954.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sao Tome and Principe - onshore - Principe.',
+            'extent_name' => 'Sao Tome and Principe - onshore - Principe',
+            'extent_description' => 'Sao Tome and Principe - onshore - Principe',
             'help' => 'Fundamental point: Morro do Papagaio. Latitude: 1°36\'46.87"N, longitude: 7°23\'39.65"E (of Greenwich).
 ',
         ],
@@ -8411,7 +8431,8 @@ From 1982 replaces Beijing 1954.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.',
+            'extent_name' => 'Caribbean - French Antilles',
+            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin',
             'help' => 'WGS 84 coordinates of a single station determined during the 1988 Tango mission.
 Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fort Desaix (datum code 6625) in Martinique. Replaced by Reseau Geodesique des Antilles Francaises 2009 (datum code 1073).',
         ],
@@ -8422,7 +8443,8 @@ Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fo
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore; North Korea - onshore; South Korea - onshore.',
+            'extent_name' => 'Asia - Japan and Korea',
+            'extent_description' => 'Japan - onshore; North Korea - onshore; South Korea - onshore',
             'help' => 'Fundamental point: Nikon-Keido-Genten. Latitude: 35°39\'17.5148"N, longitude: 139°44\'30.0970"E (of Greenwich). Longitude derived in 1892.
 Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum code 6301). In South Korea replaced by Tokyo 1918 (code 6301) only for geodetic purposes; for all other purposes replaced by Korean 1985 (code 6162).',
         ],
@@ -8433,7 +8455,8 @@ Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum cod
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Republic of Korea (South Korea) - mainland onshore.',
+            'extent_name' => 'Korea, Republic of (South Korea) - mainland',
+            'extent_description' => 'Republic of Korea (South Korea) - mainland onshore',
             'help' => 'MSL 1913-1916 at Incheon Bay.
 ',
         ],
@@ -8444,7 +8467,8 @@ Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum cod
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore.',
+            'extent_name' => 'Europe - former Yugoslavia onshore',
+            'extent_description' => 'Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore',
             'help' => 'Reference point HM1(BV1)-Trieste defined relative to mean sea level at Trieste in 1875.
 Normal-orthometric heights. In Croatia replaced by HVRS71 (datum code 5207).',
         ],
@@ -8455,7 +8479,8 @@ Normal-orthometric heights. In Croatia replaced by HVRS71 (datum code 5207).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - mainland (including San Marino and Vatican City State) and Sicily.',
+            'extent_name' => 'Italy - mainland and Sicily',
+            'extent_description' => 'Italy - mainland (including San Marino and Vatican City State) and Sicily',
             'help' => 'Mean Sea Level at Genoa (Ponte Morosini) 1937-1946.
 Orthometric heights.',
         ],
@@ -8466,7 +8491,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Czechia.',
+            'extent_name' => 'Czechia',
+            'extent_description' => 'Czechia',
             'help' => 'Constrained to S-JTSK but realised through readjustment in projected CRS domain. Related to ETRS89 R05 realisation through transformation code 5226.
 ',
         ],
@@ -8477,7 +8503,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sri Lanka - onshore.',
+            'extent_name' => 'Sri Lanka - onshore',
+            'extent_description' => 'Sri Lanka - onshore',
             'help' => 'Fundamental point: ISM Diyatalawa. Latitude: 6°49\'02.687"N, longitude: 80°57\'40.880"E.
 Introduced in 2000.',
         ],
@@ -8488,7 +8515,8 @@ Introduced in 2000.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sri Lanka - onshore.',
+            'extent_name' => 'Sri Lanka - onshore',
+            'extent_description' => 'Sri Lanka - onshore',
             'help' => 'MSL at Colombo 1884-1889.
 Normal-orthometric heights, but often referred to as "orthometric".',
         ],
@@ -8499,7 +8527,8 @@ Normal-orthometric heights, but often referred to as "orthometric".',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8909',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Czechia.',
+            'extent_name' => 'Czechia',
+            'extent_description' => 'Czechia',
             'help' => 'Constrained to S-JTSK but realised through readjustment in projected CRS domain.
 ',
         ],
@@ -8510,7 +8539,8 @@ Normal-orthometric heights, but often referred to as "orthometric".',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brunei Darussalam - onshore and offshore.',
+            'extent_name' => 'Brunei',
+            'extent_description' => 'Brunei Darussalam - onshore and offshore',
             'help' => 'ITRF2005 at epoch 2009.45
 Replaces use of Timbalai from July 2009.',
         ],
@@ -8521,7 +8551,8 @@ Replaces use of Timbalai from July 2009.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Türkiye (Turkey) - onshore and offshore.',
+            'extent_name' => 'Turkey',
+            'extent_description' => 'Türkiye (Turkey) - onshore and offshore',
             'help' => 'ITRF96 at epoch 2005.0
 ',
         ],
@@ -8532,7 +8563,8 @@ Replaces use of Timbalai from July 2009.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bhutan.',
+            'extent_name' => 'Bhutan',
+            'extent_description' => 'Bhutan',
             'help' => 'ITRF2000 at epoch 2003.87
 ',
         ],
@@ -8543,7 +8575,8 @@ Replaces use of Timbalai from July 2009.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Faroe Islands - onshore.',
+            'extent_name' => 'Faroe Islands - onshore',
+            'extent_description' => 'Faroe Islands - onshore',
             'help' => '
 Mean Tidal Height System.',
         ],
@@ -8554,7 +8587,8 @@ Mean Tidal Height System.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iceland - onshore and offshore.',
+            'extent_name' => 'Iceland',
+            'extent_description' => 'Iceland - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2004.6.
 Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).',
         ],
@@ -8565,7 +8599,8 @@ Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre. The ITRF2008 origin is defined in such a way that there are null translation parameters at epoch 2005.0 and null translation rates between the ITRF2008 and the ILRS SLR time series.
 Realization of the IERS Terrestrial Reference System (ITRS) from 2012. Replaces ITRF2005 (code 6896).',
         ],
@@ -8576,7 +8611,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from 2012. Replaces 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - onshore and offshore.',
+            'extent_name' => 'Argentina',
+            'extent_description' => 'Argentina - onshore and offshore',
             'help' => 'Coordinates of the geodetic network of 211 high accuracy surveyed points (178 passive and 33 continuously operating) defining the National Geodetic System (Sistema Geodésico Nacional) based on ITRF2005 at epoch 2006.632.
 Adopted by order of the Director of the National Geographic Institute on 15th May 2009 as the new National Geodetic Reference Frame. Replaces POSGAR 94.',
         ],
@@ -8587,7 +8623,8 @@ Adopted by order of the Director of the National Geographic Institute on 15th Ma
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bolivia.',
+            'extent_name' => 'Bolivia',
+            'extent_description' => 'Bolivia',
             'help' => 'IGS05 (ITRF2005) at epoch 2010.2.  Densification of SIRGAS95 network in Bolivia, consisting of 125 passive geodetic stations and 8 continuous recording GPS stations.
 Densification of SIRGAS 1995 within Bolivia. Replaces PSAD56 (datum code 6248) in Bolivia.',
         ],
@@ -8598,7 +8635,8 @@ Densification of SIRGAS 1995 within Bolivia. Replaces PSAD56 (datum code 6248) i
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'extent_name' => 'Chile',
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez',
             'help' => 'ITRF2000 at epoch 2002.0.  Densification of SIRGAS 2000 network in Chile, consisting of 650 monumented stations.
 Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (datum code 6248) in Chile, HITO XVIII (datum code 6254) in Chilean Tierra del Fuego and Easter Island 1967 (datum code 6719) in Easter Island. Replaced by SIRGAS-Chile 2010 (datum code 1243).',
         ],
@@ -8609,7 +8647,8 @@ Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (datum code 6248) in 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Costa Rica - onshore and offshore.',
+            'extent_name' => 'Costa Rica',
+            'extent_description' => 'Costa Rica - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2005.83.  Network of 34 GPS stations throughout the country, five of which were connected to four Caribbean area ITRF stations.
 Replaces Ocotepeque (datum code 1070) in Costa Rica from March 2007.',
         ],
@@ -8620,7 +8659,8 @@ Replaces Ocotepeque (datum code 1070) in Costa Rica from March 2007.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Panama - onshore and offshore.',
+            'extent_name' => 'Panama',
+            'extent_description' => 'Panama - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2000.0. Densification of SIRGAS 2000 network in Panama, consisting of 20 GPS stations throughout the country.
 ',
         ],
@@ -8631,7 +8671,8 @@ Replaces Ocotepeque (datum code 1070) in Costa Rica from March 2007.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Peru - onshore and offshore.',
+            'extent_name' => 'Peru',
+            'extent_description' => 'Peru - onshore and offshore',
             'help' => 'Densification of SIRGAS95 network (ITRF94 at epoch 1995.4) in Peru, consisting of 47 passive geodetic stations and 3 continuous recording GPS stations.
 Densification of SIRGAS 1995 within Peru. Replaces PSAD56 (datum code 6248) in Peru.',
         ],
@@ -8642,7 +8683,8 @@ Densification of SIRGAS 1995 within Peru. Replaces PSAD56 (datum code 6248) in P
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Uruguay - onshore and offshore.',
+            'extent_name' => 'Uruguay',
+            'extent_description' => 'Uruguay - onshore and offshore',
             'help' => 'Densification of SIRGAS95 network in Uruguay, consisting of 17 passive geodetic stations and 3 continuous recording GPS stations. ITRF94 at epoch 1995.4.
 Densification of SIRGAS 1995 within Uruguay. Replaces Yacare (datum code 6309) in Uruguay. Uruguay documentation clearly states use of WGS 84 reference ellipsoid.',
         ],
@@ -8653,7 +8695,8 @@ Densification of SIRGAS 1995 within Uruguay. Replaces Yacare (datum code 6309) i
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'El Salvador - onshore and offshore.',
+            'extent_name' => 'El Salvador',
+            'extent_description' => 'El Salvador - onshore and offshore',
             'help' => 'ITRF2005 at epoch 2007.85.  Densification of SIRGAS-CON network in El Salvador, consisting of 38 monumented stations.
 SIRGAS-ES2007.8 is the national SIRGAS densification.',
         ],
@@ -8664,7 +8707,8 @@ SIRGAS-ES2007.8 is the national SIRGAS densification.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua.',
+            'extent_name' => 'Central America - Guatemala to Costa Rica',
+            'extent_description' => 'Costa Rica; El Salvador; Guatemala; Honduras; Nicaragua',
             'help' => 'Fundamental point: Base Norte. Latitude: 14°26\'20.168"N, longitude: 89°11\'33.964"W.
 Replaced in Costa Rica by Costa Rica 2005 (CR05) from March 2007 and replaced in El Salvador by SIRGAS_ES2007 from August 2007.',
         ],
@@ -8675,7 +8719,8 @@ Replaced in Costa Rica by Costa Rica 2005 (CR05) from March 2007 and replaced in
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Belize - onshore.',
+            'extent_name' => 'Belize - onshore',
+            'extent_description' => 'Belize - onshore',
             'help' => 'Latitude: 17º03\'40.471"N, longitude: 88º37\'54.687"W.
 ',
         ],
@@ -8686,7 +8731,8 @@ Replaced in Costa Rica by Costa Rica 2005 (CR05) from March 2007 and replaced in
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Panama - onshore.',
+            'extent_name' => 'Panama - onshore',
+            'extent_description' => 'Panama - onshore',
             'help' => 'Fundamental point: Balboa Hill. Latitude: 09°04\'57.637"N, longtitude: 79°43\'50.313"W.
 Reports of the existence of an Ancon datum are probably erroneous, considering that the origin of the Panamá-Colón Datum of 1911 is at Balboa Hill and the access road up the hill is from the town of Ancon, Canal Zone.',
         ],
@@ -8697,7 +8743,8 @@ Reports of the existence of an Ancon datum are probably erroneous, considering t
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin.',
+            'extent_name' => 'Caribbean - French Antilles',
+            'extent_description' => 'French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin',
             'help' => 'ITRF2005 at epoch 2009.0
 Replaces RRAF91 in Martinique and Guadeloupe.',
         ],
@@ -8708,7 +8755,8 @@ Replaces RRAF91 in Martinique and Guadeloupe.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brazil - onshore - between 18°S and 27°30\'S, also east of 54°W between 15°S and 18°S.',
+            'extent_name' => 'Brazil - Corrego Alegre 1961',
+            'extent_description' => 'Brazil - onshore - between 18°S and 27°30\'S, also east of 54°W between 15°S and 18°S',
             'help' => 'Fundamental point: Corrego Alegre. Latitude: 19°50\'14.91"S, longitude: 48°57\'41.98"W (of Greenwich).
 Replaced by Corrego Alegre 1970-72 (datum code 6225). NIMA gives coordinates of origin as latitude: 19°50\'15.14"S, longitude: 48°57\'42.75"W.',
         ],
@@ -8719,7 +8767,8 @@ Replaced by Corrego Alegre 1970-72 (datum code 6225). NIMA gives coordinates of 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brazil - onshore and offshore. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim Vaz and Sao Pedro e Sao Paulo.',
+            'extent_name' => 'Brazil',
+            'extent_description' => 'Brazil - onshore and offshore. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim Vaz and Sao Pedro e Sao Paulo',
             'help' => 'Fundamental point: Chua. Geodetic latitude: 19°45\'41.6527"S; geodetic longitude: 48°06\'04.0639"W (of Greenwich). (Astronomic coordinates: Latitude 19°45\'41.34"S +/- 0.05", longitude 48°06\'07.80"W +/- 0.08").
 SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. Replaces original 1969 adjustment (datum code 6618) in Brazil.',
         ],
@@ -8730,7 +8779,8 @@ SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. Replaces
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d\'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands.',
+            'extent_name' => 'Papua New Guinea',
+            'extent_description' => 'Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d\'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands',
             'help' => 'ITRF92 at epoch 1994.0.
 Adopted 1996. Coincident with WGS 84 in 1994 but rapidly divergent due to significant tectonic motion in PNG.',
         ],
@@ -8741,7 +8791,8 @@ Adopted 1996. Coincident with WGS 84 in 1994 but rapidly divergent due to signif
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ukraine - onshore and offshore.',
+            'extent_name' => 'Ukraine',
+            'extent_description' => 'Ukraine - onshore and offshore',
             'help' => 'Orientation and scale constrained to be same as ITRF2000 at epoch 2005.0. Position is minimised deviation between reference ellipsoid and quasigeoid in territory of Ukraine.
 ',
         ],
@@ -8752,7 +8803,8 @@ Adopted 1996. Coincident with WGS 84 in 1994 but rapidly divergent due to signif
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Fehmarnbelt area of Denmark and Germany.',
+            'extent_name' => 'Europe - Fehmarnbelt outer',
+            'extent_description' => 'Fehmarnbelt area of Denmark and Germany',
             'help' => 'ITRF2005 at epoch 2010.14.
 Defined through coordinates of four permanant GNSS stations.',
         ],
@@ -8763,7 +8815,8 @@ Defined through coordinates of four permanant GNSS stations.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Fehmarnbelt area of Denmark and Germany.',
+            'extent_name' => 'Europe - Fehmarnbelt inner',
+            'extent_description' => 'Fehmarnbelt area of Denmark and Germany',
             'help' => 'Realised by precise levelling between tide gauges at Marienleuchte (Germany), Rodbyhavn (Denmark) and four Fehmarnbelt project GNSS stations.
 ',
         ],
@@ -8774,7 +8827,8 @@ Defined through coordinates of four permanant GNSS stations.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.',
         ],
@@ -8785,7 +8839,8 @@ The lowest tide level which can be predicted to occur under average meteorologic
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.',
+            'extent_name' => 'Germany - onshore',
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across all German states.
 ',
         ],
@@ -8796,7 +8851,8 @@ The lowest tide level which can be predicted to occur under average meteorologic
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The highest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.',
         ],
@@ -8807,7 +8863,8 @@ The highest tide level which can be predicted to occur under average meteorologi
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average of the lowest low waters, one from each of 19 years of observations.',
         ],
@@ -8818,7 +8875,8 @@ The average of the lowest low waters, one from each of 19 years of observations.
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average of the highest high waters, one from each of 19 years of observations.',
         ],
@@ -8829,7 +8887,8 @@ The average of the highest high waters, one from each of 19 years of observation
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The level below MSL equal to the sum of the amplitudes of the harmonic constituents M2, S2, K1 and O1. It approximates mean lower low water spring tides (MLLWS).',
         ],
@@ -8840,7 +8899,8 @@ The level below MSL equal to the sum of the amplitudes of the harmonic constitue
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the lower low water spring tides.',
         ],
@@ -8851,7 +8911,8 @@ The average height of the lower low water spring tides.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the low waters of spring tides.',
         ],
@@ -8862,7 +8923,8 @@ The average height of the low waters of spring tides.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the high waters of spring tides.',
         ],
@@ -8873,7 +8935,8 @@ The average height of the high waters of spring tides.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the lower low waters over a 19-year period.',
         ],
@@ -8884,7 +8947,8 @@ The average height of the lower low waters over a 19-year period.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the higher high waters over a 19-year period.',
         ],
@@ -8895,7 +8959,8 @@ The average height of the higher high waters over a 19-year period.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of all low waters over a 19-year period.',
         ],
@@ -8906,7 +8971,8 @@ The average height of all low waters over a 19-year period.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the high waters over a 19-year period.',
         ],
@@ -8917,7 +8983,8 @@ The average height of the high waters over a 19-year period.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The lowest level reached by the water surface in one tidal cycle. When used in inland (non-tidal) waters it is generally defined as a level which the daily mean water level would fall below less than 5% of the time. On a river it is a sloping surface.',
         ],
@@ -8928,7 +8995,8 @@ The lowest level reached by the water surface in one tidal cycle. When used in i
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The highest water level reached at a place in one tidal cycle. When used on inland (non-tidal) waters it is generally defined as a level which the daily mean water level exceeds less than 5% of the time.',
         ],
@@ -8939,7 +9007,8 @@ The highest water level reached at a place in one tidal cycle. When used on inla
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Tonga - onshore and offshore.',
+            'extent_name' => 'Tonga',
+            'extent_description' => 'Tonga - onshore and offshore',
             'help' => 'Based on ITRF2000 at epoch 2005.0
 ',
         ],
@@ -8950,7 +9019,8 @@ The highest water level reached at a place in one tidal cycle. When used on inla
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.0,
-            'extent_description' => 'Norway - onshore.',
+            'extent_name' => 'Norway - onshore',
+            'extent_description' => 'Norway - onshore',
             'help' => 'Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements caused by isostatic rebound, heights are reduced to epoch 2000.0 using values computed from the NKG2005LU uplift model.
 Replaces NN54. Uses Normal heights.',
         ],
@@ -8961,7 +9031,8 @@ Replaces NN54. Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cayman Islands - Grand Cayman.',
+            'extent_name' => 'Cayman Islands - Grand Cayman',
+            'extent_description' => 'Cayman Islands - Grand Cayman',
             'help' => '
 ',
         ],
@@ -8972,7 +9043,8 @@ Replaces NN54. Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cayman Islands - Little Cayman.',
+            'extent_name' => 'Cayman Islands - Little Cayman',
+            'extent_description' => 'Cayman Islands - Little Cayman',
             'help' => '
 ',
         ],
@@ -8983,7 +9055,8 @@ Replaces NN54. Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cayman Islands - Cayman Brac.',
+            'extent_name' => 'Cayman Islands - Cayman Brac',
+            'extent_description' => 'Cayman Islands - Cayman Brac',
             'help' => '
 ',
         ],
@@ -8994,7 +9067,8 @@ Replaces NN54. Uses Normal heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac.',
+            'extent_name' => 'Cayman Islands',
+            'extent_description' => 'Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac',
             'help' => 'ITRF2005 at epoch 2011.0
 Replaces GCGD59 (datum code 6723) and SIGD61 (datum code 6726).',
         ],
@@ -9005,7 +9079,8 @@ Replaces GCGD59 (datum code 6723) and SIGD61 (datum code 6726).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - Madeira and Desertas islands - onshore.',
+            'extent_name' => 'Portugal - Madeira and Desertas islands onshore',
+            'extent_description' => 'Portugal - Madeira and Desertas islands - onshore',
             'help' => 'Mean Sea Level during 1913 at Cais da Pontinha, Funchal.
 Orthometric heights.',
         ],
@@ -9016,7 +9091,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - Porto Santo island (Madeira archipelago) onshore.',
+            'extent_name' => 'Portugal - Porto Santo island onshore',
+            'extent_description' => 'Portugal - Porto Santo island (Madeira archipelago) onshore',
             'help' => 'Mean Sea Level during 1936 at Cais da Vila, Porto Santo.
 Orthometric heights.',
         ],
@@ -9027,7 +9103,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores - Sao Jorge island onshore.',
+            'extent_name' => 'Portugal - Azores C - S Jorge onshore',
+            'extent_description' => 'Portugal - central Azores - Sao Jorge island onshore',
             'help' => 'Mean Sea Level during 1937 at Cais das Velas.
 Orthometric heights.',
         ],
@@ -9038,7 +9115,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores - Faial island onshore.',
+            'extent_name' => 'Portugal - Azores C - Faial onshore',
+            'extent_description' => 'Portugal - central Azores - Faial island onshore',
             'help' => 'Mean Sea Level during 1935 at Horta.
 Orthometric heights.',
         ],
@@ -9049,7 +9127,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores - Pico island onshore.',
+            'extent_name' => 'Portugal - Azores C - Pico onshore',
+            'extent_description' => 'Portugal - central Azores - Pico island onshore',
             'help' => 'Mean Sea Level during 1937 at Cais da Madalena.
 Orthometric heights.',
         ],
@@ -9060,7 +9139,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores - Graciosa island onshore.',
+            'extent_name' => 'Portugal - Azores C - Graciosa onshore',
+            'extent_description' => 'Portugal - central Azores - Graciosa island onshore',
             'help' => 'Mean Sea Level during 1938 at Santa Cruz da Graciosa.
 Orthometric heights.',
         ],
@@ -9071,7 +9151,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores - Terceira island onshore.',
+            'extent_name' => 'Portugal - Azores C - Terceira onshore',
+            'extent_description' => 'Portugal - central Azores - Terceira island onshore',
             'help' => 'Mean Sea Level during 1951 at Cais da Figueirinha - Angra do Heroísmo.
 Orthometric heights.',
         ],
@@ -9082,7 +9163,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - western Azores onshore - Flores, Corvo.',
+            'extent_name' => 'Portugal - Azores W - onshore',
+            'extent_description' => 'Portugal - western Azores onshore - Flores, Corvo',
             'help' => 'Mean Sea Level during 1965 at Santa Cruz das Flores.
 Orthometric heights.',
         ],
@@ -9093,7 +9175,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - eastern Azores onshore - Santa Maria, Formigas.',
+            'extent_name' => 'Portugal - Azores E onshore - Santa Maria and Formigas',
+            'extent_description' => 'Portugal - eastern Azores onshore - Santa Maria, Formigas',
             'help' => 'Mean Sea Level during 1965 at Cais da Vila, Porto.
 Orthometric heights.',
         ],
@@ -9104,7 +9187,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - eastern Azores - Sao Miguel island onshore.',
+            'extent_name' => 'Portugal - Azores E - S Miguel onshore',
+            'extent_description' => 'Portugal - eastern Azores - Sao Miguel island onshore',
             'help' => 'Mean Sea Level during 1991 at Ponta Delgada.
 Orthometric heights.',
         ],
@@ -9115,7 +9199,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Nepal.',
+            'extent_name' => 'Nepal',
+            'extent_description' => 'Nepal',
             'help' => 'Fundamental point: Station 12/157 Nagarkot. Latitude: 27°41\'31.04"N, longitude: 85°31\'20.23"E (of Greenwich).
 ',
         ],
@@ -9126,7 +9211,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cyprus - onshore.',
+            'extent_name' => 'Cyprus - onshore',
+            'extent_description' => 'Cyprus - onshore',
             'help' => 'Station Chionistra (Mount Troodos). Network scale and orientation determined by connection of six stations to ITRF91 in Europe at epoch 1993.1.
 Survey plans and maps produced by DLS after 1993.',
         ],
@@ -9137,7 +9223,8 @@ Survey plans and maps produced by DLS after 1993.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area.',
+            'extent_name' => 'French Southern and Antarctic Territories',
+            'extent_description' => 'French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area',
             'help' => 'ITRF2005 at epoch 2007.274
 Replaces IGN 1963-64 on Amsterdam, Saint-Paul 1969 on St Paul, IGN64 on Crozet, MHM 1954 on Europa, IGN 1962 on Kerguelen, and Petrels 1972 and Perroud 1950 in Adelie Land.',
         ],
@@ -9148,7 +9235,8 @@ Replaces IGN 1963-64 on Amsterdam, Saint-Paul 1969 on St Paul, IGN64 on Crozet, 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Israel - onshore and offshore.',
+            'extent_name' => 'Israel',
+            'extent_description' => 'Israel - onshore and offshore',
             'help' => 'Defined by coordinates of 13 Active Positioning Network (APN) stations in ITRF2000 at epoch 2004.75. A further five APN stations were added in 2006.
 Replaces Israel 1993 (datum code 6141). Replaced by IGD05/12 (datum code 1115).',
         ],
@@ -9159,7 +9247,8 @@ Replaces Israel 1993 (datum code 6141). Replaced by IGD05/12 (datum code 1115).'
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Israel - onshore and offshore.',
+            'extent_name' => 'Israel',
+            'extent_description' => 'Israel - onshore and offshore',
             'help' => 'Datum updated in 2012 with four APN stations removed from definition. Coordinate epoch remains ITRF2000 at epoch 2004.75.
 Replaces IGD05 (datum code 1114).',
         ],
@@ -9170,7 +9259,8 @@ Replaces IGD05 (datum code 1114).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.',
+            'extent_name' => 'USA - CONUS and Alaska; PRVI',
+            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore',
             'help' => 'Coordinates of a nationwide adjustment of 79,546 NGS "passive" control stations in CONUS and Alaska, constrained to 1,171 current CORS station coordinates at epoch 2010.0.
 Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to underlay the CORS station coordinates.',
         ],
@@ -9181,7 +9271,8 @@ Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.',
+            'extent_name' => 'Pacific - US interests Pacific plate',
+            'extent_description' => 'American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore',
             'help' => 'Coordinates of a nationwide adjustment including 345 NGS "passive" control stations constrained to 24 current Pacific CORS station coordinates at epoch 2010.0.
 Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. ITRF2008 is understood to underlay the latest CORS station coordinates.',
         ],
@@ -9192,7 +9283,8 @@ Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. ITRF2008 is un
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore.',
+            'extent_name' => 'Pacific - US interests Mariana plate',
+            'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore',
             'help' => 'Coordinates of a nationwide adjustment including 171 NGS "passive" control stations constrained to 24 current Pacific CORS station coordinates at epoch 2010.0.
 Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. ITRF2008 is understood to underlay the latest CORS station coordinates.',
         ],
@@ -9203,7 +9295,8 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. ITRF2008 is understood to u
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Northern Mariana Islands - onshore - Rota, Saipan and Tinian.',
+            'extent_name' => 'Northern Mariana Islands - Rota, Saipan and Tinian',
+            'extent_description' => 'Northern Mariana Islands - onshore - Rota, Saipan and Tinian',
             'help' => 'Mean sea level at Tanapag harbor, Saipan. Benchmark 1633227 TIDAL UH-2C = 1.657m relative to National Tidal Datum Epoch 1983-2001. Transferred to Rota (East Harbor, BM TIDAL 3 = 1.482m) and Tinian (Harbor BM TIDAL 1 = 2.361m).
 Replaces all earlier vertical datums on these islands.',
         ],
@@ -9214,7 +9307,8 @@ Replaces all earlier vertical datums on these islands.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mexico - onshore and offshore.',
+            'extent_name' => 'Mexico',
+            'extent_description' => 'Mexico - onshore and offshore',
             'help' => 'ITRF2008 at epoch 2010.00.
 Realised by a frame of 15 active GPS stations observed and adjusted in the ITRF2008. Includes ties to tide gauges. Replaces Mexico ITRF92 (datum code 1042).',
         ],
@@ -9225,7 +9319,8 @@ Realised by a frame of 15 active GPS stations observed and adjusted in the ITRF2
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa - Tutuila island.',
+            'extent_name' => 'American Samoa - Tutuila island',
+            'extent_description' => 'American Samoa - Tutuila island',
             'help' => 'Mean sea level at Pago Pago harbor, Tutuila, over 10 years 1949-1955 and 1957-1959. Benchmark NO 2 1948 = 7.67ftUS.
 Replaced by American Samoa Vertical Datum of 2002 (datum code 1125).',
         ],
@@ -9236,7 +9331,8 @@ Replaced by American Samoa Vertical Datum of 2002 (datum code 1125).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guam - onshore.',
+            'extent_name' => 'Guam - onshore',
+            'extent_description' => 'Guam - onshore',
             'help' => 'Mean sea level at Apra harbor, Guam, 1949-1962. Benchmark NO 5 1949 = 0.599m.
 Replaced by Guam vertical datum of 2004 (datum code 1126).',
         ],
@@ -9247,7 +9343,8 @@ Replaced by Guam vertical datum of 2004 (datum code 1126).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Puerto Rico - onshore.',
+            'extent_name' => 'Puerto Rico - onshore',
+            'extent_description' => 'Puerto Rico - onshore',
             'help' => 'Mean sea level at San Juan. Benchmark 9756371 A TIDAL = 1.334m relative to National Tidal Datum Epoch 1960-1978.
 Replaces all earlier vertical datums for Puerto Rico.',
         ],
@@ -9258,7 +9355,8 @@ Replaces all earlier vertical datums for Puerto Rico.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'US Virgin Islands - onshore - St Croix, St John, and St Thomas.',
+            'extent_name' => 'Virgin Islands, US - onshore',
+            'extent_description' => 'US Virgin Islands - onshore - St Croix, St John, and St Thomas',
             'help' => 'Mean sea level for National Tidal Datum Epoch 1983–2001 at (i) Lime Tree Bay, St. Croix (BM 9751401 M = 3.111m) , (ii) Lameshur Bay, St. John (BM 9751381 TIDAL A = 1.077m) , and (iii) Charlotte Amalie, St. Thomas (BM 9751639 F = 1.552m).
 Replaces all earlier vertical datums on these islands.',
         ],
@@ -9269,7 +9367,8 @@ Replaces all earlier vertical datums on these islands.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa - Tutuila island.',
+            'extent_name' => 'American Samoa - Tutuila island',
+            'extent_description' => 'American Samoa - Tutuila island',
             'help' => 'Mean sea level at Pago Pago harbor, Tutuila. Benchmark 1770000 S TIDAL = 1.364m relative to National Tidal Datum Epoch 1983-2001.
 Replaces Tutuila vertical datum of 1962 (datum code 1121). Replaced by Pago Pago local tidal datum (datum code 1302) in March 2020 after ASVD02 benchmarks destroyed by earthquake activity.',
         ],
@@ -9280,7 +9379,8 @@ Replaces Tutuila vertical datum of 1962 (datum code 1121). Replaced by Pago Pago
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guam - onshore.',
+            'extent_name' => 'Guam - onshore',
+            'extent_description' => 'Guam - onshore',
             'help' => 'Mean sea level at Apra harbor, Guam. Benchmark 1630000 TIDAL 4 = 2.170m relative to US National Tidal Datum Epoch 1983-2001. MSL is 0.419m above MLLW and the BM is 2.589m above MLLW.
 Replaces Guam Vertical Datum of 1963 (datum code 1122).',
         ],
@@ -9291,7 +9391,8 @@ Replaces Guam Vertical Datum of 1963 (datum code 1122).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid (CGG) 2013 at epoch 2010.0.
 Replaces CGVD28 from November 2013. Replaced by CGVD2013(CGG2013a) epoch 2010 from December 2015, supplemented from February 2021 by snapshots of CGVD2013(CGG2013a) at epochs 1997.0 and 2002.0 (aligned with NAD83(CSRS) realization epochs).',
         ],
@@ -9302,7 +9403,8 @@ Replaces CGVD28 from November 2013. Replaced by CGVD2013(CGG2013a) epoch 2010 fr
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore and offshore.',
+            'extent_name' => 'Japan',
+            'extent_description' => 'Japan - onshore and offshore',
             'help' => 'ITRF94 at epoch 1997.0 except for northern Honshu area impacted by 2011 Tohoku earthquake which is ITRF2008 at epoch 2011.395. Fundamental point: Tokyo-Taisho, latitude: 35°39\'29.1572"N, longitude: 139°44\'28.8869"E (of Greenwich).
 Instigated under amendment to the Japanese Surveying Law with effect from 21st October 2011. Replaces JGD2000 (datum code 6612).',
         ],
@@ -9313,7 +9415,8 @@ Instigated under amendment to the Japanese Surveying Law with effect from 21st O
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore mainland - Hokkaido.',
+            'extent_name' => 'Japan - onshore - Hokkaido',
+            'extent_description' => 'Japan - onshore mainland - Hokkaido',
             'help' => 'Mean sea level Oshoro 1963-72.
 Normal-orthometric heights. Replaced by JGD2000 (vertical) (datum code 1130) with effect from April 2002.',
         ],
@@ -9324,7 +9427,8 @@ Normal-orthometric heights. Replaced by JGD2000 (vertical) (datum code 1130) wit
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.',
+            'extent_name' => 'Japan - onshore mainland',
+            'extent_description' => 'Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu',
             'help' => '24.4140 metres above mean sea level Tokyo Bay.
 Orthometric heights. Replaces JSLD69 and JSLD72 with effect from April 2002. Replaced by JGD2011 (vertical) (datum code 1131) with effect from 21st October 2011.',
         ],
@@ -9335,7 +9439,8 @@ Orthometric heights. Replaces JSLD69 and JSLD72 with effect from April 2002. Rep
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu.',
+            'extent_name' => 'Japan - onshore mainland',
+            'extent_description' => 'Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu',
             'help' => '24.3900 metres above mean sea level Tokyo Bay.
 Orthometric heights. Replaces JGD2000 (vertical) (datum code 1130) with effect from 21st October 2011.',
         ],
@@ -9346,7 +9451,8 @@ Orthometric heights. Replaces JGD2000 (vertical) (datum code 1130) with effect f
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State.',
+            'extent_name' => 'Italy - including San Marino and Vatican',
+            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State',
             'help' => 'Italian densification of ETRS89 realised through network of 99 permanent reference stations in ETRF2000@2008.0.
 Adopted as official Italian reference datum 10/11/2011. Replaces IGM95 (datum code 6670).',
         ],
@@ -9357,7 +9463,8 @@ Adopted as official Italian reference datum 10/11/2011. Replaces IGM95 (datum co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.',
+            'extent_name' => 'USA - CONUS and Alaska; PRVI',
+            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore',
             'help' => 'Defined by time-dependent transformations from ITRF (see CT codes 6864-6866). The ITRF realization used has been changed periodically; ITRF96 in years 1997 through 1999, ITRF97 in 2000 and 2001 and ITRF2000 from 2002.
 Replaced by NAD83(2011) from 2011-09-06.',
         ],
@@ -9368,7 +9475,8 @@ Replaced by NAD83(2011) from 2011-09-06.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Yemen - South Yemen onshore mainland.',
+            'extent_name' => 'Yemen - South Yemen - mainland',
+            'extent_description' => 'Yemen - South Yemen onshore mainland',
             'help' => '
 ',
         ],
@@ -9379,7 +9487,8 @@ Replaced by NAD83(2011) from 2011-09-06.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Equatorial Guinea - Bioko onshore.',
+            'extent_name' => 'Equatorial Guinea - Bioko',
+            'extent_description' => 'Equatorial Guinea - Bioko onshore',
             'help' => '
 ',
         ],
@@ -9390,7 +9499,8 @@ Replaced by NAD83(2011) from 2011-09-06.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Lebanon - onshore.',
+            'extent_name' => 'Lebanon - onshore',
+            'extent_description' => 'Lebanon - onshore',
             'help' => '
 ',
         ],
@@ -9401,7 +9511,8 @@ Replaced by NAD83(2011) from 2011-09-06.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Seychelles - Mahe, Silhouette, North, Aride Island, Praslin, La Digue and Frigate islands including adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island.',
+            'extent_name' => 'Seychelles - Seychelles Bank',
+            'extent_description' => 'Seychelles - Mahe, Silhouette, North, Aride Island, Praslin, La Digue and Frigate islands including adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island',
             'help' => 'Fundamental point: Challenger Astro near Port Victoria lighthouse. Latitude: 4°40\'39.460"S, longitude: 55°32\'00.166"E (of Greenwich).
 Network readjusted in 1958-59 and extended to Bird and Denis islands in 1975.',
         ],
@@ -9412,7 +9523,8 @@ Network readjusted in 1958-59 and extended to Bird and Denis islands in 1975.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Gambia - onshore.',
+            'extent_name' => 'Gambia - onshore',
+            'extent_description' => 'Gambia - onshore',
             'help' => '
 ',
         ],
@@ -9423,7 +9535,8 @@ Network readjusted in 1958-59 and extended to Bird and Denis islands in 1975.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Singapore - onshore and offshore.',
+            'extent_name' => 'Singapore',
+            'extent_description' => 'Singapore - onshore and offshore',
             'help' => 'Mean sea level determined at Victoria Dock tide gauge 1935-1937.
 Orthometric heights. Network readjusted in 2009.',
         ],
@@ -9434,7 +9547,8 @@ Orthometric heights. Network readjusted in 2009.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF2008 at epoch 2005.00 through a subset of 232 stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1632 through GPS week 1708 (2011-04-17 through 2012-10-06). Replaces IGS05. Replaced by IGb08. For all practical purposes coincident with ITRF2008.',
         ],
@@ -9445,7 +9559,8 @@ Used for IGS products from GPS week 1632 through GPS week 1708 (2011-04-17 throu
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Israel - onshore; Palestine Territory - onshore.',
+            'extent_name' => 'Asia - Middle East - Israel and Palestine Territory onshore',
+            'extent_description' => 'Israel - onshore; Palestine Territory - onshore',
             'help' => 'Defined by transformation from IGD05 at epoch 2004.75.
 ',
         ],
@@ -9456,7 +9571,8 @@ Used for IGS products from GPS week 1632 through GPS week 1708 (2011-04-17 throu
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Israel - onshore; Palestine Territory - onshore.',
+            'extent_name' => 'Asia - Middle East - Israel and Palestine Territory onshore',
+            'extent_description' => 'Israel - onshore; Palestine Territory - onshore',
             'help' => 'Defined by transformation from IGD05/12 at epoch 2012.00.
 ',
         ],
@@ -9467,7 +9583,8 @@ Used for IGS products from GPS week 1632 through GPS week 1708 (2011-04-17 throu
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Arab Emirates (UAE) - Abu Dhabi onshore.',
+            'extent_name' => 'UAE - Abu Dhabi - onshore',
+            'extent_description' => 'United Arab Emirates (UAE) - Abu Dhabi onshore',
             'help' => 'Mean Sea Level at Ras Ghumays 1978 and 1979.
 Orthometric heights.',
         ],
@@ -9478,7 +9595,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Oman - onshore and offshore.',
+            'extent_name' => 'Oman',
+            'extent_description' => 'Oman - onshore and offshore',
             'help' => '20 stations of the Oman primary network tied to ITRF2008 at epoch 2013.15.
 Replaces WGS 84 (G873). Replaced by ONGD17.',
         ],
@@ -9489,7 +9607,8 @@ Replaces WGS 84 (G873). Replaced by ONGD17.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cyprus - onshore.',
+            'extent_name' => 'Cyprus - onshore',
+            'extent_description' => 'Cyprus - onshore',
             'help' => 'Mean sea level at Famagusta Harbour.
 Orthometric heights.',
         ],
@@ -9500,7 +9619,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore.',
+            'extent_name' => 'Papua New Guinea - 0°N to 12°S and 140°E to 158°E',
+            'extent_description' => 'Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore',
             'help' => 'Mean sea level at 8 tide gauges around PNG, defined through application of PNG08 geoid model (transformation code 7655) to PNG94 (CRS code 5545).
 ',
         ],
@@ -9511,7 +9631,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Papua New Guinea - Papuan fold and thrust belt.',
+            'extent_name' => 'Papua New Guinea - PFTB',
+            'extent_description' => 'Papua New Guinea - Papuan fold and thrust belt',
             'help' => 'Kumul Platform Station 34. Propagated through bilinear interpolation of EGM96 geoid model (transformation code 10084) reduced to Kumul 34 by offset of -0.87m.
 ',
         ],
@@ -9522,7 +9643,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Papua New Guinea - onshore south of 5°S and west of 144°E.',
+            'extent_name' => 'Papua New Guinea - onshore south of 5°S and west of 144°E',
+            'extent_description' => 'Papua New Guinea - onshore south of 5°S and west of 144°E',
             'help' => 'PSM 9465 at Kiunga Airport. Propagated through bilinear interpolation of EGM2008 geoid model (transformation code 3858) reduced to PSM 9465 by offset of -3.0m.
 ',
         ],
@@ -9533,7 +9655,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 1994.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 10 GPS tracking stations adjusted to a subset of ITRF92 stations at epoch 1994.0. The reference epoch for ITRF92 is 1988.0; the ITRF92 station coordinates were transformed to 1994.0 using the NNR-NUVEL1 plate motion model.
 Replaces the original Transit-derived World Geodetic System 1984 from 1994-06-29. Replaced by World Geodetic System 1984 (G873) from 1997-01-29.',
         ],
@@ -9544,7 +9667,8 @@ Replaces the original Transit-derived World Geodetic System 1984 from 1994-06-29
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 1997.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 13 GPS tracking stations adjusted to a subset of ITRF94 stations at epoch 1997.0. The reference epoch for the adjustment was 1994.0 and the coordinates were propagated to 1997.0 using the NNR-NUVEL-1A plate motion model.
 Replaces World Geodetic System 1984 (G730) from 1997-01-29. Replaced by World Geodetic System 1984 (G1150) from 2002-01-20.',
         ],
@@ -9555,7 +9679,8 @@ Replaces World Geodetic System 1984 (G730) from 1997-01-29. Replaced by World Ge
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 2001.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 17 GPS tracking stations adjusted to a subset of 49 IGS stations. Observations made in February 2001. The reference epoch for ITRF2000 is 1997.0; station coordinates were transformed to 2001.0 using IERS station velocities.
 Replaces World Geodetic System 1984 (G873) from 2002-01-20. Replaced by World Geodetic System 1984 (G1674) from 2012-02-08.',
         ],
@@ -9566,7 +9691,8 @@ Replaces World Geodetic System 1984 (G873) from 2002-01-20. Replaced by World Ge
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 15 GPS tracking stations adjusted to a subset of IGS stations at epoch 2005.0. The IGS station coordinates are considered to be equivalent to ITRF2008.
 Replaces World Geodetic System 1984 (G1150) from 2012-02-08. Replaced by World Geodetic System 1984 (G1762) from 2013-10-16.',
         ],
@@ -9577,7 +9703,8 @@ Replaces World Geodetic System 1984 (G1150) from 2012-02-08. Replaced by World G
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 19 GPS tracking stations adjusted to a subset of IGb08 stations at epoch 2005.0 using observations made in May 2013. The IGb08 coordinates are considered to be equivalent to ITRF2008.
 Replaces WGS 84 (G1674) from 2013-10-16. Frame was redesignated WGS 84 (G1762\') after coordinates of 7 NGA tracking stations were changed following station moves and antenna updates 2014-08 to 2015-06. Replaced by WGS 84 (G2139) from 2021-01-03.',
         ],
@@ -9588,7 +9715,8 @@ Replaces WGS 84 (G1674) from 2013-10-16. Frame was redesignated WGS 84 (G1762\')
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2002.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 33 stations of the satellite geodetic network (SGN) in Russia and Antarctica adjusted to a subset of 14 IGS stations in Russia at epoch 2002.0. The IGS station coordinates are considered to be equivalent to ITRF2000.
 Replaces PZ-90 from 2007-09-20. Replaced by PZ-90.11 from 2014-01-15.',
         ],
@@ -9599,7 +9727,8 @@ Replaces PZ-90 from 2007-09-20. Replaced by PZ-90.11 from 2014-01-15.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2010.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 33 stations of the satellite geodetic network (SGN) in Russia and Antarctica adjusted to a subset of 14 IGS stations in Russia at epoch 2010.0. The IGS station coordinates are considered to be equivalent to ITRF2008.
 Replaces PZ-90.02 from 2014-01-15.',
         ],
@@ -9610,7 +9739,8 @@ Replaces PZ-90.02 from 2014-01-15.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Russian Federation - onshore and offshore.',
+            'extent_name' => 'Russia',
+            'extent_description' => 'Russian Federation - onshore and offshore',
             'help' => 'Coordinates of the Russian fundamental astronomic-geodetic network (about 50 stations) at epoch 2011.0
 ',
         ],
@@ -9621,7 +9751,8 @@ Replaces PZ-90.02 from 2014-01-15.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kyrgyzstan.',
+            'extent_name' => 'Kyrgyzstan',
+            'extent_description' => 'Kyrgyzstan',
             'help' => '6 stations of the Kyrgyzstan zero-order network tied to ITRF2005 at epoch 2006.70.
 The accuracy in the connection to ITRF2005 is estimated to be 5 mm in horizontal and 10-20 mm in height (95% confidence).',
         ],
@@ -9632,7 +9763,8 @@ The accuracy in the connection to ITRF2005 is estimated to be 5 mm in horizontal
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.',
+            'extent_name' => 'Germany - onshore',
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Height of reference point "Normalnullpunkt" at Berlin Observatory defined as 37.000m above MSL in 1879 (transferred to benchmarks near Hoppegarten in Müncheberg in 1912). Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684.
 Uses Normal-orthometric heights.',
         ],
@@ -9643,7 +9775,8 @@ Uses Normal-orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Latvia - onshore.',
+            'extent_name' => 'Latvia - onshore',
+            'extent_description' => 'Latvia - onshore',
             'help' => 'Latvian realisation of EVRF2007. Observed from 2000-2010 and reduced to epoch 2000.5 using empirical land uplift model of Latvia. EVRF2007 heights of 16 points around Latvia held fixed.
 Uses Normal heights.',
         ],
@@ -9654,7 +9787,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E.',
+            'extent_name' => 'UK - offshore 49°45\'N to 61°N, 9°W to 2°E',
+            'extent_description' => 'United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E',
             'help' => 'Defined by OSGM geoid model.
 Extension of Ordnance Datum Newlyn offshore through geoid model. Orthometric heights.',
         ],
@@ -9665,7 +9799,8 @@ Extension of Ordnance Datum Newlyn offshore through geoid model. Orthometric hei
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2010.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2010.0. Zero scale and scale rate between ITRF2014 and the average of VLBI and SLR scales/rates. Orientation = ITRF2008@ 2010.0 with zero rotation rates between the ITRF2014 and ITRF2008.
 Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (datum code 1061) from January 2016. Replaced by ITRF2020 (datum code 1322) from April 2022.',
         ],
@@ -9676,7 +9811,8 @@ Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2008 (
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 1984.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 5 GPS tracking stations in the Transit doppler positioning NSWC 9Z-2 reference frame transformed to be aligned to the BIH Conventional Terrestrial Reference Frame (BTS) at epoch 1984.0.
 The NSWC 9Z-2 origin shifted by -4.5 m along the Z-axis, scale changed by -0.6 x 10E-6 and the reference meridian rotated westward by 0.814" to be aligned to the BTS at epoch 1984.0. Replaced by World Geodetic System 1984 (G730) from 1994-06-29.',
         ],
@@ -9687,7 +9823,8 @@ The NSWC 9Z-2 origin shifted by -4.5 m along the Z-axis, scale changed by -0.6 x
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bulgaria - onshore and offshore.',
+            'extent_name' => 'Bulgaria',
+            'extent_description' => 'Bulgaria - onshore and offshore',
             'help' => 'Densification of ETRS89 realised through network of 112 permanent GNSS reference stations in ETRF2000@2005.0.
 Adopted as official Bulgarian reference datum through decree 153 of 2010-07-29.',
         ],
@@ -9698,7 +9835,8 @@ Adopted as official Bulgarian reference datum through decree 153 of 2010-07-29.'
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'extent_name' => 'Australia - GDA',
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore',
             'help' => 'ITRF2014 at epoch 2020.0.
 ',
         ],
@@ -9709,7 +9847,8 @@ Adopted as official Bulgarian reference datum through decree 153 of 2010-07-29.'
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.',
+            'extent_name' => 'New Zealand',
+            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands',
             'help' => 'New Zealand quasigeoid 2016 which is defined by the application of the NZ geoid 2016 grid to NZGD2000 ellipsoidal heights. See transformation code 7840.
 ',
         ],
@@ -9720,7 +9859,8 @@ Adopted as official Bulgarian reference datum through decree 153 of 2010-07-29.'
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore and offshore.',
+            'extent_name' => 'Germany',
+            'extent_description' => 'Germany - onshore and offshore',
             'help' => '2006-2012 levelling network adjusted to 72 points of the DHHN92. Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684. Extension offshore defined by the GCG2016 quasi-geoid model (CT code 9925).
 Uses Normal heights in the mean tidal system.',
         ],
@@ -9731,7 +9871,8 @@ Uses Normal heights in the mean tidal system.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Papua New Guinea - onshore - Gulf province east of 144°24\'E, Central province and National Capital District.',
+            'extent_name' => 'Papua New Guinea - onshore - Central province and Gulf province east of 144°E',
+            'extent_description' => 'Papua New Guinea - onshore - Gulf province east of 144°24\'E, Central province and National Capital District',
             'help' => 'BM198 (adjacent to the Port Moresby tide gauge) height of 3.02 above MSL as determined by CSIRO in 1990. Propagated through bilinear interpolation of EGM96 geoid model (transformation code 10084) reduced by offset of -1.58m.
 Offset has been determined by static GNSS estimation of ellipsoid height of BM198.',
         ],
@@ -9742,7 +9883,8 @@ Offset has been determined by static GNSS estimation of ellipsoid height of BM19
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Papua New Guinea - onshore - Gulf province east of 144°24\'E, Central province and National Capital District.',
+            'extent_name' => 'Papua New Guinea - onshore - Central province and Gulf province east of 144°E',
+            'extent_description' => 'Papua New Guinea - onshore - Gulf province east of 144°24\'E, Central province and National Capital District',
             'help' => 'BM198 (adjacent to the Port Moresby tide gauge) height of 3.02 above MSL as determined by CSIRO in 1990. Propagated through bilinear interpolation of EGM2008 geoid model (transformation code 3858 or 3859) reduced by offset of -0.93m.
 Offset has been determined by static GNSS estimation of ellipsoid height of BM198 validated to a precision of 10 cm by short period tidal observations at Kerema wharf in 2010.',
         ],
@@ -9753,7 +9895,8 @@ Offset has been determined by static GNSS estimation of ellipsoid height of BM19
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'extent_name' => 'St Helena - St Helena Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'WGS 84(G1150) at epoch 2011.773. WGS 84 coordinates (15°56\'33.1217"S, 5°40\'02.4436"W, 453.288m ellipsoid height) of Longwood IGS CORS station STHL on 9th October 2011
 ',
         ],
@@ -9764,7 +9907,8 @@ Offset has been determined by static GNSS estimation of ellipsoid height of BM19
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'extent_name' => 'St Helena - St Helena Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'ITRF2008 at epoch 2015.0. ITRF2008 coordinates (15°56\'33.1198"S, 5°40\'02.4412"W, 453.183m ellipsoid height) of Longwood IGS CORS station STHL on 1st January 2015.
 Developed by Richard Stanaway, Quickclose Pty Ltd, superseding Astro DOS 71 from 1st January 2016.',
         ],
@@ -9775,7 +9919,8 @@ Developed by Richard Stanaway, Quickclose Pty Ltd, superseding Astro DOS 71 from
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'extent_name' => 'St Helena - St Helena Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'MSL at Jamestown 1971 defined through elevation of triangulation station Astro DOS 71/4 Ladder Hill Fort being 267.858 metres above MSL.
 ',
         ],
@@ -9786,7 +9931,8 @@ Developed by Richard Stanaway, Quickclose Pty Ltd, superseding Astro DOS 71 from
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'extent_name' => 'St Helena - St Helena Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'MSL defined by Longwood IGS station STHL reference level of 436.215m.
 Defined by offset of -17.073m applied to St. Helena Tritan ellipsiodal height (CRS code 7880).',
         ],
@@ -9797,7 +9943,8 @@ Defined by offset of -17.073m applied to St. Helena Tritan ellipsiodal height (C
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'extent_name' => 'St Helena - St Helena Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'Longwood IGS station STHL reference level of 436.312m.
 Defined by SHGEOID15 geoid model (transformation code 7891) applied to SHGD2015 (CRS code 7885).',
         ],
@@ -9808,7 +9955,8 @@ Defined by SHGEOID15 geoid model (transformation code 7891) applied to SHGD2015 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).',
         ],
@@ -9819,7 +9967,8 @@ Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum code 1178). Replaced by ETRF91 (datum code 1180).',
         ],
@@ -9830,7 +9979,8 @@ Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum code 1179). Replaced by ETRF92 (datum code 1181).',
         ],
@@ -9841,7 +9991,8 @@ Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1 geophysical model.
 Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum code 1180). Replaced by ETRF93 (datum code 1182).',
         ],
@@ -9852,7 +10003,8 @@ Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF93 velocity field.
 Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum code 1181). Replaced by ETRF94 (datum code 1183).',
         ],
@@ -9863,7 +10015,8 @@ Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum code 1182). Replaced by ETRF96 (datum code 1184).',
         ],
@@ -9874,7 +10027,8 @@ Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum code 1183). Replaced by ETRF97 (datum code 1185).',
         ],
@@ -9885,7 +10039,8 @@ Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum code 1184). Replaced by ETRF2000 (datum code 1186).',
         ],
@@ -9896,7 +10051,8 @@ Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum cod
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2000 velocity field.
 Defined by transformation from ITRF2000 (CT 7940). Replaces ETRF97. On the publication of ETRF2005 the EUREF TWG recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 1206) is technically superior to all earlier realizations of ETRS89.',
         ],
@@ -9907,7 +10063,8 @@ Defined by transformation from ITRF2000 (CT 7940). Replaces ETRF97. On the publi
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iceland - onshore and offshore.',
+            'extent_name' => 'Iceland',
+            'extent_description' => 'Iceland - onshore and offshore',
             'help' => 'ITRF2014 at epoch 2016.5.
 Replaces ISN2004 from September 2017.',
         ],
@@ -9918,7 +10075,8 @@ Replaces ISN2004 from September 2017.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8909',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria - Upper Austria and Salzburg provinces. Czechia - Bohemia.',
+            'extent_name' => 'Europe - Upper Austria, Salzburg and Bohemia',
+            'extent_description' => 'Austria - Upper Austria and Salzburg provinces. Czechia - Bohemia',
             'help' => 'Fundamental point: Gusterberg. Latitude: 48°02\'18.47"N, longitude: 31°48\'15.05"E (of Ferro).
 ',
         ],
@@ -9929,7 +10087,8 @@ Replaces ISN2004 from September 2017.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8909',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria - Lower Austria. Czechia - Moravia and Czech Silesia.',
+            'extent_name' => 'Europe - Lower Austria and Moravia',
+            'extent_description' => 'Austria - Lower Austria. Czechia - Moravia and Czech Silesia',
             'help' => 'Fundamental point: St. Stephen\'s cathedral, Vienna. Latitude: 48°12\'31.54"N, longitude: 34°02\'27.32"E (of Ferro).
 ',
         ],
@@ -9940,7 +10099,8 @@ Replaces ISN2004 from September 2017.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iceland - onshore.',
+            'extent_name' => 'Iceland - onshore',
+            'extent_description' => 'Iceland - onshore',
             'help' => 'Adjustment is referenced to mean sea level at Reykjavík epoch 2004.6.
 ',
         ],
@@ -9951,7 +10111,8 @@ Replaces ISN2004 from September 2017.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2010.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF2014 at epoch 2010.00 through a subset of 252 stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1934 (2017-01-29) through GPS week 2105 (2020-05-16). Replaces IGb08, replaced by IGb14. For all practical purposes coincident with ITRF2014.',
         ],
@@ -9962,7 +10123,8 @@ Used for IGS products from GPS week 1934 (2017-01-29) through GPS week 2105 (202
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at epoch 1988.0 by a transformation from ITRF92, the definition superseded by a transformation from ITRF93 and then by a transformation from ITRF94. (See transformation codes 8256-58).
 Adopted by the Canadian federal government from 1996-01-01. Replaces NAD83 [sometimes called NAD83(Original)]. Replaced by NAD83(CSRS)v2.',
         ],
@@ -9973,7 +10135,8 @@ Adopted by the Canadian federal government from 1996-01-01. Replaces NAD83 [some
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.',
         ],
@@ -9984,7 +10147,8 @@ Published 1998-01-01; adopted by the Canadian federal government and the provinc
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.',
         ],
@@ -9995,7 +10159,8 @@ Published 1999-01-01; adopted by the Canadian federal government (2000) and the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.',
         ],
@@ -10006,7 +10171,8 @@ Published 2002-01-01; adopted by the Canadian federal government (2002) and the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.',
         ],
@@ -10017,7 +10183,8 @@ Published 2007-01-01; adopted by the Canadian federal government in 2007. Replac
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.',
         ],
@@ -10028,7 +10195,8 @@ Published 2010-01-01; adopted by the Canadian government (2012) and the provinci
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.',
         ],
@@ -10039,7 +10207,8 @@ Published 2017-05-01; adopted by the Canadian federal government (2017) and the 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greenland - onshore and offshore between 59°N and 84°N and west of 10°W.',
+            'extent_name' => 'Greenland - 59°N to 84°N',
+            'extent_description' => 'Greenland - onshore and offshore between 59°N and 84°N and west of 10°W',
             'help' => 'Defined through the gravimetric geoid 2000 model locally aligned with MSL at a number of sites.
 Orthometric heights. Replaced by GVR2016.',
         ],
@@ -10050,7 +10219,8 @@ Orthometric heights. Replaced by GVR2016.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greenland - onshore and offshore between 58°N and 85°N and west of 7°W.',
+            'extent_name' => 'Greenland - 58°N to 85°N',
+            'extent_description' => 'Greenland - onshore and offshore between 58°N and 85°N and west of 7°W',
             'help' => 'Defined through the gravimetric geoid 2016 model locally aligned to MSL as measured at Nuuk during the 1960s.
 Orthometric heights. Replaces GVR2000.',
         ],
@@ -10061,7 +10231,8 @@ Orthometric heights. Replaces GVR2000.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Slovakia.',
+            'extent_name' => 'Slovakia',
+            'extent_description' => 'Slovakia',
             'help' => '
 ',
         ],
@@ -10072,7 +10243,8 @@ Orthometric heights. Replaces GVR2000.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Czechia; Slovakia.',
+            'extent_name' => 'Europe - Czechoslovakia',
+            'extent_description' => 'Czechia; Slovakia',
             'help' => 'Datum: average water level at Kronstadt 1833. Network adjusted in 1957 as Uniform Precise Leveling Network of Eastern Europe (EPNN).
 Uses Normal heights.',
         ],
@@ -10083,7 +10255,8 @@ Uses Normal heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2005 velocity field.
 Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of this reference frame, the EUREF TWG recommended that ETRF2000 rather than this reference frame remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 1206).',
         ],
@@ -10094,7 +10267,8 @@ Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of thi
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'help' => 'Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2014 velocity field.
 Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically superior to ETRF2000 (datum code 1186).',
         ],
@@ -10105,7 +10279,8 @@ Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Macao - onshore and offshore.',
+            'extent_name' => 'China - Macao',
+            'extent_description' => 'China - Macao - onshore and offshore',
             'help' => 'Fundamental point: Avenida Conselheiro Borja base A, later transferred to Monte da Barra, latitude 22°11\'03.139"N, longitude 113°31\'43.625"E (of Greenwich).
 Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unresolvable conflicts and the 1920 adjustment was reinstated.',
         ],
@@ -10116,7 +10291,8 @@ Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unr
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Macao - onshore and offshore.',
+            'extent_name' => 'China - Macao',
+            'extent_description' => 'China - Macao - onshore and offshore',
             'help' => 'ITRF2005 at epoch 2008.38.
 Locally sometimes referred to as ITRF2005, this is not strictly correct as it applies only at epoch 2008.38 and ignores subsequent tectonic plate motion.',
         ],
@@ -10127,7 +10303,8 @@ Locally sometimes referred to as ITRF2005, this is not strictly correct as it ap
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Hong Kong - onshore and offshore.',
+            'extent_name' => 'China - Hong Kong',
+            'extent_description' => 'China - Hong Kong - onshore and offshore',
             'help' => 'ITRF96 at epoch 1998.121
 Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch 1998.121 and ignores subsequent tectonic plate motion.',
         ],
@@ -10138,7 +10315,8 @@ Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correc
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Macao - onshore and offshore.',
+            'extent_name' => 'China - Macao',
+            'extent_description' => 'China - Macao - onshore and offshore',
             'help' => 'Mean sea level Ma Kau Seak 1925-1964.
 ',
         ],
@@ -10149,7 +10327,8 @@ Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correc
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa - Tutuila, Aunu\'u, Ofu, Olesega, Ta\'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore.',
+            'extent_name' => 'USA - FBN',
+            'extent_description' => 'American Samoa - Tutuila, Aunu\'u, Ofu, Olesega, Ta\'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore',
             'help' => 'A collection of individual state-wide adjustments including GPS observations made between 1997 and 2004.
 In CA CT FL ID MA ME MT NC NH NJ NV NY OR RI SC TN VT WA and WI, replaces the early 1990s HARN adjustment. In rest of CONUS the difference between the HARN and FBN adjustments was under 5cm and the original HARN adjustments were adopted as NAD83(FBN).',
         ],
@@ -10160,7 +10339,8 @@ In CA CT FL ID MA ME MT NC NH NJ NV NY OR RI SC TN VT WA and WI, replaces the ea
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Puerto Rico and US Virgin Islands - onshore.',
+            'extent_name' => 'Caribbean - Puerto Rico and US Virgin Islands - onshore',
+            'extent_description' => 'Puerto Rico and US Virgin Islands - onshore',
             'help' => '
 In PRVI replaces NAD83(HARN) to correct errors. Replaced by NAD83(FBN).',
         ],
@@ -10171,7 +10351,8 @@ In PRVI replaces NAD83(HARN) to correct errors. Replaced by NAD83(FBN).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Finland - onshore mainland south of approximately 66°N.',
+            'extent_name' => 'Finland - mainland south of 66°N',
+            'extent_description' => 'Finland - onshore mainland south of approximately 66°N',
             'help' => 'MSL at Helsinki during 1943.
 Uses orthometric heights. Effect of the land uplift during the 2nd national levelling was not taken into account. Replaced by N60 (datum code 5116).',
         ],
@@ -10182,7 +10363,8 @@ Uses orthometric heights. Effect of the land uplift during the 2nd national leve
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Serbia including Vojvodina.',
+            'extent_name' => 'Serbia',
+            'extent_description' => 'Serbia including Vojvodina',
             'help' => 'Densification of ETRF2000 in Serbia at epoch 2010.63.
 Replaces SREF98.',
         ],
@@ -10193,7 +10375,8 @@ Replaces SREF98.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Slovenia - onshore.',
+            'extent_name' => 'Slovenia - onshore',
+            'extent_description' => 'Slovenia - onshore',
             'help' => 'Mean sea level at Koper over 18.6 years, selected epoch is 2010-10-10.
 Normal heights. Replaces SVS2000 from 2019-01.',
         ],
@@ -10204,7 +10387,8 @@ Normal heights. Replaces SVS2000 from 2019-01.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Serbia including Vojvodina.',
+            'extent_name' => 'Serbia',
+            'extent_description' => 'Serbia including Vojvodina',
             'help' => 'Mean sea level of Adriatic Sea in 1971.
 Normal heights above quasi-geoid. In Serbia replaces Trieste (datum code 1050).',
         ],
@@ -10215,7 +10399,8 @@ Normal heights above quasi-geoid. In Serbia replaces Trieste (datum code 1050).'
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola - onshore and offshore.',
+            'extent_name' => 'Angola',
+            'extent_description' => 'Angola - onshore and offshore',
             'help' => 'Fundamental point: Campo de Aviaçao. Latitude: 12°01\'08.702"S, Longitude = 17°27\'19.515"E (of Greenwich).
 Second adjustment. Not used for offshore oil and gas exploration and production.',
         ],
@@ -10226,7 +10411,8 @@ Second adjustment. Not used for offshore oil and gas exploration and production.
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Saudi Arabia - onshore and offshore.',
+            'extent_name' => 'Saudi Arabia',
+            'extent_description' => 'Saudi Arabia - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2004.00.
 13 CORS Fiducial Stations linked to 7 IGS stations by 10-day long GPS survey.',
         ],
@@ -10237,7 +10423,8 @@ Second adjustment. Not used for offshore oil and gas exploration and production.
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Saudi Arabia - onshore.',
+            'extent_name' => 'Saudi Arabia - onshore',
+            'extent_description' => 'Saudi Arabia - onshore',
             'help' => 'Mean sea level Jeddah 1969.
 ',
         ],
@@ -10248,7 +10435,8 @@ Second adjustment. Not used for offshore oil and gas exploration and production.
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola - onshore and offshore.',
+            'extent_name' => 'Angola',
+            'extent_description' => 'Angola - onshore and offshore',
             'help' => 'Network of 18 stations throughout Angola referenced to ITRF2008 @ 2010.90.
 Established through daily PPP solutions in GPS week G1610.',
         ],
@@ -10259,7 +10447,8 @@ Established through daily PPP solutions in GPS week G1610.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore.',
+            'extent_name' => 'Pacific - US interests Mariana plate',
+            'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore',
             'help' => 'Defined by a time-dependent seven parameter transformation of ITRF2000 3D geocentric Cartesian coordinates and velocities at reference epoch 1993.62, aligned to the Mariana plate at other epochs based on an Euler pole rotation.
 Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).',
         ],
@@ -10270,7 +10459,8 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi.',
+            'extent_name' => 'Wallis and Futuna',
+            'extent_description' => 'Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi',
             'help' => 'Coincident with ITRF94 at epoch 1993.00.
 ',
         ],
@@ -10281,7 +10471,8 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island.',
+            'extent_name' => 'Taiwan - onshore - mainland',
+            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island',
             'help' => 'Mean Sea Level at Keelung between 1957 and 1991.
 Orthometric heights.',
         ],
@@ -10292,7 +10483,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Costa Rica - onshore and offshore.',
+            'extent_name' => 'Costa Rica',
+            'extent_description' => 'Costa Rica - onshore and offshore',
             'help' => 'ITRF2008 (IGb08) at epoch 2014.59. Network of 42 GNSS stations of the passive and active reference system.
 Replaces CR05 from April 2018.',
         ],
@@ -10303,7 +10495,8 @@ Replaces CR05 from April 2018.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Costa Rica - onshore.',
+            'extent_name' => 'Costa Rica - onshore',
+            'extent_description' => 'Costa Rica - onshore',
             'help' => 'Mean Sea Level 1941-1952 at Puntarenas.
 Orthometric heights.',
         ],
@@ -10314,7 +10507,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.4,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF97 at epoch 2000.40. Realized by a frame of 31 continuously operating stations using GPS observations from June 1996 to February 2000. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 DGF00P01 is included in ITRF2000 as a regional densification for South America. Replaced by DGF01P01 (datum code 1228).',
         ],
@@ -10325,7 +10519,8 @@ DGF00P01 is included in ITRF2000 as a regional densification for South America. 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF2000 at epoch 2000.00. Realized by a frame of 48 continuously operating stations using GPS observations from June 1996 to April 2001. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF00P01 (datum code 1227). Replaced by DGF01P02 (datum code 1229).',
         ],
@@ -10336,7 +10531,8 @@ Replaces DGF00P01 (datum code 1227). Replaced by DGF01P02 (datum code 1229).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1998.4,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF2000 at epoch 1998.40. Realized by a frame of 49 continuously operating stations using GPS observations from June 1996 to October 2001. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF01P01 (datum code 1228). Replaced by DGF02P01 (datum code 1230).',
         ],
@@ -10347,7 +10543,8 @@ Replaces DGF01P01 (datum code 1228). Replaced by DGF02P01 (datum code 1230).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF2000 at epoch 2000.00. Realized by a frame of 53 continuously operating stations using GPS observations from June 1996 to July 2002. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF01P02 (datum code 1229). Replaced by DGF04P01 (datum code 1331).',
         ],
@@ -10358,7 +10555,8 @@ Replaces DGF01P02 (datum code 1229). Replaced by DGF04P01 (datum code 1331).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2003.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF2000 at epoch 2003.00. Realized by a frame of 69 continuously operating stations using GPS observations from June 1996 to July 2004. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF02P01 (datum code 1230). Replaced by DGF05P01 (datum code 1232).',
         ],
@@ -10369,7 +10567,8 @@ Replaces DGF02P01 (datum code 1230). Replaced by DGF05P01 (datum code 1232).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2004.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF2000 at epoch 2004.00. Realized by a frame of 95 continuously operating stations using GPS observations from June 1996 to September 2005. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF04P01 (datum code 1231). Replaced by DGF06P01 (datum code 1233).',
         ],
@@ -10380,7 +10579,8 @@ Replaces DGF04P01 (datum code 1231). Replaced by DGF06P01 (datum code 1233).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2004.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF2000 at epoch 2004.00. Realized by a frame of 94 continuously operating stations using GPS observations from June 1996 to June 2006. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF05P01 (datum code 1232). Replaced by DGF07P01 (datum code 1234).',
         ],
@@ -10391,7 +10591,8 @@ Replaces DGF05P01 (datum code 1232). Replaced by DGF07P01 (datum code 1234).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2004.5,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGS05 at epoch 2004.50. Realized by a frame of 106 continuously operating stations using GPS observations in 3 periods between December 2001 and October 2007. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF06P01 (datum code 1233). Replaced by DGF08P01 (datum code 1235).',
         ],
@@ -10402,7 +10603,8 @@ Replaces DGF06P01 (datum code 1233). Replaced by DGF08P01 (datum code 1235).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2004.5,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGS05 at epoch 2004.50. Realized by a frame of 126 continuously operating stations using GPS observations from December 2002 to March 2008. Velocity model VEMOS2003 used to propagate coordinates to the frame reference epoch.
 Replaces DGF07P01 (datum code 1234). Replaced by SIR09P01 (datum code 1236).',
         ],
@@ -10413,7 +10615,8 @@ Replaces DGF07P01 (datum code 1234). Replaced by SIR09P01 (datum code 1236).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGS05 at epoch 2005.00. Realized by a frame of 128 continuously operating stations using GPS observations from January 2000 to January 2009. Velocity model VEMOS2009 used to propagate coordinates to the frame reference epoch.
 Replaces DGF08P01 (datum code 1235). Replaced by SIR10P01 (datum code 1237).',
         ],
@@ -10424,7 +10627,8 @@ Replaces DGF08P01 (datum code 1235). Replaced by SIR10P01 (datum code 1237).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF08 at epoch 2005.00. Realized by a frame of 183 continuously operating stations using GPS observations from January 2000 to June 2010. Velocity model VEMOS2009 used to propagate coordinates to the frame reference epoch.
 Replaces SIR09P01 (datum code 1236). Replaced by SIR11P01 (datum code 1238).',
         ],
@@ -10435,7 +10639,8 @@ Replaces SIR09P01 (datum code 1236). Replaced by SIR11P01 (datum code 1238).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to ITRF08 at epoch 2005.00. Realized by a frame of 230 continuously operating stations using GPS observations from January 2000 to April 2011. Velocity model VEMOS2009 used to propagate coordinates to the frame reference epoch.
 Replaces SIR10P01 (datum code 1237). Replaced by SIR13P01 (datum code 1239). Last multi-year solution without the effects of the El Maule earthquake in February 2010.',
         ],
@@ -10446,7 +10651,8 @@ Replaces SIR10P01 (datum code 1237). Replaced by SIR13P01 (datum code 1239). Las
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2012.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGb08 at epoch 2012.00. Realized by a frame of 108 continuously operating stations using GPS observations from April 2010 to June 2013. Velocity model VEMOS2009 used to propagate coordinates to the frame reference epoch.
 Replaces SIR11P01 (datum code 1238). Replaced by SIR14P01 (datum code 1240). First multi-year solution after the El Maule earthquake of February 2010.',
         ],
@@ -10457,7 +10663,8 @@ Replaces SIR11P01 (datum code 1238). Replaced by SIR14P01 (datum code 1240). Fir
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2013.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGb08 at epoch 2013.00. Realized by a frame of 242 continuously operating stations using GNSS observations from April 2010 to July 2014. Velocity model VEMOS2009 used to propagate coordinates to the frame reference epoch.
 Replaces SIR13P01 (datum code 1239). Replaced by SIR15P01 (datum code 1241).',
         ],
@@ -10468,7 +10675,8 @@ Replaces SIR13P01 (datum code 1239). Replaced by SIR15P01 (datum code 1241).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2013.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGb08 at epoch 2013.00. Realized by a frame of 303 continuously operating stations using GNSS observations from March 2010 to April 2015. Velocity model VEMOS2015 used to propagate coordinates to the frame reference epoch.
 Replaces SIR14P01 (datum code 1240). Replaced by SIR17P01 (datum code 1242).',
         ],
@@ -10479,7 +10687,8 @@ Replaces SIR14P01 (datum code 1240). Replaced by SIR17P01 (datum code 1242).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2015.0,
-            'extent_description' => 'Latin America - Central America and South America, onshore and offshore.',
+            'extent_name' => 'Latin America - Central America and South America',
+            'extent_description' => 'Latin America - Central America and South America, onshore and offshore',
             'help' => 'Aligned to IGS14 at epoch 2015.00. Realized by a frame of 345 continuously operating stations using GNSS observations from April 2011 to January 2017. Velocity model VEMOS2017 used to propagate coordinates to the frame reference epoch.
 Replaces SIR15P01 (datum code 1241).',
         ],
@@ -10490,7 +10699,8 @@ Replaces SIR15P01 (datum code 1241).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'extent_name' => 'Chile',
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez',
             'help' => 'IGS08 at epoch 2010.00. Densification of SIRGAS-CON network in Chile, consisting of 120 monumented stations.
 Replaces SIRGAS-Chile realization 1 epoch 2002, following significant tectonic deformation. Replaced by SIRGAS-Chile realization 3 epoch 2013.',
         ],
@@ -10501,7 +10711,8 @@ Replaces SIRGAS-Chile realization 1 epoch 2002, following significant tectonic d
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1997.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF97 at epoch 1997.00 through a subset of stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1065 through GPS week 1142 (2000-06-04 to 2001-12-01). Replaced by IGS00. For all practical purposes coincident with ITRF97.',
         ],
@@ -10512,7 +10723,8 @@ Used for IGS products from GPS week 1065 through GPS week 1142 (2000-06-04 to 20
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1998.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF2000 at epoch 1998.00 through a subset of 54 stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1143 through GPS week 1252 (2001-12-02 through 2004-01-10). Replaces IGS97, replaced by IGb00. For all practical purposes coincident with ITRF2000.',
         ],
@@ -10523,7 +10735,8 @@ Used for IGS products from GPS week 1143 through GPS week 1252 (2001-12-02 throu
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1998.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF2000 at epoch 1998.00 through a subset of 99 stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1253 through GPS week 1399 (2004-01-11 to 2006-11-04). Replaces IGS00, replaced by IGS05. For all practical purposes coincident with ITRF2000.',
         ],
@@ -10534,7 +10747,8 @@ Used for IGS products from GPS week 1253 through GPS week 1399 (2004-01-11 to 20
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF2005 at epoch 2000.00 through a subset of 139 stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1400 through GPS week 1631 (2006-11-05 to 2011-04-16). Replaces IGb00, replaced by IGb08. For all practical purposes coincident with ITRF2005.',
         ],
@@ -10545,7 +10759,8 @@ Used for IGS products from GPS week 1400 through GPS week 1631 (2006-11-05 to 20
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2005.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived from ITRF2008 at epoch 2005.00 through a subset of 232 stable IGS station coordinates. Preserves the ITRF origin, orientation and scale, but without any distortions introduced from non-GNSS space-geodetic techniques.
 Used for IGS products from GPS week 1709 through GPS week 1933 (2012-10-07 to 2017-01-28). Replaces IGS08, replaced by IGS14. For all practical purposes coincident with ITRF2008.',
         ],
@@ -10556,7 +10771,8 @@ Used for IGS products from GPS week 1709 through GPS week 1933 (2012-10-07 to 20
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore.',
+            'extent_name' => 'Pacific - US interests Pacific plate',
+            'extent_description' => 'American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore',
             'help' => 'Defined by a time-dependent seven parameter transformation of ITRF2000 3D geocentric Cartesian coordinates and velocities at reference epoch 1993.62, aligned to the Pacific plate at other epochs based on an Euler pole rotation.
 Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).',
         ],
@@ -10567,7 +10783,8 @@ Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NA
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - La Desirade.',
+            'extent_name' => 'Guadeloupe - La Desirade - onshore',
+            'extent_description' => 'Guadeloupe - onshore - La Desirade',
             'help' => 'Mean sea level at Pointe-à-Pitre. Origin = IGN Marker 20A with defined height of 0.50 m above msl of 1987.
 Orthometric heights. Replaces IGN 1992 LD (datum code 5212).',
         ],
@@ -10578,7 +10795,8 @@ Orthometric heights. Replaces IGN 1992 LD (datum code 5212).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kosovo.',
+            'extent_name' => 'Kosovo',
+            'extent_description' => 'Kosovo',
             'help' => 'Densification of ETRF97 in Kosovo at epoch 2001.25.
 First order network of 32 stations connected to 8 EUREF Permanant Network (EPN) stations observed march-April 2001. Densified in 2012.',
         ],
@@ -10589,7 +10807,8 @@ First order network of 32 stations connected to 8 EUREF Permanant Network (EPN) 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'extent_name' => 'Chile',
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez',
             'help' => 'IGb08 at epoch 2013.00. Densification of SIRGAS-CON network in Chile, consisting of 130 monumented stations.
 Replaces SIRGAS-Chile realization 2 epoch 2010, following significant tectonic deformation. Replaced by SIRGAS-Chile realization 4 epoch 2016.',
         ],
@@ -10600,7 +10819,8 @@ Replaces SIRGAS-Chile realization 2 epoch 2010, following significant tectonic d
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'extent_name' => 'Chile',
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez',
             'help' => 'IGb08 at epoch 2016.00. Densification of SIRGAS-CON network in Chile, consisting of 200 monumented stations.
 Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realization 5 epoch 2021 due to significant tectonic deformation.',
         ],
@@ -10611,7 +10831,8 @@ Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realiza
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea).',
+            'extent_name' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands',
+            'extent_description' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea)',
             'help' => '
 Normal heights.',
         ],
@@ -10622,7 +10843,8 @@ Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through CGG2013a at epoch 2010.0. Geoid velocity defined as zero with respect to NAD83(CSRS).
 Replaces CGVD2013(CGG2013). CGVD2013(CGG2013a) is a static datum. However heights referenced to it change with time, primarily due to glacial isostasy. In practice static snapshots are used at epochs 2010.0 (this datum), 2002.0 and 1997.0.',
         ],
@@ -10633,7 +10855,8 @@ Replaces CGVD2013(CGG2013). CGVD2013(CGG2013a) is a static datum. However height
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - Santa Cruz province south of approximately 50°20\'S.',
+            'extent_name' => 'Argentina - south Santa Cruz',
+            'extent_description' => 'Argentina - Santa Cruz province south of approximately 50°20\'S',
             'help' => '
 Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exploration and production continues.',
         ],
@@ -10644,7 +10867,8 @@ Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exp
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - Tierra del Fuego onshore.',
+            'extent_name' => 'Argentina - Tierra del Fuego onshore',
+            'extent_description' => 'Argentina - Tierra del Fuego onshore',
             'help' => '
 Developed by the Servicio de Hidrografia Naval.',
         ],
@@ -10655,7 +10879,8 @@ Developed by the Servicio de Hidrografia Naval.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - Tierra del Fuego onshore.',
+            'extent_name' => 'Argentina - Tierra del Fuego onshore',
+            'extent_description' => 'Argentina - Tierra del Fuego onshore',
             'help' => '
 Developed by the Servicio de Hidrografia Naval.',
         ],
@@ -10666,7 +10891,8 @@ Developed by the Servicio de Hidrografia Naval.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - onshore.',
+            'extent_name' => 'Argentina - onshore',
+            'extent_description' => 'Argentina - onshore',
             'help' => 'Mean Sea Level 1923 at Mar del Plata defined at station 71 (C = 121.64978 m^2s^-2) = 12.43m for mainland, Ushuaia station PF1N(383) (C = 38.427 m^2s^-2) =  3.915m for Tierra del Fuego. These geopotential numbers correspond with historic values.
 Replaces SRVN71.',
         ],
@@ -10677,7 +10903,8 @@ Replaces SRVN71.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria.',
+            'extent_name' => 'Austria',
+            'extent_description' => 'Austria',
             'help' => 'Geopotential numbers of the EVRF2000 (UELN95/98) node points in Austria converted to orthometric heights using a digital surface model.
 Geoid surface is smoother than the EVRF2000 quasigeoid.',
         ],
@@ -10688,7 +10915,8 @@ Geoid surface is smoother than the EVRF2000 quasigeoid.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'South Africa - mainland onshore.',
+            'extent_name' => 'South Africa - onshore',
+            'extent_description' => 'South Africa - mainland onshore',
             'help' => 'Mean Sea Level at Cape Town harbour 1900 and 1907, referred to Datum Benchmark BM1.
 Orthometric heights.',
         ],
@@ -10699,7 +10927,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Oman - onshore and offshore.',
+            'extent_name' => 'Oman',
+            'extent_description' => 'Oman - onshore and offshore',
             'help' => 'Oman primary network of 39 stations tied to ITRF2014 at epoch 2017.24.
 Replaces ONGD14 from March 2019.',
         ],
@@ -10710,7 +10939,8 @@ Replaces ONGD14 from March 2019.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.',
+            'extent_name' => 'UK - London to Birmingham and Crewe',
+            'extent_description' => 'United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe',
             'help' => 'Defined through application of the HS2TN02 transformation to ETRS89 as realized through OSNet v2001 CORS. Subsequently realized through application of the HS2TN15 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created to support intermediate CRS "HS2-IRF" in the emulation of the HS2P1+14 Snake map projection.',
         ],
@@ -10721,7 +10951,8 @@ Created to support intermediate CRS "HS2-IRF" in the emulation of the HS2P1+14 S
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe.',
+            'extent_name' => 'UK - London to Birmingham and Crewe',
+            'extent_description' => 'United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe',
             'help' => 'Equivalent to Ordnance Datum Newlyn as realized through OSNet v2001 and OSGM02.
 After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the HS2 VRF is maintained equivalent to OSNet v2001 and OSGM02 through HS2GM15 (code 9304).',
         ],
@@ -10732,7 +10963,8 @@ After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the H
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds.',
+            'extent_name' => 'UK - Liverpool to Leeds',
+            'extent_description' => 'United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds',
             'help' => 'Defined through the application of the TPEN11 NTv2 transformation (code 9365) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2020 to support intermediate CRS "TPEN11-IRF" in the emulation of the combined TPEN11 Snake and TPEN11ext Snake map projections.',
         ],
@@ -10743,7 +10975,8 @@ Created in 2020 to support intermediate CRS "TPEN11-IRF" in the emulation of the
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria - Vienna city state.',
+            'extent_name' => 'Austria - Vienna',
+            'extent_description' => 'Austria - Vienna city state',
             'help' => 'Historic benchmark on the Schwedenbrücke over an artificial channel of River Danube (Donaukanal) with GHA height of 156.680m.
 ',
         ],
@@ -10754,7 +10987,8 @@ Created in 2020 to support intermediate CRS "TPEN11-IRF" in the emulation of the
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Saudi Arabia - onshore and offshore.',
+            'extent_name' => 'Saudi Arabia',
+            'extent_description' => 'Saudi Arabia - onshore and offshore',
             'help' => 'ITRF2014 at epoch 2017.00.
 Realized by 333 GNSS stations in Saudi Arabia aligned to ITRF2014 through core network of 46 stations adjusted to 15 IGS stations.',
         ],
@@ -10765,7 +10999,8 @@ Realized by 333 GNSS stations in Saudi Arabia aligned to ITRF2014 through core n
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Saudi Arabia - onshore.',
+            'extent_name' => 'Saudi Arabia - onshore',
+            'extent_description' => 'Saudi Arabia - onshore',
             'help' => 'Jeddah tide gauge bench mark TGBM-B height of 1.7446m at 2014.75.
 ',
         ],
@@ -10776,7 +11011,8 @@ Realized by 333 GNSS stations in Saudi Arabia aligned to ITRF2014 through core n
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Netherlands - offshore North Sea.',
+            'extent_name' => 'Netherlands - offshore',
+            'extent_description' => 'Netherlands - offshore North Sea',
             'help' => 'Surface defined through the nlgeo geoid model applied to ETRS89.
 Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.',
         ],
@@ -10787,7 +11023,8 @@ Coincides with NAP datum plane. Approximates physical mean sea surface to a few 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London.',
+            'extent_name' => 'UK - London to Sheffield',
+            'extent_description' => 'United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London',
             'help' => 'Defined through the application of the MML07 NTv2 transformation (code 9369) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the MML07 Snake map projection.',
         ],
@@ -10798,7 +11035,8 @@ Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2010.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Daily IGS combined operational solutions of GPS weeks 730 to 2092. IGb14 is aligned in origin, scale and orientation to IGS14 via a subset of 233 selected stations. As IGS14 is aligned to ITRF2014, IGb14 is also aligned to ITRF2014.
 Used for IGS products from GPS week 2106 (2020-05-17). Replaces IGS14. Compared to IGS14, IGb14 benefits from 5 more years of input data, a revised discontinuity list and 9 additional stations. For all practical purposes coincident with ITRF2014.',
         ],
@@ -10809,7 +11047,8 @@ Used for IGS products from GPS week 2106 (2020-05-17). Replaces IGS14. Compared 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness.',
+            'extent_name' => 'UK - Aberdeen to Inverness',
+            'extent_description' => 'United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness',
             'help' => 'Defined through the application of the AbInvA96_2000 NTv2 transformation (code 9386) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2020 to support intermediate CRS "AbInvA96_2020-IRF" in the emulation of the AbInvA96_2020 Snake map projection.',
         ],
@@ -10820,7 +11059,8 @@ Created in 2020 to support intermediate CRS "AbInvA96_2020-IRF" in the emulation
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.',
+            'extent_name' => 'Europe - EVRF2019',
+            'extent_description' => 'Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State',
             'help' => 'Fixed to geopotential values of 12 stable stations of the EVRF2007 solution. Re-adjusted in September 2020. Reduced to epoch 2000.0 for Nordic countries and Russia using the NKG2016LU_lev uplift model and for Switzerland using CHVRF15 velocities.
 Following EVRS conventions, EVRF2019 is a zero-tide surface. Replaces EVRF2007 (datum code 5215).',
         ],
@@ -10831,7 +11071,8 @@ Following EVRS conventions, EVRF2019 is a zero-tide surface. Replaces EVRF2007 (
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Balearic Islands - Mallorca onshore.',
+            'extent_name' => 'Spain - Balearic Islands - Mallorca',
+            'extent_description' => 'Spain - Balearic Islands - Mallorca onshore',
             'help' => 'Mean Sea Level at Palma de Mallorca harbour between April 1997 and December 2006.
 Orthometric heights.',
         ],
@@ -10842,7 +11083,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Balearic Islands - Menorca onshore.',
+            'extent_name' => 'Spain - Balearic Islands - Menorca',
+            'extent_description' => 'Spain - Balearic Islands - Menorca onshore',
             'help' => 'Mean Sea Level at Ciutadella harbour between June 2007 and June 2008.
 Orthometric heights.',
         ],
@@ -10853,7 +11095,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore.',
+            'extent_name' => 'Spain - Balearic Islands - Ibiza and Formentera',
+            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore',
             'help' => 'Mean Sea Level at Ibiza harbour between January 2003 and December 2005.
 Orthometric heights.',
         ],
@@ -10864,7 +11107,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - Lanzarote onshore.',
+            'extent_name' => 'Spain - Canary Islands - Lanzarote',
+            'extent_description' => 'Spain - Canary Islands - Lanzarote onshore',
             'help' => 'Mean Sea Level at Naos harbour, Arrecife, between 1994 and 1995.
 Orthometric heights.',
         ],
@@ -10875,7 +11119,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - Fuerteventura onshore.',
+            'extent_name' => 'Spain - Canary Islands - Fuerteventura',
+            'extent_description' => 'Spain - Canary Islands - Fuerteventura onshore',
             'help' => 'Mean Sea Level at Puerto del Rosario harbour between 1999-09-08 and 2000-12-31.
 Orthometric heights.',
         ],
@@ -10886,7 +11131,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - Gran Canaria onshore.',
+            'extent_name' => 'Spain - Canary Islands - Gran Canaria',
+            'extent_description' => 'Spain - Canary Islands - Gran Canaria onshore',
             'help' => 'Mean Sea Level at Las Palmas de Gran Canaria harbour between 1992 and 1997.
 Orthometric heights.',
         ],
@@ -10897,7 +11143,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - Tenerife onshore.',
+            'extent_name' => 'Spain - Canary Islands - Tenerife',
+            'extent_description' => 'Spain - Canary Islands - Tenerife onshore',
             'help' => 'Mean Sea Level at Santa Cruz de Tenerife harbour between 1960 and 1970.
 Orthometric heights.',
         ],
@@ -10908,7 +11155,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - La Gomera onshore.',
+            'extent_name' => 'Spain - Canary Islands - La Gomera',
+            'extent_description' => 'Spain - Canary Islands - La Gomera onshore',
             'help' => 'Mean Sea Level at San Sebastian de la Gomera harbour.
 Orthometric heights.',
         ],
@@ -10919,7 +11167,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - La Palma onshore.',
+            'extent_name' => 'Spain - Canary Islands - La Palma',
+            'extent_description' => 'Spain - Canary Islands - La Palma onshore',
             'help' => 'Mean Sea Level at Santa Cruz de la Palma harbour in 1997.
 Orthometric heights.',
         ],
@@ -10930,7 +11179,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - El Hierro onshore.',
+            'extent_name' => 'Spain - Canary Islands - El Hierro',
+            'extent_description' => 'Spain - Canary Islands - El Hierro onshore',
             'help' => 'Mean Sea Level at La Estaca harbour in 2000.
 Orthometric heights.',
         ],
@@ -10941,7 +11191,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Ceuta onshore.',
+            'extent_name' => 'Spain - Ceuta',
+            'extent_description' => 'Spain - Ceuta onshore',
             'help' => 'Mean Sea Level at Ceuta harbour between March 1944 and December 2006.
 Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.',
         ],
@@ -10952,7 +11203,8 @@ Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measure
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands onshore.',
+            'extent_name' => 'Spain - Canary Islands onshore',
+            'extent_description' => 'Spain - Canary Islands onshore',
             'help' => 'Pico de las Nieves mountain, Gran Canaria. The fundamental point is a different station to that for PN84.
 Replaced by PN84 only on western islands (El Hierro, La Gomera, La Palma and Tenerife). Both PN68 and PN84 replaced by REGCAN95.',
         ],
@@ -10963,7 +11215,8 @@ Replaced by PN84 only on western islands (El Hierro, La Gomera, La Palma and Ten
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State.',
+            'extent_name' => 'Europe - EVRF2019',
+            'extent_description' => 'Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State',
             'help' => 'Derived from 2020-09 zero-tide EVRF2019 adjustment by Cmean = Czero + (0.28841*sin^2(phi)) + (0.00195*sin^4(phi)) - 0.09722 - 0.08432 kgal.m. The offset of 0.08432 forces the mean-tide height to the zero-tide height at the EVRF2000 origin in Amsterdam.
 Mean-tide surface, describing how water flows. See EVRF2019 (datum code 1274) for zero-tide surface which is consistent with ETRS conventions.',
         ],
@@ -10974,7 +11227,8 @@ Mean-tide surface, describing how water flows. See EVRF2019 (datum code 1274) fo
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - offshore to boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.',
+            'extent_name' => 'Europe - British Isles - UK and Ireland onshore, UKCS',
+            'extent_description' => 'United Kingdom (UK) - offshore to boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore',
             'ensemble' => [
                 'urn:ogc:def:datum:EPSG::5130',
                 'urn:ogc:def:datum:EPSG::5131',
@@ -10996,7 +11250,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride.',
+            'extent_name' => 'UK - Glasgow to Kilmarnock',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride',
             'help' => 'Defined through the application of the GBK19 NTv2 transformation (code 9454) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the combined GBK19 Snake map projection.',
         ],
@@ -11007,7 +11262,8 @@ Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Netherlands - offshore North Sea.',
+            'extent_name' => 'Netherlands - offshore',
+            'extent_description' => 'Netherlands - offshore North Sea',
             'help' => 'Surface defined through the nllat hydroid model applied to ETRS89.
 The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.',
         ],
@@ -11018,7 +11274,8 @@ The lowest tide level which can be predicted to occur under average meteorologic
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2020.0,
-            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'extent_name' => 'Australia - GDA',
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore',
             'help' => 'ITRF2014 at epoch 2020.0.
 Densification of ITRF2014 in the Australian region.',
         ],
@@ -11029,7 +11286,8 @@ Densification of ITRF2014 in the Australian region.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'extent_name' => 'Australia - GDA',
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore',
             'help' => 'Realized by the Australian gravimetric quasi-geoid (AGQG).
 Normal heights. Extends gravity-related heights to offshore. See AHD (datum code 5111) for cadastral survey or local engineering survey including construction or mining.',
         ],
@@ -11040,7 +11298,8 @@ Normal heights. Extends gravity-related heights to offshore. See AHD (datum code
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2012.0,
-            'extent_description' => 'Indonesia - onshore and offshore.',
+            'extent_name' => 'Indonesia',
+            'extent_description' => 'Indonesia - onshore and offshore',
             'help' => 'ITRF2008 at epoch 2012.0.
 Semi-dynamic datum. Geometric element of geodetic control network (JKG). Replaces DGN95 and all older datums.',
         ],
@@ -11051,7 +11310,8 @@ Semi-dynamic datum. Geometric element of geodetic control network (JKG). Replace
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - onshore and offshore.',
+            'extent_name' => 'Indonesia',
+            'extent_description' => 'Indonesia - onshore and offshore',
             'help' => 'Defined by INAGeoid2020 gravimetric geoid model v1 applied to SRGI2013.
 Uses gravity data observed to 2019 fitted to control points on Java and Bali.',
         ],
@@ -11062,7 +11322,8 @@ Uses gravity data observed to 2019 fitted to control points on Java and Bali.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France and Italy - on or related to the rail route from Lyon to Turin.',
+            'extent_name' => 'Europe - Lyon-Turin',
+            'extent_description' => 'France and Italy - on or related to the rail route from Lyon to Turin',
             'help' => 'Densification of ETRS89 realised through network of 40 stations adjusted to 7 EUREF reference stations in ETRF2000@2002.0.
 ',
         ],
@@ -11073,7 +11334,8 @@ Uses gravity data observed to 2019 fitted to control points on Java and Bali.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Poland - onshore.',
+            'extent_name' => 'Poland - onshore',
+            'extent_description' => 'Poland - onshore',
             'help' => 'Mean sea level of Baltic at Kronstadt in 1833. Network adjusted in 1982.
 
 Uses Normal heights. Adopted in 1986.',
@@ -11085,7 +11347,8 @@ Uses Normal heights. Adopted in 1986.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Poland - onshore.',
+            'extent_name' => 'Poland - onshore',
+            'extent_description' => 'Poland - onshore',
             'help' => 'Origin: Mean North Sea Level at Amsterdam tide gauge. Normal heights obtained from adjustment of precise leveling campaigns conducted during 1998 - 2012 reduced to epoch 2008.00.
 
 Uses Normal heights.',
@@ -11097,7 +11360,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Estonia - onshore.',
+            'extent_name' => 'Estonia - onshore',
+            'extent_description' => 'Estonia - onshore',
             'help' => 'Estonian realisation of EVRF2007. Relevelling observed  2004-2013 and reduced to epoch 2000 using the NKG2005LU empirical land uplift model. EVRF2007 height of Poltsamaa fundamental bench mark (H=55.2114m) held fixed.
 Uses Normal heights.',
         ],
@@ -11108,7 +11372,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Lithuania - onshore.',
+            'extent_name' => 'Lithuania - onshore',
+            'extent_description' => 'Lithuania - onshore',
             'help' => 'Lithuanian realisation of EVRF2007. EVRF2007 heights of 10 points in Lithuania held fixed.
 Uses Normal heights.',
         ],
@@ -11119,7 +11384,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bulgaria - onshore.',
+            'extent_name' => 'Bulgaria - onshore',
+            'extent_description' => 'Bulgaria - onshore',
             'help' => 'Bulgarian realisation of EVRF2007. EVRF2007 heights of 58 points in Bulgaria held fixed.
 Uses Normal heights. Adopted as official Bulgarian height reference datum through decree 153 of 2010-07-29.',
         ],
@@ -11130,7 +11396,8 @@ Uses Normal heights. Adopted as official Bulgarian height reference datum throug
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Norway (offshore) and Svalbard and Jan Mayen (offshore).',
+            'extent_name' => 'Norway, Svalbard and Jan Mayen - offshore',
+            'extent_description' => 'Norway (offshore) and Svalbard and Jan Mayen (offshore)',
             'help' => 'LAT (sum of all harmonic constituents) with an added safety margin in areas where low water levels frequently deviate from LAT. The safety margin is 20 cm from Utsira to the Swedish border and 30 cm in the inner part of the Oslofjord (north of Drøbak).
 Prior to 2000-01-01 the definition of chart datum was Z0 = M2 + S2 + N2 + K2 + K1 + ½Sa plus safety margins (10 cm north of Hordaland, 20 cm in Hordaland, 30 cm from Rogaland to the Swedish border and 40 cm in the inner parts of the Oslofjord).',
         ],
@@ -11141,7 +11408,8 @@ Prior to 2000-01-01 the definition of chart datum was Z0 = M2 + S2 + N2 + K2 + K
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa - Tutuila island.',
+            'extent_name' => 'American Samoa - Tutuila island',
+            'extent_description' => 'American Samoa - Tutuila island',
             'help' => 'MSL at Pago Pago 2011–2016.
 Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 after the ASVD02 benchmarks were destroyed by earthquake activity.',
         ],
@@ -11152,7 +11420,8 @@ Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 afte
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bangladesh - onshore.',
+            'extent_name' => 'Bangladesh - onshore',
+            'extent_description' => 'Bangladesh - onshore',
             'help' => 'Mean Sea Level 1992-1994 at tidal station at Rangadia, Chittagong.
 ',
         ],
@@ -11163,7 +11432,8 @@ Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 afte
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2019.0,
-            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'extent_name' => 'Chile',
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez',
             'help' => 'Realized through 26 stations in the IGS (SIRGAS-CON) active reference station network in Chile.
 ',
         ],
@@ -11174,7 +11444,8 @@ Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 afte
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Poland - onshore and offshore.',
+            'extent_name' => 'Poland',
+            'extent_description' => 'Poland - onshore and offshore',
             'help' => 'Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network constrained to 35 EPN stations in ETRF2000@2011.0.
 Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th November 2012 on the state system of spatial reference system.
 
@@ -11187,7 +11458,8 @@ Adopted as official Polish reference frame from 2012-12-01 through Ordinance of 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - Sicily onshore.',
+            'extent_name' => 'Italy - Sicily onshore',
+            'extent_description' => 'Italy - Sicily onshore',
             'help' => 'Mean Sea Level at Catania in 1965.
 Orthometric heights.',
         ],
@@ -11198,7 +11470,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - Sardinia onshore.',
+            'extent_name' => 'Italy - Sardinia onshore',
+            'extent_description' => 'Italy - Sardinia onshore',
             'help' => 'Mean Sea Level at Cagliari 1955-1957.
 Orthometric heights.',
         ],
@@ -11209,6 +11482,7 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+            'extent_name' => 'UK - Tweedmouth to Aberdeen',
             'extent_description' => 'United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee. ',
             'help' => 'Defined through the application of the EOS21 NTv2 transformation (code 9740) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the EOS21 Snake map projection.',
@@ -11220,7 +11494,8 @@ Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
             'frame_reference_epoch' => 2016.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
 Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset.',
         ],
@@ -11231,7 +11506,8 @@ Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth.',
+            'extent_name' => 'UK - Newcastle to Ashington',
+            'extent_description' => 'United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth',
             'help' => 'Defined through the application of the ECML14_NB NTv2 transformation (code 9759) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2021 to support intermediate CRS "ECML14_NB-IRF" in the emulation of the ECML14_NB Snake map projection.',
         ],
@@ -11242,7 +11518,8 @@ Created in 2021 to support intermediate CRS "ECML14_NB-IRF" in the emulation of 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough.',
+            'extent_name' => 'UK - Oxford to Bedford',
+            'extent_description' => 'United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough',
             'help' => 'Defined through the application of the EWR2 NTv2 transformation (code 9763) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the EWR2 Snake map projection.',
         ],
@@ -11253,7 +11530,8 @@ Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the E
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'extent_name' => 'France',
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)',
             'help' => "Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network (RBF)\u{a0}from 2000 to 2011.
 RGF93 v2 is a realization of ETRS89. Replaces RGF93 v1 (datum code 6171) from 2010-06-18. Replaced by RGF93 v2b (datum code 1313) from 2021-01-05.",
         ],
@@ -11264,7 +11542,8 @@ RGF93 v2 is a realization of ETRS89. Replaces RGF93 v1 (datum code 6171) from 20
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'extent_name' => 'France',
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)',
             'help' => 'Aligned with ETRF2000 at epoch 2019.0. Derived through reprocessing of the French GNSS permanent network (RGP) in IGS14.
 RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93 v2 (datum code 1312) from 2021-01-05.',
         ],
@@ -11275,7 +11554,8 @@ RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln.',
+            'extent_name' => 'UK - Cardiff to Lincoln',
+            'extent_description' => 'United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln',
             'help' => 'Defined through the application of the MRH21 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the MRH21 Snake map projection.',
         ],
@@ -11286,7 +11566,8 @@ Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction.',
+            'extent_name' => 'UK - Manchester to Dore',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction',
             'help' => 'Defined through the application of the MOLDOR11 NTv2 transformation (code 9878) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of the MOLDOR11 Snake map projection.',
         ],
@@ -11297,7 +11578,8 @@ Created in 2021 to support intermediate CRS "MOLDOR11-IRF" in the emulation of t
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.',
+            'extent_name' => 'Germany - onshore',
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Surface defined by the EGG97 quasi-geoid model modified in GNTRANS to achieve absolute position optimised for use with DB_REF.
 Implemented in GNTRANS. The GNTRANS height surface is available only through the GNTRANS application. Replaced by the GNTRANS2016 height surface (datum code 1318).',
         ],
@@ -11308,7 +11590,8 @@ Implemented in GNTRANS. The GNTRANS height surface is available only through the
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull.',
+            'extent_name' => 'UK - Leeds to Hull',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull',
             'help' => 'Defined through the application of the HULLEE13 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of the HULLEE13 Snake map projection.',
         ],
@@ -11319,7 +11602,8 @@ Created in 2022 to support intermediate CRS "HULLEE13-IRF" in the emulation of t
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.',
+            'extent_name' => 'Germany - onshore',
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Surface defined by the GCG2016 quasi-geoid model applied to ETRS89.
 Approximates the national DHHN2016 levelling surface to around 1cm in lowlands and 2cm in high mountains, but unlike DHHN2016 it is defined by the GCG2016 geoid model. Like DHHN2016, uses Normal heights in the mean tide system.',
         ],
@@ -11330,7 +11614,8 @@ Approximates the national DHHN2016 levelling surface to around 1cm in lowlands a
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale.',
+            'extent_name' => 'UK - Newport to Ebbw Vale',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale',
             'help' => 'Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.',
         ],
@@ -11341,7 +11626,8 @@ Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of th
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness.',
+            'extent_name' => 'UK - Motherwell to Inverness',
+            'extent_description' => 'United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness',
             'help' => 'Defined through the application of the SCM22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the SCM22 Snake map projection.',
         ],
@@ -11352,7 +11638,8 @@ Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick.',
+            'extent_name' => 'UK - Inverness to Thurso',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick',
             'help' => 'Defined through the application of the FNL22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL22 Snake map projection.',
         ],
@@ -11363,7 +11650,8 @@ Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL2
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2015.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates between the ITRF2020 and ITRF2014.
 Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022.',
         ],
@@ -11374,7 +11662,8 @@ Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Arctic (Norway (Svalbard) onshore and offshore) - between 81°10\'N and 76°10\'N.',
+            'extent_name' => 'Arctic - 81°10\'N to 76°10\'N, 4°W to 38°E',
+            'extent_description' => 'Arctic (Norway (Svalbard) onshore and offshore) - between 81°10\'N and 76°10\'N',
             'help' => 'Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006 (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 - 0.8986m.
 ',
         ],
@@ -11385,7 +11674,8 @@ Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester.',
+            'extent_name' => 'UK - Manchester, Wigan and Chester',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester',
             'help' => 'Defined through the application of the MWC18 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS MWC18-IRF in the emulation of the MWC18 Snake map projection.',
         ],
@@ -11396,7 +11686,8 @@ Created in 2022 to support intermediate CRS MWC18-IRF in the emulation of the MW
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 2002.
 CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to glacial isostasy. This datum supports CGVD2013(CGG2013a) heights at epoch 2002.0. Other snapshots are at epochs 1997.0 and 2010.0.',
         ],
@@ -11407,7 +11698,8 @@ CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change w
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined by the equipotential surface W0 = 62,636,856.0 m^2s^-2, which by convention represents the coastal mean sea level for North America, realized through the Canadian gravimetric geoid 2013a applied at epoch 1997.0.
 CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change with time, primarily due to glacial isostasy. This datum supports CGVD2013(CGG2013a) heights at epoch 1997.0. Other snapshots are at epochs 2002.0 and 2010.0.',
         ],
@@ -11418,7 +11710,8 @@ CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change w
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.',
+            'extent_name' => 'Chile',
+            'extent_description' => 'Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez',
             'help' => 'Densification of SIRGAS-CON network in Chile, consisting of 97 stations forming the active CORS network (RGN) referenced to IGb2014 (ITRF2014) at epoch 2021.00. Passive stations used in previous realizations have been removed from this solution.
 Replaces SIRGAS-Chile realization 4 epoch 2016 from August 2021 due to significant tectonic deformation. 24 additional active CORS used in this realization compared to that of 2016.',
         ],
@@ -11429,7 +11722,8 @@ Replaces SIRGAS-Chile realization 4 epoch 2016 from August 2021 due to significa
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - onshore and offshore.',
+            'extent_name' => 'Indonesia',
+            'extent_description' => 'Indonesia - onshore and offshore',
             'help' => 'Defined by INAGeoid2020 gravimetric geoid model v2 applied to SRGI2013.
 Uses gravity data observed to 2021 fitted to tide gauge benchmarks across Indonesia.',
         ],
@@ -11440,7 +11734,8 @@ Uses gravity data observed to 2021 fitted to tide gauge benchmarks across Indone
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.',
+            'extent_name' => 'Colombia',
+            'extent_description' => 'Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank',
             'help' => 'Densification of ITRF2014 at epoch 2018.0 in Colombia. Bogota observatory coordinates: Latitude: 4°35\'46.33160"N, longitude: 74°04\'39.02797"W (of Greenwich).
 Active network referenced to ITRF2008@2011.76 and passive network referenced to ITRF94@1995.4 updated to ITRF2014 using IERS transformations EPSG:7790 and EPSG:8075 respectively then VEMOS2009 velocity model applied to bring coordinates to epoch 2018.0.',
         ],
@@ -11451,7 +11746,8 @@ Active network referenced to ITRF2008@2011.76 and passive network referenced to 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.',
+            'extent_name' => 'Europe - Ireland and UK offshore',
+            'extent_description' => 'Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore',
             'help' => 'MSL UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008. MSL UK & Ireland VORF08 is reduced to epoch 2000.0.
 OSGM05 model used.',
         ],
@@ -11462,7 +11758,8 @@ OSGM05 model used.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.',
+            'extent_name' => 'Europe - Ireland and UK offshore',
+            'extent_description' => 'Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore',
             'help' => 'CD UK & Ireland VORF08 is defined by the Vertical Offshore Reference Frame v2.11 2008.
 By international agreement, Chart Datum is defined as a level so low that the tide will not frequently fall below it. In the United Kingdom and Ireland, this level is normally the level of approximate Lowest Astronomical Tide.',
         ],
@@ -11473,7 +11770,8 @@ By international agreement, Chart Datum is defined as a level so low that the ti
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - Jutland and Funen - onshore.',
+            'extent_name' => 'Denmark - onshore Jutland and Funen',
+            'extent_description' => 'Denmark - Jutland and Funen - onshore',
             'help' => 'S34 fundamental point: Agri Bavnehøj, latitude 56°13\'48.217"N, longitude 2°02\'22.629"W of Copenhagen meridian where FE=FN=200000m. This reconstruction\'s origin in central Zealand was obtained from inversion of an older polynomial transformation to ED50.
 Created in 2022 to support artificial CRS S34J-IRF in the transformation of coordinates between the historic CRS S34J and ETRS89. The data is a reconstruction based on information synthesized in historical empirical transformations to ED50.',
         ],
@@ -11484,7 +11782,8 @@ Created in 2022 to support artificial CRS S34J-IRF in the transformation of coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2015.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'A subset of 332 stable, well-performing IGS stations from ITRF2020.
 Used for IGS products from GPS week 2238 (2022-11-27). Replaces IGb14. Compared to IGb14, IGS20 contains 98 new stations, mostly in previously sparsely covered areas, but with 25 IGb14 sites removed. For all practical purposes coincident with ITRF2020.',
         ],
@@ -11495,7 +11794,8 @@ Used for IGS products from GPS week 2238 (2022-11-27). Replaces IGb14. Compared 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli.',
+            'extent_name' => 'UK - Dovey Junction to Pwllheli',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli',
             'help' => 'Defined through the application of the DoPw22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS DoPw22-IRF in the emulation of the DoPw22 Snake map projection.',
         ],
@@ -11506,7 +11806,8 @@ Created in 2022 to support intermediate CRS DoPw22-IRF in the emulation of the D
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth.',
+            'extent_name' => 'UK - Shrewsbury to Aberystwyth',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth',
             'help' => 'Defined through the application of the ShAb07 NTv2 transformation (code 10186) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS ShAb07-IRF in the emulation of the ShAb07 Snake map projection.',
         ],
@@ -11517,7 +11818,8 @@ Created in 2022 to support intermediate CRS ShAb07-IRF in the emulation of the S
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead.',
+            'extent_name' => 'UK - Crewe to Holyhead',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead',
             'help' => 'Defined through the application of the CNH22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CNH22 Snake map projection.',
         ],
@@ -11528,7 +11830,8 @@ Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CN
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - Zealand and Lolland (onshore).',
+            'extent_name' => 'Denmark - onshore Zealand and Lolland',
+            'extent_description' => 'Denmark - Zealand and Lolland (onshore)',
             'help' => 'S34 fundamental point: Agri Bavnehøj, latitude 56°13\'48.217"N, longitude 2°02\'22.629"W of Copenhagen meridian where FE=FN=200000m. This reconstruction\'s origin in central Zealand was obtained from inversion of an older polynomial transformation to ED50.
 Created in 2022 to support intermediate CRS S34S-IRF in the transformation of coordinates between the historic CRS S34S and ETRS89. The data is a reconstruction based on information synthesized in historical empirical transformations to ED50.',
         ],
@@ -11539,7 +11842,8 @@ Created in 2022 to support intermediate CRS S34S-IRF in the transformation of co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury.',
+            'extent_name' => 'UK - Chester to Shrewsbury',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury',
             'help' => 'Defined through the application of the CWS13 NTv2 transformation (code 10197) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS CWS13-IRF in the emulation of the CWS13 Snake map projection.',
         ],
@@ -11550,7 +11854,8 @@ Created in 2022 to support intermediate CRS CWS13-IRF in the emulation of the CW
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Didcot to Banbury.',
+            'extent_name' => 'UK - Didcot to Banbury',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Didcot to Banbury',
             'help' => 'Defined through the application of the DIBA15 NTv2 transformation (code 10205) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS DIBA15-IRF in the emulation of the DIBA15 Snake map projection.',
         ],
@@ -11561,7 +11866,8 @@ Created in 2022 to support intermediate CRS DIBA15-IRF in the emulation of the D
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea.',
+            'extent_name' => 'UK - London to Swansea',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea',
             'help' => 'Defined through the application of the GWPBS22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS GWPBS22-IRF in the emulation of the GWPBS22 Snake map projection.',
         ],
@@ -11572,7 +11878,8 @@ Created in 2022 to support intermediate CRS GWPBS22-IRF in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys.',
+            'extent_name' => 'UK - Cardiff and the valleys',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys',
             'help' => 'Defined through the application of the GWWAB22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS GWWAB22-IRF in the emulation of the GWWAB22 Snake map projection.',
         ],
@@ -11583,7 +11890,8 @@ Created in 2022 to support intermediate CRS GWWAB22-IRF in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard.',
+            'extent_name' => 'UK - Swansea to Fishguard',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard',
             'help' => 'Defined through the application of the GWWWA22 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS GWWWA22-IRF in the emulation of the GWWWA22 Snake map projection.',
         ],
@@ -11594,7 +11902,8 @@ Created in 2022 to support intermediate CRS GWWWA22-IRF in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa.',
+            'extent_name' => 'UK - London to Leamington Spa',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa',
             'help' => 'Defined through the application of the MALS09 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS MALS09-IRF in the emulation of the MALS09 Snake map projection.',
         ],
@@ -11605,7 +11914,8 @@ Created in 2022 to support intermediate CRS MALS09-IRF in the emulation of the M
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Oxford to Worcester.',
+            'extent_name' => 'UK - Oxford to Worcester',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Oxford to Worcester',
             'help' => 'Defined through the application of the OxWo08 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS OxWo08-IRF in the emulation of the OxWo08 Snake map projection.',
         ],
@@ -11616,7 +11926,8 @@ Created in 2022 to support intermediate CRS OxWo08-IRF in the emulation of the O
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe.',
+            'extent_name' => 'UK - Shrewsbury to Crewe',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe',
             'help' => 'Defined through the application of the SYC20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SYC20 Snake map projection.',
         ],
@@ -11627,7 +11938,8 @@ Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SY
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - Bornholm onshore.',
+            'extent_name' => 'Denmark - onshore Bornholm',
+            'extent_description' => 'Denmark - Bornholm onshore',
             'help' => 'Pseudo origin south of Bornholm, obtained from inversion of an older transformation. The historical Danish System 45 was ad-hoc and not based on any formal datum and projection definitions.
 Created in 2022 to support intermediate CRS S45B-IRF in the transformation of coordinates between the historic CRS S45 and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
         ],
@@ -11638,7 +11950,8 @@ Created in 2022 to support intermediate CRS S45B-IRF in the transformation of co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - onshore Jutland, Funen, Zealand and Lolland.',
+            'extent_name' => 'Denmark - onshore Jutland, Funen, Zealand and Lolland',
+            'extent_description' => 'Denmark - onshore Jutland, Funen, Zealand and Lolland',
             'help' => 'The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
 Created in 2022 to support intermediate CRS GS-IRF in the transformation of coordinates between the historic Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
         ],
@@ -11649,7 +11962,8 @@ Created in 2022 to support intermediate CRS GS-IRF in the transformation of coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - Bornholm onshore.',
+            'extent_name' => 'Denmark - onshore Bornholm',
+            'extent_description' => 'Denmark - Bornholm onshore',
             'help' => 'The old Copenhagen Observatory at Rundetårn. Originally, longitudes were reckoned from the meridian through the observatory but in this reconstruction longitudes are referenced to the Greenwich meridian.
 Created in 2022 to support intermediate CRS GSB-IRF in the transformation of coordinates between the historic Generalstaben System and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
         ],
@@ -11660,7 +11974,8 @@ Created in 2022 to support intermediate CRS GSB-IRF in the transformation of coo
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - onshore - Copenhagen and surrounding area.',
+            'extent_name' => 'Denmark - Copenhagen',
+            'extent_description' => 'Denmark - onshore - Copenhagen and surrounding area',
             'help' => 'Arbitrary origin, apparently based on monument coordinates given in the Generalstabens System.
 Created in 2022 to support intermediate CRS KK-IRF in the transformation of coordinates between the historic Copenhagen Commune CRS and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations to ED50.',
         ],
@@ -11671,7 +11986,8 @@ Created in 2022 to support intermediate CRS KK-IRF in the transformation of coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border near the Kongea river).',
+            'extent_name' => 'Denmark - northern Schleswig',
+            'extent_description' => 'Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border near the Kongea river)',
             'help' => 'Origin of historic system is near the German village Ostenfeld.  This Danish reconstruction defined/derived through inversion of an older transformation.
 Created in 2022 to support intermediate CRS OS-IRF in the transformation of coordinates between the historic Ostenfeld system of Prussia and ETRS89. The data are reconstructions based on information synthesized in historical empirical transformations.',
         ],
@@ -11682,7 +11998,8 @@ Created in 2022 to support intermediate CRS OS-IRF in the transformation of coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone.',
+            'extent_name' => 'UK – Okehampton to Penstone',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone',
             'help' => 'Defined through the application of the SMITB20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the SMITB20 Snake map projection.',
         ],
@@ -11693,7 +12010,8 @@ Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance.',
+            'extent_name' => 'UK – Reading to Penzance',
+            'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance',
             'help' => 'Defined through the application of the RBEPP12 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS RBEPP12-IRF in the emulation of the RBEPP12 Snake map projection.',
         ],
@@ -11704,7 +12022,8 @@ Created in 2022 to support intermediate CRS RBEPP12-IRF in the emulation of the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore and offshore.',
+            'extent_name' => 'Germany',
+            'extent_description' => 'Germany - onshore and offshore',
             'help' => 'Realized by GNSS campaign 2008. Results were transformed from IGS05 epoch 2008.46 to ITRF2005 to ETRF2000, subsequently to ETRS89/DREF91 Realization 2002 (former German ETRS89 realization) by 3 rotation parameters.
 German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.',
         ],
@@ -11715,7 +12034,8 @@ German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 f
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore.',
+            'extent_name' => 'Algeria - onshore',
+            'extent_description' => 'Algeria - onshore',
             'help' => 'Fundamental benchmark attached to the tide gauge at basin of Algiers old port with defined height of 1.1168m.
 Orthometric heights.',
         ],
@@ -11726,7 +12046,8 @@ Orthometric heights.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore and offshore.',
+            'extent_name' => 'Algeria',
+            'extent_description' => 'Algeria - onshore and offshore',
             'help' => 'Aligned with IGS14 at epoch 2020.15.  RGSH2020 primary network of 22 stations throughout Algeria connected to 15 IGS stations.
 Internal accuracy of network is 6-8mm.',
         ],
@@ -11737,7 +12058,8 @@ Internal accuracy of network is 6-8mm.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Latvia - onshore and offshore.',
+            'extent_name' => 'Latvia',
+            'extent_description' => 'Latvia - onshore and offshore',
             'help' => 'Aligned with ETRF2014 at epoch 2020.28. Derived at 5 well-distributed base stations of the Latvian GNSS permanent network (LATREF) in IGb14, transformed to ETRF2014 using EUREF parameters (CT code 8366).
 LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661).',
         ],
@@ -11748,7 +12070,8 @@ LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.',
+            'extent_name' => 'New Caledonia',
+            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole',
             'help' => 'Aligned with ITRF2008 at epoch 2015.0.
 Replaces RGNC91-93.',
         ],
@@ -11759,7 +12082,8 @@ Replaces RGNC91-93.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bosnia and Herzegovina.',
+            'extent_name' => 'Bosnia and Herzegovina',
+            'extent_description' => 'Bosnia and Herzegovina',
             'help' => 'Densification of ETRF2000 in Bosnia and Herzegovina at epoch 2011.307.
 ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 stations of the GNSS active FBiHPOS network in conjunction with 17 stations of the Serbia SRPOS network.',
         ],
@@ -11770,7 +12094,8 @@ ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 station
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Not specific to any location or epoch.
 The average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period, usually determined from hourly height readings measured from a fixed predetermined reference level. Approximates geoid.',
         ],
@@ -11781,7 +12106,8 @@ The average height of the surface of the sea at a tide station for all stages of
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.',
+            'extent_name' => 'UK - Great Britain mainland onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides',
             'help' => 'Mean Sea Level at Newlyn between 1915 and 1921. Initially realised through 1921 and then 1956 levelling network adjustments. From 2002 redefined to be realised through OSGM geoid models.
 Orthometric heights.',
         ],
@@ -11792,7 +12118,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.',
+            'extent_name' => 'USA - CONUS - onshore',
+            'extent_description' => 'United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => '26 tide gauges in the US and Canada.
 Normal orthometric heights.',
         ],
@@ -11803,7 +12130,8 @@ Normal orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.',
+            'extent_name' => 'North America - Mexico and USA - onshore',
+            'extent_description' => 'Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => 'Mean water level 1970-1983 at Pointe-au-Père (Father\'s Point) and 1984-1988 at Rimouski, Quebec. Benchmark 1250-G = 6.273m.
 Helmert orthometric heights.',
         ],
@@ -11814,7 +12142,8 @@ Helmert orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - onshore.',
+            'extent_name' => 'China - onshore',
+            'extent_description' => 'China - onshore',
             'help' => '2 years tide readings at Qingdao.
 Replaced by Yellow Sea 1985 datum.',
         ],
@@ -11825,7 +12154,8 @@ Replaced by Yellow Sea 1985 datum.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.',
+            'extent_name' => 'Europe - FSU onshore',
+            'extent_description' => 'Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan',
             'help' => 'Datum: average water level at Kronstadt 1833. Network adjusted in 1974-78 as Uniform Precise Leveling Network of Eastern Europe (EPNN).
 Uses Normal heights. Adjustment also included former Czechoslovakia but was not adopted there, the 1957 adjustment being retained instead.',
         ],
@@ -11836,7 +12166,8 @@ Uses Normal heights. Adjustment also included former Czechoslovakia but was not 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore.',
+            'extent_name' => 'Asia - FSU - Caspian Sea',
+            'extent_description' => 'Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore',
             'help' => 'Defined as -28.0m Baltic datum
 ',
         ],
@@ -11847,7 +12178,8 @@ Uses Normal heights. Adjustment also included former Czechoslovakia but was not 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Netherlands - onshore and offshore.',
+            'extent_name' => 'Netherlands',
+            'extent_description' => 'Netherlands - onshore and offshore',
             'help' => 'Mean high tide at Amsterdam in 1684. Onshore NAP is defined by the published heights of benchmarks and since 2018 extended offshore defined by the application of the official transformation from ETRS89, RDNAPTRANS(TM).
 Orthometric heights. From 2018, use has been extended from Netherlands onshore to Netherlands onshore and offshore.',
         ],
@@ -11858,7 +12190,8 @@ Orthometric heights. From 2018, use has been extended from Netherlands onshore t
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Belgium - onshore.',
+            'extent_name' => 'Belgium - onshore',
+            'extent_description' => 'Belgium - onshore',
             'help' => 'Mean low water at Ostend 1855-78 transferred to benchmark GIKMN at Uccle.
 Realized through the second general levelling (DNG or TAW) 1981-1999.',
         ],
@@ -11869,7 +12202,8 @@ Realized through the second general levelling (DNG or TAW) 1981-1999.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore.',
+            'extent_name' => 'Australia Christmas and Cocos - onshore',
+            'extent_description' => 'Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore',
             'help' => 'Mainland: MSL 1966-68 at 30 gauges around coast. Tasmania: MSL 1972 at Hobart and Burnie. Christmas Island: MSL (details unspecified). Cocos and Keeling Islands: MSL (details unspecified).
 Normal-orthometric heights. Initially defined for mainland only, with independent height datums for Australian mainland, Tasmania, Christmas Island and Cocos and Keeling Islands. With introduction of AUSGeoid2020 in 2017, all considered to be AHD.',
         ],
@@ -11880,7 +12214,8 @@ Normal-orthometric heights. Initially defined for mainland only, with independen
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia - Tasmania mainland - onshore.',
+            'extent_name' => 'Australia - Tasmania mainland onshore',
+            'extent_description' => 'Australia - Tasmania mainland - onshore',
             'help' => 'MSL 1972 at Hobart and Burnie.
 ',
         ],
@@ -11891,7 +12226,8 @@ Normal-orthometric heights. Initially defined for mainland only, with independen
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Instantaneous water level uncorrected for tide.
 Not specific to any location or epoch.',
         ],
@@ -11902,7 +12238,8 @@ Not specific to any location or epoch.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N; Yukon.',
+            'extent_name' => 'Canada - CGVD28',
+            'extent_description' => 'Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N; Yukon',
             'help' => 'Based on the mean sea level determined from several tidal gauges located in strategic areas of the country.
 From November 2013 replaced by CGVD2013 (datum code 1127).',
         ],
@@ -11913,7 +12250,8 @@ From November 2013 replaced by CGVD2013 (datum code 1127).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greece - onshore.',
+            'extent_name' => 'Greece - onshore',
+            'extent_description' => 'Greece - onshore',
             'help' => 'MSL determined during 1986.
 ',
         ],
@@ -11924,7 +12262,8 @@ From November 2013 replaced by CGVD2013 (datum code 1127).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Finland - onshore.',
+            'extent_name' => 'Finland - onshore',
+            'extent_description' => 'Finland - onshore',
             'help' => 'MSL at Helsinki during 1960.
 Uses orthometric heights. Replaced by N2000 (datum code 1030).',
         ],
@@ -11935,7 +12274,8 @@ Uses orthometric heights. Replaced by N2000 (datum code 1030).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sweden - onshore.',
+            'extent_name' => 'Sweden - onshore',
+            'extent_description' => 'Sweden - onshore',
             'help' => 'Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements caused by isostatic rebound, heights are reduced to epoch 1970.0 using uplift values computed from repeated levelling observations.
 Realized through the second precise levelling network of 1951-1967. Uses Normal heights. Replaces RH00. Replaced in 2005 by RH2000.',
         ],
@@ -11946,7 +12286,8 @@ Realized through the second precise levelling network of 1951-1967. Uses Normal 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - mainland onshore.',
+            'extent_name' => 'France - mainland onshore',
+            'extent_description' => 'France - mainland onshore',
             'help' => 'Rivet number M.ac O-VIII on the Marseille tide gauge site, with the height fixed in 1897 at 1.661 metre above mean sea level between February 2nd 1885 and January 1st 1897.
 Orthometric heights.',
         ],
@@ -11957,7 +12298,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - mainland onshore.',
+            'extent_name' => 'France - mainland onshore',
+            'extent_description' => 'France - mainland onshore',
             'help' => 'Rivet number M.ac O-VIII on the Marseille tide gauge site, with the height fixed in 1897 at 1.661 metre above mean sea level between February 2nd 1885 and January 1st 1897.
 Uses Normal heights.',
         ],
@@ -11968,7 +12310,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - Corsica onshore.',
+            'extent_name' => 'France - Corsica onshore',
+            'extent_description' => 'France - Corsica onshore',
             'help' => 'Marker MM3 situated on the tide gauge site of Ajaccio. Height is 3.640 metre above mean sea level.
 Uses Normal heights. Replaces NGC (datum code 5189).',
         ],
@@ -11979,7 +12322,8 @@ Uses Normal heights. Replaces NGC (datum code 5189).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mozambique - onshore.',
+            'extent_name' => 'Mozambique - onshore',
+            'extent_description' => 'Mozambique - onshore',
             'help' => 'Mean sea level at Maputo.
 ',
         ],
@@ -11990,7 +12334,8 @@ Uses Normal heights. Replaces NGC (datum code 5189).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore mainland - Honshu, Shikoku, Kyushu.',
+            'extent_name' => 'Japan - onshore - Honshu, Shikoku, Kyushu',
+            'extent_description' => 'Japan - onshore mainland - Honshu, Shikoku, Kyushu',
             'help' => '24.4140 metres above mean sea level Tokyo Bay.
 Normal-orthometric heights. Replaces JSLD49. Replaced by JGD2000 (vertical) (datum code 1130) from April 2002.',
         ],
@@ -12001,7 +12346,8 @@ Normal-orthometric heights. Replaces JSLD49. Replaced by JGD2000 (vertical) (dat
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.',
+            'extent_name' => 'Oman - onshore',
+            'extent_description' => 'Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands',
             'help' => '
 Misclosure between Muscat and Salalah less than .5 meters with differences from of up to 5 meters from old Fahud Datum. The PHD93 adjustment was initially known as the Spine. Replaces Fahud Vertical Datum (code 5124) from 1993.',
         ],
@@ -12012,7 +12358,8 @@ Misclosure between Muscat and Salalah less than .5 meters with differences from 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Oman - mainland onshore.',
+            'extent_name' => 'Oman - mainland',
+            'extent_description' => 'Oman - mainland onshore',
             'help' => 'Single MSL determination at Mina Al Fahal.
 Based on reciprocal trigonometric heighting. Replaced by PHD93 Datum (code 5123) in 1993.',
         ],
@@ -12023,7 +12370,8 @@ Based on reciprocal trigonometric heighting. Replaced by PHD93 Datum (code 5123)
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cambodia - mainland onshore; Vietnam - mainland onshore.',
+            'extent_name' => 'Asia - Cambodia and Vietnam - mainland',
+            'extent_description' => 'Cambodia - mainland onshore; Vietnam - mainland onshore',
             'help' => '
 In Vietnam replaced by Hon Dau in 1992.',
         ],
@@ -12034,7 +12382,8 @@ In Vietnam replaced by Hon Dau in 1992.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Vietnam - mainland onshore.',
+            'extent_name' => 'Vietnam - mainland',
+            'extent_description' => 'Vietnam - mainland onshore',
             'help' => '
 Replaces Ha Tien in Vietnam.',
         ],
@@ -12045,7 +12394,8 @@ Replaces Ha Tien in Vietnam.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Origin at Repere Pierre du Niton (RPN) defined as 373.6 metres above msl. This value derived from msl at Marseille in 1897 through the French Lallemand network.
 Levelling observations not corrected for gravity field. For scientific purposes, replaced by LHHN95.',
         ],
@@ -12056,7 +12406,8 @@ Levelling observations not corrected for gravity field. For scientific purposes,
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Origin at Repere Pierre du Niton (RPN) defined as 373.6 metres above msl. This value derived from msl at Marseille in 1897 through the French Lallemand network.
 Orthometric heights. For scientific purposes only, replaces LN02.',
         ],
@@ -12067,7 +12418,8 @@ Orthometric heights. For scientific purposes only, replaces LN02.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.',
+            'extent_name' => 'Europe - EVRF2000',
+            'extent_description' => 'Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State',
             'help' => 'Height at Normaal Amsterdams Peil (NAP) is zero, defined through height at UELN bench mark 13600 (52°22\'53"N 4°54\'34"E) of 0.71599m. Datum at NAP is mean high tide in 1684.
 Realized by geopotential numbers and Normal heights of the United European Levelling Network. Replaced by EVRF2007 (datum code 5215).',
         ],
@@ -12078,7 +12430,8 @@ Realized by geopotential numbers and Normal heights of the United European Level
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Mean sea level between January 1960 and December 1969. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights.',
         ],
@@ -12089,7 +12442,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'UK - Northern Ireland - onshore',
+            'extent_description' => 'United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Mean sea level between 1951 and 1956 at Clarendon Dock, Belfast. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights. Malin Head (datum code 5130) used for 1:50,000 and smaller mapping.',
         ],
@@ -12100,7 +12454,8 @@ Orthometric heights. Malin Head (datum code 5130) used for 1:50,000 and smaller 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - onshore.',
+            'extent_name' => 'Denmark - onshore',
+            'extent_description' => 'Denmark - onshore',
             'help' => 'Mean Sea Level at 10 gauges.
 Orthometric heights.',
         ],
@@ -12111,7 +12466,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Azerbaijan - Caspian offshore and onshore Sangachal terminal.',
+            'extent_name' => 'Azerbaijan - offshore and Sangachal',
+            'extent_description' => 'Azerbaijan - Caspian offshore and onshore Sangachal terminal',
             'help' => 'Average level of Caspian Sea at the Oil Rocks tide gauge June-September 1995.
 AIOC 1995 datum is 1.7m above Caspian datum and 26.3m below Baltic datum.',
         ],
@@ -12122,7 +12478,8 @@ AIOC 1995 datum is 1.7m above Caspian datum and 26.3m below Baltic datum.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Georgia - onshore and offshore.',
+            'extent_name' => 'Georgia',
+            'extent_description' => 'Georgia - onshore and offshore',
             'help' => '
 Black Sea datum is 0.4m below Baltic datum.',
         ],
@@ -12133,7 +12490,8 @@ Black Sea datum is 0.4m below Baltic datum.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Hong Kong - onshore.',
+            'extent_name' => 'China - Hong Kong - onshore',
+            'extent_description' => 'China - Hong Kong - onshore',
             'help' => '1.23m below the mean of 19 years (1965-83) observations of tide levels at North Point, Victoria Harbour.
 ',
         ],
@@ -12144,7 +12502,8 @@ Black Sea datum is 0.4m below Baltic datum.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Hong Kong - offshore.',
+            'extent_name' => 'China - Hong Kong - offshore',
+            'extent_description' => 'China - Hong Kong - offshore',
             'help' => 'Approximates to Lowest Astronomic Tide level (LAT).
 Chart datum is 0.15 metres below Hong Kong Principal Datum (code 5135) and 1.38m below MSL at Quarry Bay.',
         ],
@@ -12155,7 +12514,8 @@ Chart datum is 0.15 metres below Hong Kong Principal Datum (code 5135) and 1.38m
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - onshore.',
+            'extent_name' => 'China - onshore',
+            'extent_description' => 'China - onshore',
             'help' => '20 years tide readings at Qingdao.
 Replaces Yellow Sea 1956 datum.',
         ],
@@ -12166,7 +12526,8 @@ Replaces Yellow Sea 1956 datum.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.',
+            'extent_name' => 'UK - Orkney Islands onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore',
             'help' => 'Connected to Newlyn datum by triangulation from the British mainland. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Considered as separate from Newlyn because the accuracy of the trigonometric connection across the Pentland Firth does not meet geodetic levelling specifications. Orthometric heights.',
         ],
@@ -12177,7 +12538,8 @@ Considered as separate from Newlyn because the accuracy of the trigonometric con
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore.',
+            'extent_name' => 'UK - Fair Isle onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore',
             'help' => '
 Orthometric heights.',
         ],
@@ -12188,7 +12550,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.',
+            'extent_name' => 'UK - Shetland Islands onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore',
             'help' => 'Mean Sea Level at Lerwick 1979 correlated to pre-1900. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights.',
         ],
@@ -12199,7 +12562,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Foula onshore.',
+            'extent_name' => 'UK - Foula onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Foula onshore',
             'help' => '
 Orthometric heights.',
         ],
@@ -12210,7 +12574,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore.',
+            'extent_name' => 'UK - Sule Skerry onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore',
             'help' => '
 Orthometric heights.',
         ],
@@ -12221,7 +12586,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - North Rona onshore.',
+            'extent_name' => 'UK - North Rona onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - North Rona onshore',
             'help' => '
 Orthometric heights.',
         ],
@@ -12232,7 +12598,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.',
+            'extent_name' => 'UK - Outer Hebrides onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore',
             'help' => 'Mean Sea Level at Stornoway 1977 correlated to pre-1900. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights.',
         ],
@@ -12243,7 +12610,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore.',
+            'extent_name' => 'UK - St. Kilda onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore',
             'help' => '
 Orthometric heights.',
         ],
@@ -12254,7 +12622,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore.',
+            'extent_name' => 'UK - Flannan Isles onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore',
             'help' => '
 Orthometric heights.',
         ],
@@ -12265,7 +12634,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.',
+            'extent_name' => 'UK - Scilly Isles onshore',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore',
             'help' => 'Mean Sea Level at St. Marys 1887. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights.',
         ],
@@ -12276,7 +12646,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Isle of Man - onshore.',
+            'extent_name' => 'Isle of Man - onshore',
+            'extent_description' => 'Isle of Man - onshore',
             'help' => 'Mean Sea Level at Douglas 1865. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights.',
         ],
@@ -12287,7 +12658,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq.',
+            'extent_name' => 'Asia - Middle East -SE Iraq and SW Iran',
+            'extent_description' => 'Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq',
             'help' => '
 Established by Hunting Surveys for IPC. In Iran replaced by Bandar Abbas (code 5150). At time of record creation NIOC data in Ahwaz area still usually referenced to Fao. In Iraq replaced by Fao 1979 (code 1028).',
         ],
@@ -12298,7 +12670,8 @@ Established by Hunting Surveys for IPC. In Iran replaced by Bandar Abbas (code 5
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iran - onshore.',
+            'extent_name' => 'Iran - onshore',
+            'extent_description' => 'Iran - onshore',
             'help' => 'Average sea level at Bandar Abbas 1995-2001.
 Replaces Fao (datum code 5149) in Iran.',
         ],
@@ -12309,7 +12682,8 @@ Replaces Fao (datum code 5149) in Iran.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Grande Terre.',
+            'extent_name' => 'New Caledonia - Grande Terre',
+            'extent_description' => 'New Caledonia - Grande Terre',
             'help' => 'Rivet AB01 established by SHOM (Service Hydrographique de la Marine)  in 1937 on the Quai des Volontaires in Noumea. Height i: 1.885 metre above mean sea level.
 Orthometric heights.',
         ],
@@ -12320,7 +12694,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Low water mark of the spring tide on the 8 April 1837 at Poolbeg Lighthouse, Dublin.
 Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of Ireland. Replaced by Belfast Lough and Malin Head (datum codes 5130-31).',
         ],
@@ -12331,7 +12706,8 @@ Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Guiana - onshore.',
+            'extent_name' => 'French Guiana - onshore',
+            'extent_description' => 'French Guiana - onshore',
             'help' => 'Mean sea level 1936 at Cayenne. Origin = marker BM35 on stone on St Francois battery, Cayenne, with defined elevation of 1.64m above msl. NGG1977 height 0.00m is 1.96m above sounding datum defined at Cayenne in 1936 by SHM.
 Orthometric heights.',
         ],
@@ -12342,7 +12718,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Martinique - onshore.',
+            'extent_name' => 'Martinique - onshore',
+            'extent_description' => 'Martinique - onshore',
             'help' => 'Mean sea level 1939 at Fort de France. Origin = marker Nbc2 on rebuilt quay wall with defined elevation of 1.38m above msl. Martinique 1987 height 0.00m is 0.56m above SHOM sounding datum.
 Orthometric heights. Replaces Martinique 1955 (datum code 5192).',
         ],
@@ -12353,7 +12730,8 @@ Orthometric heights. Replaces Martinique 1955 (datum code 5192).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - Basse-Terre and Grande-Terre.',
+            'extent_name' => 'Guadeloupe - Grande-Terre and Basse-Terre - onshore',
+            'extent_description' => 'Guadeloupe - onshore - Basse-Terre and Grande-Terre',
             'help' => 'Mean sea level July 1947 to June 1948 at Pointe-Fouillole (Pointe-à-Pitre harbour). Origin = marker GO-7 (formerly AO\'-5) with defined height of 2.67m above msl adopted from 1951 value. Guadeloupe 1988 height 0.00m is 0.46m above 1984 sounding datum.
 Orthometric heights. Replaces Guadeloupe 1951 (datum code 5193).',
         ],
@@ -12364,7 +12742,8 @@ Orthometric heights. Replaces Guadeloupe 1951 (datum code 5193).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Reunion - onshore.',
+            'extent_name' => 'Reunion - onshore',
+            'extent_description' => 'Reunion - onshore',
             'help' => 'Mean sea level during part of November 1949 at port of Saint-Pierre. Origin = marker AB-100 with defined elevation of 13.808m above msl.
 Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains height from 1958 adjustment.',
         ],
@@ -12375,7 +12754,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Auckland vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - Auckland vcrs',
+            'extent_description' => 'New Zealand - North Island - Auckland vertical CRS area',
             'help' => 'MSL at Auckland harbour 1909-1923.
 ',
         ],
@@ -12386,7 +12766,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - South Island - Bluff vertical CRS area.',
+            'extent_name' => 'New Zealand - South Island - Bluff vcrs',
+            'extent_description' => 'New Zealand - South Island - Bluff vertical CRS area',
             'help' => 'MSL at Invercargill harbour over 8 years between 1918 and 1934.
 ',
         ],
@@ -12397,7 +12778,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area.',
+            'extent_name' => 'New Zealand - South Island - Dunedin vcrs',
+            'extent_description' => 'New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area',
             'help' => 'MSL at Dunedin harbour 1918-1937.
 ',
         ],
@@ -12408,7 +12790,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Gisborne vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - Gisborne vcrs',
+            'extent_description' => 'New Zealand - North Island - Gisborne vertical CRS area',
             'help' => 'MSL at Gisborne harbour 1926.
 ',
         ],
@@ -12419,7 +12802,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - South Island - between approximately 41°20\'S and 45°S - Lyttleton vertical CRS area.',
+            'extent_name' => 'New Zealand - South Island - Lyttleton vcrs',
+            'extent_description' => 'New Zealand - South Island - between approximately 41°20\'S and 45°S - Lyttleton vertical CRS area',
             'help' => 'MSL at Lyttelton harbour over 9 years between 1918 and 1933.
 ',
         ],
@@ -12430,7 +12814,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Moturiki vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - Moturiki vcrs',
+            'extent_description' => 'New Zealand - North Island - Moturiki vertical CRS area',
             'help' => 'MSL at Moturiki Island February 1949 to December 1952.
 ',
         ],
@@ -12441,7 +12826,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area.',
+            'extent_name' => 'New Zealand - North Island - Hawkes Bay mc Napier vcrs',
+            'extent_description' => 'New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area',
             'help' => 'MSL at Napier harbour. Period of derivation unknown.
 ',
         ],
@@ -12452,7 +12838,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - South Island - north of approximately 42°20\'S - Nelson vertical CRS area.',
+            'extent_name' => 'New Zealand - South Island - Nelson vcrs',
+            'extent_description' => 'New Zealand - South Island - north of approximately 42°20\'S - Nelson vertical CRS area',
             'help' => 'MSL at Nelson harbour 1939-1942.
 ',
         ],
@@ -12463,7 +12850,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - One Tree Point vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - One Tree vcrs',
+            'extent_description' => 'New Zealand - North Island - One Tree Point vertical CRS area',
             'help' => 'MSL at Whangarei harbour 1960-1963.
 ',
         ],
@@ -12474,7 +12862,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Tararu vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - Tararu vcrs',
+            'extent_description' => 'New Zealand - North Island - Tararu vertical CRS area',
             'help' => 'MSL at Tararu Point 1922-1923.
 ',
         ],
@@ -12485,7 +12874,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Taranaki vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - Taranaki vcrs',
+            'extent_description' => 'New Zealand - North Island - Taranaki vertical CRS area',
             'help' => 'MSL at Taranaki harbour 1918-1921.
 ',
         ],
@@ -12496,7 +12886,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island - Wellington vertical CRS area.',
+            'extent_name' => 'New Zealand - North Island - Wellington vcrs',
+            'extent_description' => 'New Zealand - North Island - Wellington vertical CRS area',
             'help' => 'MSL at Wellington harbour 1909-1946.
 ',
         ],
@@ -12507,7 +12898,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - Chatham Island - onshore.',
+            'extent_name' => 'New Zealand - Chatham Island onshore',
+            'extent_description' => 'New Zealand - Chatham Island - onshore',
             'help' => 'MSL at Waitangi harbour collected in 1959.
 ',
         ],
@@ -12518,7 +12910,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - Stewart Island.',
+            'extent_name' => 'New Zealand - Stewart Island',
+            'extent_description' => 'New Zealand - Stewart Island',
             'help' => 'MSL at 3-5 high and low tides at two different locations.
 ',
         ],
@@ -12529,7 +12922,8 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order 360 applied to the WGS 84 ellipsoid.
 Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).',
         ],
@@ -12540,7 +12934,8 @@ Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 10
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Luxembourg.',
+            'extent_name' => 'Luxembourg',
+            'extent_description' => 'Luxembourg',
             'help' => 'Reference point Wemperhardt defined as 528.030m above Normaal Amsterdams Peil (NAP). Datum at NAP is mean high tide in 1684. Network adjusted in 1995.
 Pseudo-orthometric heights.',
         ],
@@ -12551,7 +12946,8 @@ Pseudo-orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Türkiye (Turkey) - onshore.',
+            'extent_name' => 'Turkey - onshore',
+            'extent_description' => 'Türkiye (Turkey) - onshore',
             'help' => 'Mean sea Level at Antalya 1936-71.
 Orthometric heights.',
         ],
@@ -12562,7 +12958,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Norway - onshore.',
+            'extent_name' => 'Norway - onshore',
+            'extent_description' => 'Norway - onshore',
             'help' => 'MSL defined by regression at 7 gauges with between 17 and 67 years observations.
 Includes initial NN1954 system and NNN1957 system. Former name retained. Normal-orthometric heights. Replaced by NN2000.',
         ],
@@ -12573,7 +12970,8 @@ Includes initial NN1954 system and NNN1957 system. Former name retained. Normal-
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Albania - onshore.',
+            'extent_name' => 'Albania - onshore',
+            'extent_description' => 'Albania - onshore',
             'help' => 'Mean Sea Level at Durres.
 Normal-orthometric heights.',
         ],
@@ -12584,7 +12982,8 @@ Normal-orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria.',
+            'extent_name' => 'Austria',
+            'extent_description' => 'Austria',
             'help' => 'Reference point Hutbiegl defined relative to mean sea level at Trieste in 1875.
 Normal-orthometric heights.',
         ],
@@ -12595,7 +12994,8 @@ Normal-orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Slovenia - onshore.',
+            'extent_name' => 'Slovenia - onshore',
+            'extent_description' => 'Slovenia - onshore',
             'help' => 'Reference point Ruse defined relative to mean sea level at Trieste in 1875.
 Normal-orthometric heights. Promulgated through the National Vertical Network adjustment of 1999.',
         ],
@@ -12606,7 +13006,8 @@ Normal-orthometric heights. Promulgated through the National Vertical Network ad
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - mainland - onshore.',
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
             'help' => 'Mean Sea Level at Cascais 1938.
 Orthometric heights.',
         ],
@@ -12617,7 +13018,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Romania - onshore.',
+            'extent_name' => 'Romania - onshore',
+            'extent_description' => 'Romania - onshore',
             'help' => 'Mean Sea Level at Constanta.
 Normal-orthometric heights.',
         ],
@@ -12628,7 +13030,8 @@ Normal-orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Gibraltar - onshore; Spain - mainland onshore.',
+            'extent_name' => 'Spain and Gibraltar - onshore',
+            'extent_description' => 'Gibraltar - onshore; Spain - mainland onshore',
             'help' => 'Mean Sea Level at Alicante between 1870 and 1872.
 Orthometric heights.',
         ],
@@ -12639,7 +13042,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen.',
+            'extent_name' => 'Germany - onshore',
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Network adjusted in 1992. Geopotential number at reference point Wallenhorst defined as value from the UELN-73/86 adjustment. Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684.
 Replaces DHHN85 in West Germany and SNN76 in East Germany. Uses Normal heights.',
         ],
@@ -12650,7 +13054,8 @@ Replaces DHHN85 in West Germany and SNN76 in East Germany. Uses Normal heights.'
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.',
+            'extent_name' => 'Germany - West Germany all states',
+            'extent_description' => 'Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein',
             'help' => 'Network adjusted in 1985. Height of reference point Wallenhorst defined as value from 1928 adjustment. Datum at Normaal Amsterdams Peil (NAP) is mean high tide in 1684.
 Replaced by DHHN92. Uses Normal-orthometric heights.',
         ],
@@ -12661,7 +13066,8 @@ Replaced by DHHN92. Uses Normal-orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen.',
+            'extent_name' => 'Germany - East Germany all states',
+            'extent_description' => 'Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen',
             'help' => 'Network adjusted in 1976. Height at reference point Hoppegarten defined as 1957 value from the UPLN adjustment. Datum at Kronstadt is mean sea level of Baltic in 1833.
 Introduced in 1979. Uses Normal heights. Replaced by DHHN92.',
         ],
@@ -12672,7 +13078,8 @@ Introduced in 1979. Uses Normal heights. Replaced by DHHN92.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bulgaria - onshore.',
+            'extent_name' => 'Bulgaria - onshore',
+            'extent_description' => 'Bulgaria - onshore',
             'help' => 'Network adjusted in 1982. Height at reference point Varna defined as 1958 value from the UPLN adjustment. Datum at Kronstadt is mean sea level of Baltic in 1833.
 Uses Normal heights.',
         ],
@@ -12683,7 +13090,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Hungary.',
+            'extent_name' => 'Hungary',
+            'extent_description' => 'Hungary',
             'help' => '
 Uses Normal heights.',
         ],
@@ -12694,7 +13102,8 @@ Uses Normal heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kuwait - onshore.',
+            'extent_name' => 'Kuwait - onshore',
+            'extent_description' => 'Kuwait - onshore',
             'help' => 'Mean Low Low Water (MLLW) at Kuwait City.
 Approximately 1.03m below MSL.',
         ],
@@ -12705,7 +13114,8 @@ Approximately 1.03m below MSL.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kuwait - onshore.',
+            'extent_name' => 'Kuwait - onshore',
+            'extent_description' => 'Kuwait - onshore',
             'help' => '
 Approximately 3.22m above MSL.',
         ],
@@ -12716,7 +13126,8 @@ Approximately 3.22m above MSL.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kuwait - onshore.',
+            'extent_name' => 'Kuwait - onshore',
+            'extent_description' => 'Kuwait - onshore',
             'help' => '
 Approximately 1.52m below MSL. Created for the construction of the Mina al Ahmadi refinery.',
         ],
@@ -12727,7 +13138,8 @@ Approximately 1.52m below MSL. Created for the construction of the Mina al Ahmad
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - Corsica onshore.',
+            'extent_name' => 'France - Corsica onshore',
+            'extent_description' => 'France - Corsica onshore',
             'help' => 'Mean sea level at Ajaccio between 1912 and 1937.
 Replaced by IGN78 Corsica (datum 5120).',
         ],
@@ -12738,7 +13150,8 @@ Replaced by IGN78 Corsica (datum 5120).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Pierre and Miquelon - onshore.',
+            'extent_name' => 'St Pierre and Miquelon - onshore',
+            'extent_description' => 'St Pierre and Miquelon - onshore',
             'help' => 'Marker near tide gauge at port of Saint Pierre. Height is 1.26 metres above zero of tide gauge.
 ',
         ],
@@ -12749,7 +13162,8 @@ Replaced by IGN78 Corsica (datum 5120).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mayotte - onshore.',
+            'extent_name' => 'Mayotte - onshore',
+            'extent_description' => 'Mayotte - onshore',
             'help' => 'IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge. SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
 Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou (Grand-Terre) in 1979.',
         ],
@@ -12760,7 +13174,8 @@ Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eas
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Martinique - onshore.',
+            'extent_name' => 'Martinique - onshore',
+            'extent_description' => 'Martinique - onshore',
             'help' => 'Mean sea level at Fort de France 1939. Marker DO-4-II on quay wall with elevation of 1.38m above msl.
 Orthometric heights. Replaced by Martinique 1987 (datum code 5154).',
         ],
@@ -12771,7 +13186,8 @@ Orthometric heights. Replaced by Martinique 1987 (datum code 5154).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - Basse-Terre and Grande-Terre.',
+            'extent_name' => 'Guadeloupe - Grande-Terre and Basse-Terre - onshore',
+            'extent_description' => 'Guadeloupe - onshore - Basse-Terre and Grande-Terre',
             'help' => 'Mean sea level July 1947 to June 1948 at Pointe-Fouillole (Pointe-à-Pitre harbour). Origin = marker AO\'-12 with height of 1.917m above msl.
 Orthometric heights. Replaced by Guadeloupe 1988 (datum code 5155). Guadeloupe 1951 height 0.00m is 0.629m above 1947-48 sounding datum.',
         ],
@@ -12782,7 +13198,8 @@ Orthometric heights. Replaced by Guadeloupe 1988 (datum code 5155). Guadeloupe 1
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Nigeria - onshore.',
+            'extent_name' => 'Nigeria - onshore',
+            'extent_description' => 'Nigeria - onshore',
             'help' => 'Mean sea level at Lagos, 1912-1928.
 ',
         ],
@@ -12793,7 +13210,8 @@ Orthometric heights. Replaced by Guadeloupe 1988 (datum code 5155). Guadeloupe 1
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti.',
+            'extent_name' => 'French Polynesia - Society Islands - main islands',
+            'extent_description' => 'French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti',
             'help' => '
 The collection of heterogeneous levelling networks throughout the Society Islands of French Polynesia.',
         ],
@@ -12804,7 +13222,8 @@ The collection of heterogeneous levelling networks throughout the Society Island
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Tahiti.',
+            'extent_name' => 'French Polynesia - Society Islands - Tahiti',
+            'extent_description' => 'French Polynesia - Society Islands - Tahiti',
             'help' => 'Fundamental benchmark: RN501
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12815,7 +13234,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Moorea.',
+            'extent_name' => 'French Polynesia - Society Islands - Moorea',
+            'extent_description' => 'French Polynesia - Society Islands - Moorea',
             'help' => 'Fundamental benchmark: RN225
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12826,7 +13246,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Raiatea.',
+            'extent_name' => 'French Polynesia - Society Islands - Raiatea',
+            'extent_description' => 'French Polynesia - Society Islands - Raiatea',
             'help' => 'Fundamental benchmark: RN1
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12837,7 +13258,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Maupiti.',
+            'extent_name' => 'French Polynesia - Society Islands - Maupiti',
+            'extent_description' => 'French Polynesia - Society Islands - Maupiti',
             'help' => 'Fundamental benchmark: RN11
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12848,7 +13270,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Huahine.',
+            'extent_name' => 'French Polynesia - Society Islands - Huahine',
+            'extent_description' => 'French Polynesia - Society Islands - Huahine',
             'help' => 'Fundamental benchmark: SHOM B3
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12859,7 +13282,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Tahaa.',
+            'extent_name' => 'French Polynesia - Society Islands - Tahaa',
+            'extent_description' => 'French Polynesia - Society Islands - Tahaa',
             'help' => 'Fundamental benchmark: RN16
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12870,7 +13294,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Bora Bora.',
+            'extent_name' => 'French Polynesia - Society Islands - Bora Bora',
+            'extent_description' => 'French Polynesia - Society Islands - Bora Bora',
             'help' => 'Fundamental benchmark: Vaitape quay SHOM benchmark B.
 Included as part of NGPF - see datum code 5195.',
         ],
@@ -12881,7 +13306,8 @@ Included as part of NGPF - see datum code 5195.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order 180 applied to the WGS 84 ellipsoid.
 Replaced by EGM96 geoid (datum code 5171).',
         ],
@@ -12892,7 +13318,8 @@ Replaced by EGM96 geoid (datum code 5171).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.',
+            'extent_name' => 'North America - Great Lakes basin and St Lawrence Seaway',
+            'extent_description' => 'Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway',
             'help' => 'Mean water level 1941-1956 at Pointe-au-Père (Father\'s Point), Quebec. Benchmark 1248-G = 3.794m.
 Dynamic heights. Adopted in 1962. Replaced by IGLD 1985 in January 1992.',
         ],
@@ -12903,7 +13330,8 @@ Dynamic heights. Adopted in 1962. Replaced by IGLD 1985 in January 1992.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway.',
+            'extent_name' => 'North America - Great Lakes basin and St Lawrence Seaway',
+            'extent_description' => 'Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway',
             'help' => 'Mean water level 1970-1983 at Pointe-au-Père (Father\'s Point) and 1984-1988 at Rimouski, Quebec. Benchmark 1250-G = 6.273m.
 Dynamic heights. Replaces IGLD 1955 from January 1992.',
         ],
@@ -12914,7 +13342,8 @@ Dynamic heights. Replaces IGLD 1955 from January 1992.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Denmark - onshore.',
+            'extent_name' => 'Denmark - onshore',
+            'extent_description' => 'Denmark - onshore',
             'help' => 'Benchmark at Århus cathedral referenced to mean sea level determined during 1990 at 10 tide gauges: Esbjerg, Fredericia, Frederikshavn, Gedser, Hirtshals, Hornbæk, Korsør, København, Slipshavn and Århus.
 Normal Orthometric heights.',
         ],
@@ -12925,7 +13354,8 @@ Normal Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Croatia - onshore.',
+            'extent_name' => 'Croatia - onshore',
+            'extent_description' => 'Croatia - onshore',
             'help' => 'Mean sea level at five tide gauges in Dubrovnik, Split, Bakar, Rovinj and Kopar at epoch 1971.5
 Replaces Trieste (datum code 1050).',
         ],
@@ -12936,7 +13366,8 @@ Replaces Trieste (datum code 1050).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.0,
-            'extent_description' => 'Sweden - onshore.',
+            'extent_name' => 'Sweden - onshore',
+            'extent_description' => 'Sweden - onshore',
             'help' => 'Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements caused by isostatic rebound, heights are reduced to epoch 2000.0 using values computed from the RH 2000 LU (=NKG2005LU) uplift model.
 Realized through the third precise levelling network of 1979-2003. Adopted in 2005, replacing RH70. Uses Normal heights.',
         ],
@@ -12947,7 +13378,8 @@ Realized through the third precise levelling network of 1979-2003. Adopted in 20
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sweden - onshore.',
+            'extent_name' => 'Sweden - onshore',
+            'extent_description' => 'Sweden - onshore',
             'help' => 'Adjustment is referenced to mean sea level at Slussen, Stockholm.
 Realized through the first precise levelling network of 1886-1905. Replaced by RH70.',
         ],
@@ -12958,7 +13390,8 @@ Realized through the first precise levelling network of 1886-1905. Replaced by R
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - Les Saintes.',
+            'extent_name' => 'Guadeloupe - Les Saintes - onshore',
+            'extent_description' => 'Guadeloupe - onshore - Les Saintes',
             'help' => 'Mean sea level 1984 at Terre de Haut. Origin = marker O de -5 with defined height of 1.441m above msl. IGN 1988 LS height 0.00m is 0.46m above 1987 sounding datum; this approximately corresponds with msl at Pointe-à-Pitre (see datum code 5155, CRS 5757).
 Orthometric heights.',
         ],
@@ -12969,7 +13402,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - Marie-Galante.',
+            'extent_name' => 'Guadeloupe - Marie-Galante - onshore',
+            'extent_description' => 'Guadeloupe - onshore - Marie-Galante',
             'help' => 'Mean sea level 1987 at Grand-Bourg. Origin = marker M0-I with defined height of 0.832m above msl. IGN 1988 MG height 0.00m is 0.46m above 1987 sounding datum; this approximately corresponds with msl at Pointe-à-Pitre (see datum code 5155, CRS code 5757).
 Orthometric heights.',
         ],
@@ -12980,7 +13414,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - La Desirade.',
+            'extent_name' => 'Guadeloupe - La Desirade - onshore',
+            'extent_description' => 'Guadeloupe - onshore - La Desirade',
             'help' => 'Mean sea level at Pointe-à-Pitre. Origin = marker A with defined height of 0.792m above msl. IGN 1992 LD height 0.00m is 0.629m above sounding datum at Pointe-à-Pitre.
 Orthometric heights. Replaced by IGN 2008 LD (datum code 1250).',
         ],
@@ -12991,7 +13426,8 @@ Orthometric heights. Replaced by IGN 2008 LD (datum code 1250).',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - St Barthelemy island.',
+            'extent_name' => 'Guadeloupe - St Barthelemy - onshore',
+            'extent_description' => 'Guadeloupe - onshore - St Barthelemy island',
             'help' => 'Mean sea level 1988 at port of Gustavia. Origin = marker A.ef-2 with defined height of 0.621m above msl. IGN 1988 SB height 0.00m deduced to be 0.201m above mean sea level at Pointe-à-Pitre.
 Orthometric heights.',
         ],
@@ -13002,7 +13438,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - St Martin island.',
+            'extent_name' => 'Guadeloupe - St Martin - onshore',
+            'extent_description' => 'Guadeloupe - onshore - St Martin island',
             'help' => 'Mean sea level 1949-1950 deduced at Fort Marigot. Origin = marker AS-13 with defined height of 6.990m above msl. IGN 1988 SM height 0.00m deduced to be 0.41m above sounding datum.
 Orthometric heights.',
         ],
@@ -13013,7 +13450,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State.',
+            'extent_name' => 'Europe - EVRF2007',
+            'extent_description' => 'Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State',
             'help' => 'Least squares fit to 13 stations of the EVRF2000 solution. Reduced to epoch 2000.0 for Nordic countries using the NKG2005LU uplift model.
 Realized by geopotential numbers and Normal heights of the United European Levelling Network. Replaces EVRF2000 (datum code 5129). Replaced by EVRF2019 (datum code 1274).',
         ],
@@ -13024,7 +13462,8 @@ Realized by geopotential numbers and Normal heights of the United European Level
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13035,7 +13474,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13046,7 +13486,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13057,7 +13498,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13068,7 +13510,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13079,7 +13522,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13090,7 +13534,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13101,7 +13546,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13112,7 +13558,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13123,7 +13570,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13134,7 +13582,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13145,7 +13594,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13156,7 +13606,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13167,7 +13618,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13178,7 +13630,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13189,7 +13642,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13200,7 +13654,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13211,7 +13666,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13222,7 +13678,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13233,7 +13690,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13244,7 +13702,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13255,7 +13714,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13266,7 +13726,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13277,7 +13738,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13288,7 +13750,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13299,7 +13762,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13310,7 +13774,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13321,7 +13786,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13332,7 +13798,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13343,7 +13810,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13354,7 +13822,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13365,7 +13834,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13376,7 +13846,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13387,7 +13858,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13398,7 +13870,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13409,7 +13882,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13420,7 +13894,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13431,7 +13906,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13442,7 +13918,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13453,7 +13930,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Included for coordinate reference systems where datum is unknown.',
         ],
@@ -13464,7 +13942,8 @@ Included for coordinate reference systems where datum is unknown.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greece - onshore.',
+            'extent_name' => 'Greece - onshore',
+            'extent_description' => 'Greece - onshore',
             'help' => 'Fundamental point: Athens Observatory. Latitude 37°58\'20.132"N, longitude 23°42\'58.815"E (of Greenwich)
 See geodetic datum alias 6404. Used as basis of topographic mapping based on Hatt projection. Replaced by GGRS87 (code 6121).',
         ],
@@ -13475,7 +13954,8 @@ See geodetic datum alias 6404. Used as basis of topographic mapping based on Hat
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greece - onshore.',
+            'extent_name' => 'Greece - onshore',
+            'extent_description' => 'Greece - onshore',
             'help' => 'Fundamental point: Dionysos. Latitude 38°04\'33.8"N, longitude 23°55\'51.0"E of Greenwich; geoid height 7.0 m.
 Replaced (old) Greek datum. Oil industry work based on ED50.',
         ],
@@ -13486,7 +13966,8 @@ Replaced (old) Greek datum. Oil industry work based on ED50.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - New Brunswick; Nova Scotia; Prince Edward Island.',
+            'extent_name' => 'Canada - Maritime Provinces',
+            'extent_description' => 'Canada - New Brunswick; Nova Scotia; Prince Edward Island',
             'help' => '
 In use from 1979. To be phased out in late 1990\'s.',
         ],
@@ -13497,7 +13978,8 @@ In use from 1979. To be phased out in late 1990\'s.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Finland - onshore.',
+            'extent_name' => 'Finland - onshore',
+            'extent_description' => 'Finland - onshore',
             'help' => 'Adjustment with fundamental point SF31 based on ED50 transformed to best fit the older VVJ adjustment.
 Adopted in 1970.',
         ],
@@ -13508,7 +13990,8 @@ Adopted in 1970.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sweden - onshore and offshore.',
+            'extent_name' => 'Sweden',
+            'extent_description' => 'Sweden - onshore and offshore',
             'help' => '
 Replaces RT38 adjustment (datum code 6308)',
         ],
@@ -13519,7 +14002,8 @@ Replaces RT38 adjustment (datum code 6308)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Lithuania - onshore and offshore.',
+            'extent_name' => 'Lithuania',
+            'extent_description' => 'Lithuania - onshore and offshore',
             'help' => 'Constrained to 4 ETRS89 points in Lithuania from the EUREF Baltic 1992 campaign.
 Densification of ETRS89 during the 1992 Baltic campaign.',
         ],
@@ -13530,7 +14014,8 @@ Densification of ETRS89 during the 1992 Baltic campaign.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mozambique - onshore.',
+            'extent_name' => 'Mozambique - onshore',
+            'extent_description' => 'Mozambique - onshore',
             'help' => 'Fundamental point: Tete.
 ',
         ],
@@ -13541,7 +14026,8 @@ Densification of ETRS89 during the 1992 Baltic campaign.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mozambique - west - Tete province.',
+            'extent_name' => 'Mozambique - west - Tete province',
+            'extent_description' => 'Mozambique - west - Tete province',
             'help' => 'Fundamental point: Madzansua.
 Replaced by transformation to Tete datum (datum code 6127).',
         ],
@@ -13552,7 +14038,8 @@ Replaced by transformation to Tete datum (datum code 6127).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mozambique - south.',
+            'extent_name' => 'Mozambique - south',
+            'extent_description' => 'Mozambique - south',
             'help' => 'Fundamental point: Campos Rodrigues observatory, Maputo.
 Replaced by transformation to Tete datum (datum code 6127).',
         ],
@@ -13563,7 +14050,8 @@ Replaced by transformation to Tete datum (datum code 6127).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mozambique - onshore and offshore.',
+            'extent_name' => 'Mozambique',
+            'extent_description' => 'Mozambique - onshore and offshore',
             'help' => 'ITRF94 at epoch 1996.9
 ',
         ],
@@ -13574,7 +14062,8 @@ Replaced by transformation to Tete datum (datum code 6127).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cambodia - onshore; Vietnam - onshore and offshore Cuu Long basin.',
+            'extent_name' => 'Asia - Cambodia and Vietnam - onshore & Cuu Long basin',
+            'extent_description' => 'Cambodia - onshore; Vietnam - onshore and offshore Cuu Long basin',
             'help' => 'DMA extension over IndoChina of the Indian 1954 network adjusted  to better fit local geoid.
 Also known as Indian (DMA Reduced).',
         ],
@@ -13585,7 +14074,8 @@ Also known as Indian (DMA Reduced).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iran - Arwaz area and onshore Gulf coast west of 54°E, Lavan Island, offshore Balal field and South Pars blocks 2 and 3.',
+            'extent_name' => 'Iran - FD58',
+            'extent_description' => 'Iran - Arwaz area and onshore Gulf coast west of 54°E, Lavan Island, offshore Balal field and South Pars blocks 2 and 3',
             'help' => 'Fundamental point: Maniyur.  Latitude: 31°23\'59.19"N, longitude: 48°32\'31.38"E (of Greenwich).
 Network included in Nahrwan 1967 adjustment.',
         ],
@@ -13596,7 +14086,8 @@ Network included in Nahrwan 1967 adjustment.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Estonia - onshore.',
+            'extent_name' => 'Estonia - onshore',
+            'extent_description' => 'Estonia - onshore',
             'help' => 'Densification from 4 ETRS89 points.
 Based on ETRS89 as established during the 1992 Baltic campaign. Replaced by Estonia 1997 adjustment (code 6180).',
         ],
@@ -13607,7 +14098,8 @@ Based on ETRS89 as established during the 1992 Baltic campaign. Replaced by Esto
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands.',
+            'extent_name' => 'Oman - onshore',
+            'extent_description' => 'Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands',
             'help' => 'Adjustment best fitted to Fahud network.
 Replaces Fahud datum (code 6232). Maximum differences to Fahud adjustment are 20 metres.',
         ],
@@ -13618,7 +14110,8 @@ Replaces Fahud datum (code 6232). Maximum differences to Fahud adjustment are 20
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States (USA) - Hawaii - main islands onshore.',
+            'extent_name' => 'USA - Hawaii - onshore',
+            'extent_description' => 'United States (USA) - Hawaii - main islands onshore',
             'help' => 'Fundamental point: Oahu West Base Astro.  Latitude: 21°18\'13.89"N, longitude 157°50\'55.79"W (of Greenwich)
 Hawaiian Islands were never on NAD27 but rather on Old Hawaiian Datum. NADCON conversion program provides transformation from Old Hawaiian Datum to NAD83 (original 1986 realization) but making the transformation appear to user as if from NAD27.',
         ],
@@ -13629,7 +14122,8 @@ Hawaiian Islands were never on NAD27 but rather on Old Hawaiian Datum. NADCON co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States (USA) - Alaska - St Lawrence Island.',
+            'extent_name' => 'USA - Alaska - St. Lawrence Island',
+            'extent_description' => 'United States (USA) - Alaska - St Lawrence Island',
             'help' => '
 Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides transformation from St. Lawrence Island Datum to NAD83 (original 1986 realization) - making the transformation appear to user as if from NAD27.',
         ],
@@ -13640,7 +14134,8 @@ Many Alaskan islands were never on NAD27 but rather on independent datums. NADCO
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States (USA) - Alaska - Pribilof Islands - St Paul Island.',
+            'extent_name' => 'USA - Alaska - St. Paul Island',
+            'extent_description' => 'United States (USA) - Alaska - Pribilof Islands - St Paul Island',
             'help' => 'Fundamental point latitude: 57°07\'16.86"N, longitude: 170°16\'24.00"W (of Greenwich).
 Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides transformation from St. Paul Island Datum to NAD83 (original 1986 realization) - making the transformation appear to user as if from NAD27.',
         ],
@@ -13651,7 +14146,8 @@ Many Alaskan islands were never on NAD27 but rather on independent datums. NADCO
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States (USA) - Alaska - Pribilof Islands - St George Island.',
+            'extent_name' => 'USA - Alaska - St. George Island',
+            'extent_description' => 'United States (USA) - Alaska - Pribilof Islands - St George Island',
             'help' => 'Fundamental point latitude: 56°36\'11.31"N, longitude: 169°32\'36.00"W (of Greenwich).
 Many Alaskan islands were never on NAD27 but rather on independent datums. NADCON conversion program provides transformation from St. George Island Datum to NAD83 (original 1986 realization) - making the transformation appear to user as if from NAD27.',
         ],
@@ -13662,7 +14158,8 @@ Many Alaskan islands were never on NAD27 but rather on independent datums. NADCO
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Puerto Rico, US Virgin Islands and British Virgin Islands - onshore.',
+            'extent_name' => 'Caribbean - Puerto Rico and Virgin Islands - onshore',
+            'extent_description' => 'Puerto Rico, US Virgin Islands and British Virgin Islands - onshore',
             'help' => 'Fundamental point: Cardona Island Lighthouse. Latitude:17°57\'31.40"N, longitude: 66°38\'07.53"W (of Greenwich).
 NADCON conversion program provides transformation from Puerto Rico Datum to NAD83 (original 1986 realization) but making the transformation appear to user as if from NAD27.',
         ],
@@ -13673,7 +14170,8 @@ NADCON conversion program provides transformation from Puerto Rico Datum to NAD8
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon.',
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => '
 Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific identification. As such it has an accuracy of approximately 1m.',
         ],
@@ -13684,7 +14182,8 @@ Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific i
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Israel - onshore; Palestine Territory - onshore.',
+            'extent_name' => 'Asia - Middle East - Israel and Palestine Territory onshore',
+            'extent_description' => 'Israel - onshore; Palestine Territory - onshore',
             'help' => 'Fundamental point:  Latitude: 31°44\'03.817"N, longitude: 35°12\'16.261"E (of Greenwich).
 Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).',
         ],
@@ -13695,7 +14194,8 @@ Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).'
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Côte d\'Ivoire (Ivory Coast) - onshore and offshore.',
+            'extent_name' => 'Cote d\'Ivoire (Ivory Coast)',
+            'extent_description' => 'Côte d\'Ivoire (Ivory Coast) - onshore and offshore',
             'help' => 'Fundamental point: T5 Banco. Latitude: 5°18\'50.5"N, longitude: 4°02\'05.1"W (of Greenwich).
 ',
         ],
@@ -13706,7 +14206,8 @@ Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).'
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Côte d\'Ivoire (Ivory Coast) - onshore and offshore.',
+            'extent_name' => 'Cote d\'Ivoire (Ivory Coast)',
+            'extent_description' => 'Côte d\'Ivoire (Ivory Coast) - onshore and offshore',
             'help' => 'Fundamental point: Abidjan I. Latitude: 5°18\'51.01"N, longitude: 4°02\'06.04"W (of Greenwich).
 ',
         ],
@@ -13717,7 +14218,8 @@ Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).'
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bangladesh - onshore; India - mainland onshore; Myanmar - onshore and Moattama area offshore; Pakistan - onshore.',
+            'extent_name' => 'Asia - Bangladesh; India; Myanmar; Pakistan - onshore',
+            'extent_description' => 'Bangladesh - onshore; India - mainland onshore; Myanmar - onshore and Moattama area offshore; Pakistan - onshore',
             'help' => 'Fundamental point: Kalianpur. Latitude: 24° 07\'11.260"N, longitude: 77°39\'17.570"E (of Greenwich).
 Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh and Pakistan by 1962 metrication conversion and in India by 1975 metrication conversion.',
         ],
@@ -13728,7 +14230,8 @@ Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Pakistan - onshore and offshore.',
+            'extent_name' => 'Pakistan',
+            'extent_description' => 'Pakistan - onshore and offshore',
             'help' => 'Fundamental point: Kalianpur. Latitude: 24° 07\'11.260"N, longitude: 77°39\'17.570"E (of Greenwich).
 1937 adjustment rescaled by ratio metric conversions of Indian foot (1937) to Indian foot (1962).',
         ],
@@ -13739,7 +14242,8 @@ Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'India - mainland onshore.',
+            'extent_name' => 'India - mainland',
+            'extent_description' => 'India - mainland onshore',
             'help' => 'Fundamental point: Kalianpur. Latitude: 24° 07\'11.260"N, longitude: 77°39\'17.570"E (of Greenwich).
 1937 adjustment rescaled by ratio metric conversions of Indian foot (1937) to Indian foot (1975).',
         ],
@@ -13750,7 +14254,8 @@ Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Vietnam - onshore.',
+            'extent_name' => 'Vietnam - onshore',
+            'extent_description' => 'Vietnam - onshore',
             'help' => '
 ',
         ],
@@ -13761,7 +14266,8 @@ Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore.',
+            'extent_name' => 'Africa - South Africa, Lesotho and Eswatini',
+            'extent_description' => 'Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore',
             'help' => 'Coincident with ITRF91 at epoch 1994.0 at Hartebeesthoek astronomical observatory near Pretoria.
 Replaces Cape datum (code 6222).',
         ],
@@ -13772,7 +14278,8 @@ Replaces Cape datum (code 6222).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Fundamental point: Old Bern observatory. Latitude: 46°57\'08.660"N, longitude: 7°26\'22.500"E (of Greenwich).
 ',
         ],
@@ -13783,7 +14290,8 @@ Replaces Cape datum (code 6222).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Fundamental point: Zimmerwald observatory.
 ',
         ],
@@ -13794,7 +14302,8 @@ Replaces Cape datum (code 6222).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'ETRF89 at epoch 1993.0.
 First realized through CHTRF95 and subsequently CHTRF98, 2004, 2010 and 2016 with an aim to re-measure every 6 years.',
         ],
@@ -13805,7 +14314,8 @@ First realized through CHTRF95 and subsequently CHTRF98, 2004, 2010 and 2016 wit
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa - onshore - Tutuila, Aunu\'u, Ofu, Olesega, Ta\'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore.',
+            'extent_name' => 'USA - HARN',
+            'extent_description' => 'American Samoa - onshore - Tutuila, Aunu\'u, Ofu, Olesega, Ta\'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore',
             'help' => 'A collection of individual state-wide adjustments including GPS observations made between 1991 and 1996.
 In CONUS, American Samoa and Guam replaced by NAD83(FBN). In Alaska replaced by NAD83(NSRS2007). In Hawaii replaced by NAD83(PA11). In Puerto Rico and US Virgin Islands replaced by NAD83(HARN Corrected).',
         ],
@@ -13816,7 +14326,8 @@ In CONUS, American Samoa and Guam replaced by NAD83(FBN). In Alaska replaced by 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iran - Taheri refinery site.',
+            'extent_name' => 'Iran - Taheri refinery',
+            'extent_description' => 'Iran - Taheri refinery site',
             'help' => 'Fundamental point: Total1. Latitude: 27°31\'07.784"N, longitude: 52°36\'12.741"E (of Greenwich).
 ',
         ],
@@ -13827,7 +14338,8 @@ In CONUS, American Samoa and Guam replaced by NAD83(FBN). In Alaska replaced by 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iran - onshore and offshore.',
+            'extent_name' => 'Iran',
+            'extent_description' => 'Iran - onshore and offshore',
             'help' => 'Extension of ED50 over Iran.
 Sometimes referred to as ED50-ED77.',
         ],
@@ -13838,7 +14350,8 @@ Sometimes referred to as ED50-ED77.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guinea - onshore.',
+            'extent_name' => 'Guinea - onshore',
+            'extent_description' => 'Guinea - onshore',
             'help' => '
 ',
         ],
@@ -13849,7 +14362,8 @@ Sometimes referred to as ED50-ED77.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Czechia; Slovakia.',
+            'extent_name' => 'Europe - Czechoslovakia',
+            'extent_description' => 'Czechia; Slovakia',
             'help' => 'Modification of Austrian MGI datum, code 6312.
 ',
         ],
@@ -13860,7 +14374,8 @@ Sometimes referred to as ED50-ED77.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Trinidad and Tobago - Tobago - onshore.',
+            'extent_name' => 'Trinidad and Tobago - Tobago - onshore',
+            'extent_description' => 'Trinidad and Tobago - Tobago - onshore',
             'help' => 'Fundamental point: Mount Dillon triangulation station. Latitude: 11°15\'07.843"N, longitude: 60°41\'09.632"W (of Greenwich).
 ',
         ],
@@ -13871,7 +14386,8 @@ Sometimes referred to as ED50-ED77.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Trinidad and Tobago - Trinidad - onshore.',
+            'extent_name' => 'Trinidad and Tobago - Trinidad - onshore',
+            'extent_description' => 'Trinidad and Tobago - Trinidad - onshore',
             'help' => 'Fundamental point: Naparima. Latitude: 10°16\'44.860"N, longitude: 61°27\'34.620"W (of Greenwich).
 Extended to Tobago as Naparima 1972. (Note: Naparima 1972 is not used in Trinidad).',
         ],
@@ -13882,7 +14398,8 @@ Extended to Tobago as Naparima 1972. (Note: Naparima 1972 is not used in Trinida
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Libya - onshore and offshore.',
+            'extent_name' => 'Libya',
+            'extent_description' => 'Libya - onshore and offshore',
             'help' => 'Extension of ED50 over Libya.
 ',
         ],
@@ -13893,7 +14410,8 @@ Extended to Tobago as Naparima 1972. (Note: Naparima 1972 is not used in Trinida
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro province.',
+            'extent_name' => 'Argentina - Mendoza and Neuquen',
+            'extent_description' => 'Argentina - Mendoza province, Neuquen province, western La Pampa province and western Rio Negro province',
             'help' => 'Chos Malal police station.
 Also known as Quini-Huao. Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exploration and production continues.',
         ],
@@ -13904,7 +14422,8 @@ Also known as Quini-Huao. Replaced by Campo Inchauspe (code 6221) for topographi
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - Chibut province south of approximately 42°30\'S and Santa Cruz province north of approximately 50°20\'S.',
+            'extent_name' => 'Argentina - 42.5°S to 50.3°S',
+            'extent_description' => 'Argentina - Chibut province south of approximately 42°30\'S and Santa Cruz province north of approximately 50°20\'S',
             'help' => '
 Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exploration and production in Golfo San Jorge basin (44°S to 47.5°S) continues.',
         ],
@@ -13915,7 +14434,8 @@ Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exp
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Republic of Korea (South Korea) - onshore.',
+            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_description' => 'Republic of Korea (South Korea) - onshore',
             'help' => 'Fundamental point: Suwon. Latitude 37°16\'31.9034"N, longitude 127°03\'05.1451"E of Greenwich. This is consistent with the Tokyo 1918 datum latitude and longitude.
 Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).',
         ],
@@ -13926,7 +14446,8 @@ Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Yemen - onshore and offshore.',
+            'extent_name' => 'Yemen',
+            'extent_description' => 'Yemen - onshore and offshore',
             'help' => 'Sana\'a IGN reference marker.
 ',
         ],
@@ -13937,7 +14458,8 @@ Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Yemen - South Yemen onshore mainland.',
+            'extent_name' => 'Yemen - South Yemen - mainland',
+            'extent_description' => 'Yemen - South Yemen onshore mainland',
             'help' => '
 ',
         ],
@@ -13948,7 +14470,8 @@ Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guinea-Bissau - onshore.',
+            'extent_name' => 'Guinea-Bissau - onshore',
+            'extent_description' => 'Guinea-Bissau - onshore',
             'help' => '
 ',
         ],
@@ -13959,7 +14482,8 @@ Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Republic of Korea (South Korea) - onshore.',
+            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_description' => 'Republic of Korea (South Korea) - onshore',
             'help' => '
 ',
         ],
@@ -13970,7 +14494,8 @@ Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands.',
+            'extent_name' => 'New Zealand',
+            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands',
             'help' => 'Based on ITRF96 at epoch 2000.0
 Replaces New Zealand Geodetic Datum 1949 (code 6272) and Chatham Islands Datum 1979 (code 6673) from March 2000.',
         ],
@@ -13981,7 +14506,8 @@ Replaces New Zealand Geodetic Datum 1949 (code 6272) and Chatham Islands Datum 1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ghana - onshore and offshore.',
+            'extent_name' => 'Ghana',
+            'extent_description' => 'Ghana - onshore and offshore',
             'help' => 'Fundamental point: GCS Station 547. Latitude: 5°23\'43.3"N, longitude: 0°11\'52.3"W (of Greenwich).
 Replaced in 1978 by Leigon datum (code 6250).',
         ],
@@ -13992,7 +14518,8 @@ Replaced in 1978 by Leigon datum (code 6250).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'American Samoa - Tutuila, Aunu\'u, Ofu, Olesega and Ta\'u islands.',
+            'extent_name' => 'American Samoa - 2 main island groups',
+            'extent_description' => 'American Samoa - Tutuila, Aunu\'u, Ofu, Olesega and Ta\'u islands',
             'help' => 'Fundamental point: Betty 13 eccentric. Latitude: 14°20\'08.34"S, longitude: 170°42\'52.25"W (of Greenwich).
 ',
         ],
@@ -14003,7 +14530,8 @@ Replaced in 1978 by Leigon datum (code 6250).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore.',
+            'extent_name' => 'South America - SIRGAS 1995 by country',
+            'extent_description' => 'South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore',
             'help' => 'ITRF94 at epoch 1995.4.
 Realized by a frame of 58 stations observed in 1995 and adjusted in ITRF94. Provisional NIMA adjustment reference epoch was 1995.42 but final report accepted value is 1995.40. Replaced by SIRGAS 2000.',
         ],
@@ -14014,7 +14542,8 @@ Realized by a frame of 58 stations observed in 1995 and adjusted in ITRF94. Prov
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica).',
+            'extent_name' => 'France',
+            'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)',
             'help' => 'Coincident with ETRS89 at epoch 1993.0. Derived from long-term GNSS observations at 23 points aligned to ETRF93 @ 1993.0 through fundamental points at Grasse, Toulouse and Brest. Network supplemented in 1994 and 1995 by approx. 1000 additional stations.
 RGF93 v1 is a realization of ETRS89. Replaced by RGF93 v2 (datum code 1312) from 2010-06-18.',
         ],
@@ -14025,7 +14554,8 @@ RGF93 v1 is a realization of ETRS89. Replaced by RGF93 v2 (datum code 1312) from
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'ETRS89 stations in Ireland
 Densification of ETRS89',
         ],
@@ -14036,7 +14566,8 @@ Densification of ETRS89',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sierra Leone - Freetown Peninsula.',
+            'extent_name' => 'Sierra Leone - Freetown Peninsula',
+            'extent_description' => 'Sierra Leone - Freetown Peninsula',
             'help' => 'Fundamental point: Kortright. Latitude: 8°28\'44.4"N, longitude: 13°13\'03.81"W (of Greenwich).
 ',
         ],
@@ -14047,7 +14578,8 @@ Densification of ETRS89',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sierra Leone - onshore.',
+            'extent_name' => 'Sierra Leone - onshore',
+            'extent_description' => 'Sierra Leone - onshore',
             'help' => 'Fundamental point: SLX2 Astro. Latitude: 8°27\'17.567"N, longitude: 12°49\'40.186"W (of Greenwich).
 Extension and readjustment with additional observations of 1960 network. Coordinates of 1960 stations change by less than 3 metres.',
         ],
@@ -14058,7 +14590,8 @@ Extension and readjustment with additional observations of 1960 network. Coordin
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector.',
+            'extent_name' => 'Antarctica - Australian sector',
+            'extent_description' => 'Antarctica between 45°E and 136°E and between 142°E and 160°E - Australian sector',
             'help' => '
 ',
         ],
@@ -14069,7 +14602,8 @@ Extension and readjustment with additional observations of 1960 network. Coordin
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia.',
+            'extent_name' => 'Europe - onshore - eastern - S-42(83)',
+            'extent_description' => 'Onshore Bulgaria, Czechia, Germany (former DDR), Hungary and Slovakia',
             'help' => 'Fundamental point: Pulkovo observatory. Latitude: 59°46\'18.550"N, longitude: 30°19\'42.090"E (of Greenwich).
 1983 international adjustment of Uniform Astro-Geodetic Network of countries of central and eastern Europe.',
         ],
@@ -14080,7 +14614,8 @@ Extension and readjustment with additional observations of 1960 network. Coordin
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Onshore: Bulgaria, Czechia, Germany (former DDR), Hungary, Poland and Slovakia. Onshore and offshore: Albania and Romania.',
+            'extent_name' => 'Europe - onshore - eastern - S-42(58)',
+            'extent_description' => 'Onshore: Bulgaria, Czechia, Germany (former DDR), Hungary, Poland and Slovakia. Onshore and offshore: Albania and Romania',
             'help' => 'Fundamental point: Pulkovo observatory. Latitude: 59°46\'18.550"N, longitude: 30°19\'42.090"E (of Greenwich).
 1956 international adjustment of Uniform Astro-Geodetic Network of countries of central and eastern Europe. Locally densified during 1957 and 1958.',
         ],
@@ -14091,7 +14626,8 @@ Extension and readjustment with additional observations of 1960 network. Coordin
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Estonia - onshore and offshore.',
+            'extent_name' => 'Estonia',
+            'extent_description' => 'Estonia - onshore and offshore',
             'help' => 'Densification of ETRS89 during EUREF-ESTONIA97 campaign through transformation from ITRF96 at epoch 1997.56.
 Replaces Estonia 1992 adjustment (code 6133).',
         ],
@@ -14102,7 +14638,8 @@ Replaces Estonia 1992 adjustment (code 6133).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Luxembourg.',
+            'extent_name' => 'Luxembourg',
+            'extent_description' => 'Luxembourg',
             'help' => 'Fundamental point of 1930 triangulation: northern station of Habay-la-Neuve baseline in Belgium. Latitude: 49°43\'24.408"N, longitude: 5°38\'22.470"E (of Greenwich). Since 2006 LUREF has been realized by GNSS station positions and transformation from ETRF.
 The transformation from ETRF 2000 first defining LUREF in 2006 has been recomputed in 2014 and 2020.',
         ],
@@ -14113,7 +14650,8 @@ The transformation from ETRF 2000 first defining LUREF in 2006 has been recomput
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - western Azores onshore - Flores, Corvo.',
+            'extent_name' => 'Portugal - Azores W - onshore',
+            'extent_description' => 'Portugal - western Azores onshore - Flores, Corvo',
             'help' => 'Fundamental point: Observatario Meteorologico Flores.
 ',
         ],
@@ -14124,7 +14662,8 @@ The transformation from ETRF 2000 first defining LUREF in 2006 has been recomput
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.',
+            'extent_name' => 'Portugal - Azores C - onshore',
+            'extent_description' => 'Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira',
             'help' => 'Fundamental point: Graciosa south west base. Latitude: 39°03\'54.934"N, longitude: 28°02\'23.882"W (of Greenwich).
 Replaced by 1995 adjustment (datum code 6665).',
         ],
@@ -14135,7 +14674,8 @@ Replaced by 1995 adjustment (datum code 6665).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.',
+            'extent_name' => 'Portugal - Azores E - onshore',
+            'extent_description' => 'Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas',
             'help' => 'Fundamental point: Forte de São Bras.
 Replaced by 1995 adjustment (datum code 6664).',
         ],
@@ -14146,7 +14686,8 @@ Replaced by 1995 adjustment (datum code 6664).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'UK - Northern Ireland - onshore',
+            'extent_description' => 'United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Position fixed to the coordinates from the 19th century Principle Triangulation of station Divis. Scale and orientation controlled by position of Principle Triangulation stations Knocklayd and Trostan.
 Replaced by Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum code 6300).',
         ],
@@ -14157,7 +14698,8 @@ Replaced by Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Venezuela - onshore and offshore.',
+            'extent_name' => 'Venezuela',
+            'extent_description' => 'Venezuela - onshore and offshore',
             'help' => 'Realised by a frame of 67 stations observed in 1995 as a densification of the SIRGAS campaign and adjusted in the ITRF94 at epoch 1995.4.
 ',
         ],
@@ -14168,7 +14710,8 @@ Replaced by Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - onshore and offshore.',
+            'extent_name' => 'Argentina',
+            'extent_description' => 'Argentina - onshore and offshore',
             'help' => 'A geodetic network of 136 high accuracy surveyed points. Densification of SIRGAS 1995; ITRF94 at epoch 1995.4.
 Replaced POSGAR 1994 (datum code 6694) for technical, but not legal, purposes. Replaced by POSGAR 2007 (datum code 1062) from May 2009.',
         ],
@@ -14179,7 +14722,8 @@ Replaced POSGAR 1994 (datum code 6694) for technical, but not legal, purposes. R
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Albania - onshore.',
+            'extent_name' => 'Albania - onshore',
+            'extent_description' => 'Albania - onshore',
             'help' => '
 ',
         ],
@@ -14190,7 +14734,8 @@ Replaced POSGAR 1994 (datum code 6694) for technical, but not legal, purposes. R
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cameroon - coastal area.',
+            'extent_name' => 'Cameroon - coastal area',
+            'extent_description' => 'Cameroon - coastal area',
             'help' => 'South pillar of Douala base; 4°00\'40.64"N, 9°42\'30.41"E (of Greenwich).
 Replaced by Manoca 1962 datum (code 6193).',
         ],
@@ -14201,7 +14746,8 @@ Replaced by Manoca 1962 datum (code 6193).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cameroon - coastal area.',
+            'extent_name' => 'Cameroon - coastal area',
+            'extent_description' => 'Cameroon - coastal area',
             'help' => 'Reservoir centre at the  Manoca tower ("tube Suel"), 3°51\'49.896"N, 9°36\'49.347"E (of Greenwich).
 The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) ellipsoid (code 7012) but in practice this datum has used the IGN version. Replaces Douala 1948 (code 6192).',
         ],
@@ -14212,7 +14758,8 @@ The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) elli
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greenland - west coast onshore.',
+            'extent_name' => 'Greenland - west coast',
+            'extent_description' => 'Greenland - west coast onshore',
             'help' => 'Fundamental point: Station 7008. Latitude: 64°31\'06.27"N, longitude: 51°12\'24.86"W (of Greenwich).
 ',
         ],
@@ -14223,7 +14770,8 @@ The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) elli
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greenland - Scoresbysund area onshore.',
+            'extent_name' => 'Greenland - Scoresbysund area',
+            'extent_description' => 'Greenland - Scoresbysund area onshore',
             'help' => '
 ',
         ],
@@ -14234,7 +14782,8 @@ The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) elli
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greenland - Ammassalik area onshore.',
+            'extent_name' => 'Greenland - Ammassalik area',
+            'extent_description' => 'Greenland - Ammassalik area onshore',
             'help' => '
 ',
         ],
@@ -14245,7 +14794,8 @@ The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) elli
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cameroon - Garoua area.',
+            'extent_name' => 'Cameroon - Garoua area',
+            'extent_description' => 'Cameroon - Garoua area',
             'help' => 'Fundamental point: IGN astronomical station and benchmark no. 16 at Tongo. Latitude 8°55\'08.74"N, longitude 13°30\'43.19"E (of Greenwich).
 ',
         ],
@@ -14256,7 +14806,8 @@ The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) elli
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cameroon - N\'Djamena area.',
+            'extent_name' => 'Cameroon - N\'Djamena area',
+            'extent_description' => 'Cameroon - N\'Djamena area',
             'help' => 'IGN astronomical station Dabanga; 11°55\'05.9"N  14°38\'40.8"E (of Greenwich).
 ',
         ],
@@ -14267,7 +14818,8 @@ The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) elli
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Egypt - onshore.',
+            'extent_name' => 'Egypt - onshore',
+            'extent_description' => 'Egypt - onshore',
             'help' => 'Fundamental point: Station F1 (Venus). Latitude: 30°01\'42.86"N, longitude: 31°16\'37.05"E (of Greenwich).
 Note that Egypt 1930 uses the International 1924 ellipsoid, unlike the Egypt 1907 datum (code 6229) which uses the Helmert ellipsoid. Oil industry references to the Egypt 1930 datum name and the Helmert ellipsoid probably mean Egypt 1907 datum.',
         ],
@@ -14278,7 +14830,8 @@ Note that Egypt 1930 uses the International 1924 ellipsoid, unlike the Egypt 190
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Russian Federation - onshore and offshore.',
+            'extent_name' => 'Russia',
+            'extent_description' => 'Russian Federation - onshore and offshore',
             'help' => 'Fundamental point: Pulkovo observatory. Latitude: 59°46\'15.359"N, longitude: 30°19\'28.318"E (of Greenwich).
 ',
         ],
@@ -14289,7 +14842,8 @@ Note that Egypt 1930 uses the International 1924 ellipsoid, unlike the Egypt 190
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Eritrea; Ethiopia; South Sudan; Sudan.',
+            'extent_name' => 'Africa - Eritrea, Ethiopia, South Sudan and Sudan',
+            'extent_description' => 'Eritrea; Ethiopia; South Sudan; Sudan',
             'help' => 'Fundamental point: Station 15; Adindan. Latitude: 22°10\'07.110"N, longitude: 31°29\'21.608"E (of Greenwich).
 The 12th parallel traverse of 1966-70 (Point 58 datum, code 6620) is connected to the Blue Nile 1958 network in western Sudan. This has given rise to misconceptions that the Blue Nile network is used in west Africa.',
         ],
@@ -14300,7 +14854,8 @@ The 12th parallel traverse of 1966-70 (Point 58 datum, code 6620) is connected t
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia - onshore and offshore. Papua New Guinea - onshore.',
+            'extent_name' => 'Australasia - Australia and PNG - AGD66',
+            'extent_description' => 'Australia - onshore and offshore. Papua New Guinea - onshore',
             'help' => 'Fundamental point: Johnson Memorial Cairn. Latitude: 25°56\'54.5515"S, longitude: 133°12\'30.0771"E (of Greenwich).
 ',
         ],
@@ -14311,7 +14866,8 @@ The 12th parallel traverse of 1966-70 (Point 58 datum, code 6620) is connected t
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E.',
+            'extent_name' => 'Australia - AGD84',
+            'extent_description' => 'Australia - Queensland, South Australia, Western Australia, federal areas offshore west of 129°E',
             'help' => 'Fundamental point: Johnson Memorial Cairn. Latitude: 25°56\'54.5515"S, longitude: 133°12\'30.0771"E (of Greenwich).
 Uses all data from 1966 adjustment with additional observations, improved software and a geoid model.',
         ],
@@ -14322,7 +14878,8 @@ Uses all data from 1966 adjustment with additional observations, improved softwa
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bahrain, Kuwait and Saudi Arabia - onshore.',
+            'extent_name' => 'Asia - Middle East - Bahrain, Kuwait and Saudi Arabia',
+            'extent_description' => 'Bahrain, Kuwait and Saudi Arabia - onshore',
             'help' => 'Fundamental point: Ain El Abd.  Latitude: 28°14\'06.171"N, longitude: 48°16\'20.906"E (of Greenwich).
 ',
         ],
@@ -14333,7 +14890,8 @@ Uses all data from 1966 adjustment with additional observations, improved softwa
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Somalia - onshore.',
+            'extent_name' => 'Somalia - onshore',
+            'extent_description' => 'Somalia - onshore',
             'help' => '
 ',
         ],
@@ -14344,7 +14902,8 @@ Uses all data from 1966 adjustment with additional observations, improved softwa
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Niger.',
+            'extent_name' => 'Niger',
+            'extent_description' => 'Niger',
             'help' => '
 ',
         ],
@@ -14355,7 +14914,8 @@ Uses all data from 1966 adjustment with additional observations, improved softwa
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - mainland - onshore.',
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
             'help' => 'Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42\'43.631"N, longitude: 9°07\'54.862"W (of Greenwich).
 Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
         ],
@@ -14366,7 +14926,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brazil - offshore south and east of a line intersecting the coast at 2°55\'S; onshore Tucano basin.',
+            'extent_name' => 'Brazil - Aratu',
+            'extent_description' => 'Brazil - offshore south and east of a line intersecting the coast at 2°55\'S; onshore Tucano basin',
             'help' => '
 ',
         ],
@@ -14377,7 +14938,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Botswana; Malawi; Zambia; Zimbabwe.',
+            'extent_name' => 'Africa - Botswana, Malawi, Zambia, Zimbabwe',
+            'extent_description' => 'Botswana; Malawi; Zambia; Zimbabwe',
             'help' => 'Fundamental point: Buffelsfontein. Latitude: 33°59\'32.000"S, longitude: 25°30\'44.622"E (of Greenwich).
 ',
         ],
@@ -14388,7 +14950,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Burundi, Kenya, Rwanda, Tanzania and Uganda.',
+            'extent_name' => 'Africa - Burundi, Kenya, Rwanda, Tanzania and Uganda',
+            'extent_description' => 'Burundi, Kenya, Rwanda, Tanzania and Uganda',
             'help' => 'Fundamental point: Buffelsfontein. Latitude: 33°59\'32.000"S, longitude: 25°30\'44.622"E (of Greenwich).
 ',
         ],
@@ -14399,7 +14962,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - Bali, Java and western Sumatra onshore, offshore southern Java Sea, Madura Strait and western Bali Sea.',
+            'extent_name' => 'Indonesia - Java, Java Sea and western Sumatra',
+            'extent_description' => 'Indonesia - Bali, Java and western Sumatra onshore, offshore southern Java Sea, Madura Strait and western Bali Sea',
             'help' => 'Fundamental point: Longitude at Batavia Astro. Station. Latitude: 6°07\'39.522"S, longitude: 106°48\'27.790"E (of Greenwich). Latitude and azimuth at Genuk.
 ',
         ],
@@ -14410,7 +14974,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Barbados - onshore.',
+            'extent_name' => 'Barbados - onshore',
+            'extent_description' => 'Barbados - onshore',
             'help' => 'Fundamental point: HMS Challenger astro station M1, St. Anne\'s Tower. Latitude 13°04\'32.53"N, longitude 59°36\'29.34"W (of Greenwich).
 ',
         ],
@@ -14421,6 +14986,7 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+            'extent_name' => 'Niger - southeast',
             'extent_description' => 'Niger - southeast',
             'help' => '
 ',
@@ -14432,7 +14998,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - onshore and offshore.',
+            'extent_name' => 'China',
+            'extent_description' => 'China - onshore and offshore',
             'help' => 'Pulkovo, transferred through Russian triangulation.
 Scale determined through three baselines in northeast China. Discontinuities at boundaries of adjustment blocks. From 1982 replaced by Xian 1980 and New Beijing.',
         ],
@@ -14443,7 +15010,8 @@ Scale determined through three baselines in northeast China. Discontinuities at 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Belgium - onshore.',
+            'extent_name' => 'Belgium - onshore',
+            'extent_description' => 'Belgium - onshore',
             'help' => 'Fundamental point: Lommel (tower). Latitude: 51°13\'47.334"N, longitude: 5°18\'49.483"E (of Greenwich).
 ',
         ],
@@ -14454,7 +15022,8 @@ Scale determined through three baselines in northeast China. Discontinuities at 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bermuda - onshore.',
+            'extent_name' => 'Bermuda - onshore',
+            'extent_description' => 'Bermuda - onshore',
             'help' => 'Fundamental point: Fort George base. Latitude 32°22\'44.36"N, longitude 64°40\'58.11"W (of Greenwich).
 ',
         ],
@@ -14465,7 +15034,8 @@ Scale determined through three baselines in northeast China. Discontinuities at 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Colombia - mainland and offshore Caribbean.',
+            'extent_name' => 'Colombia - mainland and offshore Caribbean',
+            'extent_description' => 'Colombia - mainland and offshore Caribbean',
             'help' => 'Fundamental point: Bogota observatory. Latitude: 4°35\'56.570"N, longitude: 74°04\'51.300"W (of Greenwich).
 Replaces 1951 adjustment. Replaced by MAGNA-SIRGAS (datum code 6685).',
         ],
@@ -14476,7 +15046,8 @@ Replaces 1951 adjustment. Replaced by MAGNA-SIRGAS (datum code 6685).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - Banga and Belitung Islands.',
+            'extent_name' => 'Indonesia - Banga & Belitung Islands',
+            'extent_description' => 'Indonesia - Banga and Belitung Islands',
             'help' => '2°00\'40.16"S, 105°51\'39.76"E (of Greenwich).
 ',
         ],
@@ -14487,7 +15058,8 @@ Replaces 1951 adjustment. Replaced by MAGNA-SIRGAS (datum code 6685).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola - Angola proper - onshore and offshore.',
+            'extent_name' => 'Angola - Angola proper',
+            'extent_description' => 'Angola - Angola proper - onshore and offshore',
             'help' => 'Fundamental point: Campo de Aviaçao. Latitude: 12°01\'09.070"S, Longitude = 17°27\'19.800"E (of Greenwich).
 Provisional adjustment, replaced in 2015 for onshore use by Camacupa 2015.',
         ],
@@ -14498,7 +15070,8 @@ Provisional adjustment, replaced in 2015 for onshore use by Camacupa 2015.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - mainland onshore and Atlantic offshore Tierra del Fuego.',
+            'extent_name' => 'Argentina - mainland onshore and offshore TdF',
+            'extent_description' => 'Argentina - mainland onshore and Atlantic offshore Tierra del Fuego',
             'help' => 'Fundamental point: Campo Inchauspe. Latitude: 35°58\'16.56"S, longitude: 62°10\'12.03"W (of Greenwich).
 ',
         ],
@@ -14509,7 +15082,8 @@ Provisional adjustment, replaced in 2015 for onshore use by Camacupa 2015.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland.',
+            'extent_name' => 'Africa - Botswana, Eswatini, Lesotho and South Africa',
+            'extent_description' => 'Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland',
             'help' => 'Fundamental point: Buffelsfontein. Latitude: 33°59\'32.000"S, longitude: 25°30\'44.622"E (of Greenwich).
 ',
         ],
@@ -14520,7 +15094,8 @@ Provisional adjustment, replaced in 2015 for onshore use by Camacupa 2015.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Tunisia - onshore and offshore.',
+            'extent_name' => 'Tunisia',
+            'extent_description' => 'Tunisia - onshore and offshore',
             'help' => 'Fundamental point: Carthage. Latitude: 40.9464506g = 36°51\'06.50"N, longitude: 8.8724368g E of Paris = 10°19\'20.72"E (of Greenwich).
 Fundamental point astronomic coordinates determined in 1878.',
         ],
@@ -14531,7 +15106,8 @@ Fundamental point astronomic coordinates determined in 1878.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north.',
+            'extent_name' => 'South America - Brazil - south of 18°S and west of 54°W + DF; N Paraguay',
+            'extent_description' => 'Brazil - south of 18°S and west of 54°W, plus Distrito Federal. Paraguay - north',
             'help' => 'Fundamental point: Chua. Latitude: 19°45\'41.160"S, longitude: 48°06\'07.560"W (of Greenwich).
 The Chua origin and associated network is in Brazil with a connecting traverse through northern Paraguay. It was used in Brazil only as input into the Corrego Allegre adjustment and for government work in Distrito Federal.',
         ],
@@ -14542,7 +15118,8 @@ The Chua origin and associated network is in Brazil with a connecting traverse t
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also east of 42°W.',
+            'extent_name' => 'Brazil - Corrego Alegre 1970-1972',
+            'extent_description' => 'Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also east of 42°W',
             'help' => 'Fundamental point: Corrego Alegre. Latitude: 19°50\'14.91"S, longitude: 48°57\'41.98"W (of Greenwich).
 Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coordinates of origin as latitude: 19°50\'15.14"S, longitude: 48°57\'42.75"W; these may refer to 1961 adjustment.',
         ],
@@ -14553,7 +15130,8 @@ Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Lebanon - onshore. Syrian Arab Republic - onshore.',
+            'extent_name' => 'Asia - Middle East - Lebanon and Syria onshore',
+            'extent_description' => 'Lebanon - onshore. Syrian Arab Republic - onshore',
             'help' => 'Fundamental point: Trig. 254 Deir. Latitude: 35°21\'49.975"N, longitude: 40°05\'46.770"E (of Greenwich).
 ',
         ],
@@ -14564,7 +15142,8 @@ Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Egypt - onshore and offshore.',
+            'extent_name' => 'Egypt',
+            'extent_description' => 'Egypt - onshore and offshore',
             'help' => 'Fundamental point: Station F1 (Venus). Latitude: 30°01\'42.86"N, longitude: 31°16\'33.60"E (of Greenwich).
 ',
         ],
@@ -14575,7 +15154,8 @@ Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan.',
+            'extent_name' => 'Europe - ED50 by country',
+            'extent_description' => 'Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan',
             'help' => 'Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22\'51.4456"N, longitude: 13°03\'58.9283"E (of Greenwich).
 ',
         ],
@@ -14586,7 +15166,8 @@ Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - west.',
+            'extent_name' => 'Europe - west',
+            'extent_description' => 'Europe - west',
             'help' => 'Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22\'51.4456"N, longitude: 13°03\'58.9283"E (of Greenwich).
 ',
         ],
@@ -14597,7 +15178,8 @@ Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Oman - mainland onshore.',
+            'extent_name' => 'Oman - mainland',
+            'extent_description' => 'Oman - mainland onshore',
             'help' => 'Fundamental point: Station NO68-024 Fahud. Latitude: 22°17\'31.182"N, longitude: 56°29\'18.820"E (of Greenwich).
 Replaced by PSD93 (code 6134).',
         ],
@@ -14608,7 +15190,8 @@ Replaced by PSD93 (code 6134).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands.',
+            'extent_name' => 'Taiwan - onshore - mainland and Penghu',
+            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island, Penghu (Pescadores) Islands',
             'help' => 'Fundamental point: Hu Tzu Shan. Latitude: 23°58\'32.34"N, longitude: 120°58\'25.975"E (of Greenwich).
 ',
         ],
@@ -14619,7 +15202,8 @@ Replaced by PSD93 (code 6134).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Hungary.',
+            'extent_name' => 'Hungary',
+            'extent_description' => 'Hungary',
             'help' => 'Fundamental point: Szolohegy. Latitude: 47°17\'32,6156"N, longitude 19°36\'09.9865"E (of Greenwich); geoid height 6.56m.
 Replaced Hungarian Datum 1909 (EPSG datum code 1024).',
         ],
@@ -14630,7 +15214,8 @@ Replaced Hungarian Datum 1909 (EPSG datum code 1024).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - onshore.',
+            'extent_name' => 'Indonesia - onshore',
+            'extent_description' => 'Indonesia - onshore',
             'help' => 'Fundamental point: Padang. Latitude: 0°56\'38.414"S, longitude: 100°22\' 8.804"E (of Greenwich). Ellipsoidal height 3.190m, gravity-related height 14.0m above mean sea level.
 Replaced by DGN95.',
         ],
@@ -14641,7 +15226,8 @@ Replaced by DGN95.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Myanmar (Burma) - onshore; Thailand - onshore.',
+            'extent_name' => 'Asia - Myanmar and Thailand onshore',
+            'extent_description' => 'Myanmar (Burma) - onshore; Thailand - onshore',
             'help' => 'Extension of Kalianpur 1937 over Myanmar and Thailand.
 ',
         ],
@@ -14652,7 +15238,8 @@ Replaced by DGN95.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Thailand - onshore plus offshore Gulf of Thailand.',
+            'extent_name' => 'Thailand - onshore and Gulf of Thailand',
+            'extent_description' => 'Thailand - onshore plus offshore Gulf of Thailand',
             'help' => 'Fundamental point: Khau Sakaerang.
 ',
         ],
@@ -14663,7 +15250,8 @@ Replaced by DGN95.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Jamaica - onshore.',
+            'extent_name' => 'Jamaica - onshore',
+            'extent_description' => 'Jamaica - onshore',
             'help' => 'Fundamental point: Fort Charles Flagstaff. Latitude: 17°55\'55.800"N, longitude: 76°56\'37.260"W (of Greenwich).
 ',
         ],
@@ -14674,7 +15262,8 @@ Replaced by DGN95.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Jamaica - onshore.',
+            'extent_name' => 'Jamaica - onshore',
+            'extent_description' => 'Jamaica - onshore',
             'help' => 'Fundamental point: Fort Charles Flagstaff. Latitude: 17°55\'55.800"N, longitude: 76°56\'37.260"W (of Greenwich).
 ',
         ],
@@ -14685,7 +15274,8 @@ Replaced by DGN95.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bangladesh - onshore; India - mainland onshore; Myanmar (Burma) - onshore; Pakistan - onshore.',
+            'extent_name' => 'Asia - Bangladesh; India; Myanmar; Pakistan - onshore',
+            'extent_description' => 'Bangladesh - onshore; India - mainland onshore; Myanmar (Burma) - onshore; Pakistan - onshore',
             'help' => 'Fundamental point: Kalianpur. Latitude: 24°07\'11.260"N, longitude: 77°39\'17.570"E (of Greenwich).
 Includes 1916 extension into Burma (Myanmar). Replaced by 1937 adjustment.',
         ],
@@ -14696,7 +15286,8 @@ Includes 1916 extension into Burma (Myanmar). Replaced by 1937 adjustment.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sri Lanka - onshore.',
+            'extent_name' => 'Sri Lanka - onshore',
+            'extent_description' => 'Sri Lanka - onshore',
             'help' => 'Fundamental point: Kandawala. Latitude: 7°14\'06.838"N, longitude: 79°52\'36.670"E.
 ',
         ],
@@ -14707,7 +15298,8 @@ Includes 1916 extension into Burma (Myanmar). Replaced by 1937 adjustment.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore.',
+            'extent_name' => 'Asia - Malaysia (west including SCS) and Singapore',
+            'extent_description' => 'Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore',
             'help' => 'Fundamental point: Kertau. Latitude: 3°27\'50.710"N, longitude: 102°37\'24.550"E (of Greenwich).
 Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 inches per metre. Not used for 1969 metrication of RSO grid - see Kertau (RSO) (code 6751).',
         ],
@@ -14718,7 +15310,8 @@ Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 in
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kuwait - onshore.',
+            'extent_name' => 'Kuwait - onshore',
+            'extent_description' => 'Kuwait - onshore',
             'help' => 'Fundamental point: K28.  Latitude: 29°03\'42.348"N, longitude: 48°08\'42.558"E (of Greenwich).
 ',
         ],
@@ -14729,7 +15322,8 @@ Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 in
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Venezuela - onshore.',
+            'extent_name' => 'Venezuela - onshore',
+            'extent_description' => 'Venezuela - onshore',
             'help' => 'Fundamental point: La Canoa. Latitude: 8°34\'17.170"N, longitude: 63°51\'34.880"W (of Greenwich).
 Origin and network incorporated within PSAD56 (datum code 6248).',
         ],
@@ -14740,7 +15334,8 @@ Origin and network incorporated within PSAD56 (datum code 6248).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Aruba - onshore; Bolivia; Bonaire - onshore; Brazil - offshore - Amazon Cone shelf; Chile - onshore north of 43°30\'S; Curacao - onshore; Ecuador - mainland onshore; Guyana - onshore; Peru - onshore; Venezuela - onshore.',
+            'extent_name' => 'South America - PSAD56 by country',
+            'extent_description' => 'Aruba - onshore; Bolivia; Bonaire - onshore; Brazil - offshore - Amazon Cone shelf; Chile - onshore north of 43°30\'S; Curacao - onshore; Ecuador - mainland onshore; Guyana - onshore; Peru - onshore; Venezuela - onshore',
             'help' => 'Fundamental point: La Canoa. Latitude: 8°34\'17.170"N, longitude: 63°51\'34.880"W (of Greenwich).
 Same origin as La Canoa datum.',
         ],
@@ -14751,7 +15346,8 @@ Same origin as La Canoa datum.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Venezuela - Lake Maracaibo area, onshore and offshore in lake.',
+            'extent_name' => 'Venezuela - Lake Maracaibo',
+            'extent_description' => 'Venezuela - Lake Maracaibo area, onshore and offshore in lake',
             'help' => 'Fundamental point: Maracaibo Cathedral. Latitude: 10°38\'34.678"N, longitude: 71°36\'20.224"W (of Greenwich).
 ',
         ],
@@ -14762,7 +15358,8 @@ Same origin as La Canoa datum.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ghana - onshore and offshore.',
+            'extent_name' => 'Ghana',
+            'extent_description' => 'Ghana - onshore and offshore',
             'help' => 'Fundamental point: GCS Station 121, Leigon. Latitude: 5°38\'52.27"N, longitude: 0°11\'46.08"W (of Greenwich).
 Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental point defined as Accra datum values for that point.',
         ],
@@ -14773,7 +15370,8 @@ Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental po
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liberia - onshore.',
+            'extent_name' => 'Liberia - onshore',
+            'extent_description' => 'Liberia - onshore',
             'help' => 'Fundamental point: Robertsfield. Latitude: 6°13\'53.02"N, longitude: 10°21\'35.44"W (of Greenwich).
 ',
         ],
@@ -14784,7 +15382,8 @@ Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental po
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Togo - onshore and offshore.',
+            'extent_name' => 'Togo',
+            'extent_description' => 'Togo - onshore and offshore',
             'help' => '
 ',
         ],
@@ -14795,7 +15394,8 @@ Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental po
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Philippines - onshore.',
+            'extent_name' => 'Philippines - onshore',
+            'extent_description' => 'Philippines - onshore',
             'help' => 'Fundamental point: Balacan. Latitude: 13°33\'41.000"N, longitude: 121°52\'03.000"E (of Greenwich).
 Replaced by Philippine Reference system of 1992 (datum code 6683).',
         ],
@@ -14806,7 +15406,8 @@ Replaced by Philippine Reference system of 1992 (datum code 6683).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, onshore and offshore Atlantic west of 66°W.',
+            'extent_name' => 'South America - Tierra del Fuego',
+            'extent_description' => 'Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, onshore and offshore Atlantic west of 66°W',
             'help' => 'Chile-Argentina boundary survey.
 Used in Tierra del Fuego.',
         ],
@@ -14817,7 +15418,8 @@ Used in Tierra del Fuego.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Afghanistan.',
+            'extent_name' => 'Afghanistan',
+            'extent_description' => 'Afghanistan',
             'help' => 'Fundamental point: Herat North. Latitude: 34°23\'09.08"N, longitude: 64°10\'58.94"E (of Greenwich).
 ',
         ],
@@ -14828,7 +15430,8 @@ Used in Tierra del Fuego.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Seychelles - Mahe Island.',
+            'extent_name' => 'Seychelles - Mahe Island',
+            'extent_description' => 'Seychelles - Mahe Island',
             'help' => 'Fundamental point: Station SITE. Latitude: 4°40\'14.644"S, longitude: 55°28\'44.488"E (of Greenwich).
 South East Island 1943 (datum code 1138) used for topographic mapping, cadastral and hydrographic survey.',
         ],
@@ -14839,7 +15442,8 @@ South East Island 1943 (datum code 1138) used for topographic mapping, cadastral
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - south west Sulawesi.',
+            'extent_name' => 'Indonesia - Sulawesi SW',
+            'extent_description' => 'Indonesia - south west Sulawesi',
             'help' => 'Fundamental point: station P1, Moncongloe. Latitude: 5°08\'41.42"S, long 119°24\'14.94"E (of Greenwich).
 ',
         ],
@@ -14850,7 +15454,8 @@ South East Island 1943 (datum code 1138) used for topographic mapping, cadastral
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State.',
+            'extent_name' => 'Europe - ETRF by country',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'ensemble' => [
                 'urn:ogc:def:datum:EPSG::1178',
                 'urn:ogc:def:datum:EPSG::1179',
@@ -14874,7 +15479,8 @@ Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.',
+            'extent_name' => 'Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore',
+            'extent_description' => 'Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore',
             'help' => 'Fundamental point: Station Y at Malongo base camp. Latitude: 5°23\'30.810"S, longitude: 12°12\'01.590"E (of Greenwich).
 Replaced Mhast (offshore) (code 6705) in 1987. Origin coordinates constrained to those of Mhast (offshore) but other station coordinates differ. References to "Mhast" since 1987 often should have stated "Malongo 1987".',
         ],
@@ -14885,7 +15491,8 @@ Replaced Mhast (offshore) (code 6705) in 1987. Origin coordinates constrained to
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Africa - Morocco and Western Sahara - onshore.',
+            'extent_name' => 'Africa - Morocco and Western Sahara - onshore',
+            'extent_description' => 'Africa - Morocco and Western Sahara - onshore',
             'help' => 'Fundamental point: Merchich. Latitude: 33°26\'59.672"N, longitude: 7°33\'27.295"W (of Greenwich).
 ',
         ],
@@ -14896,7 +15503,8 @@ Replaced Mhast (offshore) (code 6705) in 1987. Origin coordinates constrained to
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Eritrea - onshore and offshore.',
+            'extent_name' => 'Eritrea',
+            'extent_description' => 'Eritrea - onshore and offshore',
             'help' => '
 ',
         ],
@@ -14907,7 +15515,8 @@ Replaced Mhast (offshore) (code 6705) in 1987. Origin coordinates constrained to
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Nigeria - onshore and offshore.',
+            'extent_name' => 'Nigeria',
+            'extent_description' => 'Nigeria - onshore and offshore',
             'help' => 'Fundamental point: Minna base station L40. Latitude: 9°38\'08.87"N, longitude: 6°30\'58.76"E (of Greenwich).
 ',
         ],
@@ -14918,7 +15527,8 @@ Replaced Mhast (offshore) (code 6705) in 1987. Origin coordinates constrained to
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State.',
+            'extent_name' => 'Italy - including San Marino and Vatican',
+            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State',
             'help' => 'Fundamental point: Monte Mario. Latitude: 41°55\'25.51"N, longitude: 12°27\'08.4"E (of Greenwich).
 Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
         ],
@@ -14929,7 +15539,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Gabon - onshore and offshore.',
+            'extent_name' => 'Gabon',
+            'extent_description' => 'Gabon - onshore and offshore',
             'help' => '
 ',
         ],
@@ -14940,7 +15551,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba - onshore and offshore. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. United States (USA) onshore and offshore - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore.',
+            'extent_name' => 'North America - NAD27',
+            'extent_description' => 'North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba - onshore and offshore. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. United States (USA) onshore and offshore - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore',
             'help' => 'Fundamental point: Meade\'s Ranch. Latitude: 39°13\'26.686"N, longitude: 98°32\'30.506"W (of Greenwich).
 In United States (USA) and Canada, replaced by North American Datum 1983 (NAD83) (code 6269) ; in Mexico, replaced by Mexican Datum of 1993 (code 1042).',
         ],
@@ -14951,7 +15563,8 @@ In United States (USA) and Canada, replaced by North American Datum 1983 (NAD83)
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. United States (USA) - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.',
+            'extent_name' => 'North America - NAD83',
+            'extent_description' => 'North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. United States (USA) - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands',
             'help' => 'NAD83 Doppler Transit stations in NWL 9D were aligned with the BIH Conventional Terrestrial Reference Frame (BTS) at epoch 1984.0 using an internationally adopted transformation. NAD83 is now known to be non-geocentric by about 2.2 meters.
 Although the 1986 adjustment included connections to Greenland and Mexico, it has not been adopted there. In Canada and US, replaced NAD27.',
         ],
@@ -14962,7 +15575,8 @@ Although the 1986 adjustment included connections to Greenland and Mexico, it ha
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Arabian Gulf; Qatar - offshore; United Arab Emirates (UAE) - Abu Dhabi; Dubai; Sharjah; Ajman; Fujairah; Ras Al Kaimah; Umm Al Qaiwain - onshore and offshore.',
+            'extent_name' => 'Asia - Middle East - Qatar offshore and UAE',
+            'extent_description' => 'Arabian Gulf; Qatar - offshore; United Arab Emirates (UAE) - Abu Dhabi; Dubai; Sharjah; Ajman; Fujairah; Ras Al Kaimah; Umm Al Qaiwain - onshore and offshore',
             'help' => 'Fundamental point: Nahrwan south base.  Latitude: 33°19\'10.87"N, longitude: 44°43\'25.54"E (of Greenwich).
 ',
         ],
@@ -14973,7 +15587,8 @@ Although the 1986 adjustment included connections to Greenland and Mexico, it ha
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Trinidad and Tobago - Tobago - onshore.',
+            'extent_name' => 'Trinidad and Tobago - Tobago - onshore',
+            'extent_description' => 'Trinidad and Tobago - Tobago - onshore',
             'help' => 'Fundamental point: Naparima. Latitude: 10°16\'44.860"N, longitude: 61°27\'34.620"W (of Greenwich).
 Naparima 1972 is an extension to Tobago of the Naparima 1955 network of Trinidad.',
         ],
@@ -14984,7 +15599,8 @@ Naparima 1972 is an extension to Tobago of the Naparima 1955 network of Trinidad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - North Island, South Island, Stewart Island - onshore and nearshore.',
+            'extent_name' => 'New Zealand - onshore and nearshore',
+            'extent_description' => 'New Zealand - North Island, South Island, Stewart Island - onshore and nearshore',
             'help' => 'Fundamental point: Papatahi. Latitude: 41°19\' 8.900"S, longitude: 175°02\'51.000"E (of Greenwich).
 Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.',
         ],
@@ -14995,7 +15611,8 @@ Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Norway - onshore.',
+            'extent_name' => 'Norway - onshore',
+            'extent_description' => 'Norway - onshore',
             'help' => 'Fundamental point: Oslo observatory. Latitude: 59°54\'43.7"N, longitude: 10°43\'22.5"E (of Greenwich).
 ',
         ],
@@ -15006,7 +15623,8 @@ Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - mainland - onshore.',
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
             'help' => 'Fundamental point:  TF4, Melrica. Latitude: 39°41\'37.30"N, longitude: 8°07\'53.31"W (of Greenwich).
 ',
         ],
@@ -15017,7 +15635,8 @@ Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - onshore - mainland and Corsica.',
+            'extent_name' => 'France - onshore - mainland and Corsica',
+            'extent_description' => 'France - onshore - mainland and Corsica',
             'help' => 'Fundamental point: Pantheon. Latitude: 48°50\'46.522"N, longitude: 2°20\'48.667"E (of Greenwich).
 ',
         ],
@@ -15028,7 +15647,8 @@ Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Transit precise ephemeris before 1991.',
         ],
@@ -15039,7 +15659,8 @@ Transit precise ephemeris before 1991.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - offshore to boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore.',
+            'extent_name' => 'UK - Britain and UKCS 49°45\'N to 61°N, 9°W to 2°E',
+            'extent_description' => 'United Kingdom (UK) - offshore to boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore',
             'help' => 'Prior to 2002 fundamental point: Herstmonceux, Latitude: 50°51\'55.271"N, longitude: 0°20\'45.882"E, triangulation adjustment started 1936, completed 1962. From April 2002 the datum is defined through the application of the OSTN transformation from ETRS89.
 The average accuracy of OSTN compared to the old triangulation network (down to 3rd order) is 0.1m. With the introduction of OSTN15, the area for OGSB36 has effectively been extended from Britain to cover the adjacent UK Continental Shelf.',
         ],
@@ -15050,7 +15671,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore.',
+            'extent_name' => 'UK - Great Britain onshore and nearshore; Isle of Man',
+            'extent_description' => 'United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore',
             'help' => 'Fundamental point: Herstmonceux. Latitude: 50°51\'55.271"N, longitude: 0°20\'45.882"E (of Greenwich).
 ',
         ],
@@ -15061,7 +15683,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - onshore - England; Scotland; Wales; Northern Ireland. Isle of Man.',
+            'extent_name' => 'Europe - British Isles - UK and Ireland onshore',
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - onshore - England; Scotland; Wales; Northern Ireland. Isle of Man',
             'help' => 'Fundamental point: Herstmonceux. Latitude: 50°51\'55.271"N, longitude: 0°20\'45.882"E (of Greenwich).
 ',
         ],
@@ -15072,7 +15695,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Israel - onshore; Jordan; Palestine Territory - onshore.',
+            'extent_name' => 'Asia - Middle East - Israel, Jordan and Palestine onshore',
+            'extent_description' => 'Israel - onshore; Jordan; Palestine Territory - onshore',
             'help' => 'Fundamental point: Point 82\'M  Jerusalem. Latitude: 31°44\' 2.749"N, longitude: 35°12\'43.490"E (of Greenwich).
 ',
         ],
@@ -15083,7 +15707,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Congo - onshore and offshore.',
+            'extent_name' => 'Congo',
+            'extent_description' => 'Congo - onshore and offshore',
             'help' => 'Fundamental point: Point Noire Astro. Latitude: 4°47\'00.10"S, longitude: 11°51\'01.55"E (of Greenwich).
 ',
         ],
@@ -15094,7 +15719,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore.',
+            'extent_name' => 'Australia - GDA',
+            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore',
             'help' => 'ITRF92 at epoch 1994.0.
 ',
         ],
@@ -15105,7 +15731,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.',
+            'extent_name' => 'Europe - FSU onshore',
+            'extent_description' => 'Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan',
             'help' => 'Fundamental point: Pulkovo observatory. Latitude: 59°46\'18.550"N, longitude: 30°19\'42.090"E (of Greenwich).
 ',
         ],
@@ -15116,7 +15743,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Qatar - onshore and offshore.',
+            'extent_name' => 'Qatar',
+            'extent_description' => 'Qatar - onshore and offshore',
             'help' => 'Fundamental point: Station G3.
 ',
         ],
@@ -15127,7 +15755,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Qatar - onshore.',
+            'extent_name' => 'Qatar - onshore',
+            'extent_description' => 'Qatar - onshore',
             'help' => 'Fundamental point: Sokey 0 M. Latitude: 25°22\'56.500"N, longitude: 50°45\'41.000"E (of Greenwich).
 ',
         ],
@@ -15138,7 +15767,8 @@ The average accuracy of OSTN compared to the old triangulation network (down to 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Venezuela - onshore north of approximately 7°45\'N.',
+            'extent_name' => 'Venezuela - north of 7°45\'N',
+            'extent_description' => 'Venezuela - onshore north of approximately 7°45\'N',
             'help' => 'Fundamental point: Loma Quintana.
 Replaced by La Canoa (code 6247).',
         ],
@@ -15149,7 +15779,8 @@ Replaced by La Canoa (code 6247).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.',
+            'extent_name' => 'Netherlands - onshore',
+            'extent_description' => 'Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone',
             'help' => 'Originally defined through fundamental point Amersfoort, latitude 52°09\'22.178"N, longitude 5°23\'15.478"E (of Greenwich). Since 2000-10-01 has been redefined as derived from ETRS89 by application of the official transformation RDNAPTRANS(TM).
 ',
         ],
@@ -15160,7 +15791,8 @@ Replaced by La Canoa (code 6247).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Falkland Islands (Malvinas) - onshore.',
+            'extent_name' => 'Falkland Islands - onshore',
+            'extent_description' => 'Falkland Islands (Malvinas) - onshore',
             'help' => '
 ',
         ],
@@ -15171,7 +15803,8 @@ Replaced by La Canoa (code 6247).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Namibia - onshore and offshore.',
+            'extent_name' => 'Namibia',
+            'extent_description' => 'Namibia - onshore and offshore',
             'help' => 'Fundamental point: Schwarzeck. Latitude: 22°45\'35.820"S, longitude: 18°40\'34.549"E (of Greenwich). Fixed during German South West Africa-British Bechuanaland boundary survey of 1898-1903.
 ',
         ],
@@ -15182,7 +15815,8 @@ Replaced by La Canoa (code 6247).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - west Kalimantan - onshore coastal area.',
+            'extent_name' => 'Indonesia - Kalimantan W - coastal',
+            'extent_description' => 'Indonesia - west Kalimantan - onshore coastal area',
             'help' => 'Fundamental point: Ep A. Latitude: 1°06\'10.60"N, longitude: 105°00\'59.82"E (of Greenwich).
 ',
         ],
@@ -15193,7 +15827,8 @@ Replaced by La Canoa (code 6247).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Madagascar - onshore and nearshore.',
+            'extent_name' => 'Madagascar - onshore and nearshore',
+            'extent_description' => 'Madagascar - onshore and nearshore',
             'help' => 'Fundamental point: Tananarive observatory. Latitude: 18°55\'02.10"S, longitude: 47°33\'06.75"E (of Greenwich).
 ',
         ],
@@ -15204,7 +15839,8 @@ Replaced by La Canoa (code 6247).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore.',
+            'extent_name' => 'Asia - Brunei and East Malaysia',
+            'extent_description' => 'Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore',
             'help' => 'Fundamental point: Station P85 at Timbalai. Latitude: 5°17\' 3.548"N, longitude: 115°10\'56.409"E (of Greenwich).
 In 1968, the original adjustment was densified in Sarawak and extended to Sabah.',
         ],
@@ -15215,7 +15851,8 @@ In 1968, the original adjustment was densified in Sarawak and extended to Sabah.
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Adjusted to best mean fit 12 stations of the OSNI 1952 primary adjustment.
 Differences between OSNI 1952 and TM65 at these stations are RMS 0.25m east, 0.23m north, maximum vector 0.57m. TM65 replaced by and not to be confused with Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum code 6300).',
         ],
@@ -15226,7 +15863,8 @@ Differences between OSNI 1952 and TM65 at these stations are RMS 0.25m east, 0.2
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore.',
+            'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Adjusted to best mean fit 9 stations of the OSNI 1952 primary adjustment in Northern Ireland plus the 1965 values of 3 stations in the Republic of Ireland.
 Differences from the 1965 adjustment (datum code 6299) are: average difference in Eastings 0.092m; average difference in Northings 0.108m; maximum vector difference 0.548m.',
         ],
@@ -15237,7 +15875,8 @@ Differences from the 1965 adjustment (datum code 6299) are: average difference i
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore; North Korea - onshore; South Korea - onshore.',
+            'extent_name' => 'Asia - Japan and Korea',
+            'extent_description' => 'Japan - onshore; North Korea - onshore; South Korea - onshore',
             'help' => 'Fundamental point: Nikon-Keido-Genten. Latitude: 35°39\'17.5148"N, longitude: 139°44\'40.5020"E (of Greenwich). Longitude derived in 1918.
 In Japan, replaces Tokyo 1892 (code 1048) and replaced by Japanese Geodetic Datum 2000 (code 6611). In Korea used only for geodetic applications before being replaced by Korean 1985 (code 6162).',
         ],
@@ -15248,7 +15887,8 @@ In Japan, replaces Tokyo 1892 (code 1048) and replaced by Japanese Geodetic Datu
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Trinidad and Tobago - Trinidad - onshore and offshore.',
+            'extent_name' => 'Trinidad and Tobago - Trinidad',
+            'extent_description' => 'Trinidad and Tobago - Trinidad - onshore and offshore',
             'help' => 'Station 00, Harbour Master\'s Flagstaff, Port of Spain.
 Trinidad 1903 / Trinidad Grid coordinates (Clarke\'s links): 333604.30 E, 436366.91 N (Latitude: 10°38\'39.01"N,  Longitude: 61°30\'38.00"W of Greenwich)
 ',
@@ -15260,7 +15900,8 @@ Trinidad 1903 / Trinidad Grid coordinates (Clarke\'s links): 333604.30 E, 436366
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United Arab Emirates (UAE) - Abu Dhabi onshore and Dubai onshore.',
+            'extent_name' => 'UAE - Abu Dhabi and Dubai - onshore',
+            'extent_description' => 'United Arab Emirates (UAE) - Abu Dhabi onshore and Dubai onshore',
             'help' => 'Fundamental point: TC1. Latitude: 25°23\'50.190"N, longitude: 55°26\'43.950"E (of Greenwich).
 ',
         ],
@@ -15271,7 +15912,8 @@ Trinidad 1903 / Trinidad Grid coordinates (Clarke\'s links): 333604.30 E, 436366
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore north of 32°N.',
+            'extent_name' => 'Algeria - north of 32°N',
+            'extent_description' => 'Algeria - onshore north of 32°N',
             'help' => 'Fundamental point: Voirol. Latitude: 36°45\'07.927"N, longitude: 3°02\'49.435"E of Greenwich. Uses RGS (and old IGN) value of 2°20\'13.95"for Greenwich-Paris meridian difference.
 Replaced by Voirol 1879 (code 6671).',
         ],
@@ -15282,7 +15924,8 @@ Replaced by Voirol 1879 (code 6671).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Fundamental point: Old Bern observatory. Latitude: 46°57\'07.890"N, longitude: 7°26\'22.335"E (of Greenwich).
 This redetermination of the coordinates of fundamental point is used for scientific purposes and as the graticule overprinted on topographic maps constructed on the CH1903 / LV03 projected CS (code 21781).',
         ],
@@ -15293,7 +15936,8 @@ This redetermination of the coordinates of fundamental point is used for scienti
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore and offshore.',
+            'extent_name' => 'Algeria',
+            'extent_description' => 'Algeria - onshore and offshore',
             'help' => 'Coordinates of primary network readjusted on ED50 datum and then transformed conformally to Clarke 1880 (RGS) ellipsoid.
 Adjustment includes Morocco and Tunisia but use only in Algeria. Within Algeria the adjustment is north of 32°N but use has been extended southwards in many disconnected projects, some based on independent astro stations rather than the geodetic network.',
         ],
@@ -15304,7 +15948,8 @@ Adjustment includes Morocco and Tunisia but use only in Algeria. Within Algeria 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sweden - onshore.',
+            'extent_name' => 'Sweden - onshore',
+            'extent_description' => 'Sweden - onshore',
             'help' => 'Fundamental point: Stockholm observatory.
 Replaced by RT90 adjustment (datum code 6124)',
         ],
@@ -15315,7 +15960,8 @@ Replaced by RT90 adjustment (datum code 6124)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Uruguay - onshore.',
+            'extent_name' => 'Uruguay - onshore',
+            'extent_description' => 'Uruguay - onshore',
             'help' => 'Fundamental point: Yacare. Latitude: 30°35\'53.68"S, longitude: 57°25\'01.30"W (of Greenwich).
 ',
         ],
@@ -15326,7 +15972,8 @@ Replaced by RT90 adjustment (datum code 6124)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Senegal - onshore and offshore.',
+            'extent_name' => 'Senegal',
+            'extent_description' => 'Senegal - onshore and offshore',
             'help' => 'Fundamental point: Yoff. Latitude: 14°44\'41.62"N, longitude: 17°29\'07.02"W (of Greenwich).
 ',
         ],
@@ -15337,7 +15984,8 @@ Replaced by RT90 adjustment (datum code 6124)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Suriname - onshore and offshore.',
+            'extent_name' => 'Suriname',
+            'extent_description' => 'Suriname - onshore and offshore',
             'help' => '
 ',
         ],
@@ -15348,7 +15996,8 @@ Replaced by RT90 adjustment (datum code 6124)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria.',
+            'extent_name' => 'Austria',
+            'extent_description' => 'Austria',
             'help' => 'Fundamental point: Hermannskogel. Latitude: 48°16\'15.29"N, longitude: 16°17\'41.06"E (of Greenwich).
 The longitude of the datum origin equates to a value for the Ferro meridian of 17°40\' exactly west of Greenwich.',
         ],
@@ -15359,7 +16008,8 @@ The longitude of the datum origin equates to a value for the Ferro meridian of 1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Belgium - onshore.',
+            'extent_name' => 'Belgium - onshore',
+            'extent_description' => 'Belgium - onshore',
             'help' => 'Fundamental point: Uccle observatory. Latitude: 50°47\'57.704"N, longitude: 4°21\'24.983"E (of Greenwich).
 ',
         ],
@@ -15370,7 +16020,8 @@ The longitude of the datum origin equates to a value for the Ferro meridian of 1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein.',
+            'extent_name' => 'Germany - West Germany all states',
+            'extent_description' => 'Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein',
             'help' => 'Fundamental point: Rauenberg. Latitude: 52°27\'12.021"N, longitude: 13°22\'04.928"E (of Greenwich).  This station was destroyed in 1910 and the station at Potsdam substituted as the fundamental point.
 ',
         ],
@@ -15381,7 +16032,8 @@ The longitude of the datum origin equates to a value for the Ferro meridian of 1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guinea - onshore.',
+            'extent_name' => 'Guinea - onshore',
+            'extent_description' => 'Guinea - onshore',
             'help' => 'Fundamental point: Conakry. Latitude: 10.573766g N, longitude: 17.833682g W (of Paris).
 ',
         ],
@@ -15392,7 +16044,8 @@ The longitude of the datum origin equates to a value for the Ferro meridian of 1
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Romania - onshore.',
+            'extent_name' => 'Romania - onshore',
+            'extent_description' => 'Romania - onshore',
             'help' => 'Fundamental point: latitude 44°24\'33.9606"N, longitude 26°06\'44.8772"E (of Greenwich).
 Replaced by Pulkovo 1942(58) (datum code 6179)',
         ],
@@ -15403,7 +16056,8 @@ Replaced by Pulkovo 1942(58) (datum code 6179)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kuwait - onshore.',
+            'extent_name' => 'Kuwait - onshore',
+            'extent_description' => 'Kuwait - onshore',
             'help' => '
 Replaces 1984 adjustment which used the WGS72 ellipsoid.',
         ],
@@ -15414,7 +16068,8 @@ Replaces 1984 adjustment which used the WGS72 ellipsoid.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kuwait - Kuwait City.',
+            'extent_name' => 'Kuwait - Kuwait City',
+            'extent_description' => 'Kuwait - Kuwait City',
             'help' => '
 ',
         ],
@@ -15425,7 +16080,8 @@ Replaces 1984 adjustment which used the WGS72 ellipsoid.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1972.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Developed from a worldwide distribution of terrestrial and geodetic satellite observations and defined through a set of station coordinates.
 Used by GPS before 1987. For Transit satellite positioning see also WGS 72BE.',
         ],
@@ -15436,7 +16092,8 @@ Used by GPS before 1987. For Transit satellite positioning see also WGS 72BE.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1972.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => '
 Alleged datum for use with Transit broadcast ephemeris prior to 1989. Relationship to WGS 72 has changed over time.',
         ],
@@ -15447,7 +16104,8 @@ Alleged datum for use with Transit broadcast ephemeris prior to 1989. Relationsh
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'ensemble' => [
                 'urn:ogc:def:datum:EPSG::1166',
                 'urn:ogc:def:datum:EPSG::1152',
@@ -15467,7 +16125,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Anguilla - onshore.',
+            'extent_name' => 'Anguilla - onshore',
+            'extent_description' => 'Anguilla - onshore',
             'help' => 'Fundamental point: station A4, Police.
 ',
         ],
@@ -15478,7 +16137,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Antigua island - onshore.',
+            'extent_name' => 'Antigua - onshore',
+            'extent_description' => 'Antigua island - onshore',
             'help' => 'Fundamental point: station A14.
 ',
         ],
@@ -15489,7 +16149,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Dominica - onshore.',
+            'extent_name' => 'Dominica - onshore',
+            'extent_description' => 'Dominica - onshore',
             'help' => 'Fundamental point: station M12.
 ',
         ],
@@ -15500,7 +16161,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Grenada and southern Grenadine Islands - onshore.',
+            'extent_name' => 'Grenada and southern Grenadines - onshore',
+            'extent_description' => 'Grenada and southern Grenadine Islands - onshore',
             'help' => 'Fundamental point: station GS8, Sante Marie.
 ',
         ],
@@ -15511,7 +16173,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Montserrat - onshore.',
+            'extent_name' => 'Montserrat - onshore',
+            'extent_description' => 'Montserrat - onshore',
             'help' => 'Fundamental point: station M36.
 ',
         ],
@@ -15522,7 +16185,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Kitts and Nevis - onshore.',
+            'extent_name' => 'St Kitts and Nevis - onshore',
+            'extent_description' => 'St Kitts and Nevis - onshore',
             'help' => 'Fundamental point: station K12.
 ',
         ],
@@ -15533,7 +16197,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Lucia - onshore.',
+            'extent_name' => 'St Lucia - onshore',
+            'extent_description' => 'St Lucia - onshore',
             'help' => 'Fundamental point: station DCS3.
 ',
         ],
@@ -15544,7 +16209,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Vincent and the northern Grenadine Islands - onshore.',
+            'extent_name' => 'St Vincent and the Grenadines - onshore',
+            'extent_description' => 'St Vincent and the northern Grenadine Islands - onshore',
             'help' => 'Fundamental point: station V1, Fort Charlotte.
 ',
         ],
@@ -15555,7 +16221,8 @@ EPSG::6326 has been the then current realization. No distinction is made between
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - Ontario.',
+            'extent_name' => 'Canada - Ontario',
+            'extent_description' => 'Canada - Ontario',
             'help' => 'Fundamental point: Meade\'s Ranch. Latitude: 39°13\'26.686"N, longitude: 98°32\'30.506"W (of Greenwich).
 NAD27(76) used in Ontario for all maps at scale 1/20 000 and larger; elsewhere in Canada for selected purposes.',
         ],
@@ -15566,7 +16233,8 @@ NAD27(76) used in Ontario for all maps at scale 1/20 000 and larger; elsewhere i
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Canada - Quebec.',
+            'extent_name' => 'Canada - Quebec',
+            'extent_description' => 'Canada - Quebec',
             'help' => 'Fundamental point: Meade\'s Ranch. Latitude: 39°13\'26.686"N, longitude: 98°32\'30.506"W (of Greenwich).
 NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generally for maps issued by the Quebec cartography office whose reference system is CGQ77.',
         ],
@@ -15577,7 +16245,8 @@ NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generall
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - onshore.',
+            'extent_name' => 'China - onshore',
+            'extent_description' => 'China - onshore',
             'help' => 'Xian observatory.
 ',
         ],
@@ -15588,7 +16257,8 @@ NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generall
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Hong Kong - onshore and offshore.',
+            'extent_name' => 'China - Hong Kong',
+            'extent_description' => 'China - Hong Kong - onshore and offshore',
             'help' => 'Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude 22°18\'12.82"N, longitude 114°10\'18.75"E (of Greenwich).
 Replaces Hong Kong 1963 and Hong Kong 1963(67).',
         ],
@@ -15599,7 +16269,8 @@ Replaces Hong Kong 1963 and Hong Kong 1963(67).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore and offshore.',
+            'extent_name' => 'Japan',
+            'extent_description' => 'Japan - onshore and offshore',
             'help' => 'ITRF94 at epoch 1997.0. Fundamental point: Tokyo-Taisho, latitude: 35°39\'29.1572"N, longitude: 139°44\'28.8759"E (of Greenwich).
 Instigated under amendment to the Japanese Surveying Law with effect from April 2002. Replaces Tokyo datum (code 6301). Replaced by JGD2011 (datum code 1128) with effect from 21st October 2011.',
         ],
@@ -15610,7 +16281,8 @@ Instigated under amendment to the Japanese Surveying Law with effect from April 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf areas.',
+            'extent_name' => 'Indonesia - Kalimantan E',
+            'extent_description' => 'Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf areas',
             'help' => 'Station P5 (Gunung Segara). Latitude 0°32\'12.83"S, longitude 117°08\'48.47"E (of Greenwich).
 ',
         ],
@@ -15621,7 +16293,8 @@ Instigated under amendment to the Japanese Surveying Law with effect from April 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Qatar - onshore.',
+            'extent_name' => 'Qatar - onshore',
+            'extent_description' => 'Qatar - onshore',
             'help' => 'Defined by transformation from WGS 84 - see coordinate operation code 1840.
 ',
         ],
@@ -15632,7 +16305,8 @@ Instigated under amendment to the Japanese Surveying Law with effect from April 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - Madeira, Porto Santo and Desertas islands - onshore.',
+            'extent_name' => 'Portugal - Madeira archipelago onshore',
+            'extent_description' => 'Portugal - Madeira, Porto Santo and Desertas islands - onshore',
             'help' => 'SE Base on Porto Santo island.
 Replaced by 1995 adjustment (datum code 6663). For Selvagens see Selvagem Grande (code 6616).',
         ],
@@ -15643,7 +16317,8 @@ Replaced by 1995 adjustment (datum code 6663). For Selvagens see Selvagem Grande
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - Selvagens islands (Madeira province) - onshore.',
+            'extent_name' => 'Portugal - Selvagens onshore',
+            'extent_description' => 'Portugal - Selvagens islands (Madeira province) - onshore',
             'help' => '
 ',
         ],
@@ -15654,7 +16329,8 @@ Replaced by 1995 adjustment (datum code 6663). For Selvagens see Selvagem Grande
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Brazil - onshore and offshore. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego.',
+            'extent_name' => 'South America - SAD69 by country',
+            'extent_description' => 'Brazil - onshore and offshore. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego',
             'help' => 'Fundamental point: Chua. Geodetic latitude: 19°45\'41.6527"S; geodetic longitude: 48°06\'04.0639"W (of Greenwich). (Astronomic coordinates: Latitude 19°45\'41.34"S +/- 0.05", longitude 48°06\'07.80"W +/- 0.08").
 SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. In Brazil only, replaced by SAD69(96) (datum code 1075).',
         ],
@@ -15665,7 +16341,8 @@ SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. In Brazi
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sweden - onshore and offshore.',
+            'extent_name' => 'Sweden',
+            'extent_description' => 'Sweden - onshore and offshore',
             'help' => 'Densification of ETRS89.
 The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been corrected to ETRS89 in accordance with guidelines given by EUREF.',
         ],
@@ -15676,7 +16353,8 @@ The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been co
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Senegal - central, Mali - southwest, Burkina Faso - central, Niger - southwest, Nigeria - north, Chad - central. All in proximity to the parallel of latitude of 12°N.',
+            'extent_name' => 'Africa - 12th parallel N',
+            'extent_description' => 'Senegal - central, Mali - southwest, Burkina Faso - central, Niger - southwest, Nigeria - north, Chad - central. All in proximity to the parallel of latitude of 12°N',
             'help' => 'Fundamental point: Point 58. Latitude: 12°52\'44.045"N, longitude: 3°58\'37.040"E (of Greenwich).
 Used as the basis for computation of the 12th Parallel traverse conducted 1966-70 from Senegal to Chad and connecting to the Blue Nile 1958 (Adindan) triangulation in Sudan.',
         ],
@@ -15687,7 +16365,8 @@ Used as the basis for computation of the 12th Parallel traverse conducted 1966-7
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - St Martin and St Barthélemy islands.',
+            'extent_name' => 'Guadeloupe - St Martin and St Barthelemy - onshore',
+            'extent_description' => 'Guadeloupe - onshore - St Martin and St Barthélemy islands',
             'help' => '
 Replaced by RRAF 1991 (datum code 1047).',
         ],
@@ -15698,7 +16377,8 @@ Replaced by RRAF 1991 (datum code 1047).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes.',
+            'extent_name' => 'Guadeloupe - Grande-Terre and surrounding islands - onshore',
+            'extent_description' => 'Guadeloupe - onshore - Basse-Terre, Grande-Terre, La Desirade, Marie-Galante, Les Saintes',
             'help' => '
 Replaced by RRAF 1991 (datum code 1047).',
         ],
@@ -15709,7 +16389,8 @@ Replaced by RRAF 1991 (datum code 1047).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Guiana - coastal area.',
+            'extent_name' => 'French Guiana - coastal area',
+            'extent_description' => 'French Guiana - coastal area',
             'help' => 'Fundamental point: Kourou-Diane. Latitude: 5°15\'53.699"N, longitude: 52°48\'09.149"W (of Greenwich).
 Replaced by RGFG95 (code 6624).',
         ],
@@ -15720,7 +16401,8 @@ Replaced by RGFG95 (code 6624).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Guiana - onshore and offshore.',
+            'extent_name' => 'French Guiana',
+            'extent_description' => 'French Guiana - onshore and offshore',
             'help' => 'ITRF93 at epoch 1995.0
 Replaces CSG67 (datum code 6623).',
         ],
@@ -15731,7 +16413,8 @@ Replaces CSG67 (datum code 6623).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Martinique - onshore.',
+            'extent_name' => 'Martinique - onshore',
+            'extent_description' => 'Martinique - onshore',
             'help' => 'Fundamental point: Fort Desaix. Latitude: 14°36\'54.090"N, longitude: 61°04\'04.030"W (of Greenwich).
 Replaced by RRAF 1991 (datum code 1047).',
         ],
@@ -15742,7 +16425,8 @@ Replaced by RRAF 1991 (datum code 1047).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Reunion - onshore.',
+            'extent_name' => 'Reunion - onshore',
+            'extent_description' => 'Reunion - onshore',
             'help' => 'Fundamental point: Piton des Neiges (Borne). Latitude: 21°05\'13.119"S, longitude: 55°29\'09.193"E (of Greenwich).
 Replaced by RGR92 (datum code 6627).',
         ],
@@ -15753,7 +16437,8 @@ Replaced by RGR92 (datum code 6627).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Reunion - onshore and offshore.',
+            'extent_name' => 'Reunion',
+            'extent_description' => 'Reunion - onshore and offshore',
             'help' => 'ITRF91 at epoch 1993.0
 Replaces Piton des Neiges (code 6626).',
         ],
@@ -15764,7 +16449,8 @@ Replaces Piton des Neiges (code 6626).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Moorea and Tahiti.',
+            'extent_name' => 'French Polynesia - Society Islands - Moorea and Tahiti',
+            'extent_description' => 'French Polynesia - Society Islands - Moorea and Tahiti',
             'help' => 'Fundamental point: Tahiti North Base. Latitude: 17°38\'10.0"S, longitude: 149°36\'57.8"W (of Greenwich).
 Replaced by Tahiti 79 (datum code 6690) in Tahiti and Moorea 87 (code 6691) in Moorea.',
         ],
@@ -15775,7 +16461,8 @@ Replaced by Tahiti 79 (datum code 6690) in Tahiti and Moorea 87 (code 6691) in M
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa.',
+            'extent_name' => 'French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea, Tahaa',
+            'extent_description' => 'French Polynesia - Society Islands - Bora Bora, Huahine, Raiatea and Tahaa',
             'help' => 'Fundamental point: Tahaa East Base. Latitude: 16°33\'20.97"S, longitude: 151°29\'06.25"W (of Greenwich).
 Replaced by RGPF (datum code 6687).',
         ],
@@ -15786,7 +16473,8 @@ Replaced by RGPF (datum code 6687).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou.',
+            'extent_name' => 'French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou',
+            'extent_description' => 'French Polynesia - Marquesas Islands - Nuku Hiva, Ua Huka and Ua Pou',
             'help' => 'Fundamental point: Taiohae. Latitude: 8°55\'03.97"S, longitude: 140°05\'36.24"W (of Greenwich).
 Replaced by RGPF (datum code 6687).',
         ],
@@ -15797,7 +16485,8 @@ Replaced by RGPF (datum code 6687).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mayotte - onshore.',
+            'extent_name' => 'Mayotte - onshore',
+            'extent_description' => 'Mayotte - onshore',
             'help' => 'Combani South Base.
 Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).',
         ],
@@ -15808,7 +16497,8 @@ Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Loyalty Islands - Lifou.',
+            'extent_name' => 'New Caledonia - Lifou',
+            'extent_description' => 'New Caledonia - Loyalty Islands - Lifou',
             'help' => 'South end of the Goume base.
 ',
         ],
@@ -15819,7 +16509,8 @@ Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Grande Terre.',
+            'extent_name' => 'New Caledonia - Grande Terre',
+            'extent_description' => 'New Caledonia - Grande Terre',
             'help' => 'North end of Gomen base.
 ',
         ],
@@ -15830,7 +16521,8 @@ Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Antarctica - Adelie Land - Petrels island.',
+            'extent_name' => 'Antarctica - Adelie Land - Petrels island',
+            'extent_description' => 'Antarctica - Adelie Land - Petrels island',
             'help' => 'Fundamental point: Astro station DZ on Ile de Petrels. Latitude: 66°40\'00"S, longitude: 140°00\'46"E (of Greenwich).
 ',
         ],
@@ -15841,7 +16533,8 @@ Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Antarctica - Adelie Land - coastal area between 136°E and 142°E.',
+            'extent_name' => 'Antarctica - Adelie Land coastal area',
+            'extent_description' => 'Antarctica - Adelie Land - coastal area between 136°E and 142°E',
             'help' => 'Fundamental point: Astro station G.0 on Pointe Geologie. Latitude: 66°39\'30"S, longitude: 140°01\'00"E (of Greenwich).
 ',
         ],
@@ -15852,7 +16545,8 @@ Replaced by RGM04 and Cadastre 1997 (datum codes 1036-37).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Pierre and Miquelon - onshore.',
+            'extent_name' => 'St Pierre and Miquelon - onshore',
+            'extent_description' => 'St Pierre and Miquelon - onshore',
             'help' => '
 Replaced by RGSPM06 (datum code 1038).',
         ],
@@ -15863,7 +16557,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Wallis and Futuna - Wallis.',
+            'extent_name' => 'Wallis and Futuna - Wallis',
+            'extent_description' => 'Wallis and Futuna - Wallis',
             'help' => '
 ',
         ],
@@ -15874,7 +16569,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Loyalty Islands - Mare.',
+            'extent_name' => 'New Caledonia - Mare',
+            'extent_description' => 'New Caledonia - Loyalty Islands - Mare',
             'help' => 'South-east end of the La Roche base.
 ',
         ],
@@ -15885,7 +16581,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Ile des Pins.',
+            'extent_name' => 'New Caledonia - Ile des Pins',
+            'extent_description' => 'New Caledonia - Ile des Pins',
             'help' => 'Fundamental point: Pic Nga.
 ',
         ],
@@ -15896,7 +16593,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Belep.',
+            'extent_name' => 'New Caledonia - Belep',
+            'extent_description' => 'New Caledonia - Belep',
             'help' => '
 ',
         ],
@@ -15907,7 +16605,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Grande Terre - Noumea district.',
+            'extent_name' => 'New Caledonia - Grande Terre - Noumea',
+            'extent_description' => 'New Caledonia - Grande Terre - Noumea district',
             'help' => 'Noumea old signal station.
 ',
         ],
@@ -15918,7 +16617,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Comoros - Njazidja (Grande Comore).',
+            'extent_name' => 'Comoros - Njazidja (Grande Comore)',
+            'extent_description' => 'Comoros - Njazidja (Grande Comore)',
             'help' => 'Fundamental point: M\'Tsaoueni.  Latitude: 11°28\'32.200"S, longitude: 43°15\'42.315"E (of Greenwich).
 ',
         ],
@@ -15929,7 +16629,8 @@ Replaced by RGSPM06 (datum code 1038).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1988.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS).
 Realization of the IERS Terrestrial Reference System (ITRS) at epoch 1988.0. Replaced by ITRF89 (code 6648).',
         ],
@@ -15940,7 +16641,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) at epoch 1988.0. Rep
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1988.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from April 1991. Replaces ITRF88 (code 6647). Replaced by ITRF90 (code 6649).',
         ],
@@ -15951,7 +16653,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from April 1991. Rep
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1988.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from December 1991. Replaces ITRF89 (code 6648). Replaced by ITRF91 (code 6650).',
         ],
@@ -15962,7 +16665,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from December 1991. 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1988.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from October 1992. Replaces ITRF90 (code 6649). Replaced by ITRF92 (code 6651).',
         ],
@@ -15973,7 +16677,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from October 1992. R
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1988.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 287 3-dimensional Cartesian station coordinates (SCS) for epoch 1988.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from October 1993. Replaces ITRF91 (code 6650). Replaced by ITRF93 (code 6652).',
         ],
@@ -15984,7 +16689,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from October 1993. R
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1993.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1993.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from October 1994. Replaces ITRF92 (code 6651). Replaced by ITRF94 (code 6653).',
         ],
@@ -15995,7 +16701,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from October 1994. R
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1993.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1993.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from March 1996. Replaces ITRF93 (code 6652). Replaced by ITRF96 (code 6654).',
         ],
@@ -16006,7 +16713,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from March 1996. Rep
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1997.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1997.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from May 1998. Replaces ITRF94 (code 6653). Replaced by ITRF97 (code 6655).',
         ],
@@ -16017,7 +16725,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from May 1998. Repla
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1997.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1997.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from May 1999. Replaces ITRF96 (code 6654). Replaced by ITRF2000 (code 6656).',
         ],
@@ -16028,7 +16737,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from May 1999. Repla
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1997.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, orientated to the BIH Terrestrial System at epoch 1984.0. Datum defined by a set of 3-dimensional Cartesian station coordinates (SCS) for epoch 1997.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from 2004. Replaces ITRF97 (code 6655). Replaced by ITRF2005 (code 6896).',
         ],
@@ -16039,7 +16749,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from 2004. Replaces 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iceland - mainland.',
+            'extent_name' => 'Iceland - mainland',
+            'extent_description' => 'Iceland - mainland',
             'help' => 'Fundamental point:  Latitude: 64°08\'31.88"N, longitude: 21°55\'51.15"W (of Greenwich).
 ',
         ],
@@ -16050,7 +16761,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from 2004. Replaces 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iceland - mainland.',
+            'extent_name' => 'Iceland - mainland',
+            'extent_description' => 'Iceland - mainland',
             'help' => 'Fundamental point:  Latitude: 64°31\'29.26"N, longitude: 22°22\'05.84"W (of Greenwich).
 ',
         ],
@@ -16061,7 +16773,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from 2004. Replaces 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iceland - onshore and offshore.',
+            'extent_name' => 'Iceland',
+            'extent_description' => 'Iceland - onshore and offshore',
             'help' => 'ITRF93 at epoch 1993.6.
 Replaced by ISN2004 (datum code 1060).',
         ],
@@ -16072,7 +16785,8 @@ Replaced by ISN2004 (datum code 1060).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Jan Mayen - onshore.',
+            'extent_name' => 'Jan Mayen - onshore',
+            'extent_description' => 'Jan Mayen - onshore',
             'help' => '
 ',
         ],
@@ -16083,7 +16797,8 @@ Replaced by ISN2004 (datum code 1060).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Latvia - onshore and offshore.',
+            'extent_name' => 'Latvia',
+            'extent_description' => 'Latvia - onshore and offshore',
             'help' => 'Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
 Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code 1356).',
         ],
@@ -16094,7 +16809,8 @@ Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coo
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - Madeira, Porto Santo and Desertas islands - onshore.',
+            'extent_name' => 'Portugal - Madeira archipelago onshore',
+            'extent_description' => 'Portugal - Madeira, Porto Santo and Desertas islands - onshore',
             'help' => 'SE Base on Porto Santo island. Origin and orientation constrained to those of the 1936 adjustment.
 Classical and GPS observations. Replaces 1936 adjustment (datum code 6615).
 For Selvagens see Selvagem Grande (datum code 6616).',
@@ -16106,7 +16822,8 @@ For Selvagens see Selvagem Grande (datum code 6616).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas.',
+            'extent_name' => 'Portugal - Azores E - onshore',
+            'extent_description' => 'Portugal - eastern Azores onshore - Sao Miguel, Santa Maria, Formigas',
             'help' => 'Fundamental point: Forte de São Bras. Origin and orientation constrained to those of the 1940 adjustment.
 Classical and GPS observations. Replaces 1940 adjustment (datum code 6184).',
         ],
@@ -16117,7 +16834,8 @@ Classical and GPS observations. Replaces 1940 adjustment (datum code 6184).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira.',
+            'extent_name' => 'Portugal - Azores C - onshore',
+            'extent_description' => 'Portugal - central Azores onshore - Faial, Graciosa, Pico, Sao Jorge, Terceira',
             'help' => 'Fundamental point: Graciosa south west base. Origin and orientation constrained to those of the 1948 adjustment.
 Classical and GPS observations. Replaces 1948 adjustment (datum code 6183).',
         ],
@@ -16128,7 +16846,8 @@ Classical and GPS observations. Replaces 1948 adjustment (datum code 6183).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - mainland - onshore.',
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
             'help' => 'Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42\'43.631"N, longitude: 9°07\'54.862"W of Greenwich.
 Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
         ],
@@ -16139,7 +16858,8 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iraq - Kuwait boundary.',
+            'extent_name' => 'Asia - Middle East - Iraq-Kuwait boundary',
+            'extent_description' => 'Iraq - Kuwait boundary',
             'help' => 'Four stations established between September and December 1991 determined by GPS and Doppler observations.
 ',
         ],
@@ -16150,7 +16870,8 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Europe - west.',
+            'extent_name' => 'Europe - west',
+            'extent_description' => 'Europe - west',
             'help' => 'Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22\'51.4456"N, longitude: 13°03\'58.9283"E (of Greenwich).
 Replaced by 1987 adjustment.',
         ],
@@ -16161,7 +16882,8 @@ Replaced by 1987 adjustment.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State.',
+            'extent_name' => 'Italy - including San Marino and Vatican',
+            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State',
             'help' => 'Densification of ETRF89 in Italy. Network of 1296 points observed 1992-1995 adjusted in 1996 constrained to 9 ETRF89 points at epoch 1989.0. By April 2021 the framework was composed of 3104 points of the fundamental network and 3819 densification points.
 Replaced by RDN2008 (datum code 1132) from 2011-11-10.',
         ],
@@ -16172,7 +16894,8 @@ Replaced by RDN2008 (datum code 1132) from 2011-11-10.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore north of 32°N.',
+            'extent_name' => 'Algeria - north of 32°N',
+            'extent_description' => 'Algeria - onshore north of 32°N',
             'help' => 'Fundamental point: Voirol. Latitude: 36°45\'08.199"N, longitude: 3°02\'49.435"E (of Greenwich). Uses RGS (and old IGN) value of 2°20\'13.95"for Greenwich-Paris meridian difference.
 Replaces Voirol 1875 (code 6304).',
         ],
@@ -16183,7 +16906,8 @@ Replaces Voirol 1875 (code 6304).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - Chatham Islands group - onshore.',
+            'extent_name' => 'New Zealand - Chatham Islands group',
+            'extent_description' => 'New Zealand - Chatham Islands group - onshore',
             'help' => '
 Replaced by Chatham Islands Datum 1979 (code 6673).',
         ],
@@ -16194,7 +16918,8 @@ Replaced by Chatham Islands Datum 1979 (code 6673).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Zealand - Chatham Islands group - onshore.',
+            'extent_name' => 'New Zealand - Chatham Islands group',
+            'extent_description' => 'New Zealand - Chatham Islands group - onshore',
             'help' => 'Fundamental point: station Astro. Latitude: 43°57\'23.60"S, longitude: 176°34\'28.65"W (of Greenwich).
 Replaces Chatham Islands Datum 1971 (code 6672). Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.',
         ],
@@ -16205,7 +16930,8 @@ Replaces Chatham Islands Datum 1971 (code 6672). Replaced by New Zealand Geodeti
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore.',
+            'extent_name' => 'Latin America - SIRGAS 2000 by country',
+            'extent_description' => 'Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2000.40.
 Realized by a frame of 184 stations observed in 2000 and adjusted in the ITRF2000. Includes ties to tide gauges. Replaces SIRGAS 1995 system for South America; expands SIRGAS to Central America. Name changed in 2001 for use in all of Latin America.',
         ],
@@ -16216,7 +16942,8 @@ Realized by a frame of 184 stations observed in 2000 and adjusted in the ITRF200
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Guam - onshore. Northern Mariana Islands - onshore.',
+            'extent_name' => 'Pacific - Guam and NMI - onshore',
+            'extent_description' => 'Guam - onshore. Northern Mariana Islands - onshore',
             'help' => 'Fundamental point: Tagcha. Latitude: 13°22\'38.49"N, longitude: 144°45\'51.56"E (of Greenwich).
 Replaced by NAD83(HARN)',
         ],
@@ -16227,7 +16954,8 @@ Replaced by NAD83(HARN)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Laos.',
+            'extent_name' => 'Laos',
+            'extent_description' => 'Laos',
             'help' => 'Fundamental point: Vientiane (Nongteng) Astro Pillar. Latitude: 18°01\'31.6301"N, longitude: 102°30\'56.6999"E (of Greenwich).
 Replaced by Lao 1993.',
         ],
@@ -16238,7 +16966,8 @@ Replaced by Lao 1993.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Laos.',
+            'extent_name' => 'Laos',
+            'extent_description' => 'Laos',
             'help' => 'Fundamental point: Lao 1982 coordinates of Pakxa pillar. Latitude: 18°23\'57.0056"N, longitude: 103°38\'41.8020"E (of Greenwich). Orientation parallel with WGS 84.
 Replaces Vientiane 1982. Replaced by Lao 1997',
         ],
@@ -16249,7 +16978,8 @@ Replaces Vientiane 1982. Replaced by Lao 1997',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Laos.',
+            'extent_name' => 'Laos',
+            'extent_description' => 'Laos',
             'help' => 'Fundamental point: Vientiane (Nongteng) Astro Pillar. Latitude: 18°01\'31.3480"N, longitude: 102°30\'57.1376"E (of Greenwich).
 Replaces Lao 1993.',
         ],
@@ -16260,7 +16990,8 @@ Replaces Lao 1993.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mauritania - coastal area north of Cape Timiris.',
+            'extent_name' => 'Mauritania - north coast',
+            'extent_description' => 'Mauritania - coastal area north of Cape Timiris',
             'help' => '
 Replaced by Mauritania 1999 (datum code 6702).',
         ],
@@ -16271,7 +17002,8 @@ Replaced by Mauritania 1999 (datum code 6702).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mauritania - coastal area south of Cape Timiris.',
+            'extent_name' => 'Mauritania - central coast',
+            'extent_description' => 'Mauritania - coastal area south of Cape Timiris',
             'help' => 'Nouakchott astronomical point.
 Triangulation limited to environs of Nouakchott. Extended in 1982 by satellite translocation from a single station "Ruines" to support Syledis chain for offshore operations. Replaced by Mauritania 1999 (datum code 6602).',
         ],
@@ -16282,7 +17014,8 @@ Triangulation limited to environs of Nouakchott. Extended in 1982 by satellite t
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bangladesh - onshore and offshore.',
+            'extent_name' => 'Bangladesh',
+            'extent_description' => 'Bangladesh - onshore and offshore',
             'help' => 'Gulshan garden, Dhaka.
 Network of more than 140 control points observed and adjusted in 1995 by Japan International Cooperation Agency (JICA).',
         ],
@@ -16293,7 +17026,8 @@ Network of more than 140 control points observed and adjusted in 1995 by Japan I
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Philippines - onshore and offshore.',
+            'extent_name' => 'Philippines',
+            'extent_description' => 'Philippines - onshore and offshore',
             'help' => 'Fundamental point: Balacan. Latitude: 13°33\'41.000"N, longitude: 121°52\'03.000"E (of Greenwich), geoid-ellipsoid separation 0.34m.
 Replaces Luzon 1911 datum (code 6253).',
         ],
@@ -16304,7 +17038,8 @@ Replaces Luzon 1911 datum (code 6253).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Maldives - onshore.',
+            'extent_name' => 'Maldives - onshore',
+            'extent_description' => 'Maldives - onshore',
             'help' => '
 In some references incorrectly named "Gandajika 1970". See datum code 6685.',
         ],
@@ -16315,7 +17050,8 @@ In some references incorrectly named "Gandajika 1970". See datum code 6685.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank.',
+            'extent_name' => 'Colombia',
+            'extent_description' => 'Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank',
             'help' => 'Densification of SIRGAS95 (ITRF94 at epoch 1995.4) in Colombia. Bogota observatory coordinates: Latitude: 4°35\'46.3215"N, longitude: 74°04\'39.0285"W (of Greenwich).
 Densification of SIRGAS 1995 within Colombia. Replaces Bogota 1975 (datum code 6218).',
         ],
@@ -16326,7 +17062,8 @@ Densification of SIRGAS 1995 within Colombia. Replaces Bogota 1975 (datum code 6
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands.',
+            'extent_name' => 'French Polynesia',
+            'extent_description' => 'French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands',
             'help' => 'ITRF92 at epoch 1993.0. Densification by GPS of the Reference Network of French Polynesia, a coordinate set of 13 stations determined through DORIS observations.
 Replaces Tahaa 54 (datum code 6629), IGN 63 Hiva Oa (6689), IGN 72 Nuku Hiva (6630), Maupiti 83 (6692), MHEFO 55 (6688), Moorea 87 (6691) and Tahiti 79 (6690).',
         ],
@@ -16337,7 +17074,8 @@ Replaces Tahaa 54 (datum code 6629), IGN 63 Hiva Oa (6689), IGN 72 Nuku Hiva (66
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Marquesas Islands - Fatu Hiva.',
+            'extent_name' => 'French Polynesia - Marquesas Islands - Fatu Hiva',
+            'extent_description' => 'French Polynesia - Marquesas Islands - Fatu Hiva',
             'help' => 'Fundamental point: Latitude: 9°25\'58.00"S, longitude: 138°55\'06.25"W (of Greenwich).
 Recomputed by IGN in 1972 using origin and observations of 1953-1955 Mission Hydrographique des Establissements Francais d\'Oceanie (MHEFO 55). Replaced by RGPF (datum code 6687).',
         ],
@@ -16348,7 +17086,8 @@ Recomputed by IGN in 1972 using origin and observations of 1953-1955 Mission Hyd
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Marquesas Islands - Hiva Oa and Tahuata.',
+            'extent_name' => 'French Polynesia - Marquesas Islands - Hiva Oa and Tahuata',
+            'extent_description' => 'French Polynesia - Marquesas Islands - Hiva Oa and Tahuata',
             'help' => 'Fundamental point: Atuona. Latitude: 9°48\'27.20"S, longitude: 139°02\'15.45"W (of Greenwich).
 Replaced by RGPF (datum code 6687).',
         ],
@@ -16359,7 +17098,8 @@ Replaced by RGPF (datum code 6687).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Tahiti.',
+            'extent_name' => 'French Polynesia - Society Islands - Tahiti',
+            'extent_description' => 'French Polynesia - Society Islands - Tahiti',
             'help' => 'Fundamental point: Tahiti North Base. Latitude: 17°38\'10.0"S, longitude: 149°36\'57.8"W (of Greenwich).
 Replaces Tahiti 52 (datum code 6628) in Tahiti. Replaced by RGPF (datum code 6687).',
         ],
@@ -16370,7 +17110,8 @@ Replaces Tahiti 52 (datum code 6628) in Tahiti. Replaced by RGPF (datum code 668
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Moorea.',
+            'extent_name' => 'French Polynesia - Society Islands - Moorea',
+            'extent_description' => 'French Polynesia - Society Islands - Moorea',
             'help' => 'Two stations on Tahiti whose coordinates from the Tahiti 1979 adjustment were held fixed.
 Replaces Tahiti 52 (datum code 6628) in Moorea. Replaced by RGPF (datum code 6687).',
         ],
@@ -16381,7 +17122,8 @@ Replaces Tahiti 52 (datum code 6628) in Moorea. Replaced by RGPF (datum code 668
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Polynesia - Society Islands - Maupiti.',
+            'extent_name' => 'French Polynesia - Society Islands - Maupiti',
+            'extent_description' => 'French Polynesia - Society Islands - Maupiti',
             'help' => 'Fundamental point: Pitiahe South Base. Latitude: 16°28\'28.942"S, longitude: 152°14\'55.059"W (of Greenwich).
 Replaced by RGPF (datum code 6687).',
         ],
@@ -16392,7 +17134,8 @@ Replaced by RGPF (datum code 6687).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iran - Kangan district.',
+            'extent_name' => 'Iran - Kangan district',
+            'extent_description' => 'Iran - Kangan district',
             'help' => 'Coordinates of two stations determined with respect to ITRF 2000 at epoch 2005.2: BMT1 latitude 27°42\'09.8417"N, longitude 52°12\'11.0362"E (of Greenwich); Total1 latitude 27°31\'03.8896"N, longitude 52°36\'13.1312"E (of Greenwich).
 ',
         ],
@@ -16403,7 +17146,8 @@ Replaced by RGPF (datum code 6687).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Argentina - onshore and offshore.',
+            'extent_name' => 'Argentina',
+            'extent_description' => 'Argentina - onshore and offshore',
             'help' => 'WGS 84 coordinates at time of survey of a geodetic network of 127 points defining the National Geodetic System (Sistema Geodésico Nacional). Surveyed between February and April 1993 and between March and May 1994.
 Adopted as defining the National Geodetic Reference Network from 9th May 1997. Technically, but not legally, replaced by POSGAR 98 (datum code 6190) until 15th May 2009 when legally replaced by POSGAR 2007 (datum code 1062).',
         ],
@@ -16414,7 +17158,8 @@ Adopted as defining the National Geodetic Reference Network from 9th May 1997. T
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - Katanga.',
+            'extent_name' => 'Congo DR (Zaire) - Katanga',
+            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - Katanga',
             'help' => 'Fundamental point: Tshinsenda A. Latitude: 12°30\'31.568"S, longitude: 28°01\'02.971"E (of Greenwich).
 Replaces earlier adjustments.',
         ],
@@ -16425,7 +17170,8 @@ Replaces earlier adjustments.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - Kasai - south of 5°S and east of 21°30\'E.',
+            'extent_name' => 'Congo DR (Zaire) - Kasai - SE',
+            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - Kasai - south of 5°S and east of 21°30\'E',
             'help' => 'Two stations of the Katanga triangulation with ellipsoid change applied: Kabila, latitude 6°58\'34.023"S, longitude 23°50\'24.028"E (of Greenwich); and Gandajika NW base, latitude 6°45\'01.057"S, longitude 23°57\'03.038"E (of Greenwich).
 Replaced by IGC 1962 Arc of the 6th Parallel South.',
         ],
@@ -16436,7 +17182,8 @@ Replaced by IGC 1962 Arc of the 6th Parallel South.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - adjacent to 6th parallel south traverse.',
+            'extent_name' => 'Congo DR (Zaire) - 6th parallel south',
+            'extent_description' => 'The Democratic Republic of the Congo (Zaire) - adjacent to 6th parallel south traverse',
             'help' => 'Coordinates of 3 stations determined with respect to Arc 1950: Mulungu 4°47\'39.2325"S, 29°59\'37.5864"E; Nyakawembe 4°14\'57.3618"S, 29°42\'52.8032"E; Kavula 4°35\'15.8634"S, 29°41\'14.2693"E (all longitude w.r.t. Greenwich).
 ',
         ],
@@ -16447,7 +17194,8 @@ Replaced by IGC 1962 Arc of the 6th Parallel South.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'French Southern Territories - Kerguelen onshore.',
+            'extent_name' => 'French Southern Territories - Kerguelen onshore',
+            'extent_description' => 'French Southern Territories - Kerguelen onshore',
             'help' => 'K0 1949.
 ',
         ],
@@ -16458,7 +17206,8 @@ Replaced by IGC 1962 Arc of the 6th Parallel South.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mauritius - mainland onshore.',
+            'extent_name' => 'Mauritius - mainland',
+            'extent_description' => 'Mauritius - mainland onshore',
             'help' => 'Fundamental point: Le Pouce. Latitude: 20°11\'42.25"S, longitude: 57°31\'18.58"E (of Greenwich).
 ',
         ],
@@ -16469,7 +17218,8 @@ Replaced by IGC 1962 Arc of the 6th Parallel South.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mauritania - onshore.',
+            'extent_name' => 'Mauritania - onshore',
+            'extent_description' => 'Mauritania - onshore',
             'help' => 'Realised through a set of independent astronomically-positioned points.
 Observed during 1959-1960. Independent points not connected through a network. Relative accuracy estimated at 50-100m. Replaced by Mauritania 1999 (datum code 6702).',
         ],
@@ -16480,6 +17230,7 @@ Observed during 1959-1960. Independent points not connected through a network. R
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+            'extent_name' => 'Congo DR (Zaire) - Bas Congo',
             'extent_description' => 'The Democratic Republic of the Congo (Zaire) - Lower Congo (Bas Congo)',
             'help' => 'Fundamental point: Yella east base. Latitude: 6°00\'53.139"S, longitude: 12°58\'29.287"E (of Greenwich).
 Replaced by IGC 1962 Arc of the 6th Parallel South, except for oil industry activities.',
@@ -16491,7 +17242,8 @@ Replaced by IGC 1962 Arc of the 6th Parallel South, except for oil industry acti
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Mauritania - onshore and offshore.',
+            'extent_name' => 'Mauritania',
+            'extent_description' => 'Mauritania - onshore and offshore',
             'help' => 'ITRF96 at epoch 1997.0
 A network of 36 GPS stations tied to ITRF96, 8 of which are IGN 1962 astronomic points.',
         ],
@@ -16502,7 +17254,8 @@ A network of 36 GPS stations tied to ITRF96, 8 of which are IGN 1962 astronomic 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola - Cabinda.',
+            'extent_name' => 'Angola - Cabinda',
+            'extent_description' => 'Angola - Cabinda',
             'help' => 'Extension of Camacupa datum into Cabinda.
 A variation of this datum has been adopted by the oil industry but incorrectly using the International 1924 ellipsoid and not tied to the official Portuguese triangulation - see Mhast (onshore) and Mhast (offshore) (codes 6704 and 6705).',
         ],
@@ -16513,7 +17266,8 @@ A variation of this datum has been adopted by the oil industry but incorrectly u
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola (Cabinda) - onshore and offshore; The Democratic Republic of the Congo (Zaire) - onshore coastal area and offshore.',
+            'extent_name' => 'Africa - Angola (Cabinda) and DR Congo (Zaire) - coastal',
+            'extent_description' => 'Angola (Cabinda) - onshore and offshore; The Democratic Republic of the Congo (Zaire) - onshore coastal area and offshore',
             'help' => 'Probably adopted a Mhast 1951 coordinate set but associated an incorrect ellipsoid with it.
 Adopted by oil industry with intention of being Mhast 1951 (code 6703) but incorrectly (for Mhast 1951) used the International 1924 ellipsoid. This datum differs by about 400 metres from the Portuguese Mhast 1951 and Camacupa datums.',
         ],
@@ -16524,7 +17278,8 @@ Adopted by oil industry with intention of being Mhast 1951 (code 6703) but incor
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore.',
+            'extent_name' => 'Africa - Angola (Cabinda) and DR Congo (Zaire) - offshore',
+            'extent_description' => 'Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore',
             'help' => 'Fundamental point: Station Y at Malongo base camp. Latitude: 5°23\'30.810"S, longitude: 12°12\'01.590"E (of Greenwich).
 Origin coordinates determined by Transit single point position using 32 passes and transformed from WGS72BE using transformation code 15790. Differs from Mhast (onshore) by approximately 10m. Replaced in 1987 by Malongo 1987 (code 6259).',
         ],
@@ -16535,7 +17290,8 @@ Origin coordinates determined by Transit single point position using 32 passes a
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Egypt - Gulf of Suez.',
+            'extent_name' => 'Egypt - Gulf of Suez',
+            'extent_description' => 'Egypt - Gulf of Suez',
             'help' => 'Fundamental point: Station S-650 DMX. Adopted coordinates: latitude: 28°19\'02.1907"N, longitude: 33°06\'36.6344"E (of Greenwich). The proper Egypt 1907 coordinates for S-650 differ from these by about 20m.
 A coherent set of stations bordering the Gulf of Suez coordinated by Transit translocation ("TL") between 1980 and 1984. Based on incorrect Egypt 1907 values for origin station S-650. Differs from true Egypt 1907 by approximately 20m.',
         ],
@@ -16546,7 +17302,8 @@ A coherent set of stations bordering the Gulf of Suez coordinated by Transit tra
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States (USA) - Hawaii - Tern Island and Sorel Atoll.',
+            'extent_name' => 'USA - Hawaii - Tern Island and Sorel Atoll',
+            'extent_description' => 'United States (USA) - Hawaii - Tern Island and Sorel Atoll',
             'help' => 'Fundamental point: station FRIG on tern island, station B4 on Sorol Atoll.
 Two independent astronomic determinations considered to be consistent through adoption of common transformation to WGS 84 (see tfm code 15795).',
         ],
@@ -16557,7 +17314,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cocos (Keeling) Islands - onshore.',
+            'extent_name' => 'Cocos (Keeling) Islands - onshore',
+            'extent_description' => 'Cocos (Keeling) Islands - onshore',
             'help' => 'Fundamental point: Anna 1.
 ',
         ],
@@ -16568,7 +17326,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - Iwo Jima island.',
+            'extent_name' => 'Japan - Iwo Jima',
+            'extent_description' => 'Japan - Iwo Jima island',
             'help' => 'Fundamental point: Beacon "E".
 ',
         ],
@@ -16579,7 +17338,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.',
+            'extent_name' => 'St Helena - St Helena Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'Fundamental point: DOS 71/4, Ladder Hill Fort, latitude: 15°55\'30"S, longitude: 5°43\'25"W (of Greenwich).
 ',
         ],
@@ -16590,7 +17350,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Japan - onshore - Tokyo-to south of 28°N and east of 143°E - Minamitori-shima (Marcus Island).',
+            'extent_name' => 'Japan - Minamitori-shima (Marcus Island) - onshore',
+            'extent_description' => 'Japan - onshore - Tokyo-to south of 28°N and east of 143°E - Minamitori-shima (Marcus Island)',
             'help' => 'Marcus Island Astronomic Station.
 ',
         ],
@@ -16601,7 +17362,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - Ascension Island - onshore.',
+            'extent_name' => 'St Helena - Ascension Island',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - Ascension Island - onshore',
             'help' => '
 ',
         ],
@@ -16612,7 +17374,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Djibouti - onshore and offshore.',
+            'extent_name' => 'Djibouti',
+            'extent_description' => 'Djibouti - onshore and offshore',
             'help' => 'Fundamental point: Ayabelle Lighthouse.
 ',
         ],
@@ -16623,7 +17386,8 @@ Two independent astronomic determinations considered to be consistent through ad
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Vanuatu - southern islands - Aneityum, Efate, Erromango and Tanna.',
+            'extent_name' => 'Vanuatu - southern islands',
+            'extent_description' => 'Vanuatu - southern islands - Aneityum, Efate, Erromango and Tanna',
             'help' => '
 Datum covers all the major islands of Vanuatu in two different adjustment blocks, but practical usage is as given in the area of use.',
         ],
@@ -16634,7 +17398,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Antarctica - McMurdo Sound, Camp McMurdo area.',
+            'extent_name' => 'Antarctica - Camp McMurdo area',
+            'extent_description' => 'Antarctica - McMurdo Sound, Camp McMurdo area',
             'help' => '
 ',
         ],
@@ -16645,7 +17410,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Kiribati - Phoenix Islands: Kanton, Orona, McKean Atoll, Birnie Atoll, Phoenix Seamounts.',
+            'extent_name' => 'Kiribati - Phoenix Islands',
+            'extent_description' => 'Kiribati - Phoenix Islands: Kanton, Orona, McKean Atoll, Birnie Atoll, Phoenix Seamounts',
             'help' => '
 ',
         ],
@@ -16656,7 +17422,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'North America - onshore - Bahamas and USA - Florida (east).',
+            'extent_name' => 'North America - Bahamas and USA - Florida - onshore',
+            'extent_description' => 'North America - onshore - Bahamas and USA - Florida (east)',
             'help' => 'Fundamental point: Central 1950.  Latitude: 28°29\'32.36555"N, longitude 80°34\'38.77362"W (of Greenwich)
 ',
         ],
@@ -16667,7 +17434,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Solomon Islands - onshore southern Solomon Islands, primarily Guadalcanal, Malaita, San Cristobel, Santa Isobel, Choiseul, Makira-Ulawa.',
+            'extent_name' => 'Solomon Islands - onshore main islands',
+            'extent_description' => 'Solomon Islands - onshore southern Solomon Islands, primarily Guadalcanal, Malaita, San Cristobel, Santa Isobel, Choiseul, Makira-Ulawa',
             'help' => 'Fundamental point: GUX 1.
 ',
         ],
@@ -16678,7 +17446,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Chile - Easter Island onshore.',
+            'extent_name' => 'Chile - Easter Island onshore',
+            'extent_description' => 'Chile - Easter Island onshore',
             'help' => '
 ',
         ],
@@ -16689,7 +17458,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Fiji - onshore. Includes Viti Levu, Vanua Levu, Taveuni, the Yasawa Group, the Kadavu Group, the Lau Islands and Rotuma Islands.',
+            'extent_name' => 'Fiji - onshore',
+            'extent_description' => 'Fiji - onshore. Includes Viti Levu, Vanua Levu, Taveuni, the Yasawa Group, the Kadavu Group, the Lau Islands and Rotuma Islands',
             'help' => 'NWL 9D coordinates of 6 stations on Vitu Levu and Vanua Levu.
 Replaces Viti Levu 1912, Vanua Levu 1915 and Fiji 1956.',
         ],
@@ -16700,7 +17470,8 @@ Replaces Viti Levu 1912, Vanua Levu 1915 and Fiji 1956.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Fiji - onshore - Vanua Levu, Taveuni, Viti Levu and and immediately adjacent smaller islands of Yasawa and Kandavu groups.',
+            'extent_name' => 'Fiji - main islands',
+            'extent_description' => 'Fiji - onshore - Vanua Levu, Taveuni, Viti Levu and and immediately adjacent smaller islands of Yasawa and Kandavu groups',
             'help' => 'Latitude origin was obtained astronomically at station Rasusuva = 17°49\'03.13"S,  longitude origin was obtained astronomically at station Suva = 178°25\'35.835"E (of Greenwich).
 For topographic mapping replaces Viti Levu 1912 and Vanua Levu 1915. Replaced by Fiji Geodetic Datum 1986.',
         ],
@@ -16711,7 +17482,8 @@ For topographic mapping replaces Viti Levu 1912 and Vanua Levu 1915. Replaced by
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'South Georgia and the South Sandwich Islands - South Georgia onshore.',
+            'extent_name' => 'South Georgia - onshore',
+            'extent_description' => 'South Georgia and the South Sandwich Islands - South Georgia onshore',
             'help' => 'Fundamental point: ISTS 061.
 ',
         ],
@@ -16722,7 +17494,8 @@ For topographic mapping replaces Viti Levu 1912 and Vanua Levu 1915. Replaced by
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cayman Islands - Grand Cayman.',
+            'extent_name' => 'Cayman Islands - Grand Cayman',
+            'extent_description' => 'Cayman Islands - Grand Cayman',
             'help' => 'Fundamental point: GC1. Latitude: 19°17\'54.43"N, longitude: 81°22\'37.17"W (of Greenwich).
 Replaced by CIGD11 (datum code 1100).',
         ],
@@ -16733,7 +17506,8 @@ Replaced by CIGD11 (datum code 1100).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'British Indian Ocean Territory - Chagos Archipelago - Diego Garcia.',
+            'extent_name' => 'British Indian Ocean Territory - Diego Garcia',
+            'extent_description' => 'British Indian Ocean Territory - Chagos Archipelago - Diego Garcia',
             'help' => 'Fundamental point: ISTS 073.
 ',
         ],
@@ -16744,7 +17518,8 @@ Replaced by CIGD11 (datum code 1100).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States Minor Outlying Islands - Johnston Island.',
+            'extent_name' => 'Johnston Island',
+            'extent_description' => 'United States Minor Outlying Islands - Johnston Island',
             'help' => '
 ',
         ],
@@ -16755,7 +17530,8 @@ Replaced by CIGD11 (datum code 1100).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Cayman Islands - Little Cayman and Cayman Brac.',
+            'extent_name' => 'Cayman Islands - Little Cayman and Cayman Brac',
+            'extent_description' => 'Cayman Islands - Little Cayman and Cayman Brac',
             'help' => 'Fundamental point: LC5. Latitude: 19°39\'46.324"N, longitude: 80°03\'47.910"W (of Greenwich).
 Replaced by CIGD11 (datum code 1100).',
         ],
@@ -16766,7 +17542,8 @@ Replaced by CIGD11 (datum code 1100).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'United States Minor Outlying Islands - Midway Islands - Sand Island and Eastern Island.',
+            'extent_name' => 'Midway Islands - Sand and Eastern Islands',
+            'extent_description' => 'United States Minor Outlying Islands - Midway Islands - Sand Island and Eastern Island',
             'help' => '
 ',
         ],
@@ -16777,7 +17554,8 @@ Replaced by CIGD11 (datum code 1100).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore.',
+            'extent_name' => 'Spain - Canary Islands western',
+            'extent_description' => 'Spain - Canary Islands - El Hierro, La Gomera, La Palma and Tenerife - onshore',
             'help' => 'Pico de las Nieves mountain, Gran Canaria. The fundamental point is a different station to that for PN68.
 Replaces Pico de las Nieves 1968 (PN68) only on western islands (El Hierro, La Gomera, La Palma and Tenerife). Replaced by REGCAN95.',
         ],
@@ -16788,7 +17566,8 @@ Replaces Pico de las Nieves 1968 (PN68) only on western islands (El Hierro, La G
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Pitcairn - Pitcairn Island.',
+            'extent_name' => 'Pitcairn - Pitcairn Island',
+            'extent_description' => 'Pitcairn - Pitcairn Island',
             'help' => 'Fundamental point: Pitcairn Astro. Latitude: 25°04\'06.87"S, longitude: 130°06\'47.83"W (of Greenwich).
 Replaced by Pitcairn 2006.',
         ],
@@ -16799,7 +17578,8 @@ Replaced by Pitcairn 2006.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Vanuatu - northern islands - Aese, Ambrym, Aoba, Epi, Espiritu Santo, Maewo, Malo, Malkula, Paama, Pentecost, Shepherd and Tutuba.',
+            'extent_name' => 'Vanuatu - northern islands',
+            'extent_description' => 'Vanuatu - northern islands - Aese, Ambrym, Aoba, Epi, Espiritu Santo, Maewo, Malo, Malkula, Paama, Pentecost, Shepherd and Tutuba',
             'help' => '
 Datum covers all the major islands of Vanuatu in two different adjustment blocks, but practical usage is as given in the area of use.',
         ],
@@ -16810,7 +17590,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Marshall Islands - onshore. Wake atoll onshore.',
+            'extent_name' => 'Pacific - Marshall Islands, Wake - onshore',
+            'extent_description' => 'Marshall Islands - onshore. Wake atoll onshore',
             'help' => '
 ',
         ],
@@ -16821,7 +17602,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Wake atoll - onshore.',
+            'extent_name' => 'Wake - onshore',
+            'extent_description' => 'Wake atoll - onshore',
             'help' => '
 ',
         ],
@@ -16832,7 +17614,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - Tristan da Cunha island group including Tristan, Inaccessible, Nightingale, Middle and Stoltenhoff Islands.',
+            'extent_name' => 'St Helena - Tristan da Cunha',
+            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - Tristan da Cunha island group including Tristan, Inaccessible, Nightingale, Middle and Stoltenhoff Islands',
             'help' => '
 ',
         ],
@@ -16843,7 +17626,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Federated States of Micronesia - Kosrae (Kusaie).',
+            'extent_name' => 'Micronesia - Kosrae (Kusaie)',
+            'extent_description' => 'Federated States of Micronesia - Kosrae (Kusaie)',
             'help' => '
 ',
         ],
@@ -16854,7 +17638,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Antarctica - South Shetland Islands - Deception Island.',
+            'extent_name' => 'Antarctica - Deception Island',
+            'extent_description' => 'Antarctica - South Shetland Islands - Deception Island',
             'help' => '
 ',
         ],
@@ -16865,7 +17650,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Republic of Korea (South Korea) - onshore and offshore.',
+            'extent_name' => 'Korea, Republic of (South Korea)',
+            'extent_description' => 'Republic of Korea (South Korea) - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2002.0.
 ',
         ],
@@ -16876,7 +17662,8 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Hong Kong - onshore and offshore.',
+            'extent_name' => 'China - Hong Kong',
+            'extent_description' => 'China - Hong Kong - onshore and offshore',
             'help' => 'Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude 22°18\'12.82"N, longitude 114°10\'18.75"E (of Greenwich).
 Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by Hong Kong 1980.',
         ],
@@ -16887,7 +17674,8 @@ Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by H
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'China - Hong Kong - onshore and offshore.',
+            'extent_name' => 'China - Hong Kong',
+            'extent_description' => 'China - Hong Kong - onshore and offshore',
             'help' => 'Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude 22°18\'12.82"N, longitude 114°10\'18.75"E (of Greenwich).
 Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kong 1980.',
         ],
@@ -16898,7 +17686,8 @@ Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kon
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1990.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Defined through coordinates of stations of the satellite geodetic network (SGN) in Russia at epoch 1990.0.
 Replaced by PZ-90.02 from 2007-09-20.',
         ],
@@ -16909,7 +17698,8 @@ Replaced by PZ-90.02 from 2007-09-20.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Faroe Islands - onshore.',
+            'extent_name' => 'Faroe Islands - onshore',
+            'extent_description' => 'Faroe Islands - onshore',
             'help' => 'Astronomical observations at 3 points.
 Replaced by ED50 in late 1970\'s for all purposes other than cadastre. Replaced by fk89 for cadastre.',
         ],
@@ -16920,7 +17710,8 @@ Replaced by ED50 in late 1970\'s for all purposes other than cadastre. Replaced 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak.',
+            'extent_name' => 'Malaysia',
+            'extent_description' => 'Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak',
             'help' => 'ITRF2000, epoch 2000.0.
 Replaces all older Malaysian datums.',
         ],
@@ -16931,7 +17722,8 @@ Replaces all older Malaysian datums.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iraq - onshore.',
+            'extent_name' => 'Iraq - onshore',
+            'extent_description' => 'Iraq - onshore',
             'help' => 'Fundamental point: Karbala. Latitude: 32°34\'14.4941"N, longitude: 44°00\'49.6379"E.
 National geodetic network established by Polservice consortium.',
         ],
@@ -16942,7 +17734,8 @@ National geodetic network established by Polservice consortium.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq.',
+            'extent_name' => 'Asia - Middle East - Iraq and SW Iran',
+            'extent_description' => 'Iraq - onshore; Iran - onshore northern Gulf coast and west bordering southeast Iraq',
             'help' => 'Fundamental point: Nahrwan south base.  Latitude: 33°19\'10.87"N, longitude: 44°43\'25.54"E (of Greenwich).
 This adjustment later discovered to have a significant orientation error. In Iran replaced by FD58. In Iraq, replaced by Karbala 1979.',
         ],
@@ -16953,7 +17746,8 @@ This adjustment later discovered to have a significant orientation error. In Ira
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - Sachsen.',
+            'extent_name' => 'Germany - Saxony',
+            'extent_description' => 'Germany - Sachsen',
             'help' => 'Fundamental point: Rauenberg. Latitude: 52°27\'12.021"N, longitude: 13°22\'04.928"E (of Greenwich). This station was destroyed in 1910 and the station at Potsdam substituted as the fundamental point.
 RD/83 is the realization of DHDN in Saxony. It is the resultant of applying a transformation derived at 106 points throughout former East Germany to Pulkovo 1942/83 points in Saxony.',
         ],
@@ -16964,7 +17758,8 @@ RD/83 is the realization of DHDN in Saxony. It is the resultant of applying a tr
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Germany - Thuringen.',
+            'extent_name' => 'Germany - Thuringen',
+            'extent_description' => 'Germany - Thuringen',
             'help' => 'Fundamental point: Rauenberg. Latitude: 52°27\'12.021"N, longitude: 13°22\'04.928"E (of Greenwich). This station was destroyed in 1910 and the station at Potsdam substituted as the fundamental point.
 PD/83 is the realization of DHDN in Thuringen. It is the resultant of applying a transformation derived at 13 points on the border between East and West Germany to Pulkovo 1942/83 points in Thuringen.',
         ],
@@ -16975,7 +17770,8 @@ PD/83 is the realization of DHDN in Thuringen. It is the resultant of applying a
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greenland - onshore and offshore.',
+            'extent_name' => 'Greenland',
+            'extent_description' => 'Greenland - onshore and offshore',
             'help' => 'ITRF94 at epoch 1996.62
 Replaces Ammassalik 1958, Qornoq 1927 and Scoresbysund 1952.',
         ],
@@ -16986,7 +17782,8 @@ Replaces Ammassalik 1958, Qornoq 1927 and Scoresbysund 1952.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Fiji - Vanua Levu and Taveuni.',
+            'extent_name' => 'Fiji - Vanua Levu and Taveuni',
+            'extent_description' => 'Fiji - Vanua Levu and Taveuni',
             'help' => 'Latitude origin was obtained astronomically at station Numuiloa = 16°23\'38.36"S, longitude origin was obtained astronomically at station Suva = 178°25\'35.835"E.
 For topographic mapping, replaced by Fiji 1956. For other purposes, replaced by Fiji 1986.',
         ],
@@ -16997,7 +17794,8 @@ For topographic mapping, replaced by Fiji 1956. For other purposes, replaced by 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole.',
+            'extent_name' => 'New Caledonia',
+            'extent_description' => 'New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole',
             'help' => 'ITRF90 at epoch 1989.0.
 Replaced by RGNC15 (datum code 1357).',
         ],
@@ -17008,7 +17806,8 @@ Replaced by RGNC15 (datum code 1357).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'New Caledonia - Loyalty Islands - Ouvea.',
+            'extent_name' => 'New Caledonia - Ouvea',
+            'extent_description' => 'New Caledonia - Loyalty Islands - Ouvea',
             'help' => 'Ouloup.
 ',
         ],
@@ -17019,7 +17818,8 @@ Replaced by RGNC15 (datum code 1357).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Malaysia - West Malaysia; Singapore.',
+            'extent_name' => 'Asia - Malaysia (west) and Singapore',
+            'extent_description' => 'Malaysia - West Malaysia; Singapore',
             'help' => '
 Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncation of the Sears 1922 ratio.',
         ],
@@ -17030,7 +17830,8 @@ Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncati
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Fiji - Viti Levu island.',
+            'extent_name' => 'Fiji - Viti Levu',
+            'extent_description' => 'Fiji - Viti Levu island',
             'help' => 'Latitude origin was obtained astronomically at station Monavatu = 17°53\'28.285"S, longitude origin was obtained astronomically at station Suva = 178°25\'35.835"E.
 For topographic mapping, replaced by Fiji 1956. For other purposes, replaced by Fiji 1986.',
         ],
@@ -17041,7 +17842,8 @@ For topographic mapping, replaced by Fiji 1956. For other purposes, replaced by 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Faroe Islands - onshore.',
+            'extent_name' => 'Faroe Islands - onshore',
+            'extent_description' => 'Faroe Islands - onshore',
             'help' => '
 Replaces FD54 for cadastre.',
         ],
@@ -17052,7 +17854,8 @@ Replaces FD54 for cadastre.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Libya - onshore and offshore.',
+            'extent_name' => 'Libya',
+            'extent_description' => 'Libya - onshore and offshore',
             'help' => '5 stations tied to ITRF2000 through 8 days of continuous observations in May 2006.
 Replaces ELD79.',
         ],
@@ -17063,7 +17866,8 @@ Replaces ELD79.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - onshore and offshore.',
+            'extent_name' => 'Indonesia',
+            'extent_description' => 'Indonesia - onshore and offshore',
             'help' => 'ITRF91at epoch 1992.0.
 Replaces ID74 and all older datums.',
         ],
@@ -17074,7 +17878,8 @@ Replaces ID74 and all older datums.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Vietnam - onshore.',
+            'extent_name' => 'Vietnam - onshore',
+            'extent_description' => 'Vietnam - onshore',
             'help' => 'Point N00, located in the premises of the Land Administration Research Institute, Hoang Quoc Viet Street, Hanoi.
 Replaces Hanoi 1972.',
         ],
@@ -17085,7 +17890,8 @@ Replaces Hanoi 1972.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Singapore - onshore and offshore.',
+            'extent_name' => 'Singapore',
+            'extent_description' => 'Singapore - onshore and offshore',
             'help' => 'Fundamental point: Base 7 at Pierce Reservoir. Latitude: 1°22\'02.9154"N, longitude: 103°49\'31.9752"E (of Greenwich).
 Replaces Kertau 1968 for cadastral purposes from August 2004.',
         ],
@@ -17096,7 +17902,8 @@ Replaces Kertau 1968 for cadastral purposes from August 2004.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays.',
+            'extent_name' => 'Jamaica',
+            'extent_description' => 'Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays',
             'help' => 'Aligned to WGS 84.
 ',
         ],
@@ -17107,7 +17914,8 @@ Replaces Kertau 1968 for cadastral purposes from August 2004.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.',
+            'extent_name' => 'USA - CONUS and Alaska; PRVI',
+            'extent_description' => 'Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore',
             'help' => 'Coordinates of 486 national continually operating reference system (CORS) and 195 collaborative GPS (CGPS) sites constrained to their CORS96 values, ITRF2000 at epoch 2002.0.
 Replaced by NAD83 (National Spatial Reference System 2011), datum code 1116.',
         ],
@@ -17118,7 +17926,8 @@ Replaced by NAD83 (National Spatial Reference System 2011), datum code 1116.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 1966.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Developed from a worldwide distribution of terrestrial and geodetic satellite observations and defined through a set of station coordinates.
 A worldwide 5° × 5° mean free air gravity anomaly field provided the basic data for producing the WGS 66 gravimetric geoid. Replaced by WGS 72.',
         ],
@@ -17129,7 +17938,8 @@ A worldwide 5° × 5° mean free air gravity anomaly field provided the basic da
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Croatia - onshore and offshore.',
+            'extent_name' => 'Croatia',
+            'extent_description' => 'Croatia - onshore and offshore',
             'help' => 'Densification of ETRS89 in Croatia at epoch 1995.55.
 Based on 78 control points with coordinates determined in ETRS89.',
         ],
@@ -17140,7 +17950,8 @@ Based on 78 control points with coordinates determined in ETRS89.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Bermuda - onshore and offshore.',
+            'extent_name' => 'Bermuda',
+            'extent_description' => 'Bermuda - onshore and offshore',
             'help' => 'ITRF96 at epoch 2000.0.
 ',
         ],
@@ -17151,7 +17962,8 @@ Based on 78 control points with coordinates determined in ETRS89.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Pitcairn - Pitcairn Island.',
+            'extent_name' => 'Pitcairn - Pitcairn Island',
+            'extent_description' => 'Pitcairn - Pitcairn Island',
             'help' => 'Fundamental point: Pitcairn Astro. Latitude: 25°04\'06.7894"S, longitude: 130°06\'46.6816"W (of Greenwich), derived by single point GPS oberservations.
 Replaces Pitcairn 1967.',
         ],
@@ -17162,6 +17974,7 @@ Replaces Pitcairn 1967.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
+            'extent_name' => 'Antarctica - Ross Sea Region',
             'extent_description' => 'Antarctica - Ross Sea Region - nominally between 160°E and 150°W but includes buffer on eastern hemisphere margin to include Transantarctic Mountains',
             'help' => 'Based on ITRF96 at epoch 2000.0
 ',
@@ -17173,7 +17986,8 @@ Replaces Pitcairn 1967.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Slovenia - onshore and offshore.',
+            'extent_name' => 'Slovenia',
+            'extent_description' => 'Slovenia - onshore and offshore',
             'help' => 'Densification of ETRS89, based on ITRS89 at epoch 1995.55.
 ',
         ],
@@ -17184,7 +17998,8 @@ Replaces Pitcairn 1967.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8907',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Liechtenstein; Switzerland.',
+            'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Fundamental point: Old Bern observatory. Latitude: 46°57\'08.660"N, longitude: 0°E (of Bern).
 ',
         ],
@@ -17195,7 +18010,8 @@ Replaces Pitcairn 1967.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8904',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Colombia - mainland onshore.',
+            'extent_name' => 'Colombia - mainland',
+            'extent_description' => 'Colombia - mainland onshore',
             'help' => 'Fundamental point: Bogota observatory. Latitude: 4°35\'56.570"N, longitude: 0°E (of Bogota).
 ',
         ],
@@ -17206,7 +18022,8 @@ Replaces Pitcairn 1967.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8902',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - mainland - onshore.',
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
             'help' => 'Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42\'43.631"N, longitude: 0°E (of Lisbon).
 Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
         ],
@@ -17217,7 +18034,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8908',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - south west Sulawesi.',
+            'extent_name' => 'Indonesia - Sulawesi SW',
+            'extent_description' => 'Indonesia - south west Sulawesi',
             'help' => 'Fundamental point: station P1, Moncongloe. Latitude 5°08\'41.42"S, longitude 12°35\'47.15"E (of Jakarta).
 ',
         ],
@@ -17228,7 +18046,8 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8909',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Austria. Bosnia and Herzegovina. Croatia - onshore. Kosovo. Montenegro - onshore. North Macedonia. Serbia. Slovenia - onshore.',
+            'extent_name' => 'Europe - Austria and former Yugoslavia onshore',
+            'extent_description' => 'Austria. Bosnia and Herzegovina. Croatia - onshore. Kosovo. Montenegro - onshore. North Macedonia. Serbia. Slovenia - onshore',
             'help' => 'Fundamental point: Hermannskogel. Latitude: 48°16\'15.29"N, longitude: 33°57\'41.06"E (of Ferro).
 Replaced by MGI in Austria and MGI 1901 in former Yugoslavia.',
         ],
@@ -17239,7 +18058,8 @@ Replaced by MGI in Austria and MGI 1901 in former Yugoslavia.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8906',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State.',
+            'extent_name' => 'Italy - including San Marino and Vatican',
+            'extent_description' => 'Italy - onshore and offshore; San Marino, Vatican City State',
             'help' => 'Fundamental point: Monte Mario. Latitude: 41°55\'25.51"N, longitude: 0°00\' 00.00"E (of Rome).
 Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
         ],
@@ -17250,7 +18070,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8903',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - onshore - mainland and Corsica.',
+            'extent_name' => 'France - onshore - mainland and Corsica',
+            'extent_description' => 'France - onshore - mainland and Corsica',
             'help' => 'Fundamental point: Pantheon. Latitude: 54.273618g N, longitude: 0.0106921g E (of Paris).
 ',
         ],
@@ -17261,7 +18082,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8910',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Belgium - onshore.',
+            'extent_name' => 'Belgium - onshore',
+            'extent_description' => 'Belgium - onshore',
             'help' => 'Fundamental point: Lommel (tower). Latitude: 51°13\'47.334"N, longitude: 0°56\'44.773"E (of Brussels).
 ',
         ],
@@ -17272,7 +18094,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8903',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Madagascar - onshore.',
+            'extent_name' => 'Madagascar - onshore',
+            'extent_description' => 'Madagascar - onshore',
             'help' => 'Fundamental point: Tananarive observatory. Latitude: 21.0191667g S, longitude: 50.23849537g E (of Paris)
 ',
         ],
@@ -17283,7 +18106,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8903',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore north of 32°N.',
+            'extent_name' => 'Algeria - north of 32°N',
+            'extent_description' => 'Algeria - onshore north of 32°N',
             'help' => 'Fundamental point: Voirol. Latitude: 40.83578 grads N, longitude: 0.78873 grads E (of Paris).
 ',
         ],
@@ -17294,7 +18118,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8908',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - onshore - Bali, Java and western Sumatra.',
+            'extent_name' => 'Indonesia - Bali, Java and western Sumatra onshore',
+            'extent_description' => 'Indonesia - onshore - Bali, Java and western Sumatra',
             'help' => 'Fundamental point: Longitude at Batavia astronomical station. Latitude: 6°07\'39.522"S, longitude: 0°00\'00.0"E (of Jakarta). Latitude and azimuth at Genuk.
 ',
         ],
@@ -17305,7 +18130,8 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8911',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Sweden - onshore.',
+            'extent_name' => 'Sweden - onshore',
+            'extent_description' => 'Sweden - onshore',
             'help' => 'Fundamental point: Stockholm observatory
 Replaced by RT90 adjustment (datum code 6124)',
         ],
@@ -17316,7 +18142,8 @@ Replaced by RT90 adjustment (datum code 6124)',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8912',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Greece - onshore.',
+            'extent_name' => 'Greece - onshore',
+            'extent_description' => 'Greece - onshore',
             'help' => 'Fundamental point: Athens Observatory. Latitude 37°58\'20.132"N, longitude 0°E (of Athens).
 See geodetic datum alias 6404. Used as basis of topographic mapping based on Hatt projection.',
         ],
@@ -17327,7 +18154,8 @@ See geodetic datum alias 6404. Used as basis of topographic mapping based on Hat
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8903',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Tunisia - onshore.',
+            'extent_name' => 'Tunisia - onshore',
+            'extent_description' => 'Tunisia - onshore',
             'help' => 'Fundamental point: Carthage. Latitude: 40.9464506g N, longitude: 8.8724368g E (of Paris).
 Fundamental point astronomic coordinates determined in 1878.',
         ],
@@ -17338,7 +18166,8 @@ Fundamental point astronomic coordinates determined in 1878.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8913',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Norway - onshore.',
+            'extent_name' => 'Norway - onshore',
+            'extent_description' => 'Norway - onshore',
             'help' => 'Fundamental point: Oslo observatory. Latitude: 59°54\'43.7"N, longitude: 0°00\'00.0"E (of Oslo).
 ',
         ],
@@ -17349,7 +18178,8 @@ Fundamental point astronomic coordinates determined in 1878.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8909',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Czechia; Slovakia.',
+            'extent_name' => 'Europe - Czechoslovakia',
+            'extent_description' => 'Czechia; Slovakia',
             'help' => 'Modification of Austrian MGI (Ferro) datum.
 ',
         ],
@@ -17360,7 +18190,8 @@ Fundamental point astronomic coordinates determined in 1878.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8908',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf areas.',
+            'extent_name' => 'Indonesia - Kalimantan E',
+            'extent_description' => 'Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf areas',
             'help' => 'Station P5 (Gunung Segara) 0°32\'12.83"S, 117°08\'48.47"E (of Greenwich). Longitude 8°20\'20.68"E (of Jakarta).
 ',
         ],
@@ -17371,7 +18202,8 @@ Fundamental point astronomic coordinates determined in 1878.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8903',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Algeria - onshore north of 32°N.',
+            'extent_name' => 'Algeria - north of 32°N',
+            'extent_description' => 'Algeria - onshore north of 32°N',
             'help' => 'Fundamental point: Voirol. Latitude: 40.835864 grads N, longitude: 0.788735 grads E (of Paris).
 Replaces Voirol 1875 (Paris) (code 6811).',
         ],
@@ -17382,7 +18214,8 @@ Replaces Voirol 1875 (Paris) (code 6811).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => 2000.0,
-            'extent_description' => 'World.',
+            'extent_name' => 'World',
+            'extent_description' => 'World',
             'help' => 'Origin at geocentre, originally orientated to the BIH Terrestrial System at epoch 1984.0 then adjusted to ensure zero net rotation to earth\'s overall tectonic motion. Defined by time series of Cartesian station coordinates for epoch 2000.0.
 Realization of the IERS Terrestrial Reference System (ITRS) from September 2007. Replaces ITRF2000 (code 6656). Replaced by ITRF2008 (datum code 1061).',
         ],
@@ -17393,7 +18226,8 @@ Realization of the IERS Terrestrial Reference System (ITRS) from September 2007.
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8914',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'France - mainland onshore.',
+            'extent_name' => 'France - mainland onshore',
+            'extent_description' => 'France - mainland onshore',
             'help' => '
 Uses the RGS value for the Paris meridian. In Alsace, data suspected to be transformation of German network into ATF. Replaced by Nouvelle Triangulation Francaise (Paris) (code 6807) which uses the 1936 IGN value for the Paris meridian.',
         ],
@@ -17404,7 +18238,8 @@ Uses the RGS value for the Paris meridian. In Alsace, data suspected to be trans
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8905',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Spain - mainland onshore.',
+            'extent_name' => 'Spain - mainland onshore',
+            'extent_description' => 'Spain - mainland onshore',
             'help' => 'Fundamental point: Retiro observatory, Madrid.
 Replaced by ED50.',
         ],
@@ -17415,7 +18250,8 @@ Replaced by ED50.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8902',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_description' => 'Portugal - mainland - onshore.',
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
             'help' => 'Fundamental point: Castelo Sao Jorge, Lisbon. Latitude: 38°42\'43.631"N, longitude: 0°E (of Lisbon).
 Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
         ],

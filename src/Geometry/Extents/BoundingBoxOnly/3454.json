@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3454",
+    "title": "North America/Greenland - 48°W to 42°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-48, 56.38317716800015], [-42, 56.38317716800015], [-42, 84], [-48, 84], [-48, 56.38317716800015]
+        ]
+    ]
+}

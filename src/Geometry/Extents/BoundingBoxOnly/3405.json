@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3405",
+    "title": "North America/North America - 114°W to 108°W and NAD83 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-114, 31.332603454538], [-108, 31.332603454538], [-108, 84], [-114, 84], [-114, 31.332603454538]
+        ]
+    ]
+}

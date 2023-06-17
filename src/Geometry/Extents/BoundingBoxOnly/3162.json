@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3162",
+    "title": "Africa/Congo DR (Zaire) - 6th parallel south 19°E to 21°E",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [19, -7.283616065979004], [21, -7.283616065979004], [21, -4.019531569252914], [19, -4.019531569252914], [19, -7.283616065979004]
+        ]
+    ]
+}

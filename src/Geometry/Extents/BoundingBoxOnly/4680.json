@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4680",
+    "title": "Europe-FSU/UK - Oxford to Worcester",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-2.3, 51.64999999999999], [-1.15, 51.64999999999999], [-1.15, 52.25], [-2.3, 52.25], [-2.3, 51.64999999999999]
+        ]
+    ]
+}

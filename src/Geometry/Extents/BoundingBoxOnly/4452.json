@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4452",
+    "title": "Australasia and Oceania/Australia - Western Australia - Kununurra",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [128.5, -16.75], [129, -16.75], [129, -14.75], [128.5, -14.75], [128.5, -16.75]
+        ]
+    ]
+}

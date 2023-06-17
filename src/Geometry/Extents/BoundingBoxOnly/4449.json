@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4449",
+    "title": "Australasia and Oceania/Australia - Western Australia - Geraldton",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [114.5166666666666, -29.1], [115, -29.1], [115, -28.48333333333333], [114.5166666666666, -28.48333333333333], [114.5166666666666, -29.1]
+        ]
+    ]
+}

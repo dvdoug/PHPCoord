@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4437",
+    "title": "Australasia and Oceania/Australia - Western Australia - Busselton",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [115.1833333333333, -33.75], [115.8666666666666, -33.75], [115.8666666666666, -33.39999999999999], [115.1833333333333, -33.39999999999999], [115.1833333333333, -33.75]
+        ]
+    ]
+}

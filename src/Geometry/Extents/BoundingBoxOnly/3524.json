@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3524",
+    "title": "North America/Canada - 72°W to 66°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-72, 40.80246766902158], [-66, 40.80246766902158], [-66, 84], [-72, 84], [-72, 40.80246766902158]
+        ]
+    ]
+}

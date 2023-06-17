@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3069",
+    "title": "Antarctic/Antarctica - 80°S to 84°S, 30°E to 60°E (SU36-40)",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [30, -84], [60, -84], [60, -80], [30, -80], [30, -84]
+        ]
+    ]
+}

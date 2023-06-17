@@ -28,7 +28,7 @@ class GeocentricValue
 {
     protected const ITERATION_CONVERGENCE = 1e-10;
 
-    private Metre$x;
+    private Metre $x;
 
     private Metre $y;
 

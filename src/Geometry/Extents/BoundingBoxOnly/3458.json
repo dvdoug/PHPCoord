@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3458",
+    "title": "North America/Greenland - 24°W to 18°W",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-24, 67.70558929010383], [-18, 67.70558929010383], [-18, 84], [-24, 84], [-24, 67.70558929010383]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2145",
+    "title": "North America/North America - 96°W to 90°W and NAD27 by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-96, 13.63591594968517], [-90, 13.63591594968517], [-90, 81.95769559264987], [-96, 81.95769559264987], [-96, 13.63591594968517]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::3422",
+    "title": "South America/Latin America - 78°W to 72°West; N hemisphere and SIRGAS by country",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-78, 0], [-72, 0], [-72, 15.03333473205566], [-78, 15.03333473205566], [-78, 0]
+        ]
+    ]
+}
