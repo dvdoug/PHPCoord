@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -91,7 +92,10 @@ abstract class Time implements UnitOfMeasure
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     /**
@@ -99,7 +103,11 @@ abstract class Time implements UnitOfMeasure
      */
     public static function registerCustomUnit(string $srid, string $name, string $implementingClassFQCN, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'fqcn' => $implementingClassFQCN, 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'fqcn' => $implementingClassFQCN,
+            'help' => $help,
+        ];
     }
 
     public function __toString(): string

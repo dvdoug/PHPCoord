@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -56,7 +57,8 @@ abstract class CoordinateReferenceSystem
     /**
      * @var array<string, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
     public function getSRID(): string
     {

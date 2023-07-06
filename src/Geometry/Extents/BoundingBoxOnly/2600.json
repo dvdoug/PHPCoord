@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::2600",
+    "title": "Africa/Algeria - Hassi Bir Reikaz",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [7.16666699999999, 31.75], [8, 31.75], [8, 32.416667], [7.16666699999999, 32.416667], [7.16666699999999, 31.75]
+        ]
+    ]
+}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -1549,25 +1550,19 @@ class Geocentric extends CoordinateReferenceSystem
      * @deprecated use EPSG_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4948';
-
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
-    public function __construct(
-        string $srid,
-        CoordinateSystem $coordinateSystem,
-        Datum $datum,
-        BoundingArea $boundingArea,
-        string $name = ''
-    ) {
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '')
+    {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
-
         assert(count($coordinateSystem->getAxes()) === 3);
     }
 
@@ -1576,19 +1571,10 @@ class Geocentric extends CoordinateReferenceSystem
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
-
-            self::$cachedObjects[$srid] = new self(
-                $srid,
-                Cartesian::fromSRID($data['coordinate_system']),
-                Datum::fromSRID($data['datum']),
-                $extent,
-                $data['name']
-            );
+            self::$cachedObjects[$srid] = new self($srid, Cartesian::fromSRID($data['coordinate_system']), Datum::fromSRID($data['datum']), $extent, $data['name']);
         }
 
         return self::$cachedObjects[$srid];
@@ -1607,11 +1593,22 @@ class Geocentric extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'extent_description' => $data['extent_description'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'coordinate_system' => $coordinateSystemSrid,
+            'datum' => $datumSrid,
+            'extent' => $extent,
+            'extent_description' => '',
+            'help' => $help,
+        ];
     }
 }

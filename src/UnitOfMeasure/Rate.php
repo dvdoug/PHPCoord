@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -112,7 +113,6 @@ class Rate implements UnitOfMeasure
         if ($change instanceof Time) {
             throw new InvalidRateException('A rate is a change per unit of time, the change cannot be time');
         }
-
         $this->change = $change;
         $this->time = $time;
     }
@@ -183,6 +183,9 @@ class Rate implements UnitOfMeasure
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 }

@@ -927,7 +927,6 @@ class EPSGCodegenFromDataImport
                 d.conventional_rs_code AS conventional_rs,
                 d.frame_reference_epoch,
                 d.origin_description || '\n' || d.remarks AS constant_help,
-                d.datum_type AS type,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 d.origin_description || '\n' || d.remarks AS doc_help,

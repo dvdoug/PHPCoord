@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -713,7 +714,8 @@ class Ellipsoid
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
     protected Length $semiMajorAxis;
 
@@ -758,7 +760,7 @@ class Ellipsoid
 
     public function getEccentricitySquared(): float
     {
-        return (2 * $this->getFlattening()) - $this->getFlattening() ** 2;
+        return 2 * $this->getFlattening() - $this->getFlattening() ** 2;
     }
 
     public function getName(): string
@@ -776,19 +778,11 @@ class Ellipsoid
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownEllipsoidException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $semiMajorAxis = $data['semi_major_axis'] instanceof Length ? $data['semi_major_axis'] : Length::makeUnit($data['semi_major_axis'], $data['uom']);
             $semiMinorAxis = $data['semi_minor_axis'] instanceof Length ? $data['semi_minor_axis'] : Length::makeUnit($data['semi_minor_axis'], $data['uom']);
-
-            self::$cachedObjects[$srid] = new self(
-                $semiMajorAxis,
-                $semiMinorAxis,
-                $data['name'],
-                $srid,
-            );
+            self::$cachedObjects[$srid] = new self($semiMajorAxis, $semiMinorAxis, $data['name'], $srid);
         }
 
         return self::$cachedObjects[$srid];
@@ -807,11 +801,20 @@ class Ellipsoid
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomEllipsoid(string $srid, string $name, Length $semiMajorAxis, Length $semiMinorAxis, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'semi_major_axis' => $semiMajorAxis, 'semi_minor_axis' => $semiMinorAxis, 'uom' => '', 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'semi_major_axis' => $semiMajorAxis,
+            'semi_minor_axis' => $semiMinorAxis,
+            'uom' => '',
+            'help' => $help,
+        ];
     }
 }

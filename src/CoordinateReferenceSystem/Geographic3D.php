@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -1671,33 +1672,26 @@ class Geographic3D extends Geographic
      * @deprecated use EPSG_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4949';
-
     protected Geocentric|Geographic3D|null $baseCRS;
 
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
-    public function __construct(
-        string $srid,
-        CoordinateSystem $coordinateSystem,
-        Datum $datum,
-        BoundingArea $boundingArea,
-        string $name = '',
-        Geocentric|Geographic3D $baseCRS = null,
-    ) {
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', Geocentric|self $baseCRS = null)
+    {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
         $this->baseCRS = $baseCRS;
-
         assert(count($coordinateSystem->getAxes()) === 3);
     }
 
-    public function getBaseCRS(): Geocentric|Geographic3D|null
+    public function getBaseCRS(): Geocentric|self|null
     {
         return $this->baseCRS;
     }
@@ -1707,22 +1701,12 @@ class Geographic3D extends Geographic
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $baseCRS = $data['base_crs'] ? CoordinateReferenceSystem::fromSRID($data['base_crs']) : null;
             assert($baseCRS === null || $baseCRS instanceof Geocentric || $baseCRS instanceof self);
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
-
-            self::$cachedObjects[$srid] = new self(
-                $srid,
-                Ellipsoidal::fromSRID($data['coordinate_system']),
-                Datum::fromSRID($data['datum']),
-                $extent,
-                $data['name'],
-                $baseCRS,
-            );
+            self::$cachedObjects[$srid] = new self($srid, Ellipsoidal::fromSRID($data['coordinate_system']), Datum::fromSRID($data['datum']), $extent, $data['name'], $baseCRS);
         }
 
         return self::$cachedObjects[$srid];
@@ -1741,11 +1725,23 @@ class Geographic3D extends Geographic
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'extent_description' => $data['extent_description'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $baseCRSSrid = null, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'base_crs' => $baseCRSSrid, 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'coordinate_system' => $coordinateSystemSrid,
+            'datum' => $datumSrid,
+            'extent' => $extent,
+            'extent_description' => '',
+            'base_crs' => $baseCRSSrid,
+            'help' => $help,
+        ];
     }
 }

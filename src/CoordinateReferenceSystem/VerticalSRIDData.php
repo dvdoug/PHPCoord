@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -2070,8 +2071,8 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1277',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
-            'extent_name' => 'Spain - Balearic Islands - Ibiza and Formentera',
-            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore',
+            'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'extent_description' => 'Spain - Balearic Islands - Ibiza - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9395' => [
@@ -2307,6 +2308,33 @@ trait VerticalSRIDData
             'extent_name' => 'Algeria - onshore',
             'extent_description' => 'Algeria - onshore',
             'help' => 'In practice realised by application of geoid model recommended by the Institut National de Cartographie et de Télédétection (INCT) to WGS 84 ellipsoidal heights.',
+        ],
+        'urn:ogc:def:crs:EPSG::10352' => [
+            'name' => 'Formentera height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1362',
+            'extent' => ['urn:ogc:def:area:EPSG::4739'],
+            'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'extent_description' => 'Spain - Balearic Islands - Formentera - onshore',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10353' => [
+            'name' => 'Alboran height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1363',
+            'extent' => ['urn:ogc:def:area:EPSG::4741'],
+            'extent_name' => 'Spain - Alboran',
+            'extent_description' => 'Spain - Alboran island - onshore',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10354' => [
+            'name' => 'Melilla height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1364',
+            'extent' => ['urn:ogc:def:area:EPSG::4740'],
+            'extent_name' => 'Spain - Melilla',
+            'extent_description' => 'Spain - Melilla onshore',
+            'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20000' => [
             'name' => 'SVD2006 height',

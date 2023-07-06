@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -13174,6 +13175,56 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent_name' => 'China - Hong Kong',
             'extent_description' => 'China - Hong Kong - onshore and offshore',
             'help' => 'Replaced by Hong Kong 1980 Grid System (CRS code 2326).',
+        ],
+        'urn:ogc:def:crs:EPSG::3408' => [
+            'name' => 'NSIDC EASE-Grid North',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4469',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10346',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::3897',
+            'extent' => ['urn:ogc:def:area:EPSG::3475'],
+            'extent_name' => 'World - north of 0°N',
+            'extent_description' => 'Northern hemisphere',
+            'help' => 'Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 North (CRS code 6931), which should be preferred for new data.',
+        ],
+        'urn:ogc:def:crs:EPSG::3409' => [
+            'name' => 'NSIDC EASE-Grid South',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4470',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10346',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::3898',
+            'extent' => ['urn:ogc:def:area:EPSG::3474'],
+            'extent_name' => 'World - south of 0°N',
+            'extent_description' => 'Southern hemisphere',
+            'help' => 'Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 South (CRS code 6932), which should be preferred for new data.',
+        ],
+        'urn:ogc:def:crs:EPSG::3410' => [
+            'name' => 'NSIDC EASE-Grid Global',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4499',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10346',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::19869',
+            'extent' => ['urn:ogc:def:area:EPSG::3463'],
+            'extent_name' => 'World - 86°S to 86°N',
+            'extent_description' => 'World between 86°S and 86°N',
+            'help' => 'Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 Global (CRS code 6933), which should be preferred for new data.',
+        ],
+        'urn:ogc:def:crs:EPSG::3411' => [
+            'name' => 'NSIDC Sea Ice Polar Stereographic North',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4468',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10345',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::19865',
+            'extent' => ['urn:ogc:def:area:EPSG::1996'],
+            'extent_name' => 'World - N hemisphere - north of 60°N',
+            'extent_description' => 'Northern hemisphere - north of 60°N onshore and offshore, including Arctic',
+            'help' => 'The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very small scales for which this system should be used this uncertainty may be insignificant. See CRS 3413 for geodetically preferred alternative.',
+        ],
+        'urn:ogc:def:crs:EPSG::3412' => [
+            'name' => 'NSIDC Sea Ice Polar Stereographic South',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4470',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10345',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::19866',
+            'extent' => ['urn:ogc:def:area:EPSG::1997'],
+            'extent_name' => 'World - S hemisphere - south of 60°S',
+            'extent_description' => 'Southern hemisphere - south of 60°S onshore and offshore - Antarctica',
+            'help' => 'The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very small scales for which this system should be used this uncertainty may be insignificant. See CRS 3976 for geodetically preferred alternative.',
         ],
         'urn:ogc:def:crs:EPSG::3413' => [
             'name' => 'WGS 84 / NSIDC Sea Ice Polar Stereographic North',

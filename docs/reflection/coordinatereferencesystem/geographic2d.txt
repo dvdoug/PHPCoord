@@ -2542,6 +2542,21 @@ Hu Tzu Shan 1950
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4236')
 
 
+Hughes 1980
+-----------
+| Extent: World
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_HUGHES_1980)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10345')
+    Geographic::fromSRID(Geographic2D::EPSG_HUGHES_1980)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10345')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_HUGHES_1980)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10345')
+
+Used as basis for DMSP SSM/I data sets provided by NSIDC for polar research.
+
 ID74
 ----
 | Extent: Indonesia - onshore
@@ -5071,6 +5086,21 @@ NGO 1948 (Oslo)
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NGO_1948_OSLO)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4817')
 
+
+NSIDC Authalic Sphere
+---------------------
+| Extent: World
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_NSIDC_AUTHALIC_SPHERE)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10346')
+    Geographic::fromSRID(Geographic2D::EPSG_NSIDC_AUTHALIC_SPHERE)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10346')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NSIDC_AUTHALIC_SPHERE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10346')
+
+Adopted by NSIDC for use with EASE-Grid v1. For EASE-Grid v2, WGS 84 is used.
 
 NSWC 9Z-2
 ---------

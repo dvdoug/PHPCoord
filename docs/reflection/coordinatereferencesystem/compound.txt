@@ -355,6 +355,18 @@ ETRF2000-PL + EVRF2007-PL height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9657')
 
 
+ETRS89 + Alboran height
+-----------------------
+| Extent: Spain - Alboran island - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALBORAN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10356')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_ALBORAN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10356')
+
+
 ETRS89 + Alicante height
 ------------------------
 | Extent: Gibraltar - onshore; Spain - mainland onshore
@@ -551,6 +563,18 @@ ETRS89 + EVRF2019 mean-tide height
 
 See also ETRS89 + EVRF2019 (CRS code 9422).
 
+ETRS89 + Formentera height
+--------------------------
+| Extent: Spain - Balearic Islands - Formentera - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_FORMENTERA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10355')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_FORMENTERA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10355')
+
+
 ETRS89 + Genoa 1942 height
 --------------------------
 | Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily
@@ -565,7 +589,7 @@ ETRS89 + Genoa 1942 height
 
 ETRS89 + Ibiza height
 ---------------------
-| Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore
+| Extent: Spain - Balearic Islands - Ibiza - onshore
 
 .. code-block:: php
 
@@ -645,6 +669,18 @@ ETRS89 + Mallorca height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9508')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_MALLORCA_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9508')
+
+
+ETRS89 + Melilla height
+-----------------------
+| Extent: Spain - Melilla onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_MELILLA_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10357')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_MELILLA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10357')
 
 
 ETRS89 + Menorca height

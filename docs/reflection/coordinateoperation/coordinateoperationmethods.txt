@@ -158,6 +158,14 @@ Equal Earth
     'urn:ogc:def:method:EPSG::1078'
 
 
+Equidistant Conic
+-----------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_EQUIDISTANT_CONIC
+    'urn:ogc:def:method:EPSG::1119'
+
+
 Equidistant Cylindrical
 -----------------------
 .. code-block:: php

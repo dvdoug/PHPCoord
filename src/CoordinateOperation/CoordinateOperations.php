@@ -2652,6 +2652,20 @@ class CoordinateOperations
             'extent_name' => 'Austria',
             'extent_description' => 'Austria',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::3897' => [
+            'name' => 'US NSIDC Equal Area north projection',
+            'method' => 'urn:ogc:def:method:EPSG::1027',
+            'extent' => ['urn:ogc:def:area:EPSG::3475'],
+            'extent_name' => 'World - north of 0°N',
+            'extent_description' => 'Northern hemisphere',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::3898' => [
+            'name' => 'US NSIDC Equal Area south projection',
+            'method' => 'urn:ogc:def:method:EPSG::1027',
+            'extent' => ['urn:ogc:def:area:EPSG::3474'],
+            'extent_name' => 'World - south of 0°N',
+            'extent_description' => 'Southern hemisphere',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::3899' => [
             'name' => 'US National Atlas Equal Area',
             'method' => 'urn:ogc:def:method:EPSG::1027',
@@ -12190,8 +12204,8 @@ class CoordinateOperations
             'name' => 'ETRS89 to Ibiza height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1025',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
-            'extent_name' => 'Spain - Balearic Islands - Ibiza and Formentera',
-            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore',
+            'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'extent_description' => 'Spain - Balearic Islands - Ibiza - onshore',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9414' => [
             'name' => 'ETRS89 to Ceuta 2 height (1)',
@@ -12484,8 +12498,8 @@ class CoordinateOperations
             'name' => 'ETRS89 to ETRS89 + Ibiza height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1092',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
-            'extent_name' => 'Spain - Balearic Islands - Ibiza and Formentera',
-            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore',
+            'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'extent_description' => 'Spain - Balearic Islands - Ibiza - onshore',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9608' => [
             'name' => 'ETRS89 to ETRS89 + Mallorca height (1)',
@@ -12790,20 +12804,6 @@ class CoordinateOperations
         ],
         'urn:ogc:def:coordinateOperation:EPSG::9718' => [
             'name' => 'ETRF2000-PL to ETRF2000-PL + Baltic 1986 height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1100',
-            'extent' => ['urn:ogc:def:area:EPSG::3293'],
-            'extent_name' => 'Poland - onshore',
-            'extent_description' => 'Poland - onshore',
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9719' => [
-            'name' => 'ETRF2000-PL to EVRF2007-PL height (1)',
-            'method' => 'urn:ogc:def:method:EPSG::1099',
-            'extent' => ['urn:ogc:def:area:EPSG::3293'],
-            'extent_name' => 'Poland - onshore',
-            'extent_description' => 'Poland - onshore',
-        ],
-        'urn:ogc:def:coordinateOperation:EPSG::9720' => [
-            'name' => 'ETRF2000-PL to ETRF2000-PL + EVRF2007-PL height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1100',
             'extent' => ['urn:ogc:def:area:EPSG::3293'],
             'extent_name' => 'Poland - onshore',
@@ -14117,6 +14117,104 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::4167'],
             'extent_name' => 'Pacific - US interests Mariana plate',
             'extent_description' => 'Guam, Northern Mariana Islands and Palau; onshore and offshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10339' => [
+            'name' => 'Nord Sahara 1959 to RGSH2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9606',
+            'extent' => ['urn:ogc:def:area:EPSG::2598'],
+            'extent_name' => 'Algeria - District 3',
+            'extent_description' => 'Algeria - District 3 (In Salah)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10340' => [
+            'name' => 'Nord Sahara 1959 to RGSH2020 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::2599'],
+            'extent_name' => 'Algeria - In Amenas',
+            'extent_description' => 'Algeria - In Amenas block',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10341' => [
+            'name' => 'Nord Sahara 1959 to RGSH2020 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::2600'],
+            'extent_name' => 'Algeria - Hassi Bir Reikaz',
+            'extent_description' => 'Algeria - Hassi Bir Reikaz',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10342' => [
+            'name' => 'Nord Sahara 1959 to RGSH2020 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::3402'],
+            'extent_name' => 'Algeria - Hassi Mouina licence area',
+            'extent_description' => 'Algeria - Hassi Mouina licence area',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10343' => [
+            'name' => 'Nord Sahara 1959 to RGSH2020 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::3917'],
+            'extent_name' => 'Algeria - Ahnet licence area',
+            'extent_description' => 'Algeria - Ahnet licence area',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10344' => [
+            'name' => 'Nord Sahara 1959 to RGSH2020 (6)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::4382'],
+            'extent_name' => 'Algeria - Ain Tsila',
+            'extent_description' => 'Algeria - Ain Tsila field',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10347' => [
+            'name' => 'ETRF2000-PL to EVRF2007-PL height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1099',
+            'extent' => ['urn:ogc:def:area:EPSG::3293'],
+            'extent_name' => 'Poland - onshore',
+            'extent_description' => 'Poland - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10348' => [
+            'name' => 'ETRF2000-PL to ETRF2000-PL + EVRF2007-PL height (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1100',
+            'extent' => ['urn:ogc:def:area:EPSG::3293'],
+            'extent_name' => 'Poland - onshore',
+            'extent_description' => 'Poland - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10358' => [
+            'name' => 'ETRS89 to Formentera height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent' => ['urn:ogc:def:area:EPSG::4739'],
+            'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'extent_description' => 'Spain - Balearic Islands - Formentera - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10359' => [
+            'name' => 'ETRS89 to ETRS89 + Formentera height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent' => ['urn:ogc:def:area:EPSG::4739'],
+            'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'extent_description' => 'Spain - Balearic Islands - Formentera - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10360' => [
+            'name' => 'ETRS89 to Alboran height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent' => ['urn:ogc:def:area:EPSG::4741'],
+            'extent_name' => 'Spain - Alboran',
+            'extent_description' => 'Spain - Alboran island - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10361' => [
+            'name' => 'ETRS89 to ETRS89 + Alboran height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent' => ['urn:ogc:def:area:EPSG::4741'],
+            'extent_name' => 'Spain - Alboran',
+            'extent_description' => 'Spain - Alboran island - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10362' => [
+            'name' => 'ETRS89 to Melilla height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1025',
+            'extent' => ['urn:ogc:def:area:EPSG::4740'],
+            'extent_name' => 'Spain - Melilla',
+            'extent_description' => 'Spain - Melilla onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10363' => [
+            'name' => 'ETRS89 to ETRS89 + Melilla height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1092',
+            'extent' => ['urn:ogc:def:area:EPSG::4740'],
+            'extent_name' => 'Spain - Melilla',
+            'extent_description' => 'Spain - Melilla onshore',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10401' => [
             'name' => 'California CS27 zone I',
@@ -25150,6 +25248,13 @@ class CoordinateOperations
             'extent_name' => 'World - S hemisphere - south of 60°S',
             'extent_description' => 'Southern hemisphere - south of 60°S onshore and offshore - Antarctica',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::19869' => [
+            'name' => 'US NSIDC Equal Area global projection',
+            'method' => 'urn:ogc:def:method:EPSG::9834',
+            'extent' => ['urn:ogc:def:area:EPSG::3463'],
+            'extent_name' => 'World - 86°S to 86°N',
+            'extent_description' => 'World between 86°S and 86°N',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::19870' => [
             'name' => 'Faroe Lambert',
             'method' => 'urn:ogc:def:method:EPSG::9826',
@@ -26051,12 +26156,14 @@ class CoordinateOperations
     /**
      * @var array<string, array<mixed>>
      */
-    protected static array $customSridParamData = [];
+    protected static array $customSridParamData = [
+    ];
 
     /**
      * @var array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}>
      */
-    protected static array $customTransformationData = [];
+    protected static array $customTransformationData = [
+    ];
 
     /**
      * @internal
@@ -26089,13 +26196,25 @@ class CoordinateOperations
      */
     public static function registerCustomOperation(string $srid, string $name, string $methodSrid, BoundingArea $extent, array $params): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'method' => $methodSrid, 'extent' => $extent, 'params' => $params, 'extent_description' => ''];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'method' => $methodSrid,
+            'extent' => $extent,
+            'params' => $params,
+            'extent_description' => '',
+        ];
         self::$customSridParamData[$srid] = $params;
     }
 
     public static function registerCustomTransformation(string $operationSrid, string $name, string $sourceCRSSrid, string $targetCRSSrid, float $accuracy): void
     {
-        self::$customTransformationData[] = ['operation' => $operationSrid, 'name' => $name, 'source_crs' => $sourceCRSSrid, 'target_crs' => $targetCRSSrid, 'accuracy' => $accuracy];
+        self::$customTransformationData[] = [
+            'operation' => $operationSrid,
+            'name' => $name,
+            'source_crs' => $sourceCRSSrid,
+            'target_crs' => $targetCRSSrid,
+            'accuracy' => $accuracy,
+        ];
     }
 
     /**

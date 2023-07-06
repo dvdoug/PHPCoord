@@ -1311,6 +1311,31 @@ class GeographicPoint extends Point implements ConvertiblePoint
     }
 
     /**
+     * Lambert Cylindrical Equal Area
+     * This is the spherical form of the projection.
+     */
+    public function lambertCylindricalEqualAreaSpherical(
+        Projected $to,
+        Angle $latitudeOf1stStandardParallel,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
+        $latitude = $this->latitude->asRadians()->getValue();
+        $latitudeFirstParallel = $latitudeOf1stStandardParallel->asRadians()->getValue();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+
+        $x = $a * cos($latitudeFirstParallel) * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
+        $y = $a * sin($latitude) / cos($latitudeFirstParallel);
+
+        $easting = $falseEasting->asMetres()->getValue() + $x;
+        $northing = $falseNorthing->asMetres()->getValue() + $y;
+
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
+    }
+
+    /**
      * Modified Azimuthal Equidistant
      * Modified form of Oblique Azimuthal Equidistant projection method developed for Polynesian islands. For the
      * distances over which these projections are used (under 800km) this modification introduces no significant error.

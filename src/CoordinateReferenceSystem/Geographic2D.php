@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -1322,6 +1323,13 @@ class Geographic2D extends Geographic
     public const EPSG_HU_TZU_SHAN_1950 = 'urn:ogc:def:crs:EPSG::4236';
 
     /**
+     * Hughes 1980
+     * Extent: World
+     * Used as basis for DMSP SSM/I data sets provided by NSIDC for polar research.
+     */
+    public const EPSG_HUGHES_1980 = 'urn:ogc:def:crs:EPSG::10345';
+
+    /**
      * ID74
      * Extent: Indonesia - onshore
      * Replaced by DGN95.
@@ -2612,6 +2620,13 @@ class Geographic2D extends Geographic
      * Extent: Norway - onshore.
      */
     public const EPSG_NGO_1948_OSLO = 'urn:ogc:def:crs:EPSG::4817';
+
+    /**
+     * NSIDC Authalic Sphere
+     * Extent: World
+     * Adopted by NSIDC for use with EASE-Grid v1. For EASE-Grid v2, WGS 84 is used.
+     */
+    public const EPSG_NSIDC_AUTHALIC_SPHERE = 'urn:ogc:def:crs:EPSG::10346';
 
     /**
      * NSWC 9Z-2
@@ -4306,29 +4321,22 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
-
     protected Geographic2D|Geographic3D|null $baseCRS;
 
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
-    public function __construct(
-        string $srid,
-        CoordinateSystem $coordinateSystem,
-        Datum $datum,
-        BoundingArea $boundingArea,
-        string $name = '',
-        self|Geographic3D $baseCRS = null,
-    ) {
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', self|Geographic3D $baseCRS = null)
+    {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
         $this->baseCRS = $baseCRS;
-
         assert(count($coordinateSystem->getAxes()) === 2);
     }
 
@@ -4342,22 +4350,12 @@ class Geographic2D extends Geographic
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $baseCRS = $data['base_crs'] ? CoordinateReferenceSystem::fromSRID($data['base_crs']) : null;
             assert($baseCRS === null || $baseCRS instanceof self || $baseCRS instanceof Geographic3D);
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
-
-            self::$cachedObjects[$srid] = new self(
-                $srid,
-                Ellipsoidal::fromSRID($data['coordinate_system']),
-                Datum::fromSRID($data['datum']),
-                $extent,
-                $data['name'],
-                $baseCRS,
-            );
+            self::$cachedObjects[$srid] = new self($srid, Ellipsoidal::fromSRID($data['coordinate_system']), Datum::fromSRID($data['datum']), $extent, $data['name'], $baseCRS);
         }
 
         return self::$cachedObjects[$srid];
@@ -4376,11 +4374,23 @@ class Geographic2D extends Geographic
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'extent_description' => $data['extent_description'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $baseCRSSrid = null, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'base_crs' => $baseCRSSrid, 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'coordinate_system' => $coordinateSystemSrid,
+            'datum' => $datumSrid,
+            'extent' => $extent,
+            'extent_description' => '',
+            'base_crs' => $baseCRSSrid,
+            'help' => $help,
+        ];
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -70,6 +71,12 @@ class Vertical extends CoordinateReferenceSystem
      * for applications over distances greater than 10 km.
      */
     public const EPSG_AVWS_HEIGHT = 'urn:ogc:def:crs:EPSG::9458';
+
+    /**
+     * Alboran height
+     * Extent: Spain - Alboran island - onshore.
+     */
+    public const EPSG_ALBORAN_HEIGHT = 'urn:ogc:def:crs:EPSG::10353';
 
     /**
      * Alicante height
@@ -598,6 +605,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_FLANNAN_ISLES_HEIGHT = 'urn:ogc:def:crs:EPSG::5748';
 
     /**
+     * Formentera height
+     * Extent: Spain - Balearic Islands - Formentera - onshore.
+     */
+    public const EPSG_FORMENTERA_HEIGHT = 'urn:ogc:def:crs:EPSG::10352';
+
+    /**
      * Foula height
      * Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
@@ -889,7 +902,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Ibiza height
-     * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+     * Extent: Spain - Balearic Islands - Ibiza - onshore.
      */
     public const EPSG_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::9394';
 
@@ -1298,6 +1311,12 @@ class Vertical extends CoordinateReferenceSystem
      * Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system.
      */
     public const EPSG_MAYOTTE_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::5793';
+
+    /**
+     * Melilla height
+     * Extent: Spain - Melilla onshore.
+     */
+    public const EPSG_MELILLA_HEIGHT = 'urn:ogc:def:crs:EPSG::10354';
 
     /**
      * Menorca height
@@ -1934,25 +1953,19 @@ class Vertical extends CoordinateReferenceSystem
      * @deprecated use EPSG_INAGEOID2020_V1_HEIGHT instead
      */
     public const EPSG_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
-
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
-    public function __construct(
-        string $srid,
-        CoordinateSystem $coordinateSystem,
-        Datum $datum,
-        BoundingArea $boundingArea,
-        string $name = ''
-    ) {
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '')
+    {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
         $this->boundingArea = $boundingArea;
         $this->name = $name;
-
         assert(count($coordinateSystem->getAxes()) === 1);
     }
 
@@ -1963,16 +1976,8 @@ class Vertical extends CoordinateReferenceSystem
         }
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
-
-            self::$cachedObjects[$srid] = new self(
-                $srid,
-                VerticalCS::fromSRID($data['coordinate_system']),
-                Datum::fromSRID($data['datum']),
-                $extent,
-                $data['name']
-            );
+            self::$cachedObjects[$srid] = new self($srid, VerticalCS::fromSRID($data['coordinate_system']), Datum::fromSRID($data['datum']), $extent, $data['name']);
         }
 
         return self::$cachedObjects[$srid];
@@ -1991,11 +1996,22 @@ class Vertical extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'extent_description' => $data['extent_description'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'datum' => $datumSrid, 'extent' => $extent, 'extent_description' => '', 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'coordinate_system' => $coordinateSystemSrid,
+            'datum' => $datumSrid,
+            'extent' => $extent,
+            'extent_description' => '',
+            'help' => $help,
+        ];
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -27884,6 +27885,51 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_NGO_1948_OSLO_NGO_ZONE_VIII = 'urn:ogc:def:crs:EPSG::27398';
 
     /**
+     * NSIDC EASE-Grid Global
+     * Extent: World between 86°S and 86°N
+     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
+     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 Global (CRS code 6933), which should be preferred
+     * for new data.
+     */
+    public const EPSG_NSIDC_EASE_GRID_GLOBAL = 'urn:ogc:def:crs:EPSG::3410';
+
+    /**
+     * NSIDC EASE-Grid North
+     * Extent: Northern hemisphere
+     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
+     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 North (CRS code 6931), which should be preferred
+     * for new data.
+     */
+    public const EPSG_NSIDC_EASE_GRID_NORTH = 'urn:ogc:def:crs:EPSG::3408';
+
+    /**
+     * NSIDC EASE-Grid South
+     * Extent: Southern hemisphere
+     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
+     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 South (CRS code 6932), which should be preferred
+     * for new data.
+     */
+    public const EPSG_NSIDC_EASE_GRID_SOUTH = 'urn:ogc:def:crs:EPSG::3409';
+
+    /**
+     * NSIDC Sea Ice Polar Stereographic North
+     * Extent: Northern hemisphere - north of 60°N onshore and offshore, including Arctic
+     * The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very
+     * small scales for which this system should be used this uncertainty may be insignificant. See CRS 3413 for
+     * geodetically preferred alternative.
+     */
+    public const EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH = 'urn:ogc:def:crs:EPSG::3411';
+
+    /**
+     * NSIDC Sea Ice Polar Stereographic South
+     * Extent: Southern hemisphere - south of 60°S onshore and offshore - Antarctica
+     * The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very
+     * small scales for which this system should be used this uncertainty may be insignificant. See CRS 3976 for
+     * geodetically preferred alternative.
+     */
+    public const EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH = 'urn:ogc:def:crs:EPSG::3412';
+
+    /**
      * NTF (Paris) / Lambert Centre France
      * Extent: France mainland onshore between 50.5 grads and 53.5 grads North (45°27'N to 48°09'N)
      * Replaced by NTF (Paris) / France zone II (code 27572) from 1972.
@@ -40242,7 +40288,6 @@ class Projected extends CoordinateReferenceSystem
      * @deprecated use EPSG_LKS_92_LATVIA_TM instead
      */
     public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
-
     protected Geographic2D|Geographic3D $baseCRS;
 
     protected ?string $derivingConversion;
@@ -40250,17 +40295,11 @@ class Projected extends CoordinateReferenceSystem
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
-    public function __construct(
-        string $srid,
-        CoordinateSystem $coordinateSystem,
-        Datum $datum,
-        BoundingArea $boundingArea,
-        string $name = '',
-        Geographic2D|Geographic3D $baseCRS = null,
-        string $derivingConversion = null
-    ) {
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', Geographic2D|Geographic3D $baseCRS = null, string $derivingConversion = null)
+    {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
         $this->datum = $datum;
@@ -40268,7 +40307,6 @@ class Projected extends CoordinateReferenceSystem
         $this->name = $name;
         $this->baseCRS = $baseCRS ?? Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
         $this->derivingConversion = $derivingConversion;
-
         assert(count($coordinateSystem->getAxes()) === 2 || count($coordinateSystem->getAxes()) === 3);
     }
 
@@ -40287,22 +40325,11 @@ class Projected extends CoordinateReferenceSystem
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $baseCRS = Geographic::fromSRID($data['base_crs']);
             $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
-
-            self::$cachedObjects[$srid] = new self(
-                $srid,
-                Cartesian::fromSRID($data['coordinate_system']),
-                $baseCRS->getDatum(),
-                $extent,
-                $data['name'],
-                $baseCRS,
-                $data['deriving_conversion'],
-            );
+            self::$cachedObjects[$srid] = new self($srid, Cartesian::fromSRID($data['coordinate_system']), $baseCRS->getDatum(), $extent, $data['name'], $baseCRS, $data['deriving_conversion']);
         }
 
         return self::$cachedObjects[$srid];
@@ -40321,11 +40348,23 @@ class Projected extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'extent_description' => $data['extent_description'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $baseCRSSrid, string $derivingConversionSrid, string $coordinateSystemSrid, BoundingArea $extent, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'coordinate_system' => $coordinateSystemSrid, 'base_crs' => $baseCRSSrid, 'deriving_conversion' => $derivingConversionSrid, 'extent' => $extent, 'extent_description' => '', 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'coordinate_system' => $coordinateSystemSrid,
+            'base_crs' => $baseCRSSrid,
+            'deriving_conversion' => $derivingConversionSrid,
+            'extent' => $extent,
+            'extent_description' => '',
+            'help' => $help,
+        ];
     }
 }

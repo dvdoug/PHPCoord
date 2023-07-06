@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -203,7 +204,8 @@ class PrimeMeridian
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
     private string $name;
 
@@ -238,10 +240,8 @@ class PrimeMeridian
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownPrimeMeridianException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             if ($data['greenwich_longitude'] instanceof Angle) {
                 self::$cachedObjects[$srid] = new self($data['name'], $data['greenwich_longitude'], $srid);
             } else {
@@ -265,11 +265,19 @@ class PrimeMeridian
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomMeridian(string $srid, string $name, Angle $longitudeFromGreenwich, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'greenwich_longitude' => $longitudeFromGreenwich, 'uom' => '', 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'greenwich_longitude' => $longitudeFromGreenwich,
+            'uom' => '',
+            'help' => $help,
+        ];
     }
 }

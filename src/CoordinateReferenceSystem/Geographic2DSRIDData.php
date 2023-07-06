@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -5732,6 +5733,26 @@ Replaced by Leigon (code 4250) in 1978.',
             'extent_name' => 'Bosnia and Herzegovina',
             'extent_description' => 'Bosnia and Herzegovina',
             'help' => 'In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).',
+        ],
+        'urn:ogc:def:crs:EPSG::10345' => [
+            'name' => 'Hughes 1980',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => null,
+            'datum' => 'urn:ogc:def:datum:EPSG::1359',
+            'extent' => ['urn:ogc:def:area:EPSG::1262'],
+            'extent_name' => 'World',
+            'extent_description' => 'World',
+            'help' => 'Used as basis for DMSP SSM/I data sets provided by NSIDC for polar research.',
+        ],
+        'urn:ogc:def:crs:EPSG::10346' => [
+            'name' => 'NSIDC Authalic Sphere',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => null,
+            'datum' => 'urn:ogc:def:datum:EPSG::1360',
+            'extent' => ['urn:ogc:def:area:EPSG::1262'],
+            'extent_name' => 'World',
+            'extent_description' => 'World',
+            'help' => 'Adopted by NSIDC for use with EASE-Grid v1. For EASE-Grid v2, WGS 84 is used.',
         ],
         'urn:ogc:def:crs:EPSG::20033' => [
             'name' => 'MWC18-IRF',

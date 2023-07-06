@@ -97,7 +97,6 @@ class Codegen
         $traverser->addVisitor(new CloningVisitor());
 
         $oldStmts = $parser->parse(file_get_contents($fileName));
-        $oldTokens = $lexer->getTokens();
 
         $newStmts = $traverser->traverse($oldStmts);
 
@@ -116,7 +115,7 @@ class Codegen
         $newStmts = $traverser->traverse($newStmts);
 
         $prettyPrinter = new ASTPrettyPrinter();
-        file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));
+        file_put_contents($fileName, $prettyPrinter->prettyPrintFile($newStmts));
         $this->csFixFile($fileName);
         echo 'done' . PHP_EOL;
     }
@@ -140,7 +139,6 @@ class Codegen
         $traverser->addVisitor(new CloningVisitor());
 
         $oldStmts = $parser->parse(file_get_contents($fileName));
-        $oldTokens = $lexer->getTokens();
 
         $newStmts = $traverser->traverse($oldStmts);
 
@@ -163,7 +161,7 @@ class Codegen
         }
 
         $prettyPrinter = new ASTPrettyPrinter();
-        file_put_contents($fileName, $prettyPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens));
+        file_put_contents($fileName, $prettyPrinter->prettyPrintFile($newStmts));
         $this->csFixFile($fileName);
         echo 'done' . PHP_EOL;
     }

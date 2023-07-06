@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -35,13 +36,10 @@ abstract class CoordinateSystem
     /**
      * @param Axis[] $axes
      */
-    public function __construct(
-        string $srid,
-        array $axes
-    ) {
+    public function __construct(string $srid, array $axes)
+    {
         $this->srid = $srid;
         $this->axes = $axes;
-
         foreach ($this->axes as $axis) {
             $this->axesByName[$axis->getName()] = $axis;
         }

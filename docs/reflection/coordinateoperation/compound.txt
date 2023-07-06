@@ -29,13 +29,34 @@ to ETRF2000-PL (Geographic3D)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: ETRF2000-PL to ETRF2000-PL + EVRF2007-PL height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::9720``
+    "| Name: ETRF2000-PL to ETRF2000-PL + EVRF2007-PL height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10348``
     | Extent: Poland - onshore",".. code-block:: php
 
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRF2000_PL),
             geoidHeightCorrectionModelFile: GUGiKHeightETRF2000EVRF2007PolandProvider->provideGrid()
+        )
+
+    "
+
+ETRS89 + Alboran height
+-----------------------
+``Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_ALBORAN_HEIGHT)``
+
+to ETRS89 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89 to ETRS89 + Alboran height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10361``
+    | Extent: Spain - Alboran",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),
+            geoidHeightCorrectionModelFile: IGNESHeightETRS89REDNAPSpainProvider->provideGrid()
         )
 
     "
@@ -228,6 +249,27 @@ to ETRS89 (Geographic3D)
 
     "
 
+ETRS89 + Formentera height
+--------------------------
+``Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_FORMENTERA_HEIGHT)``
+
+to ETRS89 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89 to ETRS89 + Formentera height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10359``
+    | Extent: Spain - Balearic Islands - Formentera",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),
+            geoidHeightCorrectionModelFile: IGNESHeightETRS89REDNAPSpainProvider->provideGrid()
+        )
+
+    "
+
 ETRS89 + Ibiza height
 ---------------------
 ``Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_IBIZA_HEIGHT)``
@@ -240,7 +282,7 @@ to ETRS89 (Geographic3D)
 
     "| Name: ETRS89 to ETRS89 + Ibiza height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9607``
-    | Extent: Spain - Balearic Islands - Ibiza and Formentera",".. code-block:: php
+    | Extent: Spain - Balearic Islands - Ibiza",".. code-block:: php
 
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),
@@ -304,6 +346,27 @@ to ETRS89 (Geographic3D)
     "| Name: ETRS89 to ETRS89 + Mallorca height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9608``
     | Extent: Spain - Balearic Islands - Mallorca",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),
+            geoidHeightCorrectionModelFile: IGNESHeightETRS89REDNAPSpainProvider->provideGrid()
+        )
+
+    "
+
+ETRS89 + Melilla height
+-----------------------
+``Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_MELILLA_HEIGHT)``
+
+to ETRS89 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89 to ETRS89 + Melilla height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10363``
+    | Extent: Spain - Melilla",".. code-block:: php
 
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),

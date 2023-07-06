@@ -112,6 +112,11 @@ class CoordinateOperationMethods
     public const EPSG_EQUAL_EARTH = 'urn:ogc:def:method:EPSG::1078';
 
     /**
+     * Equidistant Conic.
+     */
+    public const EPSG_EQUIDISTANT_CONIC = 'urn:ogc:def:method:EPSG::1119';
+
+    /**
      * Equidistant Cylindrical.
      */
     public const EPSG_EQUIDISTANT_CYLINDRICAL = 'urn:ogc:def:method:EPSG::1028';
@@ -2426,6 +2431,31 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1119' => [
+            'name' => 'Equidistant Conic',
+            'reversible' => true,
+            'paramData' => [
+                'latitudeOfFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'latitudeOf1stStandardParallel' => [
+                    'reverses' => false,
+                ],
+                'latitudeOf2ndStandardParallel' => [
+                    'reverses' => false,
+                ],
+                'eastingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'northingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::9601' => [
             'name' => 'Longitude rotation',
             'reversible' => true,
@@ -4582,6 +4612,7 @@ class CoordinateOperationMethods
         self::EPSG_LAMBERT_CONIC_CONFORMAL_WEST_ORIENTATED => 'lambertConicConformalWestOrientated',
         self::EPSG_LAMBERT_CONIC_NEAR_CONFORMAL => 'lambertConicNearConformal',
         self::EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA => 'lambertCylindricalEqualArea',
+        self::EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA_SPHERICAL => 'lambertCylindricalEqualAreaSpherical',
         self::EPSG_MODIFIED_AZIMUTHAL_EQUIDISTANT => 'modifiedAzimuthalEquidistant',
         self::EPSG_OBLIQUE_STEREOGRAPHIC => 'obliqueStereographic',
         self::EPSG_POLAR_STEREOGRAPHIC_VARIANT_A => 'polarStereographicVariantA',

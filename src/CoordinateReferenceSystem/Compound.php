@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -215,6 +216,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRF2000_PL_PLUS_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9657';
 
     /**
+     * ETRS89 + Alboran height
+     * Extent: Spain - Alboran island - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_ALBORAN_HEIGHT = 'urn:ogc:def:crs:EPSG::10356';
+
+    /**
      * ETRS89 + Alicante height
      * Extent: Gibraltar - onshore; Spain - mainland onshore.
      */
@@ -337,6 +344,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_EVRF2019_MEAN_TIDE_HEIGHT = 'urn:ogc:def:crs:EPSG::9423';
 
     /**
+     * ETRS89 + Formentera height
+     * Extent: Spain - Balearic Islands - Formentera - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_FORMENTERA_HEIGHT = 'urn:ogc:def:crs:EPSG::10355';
+
+    /**
      * ETRS89 + Genoa 1942 height
      * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
      */
@@ -344,7 +357,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 + Ibiza height
-     * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore.
+     * Extent: Spain - Balearic Islands - Ibiza - onshore.
      */
     public const EPSG_ETRS89_PLUS_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::9507';
 
@@ -384,6 +397,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Spain - Balearic Islands - Mallorca onshore.
      */
     public const EPSG_ETRS89_PLUS_MALLORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::9508';
+
+    /**
+     * ETRS89 + Melilla height
+     * Extent: Spain - Melilla onshore.
+     */
+    public const EPSG_ETRS89_PLUS_MELILLA_HEIGHT = 'urn:ogc:def:crs:EPSG::10357';
 
     /**
      * ETRS89 + Menorca height
@@ -2961,23 +2980,18 @@ class Compound extends CoordinateReferenceSystem
      * @deprecated use EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT instead
      */
     public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
-
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
     private Geographic2D|Projected $horizontal;
 
     private Vertical $vertical;
 
-    public function __construct(
-        string $srid,
-        Geographic2D|Projected $horizontal,
-        Vertical $vertical,
-        BoundingArea $boundingArea,
-        string $name = ''
-    ) {
+    public function __construct(string $srid, Geographic2D|Projected $horizontal, Vertical $vertical, BoundingArea $boundingArea, string $name = '')
+    {
         $this->srid = $srid;
         $this->horizontal = $horizontal;
         $this->vertical = $vertical;
@@ -3000,20 +3014,11 @@ class Compound extends CoordinateReferenceSystem
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateReferenceSystemException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
             $horizontalCRS = CoordinateReferenceSystem::fromSRID($data['horizontal_crs']);
             assert($horizontalCRS instanceof Geographic2D || $horizontalCRS instanceof Projected);
-
-            self::$cachedObjects[$srid] = new self(
-                $srid,
-                $horizontalCRS,
-                Vertical::fromSRID($data['vertical_crs']),
-                BoundingArea::createFromExtentCodes($data['extent']),
-                $data['name']
-            );
+            self::$cachedObjects[$srid] = new self($srid, $horizontalCRS, Vertical::fromSRID($data['vertical_crs']), BoundingArea::createFromExtentCodes($data['extent']), $data['name']);
         }
 
         return self::$cachedObjects[$srid];
@@ -3032,7 +3037,11 @@ class Compound extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'extent_description' => $data['extent_description'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'extent_description' => $data['extent_description'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     /**
@@ -3041,7 +3050,8 @@ class Compound extends CoordinateReferenceSystem
      */
     public static function findFromVertical(Vertical $vertical): array
     {
-        $candidates = [];
+        $candidates = [
+        ];
         foreach (self::$sridData as $srid => $data) {
             if ($data['vertical_crs'] === $vertical->getSRID()) {
                 $candidates[$srid] = self::fromSRID($srid);

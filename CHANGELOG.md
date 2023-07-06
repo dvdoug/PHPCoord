@@ -1,8 +1,11 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Support for Lambert Cylindrical Equal Area (Spherical) projection
 ### Changed
 - Infer a current epoch when doing time-dependant transforms and no explicit epoch is supplied
+- Updates to data for Polar regions, Algeria and Spain
 
 ## [5.4.0] - 2023-05-27
 ### Added

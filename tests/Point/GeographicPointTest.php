@@ -705,6 +705,16 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(1104391.2, $to->getNorthing()->asMetres()->getValue(), 0.1);
     }
 
+    public function testLambertCylindricalEqualAreaSpherical(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(35), new Degree(80), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST);
+        $to = $from->lambertCylindricalEqualAreaSpherical($toCRS, new Degree(30), new Degree(-75), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(14943016.171313, $to->getEasting()->asMetres()->getValue(), 0.1);
+        self::assertEqualsWithDelta(4224343.6292246, $to->getNorthing()->asMetres()->getValue(), 0.1);
+    }
+
     public function testThreeDToTwoD(): void
     {
         $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(0.123), new Degree(0.456), new Metre(789));

@@ -75,6 +75,18 @@ AVWS height
 
 For cadastral and local engineering applications see AHD height (CRS code 5711). AVWS is more accurate than AHD for applications over distances greater than 10 km.
 
+Alboran height
+--------------
+| Extent: Spain - Alboran island - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_ALBORAN_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10353')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_ALBORAN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10353')
+
+
 Alicante height
 ---------------
 | Extent: Gibraltar - onshore; Spain - mainland onshore
@@ -964,6 +976,18 @@ Flannan Isles height
 
 Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
 
+Formentera height
+-----------------
+| Extent: Spain - Balearic Islands - Formentera - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_FORMENTERA_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10352')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_FORMENTERA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10352')
+
+
 Foula height
 ------------
 | Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore
@@ -1474,7 +1498,7 @@ Approximate because not specific to any location or epoch. Users are advised to 
 
 Ibiza height
 ------------
-| Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore
+| Extent: Spain - Balearic Islands - Ibiza - onshore
 
 .. code-block:: php
 
@@ -2182,6 +2206,18 @@ Mayotte 1950 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5793')
 
 Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system.
+
+Melilla height
+--------------
+| Extent: Spain - Melilla onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_MELILLA_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10354')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MELILLA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10354')
+
 
 Menorca height
 --------------

@@ -43713,6 +43713,71 @@ NGO 1948 (Oslo) / NGO zone VIII
 
 To be phased out and replaced by ETRF89 / UTM zone 35N.
 
+NSIDC EASE-Grid Global
+----------------------
+| Extent: World between 86°S and 86°N
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NSIDC_EASE_GRID_GLOBAL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3410')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NSIDC_EASE_GRID_GLOBAL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3410')
+
+Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 Global (CRS code 6933), which should be preferred for new data.
+
+NSIDC EASE-Grid North
+---------------------
+| Extent: Northern hemisphere
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NSIDC_EASE_GRID_NORTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3408')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NSIDC_EASE_GRID_NORTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3408')
+
+Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 North (CRS code 6931), which should be preferred for new data.
+
+NSIDC EASE-Grid South
+---------------------
+| Extent: Southern hemisphere
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NSIDC_EASE_GRID_SOUTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3409')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NSIDC_EASE_GRID_SOUTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3409')
+
+Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 South (CRS code 6932), which should be preferred for new data.
+
+NSIDC Sea Ice Polar Stereographic North
+---------------------------------------
+| Extent: Northern hemisphere - north of 60°N onshore and offshore, including Arctic
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3411')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3411')
+
+The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very small scales for which this system should be used this uncertainty may be insignificant. See CRS 3413 for geodetically preferred alternative.
+
+NSIDC Sea Ice Polar Stereographic South
+---------------------------------------
+| Extent: Southern hemisphere - south of 60°S onshore and offshore - Antarctica
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3412')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3412')
+
+The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very small scales for which this system should be used this uncertainty may be insignificant. See CRS 3976 for geodetically preferred alternative.
+
 NTF (Paris) / Lambert Centre France
 -----------------------------------
 | Extent: France mainland onshore between 50.5 grads and 53.5 grads North (45°27'N to 48°09'N)

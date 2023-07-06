@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -1837,27 +1838,21 @@ class Cartesian extends CoordinateSystem
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
     public static function fromSRID(string $srid): self
     {
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownCoordinateSystemException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-
-            $axes = [];
+            $axes = [
+            ];
             foreach ($data['axes'] as $axisData) {
-                $axes[] = new Axis(
-                    $axisData['orientation'],
-                    $axisData['abbreviation'],
-                    $axisData['name'],
-                    $axisData['uom'],
-                );
+                $axes[] = new Axis($axisData['orientation'], $axisData['abbreviation'], $axisData['name'], $axisData['uom']);
             }
-
             self::$cachedObjects[$srid] = new self($srid, $axes);
         }
 
@@ -1877,6 +1872,9 @@ class Cartesian extends CoordinateSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 }

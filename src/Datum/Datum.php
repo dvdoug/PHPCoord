@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -100,6 +101,15 @@ class Datum
      * Extent: Albania - onshore.
      */
     public const EPSG_ALBANIAN_1987 = 'urn:ogc:def:datum:EPSG::6191';
+
+    /**
+     * Alboran
+     * Type: Vertical
+     * Extent: Spain - Alboran island - onshore
+     * Mean Sea Level at Alboran harbour between 2017-01-01 and 2019-12-31.
+     * Orthometric heights.
+     */
+    public const EPSG_ALBORAN = 'urn:ogc:def:datum:EPSG::1363';
 
     /**
      * Alicante
@@ -2009,6 +2019,15 @@ class Datum
     public const EPSG_FLANNAN_ISLES = 'urn:ogc:def:datum:EPSG::5146';
 
     /**
+     * Formentera
+     * Type: Vertical
+     * Extent: Spain - Balearic Islands - Formentera - onshore
+     * Mean Sea Level at La Sabina harbour between 2000-10-25 and 2001-04-18.
+     * Orthometric heights.
+     */
+    public const EPSG_FORMENTERA = 'urn:ogc:def:datum:EPSG::1362';
+
+    /**
      * Fort Marigot
      * Type: Geodetic
      * Extent: Guadeloupe - onshore - St Martin and St Barthélemy islands
@@ -2660,6 +2679,17 @@ class Datum
     public const EPSG_HUAHINE_SAU_2001 = 'urn:ogc:def:datum:EPSG::5200';
 
     /**
+     * Hughes 1980
+     * Type: Geodetic
+     * Extent: World
+     * Centre of the Earth.
+     * Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and
+     * Special
+     * Sensor Microwave Imager/Sounder (SSMIS) processing software.
+     */
+    public const EPSG_HUGHES_1980 = 'urn:ogc:def:datum:EPSG::1359';
+
+    /**
      * Hungarian Datum 1909
      * Type: Geodetic
      * Extent: Hungary
@@ -2952,7 +2982,7 @@ class Datum
     /**
      * Ibiza
      * Type: Vertical
-     * Extent: Spain - Balearic Islands - Ibiza and Formentera - onshore
+     * Extent: Spain - Balearic Islands - Ibiza - onshore
      * Mean Sea Level at Ibiza harbour between January 2003 and December 2005.
      * Orthometric heights.
      */
@@ -4436,6 +4466,15 @@ class Datum
     public const EPSG_MEAN_SEA_LEVEL_UK_AND_IRELAND_VORF08 = 'urn:ogc:def:datum:EPSG::1330';
 
     /**
+     * Melilla
+     * Type: Vertical
+     * Extent: Spain - Melilla onshore
+     * Mean Sea Level at Melilla harbour between 2008-01-01 and 2019-12-31.
+     * Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.
+     */
+    public const EPSG_MELILLA = 'urn:ogc:def:datum:EPSG::1364';
+
+    /**
      * Menorca
      * Type: Vertical
      * Extent: Spain - Balearic Islands - Menorca onshore
@@ -4784,6 +4823,14 @@ class Datum
      * Fundamental point: Oslo observatory. Latitude: 59°54'43.7"N, longitude: 0°00'00.0"E (of Oslo).
      */
     public const EPSG_NGO_1948_OSLO = 'urn:ogc:def:datum:EPSG::6817';
+
+    /**
+     * NSIDC International 1924 Authalic Sphere
+     * Type: Geodetic
+     * Extent: World
+     * Created to support EASE-Grid v1. Note: for EASE-Grid v2, WGS 84 used.
+     */
+    public const EPSG_NSIDC_INTERNATIONAL_1924_AUTHALIC_SPHERE = 'urn:ogc:def:datum:EPSG::1360';
 
     /**
      * NSWC 9Z-2
@@ -11095,8 +11142,8 @@ Orthometric heights.',
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_name' => 'Spain - Balearic Islands - Ibiza and Formentera',
-            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore',
+            'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'extent_description' => 'Spain - Balearic Islands - Ibiza - onshore',
             'help' => 'Mean Sea Level at Ibiza harbour between January 2003 and December 2005.
 Orthometric heights.',
         ],
@@ -11532,8 +11579,7 @@ Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the E
             'frame_reference_epoch' => null,
             'extent_name' => 'France',
             'extent_description' => 'France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)',
-            'help' => "Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network (RBF)\u{a0}from 2000 to 2011.
-RGF93 v2 is a realization of ETRS89. Replaces RGF93 v1 (datum code 6171) from 2010-06-18. Replaced by RGF93 v2b (datum code 1313) from 2021-01-05.",
+            'help' => "Aligned with ETRF2000 at epoch 2009.0. Based on the French GNSS permanent network (RGP) from 1998 to 2009, and the re-observation of the geodetic points of the French Reference Network (RRF) and French Base Network (RBF)\u{a0}from 2000 to 2011.\nRGF93 v2 is a realization of ETRS89. Replaces RGF93 v1 (datum code 6171) from 2010-06-18. Replaced by RGF93 v2b (datum code 1313) from 2021-01-05.",
         ],
         'urn:ogc:def:datum:EPSG::1313' => [
             'name' => 'Reseau Geodesique Francais 1993 v2b',
@@ -12086,6 +12132,67 @@ Replaces RGNC91-93.',
             'extent_description' => 'Bosnia and Herzegovina',
             'help' => 'Densification of ETRF2000 in Bosnia and Herzegovina at epoch 2011.307.
 ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 stations of the GNSS active FBiHPOS network in conjunction with 17 stations of the Serbia SRPOS network.',
+        ],
+        'urn:ogc:def:datum:EPSG::1359' => [
+            'name' => 'Hughes 1980',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7058',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'World',
+            'extent_description' => 'World',
+            'help' => 'Centre of the Earth.
+Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and Special
+Sensor Microwave Imager/Sounder (SSMIS) processing software.',
+        ],
+        'urn:ogc:def:datum:EPSG::1360' => [
+            'name' => 'NSIDC International 1924 Authalic Sphere',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7057',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'World',
+            'extent_description' => 'World',
+            'help' => '
+Created to support EASE-Grid v1. Note: for EASE-Grid v2, WGS 84 used.',
+        ],
+        'urn:ogc:def:datum:EPSG::1362' => [
+            'name' => 'Formentera',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'extent_description' => 'Spain - Balearic Islands - Formentera - onshore',
+            'help' => 'Mean Sea Level at La Sabina harbour between 2000-10-25 and 2001-04-18.
+Orthometric heights.',
+        ],
+        'urn:ogc:def:datum:EPSG::1363' => [
+            'name' => 'Alboran',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'Spain - Alboran',
+            'extent_description' => 'Spain - Alboran island - onshore',
+            'help' => 'Mean Sea Level at Alboran harbour between 2017-01-01 and 2019-12-31.
+Orthometric heights.',
+        ],
+        'urn:ogc:def:datum:EPSG::1364' => [
+            'name' => 'Melilla',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'Spain - Melilla',
+            'extent_description' => 'Spain - Melilla onshore',
+            'help' => 'Mean Sea Level at Melilla harbour between 2008-01-01 and 2019-12-31.
+Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -18272,7 +18379,8 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
     /**
      * @var array<string, self>
      */
-    private static array $cachedObjects = [];
+    private static array $cachedObjects = [
+    ];
 
     protected string $datumType;
 
@@ -18286,14 +18394,8 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
 
     protected string $srid;
 
-    public function __construct(
-        string $datumType,
-        ?Ellipsoid $ellipsoid,
-        ?PrimeMeridian $primeMeridian,
-        ?DateTimeInterface $frameReferenceEpoch,
-        string $name = '',
-        string $srid = ''
-    ) {
+    public function __construct(string $datumType, ?Ellipsoid $ellipsoid, ?PrimeMeridian $primeMeridian, ?DateTimeInterface $frameReferenceEpoch, string $name = '', string $srid = '')
+    {
         $this->datumType = $datumType;
         $this->ellipsoid = $ellipsoid;
         $this->primeMeridian = $primeMeridian;
@@ -18337,7 +18439,6 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
         if (!isset(static::$sridData[$srid])) {
             throw new UnknownDatumException($srid);
         }
-
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
             $frameReferenceEpoch = null;
@@ -18346,36 +18447,15 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
             } elseif ($data['frame_reference_epoch']) {
                 $frameReferenceEpoch = (new Year($data['frame_reference_epoch']))->asDateTime();
             }
-
-            if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) { // if ensemble, use latest realisation for data
+            if ($data['type'] === self::DATUM_TYPE_ENSEMBLE) {
+                // if ensemble, use latest realisation for data
                 assert(isset(self::$sridData[$srid]['ensemble']));
                 $latest = self::$sridData[end(self::$sridData[$srid]['ensemble'])];
-                self::$cachedObjects[$srid] = new self(
-                    $data['type'],
-                    $latest['ellipsoid'] ? Ellipsoid::fromSRID($latest['ellipsoid']) : null,
-                    $latest['prime_meridian'] ? PrimeMeridian::fromSRID($latest['prime_meridian']) : null,
-                    $frameReferenceEpoch,
-                    $data['name'],
-                    $srid,
-                );
+                self::$cachedObjects[$srid] = new self($data['type'], $latest['ellipsoid'] ? Ellipsoid::fromSRID($latest['ellipsoid']) : null, $latest['prime_meridian'] ? PrimeMeridian::fromSRID($latest['prime_meridian']) : null, $frameReferenceEpoch, $data['name'], $srid);
             } elseif ($data['ellipsoid'] && $data['prime_meridian']) {
-                self::$cachedObjects[$srid] = new self(
-                    $data['type'],
-                    Ellipsoid::fromSRID($data['ellipsoid']),
-                    PrimeMeridian::fromSRID($data['prime_meridian']),
-                    $frameReferenceEpoch,
-                    $data['name'],
-                    $srid,
-                );
+                self::$cachedObjects[$srid] = new self($data['type'], Ellipsoid::fromSRID($data['ellipsoid']), PrimeMeridian::fromSRID($data['prime_meridian']), $frameReferenceEpoch, $data['name'], $srid);
             } else {
-                self::$cachedObjects[$srid] = new self(
-                    $data['type'],
-                    null,
-                    null,
-                    $frameReferenceEpoch,
-                    $data['name'],
-                    $srid,
-                );
+                self::$cachedObjects[$srid] = new self($data['type'], null, null, $frameReferenceEpoch, $data['name'], $srid);
             }
         }
 
@@ -18395,11 +18475,21 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => ['name' => $data['name'], 'help' => $data['help']], static::$sridData);
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public static function registerCustomDatum(string $srid, string $name, string $type, ?string $ellipsoidSrid, ?string $primeMeridianSrid, ?DateTimeInterface $frameReferenceEpoch, string $help = ''): void
     {
-        self::$sridData[$srid] = ['name' => $name, 'type' => $type, 'ellipsoid' => $ellipsoidSrid, 'prime_meridian' => $primeMeridianSrid, 'frame_reference_epoch' => $frameReferenceEpoch, 'help' => $help];
+        self::$sridData[$srid] = [
+            'name' => $name,
+            'type' => $type,
+            'ellipsoid' => $ellipsoidSrid,
+            'prime_meridian' => $primeMeridianSrid,
+            'frame_reference_epoch' => $frameReferenceEpoch,
+            'help' => $help,
+        ];
     }
 }

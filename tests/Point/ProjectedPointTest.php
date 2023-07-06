@@ -464,6 +464,16 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-78, $to->getLongitude()->getValue(), 0.001);
     }
 
+    public function testLambertCylindricalEqualAreaSpherical(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST), new Metre(14943016.171313), new Metre(4224343.6292246));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
+        $to = $from->lambertCylindricalEqualAreaSpherical($toCRS, new Degree(30), new Degree(-75), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(35, $to->getLatitude()->getValue(), 0.001);
+        self::assertEqualsWithDelta(80, $to->getLongitude()->getValue(), 0.001);
+    }
+
     public function testModifiedAzimuthalEquidistant(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_GUAM_1963_YAP_ISLANDS), new Metre(42665.90), new Metre(65509.82));

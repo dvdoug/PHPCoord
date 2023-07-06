@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -3026,8 +3027,8 @@ trait CompoundSRIDData
             'horizontal_crs_type' => 'geographic 2D',
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9394',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
-            'extent_name' => 'Spain - Balearic Islands - Ibiza and Formentera',
-            'extent_description' => 'Spain - Balearic Islands - Ibiza and Formentera - onshore',
+            'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'extent_description' => 'Spain - Balearic Islands - Ibiza - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9508' => [
@@ -4118,6 +4119,36 @@ trait CompoundSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::3430'],
             'extent_name' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands',
             'extent_description' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea)',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10355' => [
+            'name' => 'ETRS89 + Formentera height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::10352',
+            'extent' => ['urn:ogc:def:area:EPSG::4739'],
+            'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'extent_description' => 'Spain - Balearic Islands - Formentera - onshore',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10356' => [
+            'name' => 'ETRS89 + Alboran height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::10353',
+            'extent' => ['urn:ogc:def:area:EPSG::4741'],
+            'extent_name' => 'Spain - Alboran',
+            'extent_description' => 'Spain - Alboran island - onshore',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10357' => [
+            'name' => 'ETRS89 + Melilla height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::10354',
+            'extent' => ['urn:ogc:def:area:EPSG::4740'],
+            'extent_name' => 'Spain - Melilla',
+            'extent_description' => 'Spain - Melilla onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20001' => [
