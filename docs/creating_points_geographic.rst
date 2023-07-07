@@ -26,7 +26,7 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Geographic2D;
-    use PHPCoord\GeographicPoint;
+    use PHPCoord\Point\GeographicPoint;
     use PHPCoord\UnitOfMeasure\Angle\Degree;
 
     // the Statue of Liberty in WGS84 (unknown date), traditional arguments, decimal degrees

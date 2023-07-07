@@ -1,11 +1,17 @@
 # Changelog
 
 ## [Unreleased]
+
+## [5.5.0] - 2023-07-07
 ### Added
 - Support for Lambert Cylindrical Equal Area (Spherical) projection
 ### Changed
 - Infer a current epoch when doing time-dependant transforms and no explicit epoch is supplied
 - Updates to data for Polar regions, Algeria and Spain
+### Deprecated
+- The namespace of all `*Point` classes have been tidied up and changed to from `PHPCoord` to `PHPCoord\Point` e.g. 
+  `PHPCoord\GeographicPoint` is now `PHPCoord\Point\GeographicPoint`. An alias has been provided, all existing
+  code referencing the old names will continue to work
 
 ## [5.4.0] - 2023-05-27
 ### Added
@@ -273,8 +279,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.4.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.5.0...HEAD
 
+[5.5.0]: https://github.com/dvdoug/PHPCoord/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/dvdoug/PHPCoord/compare/v5.3.1...v5.4.0
 [5.3.1]: https://github.com/dvdoug/PHPCoord/compare/v5.3.0...v5.3.1
 [5.3.0]: https://github.com/dvdoug/PHPCoord/compare/v5.2.0...v5.3.0

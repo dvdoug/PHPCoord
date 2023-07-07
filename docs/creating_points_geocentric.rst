@@ -21,7 +21,7 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Geocentric;
-    use PHPCoord\GeocentricPoint;
+    use PHPCoord\Point\GeocentricPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Ascension Island GPS tracking station in ITRF2008 (unknown date), traditional arguments

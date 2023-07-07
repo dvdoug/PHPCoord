@@ -20,7 +20,7 @@ Examples:
     <?php
     use PHPCoord\CoordinateReferenceSystem\Geographic2D;
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\GeographicPoint;
+    use PHPCoord\Point\GeographicPoint;
     use PHPCoord\UnitOfMeasure\Angle\Degree;
 
     // Converting from NAD83 to Florida State Plane
@@ -38,7 +38,7 @@ Examples:
     <?php
     use PHPCoord\CoordinateReferenceSystem\Geographic2D;
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Converting from Florida State Plane to NAD83

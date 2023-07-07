@@ -22,9 +22,9 @@ Example:
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
     use PHPCoord\CoordinateReferenceSystem\Vertical;
-    use PHPCoord\CompoundPoint;
-    use PHPCoord\ProjectedPoint;
-    use PHPCoord\VerticalPoint;
+    use PHPCoord\Point\CompoundPoint;
+    use PHPCoord\Point\ProjectedPoint;
+    use PHPCoord\Point\VerticalPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Horizontal location of Ben Nevis peak using British National Grid

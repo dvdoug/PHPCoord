@@ -342,6 +342,7 @@ portion of a coordinate is called an *epoch*.
     and accepts dates in standard PHP ``DateTime``/``DateTimeImmutable`` format instead.
 
     If, like most people you don't have dates for your coordinates, you can also use ``null`` or leave blank entirely.
+    Doing this means that PHPCoord will infer the current date when converting coordinates between systems.
 
 
 EPSG codes

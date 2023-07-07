@@ -21,7 +21,7 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Vertical;
-    use PHPCoord\VerticalPoint;
+    use PHPCoord\Point\VerticalPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // an arbitrary height in New Zealand Vertical Datum (unknown date), traditional arguments

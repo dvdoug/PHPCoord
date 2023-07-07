@@ -52,7 +52,7 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Nelson's Column in British National Grid (unknown date), traditional arguments
@@ -141,8 +141,8 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\BritishNationalGridPoint;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\BritishNationalGridPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Nelson's Column
@@ -195,8 +195,8 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\IrishGridPoint;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\IrishGridPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Spire of Dublin
@@ -245,8 +245,8 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\IrishTransverseMercatorPoint;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\IrishTransverseMercatorPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Spire of Dublin
@@ -290,7 +290,7 @@ Examples:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Piazza San Marco, Venice
@@ -332,7 +332,7 @@ Example:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Projected;
-    use PHPCoord\ProjectedPoint;
+    use PHPCoord\Point\ProjectedPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Piazza San Marco, Venice
@@ -369,7 +369,7 @@ Example:
 
     <?php
     use PHPCoord\CoordinateReferenceSystem\Geographic;
-    use PHPCoord\UTMPoint;
+    use PHPCoord\Point\UTMPoint;
     use PHPCoord\UnitOfMeasure\Length\Metre;
 
     // Piazza San Marco, Venice
