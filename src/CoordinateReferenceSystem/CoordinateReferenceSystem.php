@@ -88,20 +88,30 @@ abstract class CoordinateReferenceSystem
     public static function fromSRID(string $srid): Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical
     {
         if (!isset(self::$cachedObjects[$srid])) {
-            if (isset(Projected::getSupportedSRIDs()[$srid])) {
+            try {
                 self::$cachedObjects[$srid] = Projected::fromSRID($srid);
-            } elseif (isset(Geographic2D::getSupportedSRIDs()[$srid])) {
-                self::$cachedObjects[$srid] = Geographic2D::fromSRID($srid);
-            } elseif (isset(Geographic3D::getSupportedSRIDs()[$srid])) {
-                self::$cachedObjects[$srid] = Geographic3D::fromSRID($srid);
-            } elseif (isset(Geocentric::getSupportedSRIDs()[$srid])) {
-                self::$cachedObjects[$srid] = Geocentric::fromSRID($srid);
-            } elseif (isset(Vertical::getSupportedSRIDs()[$srid])) {
-                self::$cachedObjects[$srid] = Vertical::fromSRID($srid);
-            } elseif (isset(Compound::getSupportedSRIDs()[$srid])) {
-                self::$cachedObjects[$srid] = Compound::fromSRID($srid);
-            } else {
-                throw new UnknownCoordinateReferenceSystemException($srid);
+            } catch (UnknownCoordinateReferenceSystemException) {
+                try {
+                    self::$cachedObjects[$srid] = Geographic2D::fromSRID($srid);
+                } catch (UnknownCoordinateReferenceSystemException) {
+                    try {
+                        self::$cachedObjects[$srid] = Geographic3D::fromSRID($srid);
+                    } catch (UnknownCoordinateReferenceSystemException) {
+                        try {
+                            self::$cachedObjects[$srid] = Geocentric::fromSRID($srid);
+                        } catch (UnknownCoordinateReferenceSystemException) {
+                            try {
+                                self::$cachedObjects[$srid] = Vertical::fromSRID($srid);
+                            } catch (UnknownCoordinateReferenceSystemException) {
+                                try {
+                                    self::$cachedObjects[$srid] = Compound::fromSRID($srid);
+                                } catch (UnknownCoordinateReferenceSystemException) {
+                                    throw new UnknownCoordinateReferenceSystemException($srid);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
