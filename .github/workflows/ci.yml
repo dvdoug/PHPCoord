@@ -131,7 +131,7 @@ jobs:
     - name: PHPUnit (Integration)
       run: php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --group=integration --no-coverage;
 
-    - name: PHPUnit (Integration)
+    - name: PHPUnit (GIGS)
       run: php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --group=gigs --no-coverage;
 
     - name: Check code style
