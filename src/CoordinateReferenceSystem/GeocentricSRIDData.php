@@ -357,7 +357,7 @@ trait GeocentricSRIDData
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4926' => [
-            'name' => 'Korea 2000',
+            'name' => 'KGD2002',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
             'datum' => 'urn:ogc:def:datum:EPSG::6737',
             'extent' => ['urn:ogc:def:area:EPSG::1135'],
@@ -1290,7 +1290,7 @@ trait GeocentricSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6.',
+            'help' => 'Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.',
         ],
         'urn:ogc:def:crs:EPSG::8397' => [
             'name' => 'ETRF2005',
@@ -1813,6 +1813,15 @@ trait GeocentricSRIDData
             'extent_name' => 'Bosnia and Herzegovina',
             'extent_description' => 'Bosnia and Herzegovina',
             'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10412' => [
+            'name' => 'NAD83(CSRS)v8',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6500',
+            'datum' => 'urn:ogc:def:datum:EPSG::1365',
+            'extent' => ['urn:ogc:def:area:EPSG::1061'],
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
+            'help' => 'Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7.',
         ],
         'urn:ogc:def:crs:EPSG::20039' => [
             'name' => 'SIRGAS-Chile 2021',

@@ -349,7 +349,7 @@ class CRSTransformationsAsia
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5189',
-            'name' => 'Korean 1985 to Korea 2000 (1)',
+            'name' => 'Korean 1985 to KGD2002 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'accuracy' => 1.0,
@@ -1854,7 +1854,7 @@ class CRSTransformationsAsia
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15831',
-            'name' => 'Korea 2000 to WGS 84 (1)',
+            'name' => 'KGD2002 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4737',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,

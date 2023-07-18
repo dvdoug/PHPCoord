@@ -678,6 +678,15 @@ class Datum
     public const EPSG_CNH22_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1336';
 
     /**
+     * COV23 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+     * Defined through the application of the COV23 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+     * Created in 2023 to support intermediate CRS COV23-IRF in the emulation of the COV23 Snake map projection.
+     */
+    public const EPSG_COV23_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1366';
+
+    /**
      * CR-SIRGAS
      * Type: Geodetic
      * Extent: Costa Rica - onshore and offshore
@@ -715,13 +724,13 @@ class Datum
     public const EPSG_CAGLIARI_1956 = 'urn:ogc:def:datum:EPSG::1307';
 
     /**
-     * Cais da Figueirinha - Angra do Heroismo
+     * Cais da Figueirinha
      * Type: Vertical
      * Extent: Portugal - central Azores - Terceira island onshore
-     * Mean Sea Level during 1951 at Cais da Figueirinha - Angra do Heroísmo.
+     * Mean Sea Level during 1951 at Cais da Figueirinha, Angra do Heroísmo.
      * Orthometric heights.
      */
-    public const EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO = 'urn:ogc:def:datum:EPSG::1107';
+    public const EPSG_CAIS_DA_FIGUEIRINHA = 'urn:ogc:def:datum:EPSG::1107';
 
     /**
      * Cais da Madalena
@@ -733,22 +742,22 @@ class Datum
     public const EPSG_CAIS_DA_MADALENA = 'urn:ogc:def:datum:EPSG::1105';
 
     /**
-     * Cais da Pontinha - Funchal
+     * Cais da Pontinha
      * Type: Vertical
      * Extent: Portugal - Madeira and Desertas islands - onshore
      * Mean Sea Level during 1913 at Cais da Pontinha, Funchal.
      * Orthometric heights.
      */
-    public const EPSG_CAIS_DA_PONTINHA_FUNCHAL = 'urn:ogc:def:datum:EPSG::1101';
+    public const EPSG_CAIS_DA_PONTINHA = 'urn:ogc:def:datum:EPSG::1101';
 
     /**
-     * Cais da Vila - Porto Santo
+     * Cais da Vila
      * Type: Vertical
      * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore
      * Mean Sea Level during 1936 at Cais da Vila, Porto Santo.
      * Orthometric heights.
      */
-    public const EPSG_CAIS_DA_VILA_PORTO_SANTO = 'urn:ogc:def:datum:EPSG::1102';
+    public const EPSG_CAIS_DA_VILA = 'urn:ogc:def:datum:EPSG::1102';
 
     /**
      * Cais da Vila do Porto
@@ -964,6 +973,15 @@ class Datum
      * Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.
      */
     public const EPSG_CEUTA_2 = 'urn:ogc:def:datum:EPSG::1285';
+
+    /**
+     * Chart Datum Portugal
+     * Type: Vertical
+     * Extent: Portugal - offshore
+     * ZH is located below the level of the Lowest Astronomical Tide (LAT).
+     * .
+     */
+    public const EPSG_CHART_DATUM_PORTUGAL = 'urn:ogc:def:datum:EPSG::1361';
 
     /**
      * Chart Datum UK & Ireland VORF08
@@ -2215,14 +2233,6 @@ class Datum
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_2020 = 'urn:ogc:def:datum:EPSG::1168';
 
     /**
-     * Geocentric datum of Korea
-     * Type: Geodetic
-     * Extent: Republic of Korea (South Korea) - onshore and offshore
-     * ITRF2000 at epoch 2002.0.
-     */
-    public const EPSG_GEOCENTRIC_DATUM_OF_KOREA = 'urn:ogc:def:datum:EPSG::6737';
-
-    /**
      * Geodetic Datum of 1965
      * Type: Geodetic
      * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
@@ -2989,14 +2999,6 @@ class Datum
     public const EPSG_IBIZA = 'urn:ogc:def:datum:EPSG::1277';
 
     /**
-     * Incheon
-     * Type: Vertical
-     * Extent: Republic of Korea (South Korea) - mainland onshore
-     * MSL 1913-1916 at Incheon Bay.
-     */
-    public const EPSG_INCHEON = 'urn:ogc:def:datum:EPSG::1049';
-
-    /**
      * Indian 1954
      * Type: Geodetic
      * Extent: Myanmar (Burma) - onshore; Thailand - onshore
@@ -3601,7 +3603,7 @@ class Datum
      * Extent: Republic of Korea (South Korea) - onshore
      * Fundamental point: Suwon. Latitude 37°16'31.9034"N, longitude 127°03'05.1451"E of Greenwich. This is
      * consistent with the Tokyo 1918 datum latitude and longitude.
-     * Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
+     * Replaces Tokyo 1918 (datum code 6301). Replaced by KGD2002 (datum code 6737).
      */
     public const EPSG_KOREAN_DATUM_1985 = 'urn:ogc:def:datum:EPSG::6162';
 
@@ -3611,6 +3613,24 @@ class Datum
      * Extent: Republic of Korea (South Korea) - onshore.
      */
     public const EPSG_KOREAN_DATUM_1995 = 'urn:ogc:def:datum:EPSG::6166';
+
+    /**
+     * Korean Geodetic Datum 2002
+     * Type: Geodetic
+     * Extent: Republic of Korea (South Korea) - onshore and offshore
+     * ITRF2000 at epoch 2002.0.
+     * KGD2002 is geocentric.
+     */
+    public const EPSG_KOREAN_GEODETIC_DATUM_2002 = 'urn:ogc:def:datum:EPSG::6737';
+
+    /**
+     * Korean Vertical Datum 1964
+     * Type: Vertical
+     * Extent: Republic of Korea (South Korea) - onshore
+     * MSL 1913-1916 at Incheon Bay for mainland. For far offshore islands the MSL is determined through a local tide
+     * gauge.
+     */
+    public const EPSG_KOREAN_VERTICAL_DATUM_1964 = 'urn:ogc:def:datum:EPSG::1049';
 
     /**
      * Kosovo Reference System 2001
@@ -3984,7 +4004,7 @@ class Datum
     /**
      * Lowest Astronomical Tide Netherlands
      * Type: Vertical
-     * Extent: Netherlands - offshore North Sea
+     * Extent: Netherlands - offshore North Sea and nearshore
      * Surface defined through the nllat hydroid model applied to ETRS89.
      * The lowest tide level which can be predicted to occur under average meteorological conditions and under any
      * combination of astronomical conditions.
@@ -4448,7 +4468,7 @@ class Datum
     /**
      * Mean Sea Level Netherlands
      * Type: Vertical
-     * Extent: Netherlands - offshore North Sea
+     * Extent: Netherlands - offshore North Sea and nearshore
      * Surface defined through the nlgeo geoid model applied to ETRS89.
      * Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.
      */
@@ -5242,9 +5262,21 @@ class Datum
      * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of
-     * Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.
+     * Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.
      */
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7 = 'urn:ogc:def:datum:EPSG::1198';
+
+    /**
+     * North American Datum of 1983 (CSRS) version 8
+     * Type: Geodetic
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon
+     * Defined at reference epoch 2010.0 by a transformation from ITRF2020 (see transformation code 10415). The frame
+     * is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+     * Published 2022-11-27; adopted by the Canadian federal government (2023). Replaces NAD83(CSRS)v7.
+     */
+    public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_8 = 'urn:ogc:def:datum:EPSG::1365';
 
     /**
      * North American Datum of 1983 (CSRS96)
@@ -8192,6 +8224,31 @@ class Datum
     public const EPSG_LATVIA_1992 = 'urn:ogc:def:datum:EPSG::6661';
 
     /**
+     * @deprecated use EPSG_KOREAN_VERTICAL_DATUM_1964 instead
+     */
+    public const EPSG_INCHEON = 'urn:ogc:def:datum:EPSG::1049';
+
+    /**
+     * @deprecated use EPSG_KOREAN_GEODETIC_DATUM_2002 instead
+     */
+    public const EPSG_GEOCENTRIC_DATUM_OF_KOREA = 'urn:ogc:def:datum:EPSG::6737';
+
+    /**
+     * @deprecated use EPSG_CAIS_DA_FIGUEIRINHA instead
+     */
+    public const EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO = 'urn:ogc:def:datum:EPSG::1107';
+
+    /**
+     * @deprecated use EPSG_CAIS_DA_PONTINHA instead
+     */
+    public const EPSG_CAIS_DA_PONTINHA_FUNCHAL = 'urn:ogc:def:datum:EPSG::1101';
+
+    /**
+     * @deprecated use EPSG_CAIS_DA_VILA instead
+     */
+    public const EPSG_CAIS_DA_VILA_PORTO_SANTO = 'urn:ogc:def:datum:EPSG::1102';
+
+    /**
      * @var array<string, array{name: string, type: string, ellipsoid: ?string, prime_meridian: ?string, frame_reference_epoch: float|DateTimeInterface|null, ensemble?: array<string>, help: string}>
      */
     protected static array $sridData = [
@@ -8496,15 +8553,15 @@ Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fo
 Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum code 6301). In South Korea replaced by Tokyo 1918 (code 6301) only for geodetic purposes; for all other purposes replaced by Korean 1985 (code 6162).',
         ],
         'urn:ogc:def:datum:EPSG::1049' => [
-            'name' => 'Incheon',
+            'name' => 'Korean Vertical Datum 1964',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_name' => 'Korea, Republic of (South Korea) - mainland',
-            'extent_description' => 'Republic of Korea (South Korea) - mainland onshore',
-            'help' => 'MSL 1913-1916 at Incheon Bay.
+            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_description' => 'Republic of Korea (South Korea) - onshore',
+            'help' => 'MSL 1913-1916 at Incheon Bay for mainland. For far offshore islands the MSL is determined through a local tide gauge.
 ',
         ],
         'urn:ogc:def:datum:EPSG::1050' => [
@@ -9120,7 +9177,7 @@ Replaces NN54. Uses Normal heights.',
 Replaces GCGD59 (datum code 6723) and SIGD61 (datum code 6726).',
         ],
         'urn:ogc:def:datum:EPSG::1101' => [
-            'name' => 'Cais da Pontinha - Funchal',
+            'name' => 'Cais da Pontinha',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -9132,7 +9189,7 @@ Replaces GCGD59 (datum code 6723) and SIGD61 (datum code 6726).',
 Orthometric heights.',
         ],
         'urn:ogc:def:datum:EPSG::1102' => [
-            'name' => 'Cais da Vila - Porto Santo',
+            'name' => 'Cais da Vila',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -9192,7 +9249,7 @@ Orthometric heights.',
 Orthometric heights.',
         ],
         'urn:ogc:def:datum:EPSG::1107' => [
-            'name' => 'Cais da Figueirinha - Angra do Heroismo',
+            'name' => 'Cais da Figueirinha',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
@@ -9200,7 +9257,7 @@ Orthometric heights.',
             'frame_reference_epoch' => null,
             'extent_name' => 'Portugal - Azores C - Terceira onshore',
             'extent_description' => 'Portugal - central Azores - Terceira island onshore',
-            'help' => 'Mean Sea Level during 1951 at Cais da Figueirinha - Angra do Heroísmo.
+            'help' => 'Mean Sea Level during 1951 at Cais da Figueirinha, Angra do Heroísmo.
 Orthometric heights.',
         ],
         'urn:ogc:def:datum:EPSG::1108' => [
@@ -10245,7 +10302,7 @@ Published 2010-01-01; adopted by the Canadian government (2012) and the provinci
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
-Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.',
+Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.',
         ],
         'urn:ogc:def:datum:EPSG::1199' => [
             'name' => 'Greenland Vertical Reference 2000',
@@ -11058,8 +11115,8 @@ Realized by 333 GNSS stations in Saudi Arabia aligned to ITRF2014 through core n
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_name' => 'Netherlands - offshore',
-            'extent_description' => 'Netherlands - offshore North Sea',
+            'extent_name' => 'Netherlands - offshore and nearshore ',
+            'extent_description' => 'Netherlands - offshore North Sea and nearshore',
             'help' => 'Surface defined through the nlgeo geoid model applied to ETRS89.
 Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.',
         ],
@@ -11309,8 +11366,8 @@ Created in 2020 to support intermediate CRS "GBK19-IRF" in the emulation of the 
             'prime_meridian' => null,
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'extent_name' => 'Netherlands - offshore',
-            'extent_description' => 'Netherlands - offshore North Sea',
+            'extent_name' => 'Netherlands - offshore and nearshore ',
+            'extent_description' => 'Netherlands - offshore North Sea and nearshore',
             'help' => 'Surface defined through the nllat hydroid model applied to ETRS89.
 The lowest tide level which can be predicted to occur under average meteorological conditions and under any combination of astronomical conditions.',
         ],
@@ -12158,6 +12215,18 @@ Sensor Microwave Imager/Sounder (SSMIS) processing software.',
             'help' => '
 Created to support EASE-Grid v1. Note: for EASE-Grid v2, WGS 84 used.',
         ],
+        'urn:ogc:def:datum:EPSG::1361' => [
+            'name' => 'Chart Datum Portugal ',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'Portugal - offshore',
+            'extent_description' => 'Portugal - offshore',
+            'help' => 'ZH is located below the level of the Lowest Astronomical Tide (LAT).
+.',
+        ],
         'urn:ogc:def:datum:EPSG::1362' => [
             'name' => 'Formentera',
             'type' => 'vertical',
@@ -12193,6 +12262,30 @@ Orthometric heights.',
             'extent_description' => 'Spain - Melilla onshore',
             'help' => 'Mean Sea Level at Melilla harbour between 2008-01-01 and 2019-12-31.
 Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.',
+        ],
+        'urn:ogc:def:datum:EPSG::1365' => [
+            'name' => 'North American Datum of 1983 (CSRS) version 8',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
+            'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2020 (see transformation code 10415). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Published 2022-11-27; adopted by the Canadian federal government (2023). Replaces NAD83(CSRS)v7.',
+        ],
+        'urn:ogc:def:datum:EPSG::1366' => [
+            'name' => 'COV23 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'UK - Coventry',
+            'extent_description' => 'United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport',
+            'help' => 'Defined through the application of the COV23 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+Created in 2023 to support intermediate CRS COV23-IRF in the emulation of the COV23 Snake map projection.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -14544,7 +14637,7 @@ Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exp
             'extent_name' => 'Korea, Republic of (South Korea) - onshore',
             'extent_description' => 'Republic of Korea (South Korea) - onshore',
             'help' => 'Fundamental point: Suwon. Latitude 37°16\'31.9034"N, longitude 127°03\'05.1451"E of Greenwich. This is consistent with the Tokyo 1918 datum latitude and longitude.
-Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).',
+Replaces Tokyo 1918 (datum code 6301). Replaced by KGD2002 (datum code 6737).',
         ],
         'urn:ogc:def:datum:EPSG::6163' => [
             'name' => 'Yemen National Geodetic Network 1996',
@@ -17751,7 +17844,7 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
 ',
         ],
         'urn:ogc:def:datum:EPSG::6737' => [
-            'name' => 'Geocentric datum of Korea',
+            'name' => 'Korean Geodetic Datum 2002',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
@@ -17760,7 +17853,7 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'extent_name' => 'Korea, Republic of (South Korea)',
             'extent_description' => 'Republic of Korea (South Korea) - onshore and offshore',
             'help' => 'ITRF2000 at epoch 2002.0.
-',
+KGD2002 is geocentric.',
         ],
         'urn:ogc:def:datum:EPSG::6738' => [
             'name' => 'Hong Kong 1963',

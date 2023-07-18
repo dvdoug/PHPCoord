@@ -67,6 +67,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_CNH22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10195';
 
     /**
+     * COV23 Grid + ODN height
+     * Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport.
+     */
+    public const EPSG_COV23_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10472';
+
+    /**
      * CR-SIRGAS / CRTM05 + DACR52 height
      * Extent: Costa Rica - onshore
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
@@ -363,7 +369,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 + LAT NL depth
-     * Extent: Netherlands - offshore North Sea.
+     * Extent: Netherlands - offshore North Sea and nearshore.
      */
     public const EPSG_ETRS89_PLUS_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9289';
 
@@ -375,7 +381,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 + MSL NL depth
-     * Extent: Netherlands - offshore North Sea.
+     * Extent: Netherlands - offshore North Sea and nearshore.
      */
     public const EPSG_ETRS89_PLUS_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9290';
 
@@ -1256,6 +1262,12 @@ class Compound extends CoordinateReferenceSystem
      * Abashiri city; Nemuro city; Nemuro-shicho; Kushiro-shicho; Abashiri-shicho (except Monbetsu-gun); Tokachi-shicho.
      */
     public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10174';
+
+    /**
+     * KGD2002 + KVD1964 height
+     * Extent: Republic of Korea (South Korea) - onshore.
+     */
+    public const EPSG_KGD2002_PLUS_KVD1964_HEIGHT = 'urn:ogc:def:crs:EPSG::10365';
 
     /**
      * KKJ / Finland Uniform Coordinate System + N60 height

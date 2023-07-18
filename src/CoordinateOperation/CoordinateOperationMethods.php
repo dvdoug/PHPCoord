@@ -172,16 +172,6 @@ class CoordinateOperationMethods
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
 
     /**
-     * Geog3D to Geog2D+Depth (Gravsoft).
-     */
-    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1110';
-
-    /**
-     * Geog3D to Geog2D+Depth (txt).
-     */
-    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_TXT = 'urn:ogc:def:method:EPSG::1115';
-
-    /**
      * Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 = 'urn:ogc:def:method:EPSG::1083';
@@ -275,16 +265,6 @@ class CoordinateOperationMethods
      * Geographic3D to 2D conversion.
      */
     public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
-
-    /**
-     * Geographic3D to Depth (Gravsoft).
-     */
-    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1109';
-
-    /**
-     * Geographic3D to Depth (txt).
-     */
-    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_TXT = 'urn:ogc:def:method:EPSG::1116';
 
     /**
      * Geographic3D to GravityRelatedHeight (AUSGeoid v2).
@@ -2327,29 +2307,6 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
-        'urn:ogc:def:method:EPSG::1109' => [
-            'name' => 'Geographic3D to Depth (Gravsoft)',
-            'reversible' => false,
-            'paramData' => [
-                'geoidHeightCorrectionModelFile' => [
-                    'reverses' => false,
-                ],
-            ],
-            'help' => '',
-        ],
-        'urn:ogc:def:method:EPSG::1110' => [
-            'name' => 'Geog3D to Geog2D+Depth (Gravsoft)',
-            'reversible' => true,
-            'paramData' => [
-                'geoidHeightCorrectionModelFile' => [
-                    'reverses' => true,
-                ],
-                'EPSGCodeForInterpolationCRS' => [
-                    'reverses' => false,
-                ],
-            ],
-            'help' => '',
-        ],
         'urn:ogc:def:method:EPSG::1111' => [
             'name' => 'Transverse Mercator 3D',
             'reversible' => true,
@@ -2380,29 +2337,6 @@ class CoordinateOperationMethods
                     'reverses' => true,
                 ],
                 'EPSGCodeForInterpolationCRS' => [
-                    'reverses' => false,
-                ],
-            ],
-            'help' => '',
-        ],
-        'urn:ogc:def:method:EPSG::1115' => [
-            'name' => 'Geog3D to Geog2D+Depth (txt)',
-            'reversible' => true,
-            'paramData' => [
-                'geoidHeightCorrectionModelFile' => [
-                    'reverses' => true,
-                ],
-                'EPSGCodeForInterpolationCRS' => [
-                    'reverses' => false,
-                ],
-            ],
-            'help' => '',
-        ],
-        'urn:ogc:def:method:EPSG::1116' => [
-            'name' => 'Geographic3D to Depth (txt)',
-            'reversible' => false,
-            'paramData' => [
-                'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
                 ],
             ],

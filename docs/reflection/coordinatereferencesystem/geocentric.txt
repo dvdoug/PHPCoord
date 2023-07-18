@@ -964,6 +964,18 @@ JGD2011
 
 Replaces JGD2000 (CRS code 4946) with effect from 21st October 2011.
 
+KGD2002
+-------
+| Extent: Republic of Korea (South Korea) - onshore and offshore
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_KGD2002)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4926')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KGD2002)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4926')
+
+
 KOSOVAREF01
 -----------
 | Extent: Kosovo
@@ -986,18 +998,6 @@ KSA-GRF17
     Geocentric::fromSRID('urn:ogc:def:crs:EPSG::9331')
     CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KSA_GRF17)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9331')
-
-
-Korea 2000
-----------
-| Extent: Republic of Korea (South Korea) - onshore and offshore
-
-.. code-block:: php
-
-    Geocentric::fromSRID(Geocentric::EPSG_KOREA_2000)
-    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::4926')
-    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_KOREA_2000)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4926')
 
 
 Kyrg-06
@@ -1376,7 +1376,20 @@ NAD83(CSRS)v7
     CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8253')
 
-Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6.
+Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.
+
+NAD83(CSRS)v8
+-------------
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::10412')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10412')
+
+Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7.
 
 NAD83(CSRS96)
 -------------

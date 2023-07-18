@@ -19,6 +19,27 @@ class CRSTransformationsNorthAmerica
      */
     protected static array $sridData = [
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10419',
+            'name' => 'NAD83(CSRS)v8 to NAD83(2011) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10412',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10418',
+            'name' => 'NAD83(CSRS)v8 to CGVD28 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10413',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
+            'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10417',
+            'name' => 'NAD83(CSRS)v8 to CGVD2013a(2010) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10413',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
+            'accuracy' => 0.03,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19945',
             'name' => 'New Brunswick Stereographic (ATS77)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4122',
@@ -14964,6 +14985,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10416',
+            'name' => 'NAD83(CSRS)v7 to NAD83(2011) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8253',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9987',
             'name' => 'NAD83(CSRS)v7 to CGVD28 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8254',
@@ -15039,6 +15067,13 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8907',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8908',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10415',
+            'name' => 'ITRF2020 to NAD83(CSRS)v8 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10412',
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10334',

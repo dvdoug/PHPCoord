@@ -254,22 +254,6 @@ Geocentric/topocentric conversions
     'urn:ogc:def:method:EPSG::9836'
 
 
-Geog3D to Geog2D+Depth (Gravsoft)
----------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT
-    'urn:ogc:def:method:EPSG::1110'
-
-
-Geog3D to Geog2D+Depth (txt)
-----------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_TXT
-    'urn:ogc:def:method:EPSG::1115'
-
-
 Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)
 --------------------------------------------------
 .. code-block:: php
@@ -420,22 +404,6 @@ Geographic3D to 2D conversion
 
     CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION
     'urn:ogc:def:method:EPSG::9659'
-
-
-Geographic3D to Depth (Gravsoft)
---------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT
-    'urn:ogc:def:method:EPSG::1109'
-
-
-Geographic3D to Depth (txt)
----------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_TXT
-    'urn:ogc:def:method:EPSG::1116'
 
 
 Geographic3D to GravityRelatedHeight (AUSGeoid v2)

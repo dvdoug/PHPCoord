@@ -412,16 +412,40 @@ Cagliari 1956 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9722')
 
 
-Cais da Figueirinha - Angra do Heroismo height
-----------------------------------------------
+Cais da Figueirinha depth
+-------------------------
 | Extent: Portugal - central Azores - Terceira island onshore
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO_HEIGHT)
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10377')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10377')
+
+
+Cais da Figueirinha height
+--------------------------
+| Extent: Portugal - central Azores - Terceira island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::6184')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6184')
+
+
+Cais da Madalena depth
+----------------------
+| Extent: Portugal - central Azores - Pico island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10374')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10374')
 
 
 Cais da Madalena height
@@ -436,28 +460,52 @@ Cais da Madalena height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6182')
 
 
-Cais da Pontinha - Funchal height
----------------------------------
+Cais da Pontinha depth
+----------------------
 | Extent: Portugal - Madeira and Desertas islands - onshore
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_FUNCHAL_HEIGHT)
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10370')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10370')
+
+
+Cais da Pontinha height
+-----------------------
+| Extent: Portugal - Madeira and Desertas islands - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_HEIGHT)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::6178')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_FUNCHAL_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6178')
 
 
-Cais da Vila - Porto Santo height
----------------------------------
+Cais da Vila depth
+------------------
 | Extent: Portugal - Porto Santo island (Madeira archipelago) onshore
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_PORTO_SANTO_HEIGHT)
-    Vertical::fromSRID('urn:ogc:def:crs:EPSG::6179')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_VILA_PORTO_SANTO_HEIGHT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6179')
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10371')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10371')
+
+
+Cais da Vila do Porto depth
+---------------------------
+| Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10379')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10379')
 
 
 Cais da Vila do Porto height
@@ -472,6 +520,30 @@ Cais da Vila do Porto height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6186')
 
 
+Cais da Vila height
+-------------------
+| Extent: Portugal - Porto Santo island (Madeira archipelago) onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::6179')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DA_VILA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6179')
+
+
+Cais das Velas depth
+--------------------
+| Extent: Portugal - central Azores - Sao Jorge island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10375')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10375')
+
+
 Cais das Velas height
 ---------------------
 | Extent: Portugal - central Azores - Sao Jorge island onshore
@@ -482,6 +554,18 @@ Cais das Velas height
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::6180')
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6180')
+
+
+Cascais depth
+-------------
+| Extent: Portugal - mainland - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_CASCAIS_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10364')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_CASCAIS_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10364')
 
 
 Cascais height
@@ -1306,6 +1390,18 @@ Hon Dau 1992 height
 
 In Vietnam replaces Ha Tien height (CRS code 5726) from 1992.
 
+Horta depth
+-----------
+| Extent: Portugal - central Azores - Faial island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_HORTA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10373')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_HORTA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10373')
+
+
 Horta height
 ------------
 | Extent: Portugal - central Azores - Faial island onshore
@@ -1508,18 +1604,6 @@ Ibiza height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9394')
 
 
-Incheon height
---------------
-| Extent: Republic of Korea (South Korea) - mainland onshore
-
-.. code-block:: php
-
-    Vertical::fromSRID(Vertical::EPSG_INCHEON_HEIGHT)
-    Vertical::fromSRID('urn:ogc:def:crs:EPSG::5193')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_INCHEON_HEIGHT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5193')
-
-
 Instantaneous Water Level depth
 -------------------------------
 | Extent: World
@@ -1675,6 +1759,19 @@ KSA-VRF14 height
 
 Orthometric heights.
 
+KVD1964 height
+--------------
+| Extent: Republic of Korea (South Korea) - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_KVD1964_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::5193')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_KVD1964_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5193')
+
+Normal-orthometric heights.
+
 Kiunga height
 -------------
 | Extent: Papua New Guinea - onshore south of 5°S and west of 144°E
@@ -1728,7 +1825,7 @@ In Lithuania replaces Baltic 1977 system (CRS code 5705) from January 2016.
 
 LAT NL depth
 ------------
-| Extent: Netherlands - offshore North Sea
+| Extent: Netherlands - offshore North Sea and nearshore
 
 .. code-block:: php
 
@@ -1993,7 +2090,7 @@ Approximate because not specific to any location or epoch. Users are advised to 
 
 MSL NL depth
 ------------
-| Extent: Netherlands - offshore North Sea
+| Extent: Netherlands - offshore North Sea and nearshore
 
 .. code-block:: php
 
@@ -2805,6 +2902,18 @@ Piraeus height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5716')
 
 
+Ponta Delgada depth
+-------------------
+| Extent: Portugal - eastern Azores - Sao Miguel island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_PONTA_DELGADA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10378')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_PONTA_DELGADA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10378')
+
+
 Ponta Delgada height
 --------------------
 | Extent: Portugal - eastern Azores - Sao Miguel island onshore
@@ -3046,6 +3155,18 @@ SVS2010 height
 
 Replaces SVS2000 height (CRS code 5779) from 2019-01.
 
+Santa Cruz da Graciosa depth
+----------------------------
+| Extent: Portugal - central Azores - Graciosa island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10376')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10376')
+
+
 Santa Cruz da Graciosa height
 -----------------------------
 | Extent: Portugal - central Azores - Graciosa island onshore
@@ -3056,6 +3177,18 @@ Santa Cruz da Graciosa height
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::6183')
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6183')
+
+
+Santa Cruz das Flores depth
+---------------------------
+| Extent: Portugal - western Azores - Flores island onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10372')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10372')
 
 
 Santa Cruz das Flores height
@@ -3296,4 +3429,16 @@ Yellow Sea 1985 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5737')
 
 Replaces Yellow Sea 1956 height (CRS code 5736).
+
+ZH Portugal depth
+-----------------
+| Extent: Portugal - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10349')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10349')
+
 

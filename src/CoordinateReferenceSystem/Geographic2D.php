@@ -410,6 +410,15 @@ class Geographic2D extends Geographic
     public const EPSG_CNH22_IRF = 'urn:ogc:def:crs:EPSG::10191';
 
     /**
+     * COV23-IRF
+     * Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+     * Intermediate CRS created in 2023 to assist the emulation of the ETRS89 / COV23 SnakeGrid projected CRS through
+     * transformation ETRS89 to COV23 (1) (code 10469) used in conjunction with the COV23-TM map projection (code
+     * 10470).
+     */
+    public const EPSG_COV23_IRF = 'urn:ogc:def:crs:EPSG::10468';
+
+    /**
      * CR-SIRGAS
      * Extent: Costa Rica - onshore and offshore
      * Replaces CR05 (CRS code 5365) from April 2018.
@@ -1726,6 +1735,12 @@ class Geographic2D extends Geographic
     public const EPSG_JOUIK_1961 = 'urn:ogc:def:crs:EPSG::4679';
 
     /**
+     * KGD2002
+     * Extent: Republic of Korea (South Korea) - onshore and offshore.
+     */
+    public const EPSG_KGD2002 = 'urn:ogc:def:crs:EPSG::4737';
+
+    /**
      * KK-IRF
      * Extent: Denmark - onshore - Copenhagen and surrounding area
      * Artificial CRS created in 2022 to assist the transformation of coordinates between the historic Københavns
@@ -1835,15 +1850,9 @@ class Geographic2D extends Geographic
     public const EPSG_KERTAU_1968 = 'urn:ogc:def:crs:EPSG::4245';
 
     /**
-     * Korea 2000
-     * Extent: Republic of Korea (South Korea) - onshore and offshore.
-     */
-    public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4737';
-
-    /**
      * Korean 1985
      * Extent: Republic of Korea (South Korea) - onshore
-     * Replaces use of Tokyo datum.
+     * Replaces use of Tokyo datum. Replaced by KGD2002.
      */
     public const EPSG_KOREAN_1985 = 'urn:ogc:def:crs:EPSG::4162';
 
@@ -2498,9 +2507,19 @@ class Geographic2D extends Geographic
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
      * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
-     * NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
+     * NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8. Longitudes are POSITIVE EAST.
      */
     public const EPSG_NAD83_CSRS_V7 = 'urn:ogc:def:crs:EPSG::8255';
+
+    /**
+     * NAD83(CSRS)v8
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon
+     * Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7. Longitudes are POSITIVE
+     * EAST.
+     */
+    public const EPSG_NAD83_CSRS_V8 = 'urn:ogc:def:crs:EPSG::10414';
 
     /**
      * NAD83(CSRS96)
@@ -4321,6 +4340,11 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
+
+    /**
+     * @deprecated use EPSG_KGD2002 instead
+     */
+    public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4737';
     protected Geographic2D|Geographic3D|null $baseCRS;
 
     /**

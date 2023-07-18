@@ -614,6 +614,12 @@ class Geographic3D extends Geographic
     public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6667';
 
     /**
+     * KGD2002
+     * Extent: Republic of Korea (South Korea) - onshore and offshore.
+     */
+    public const EPSG_KGD2002 = 'urn:ogc:def:crs:EPSG::4927';
+
+    /**
      * KOSOVAREF01
      * Extent: Kosovo.
      */
@@ -624,12 +630,6 @@ class Geographic3D extends Geographic
      * Extent: Saudi Arabia - onshore and offshore.
      */
     public const EPSG_KSA_GRF17 = 'urn:ogc:def:crs:EPSG::9332';
-
-    /**
-     * Korea 2000
-     * Extent: Republic of Korea (South Korea) - onshore and offshore.
-     */
-    public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4927';
 
     /**
      * Kyrg-06
@@ -866,9 +866,19 @@ class Geographic3D extends Geographic
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
      * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
-     * NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
+     * NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8. Longitudes are POSITIVE EAST.
      */
     public const EPSG_NAD83_CSRS_V7 = 'urn:ogc:def:crs:EPSG::8254';
+
+    /**
+     * NAD83(CSRS)v8
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon
+     * Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7. Longitudes are POSITIVE
+     * EAST.
+     */
+    public const EPSG_NAD83_CSRS_V8 = 'urn:ogc:def:crs:EPSG::10413';
 
     /**
      * NAD83(CSRS96)
@@ -1672,6 +1682,11 @@ class Geographic3D extends Geographic
      * @deprecated use EPSG_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4949';
+
+    /**
+     * @deprecated use EPSG_KGD2002 instead
+     */
+    public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4927';
     protected Geocentric|Geographic3D|null $baseCRS;
 
     /**

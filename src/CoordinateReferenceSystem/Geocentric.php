@@ -617,6 +617,12 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6666';
 
     /**
+     * KGD2002
+     * Extent: Republic of Korea (South Korea) - onshore and offshore.
+     */
+    public const EPSG_KGD2002 = 'urn:ogc:def:crs:EPSG::4926';
+
+    /**
      * KOSOVAREF01
      * Extent: Kosovo.
      */
@@ -627,12 +633,6 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Saudi Arabia - onshore and offshore.
      */
     public const EPSG_KSA_GRF17 = 'urn:ogc:def:crs:EPSG::9331';
-
-    /**
-     * Korea 2000
-     * Extent: Republic of Korea (South Korea) - onshore and offshore.
-     */
-    public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4926';
 
     /**
      * Kyrg-06
@@ -864,9 +864,18 @@ class Geocentric extends CoordinateReferenceSystem
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
      * Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces
-     * NAD83(CSRS)v6.
+     * NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.
      */
     public const EPSG_NAD83_CSRS_V7 = 'urn:ogc:def:crs:EPSG::8253';
+
+    /**
+     * NAD83(CSRS)v8
+     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
+     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
+     * Yukon
+     * Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7.
+     */
+    public const EPSG_NAD83_CSRS_V8 = 'urn:ogc:def:crs:EPSG::10412';
 
     /**
      * NAD83(CSRS96)
@@ -1550,6 +1559,11 @@ class Geocentric extends CoordinateReferenceSystem
      * @deprecated use EPSG_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4948';
+
+    /**
+     * @deprecated use EPSG_KGD2002 instead
+     */
+    public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4926';
     /**
      * @var array<string, self>
      */

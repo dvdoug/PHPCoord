@@ -277,10 +277,22 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CAGLIARI_1956_HEIGHT = 'urn:ogc:def:crs:EPSG::9722';
 
     /**
-     * Cais da Figueirinha - Angra do Heroismo height
+     * Cais da Figueirinha depth
      * Extent: Portugal - central Azores - Terceira island onshore.
      */
-    public const EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO_HEIGHT = 'urn:ogc:def:crs:EPSG::6184';
+    public const EPSG_CAIS_DA_FIGUEIRINHA_DEPTH = 'urn:ogc:def:crs:EPSG::10377';
+
+    /**
+     * Cais da Figueirinha height
+     * Extent: Portugal - central Azores - Terceira island onshore.
+     */
+    public const EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT = 'urn:ogc:def:crs:EPSG::6184';
+
+    /**
+     * Cais da Madalena depth
+     * Extent: Portugal - central Azores - Pico island onshore.
+     */
+    public const EPSG_CAIS_DA_MADALENA_DEPTH = 'urn:ogc:def:crs:EPSG::10374';
 
     /**
      * Cais da Madalena height
@@ -289,16 +301,28 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CAIS_DA_MADALENA_HEIGHT = 'urn:ogc:def:crs:EPSG::6182';
 
     /**
-     * Cais da Pontinha - Funchal height
+     * Cais da Pontinha depth
      * Extent: Portugal - Madeira and Desertas islands - onshore.
      */
-    public const EPSG_CAIS_DA_PONTINHA_FUNCHAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6178';
+    public const EPSG_CAIS_DA_PONTINHA_DEPTH = 'urn:ogc:def:crs:EPSG::10370';
 
     /**
-     * Cais da Vila - Porto Santo height
+     * Cais da Pontinha height
+     * Extent: Portugal - Madeira and Desertas islands - onshore.
+     */
+    public const EPSG_CAIS_DA_PONTINHA_HEIGHT = 'urn:ogc:def:crs:EPSG::6178';
+
+    /**
+     * Cais da Vila depth
      * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore.
      */
-    public const EPSG_CAIS_DA_VILA_PORTO_SANTO_HEIGHT = 'urn:ogc:def:crs:EPSG::6179';
+    public const EPSG_CAIS_DA_VILA_DEPTH = 'urn:ogc:def:crs:EPSG::10371';
+
+    /**
+     * Cais da Vila do Porto depth
+     * Extent: Portugal - eastern Azores onshore - Santa Maria, Formigas.
+     */
+    public const EPSG_CAIS_DA_VILA_DO_PORTO_DEPTH = 'urn:ogc:def:crs:EPSG::10379';
 
     /**
      * Cais da Vila do Porto height
@@ -307,10 +331,28 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_CAIS_DA_VILA_DO_PORTO_HEIGHT = 'urn:ogc:def:crs:EPSG::6186';
 
     /**
+     * Cais da Vila height
+     * Extent: Portugal - Porto Santo island (Madeira archipelago) onshore.
+     */
+    public const EPSG_CAIS_DA_VILA_HEIGHT = 'urn:ogc:def:crs:EPSG::6179';
+
+    /**
+     * Cais das Velas depth
+     * Extent: Portugal - central Azores - Sao Jorge island onshore.
+     */
+    public const EPSG_CAIS_DAS_VELAS_DEPTH = 'urn:ogc:def:crs:EPSG::10375';
+
+    /**
      * Cais das Velas height
      * Extent: Portugal - central Azores - Sao Jorge island onshore.
      */
     public const EPSG_CAIS_DAS_VELAS_HEIGHT = 'urn:ogc:def:crs:EPSG::6180';
+
+    /**
+     * Cascais depth
+     * Extent: Portugal - mainland - onshore.
+     */
+    public const EPSG_CASCAIS_DEPTH = 'urn:ogc:def:crs:EPSG::10364';
 
     /**
      * Cascais height
@@ -797,6 +839,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_HON_DAU_1992_HEIGHT = 'urn:ogc:def:crs:EPSG::5727';
 
     /**
+     * Horta depth
+     * Extent: Portugal - central Azores - Faial island onshore.
+     */
+    public const EPSG_HORTA_DEPTH = 'urn:ogc:def:crs:EPSG::10373';
+
+    /**
      * Horta height
      * Extent: Portugal - central Azores - Faial island onshore.
      */
@@ -907,12 +955,6 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::9394';
 
     /**
-     * Incheon height
-     * Extent: Republic of Korea (South Korea) - mainland onshore.
-     */
-    public const EPSG_INCHEON_HEIGHT = 'urn:ogc:def:crs:EPSG::5193';
-
-    /**
      * Instantaneous Water Level depth
      * Extent: World
      * Depth relative to instantaneous water level uncorrected for tide. Not specific to any location or epoch.
@@ -997,6 +1039,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_KSA_VRF14_HEIGHT = 'urn:ogc:def:crs:EPSG::9335';
 
     /**
+     * KVD1964 height
+     * Extent: Republic of Korea (South Korea) - onshore
+     * Normal-orthometric heights.
+     */
+    public const EPSG_KVD1964_HEIGHT = 'urn:ogc:def:crs:EPSG::5193';
+
+    /**
      * Kiunga height
      * Extent: Papua New Guinea - onshore south of 5°S and west of 144°E
      * Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008
@@ -1027,7 +1076,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * LAT NL depth
-     * Extent: Netherlands - offshore North Sea.
+     * Extent: Netherlands - offshore North Sea and nearshore.
      */
     public const EPSG_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9287';
 
@@ -1186,7 +1235,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * MSL NL depth
-     * Extent: Netherlands - offshore North Sea.
+     * Extent: Netherlands - offshore North Sea and nearshore.
      */
     public const EPSG_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9288';
 
@@ -1677,6 +1726,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_PIRAEUS_HEIGHT = 'urn:ogc:def:crs:EPSG::5716';
 
     /**
+     * Ponta Delgada depth
+     * Extent: Portugal - eastern Azores - Sao Miguel island onshore.
+     */
+    public const EPSG_PONTA_DELGADA_DEPTH = 'urn:ogc:def:crs:EPSG::10378';
+
+    /**
      * Ponta Delgada height
      * Extent: Portugal - eastern Azores - Sao Miguel island onshore.
      */
@@ -1807,10 +1862,22 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::8690';
 
     /**
+     * Santa Cruz da Graciosa depth
+     * Extent: Portugal - central Azores - Graciosa island onshore.
+     */
+    public const EPSG_SANTA_CRUZ_DA_GRACIOSA_DEPTH = 'urn:ogc:def:crs:EPSG::10376';
+
+    /**
      * Santa Cruz da Graciosa height
      * Extent: Portugal - central Azores - Graciosa island onshore.
      */
     public const EPSG_SANTA_CRUZ_DA_GRACIOSA_HEIGHT = 'urn:ogc:def:crs:EPSG::6183';
+
+    /**
+     * Santa Cruz das Flores depth
+     * Extent: Portugal - western Azores - Flores island onshore.
+     */
+    public const EPSG_SANTA_CRUZ_DAS_FLORES_DEPTH = 'urn:ogc:def:crs:EPSG::10372';
 
     /**
      * Santa Cruz das Flores height
@@ -1940,6 +2007,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_YELLOW_SEA_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5737';
 
     /**
+     * ZH Portugal depth
+     * Extent: Portugal - offshore.
+     */
+    public const EPSG_ZH_PORTUGAL_DEPTH = 'urn:ogc:def:crs:EPSG::10349';
+
+    /**
      * @deprecated use EPSG_NG95_HEIGHT instead
      */
     public const EPSG_NG_L_HEIGHT = 'urn:ogc:def:crs:EPSG::5774';
@@ -1953,6 +2026,26 @@ class Vertical extends CoordinateReferenceSystem
      * @deprecated use EPSG_INAGEOID2020_V1_HEIGHT instead
      */
     public const EPSG_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9471';
+
+    /**
+     * @deprecated use EPSG_KVD1964_HEIGHT instead
+     */
+    public const EPSG_INCHEON_HEIGHT = 'urn:ogc:def:crs:EPSG::5193';
+
+    /**
+     * @deprecated use EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT instead
+     */
+    public const EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO_HEIGHT = 'urn:ogc:def:crs:EPSG::6184';
+
+    /**
+     * @deprecated use EPSG_CAIS_DA_PONTINHA_HEIGHT instead
+     */
+    public const EPSG_CAIS_DA_PONTINHA_FUNCHAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6178';
+
+    /**
+     * @deprecated use EPSG_CAIS_DA_VILA_HEIGHT instead
+     */
+    public const EPSG_CAIS_DA_VILA_PORTO_SANTO_HEIGHT = 'urn:ogc:def:crs:EPSG::6179';
     /**
      * @var array<string, self>
      */

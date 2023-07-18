@@ -1719,6 +1719,14 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_CNH22_GRID = 'urn:ogc:def:crs:EPSG::10194';
 
     /**
+     * COV23 Grid
+     * Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+     * Defined through transformation ETRS89 to COV23-IRF (1) (code 10468) and map projection COV23-TM (code 10470).
+     * Emulates the COV23 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     */
+    public const EPSG_COV23_GRID = 'urn:ogc:def:crs:EPSG::10471';
+
+    /**
      * CR-SIRGAS / CRTM05
      * Extent: Costa Rica - onshore
      * Replaces CR05 / CRTM05 (CRS code 5367) from April 2018.
@@ -4136,7 +4144,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / ALB2020
-     * Extent: Australia - Western Australia - Albany area onshore below 190m AHD.
+     * Extent: Australia - Western Australia - Albany area onshore below 190m AHD
+     * Replaces GDA94 / ALB94 (CRS code 10448).
      */
     public const EPSG_GDA2020_ALB2020 = 'urn:ogc:def:crs:EPSG::8013';
 
@@ -4149,7 +4158,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / BCG2020
-     * Extent: Australia - Western Australia - Busselton area onshore below 250m AHD.
+     * Extent: Australia - Western Australia - Busselton area onshore below 250m AHD
+     * Replaces GDA94 / BCG94 (CRS code 10451).
      */
     public const EPSG_GDA2020_BCG2020 = 'urn:ogc:def:crs:EPSG::8016';
 
@@ -4165,50 +4175,57 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / BIO2020
-     * Extent: Australia - Western Australia - Barrow Island and Onslow area onshore.
+     * Extent: Australia - Western Australia - Barrow Island and Onslow area onshore
+     * Replaces GDA94 / BIO94 (CRS code 10449).
      */
     public const EPSG_GDA2020_BIO2020 = 'urn:ogc:def:crs:EPSG::8014';
 
     /**
      * GDA2020 / BRO2020
-     * Extent: Australia - Western Australia - Broome area onshore below 130m AHD.
+     * Extent: Australia - Western Australia - Broome area onshore below 130m AHD
+     * Replaces GDA94 / BRO94 (CRS code 10450).
      */
     public const EPSG_GDA2020_BRO2020 = 'urn:ogc:def:crs:EPSG::8015';
 
     /**
      * GDA2020 / CARN2020
-     * Extent: Australia - Western Australia - Carnarvon area onshore.
+     * Extent: Australia - Western Australia - Carnarvon area onshore
+     * Replaces GDA94 / CARN94 (CRS code 10452).
      */
     public const EPSG_GDA2020_CARN2020 = 'urn:ogc:def:crs:EPSG::8017';
 
     /**
      * GDA2020 / CIG2020
      * Extent: Christmas Island - onshore
-     * Usage restricted to areas below 290m above sea level.
+     * Replaces GDA94 / CIG94 (CRS code 6721). Usage restricted to areas below 290m above sea level.
      */
     public const EPSG_GDA2020_CIG2020 = 'urn:ogc:def:crs:EPSG::8018';
 
     /**
      * GDA2020 / CKIG2020
-     * Extent: Cocos (Keeling) Islands - onshore.
+     * Extent: Cocos (Keeling) Islands - onshore
+     * Replaces GDA94 / CKIG94 (CRS code 6723).
      */
     public const EPSG_GDA2020_CKIG2020 = 'urn:ogc:def:crs:EPSG::8019';
 
     /**
      * GDA2020 / COL2020
-     * Extent: Australia - Western Australia - Collie area between 50m and 310m AHD.
+     * Extent: Australia - Western Australia - Collie area between 50m and 310m AHD
+     * Replaces GDA94 / COL94 (CRS code 10453).
      */
     public const EPSG_GDA2020_COL2020 = 'urn:ogc:def:crs:EPSG::8020';
 
     /**
      * GDA2020 / ESP2020
-     * Extent: Australia - Western Australia - Esperance area onshore.
+     * Extent: Australia - Western Australia - Esperance area onshore
+     * Replaces GDA94 / ESP94 (CRS code 10454).
      */
     public const EPSG_GDA2020_ESP2020 = 'urn:ogc:def:crs:EPSG::8021';
 
     /**
      * GDA2020 / EXM2020
-     * Extent: Australia - Western Australia - Exmouth area onshore below 160m AHD.
+     * Extent: Australia - Western Australia - Exmouth area onshore below 160m AHD
+     * Replaces GDA94 / EXM94 (CRS code 10455).
      */
     public const EPSG_GDA2020_EXM2020 = 'urn:ogc:def:crs:EPSG::8022';
 
@@ -4221,43 +4238,50 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / GCG2020
-     * Extent: Australia - Western Australia - Geraldton area onshore below 195m AHD.
+     * Extent: Australia - Western Australia - Geraldton area onshore below 195m AHD
+     * Replaces GDA94 / GCG94 (CRS code 10456).
      */
     public const EPSG_GDA2020_GCG2020 = 'urn:ogc:def:crs:EPSG::8023';
 
     /**
      * GDA2020 / GOLD2020
-     * Extent: Australia - Western Australia - Kalgoorlie area.
+     * Extent: Australia - Western Australia - Kalgoorlie area
+     * Replaces GDA94 / GOLD94 (CRS code 10457).
      */
     public const EPSG_GDA2020_GOLD2020 = 'urn:ogc:def:crs:EPSG::8024';
 
     /**
      * GDA2020 / JCG2020
-     * Extent: Australia - Western Australia - Jurien Bay area onshore below 200m AHD.
+     * Extent: Australia - Western Australia - Jurien Bay area onshore below 200m AHD
+     * Replaces GDA94 / JCG94 (CRS code 10458).
      */
     public const EPSG_GDA2020_JCG2020 = 'urn:ogc:def:crs:EPSG::8025';
 
     /**
      * GDA2020 / KALB2020
-     * Extent: Australia - Western Australia - Kalbarri area onshore.
+     * Extent: Australia - Western Australia - Kalbarri area onshore
+     * Replaces GDA94 / KALB94 (CRS code 10459).
      */
     public const EPSG_GDA2020_KALB2020 = 'urn:ogc:def:crs:EPSG::8026';
 
     /**
      * GDA2020 / KAR2020
-     * Extent: Australia - Western Australia - Karratha area onshore.
+     * Extent: Australia - Western Australia - Karratha area onshore
+     * Replaces GDA94 / KAR94 (CRS code 10460).
      */
     public const EPSG_GDA2020_KAR2020 = 'urn:ogc:def:crs:EPSG::8027';
 
     /**
      * GDA2020 / KUN2020
-     * Extent: Australia - Western Australia - Kununurra area onshore below 200m AHD.
+     * Extent: Australia - Western Australia - Kununurra area onshore below 200m AHD
+     * Replaces GDA94 / KUN94 (CRS code 10461).
      */
     public const EPSG_GDA2020_KUN2020 = 'urn:ogc:def:crs:EPSG::8028';
 
     /**
      * GDA2020 / LCG2020
-     * Extent: Australia - Western Australia - Lancelin area onshore below 200m AHD.
+     * Extent: Australia - Western Australia - Lancelin area onshore below 200m AHD
+     * Replaces GDA94 / LCG94 (CRS code 10462).
      */
     public const EPSG_GDA2020_LCG2020 = 'urn:ogc:def:crs:EPSG::8029';
 
@@ -4348,7 +4372,8 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / MRCG2020
-     * Extent: Australia - Western Australia - Margaret River area onshore below 200m AHD.
+     * Extent: Australia - Western Australia - Margaret River area onshore below 200m AHD
+     * Replaces GDA94 / MRCG94 (CRS code 10463).
      */
     public const EPSG_GDA2020_MRCG2020 = 'urn:ogc:def:crs:EPSG::8030';
 
@@ -4360,13 +4385,15 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * GDA2020 / PCG2020
-     * Extent: Australia - Western Australia - Perth area onshore below 165m AHD.
+     * Extent: Australia - Western Australia - Perth area onshore below 165m AHD
+     * Replaces GDA94 / PCG94 (CRS code 10464).
      */
     public const EPSG_GDA2020_PCG2020 = 'urn:ogc:def:crs:EPSG::8031';
 
     /**
      * GDA2020 / PHG2020
-     * Extent: Australia - Western Australia - Port Hedland area onshore.
+     * Extent: Australia - Western Australia - Port Hedland area onshore
+     * Replaces GDA94 / PHG94 (CRS code 10465).
      */
     public const EPSG_GDA2020_PHG2020 = 'urn:ogc:def:crs:EPSG::8032';
 
@@ -4384,11 +4411,25 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_GDA2020_VICGRID = 'urn:ogc:def:crs:EPSG::7899';
 
     /**
+     * GDA94 / ALB94
+     * Extent: Australia - Western Australia - Albany area onshore below 190m AHD
+     * Replaced by GDA2020 / ALB2020 (CRS code 8013).
+     */
+    public const EPSG_GDA94_ALB94 = 'urn:ogc:def:crs:EPSG::10448';
+
+    /**
      * GDA94 / Australian Albers
      * Extent: Australia - Australian Capital Territory; New South Wales; Northern Territory; Queensland; South
      * Australia; Tasmania; Western Australia; Victoria.
      */
     public const EPSG_GDA94_AUSTRALIAN_ALBERS = 'urn:ogc:def:crs:EPSG::3577';
+
+    /**
+     * GDA94 / BCG94
+     * Extent: Australia - Western Australia - Busselton area onshore below 250m AHD
+     * Replaced by GDA2020 / BCG2020 (CRS code 8016).
+     */
+    public const EPSG_GDA94_BCG94 = 'urn:ogc:def:crs:EPSG::10451';
 
     /**
      * GDA94 / BCSG02
@@ -4399,6 +4440,27 @@ class Projected extends CoordinateReferenceSystem
      * Replaced by GDA2020 / BCSG2020 (CRS code 20047) from 2022-07-01.
      */
     public const EPSG_GDA94_BCSG02 = 'urn:ogc:def:crs:EPSG::3113';
+
+    /**
+     * GDA94 / BIO94
+     * Extent: Australia - Western Australia - Barrow Island and Onslow area onshore
+     * Replaced by GDA2020 / BIO2020 (CRS code 8014).
+     */
+    public const EPSG_GDA94_BIO94 = 'urn:ogc:def:crs:EPSG::10449';
+
+    /**
+     * GDA94 / BRO94
+     * Extent: Australia - Western Australia - Broome area onshore below 130m AHD
+     * Replaced by GDA2020 / BRO2020 (CRS code 8015).
+     */
+    public const EPSG_GDA94_BRO94 = 'urn:ogc:def:crs:EPSG::10450';
+
+    /**
+     * GDA94 / CARN94
+     * Extent: Australia - Western Australia - Carnarvon area onshore
+     * Replaced by GDA2020 / CARN2020 (CRS code 8017).
+     */
+    public const EPSG_GDA94_CARN94 = 'urn:ogc:def:crs:EPSG::10452';
 
     /**
      * GDA94 / CIG94
@@ -4416,12 +4478,82 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_GDA94_CKIG94 = 'urn:ogc:def:crs:EPSG::6723';
 
     /**
+     * GDA94 / COL94
+     * Extent: Australia - Western Australia - Collie area between 50m and 310m AHD
+     * Replaced by GDA2020 / COL2020 (CRS code 8020).
+     */
+    public const EPSG_GDA94_COL94 = 'urn:ogc:def:crs:EPSG::10453';
+
+    /**
+     * GDA94 / ESP94
+     * Extent: Australia - Western Australia - Esperance area onshore
+     * Replaced by GDA2020 / ESP2020 (CRS code 8021).
+     */
+    public const EPSG_GDA94_ESP94 = 'urn:ogc:def:crs:EPSG::10454';
+
+    /**
+     * GDA94 / EXM94
+     * Extent: Australia - Western Australia - Exmouth area onshore below 160m AHD
+     * Replaced by GDA2020 / EXM2020 (CRS code 8022).
+     */
+    public const EPSG_GDA94_EXM94 = 'urn:ogc:def:crs:EPSG::10455';
+
+    /**
+     * GDA94 / GCG94
+     * Extent: Australia - Western Australia - Geraldton area onshore below 195m AHD
+     * Replaced by GDA2020 / GCG2020 (CRS code 8023).
+     */
+    public const EPSG_GDA94_GCG94 = 'urn:ogc:def:crs:EPSG::10456';
+
+    /**
+     * GDA94 / GOLD94
+     * Extent: Australia - Western Australia - Kalgoorlie area
+     * Replaced by GDA2020 / GOLD2020 (CRS code 8024).
+     */
+    public const EPSG_GDA94_GOLD94 = 'urn:ogc:def:crs:EPSG::10457';
+
+    /**
      * GDA94 / Geoscience Australia Lambert
      * Extent: Australia - Australian Capital Territory; New South Wales; Northern Territory; Queensland; South
      * Australia; Tasmania; Western Australia; Victoria
      * See also WGS 84 / ACRESLC (CRS code 4462).
      */
     public const EPSG_GDA94_GEOSCIENCE_AUSTRALIA_LAMBERT = 'urn:ogc:def:crs:EPSG::3112';
+
+    /**
+     * GDA94 / JCG94
+     * Extent: Australia - Western Australia - Jurien Bay area onshore below 200m AHD
+     * Replaced by GDA2020 / JCG2020 (CRS code 8025).
+     */
+    public const EPSG_GDA94_JCG94 = 'urn:ogc:def:crs:EPSG::10458';
+
+    /**
+     * GDA94 / KALB94
+     * Extent: Australia - Western Australia - Kalbarri area onshore
+     * Replaced by GDA2020 / KALB2020 (CRS code 8026).
+     */
+    public const EPSG_GDA94_KALB94 = 'urn:ogc:def:crs:EPSG::10459';
+
+    /**
+     * GDA94 / KAR94
+     * Extent: Australia - Western Australia - Karratha area onshore
+     * Replaced by GDA2020 / KAR2020 (CRS code 8027).
+     */
+    public const EPSG_GDA94_KAR94 = 'urn:ogc:def:crs:EPSG::10460';
+
+    /**
+     * GDA94 / KUN94
+     * Extent: Australia - Western Australia - Kununurra area onshore below 200m AHD
+     * Replaced by GDA2020 / KUN2020 (CRS code 8028).
+     */
+    public const EPSG_GDA94_KUN94 = 'urn:ogc:def:crs:EPSG::10461';
+
+    /**
+     * GDA94 / LCG94
+     * Extent: Australia - Western Australia - Lancelin area onshore below 200m AHD
+     * Replaced by GDA2020 / LCG2020 (CRS code 8029).
+     */
+    public const EPSG_GDA94_LCG94 = 'urn:ogc:def:crs:EPSG::10462';
 
     /**
      * GDA94 / MGA zone 46
@@ -4512,10 +4644,31 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_GDA94_MGA_ZONE_59 = 'urn:ogc:def:crs:EPSG::6738';
 
     /**
+     * GDA94 / MRCG94
+     * Extent: Australia - Western Australia - Margaret River area onshore below 200m AHD
+     * Replaced by GDA2020 / MRCG2020 (CRS code 8030).
+     */
+    public const EPSG_GDA94_MRCG94 = 'urn:ogc:def:crs:EPSG::10463';
+
+    /**
      * GDA94 / NSW Lambert
      * Extent: Australia - New South Wales.
      */
     public const EPSG_GDA94_NSW_LAMBERT = 'urn:ogc:def:crs:EPSG::3308';
+
+    /**
+     * GDA94 / PCG94
+     * Extent: Australia - Western Australia - Perth area onshore below 165m AHD
+     * Replaced by GDA2020 / PCG2020 (CRS code 8031).
+     */
+    public const EPSG_GDA94_PCG94 = 'urn:ogc:def:crs:EPSG::10464';
+
+    /**
+     * GDA94 / PHG94
+     * Extent: Australia - Western Australia - Port Hedland area onshore
+     * Replaced by GDA2020 / PHG2020 (CRS code 8032).
+     */
+    public const EPSG_GDA94_PHG94 = 'urn:ogc:def:crs:EPSG::10465';
 
     /**
      * GDA94 / SA Lambert
@@ -7322,6 +7475,86 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_JAMAICA_1875_JAMAICA_OLD_GRID = 'urn:ogc:def:crs:EPSG::24100';
 
     /**
+     * KGD2002 / Central Belt
+     * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - mainland and nearshore
+     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt (CRS code 2097) and Korean 1985 /
+     * Modified Central Belt (CRS code 5174). Replaced by KGD2002 / Central Belt 2010 (CRS code 5186).
+     */
+    public const EPSG_KGD2002_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5181';
+
+    /**
+     * KGD2002 / Central Belt 2010
+     * Extent: Republic of Korea (South Korea) - onshore between 126°E and 128°E
+     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / Central Belt, Central Belt Jeju, Modified Central
+     * Belt, Modified Central Belt Jeju (CRS codes 2097, 5168, 5174 and 5175) and KGD2002 / Central Belt and Central
+     * Belt Jeju (CRS codes 5181-82).
+     */
+    public const EPSG_KGD2002_CENTRAL_BELT_2010 = 'urn:ogc:def:crs:EPSG::5186';
+
+    /**
+     * KGD2002 / Central Belt Jeju
+     * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - Jeju island onshore
+     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt Jeju (CRS code 5168) and Korean 1985
+     * / Modified Central Belt Jeju (CRS code 5175). Replaced by KGD2002 / Central Belt 2010 (CRS code 5186).
+     */
+    public const EPSG_KGD2002_CENTRAL_BELT_JEJU = 'urn:ogc:def:crs:EPSG::5182';
+
+    /**
+     * KGD2002 / East Belt
+     * Extent: Republic of Korea (South Korea) - onshore between 128°E and 130°E
+     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Belt (CRS code 2096) and Korean 1985 /
+     * Modified East Belt (CRS code 5176). Replaced by KGD2002 / East Belt 2010 (CRS code 5187).
+     */
+    public const EPSG_KGD2002_EAST_BELT = 'urn:ogc:def:crs:EPSG::5183';
+
+    /**
+     * KGD2002 / East Belt 2010
+     * Extent: Republic of Korea (South Korea) - onshore between 128°E and 130°E
+     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / East Belt (CRS code 2096), Korean 1985 / Modified
+     * East Belt (CRS code 5176) and KGD2002 / East Belt (CRS code 5183).
+     */
+    public const EPSG_KGD2002_EAST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5187';
+
+    /**
+     * KGD2002 / East Sea Belt
+     * Extent: Republic of Korea (South Korea) - onshore between 130°E and 132°E
+     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Sea Belt (CRS code 5167) and Korean 1985 /
+     * Modified East Sea Belt (CRS code 5177). Replaced by KGD2002 / East Sea Belt 2010 (CRS code 5188).
+     */
+    public const EPSG_KGD2002_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5184';
+
+    /**
+     * KGD2002 / East Sea Belt 2010
+     * Extent: Republic of Korea (South Korea) - onshore between 130°E and 132°E
+     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / East Sea Belt (CRS code 5167), Korean 1985 /
+     * Modified East Sea Belt (CRS code 5177) and KGD2002 / East Sea Belt (CRS code 5184).
+     */
+    public const EPSG_KGD2002_EAST_SEA_BELT_2010 = 'urn:ogc:def:crs:EPSG::5188';
+
+    /**
+     * KGD2002 / Unified CS
+     * Extent: Republic of Korea (South Korea) - onshore and offshore
+     * Replaces Korean 1985 / Unified CS (CRS code 5178) from 2010.
+     */
+    public const EPSG_KGD2002_UNIFIED_CS = 'urn:ogc:def:crs:EPSG::5179';
+
+    /**
+     * KGD2002 / West Belt
+     * Extent: Republic of Korea (South Korea) - onshore between 124°E and 126°E
+     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / West Belt (CRS code 2098) and Korean 1985 /
+     * Modified West Belt (CRS code 5173). Replaced by KGD2002 / West Belt 2010 (CRS code 5185).
+     */
+    public const EPSG_KGD2002_WEST_BELT = 'urn:ogc:def:crs:EPSG::5180';
+
+    /**
+     * KGD2002 / West Belt 2010
+     * Extent: Republic of Korea (South Korea) - onshore between 124°E and 126°E
+     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / West Belt (CRS code 2098), Korean 1985 / Modified
+     * West Belt (CRS code 5173) and KGD2002 / West Belt (CRS code 5180).
+     */
+    public const EPSG_KGD2002_WEST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5185';
+
+    /**
      * KK reconstruction east-orientated
      * Extent: Denmark - onshore - Copenhagen and surrounding area
      * Reconstruction defined through transformation ETRS89 to KK-IRF (1) and map projection GS LCC (codes 10267 and
@@ -7778,86 +8011,6 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_KERTAU_1968_UTM_ZONE_48N = 'urn:ogc:def:crs:EPSG::24548';
 
     /**
-     * Korea 2000 / Central Belt
-     * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - mainland and nearshore
-     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt (CRS code 2097) and Korean 1985 /
-     * Modified Central Belt (CRS code 5174). Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
-     */
-    public const EPSG_KOREA_2000_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5181';
-
-    /**
-     * Korea 2000 / Central Belt 2010
-     * Extent: Republic of Korea (South Korea) - onshore between 126°E and 128°E
-     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / Central Belt, Central Belt Jeju, Modified Central
-     * Belt, Modified Central Belt Jeju (CRS codes 2097, 5168, 5174 and 5175) and Korea 2000 / Central Belt and Central
-     * Belt Jeju (CRS codes 5181-82).
-     */
-    public const EPSG_KOREA_2000_CENTRAL_BELT_2010 = 'urn:ogc:def:crs:EPSG::5186';
-
-    /**
-     * Korea 2000 / Central Belt Jeju
-     * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - Jeju island onshore
-     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / Central Belt Jeju (CRS code 5168) and Korean 1985
-     * / Modified Central Belt Jeju (CRS code 5175). Replaced by Korea 2000 / Central Belt 2010 (CRS code 5186).
-     */
-    public const EPSG_KOREA_2000_CENTRAL_BELT_JEJU = 'urn:ogc:def:crs:EPSG::5182';
-
-    /**
-     * Korea 2000 / East Belt
-     * Extent: Republic of Korea (South Korea) - onshore east of 128°E
-     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Belt (CRS code 2096) and Korean 1985 /
-     * Modified East Belt (CRS code 5176). Replaced by Korea 2000 / East Belt 2010 (CRS code 5187).
-     */
-    public const EPSG_KOREA_2000_EAST_BELT = 'urn:ogc:def:crs:EPSG::5183';
-
-    /**
-     * Korea 2000 / East Belt 2010
-     * Extent: Republic of Korea (South Korea) - onshore east of 128°E
-     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / East Belt (CRS code 2096), Korean 1985 / Modified
-     * East Belt (CRS code 5176) and Korea 2000 / East Belt (CRS code 5183).
-     */
-    public const EPSG_KOREA_2000_EAST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5187';
-
-    /**
-     * Korea 2000 / East Sea Belt
-     * Extent: Republic of Korea (South Korea) - onshore between 130°E and 132°E
-     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / East Sea Belt (CRS code 5167) and Korean 1985 /
-     * Modified East Sea Belt (CRS code 5177). Replaced by Korea 2000 / East Sea Belt 2010 (CRS code 5188).
-     */
-    public const EPSG_KOREA_2000_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5184';
-
-    /**
-     * Korea 2000 / East Sea Belt 2010
-     * Extent: Republic of Korea (South Korea) - onshore between 130°E and 132°E
-     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / East Sea Belt (CRS code 5167), Korean 1985 /
-     * Modified East Sea Belt (CRS code 5177) and Korea 2000 / East Sea Belt (CRS code 5184).
-     */
-    public const EPSG_KOREA_2000_EAST_SEA_BELT_2010 = 'urn:ogc:def:crs:EPSG::5188';
-
-    /**
-     * Korea 2000 / Unified CS
-     * Extent: Republic of Korea (South Korea) - onshore and offshore
-     * Replaces Korean 1985 / Unified CS (CRS code 5178) from 2010.
-     */
-    public const EPSG_KOREA_2000_UNIFIED_CS = 'urn:ogc:def:crs:EPSG::5179';
-
-    /**
-     * Korea 2000 / West Belt
-     * Extent: Republic of Korea (South Korea) - onshore between 124°E and 126°E
-     * Introduced 2003, withdrawn 2009-12-31. Replaces Korean 1985 / West Belt (CRS code 2098) and Korean 1985 /
-     * Modified West Belt (CRS code 5173). Replaced by Korea 2000 / West Belt 2010 (CRS code 5185).
-     */
-    public const EPSG_KOREA_2000_WEST_BELT = 'urn:ogc:def:crs:EPSG::5180';
-
-    /**
-     * Korea 2000 / West Belt 2010
-     * Extent: Republic of Korea (South Korea) - onshore between 124°E and 126°E
-     * Legally mandated CRS from 2010-01-01. Replaces Korean 1985 / West Belt (CRS code 2098), Korean 1985 / Modified
-     * West Belt (CRS code 5173) and Korea 2000 / West Belt (CRS code 5180).
-     */
-    public const EPSG_KOREA_2000_WEST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5185';
-
-    /**
      * Korean 1985 / Central Belt
      * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - mainland and nearshore
      * Replaces Tokyo 1892 / Korea Central Belt (CRS code 5170). Although it was intended that the grids were for most
@@ -7876,7 +8029,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * Korean 1985 / East Belt
-     * Extent: Republic of Korea (South Korea) - onshore east of 128°E
+     * Extent: Republic of Korea (South Korea) - onshore between 128°E and 130°E
      * Replaces Tokyo 1892 / Korea East Belt (CRS code 5171). Although it was intended that the grids were for most
      * practical purposes coincident, a 10.405" (250m) longitude offset was introduced. Replaced by Korean 1985 /
      * Modified East Belt (CRS code 5176).
@@ -7896,8 +8049,8 @@ class Projected extends CoordinateReferenceSystem
      * Korean 1985 / Modified Central Belt
      * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - mainland and nearshore
      * Unofficial system replacing Korean 1985 / Central Belt (code 2097) to correct 10.405" longitude difference and
-     * make grid for most practical purposes coincident with Tokyo 1892 / Central Belt (code 5170). Replaced by Korea
-     * 2000 / Central Belt (code 5181).
+     * make grid for most practical purposes coincident with Tokyo 1892 / Central Belt (code 5170). Replaced by KGD2002
+     * / Central Belt (code 5181).
      */
     public const EPSG_KOREAN_1985_MODIFIED_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5174';
 
@@ -7905,16 +8058,16 @@ class Projected extends CoordinateReferenceSystem
      * Korean 1985 / Modified Central Belt Jeju
      * Extent: Republic of Korea (South Korea) - between 126°E and 128°E - Jeju island onshore
      * Unofficial system replacing Korean 1985 / Central Belt Jeju (code 5168) to correct 10.405" longitude difference.
-     * Replaced by Korea 2000 / Central Belt Jeju (code 5182).
+     * Replaced by KGD2002 / Central Belt Jeju (code 5182).
      */
     public const EPSG_KOREAN_1985_MODIFIED_CENTRAL_BELT_JEJU = 'urn:ogc:def:crs:EPSG::5175';
 
     /**
      * Korean 1985 / Modified East Belt
-     * Extent: Republic of Korea (South Korea) - onshore east of 128°E
+     * Extent: Republic of Korea (South Korea) - onshore between 128°E and 130°E
      * Unofficial system replacing Korean 1985 / East Belt (code 2096) to correct 10.405" longitude difference and make
-     * grid for most practical purposes coincident with Tokyo 1892 / East Belt (code 5171). Replaced by Korea 2000 /
-     * East Belt (code 5183).
+     * grid for most practical purposes coincident with Tokyo 1892 / East Belt (code 5171). Replaced by KGD2002 / East
+     * Belt (code 5183).
      */
     public const EPSG_KOREAN_1985_MODIFIED_EAST_BELT = 'urn:ogc:def:crs:EPSG::5176';
 
@@ -7922,8 +8075,8 @@ class Projected extends CoordinateReferenceSystem
      * Korean 1985 / Modified East Sea Belt
      * Extent: Republic of Korea (South Korea) - onshore between 130°E and 132°E
      * Unofficial system replacing Korean 1985 / E Sea Belt (code 5167) to correct 10.405" longitude difference and
-     * make grid for most practical purposes coincident with Tokyo 1892 / E Sea Belt (code 5172). Replaced by Korea
-     * 2000 / East Sea Belt (code 5184).
+     * make grid for most practical purposes coincident with Tokyo 1892 / E Sea Belt (code 5172). Replaced by KGD2002 /
+     * East Sea Belt (code 5184).
      */
     public const EPSG_KOREAN_1985_MODIFIED_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5177';
 
@@ -7931,15 +8084,15 @@ class Projected extends CoordinateReferenceSystem
      * Korean 1985 / Modified West Belt
      * Extent: Republic of Korea (South Korea) - onshore between 124°E and 126°E
      * Unofficial system replacing Korean 1985 / West Belt (code 2098) to correct 10.405" longitude difference and make
-     * grid for most practical purposes coincident with Tokyo 1892 / West Belt (code 5169). Replaced by Korea 2000 /
-     * West Belt (code 5180).
+     * grid for most practical purposes coincident with Tokyo 1892 / West Belt (code 5169). Replaced by KGD2002 / West
+     * Belt (code 5180).
      */
     public const EPSG_KOREAN_1985_MODIFIED_WEST_BELT = 'urn:ogc:def:crs:EPSG::5173';
 
     /**
      * Korean 1985 / Unified CS
      * Extent: Republic of Korea (South Korea) - onshore
-     * Introduced in 2004. From 2010 replaced by Korea 2000 / Unified CS (CRS code 5179).
+     * Introduced in 2004. From 2010 replaced by KGD2002 / Unified CS (CRS code 5179).
      */
     public const EPSG_KOREAN_1985_UNIFIED_CS = 'urn:ogc:def:crs:EPSG::5178';
 
@@ -8919,7 +9072,7 @@ class Projected extends CoordinateReferenceSystem
     /**
      * MWC18 Grid
      * Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester
-     * Defined through transformation ETRS89 to MWC18-IRF (1) (code 20033) and map projection MWC18-TM (code 10127).
+     * Defined through transformation ETRS89 to MWC18-IRF (1) (code 10108) and map projection MWC18-TM (code 10127).
      * Emulates the MWC18 Snake projection applied to ETRS89 as realized through OSNet 2009.
      */
     public const EPSG_MWC18_GRID = 'urn:ogc:def:crs:EPSG::20002';
@@ -21767,6 +21920,125 @@ class Projected extends CoordinateReferenceSystem
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22709';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22810';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W onshore and offshore - Alberta, British Columbia, Northwest
+     * Territories, Nunavut
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22811';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W onshore and offshore - Alberta, Northwest Territories, Nunavut,
+     * Saskatchewan
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22812';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W onshore and offshore - Northwest Territories, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22813';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22814';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22815';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W, onshore and offshore south of 84°N - Manitoba, Nunavut, Ontario
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22816';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22817';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W, onshore and offshore south of 84°N - Nunavut, Ontario and Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22818';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22819';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W onshore and offshore - New Brunswick, Labrador, Nova Scotia, Nunavut,
+     * Prince Edward Island, Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22820';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22821';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W onshore and offshore - Newfoundland and Labrador
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22822';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 7N
+     * Extent: Canada west of 138°W, onshore and offshore south of 84°N - British Columbia, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22807';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22808';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W, onshore and offshore south of 84°N - British Columbia, Northwest
+     * Territories, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22809';
 
     /**
      * NAD83(HARN) / Alabama East
@@ -40288,6 +40560,56 @@ class Projected extends CoordinateReferenceSystem
      * @deprecated use EPSG_LKS_92_LATVIA_TM instead
      */
     public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
+
+    /**
+     * @deprecated use EPSG_KGD2002_CENTRAL_BELT instead
+     */
+    public const EPSG_KOREA_2000_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5181';
+
+    /**
+     * @deprecated use EPSG_KGD2002_CENTRAL_BELT_2010 instead
+     */
+    public const EPSG_KOREA_2000_CENTRAL_BELT_2010 = 'urn:ogc:def:crs:EPSG::5186';
+
+    /**
+     * @deprecated use EPSG_KGD2002_CENTRAL_BELT_JEJU instead
+     */
+    public const EPSG_KOREA_2000_CENTRAL_BELT_JEJU = 'urn:ogc:def:crs:EPSG::5182';
+
+    /**
+     * @deprecated use EPSG_KGD2002_EAST_BELT instead
+     */
+    public const EPSG_KOREA_2000_EAST_BELT = 'urn:ogc:def:crs:EPSG::5183';
+
+    /**
+     * @deprecated use EPSG_KGD2002_EAST_BELT_2010 instead
+     */
+    public const EPSG_KOREA_2000_EAST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5187';
+
+    /**
+     * @deprecated use EPSG_KGD2002_EAST_SEA_BELT instead
+     */
+    public const EPSG_KOREA_2000_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5184';
+
+    /**
+     * @deprecated use EPSG_KGD2002_EAST_SEA_BELT_2010 instead
+     */
+    public const EPSG_KOREA_2000_EAST_SEA_BELT_2010 = 'urn:ogc:def:crs:EPSG::5188';
+
+    /**
+     * @deprecated use EPSG_KGD2002_UNIFIED_CS instead
+     */
+    public const EPSG_KOREA_2000_UNIFIED_CS = 'urn:ogc:def:crs:EPSG::5179';
+
+    /**
+     * @deprecated use EPSG_KGD2002_WEST_BELT instead
+     */
+    public const EPSG_KOREA_2000_WEST_BELT = 'urn:ogc:def:crs:EPSG::5180';
+
+    /**
+     * @deprecated use EPSG_KGD2002_WEST_BELT_2010 instead
+     */
+    public const EPSG_KOREA_2000_WEST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5185';
     protected Geographic2D|Geographic3D $baseCRS;
 
     protected ?string $derivingConversion;

@@ -386,9 +386,9 @@
 4734	Geographic 2D	Tristan 1968		6734	St Helena - Tristan da Cunha
 4735	Geographic 2D	Kusaie 1951		6735	Micronesia - Kosrae (Kusaie)
 4736	Geographic 2D	Deception Island		6736	Antarctica - Deception Island
-4737	Geographic 2D	Korea 2000		6737	Korea; Republic of (South Korea)
-4927	Geographic 3D	Korea 2000		6737	Korea; Republic of (South Korea)
-4926	Geocentric	Korea 2000		6737	Korea; Republic of (South Korea)
+4737	Geographic 2D	KGD2002		6737	Korea; Republic of (South Korea)
+4927	Geographic 3D	KGD2002		6737	Korea; Republic of (South Korea)
+4926	Geocentric	KGD2002		6737	Korea; Republic of (South Korea)
 4738	Geographic 2D	Hong Kong 1963	HK63	6738	China - Hong Kong
 4739	Geographic 2D	Hong Kong 1963(67)	HK63(67)	6739	China - Hong Kong
 4740	Geographic 2D	PZ-90		6740	World

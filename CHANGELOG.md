@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for Australia, Canada, Netherlands, Portugal, South Korea and UK
 
 ## [5.5.0] - 2023-07-07
 ### Added

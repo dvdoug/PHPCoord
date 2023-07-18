@@ -839,6 +839,21 @@ CNH22-IRF
 
 Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CNH22 SnakeGrid projected CRS through transformation ETRS89 to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map projection (code 10193).
 
+COV23-IRF
+---------
+| Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_COV23_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10468')
+    Geographic::fromSRID(Geographic2D::EPSG_COV23_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10468')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_COV23_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10468')
+
+Intermediate CRS created in 2023 to assist the emulation of the ETRS89 / COV23 SnakeGrid projected CRS through transformation ETRS89 to COV23 (1) (code 10469) used in conjunction with the COV23-TM map projection (code 10470).
+
 CR-SIRGAS
 ---------
 | Extent: Costa Rica - onshore and offshore
@@ -3387,6 +3402,20 @@ Jouik 1961
 
 Replaced by Mauritania 1999 (CRS code 4702).
 
+KGD2002
+-------
+| Extent: Republic of Korea (South Korea) - onshore and offshore
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_KGD2002)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4737')
+    Geographic::fromSRID(Geographic2D::EPSG_KGD2002)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4737')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_KGD2002)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4737')
+
+
 KK-IRF
 ------
 | Extent: Denmark - onshore - Copenhagen and surrounding area
@@ -3619,20 +3648,6 @@ Kertau 1968
 
 Not used for metrication of RSO grid - see Kertau (RSO) (CRS code 4751). Replaced by GDM2000 (CRS code 4742).
 
-Korea 2000
-----------
-| Extent: Republic of Korea (South Korea) - onshore and offshore
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_KOREA_2000)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4737')
-    Geographic::fromSRID(Geographic2D::EPSG_KOREA_2000)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4737')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_KOREA_2000)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4737')
-
-
 Korean 1985
 -----------
 | Extent: Republic of Korea (South Korea) - onshore
@@ -3646,7 +3661,7 @@ Korean 1985
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_KOREAN_1985)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4162')
 
-Replaces use of Tokyo datum.
+Replaces use of Tokyo datum. Replaced by KGD2002.
 
 Korean 1995
 -----------
@@ -4893,7 +4908,22 @@ NAD83(CSRS)v7
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8255')
 
-Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.
+Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8. Longitudes are POSITIVE EAST.
+
+NAD83(CSRS)v8
+-------------
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V8)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10414')
+    Geographic::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V8)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10414')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V8)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10414')
+
+Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7. Longitudes are POSITIVE EAST.
 
 NAD83(CSRS96)
 -------------

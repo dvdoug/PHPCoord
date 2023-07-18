@@ -315,7 +315,7 @@
 6734	Tristan 1968		International 1924	Greenwich	St Helena - Tristan da Cunha
 6735	Kusaie 1951		International 1924	Greenwich	Micronesia - Kosrae (Kusaie)
 6736	Deception Island		Clarke 1880 (RGS)	Greenwich	Antarctica - Deception Island
-6737	Geocentric datum of Korea	Korea 2000	GRS 1980	Greenwich	Korea; Republic of (South Korea)
+6737	Korean Geodetic Datum 2002	Korea 2000	GRS 1980	Greenwich	Korea; Republic of (South Korea)
 6738	Hong Kong 1963	HK63	Clarke 1858	Greenwich	China - Hong Kong
 6739	Hong Kong 1963(67)	HK63(67)	International 1924	Greenwich	China - Hong Kong
 6740	Parametry Zemli 1990	PZ-90	PZ-90	Greenwich	World

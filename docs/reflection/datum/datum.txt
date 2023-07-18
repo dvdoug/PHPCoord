@@ -952,6 +952,20 @@ Defined through the application of the CNH22 NTv2 transformation to ETRS89 as re
 
 Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CNH22 Snake map projection.
 
+COV23 Intermediate Reference Frame
+----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_COV23_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1366')
+
+Defined through the application of the COV23 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2023 to support intermediate CRS COV23-IRF in the emulation of the COV23 Snake map projection.
+
 CR-SIRGAS
 ---------
 | Type: Geodetic
@@ -1008,17 +1022,17 @@ Mean Sea Level at Cagliari 1955-1957.
 
 Orthometric heights.
 
-Cais da Figueirinha - Angra do Heroismo
----------------------------------------
+Cais da Figueirinha
+-------------------
 | Type: Vertical
 | Extent: Portugal - central Azores - Terceira island onshore
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_CAIS_DA_FIGUEIRINHA_ANGRA_DO_HEROISMO)
+    Datum::fromSRID(Datum::EPSG_CAIS_DA_FIGUEIRINHA)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1107')
 
-Mean Sea Level during 1951 at Cais da Figueirinha - Angra do Heroísmo.
+Mean Sea Level during 1951 at Cais da Figueirinha, Angra do Heroísmo.
 
 Orthometric heights.
 
@@ -1036,28 +1050,28 @@ Mean Sea Level during 1937 at Cais da Madalena.
 
 Orthometric heights.
 
-Cais da Pontinha - Funchal
---------------------------
+Cais da Pontinha
+----------------
 | Type: Vertical
 | Extent: Portugal - Madeira and Desertas islands - onshore
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_CAIS_DA_PONTINHA_FUNCHAL)
+    Datum::fromSRID(Datum::EPSG_CAIS_DA_PONTINHA)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1101')
 
 Mean Sea Level during 1913 at Cais da Pontinha, Funchal.
 
 Orthometric heights.
 
-Cais da Vila - Porto Santo
---------------------------
+Cais da Vila
+------------
 | Type: Vertical
 | Extent: Portugal - Porto Santo island (Madeira archipelago) onshore
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_CAIS_DA_VILA_PORTO_SANTO)
+    Datum::fromSRID(Datum::EPSG_CAIS_DA_VILA)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1102')
 
 Mean Sea Level during 1936 at Cais da Vila, Porto Santo.
@@ -1357,6 +1371,20 @@ Ceuta 2
 Mean Sea Level at Ceuta harbour between March 1944 and December 2006.
 
 Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measured between 1908 and 1927.
+
+Chart Datum Portugal
+--------------------
+| Type: Vertical
+| Extent: Portugal - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CHART_DATUM_PORTUGAL)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1361')
+
+ZH is located below the level of the Lowest Astronomical Tide (LAT).
+
+.
 
 Chart Datum UK & Ireland VORF08
 -------------------------------
@@ -2956,18 +2984,6 @@ Geocentric Datum of Australia 2020
 
 ITRF2014 at epoch 2020.0.
 
-Geocentric datum of Korea
--------------------------
-| Type: Geodetic
-| Extent: Republic of Korea (South Korea) - onshore and offshore
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_KOREA)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::6737')
-
-ITRF2000 at epoch 2002.0.
-
 Geodetic Datum of 1965
 ----------------------
 | Type: Geodetic
@@ -4053,18 +4069,6 @@ Mean Sea Level at Ibiza harbour between January 2003 and December 2005.
 
 Orthometric heights.
 
-Incheon
--------
-| Type: Vertical
-| Extent: Republic of Korea (South Korea) - mainland onshore
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_INCHEON)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::1049')
-
-MSL 1913-1916 at Incheon Bay.
-
 Indian 1954
 -----------
 | Type: Geodetic
@@ -4924,7 +4928,7 @@ Korean Datum 1985
 
 Fundamental point: Suwon. Latitude 37°16'31.9034"N, longitude 127°03'05.1451"E of Greenwich. This is consistent with the Tokyo 1918 datum latitude and longitude.
 
-Replaces Tokyo 1918 (datum code 6301). Replaced by Korea 2000 (datum code 6737).
+Replaces Tokyo 1918 (datum code 6301). Replaced by KGD2002 (datum code 6737).
 
 Korean Datum 1995
 -----------------
@@ -4936,6 +4940,32 @@ Korean Datum 1995
     Datum::fromSRID(Datum::EPSG_KOREAN_DATUM_1995)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6166')
 
+
+Korean Geodetic Datum 2002
+--------------------------
+| Type: Geodetic
+| Extent: Republic of Korea (South Korea) - onshore and offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_KOREAN_GEODETIC_DATUM_2002)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::6737')
+
+ITRF2000 at epoch 2002.0.
+
+KGD2002 is geocentric.
+
+Korean Vertical Datum 1964
+--------------------------
+| Type: Vertical
+| Extent: Republic of Korea (South Korea) - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_KOREAN_VERTICAL_DATUM_1964)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1049')
+
+MSL 1913-1916 at Incheon Bay for mainland. For far offshore islands the MSL is determined through a local tide gauge.
 
 Kosovo Reference System 2001
 ----------------------------
@@ -5484,7 +5514,7 @@ The lowest tide level which can be predicted to occur under average meteorologic
 Lowest Astronomical Tide Netherlands
 ------------------------------------
 | Type: Vertical
-| Extent: Netherlands - offshore North Sea
+| Extent: Netherlands - offshore North Sea and nearshore
 
 .. code-block:: php
 
@@ -6154,7 +6184,7 @@ The average height of the surface of the sea at a tide station for all stages of
 Mean Sea Level Netherlands
 --------------------------
 | Type: Vertical
-| Extent: Netherlands - offshore North Sea
+| Extent: Netherlands - offshore North Sea and nearshore
 
 .. code-block:: php
 
@@ -7172,7 +7202,21 @@ North American Datum of 1983 (CSRS) version 7
 
 Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
-Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6.
+Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.
+
+North American Datum of 1983 (CSRS) version 8
+---------------------------------------------
+| Type: Geodetic
+| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_8)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1365')
+
+Defined at reference epoch 2010.0 by a transformation from ITRF2020 (see transformation code 10415). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+
+Published 2022-11-27; adopted by the Canadian federal government (2023). Replaces NAD83(CSRS)v7.
 
 North American Datum of 1983 (CSRS96)
 -------------------------------------

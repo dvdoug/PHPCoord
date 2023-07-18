@@ -284,7 +284,7 @@ trait Geographic3DSRIDData
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4927' => [
-            'name' => 'Korea 2000',
+            'name' => 'KGD2002',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4926',
             'datum' => 'urn:ogc:def:datum:EPSG::6737',
@@ -1481,7 +1481,7 @@ trait Geographic3DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Longitudes are POSITIVE EAST.',
+            'help' => 'Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8. Longitudes are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::8399' => [
             'name' => 'ETRF2005',
@@ -2132,6 +2132,16 @@ trait Geographic3DSRIDData
             'extent_name' => 'Bosnia and Herzegovina',
             'extent_description' => 'Bosnia and Herzegovina',
             'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10413' => [
+            'name' => 'NAD83(CSRS)v8',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10412',
+            'datum' => 'urn:ogc:def:datum:EPSG::1365',
+            'extent' => ['urn:ogc:def:area:EPSG::1061'],
+            'extent_name' => 'Canada',
+            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
+            'help' => 'Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7. Longitudes are POSITIVE EAST.',
         ],
         'urn:ogc:def:crs:EPSG::20040' => [
             'name' => 'SIRGAS-Chile 2021',

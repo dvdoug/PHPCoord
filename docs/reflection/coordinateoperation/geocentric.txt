@@ -5756,19 +5756,19 @@ to NAD83(CSRS)v7 (Geocentric)
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7),
             xAxisTranslation: new Metre(1.0053),
-            yAxisTranslation: new Metre(-1.9092),
-            zAxisTranslation: new Metre(-0.5416),
-            xAxisRotation: new ArcSecond(-0.0267814),
-            yAxisRotation: new ArcSecond(0.0004203),
-            zAxisRotation: new ArcSecond(-0.0109321),
-            scaleDifference: new PartsPerBillion(0.37),
-            rateOfChangeOfXAxisTranslation: new Rate(new Metre(0.0008), new Year(1)),
+            yAxisTranslation: new Metre(-1.90921),
+            zAxisTranslation: new Metre(-0.54157),
+            xAxisRotation: new ArcSecond(-0.02678138),
+            yAxisRotation: new ArcSecond(0.00042027),
+            zAxisRotation: new ArcSecond(-0.01093206),
+            scaleDifference: new PartsPerBillion(0.36891),
+            rateOfChangeOfXAxisTranslation: new Rate(new Metre(0.00079), new Year(1)),
             rateOfChangeOfYAxisTranslation: new Rate(new Metre(-0.0006), new Year(1)),
-            rateOfChangeOfZAxisTranslation: new Rate(new Metre(-0.0014), new Year(1)),
-            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-6.67E-5), new Year(1)),
-            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.0007574), new Year(1)),
-            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(5.13E-5), new Year(1)),
-            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.07), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Metre(-0.00144), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-6.667E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.00075744), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(5.133E-5), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.07201), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
         )
 
@@ -6374,6 +6374,38 @@ to NAD83(2011) (Geocentric)
             rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(6.667E-5), new Year(1)),
             rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.00075744), new Year(1)),
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-5.133E-5), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.07201), new Year(1)),
+            parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to NAD83(CSRS)v8 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to NAD83(CSRS)v8 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10415``
+    | Extent: Canada",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8),
+            xAxisTranslation: new Metre(1.0039),
+            yAxisTranslation: new Metre(-1.90961),
+            zAxisTranslation: new Metre(-0.54117),
+            xAxisRotation: new ArcSecond(-0.02678138),
+            yAxisRotation: new ArcSecond(0.00042027),
+            zAxisRotation: new ArcSecond(-0.01093206),
+            scaleDifference: new PartsPerBillion(-0.05109),
+            rateOfChangeOfXAxisTranslation: new Rate(new Metre(0.00079), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Metre(-0.0007), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Metre(-0.00124), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-6.667E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.00075744), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(5.133E-5), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.07201), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
         )
@@ -8719,6 +8751,26 @@ to JGD2011 (Geographic3D)
 
     "
 
+KGD2002
+-------
+``Geocentric::fromSRID(Geocentric::EPSG_KGD2002)``
+
+to KGD2002 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_KGD2002)
+        )
+
+    "
+
 KOSOVAREF01
 -----------
 ``Geocentric::fromSRID(Geocentric::EPSG_KOSOVAREF01)``
@@ -8787,26 +8839,6 @@ to KSA-GRF17 (Geographic3D)
 
         $point->geographicGeocentric(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_KSA_GRF17)
-        )
-
-    "
-
-Korea 2000
-----------
-``Geocentric::fromSRID(Geocentric::EPSG_KOREA_2000)``
-
-to Korea 2000 (Geographic3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. csv-table::
-    :header: "EPSG", "PHPCoord"
-    :widths: 40, 60
-
-    "| Name: geocentric to geographic3D
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
-    | Extent: World",".. code-block:: php
-
-        $point->geographicGeocentric(
-            to: Geographic3D::fromSRID(Geographic3D::EPSG_KOREA_2000)
         )
 
     "
@@ -9360,6 +9392,56 @@ to NAD83(CSRS)v6 (Geocentric)
 
         $point->timeSpecificPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V6),
+            xAxisTranslation: new Metre(-0),
+            yAxisTranslation: new Metre(-0),
+            zAxisTranslation: new Metre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0),
+            transformationReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to NAD83(CSRS)v7 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v7 to NAD83(2011) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10416``
+    | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
+
+        $point->timeSpecificPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7),
+            xAxisTranslation: new Metre(-0),
+            yAxisTranslation: new Metre(-0),
+            zAxisTranslation: new Metre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0),
+            transformationReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to NAD83(CSRS)v8 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v8 to NAD83(2011) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10419``
+    | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
+
+        $point->timeSpecificPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
             zAxisTranslation: new Metre(-0),
@@ -9960,20 +10042,45 @@ to ITRF2014 (Geocentric)
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2014),
             xAxisTranslation: new Metre(-1.0053),
-            yAxisTranslation: new Metre(1.9092),
-            zAxisTranslation: new Metre(0.5416),
-            xAxisRotation: new ArcSecond(0.0267814),
-            yAxisRotation: new ArcSecond(-0.0004203),
-            zAxisRotation: new ArcSecond(0.0109321),
-            scaleDifference: new PartsPerBillion(-0.37),
-            rateOfChangeOfXAxisTranslation: new Rate(new Metre(-0.0008), new Year(1)),
+            yAxisTranslation: new Metre(1.90921),
+            zAxisTranslation: new Metre(0.54157),
+            xAxisRotation: new ArcSecond(0.02678138),
+            yAxisRotation: new ArcSecond(-0.00042027),
+            zAxisRotation: new ArcSecond(0.01093206),
+            scaleDifference: new PartsPerBillion(-0.36891),
+            rateOfChangeOfXAxisTranslation: new Rate(new Metre(-0.00079), new Year(1)),
             rateOfChangeOfYAxisTranslation: new Rate(new Metre(0.0006), new Year(1)),
-            rateOfChangeOfZAxisTranslation: new Rate(new Metre(0.0014), new Year(1)),
-            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(6.67E-5), new Year(1)),
-            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.0007574), new Year(1)),
-            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-5.13E-5), new Year(1)),
-            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.07), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Metre(0.00144), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(6.667E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.00075744), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-5.133E-5), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.07201), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to NAD83(2011) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v7 to NAD83(2011) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10416``
+    | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
+
+        $point->timeSpecificPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_2011),
+            xAxisTranslation: new Metre(0),
+            yAxisTranslation: new Metre(0),
+            zAxisTranslation: new Metre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0),
+            transformationReferenceEpoch: new Year(2010)
         )
 
     "
@@ -9991,6 +10098,83 @@ to NAD83(CSRS)v7 (Geographic3D)
 
         $point->geographicGeocentric(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V7)
+        )
+
+    "
+
+NAD83(CSRS)v8
+-------------
+``Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8)``
+
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to NAD83(CSRS)v8 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10415``
+    | Extent: Canada",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Metre(-1.0039),
+            yAxisTranslation: new Metre(1.90961),
+            zAxisTranslation: new Metre(0.54117),
+            xAxisRotation: new ArcSecond(0.02678138),
+            yAxisRotation: new ArcSecond(-0.00042027),
+            zAxisRotation: new ArcSecond(0.01093206),
+            scaleDifference: new PartsPerBillion(0.05109),
+            rateOfChangeOfXAxisTranslation: new Rate(new Metre(-0.00079), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Metre(0.0007), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Metre(0.00124), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(6.667E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.00075744), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-5.133E-5), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.07201), new Year(1)),
+            parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to NAD83(2011) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v8 to NAD83(2011) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10419``
+    | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
+
+        $point->timeSpecificPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_2011),
+            xAxisTranslation: new Metre(0),
+            yAxisTranslation: new Metre(0),
+            zAxisTranslation: new Metre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0),
+            transformationReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to NAD83(CSRS)v8 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V8)
         )
 
     "

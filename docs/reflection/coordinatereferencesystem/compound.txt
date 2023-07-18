@@ -94,6 +94,18 @@ CNH22 Grid + ODN height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10195')
 
 
+COV23 Grid + ODN height
+-----------------------
+| Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_COV23_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10472')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_COV23_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10472')
+
+
 CR-SIRGAS / CRTM05 + DACR52 height
 ----------------------------------
 | Extent: Costa Rica - onshore
@@ -601,7 +613,7 @@ ETRS89 + Ibiza height
 
 ETRS89 + LAT NL depth
 ---------------------
-| Extent: Netherlands - offshore North Sea
+| Extent: Netherlands - offshore North Sea and nearshore
 
 .. code-block:: php
 
@@ -625,7 +637,7 @@ ETRS89 + Lerwick height
 
 ETRS89 + MSL NL depth
 ---------------------
-| Extent: Netherlands - offshore North Sea
+| Extent: Netherlands - offshore North Sea and nearshore
 
 .. code-block:: php
 
@@ -2288,6 +2300,18 @@ JGD2011 / Japan Plane Rectangular CS XIII + JGD2011 (vertical) height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::10174')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10174')
+
+
+KGD2002 + KVD1964 height
+------------------------
+| Extent: Republic of Korea (South Korea) - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_KGD2002_PLUS_KVD1964_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10365')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_KGD2002_PLUS_KVD1964_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10365')
 
 
 KKJ / Finland Uniform Coordinate System + N60 height

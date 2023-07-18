@@ -905,9 +905,422 @@ to CGVD2013a(2010) height (Vertical)
 
     "
 
+Cais da Figueirinha depth
+-------------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_DEPTH)``
+
+to Cais da Figueirinha height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Figueirinha depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10389``
+    | Extent: Portugal - Azores C - Terceira - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Cais da Figueirinha height
+--------------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT)``
+
+to Cais da Figueirinha depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_DEPTH)
+        )
+
+    "
+
+Cais da Madalena depth
+----------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_DEPTH)``
+
+to Cais da Madalena height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Madalena depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10386``
+    | Extent: Portugal - Azores C - Pico nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Cais da Madalena height
+-----------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_HEIGHT)``
+
+to Cais da Madalena depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_DEPTH)
+        )
+
+    "
+
+Cais da Pontinha depth
+----------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_DEPTH)``
+
+to Cais da Pontinha height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Pontinha depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10382``
+    | Extent: Portugal - Madeira and Desertas islands - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1.4)
+        )
+
+    "
+
+Cais da Pontinha height
+-----------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_HEIGHT)``
+
+to Cais da Pontinha depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_DEPTH)
+        )
+
+    "
+
+Cais da Vila depth
+------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DEPTH)``
+
+to Cais da Vila height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Vila depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10383``
+    | Extent: Portugal - Porto Santo island - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1.4)
+        )
+
+    "
+
+Cais da Vila do Porto depth
+---------------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_DEPTH)``
+
+to Cais da Vila do Porto height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Vila do Porto depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10391``
+    | Extent: Portugal - Azores E - Santa Maria and Formigas - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Cais da Vila do Porto height
+----------------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_HEIGHT)``
+
+to Cais da Vila do Porto depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_DEPTH)
+        )
+
+    "
+
+Cais da Vila height
+-------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_HEIGHT)``
+
+to Cais da Vila depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DEPTH)
+        )
+
+    "
+
+Cais das Velas depth
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_DEPTH)``
+
+to Cais das Velas height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais das Velas depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10387``
+    | Extent: Portugal - Azores C - S Jorge - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Cais das Velas height
+---------------------
+``Vertical::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_HEIGHT)``
+
+to Cais das Velas depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_DEPTH)
+        )
+
+    "
+
+Cascais depth
+-------------
+``Vertical::fromSRID(Vertical::EPSG_CASCAIS_DEPTH)``
+
+to Cascais height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CASCAIS_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cascais depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10380``
+    | Extent: Portugal - mainland - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-2)
+        )
+
+    "
+    "| Name: Cascais depth to ZH Portugal depth (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10381``
+    | Extent: Portugal - mainland - nearshore - Tagus estuary",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-2.08)
+        )
+
+    "
+
 Cascais height
 --------------
 ``Vertical::fromSRID(Vertical::EPSG_CASCAIS_HEIGHT)``
+
+to Cascais depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_CASCAIS_DEPTH)
+        )
+
+    "
+
 
 to EVRF2000 height (Vertical)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2895,6 +3308,64 @@ to EVRF2007 height (Vertical)
 
     "
 
+Horta depth
+-----------
+``Vertical::fromSRID(Vertical::EPSG_HORTA_DEPTH)``
+
+to Horta height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_HORTA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Horta depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10385``
+    | Extent: Portugal - Azores C - Faial - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Horta height
+------------
+``Vertical::fromSRID(Vertical::EPSG_HORTA_HEIGHT)``
+
+to Horta depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_HORTA_DEPTH)
+        )
+
+    "
+
 Instantaneous Water Level depth
 -------------------------------
 ``Vertical::fromSRID(Vertical::EPSG_INSTANTANEOUS_WATER_LEVEL_DEPTH)``
@@ -4709,6 +5180,64 @@ to EGM96 height (Vertical)
 
     "
 
+Ponta Delgada depth
+-------------------
+``Vertical::fromSRID(Vertical::EPSG_PONTA_DELGADA_DEPTH)``
+
+to Ponta Delgada height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_PONTA_DELGADA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Ponta Delgada depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10390``
+    | Extent: Portugal - Azores E - S Miguel - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Ponta Delgada height
+--------------------
+``Vertical::fromSRID(Vertical::EPSG_PONTA_DELGADA_HEIGHT)``
+
+to Ponta Delgada depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_PONTA_DELGADA_DEPTH)
+        )
+
+    "
+
 Poolbeg height (ft(Br36))
 -------------------------
 ``Vertical::fromSRID(Vertical::EPSG_POOLBEG_HEIGHT_FT_BR36)``
@@ -4889,6 +5418,122 @@ to EVRF2000 height (Vertical)
 
     "
 
+Santa Cruz da Graciosa depth
+----------------------------
+``Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_DEPTH)``
+
+to Santa Cruz da Graciosa height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Santa Cruz da Graciosa depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10388``
+    | Extent: Portugal - Azores C - Graciosa - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Santa Cruz da Graciosa height
+-----------------------------
+``Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_HEIGHT)``
+
+to Santa Cruz da Graciosa depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_DEPTH)
+        )
+
+    "
+
+Santa Cruz das Flores depth
+---------------------------
+``Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_DEPTH)``
+
+to Santa Cruz das Flores height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_HEIGHT)
+        )
+
+    "
+
+
+to ZH Portugal depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Santa Cruz das Flores depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10384``
+    | Extent: Portugal - Azores W - Flores, Corvo - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH),
+            verticalOffset: new Metre(-1)
+        )
+
+    "
+
+Santa Cruz das Flores height
+----------------------------
+``Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_HEIGHT)``
+
+to Santa Cruz das Flores depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Height <> Depth Conversion
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::7812``
+    | Extent: World",".. code-block:: php
+
+        $point->heightDepthReversal(
+            to: Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_DEPTH)
+        )
+
+    "
+
 Stewart Island 1977 height
 --------------------------
 ``Vertical::fromSRID(Vertical::EPSG_STEWART_ISLAND_1977_HEIGHT)``
@@ -5023,6 +5668,217 @@ to NZVD2016 height (Vertical)
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT),
             offsetsFile: GTXWellington1953NZVD2016Provider->provideGrid()
+        )
+
+    "
+
+ZH Portugal depth
+-----------------
+``Vertical::fromSRID(Vertical::EPSG_ZH_PORTUGAL_DEPTH)``
+
+to Cais da Figueirinha depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Figueirinha depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10389``
+    | Extent: Portugal - Azores C - Terceira - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_FIGUEIRINHA_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Cais da Madalena depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Madalena depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10386``
+    | Extent: Portugal - Azores C - Pico nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_MADALENA_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Cais da Pontinha depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Pontinha depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10382``
+    | Extent: Portugal - Madeira and Desertas islands - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_PONTINHA_DEPTH),
+            verticalOffset: new Metre(1.4)
+        )
+
+    "
+
+
+to Cais da Vila depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Vila depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10383``
+    | Extent: Portugal - Porto Santo island - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DEPTH),
+            verticalOffset: new Metre(1.4)
+        )
+
+    "
+
+
+to Cais da Vila do Porto depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais da Vila do Porto depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10391``
+    | Extent: Portugal - Azores E - Santa Maria and Formigas - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DA_VILA_DO_PORTO_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Cais das Velas depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cais das Velas depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10387``
+    | Extent: Portugal - Azores C - S Jorge - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CAIS_DAS_VELAS_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Cascais depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Cascais depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10380``
+    | Extent: Portugal - mainland - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CASCAIS_DEPTH),
+            verticalOffset: new Metre(2)
+        )
+
+    "
+    "| Name: Cascais depth to ZH Portugal depth (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10381``
+    | Extent: Portugal - mainland - nearshore - Tagus estuary",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_CASCAIS_DEPTH),
+            verticalOffset: new Metre(2.08)
+        )
+
+    "
+
+
+to Horta depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Horta depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10385``
+    | Extent: Portugal - Azores C - Faial - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_HORTA_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Ponta Delgada depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Ponta Delgada depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10390``
+    | Extent: Portugal - Azores E - S Miguel - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_PONTA_DELGADA_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Santa Cruz da Graciosa depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Santa Cruz da Graciosa depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10388``
+    | Extent: Portugal - Azores C - Graciosa - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DA_GRACIOSA_DEPTH),
+            verticalOffset: new Metre(1)
+        )
+
+    "
+
+
+to Santa Cruz das Flores depth (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Santa Cruz das Flores depth to ZH Portugal depth (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10384``
+    | Extent: Portugal - Azores W - Flores, Corvo - nearshore",".. code-block:: php
+
+        $point->offset(
+            to: Vertical::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_DEPTH),
+            verticalOffset: new Metre(1)
         )
 
     "

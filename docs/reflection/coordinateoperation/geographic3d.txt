@@ -2691,6 +2691,26 @@ to JGD2011 (Geographic2D)
 
     "
 
+KGD2002
+-------
+``Geographic3D::fromSRID(Geographic3D::EPSG_KGD2002)``
+
+to KGD2002 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_KGD2002)
+        )
+
+    "
+
 KOSOVAREF01
 -----------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_KOSOVAREF01)``
@@ -2727,26 +2747,6 @@ to KSA-GRF17 (Geographic2D)
 
         $point->threeDToTwoD(
             to: Geographic2D::fromSRID(Geographic2D::EPSG_KSA_GRF17)
-        )
-
-    "
-
-Korea 2000
-----------
-``Geographic3D::fromSRID(Geographic3D::EPSG_KOREA_2000)``
-
-to Korea 2000 (Geographic2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. csv-table::
-    :header: "EPSG", "PHPCoord"
-    :widths: 40, 60
-
-    "| Name: geographic3D to geographic2D
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
-    | Extent: World",".. code-block:: php
-
-        $point->threeDToTwoD(
-            to: Geographic2D::fromSRID(Geographic2D::EPSG_KOREA_2000)
         )
 
     "
@@ -3767,6 +3767,62 @@ to NAD83(CSRS)v7 (Geographic2D)
 
         $point->threeDToTwoD(
             to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V7)
+        )
+
+    "
+
+NAD83(CSRS)v8
+-------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V8)``
+
+to CGVD2013a(2010) height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v8 to CGVD2013a(2010) height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10417``
+    | Extent: Canada",".. code-block:: php
+
+        $point->geographic3DToGravityHeightFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT),
+            geoidHeightCorrectionModelFile: BYNNAD83CSRSCGG2013aProvider->provideGrid()
+        )
+
+    "
+
+
+to CGVD28 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v8 to CGVD28 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10418``
+    | Extent: Canada - CGVD28",".. code-block:: php
+
+        $point->geographic3DToGravityHeightFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
+            geoidHeightCorrectionModelFile: BYNNAD83CSRS2010CGVD28Provider->provideGrid()
+        )
+
+    "
+
+
+to NAD83(CSRS)v8 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V8)
         )
 
     "

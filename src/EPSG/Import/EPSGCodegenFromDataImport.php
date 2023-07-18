@@ -102,6 +102,14 @@ class EPSGCodegenFromDataImport
         // Not available for download
         9634, // Maritime Provinces polynomial interpolation
 
+        // exclusively marine
+        1109, // Geographic3D to Depth (Gravsoft)
+        1121, // Geographic3D to Depth (gtx)
+        1116, // Geographic3D to Depth (txt)
+        1110, // Geog3D to Geog2D+Depth (Gravsoft)
+        1122, // Geog3D to Geog2D+Depth (gtx)
+        1115, // Geog3D to Geog2D+Depth (txt)
+
         // free, but license does not permit redistribution
         1050, // Geographic3D to GravityRelatedHeight (CI)
         1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
@@ -509,10 +517,6 @@ class EPSGCodegenFromDataImport
         // It's just for 1 German state and is almost 400Mb!!
         9338, // NTv2 BWTA2017.gsb
 
-        // exclusively marine
-        10130, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021b.bin
-        10133, // KMS ChartDatum_above_Ellipsoid_EUREF89_v2021b.bin
-
         // Very large, only really of scientific use
         3858, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
         3859, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
@@ -542,6 +546,8 @@ class EPSGCodegenFromDataImport
         10319, // RANC15.tac inside Circe-NC allegedly, but I can't get it out
         10320, // RANC15.tac inside Circe-NC allegedly, but I can't get it out
         10322, // gr3dncl08.tac inside Circe-NC allegedly, but I can't get it out
+        10368, // KNGeoid18.gri
+        10369, // KNGeoid18.gri
 
         // Construction/engineering/scientific projects not of general use
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
@@ -975,6 +981,11 @@ class EPSGCodegenFromDataImport
                 Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 => ['Canadian Geodetic Vertical Datum of 2013 (CGG2013a)'],
                 Datum::EPSG_INDONESIAN_GEOID_2020_VERSION_1 => ['Indonesian Geoid 2020'],
                 Datum::EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992 => ['Latvia 1992'],
+                Datum::EPSG_KOREAN_VERTICAL_DATUM_1964 => ['Incheon'],
+                Datum::EPSG_KOREAN_GEODETIC_DATUM_2002 => ['Geocentric datum of Korea'],
+                Datum::EPSG_CAIS_DA_FIGUEIRINHA => ['Cais da Figueirinha - Angra do Heroismo'],
+                Datum::EPSG_CAIS_DA_PONTINHA => ['Cais da Pontinha - Funchal'],
+                Datum::EPSG_CAIS_DA_VILA => ['Cais da Vila - Porto Santo'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -1274,6 +1285,7 @@ class EPSGCodegenFromDataImport
             'public',
             [
                 Geocentric::EPSG_LKS_92 => ['LKS92'],
+                Geocentric::EPSG_KGD2002 => ['Korea 2000'],
             ]
         );
         $this->codeGen->updateDocs(Geocentric::class, $data);
@@ -1323,6 +1335,7 @@ class EPSGCodegenFromDataImport
             [
                 Geographic2D::EPSG_LUREF => ['Luxembourg 1930'],
                 Geographic2D::EPSG_LKS_92 => ['LKS92'],
+                Geographic2D::EPSG_KGD2002 => ['Korea 2000'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1371,6 +1384,7 @@ class EPSGCodegenFromDataImport
             'public',
             [
                 Geographic3D::EPSG_LKS_92 => ['LKS92'],
+                Geographic3D::EPSG_KGD2002 => ['Korea 2000'],
             ]
         );
         $this->codeGen->updateDocs(Geographic3D::class, $data);
@@ -1424,6 +1438,16 @@ class EPSGCodegenFromDataImport
                 Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS => ['NAD83(CSRS) / Quebec Albers'],
                 Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT => ['NAD83(CSRS) / Quebec Lambert'],
                 Projected::EPSG_LKS_92_LATVIA_TM => ['LKS92 / Latvia TM'],
+                Projected::EPSG_KGD2002_CENTRAL_BELT => ['Korea 2000 / Central Belt'],
+                Projected::EPSG_KGD2002_CENTRAL_BELT_2010 => ['Korea 2000 / Central Belt 2010'],
+                Projected::EPSG_KGD2002_CENTRAL_BELT_JEJU => ['Korea 2000 / Central Belt Jeju'],
+                Projected::EPSG_KGD2002_EAST_BELT => ['Korea 2000 / East Belt'],
+                Projected::EPSG_KGD2002_EAST_BELT_2010 => ['Korea 2000 / East Belt 2010'],
+                Projected::EPSG_KGD2002_EAST_SEA_BELT => ['Korea 2000 / East Sea Belt'],
+                Projected::EPSG_KGD2002_EAST_SEA_BELT_2010 => ['Korea 2000 / East Sea Belt 2010'],
+                Projected::EPSG_KGD2002_UNIFIED_CS => ['Korea 2000 / Unified CS'],
+                Projected::EPSG_KGD2002_WEST_BELT => ['Korea 2000 / West Belt'],
+                Projected::EPSG_KGD2002_WEST_BELT_2010 => ['Korea 2000 / West Belt 2010'],
             ]
         );
         $this->codeGen->updateDocs(Projected::class, $data);
@@ -1474,6 +1498,10 @@ class EPSGCodegenFromDataImport
                 Vertical::EPSG_NG95_HEIGHT => ['NG-L height'],
                 Vertical::EPSG_CGVD2013A_2010_HEIGHT => ['CGVD2013(CGG2013a) height'],
                 Vertical::EPSG_INAGEOID2020_V1_HEIGHT => ['INAGeoid2020 height'],
+                Vertical::EPSG_KVD1964_HEIGHT => ['Incheon height'],
+                Vertical::EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT => ['Cais da Figueirinha - Angra do Heroismo height'],
+                Vertical::EPSG_CAIS_DA_PONTINHA_HEIGHT => ['Cais da Pontinha - Funchal height'],
+                Vertical::EPSG_CAIS_DA_VILA_HEIGHT => ['Cais da Vila - Porto Santo height'],
             ]
         );
         $this->codeGen->updateDocs(Vertical::class, $data);
