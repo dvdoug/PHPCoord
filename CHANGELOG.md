@@ -7,9 +7,11 @@
 ## [5.5.0] - 2023-07-07
 ### Added
 - Support for Lambert Cylindrical Equal Area (Spherical) projection
+
 ### Changed
 - Infer a current epoch when doing time-dependant transforms and no explicit epoch is supplied
 - Updates to data for Polar regions, Algeria and Spain
+
 ### Deprecated
 - The namespace of all `*Point` classes have been tidied up and changed to from `PHPCoord` to `PHPCoord\Point` e.g. 
   `PHPCoord\GeographicPoint` is now `PHPCoord\Point\GeographicPoint`. An alias has been provided, all existing
@@ -19,6 +21,7 @@
 ### Added
 - Added `getSupportedSRIDsWithHelp()` as a version of `getSupportedSRIDs()` that returns at runtime the inline help
   available within the source code
+
 ### Changed
 - Updates to data for Algeria, Bosnia and Herzegovina, Denmark, Germany, Latvia and USA
 
@@ -29,14 +32,17 @@
 ## [5.3.0] - 2023-02-19
 ### Added
 - Support for converting coordinates from a `CompoundPoint` where the horizontal component is `Projected` to a 3D CRS
+
 ### Changed
 - Updates to data for ETRS89, Colombia, Slovenia, USA and UK
+
 ### Fixed
 - Don't use 2D CRS as intermediate in a chain when converting from/to a 3D CRS
 
 ## [5.2.0] - 2023-01-08
 ### Changed
 - Updates to data for IGS, Japan and UK
+
 ### Fixed
 - Improved handling of extent polygon buffering involving complex shapes (e.g. Netherlands)
 - Fixed longitude wraparound issue with GTX grids
@@ -45,9 +51,11 @@
 ### Added
 - Support for 3D projected coordinates
 - Support for custom coordinate reference systems and custom conversions
+
 ### Changed
 - Updates to data for ITRF, WGS84, Australia, Belgium, Canada, France, Germany, Iceland, Indonesia, Ireland, Japan, Luxembourg, Norway, North Macedonia, UK and USA
 - Some internal simplifications and optimisations
+
 ### Fixed
 - Improved handling of longitudes greater than 180 degrees
 - Corrected conversion of geocentric coordinates to geographic coordinates when using a non-Greenwich prime meridian
@@ -60,6 +68,7 @@
 ### Added
 - Support for IGN France geocentric translation by grid interpolation. This requires the [Europe datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
 - Support for vertical grid files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
+
 ### Changed
 - The signatures of all `*Point::create*()` methods have been changed to put the CRS *first*. Previously the distance/direction values came first. This is to ensure that all optional parameters are at the end of the signature, addressing a PHP8.1 deprecation.
 
@@ -113,6 +122,7 @@ required a significant non-backwards compatible change to address.
 ### Changed
  - Updates to data for Papua New Guinea, Ukraine and WGS84
  - Some internal simplifications and optimisations
+
 ### Fixed
  - Corrected the decoding of sexagesimal DMS degree fractional components
 
@@ -120,8 +130,10 @@ required a significant non-backwards compatible change to address.
 ### Changed
  - Updates to data for Canada, Costa Rica, France, French Southern Territories, Kyrgistan, Liechtenstein, Poland, Russia, Switzerland, Tonga, UK, USA, Wallis and Futuna
  - Many internal simplifications and optimisations, leading to faster conversions and a corresponding update of the maximum chain depth from 5 to 7
+
 ### Fixed
  - _Some_ PHP8.1 deprecations
+
 ### Deprecated
  - `Compound::EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT`, use `Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT` instead
  - `Compound::EPSG_RGF93_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT`, use `Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT` instead
@@ -151,10 +163,12 @@ required a significant non-backwards compatible change to address.
 ## [4.4.0] - 2021-06-24
 ### Added
  - Support for NTv2, OSTN15/OSGM15 and NADCON5 grid files. These require a [relevant datapack](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#grids)
+
 ### Changed
  - Updates to data for Argentina, Belgium, Canada, Costa Rica, Czechia, Greenland, Italy, Russia, UK and USA
  - Performance optimisations
  - Supported PHP versions changed to `^7.4||^8.0`
+
 ### Deprecated
  - `Compound::EPSG_BELGE_1972_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT`, use `Compound::EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT` instead
  - `Geographic2D::EPSG_BELGE_1950`, use `Geographic2D::EPSG_BD50` instead
@@ -169,16 +183,20 @@ required a significant non-backwards compatible change to address.
 ## [4.3.0] - 2021-04-24
 ### Added
  - Datapacks. [See docs](https://www.phpcoord.net/en/stable/coordinate_conversions_easy.html#accuracy) for more info
+
 ### Changed
  - Updates to data for Canada
 
 ## [4.2.0] - 2021-04-19
 ### Added
  - More accurate extent data
+
 ### Fixed
  - Ensure projections still work even when origin points are on the other side of the antimeridian
+
 ### Changed
  - Updates to data for Australia, Poland, UK and US Gulf of Mexico
+
 ### Deprecated
  - `Compound::EPSG_OSGB_1936_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT`, use `Compound::EPSG_OSGB36_BRITISH_NATIONAL_GRID_PLUS_ODN_HEIGHT` instead
  - `Geographic2D::EPSG_OSGB_1936`, use `Geographic2D::EPSG_OSGB36` instead
@@ -194,6 +212,7 @@ required a significant non-backwards compatible change to address.
 ### Added
  - Added `UTMPoint` as a better way of handling UTM zones than the EPSG model does it
 - Improved conversion chaining for `CompoundPoint`s
+
 ### Changed
   - Moved `verticalOffsetAndSlope` method from `CompoundPoint` to `VerticalPoint`. This is technically a breaking change, but since the code is only 2 days old shouldn't affect anyone.
 
@@ -209,6 +228,7 @@ required a significant non-backwards compatible change to address.
 ## [4.0.0beta1] - 2021-01-05
 ### Added
  - 6200+ new coordinate systems.
+
 ### Changed
  - Project reimplemented from scratch. License changed from GPL to MIT.
 
@@ -228,10 +248,12 @@ required a significant non-backwards compatible change to address.
 ## [3.0.0] - 2019-04-13
 ### Added
  - Support for _accepting_ 2, 4, 8 and 10 figure Ordnance Survey references (6 figure was already supported)
+
 ### Changed
  - fromSixFigureReference
  - All value objects are now immutable - calling a conversion function on them now returns a *new* object rather than modifying the existing one  
  - Minimum PHP version is now 7.1
+
 ### Removed
  - HHVM support now that project has a stated goal of no longer targeting PHP7 compatibility
  - `OSRef::fromSixFigureReference()` has been removed, use `OSRef::fromGridReference()` instead
@@ -257,6 +279,7 @@ required a significant non-backwards compatible change to address.
 ### Added
  - 3D co-ordinates
  - Irish Grid and ITM support
+
 ### Changed
  - Major refactoring, breaks compatibility with previous API (hopefully for the better!)
 
@@ -267,6 +290,7 @@ required a significant non-backwards compatible change to address.
 ## [1.1.1] - 2014-11-19
 ### Fixed
  - Corrected bug in original code where OS 6-figure grid references were sometimes off by 1
+
 ### Changed
  - Updated Composer to use PSR-4
 
@@ -277,6 +301,7 @@ Just cleanup
 Initial release of this fork (based off of v2.3 of original)
 ### Fixed
  - When converting Latitude and Longitude between WGS84 and OSGB36 or vice-versa, a wrong constant for the y translation has been corrected (was off by 1 metre)
+
 ### Changed
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
@@ -290,7 +315,9 @@ Initial release of this fork (based off of v2.3 of original)
 [5.2.0]: https://github.com/dvdoug/PHPCoord/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/dvdoug/PHPCoord/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/dvdoug/PHPCoord/compare/v5.0.0...v5.0.1
-[5.0.0]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...v5.0.0
+[5.0.0]: https://github.com/dvdoug/PHPCoord/compare/v4.7.0...v5.0.0
+[4.7.0]: https://github.com/dvdoug/PHPCoord/compare/v4.6.1...v4.7.0
+[4.6.1]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...v4.6.1
 [4.6.0]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...v4.6.0
 [4.5.0]: https://github.com/dvdoug/PHPCoord/compare/v4.4.0...v4.5.0
 [4.4.0]: https://github.com/dvdoug/PHPCoord/compare/v4.3.0...v4.4.0

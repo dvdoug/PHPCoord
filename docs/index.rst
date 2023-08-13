@@ -61,4 +61,5 @@ See `license.txt`_ for full details.
     :maxdepth: 1
     :caption: About
 
+    changelog
     Project history <https://doug.codes/phpcoord-is-10>
