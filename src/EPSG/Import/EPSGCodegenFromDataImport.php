@@ -2101,6 +2101,7 @@ class EPSGCodegenFromDataImport
     private function addMetaDataToGeoJSON(string $geoJSONString, string $urn, string $title): string
     {
         $title = addcslashes($title, '"\\');
+
         // hack it in to get the sort ordering (up front), file will be pretty-printed later
         return preg_replace('/^{/', "{\"id\": \"{$urn}\", \"title\": \"{$title}\",", $geoJSONString);
     }
