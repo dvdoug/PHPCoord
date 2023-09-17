@@ -661,7 +661,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         do {
             $thetaN = $theta;
             $correctionFactor = ($theta * (1.340264 - 0.081106 * $theta ** 2 + $theta ** 6 * (0.000893 + 0.003796 * $theta ** 2)) - $northing / $Rq) / (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2));
-            $theta = $theta - $correctionFactor;
+            $theta -= $correctionFactor;
         } while (abs($theta - $thetaN) >= static::ITERATION_CONVERGENCE_FORMULA);
 
         $beta = self::asin(2 * sin($theta) / sqrt(3));

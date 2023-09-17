@@ -89,7 +89,7 @@ class BYNHeightGrid extends GeographicGeoidHeightGrid
         } elseif ($this->dataSize === 2 && $shift > 32767) {
             $shift -= 65535;
         }
-        $shift = $shift / $this->conversionFactor;
+        $shift /= $this->conversionFactor;
 
         return new GridValues(
             $longitudeIndex * $this->columnGridInterval + $this->startX,
