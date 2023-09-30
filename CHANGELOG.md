@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+## [5.6.0] - 2023-09-30
 ### Changed
 - Updates to data for Australia, Austria, Canada, Germany, Italy, Netherlands, Portugal, South Korea, UK and USA
 
@@ -306,8 +307,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.5.0...HEAD
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.6.0...HEAD
 
+[5.6.0]: https://github.com/dvdoug/PHPCoord/compare/v5.5.0...v5.6.0
 [5.5.0]: https://github.com/dvdoug/PHPCoord/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/dvdoug/PHPCoord/compare/v5.3.1...v5.4.0
 [5.3.1]: https://github.com/dvdoug/PHPCoord/compare/v5.3.0...v5.3.1
