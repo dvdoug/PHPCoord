@@ -2143,6 +2143,16 @@ trait Geographic3DSRIDData
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7. Longitudes are POSITIVE EAST.',
         ],
+        'urn:ogc:def:crs:EPSG::10474' => [
+            'name' => 'BBT2000',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10473',
+            'datum' => 'urn:ogc:def:datum:EPSG::1367',
+            'extent' => ['urn:ogc:def:area:EPSG::4744'],
+            'extent_name' => 'Europe - Brenner',
+            'extent_description' => 'Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)',
+            'help' => '',
+        ],
         'urn:ogc:def:crs:EPSG::20040' => [
             'name' => 'SIRGAS-Chile 2021',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6423',

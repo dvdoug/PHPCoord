@@ -38,6 +38,26 @@ to Australian Antarctic (Geographic2D)
 
     "
 
+BBT2000
+-------
+``Geographic3D::fromSRID(Geographic3D::EPSG_BBT2000)``
+
+to BBT2000 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_BBT2000)
+        )
+
+    "
+
 BDA2000
 -------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_BDA2000)``
@@ -1575,6 +1595,24 @@ ETRS89/DREF91/2016
 ------------------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_DREF91_2016)``
 
+to DHHN2016 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89/DREF91/2016 to DHHN2016 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10294``
+    | Extent: Germany",".. code-block:: php
+
+        $point->geographic3DToGravityHeightFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_DHHN2016_HEIGHT),
+            geoidHeightCorrectionModelFile: DATETRS89DHHN2016Provider->provideGrid()
+        )
+
+    "
+
+
 to ETRS89/DREF91/2016 (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -1587,6 +1625,24 @@ to ETRS89/DREF91/2016 (Geographic2D)
 
         $point->threeDToTwoD(
             to: Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+        )
+
+    "
+
+
+to ETRS89/DREF91/2016 + DHHN2016 height (Compound)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89/DREF91/2016 to ETRS89/DREF91/2016 + DHHN2016 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10295``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Compound::fromSRID(Compound::EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT),
+            geoidHeightCorrectionModelFile: DATETRS89DHHN2016Provider->provideGrid()
         )
 
     "

@@ -14013,6 +14013,20 @@ class CoordinateOperations
             'extent_name' => 'Germany',
             'extent_description' => 'Germany - onshore and offshore',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10294' => [
+            'name' => 'ETRS89/DREF91/2016 to DHHN2016 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1082',
+            'extent' => ['urn:ogc:def:area:EPSG::1103'],
+            'extent_name' => 'Germany',
+            'extent_description' => 'Germany - onshore and offshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10295' => [
+            'name' => 'ETRS89/DREF91/2016 to ETRS89/DREF91/2016 + DHHN2016 height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1098',
+            'extent' => ['urn:ogc:def:area:EPSG::3339'],
+            'extent_name' => 'Germany - onshore',
+            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10296' => [
             'name' => 'Nord Sahara 1959 to WGS 84 (11)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
@@ -14565,6 +14579,27 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::4743'],
             'extent_name' => 'UK - Coventry',
             'extent_description' => 'United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10476' => [
+            'name' => 'Brenner Base Tunnel TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['urn:ogc:def:area:EPSG::4744'],
+            'extent_name' => 'Europe - Brenner',
+            'extent_description' => 'Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10478' => [
+            'name' => 'BBT2000 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::4744'],
+            'extent_name' => 'Europe - Brenner',
+            'extent_description' => 'Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10479' => [
+            'name' => 'TWDB Groundwater Modeling',
+            'method' => 'urn:ogc:def:method:EPSG::9822',
+            'extent' => ['urn:ogc:def:area:EPSG::1412'],
+            'extent_name' => 'USA - Texas',
+            'extent_description' => 'United States (USA) - Texas',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10501' => [
             'name' => 'Colorado CS27 North zone',

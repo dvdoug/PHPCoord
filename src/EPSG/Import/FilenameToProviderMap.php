@@ -219,4 +219,5 @@ return [
     'gsb_2022.gsb' => CoordinateOperation\ETRS89GSBIRFProvider::class,
     'kk_2022.gsb' => CoordinateOperation\ETRS89KKIRFProvider::class,
     'os_2022.gsb' => CoordinateOperation\ETRS89OstenfeldIRFProvider::class,
+    'GCG2016.txt' => CoordinateOperation\DATETRS89DHHN2016Provider::class,
 ];

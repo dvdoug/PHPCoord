@@ -902,6 +902,18 @@ Azores Oriental 1995 / UTM zone 26N
 
 Replaced by PTRA08 / UTM zone 26N (CRS code 5015).
 
+BBT2000 / BBT-TM
+----------------
+| Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_BBT2000_BBT_TM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10477')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BBT2000_BBT_TM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10477')
+
+
 BD50 (Brussels) / Belge Lambert 50
 ----------------------------------
 | Extent: Belgium - onshore
@@ -22527,6 +22539,19 @@ NAD83 / Statistics Canada Lambert
 
 Data may sometimes be referenced to NAD83(CSRS) / STC Lambert (see CRS code 3348) which is then called "NAD83 / STC Lambert". At the scales involved the difference of under 2 metres between the two CRSs may not be significant.
 
+NAD83 / TWDB GM
+---------------
+| Extent: United States (USA) - Texas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_TWDB_GM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10481')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_TWDB_GM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10481')
+
+Not to be confused with the similar but different TxGIO (TNRIS) CRS, NAD83 / Texas Centric Albers Equal Area (CRS code 3083).
+
 NAD83 / Tennessee
 -----------------
 | Extent: United States (USA) - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon; Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb; Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton; Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson; Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury; McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea; Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton; Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson
@@ -22603,7 +22628,7 @@ NAD83 / Texas Centric Albers Equal Area
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_TEXAS_CENTRIC_ALBERS_EQUAL_AREA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3083')
 
-For state-wide spatial data presentation requiring shape preservation use TCMS/LC. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Texas Centric Albers Equal Area.
+For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / TX Albers (CRS code 3085). See also NAD83 / TWDB GM (CRS code 10481). For state-wide spatial data presentation requiring shape preservation use NAD83 / TX LC (CRS code 3082).
 
 NAD83 / Texas Centric Lambert Conformal
 ---------------------------------------
@@ -22616,7 +22641,7 @@ NAD83 / Texas Centric Lambert Conformal
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_TEXAS_CENTRIC_LAMBERT_CONFORMAL)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3082')
 
-For state-wide spatial data presentation requiring true area measurements use TCMS/AEA. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Texas Centric Lambert Conformal.
+For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / TX LC (CRS code 3084). For state-wide spatial data presentation requiring true area measurements use NAD83 / TX Albers (CRS code 3083).
 
 NAD83 / Texas North
 -------------------
@@ -29918,7 +29943,7 @@ NAD83(2011) / Texas Centric Albers Equal Area
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_2011_TEXAS_CENTRIC_ALBERS_EQUAL_AREA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6579')
 
-For state-wide spatial data presentation requiring shape preservation use TCMS/LC (CRS code 6580). Replaces NAD83(NSRS2007) / Texas Centric Albers Equal Area (CRS code 3665).
+Replaces NAD83(NSRS2007) / TX Albers (CRS code 3665). For state-wide spatial data presentation requiring shape preservation use NAD83(2011) / TX LC (CRS code 6580).
 
 NAD83(2011) / Texas Centric Lambert Conformal
 ---------------------------------------------
@@ -29931,7 +29956,7 @@ NAD83(2011) / Texas Centric Lambert Conformal
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_2011_TEXAS_CENTRIC_LAMBERT_CONFORMAL)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6580')
 
-For state-wide spatial data presentation requiring true area measurements use TCMS/AEA (CRS code 6579). Replaces NAD83(NSRS2007) / Texas Centric Lambert Conformal (CRS code 3666).
+Replaces NAD83(NSRS2007) / TX LC (CRS code 3666). For state-wide spatial data presentation requiring true area measurements use NAD83(2011) / TX Albers (CRS code 6579).
 
 NAD83(2011) / Texas North
 -------------------------
@@ -38122,7 +38147,7 @@ NAD83(HARN) / Texas Centric Albers Equal Area
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_HARN_TEXAS_CENTRIC_ALBERS_EQUAL_AREA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3085')
 
-For state-wide spatial data presentation requiring shape preservation use TCMS/LC (CRS code 3084). Replaces NAD83 / Texas Centric Albers Equal Area for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Texas Centric AEA.
+Replaces NAD83 / TX Albers (code 3083) for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / TX Albers (code 3665). For state-wide spatial data presentation requiring shape preservation use NAD83(HARN) / TX LC (code 3084).
 
 NAD83(HARN) / Texas Centric Lambert Conformal
 ---------------------------------------------
@@ -38135,7 +38160,7 @@ NAD83(HARN) / Texas Centric Lambert Conformal
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_HARN_TEXAS_CENTRIC_LAMBERT_CONFORMAL)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3084')
 
-For state-wide spatial data presentation requiring true area measurements use TCMS/AEA (CRS code 3085). Replaces NAD83 / Texas Centric Lambert Conformal for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Texas Centric LC.
+Replaces NAD83 / TX LC (code 3082) for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / TX  LC (code 3666). For state-wide spatial data presentation requiring true area measurements use NAD83(HARN) / TX Albers (code 3085).
 
 NAD83(HARN) / Texas North
 -------------------------
@@ -43004,7 +43029,7 @@ NAD83(NSRS2007) / Texas Centric Albers Equal Area
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_NSRS2007_TEXAS_CENTRIC_ALBERS_EQUAL_AREA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3665')
 
-For state-wide spatial data presentation requiring shape preservation use TCMS/LC (CRS code 3666). Replaces NAD83(HARN) / Texas Centric Albers Equal Area.
+Replaces NAD83(HARN) / TX Albers (CRS code 3085). Replaced by NAD83(2011) / TX Albers (CRS code 6579). For state-wide spatial data presentation requiring shape preservation use NAD83(NSRS2007) / TX LC (CRS code 3666).
 
 NAD83(NSRS2007) / Texas Centric Lambert Conformal
 -------------------------------------------------
@@ -43017,7 +43042,7 @@ NAD83(NSRS2007) / Texas Centric Lambert Conformal
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_NSRS2007_TEXAS_CENTRIC_LAMBERT_CONFORMAL)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3666')
 
-For state-wide spatial data presentation requiring true area measurements use TCMS/AEA (CRS code 3665). Replaces NAD83(HARN) / Texas Centric Lambert Conformal.
+Replaces NAD83(HARN) / TX LC (CRS code 3084). Replaced by NAD83(2011) / TX  LC (CRS code 3666). For state-wide spatial data presentation requiring true area measurements use NAD83(NSRS2007) / TX Albers (CRS code 3665).
 
 NAD83(NSRS2007) / Texas North
 -----------------------------

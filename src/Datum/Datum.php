@@ -609,6 +609,17 @@ class Datum
     public const EPSG_BORA_BORA_SAU_2001 = 'urn:ogc:def:datum:EPSG::5202';
 
     /**
+     * Brenner Base Tunnel 2000
+     * Type: Geodetic
+     * Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza
+     * (Franzensfeste)
+     * Realized through a network of stations aligned to ITRF94@1996.45.
+     * Network of BBT stations, including existing nearby stations of the Austrian AREF-TIREF network, the Italian
+     * IGM95 network and the Trentino Alto Adige provincial cadastral control network.
+     */
+    public const EPSG_BRENNER_BASE_TUNNEL_2000 = 'urn:ogc:def:datum:EPSG::1367';
+
+    /**
      * British Isles height ensemble
      * Type: Ensemble
      * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
@@ -12286,6 +12297,18 @@ Published 2022-11-27; adopted by the Canadian federal government (2023). Replace
             'extent_description' => 'United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport',
             'help' => 'Defined through the application of the COV23 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2023 to support intermediate CRS COV23-IRF in the emulation of the COV23 Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1367' => [
+            'name' => 'Brenner Base Tunnel 2000',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7030',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'extent_name' => 'Europe - Brenner',
+            'extent_description' => 'Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)',
+            'help' => 'Realized through a network of stations aligned to ITRF94@1996.45.
+Network of BBT stations, including existing nearby stations of the Austrian AREF-TIREF network, the Italian IGM95 network and the Trentino Alto Adige provincial cadastral control network.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

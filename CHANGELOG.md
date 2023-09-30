@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### Changed
-- Updates to data for Australia, Canada, Netherlands, Portugal, South Korea and UK
+- Updates to data for Australia, Austria, Canada, Germany, Italy, Netherlands, Portugal, South Korea, UK and USA
 
 ## [5.5.0] - 2023-07-07
 ### Added

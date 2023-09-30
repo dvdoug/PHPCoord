@@ -232,6 +232,13 @@ class Geographic2D extends Geographic
     public const EPSG_AZORES_ORIENTAL_1995 = 'urn:ogc:def:crs:EPSG::4664';
 
     /**
+     * BBT2000
+     * Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza
+     * (Franzensfeste).
+     */
+    public const EPSG_BBT2000 = 'urn:ogc:def:crs:EPSG::10475';
+
+    /**
      * BD50
      * Extent: Belgium - onshore.
      */

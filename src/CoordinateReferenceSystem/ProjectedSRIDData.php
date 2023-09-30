@@ -10074,7 +10074,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring true area measurements use TCMS/AEA. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Texas Centric Lambert Conformal.',
+            'help' => 'For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / TX LC (CRS code 3084). For state-wide spatial data presentation requiring true area measurements use NAD83 / TX Albers (CRS code 3083).',
         ],
         'urn:ogc:def:crs:EPSG::3083' => [
             'name' => 'NAD83 / Texas Centric Albers Equal Area',
@@ -10084,7 +10084,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring shape preservation use TCMS/LC. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Texas Centric Albers Equal Area.',
+            'help' => 'For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / TX Albers (CRS code 3085). See also NAD83 / TWDB GM (CRS code 10481). For state-wide spatial data presentation requiring shape preservation use NAD83 / TX LC (CRS code 3082).',
         ],
         'urn:ogc:def:crs:EPSG::3084' => [
             'name' => 'NAD83(HARN) / Texas Centric Lambert Conformal',
@@ -10094,7 +10094,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring true area measurements use TCMS/AEA (CRS code 3085). Replaces NAD83 / Texas Centric Lambert Conformal for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Texas Centric LC.',
+            'help' => 'Replaces NAD83 / TX LC (code 3082) for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / TX  LC (code 3666). For state-wide spatial data presentation requiring true area measurements use NAD83(HARN) / TX Albers (code 3085).',
         ],
         'urn:ogc:def:crs:EPSG::3085' => [
             'name' => 'NAD83(HARN) / Texas Centric Albers Equal Area',
@@ -10104,7 +10104,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring shape preservation use TCMS/LC (CRS code 3084). Replaces NAD83 / Texas Centric Albers Equal Area for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Texas Centric AEA.',
+            'help' => 'Replaces NAD83 / TX Albers (code 3083) for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / TX Albers (code 3665). For state-wide spatial data presentation requiring shape preservation use NAD83(HARN) / TX LC (code 3084).',
         ],
         'urn:ogc:def:crs:EPSG::3086' => [
             'name' => 'NAD83 / Florida GDL Albers',
@@ -15744,7 +15744,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring shape preservation use TCMS/LC (CRS code 3666). Replaces NAD83(HARN) / Texas Centric Albers Equal Area.',
+            'help' => 'Replaces NAD83(HARN) / TX Albers (CRS code 3085). Replaced by NAD83(2011) / TX Albers (CRS code 6579). For state-wide spatial data presentation requiring shape preservation use NAD83(NSRS2007) / TX LC (CRS code 3666).',
         ],
         'urn:ogc:def:crs:EPSG::3666' => [
             'name' => 'NAD83(NSRS2007) / Texas Centric Lambert Conformal',
@@ -15754,7 +15754,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring true area measurements use TCMS/AEA (CRS code 3665). Replaces NAD83(HARN) / Texas Centric Lambert Conformal.',
+            'help' => 'Replaces NAD83(HARN) / TX LC (CRS code 3084). Replaced by NAD83(2011) / TX  LC (CRS code 3666). For state-wide spatial data presentation requiring true area measurements use NAD83(NSRS2007) / TX Albers (CRS code 3665).',
         ],
         'urn:ogc:def:crs:EPSG::3667' => [
             'name' => 'NAD83(NSRS2007) / Texas North',
@@ -26024,7 +26024,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring shape preservation use TCMS/LC (CRS code 6580). Replaces NAD83(NSRS2007) / Texas Centric Albers Equal Area (CRS code 3665).',
+            'help' => 'Replaces NAD83(NSRS2007) / TX Albers (CRS code 3665). For state-wide spatial data presentation requiring shape preservation use NAD83(2011) / TX LC (CRS code 6580).',
         ],
         'urn:ogc:def:crs:EPSG::6580' => [
             'name' => 'NAD83(2011) / Texas Centric Lambert Conformal',
@@ -26034,7 +26034,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'For state-wide spatial data presentation requiring true area measurements use TCMS/AEA (CRS code 6579). Replaces NAD83(NSRS2007) / Texas Centric Lambert Conformal (CRS code 3666).',
+            'help' => 'Replaces NAD83(NSRS2007) / TX LC (CRS code 3666). For state-wide spatial data presentation requiring true area measurements use NAD83(2011) / TX Albers (CRS code 6579).',
         ],
         'urn:ogc:def:crs:EPSG::6581' => [
             'name' => 'NAD83(2011) / Texas North',
@@ -36095,6 +36095,26 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'extent_name' => 'UK - Coventry',
             'extent_description' => 'United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport',
             'help' => 'Defined through transformation ETRS89 to COV23-IRF (1) (code 10468) and map projection COV23-TM (code 10470). Emulates the COV23 Snake projection applied to ETRS89 as realized through OSNet 2009.',
+        ],
+        'urn:ogc:def:crs:EPSG::10477' => [
+            'name' => 'BBT2000 / BBT-TM',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10475',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10476',
+            'extent' => ['urn:ogc:def:area:EPSG::4744'],
+            'extent_name' => 'Europe - Brenner',
+            'extent_description' => 'Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10481' => [
+            'name' => 'NAD83 / TWDB GM',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4497',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4269',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10479',
+            'extent' => ['urn:ogc:def:area:EPSG::1412'],
+            'extent_name' => 'USA - Texas',
+            'extent_description' => 'United States (USA) - Texas',
+            'help' => 'Not to be confused with the similar but different TxGIO (TNRIS) CRS, NAD83 / Texas Centric Albers Equal Area (CRS code 3083).',
         ],
         'urn:ogc:def:crs:EPSG::11114' => [
             'name' => 'MAGNA-SIRGAS 2018 / Colombia Far West zone',

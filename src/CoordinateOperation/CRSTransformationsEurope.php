@@ -166,6 +166,20 @@ class CRSTransformationsEurope
             'accuracy' => 0.1,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10295',
+            'name' => 'ETRS89/DREF91/2016 to ETRS89/DREF91/2016 + DHHN2016 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10283',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10293',
+            'accuracy' => 0.02,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10294',
+            'name' => 'ETRS89/DREF91/2016 to DHHN2016 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10283',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::7837',
+            'accuracy' => 0.02,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5647',
             'name' => 'UTM zone 31N with prefix',
             'source_crs' => 'urn:ogc:def:crs:EPSG::10284',
@@ -318,6 +332,20 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::10468',
             'target_crs' => 'urn:ogc:def:crs:EPSG::10471',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10476',
+            'name' => 'Brenner Base Tunnel TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10475',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10477',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10478',
+            'name' => 'BBT2000 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10475',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10127',

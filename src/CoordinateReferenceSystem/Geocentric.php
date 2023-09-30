@@ -36,6 +36,13 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_AUSTRALIAN_ANTARCTIC = 'urn:ogc:def:crs:EPSG::4930';
 
     /**
+     * BBT2000
+     * Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza
+     * (Franzensfeste).
+     */
+    public const EPSG_BBT2000 = 'urn:ogc:def:crs:EPSG::10473';
+
+    /**
      * BDA2000
      * Extent: Bermuda - onshore and offshore.
      */

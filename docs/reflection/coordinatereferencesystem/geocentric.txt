@@ -22,6 +22,18 @@ Australian Antarctic
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4930')
 
 
+BBT2000
+-------
+| Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)
+
+.. code-block:: php
+
+    Geocentric::fromSRID(Geocentric::EPSG_BBT2000)
+    Geocentric::fromSRID('urn:ogc:def:crs:EPSG::10473')
+    CoordinateReferenceSystem::fromSRID(Geocentric::EPSG_BBT2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10473')
+
+
 BDA2000
 -------
 | Extent: Bermuda - onshore and offshore

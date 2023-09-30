@@ -624,10 +624,6 @@ class EPSGCodegenFromDataImport
         9728, // GRD geo_igm_mar06.grd
         9729, // GRD geo_igm_mar06.grd
         9730, // GRD geo_igm_mar06.grd
-        9925, // TXT GCG2016.txt
-        9926, // TXT GCG2016.txt
-        10294, // TXT GCG2016.txt
-        10295, // TXT GCG2016.txt
         10152, // TXT VORF-UK08_ETRF_to_MSL.vrf
         10153, // TXT VORF-UK08_ETRF_to_CD.vrf
         10154, // TXT VORF-UK08_ETRF_to_MSL.vrf

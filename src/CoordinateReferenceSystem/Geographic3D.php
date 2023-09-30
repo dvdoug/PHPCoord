@@ -36,6 +36,13 @@ class Geographic3D extends Geographic
     public const EPSG_AUSTRALIAN_ANTARCTIC = 'urn:ogc:def:crs:EPSG::4931';
 
     /**
+     * BBT2000
+     * Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza
+     * (Franzensfeste).
+     */
+    public const EPSG_BBT2000 = 'urn:ogc:def:crs:EPSG::10474';
+
+    /**
      * BDA2000
      * Extent: Bermuda - onshore and offshore.
      */

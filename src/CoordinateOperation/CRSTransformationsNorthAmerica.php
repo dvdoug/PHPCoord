@@ -4366,6 +4366,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10479',
+            'name' => 'TWDB Groundwater Modeling',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4269',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10481',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15303',
             'name' => 'SPCS83 Kentucky North zone (meters)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4269',

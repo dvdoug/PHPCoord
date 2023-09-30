@@ -449,6 +449,20 @@ Azores Oriental 1995
 
 Replaces 1948 system (CRS code 4184). Replaced by PTRA08 (CRS code 5013).
 
+BBT2000
+-------
+| Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_BBT2000)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10475')
+    Geographic::fromSRID(Geographic2D::EPSG_BBT2000)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10475')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BBT2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10475')
+
+
 BD50
 ----
 | Extent: Belgium - onshore

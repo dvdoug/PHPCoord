@@ -848,6 +848,20 @@ Fundamental benchmark: Vaitape quay SHOM benchmark B.
 
 Included as part of NGPF - see datum code 5195.
 
+Brenner Base Tunnel 2000
+------------------------
+| Type: Geodetic
+| Extent: Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BRENNER_BASE_TUNNEL_2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1367')
+
+Realized through a network of stations aligned to ITRF94@1996.45.
+
+Network of BBT stations, including existing nearby stations of the Austrian AREF-TIREF network, the Italian IGM95 network and the Trentino Alto Adige provincial cadastral control network.
+
 British Isles height ensemble
 -----------------------------
 | Type: Ensemble

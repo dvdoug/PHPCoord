@@ -585,6 +585,27 @@ to ETRS89 (Geographic3D)
 
     "
 
+ETRS89/DREF91/2016 + DHHN2016 height
+------------------------------------
+``Compound::fromSRID(Compound::EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT)``
+
+to ETRS89/DREF91/2016 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89/DREF91/2016 to ETRS89/DREF91/2016 + DHHN2016 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10295``
+    | Extent: Germany - onshore",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_DREF91_2016),
+            geoidHeightCorrectionModelFile: DATETRS89DHHN2016Provider->provideGrid()
+        )
+
+    "
+
 GDA2020 + AHD height
 --------------------
 ``Compound::fromSRID(Compound::EPSG_GDA2020_PLUS_AHD_HEIGHT)``
