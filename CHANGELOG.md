@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- More aggressive buffering of extent polygons
+
 ## [5.6.0] - 2023-09-30
 ### Changed
 - Updates to data for Australia, Austria, Canada, Germany, Italy, Netherlands, Portugal, South Korea, UK and USA
