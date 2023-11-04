@@ -28,7 +28,7 @@ class EPSGImporter
 
     private const BOM = "\xEF\xBB\xBF";
 
-    private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
+    private const BUFFER_THRESHOLD = 150; // rough guess at where map maker got bored adding vertices for complex shapes
     private const BUFFER_SIZE = 0.1; // approx 10km
 
     public function __construct()
