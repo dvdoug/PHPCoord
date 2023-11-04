@@ -16,6 +16,7 @@ use function str_starts_with;
 use function substr;
 use function unlink;
 use function sleep;
+use function str_contains;
 
 use const SQLITE3_OPEN_CREATE;
 use const SQLITE3_OPEN_READWRITE;
@@ -198,14 +199,18 @@ class EPSGImporter
                 $extentDB->exec($upsertSQL);
                 sleep(2);
             }
-        }
+            $extentDB->exec('UPDATE extent SET buffered = CASE WHEN ST_NPoints(GeomFromGeoJSON(original)) > ' . self::BUFFER_THRESHOLD . ' THEN AsGeoJSON(ST_Buffer(GeomFromGeoJSON(original), ' . self::BUFFER_SIZE . ')) ELSE original END WHERE buffered IS NULL AND extent_code=' . $extentMetaData['extent_code']);
 
-        $extentDB->exec('UPDATE extent SET buffered = CASE WHEN ST_NPoints(GeomFromGeoJSON(original)) > ' . self::BUFFER_THRESHOLD . ' THEN AsGeoJSON(ST_Buffer(GeomFromGeoJSON(original), ' . self::BUFFER_SIZE . ')) ELSE original END WHERE buffered IS NULL');
-        $bboxes = $extentDB->query('SELECT extent_code, AsGeoJSON(Extent(GeomFromGeoJSON(original))) AS bbox FROM extent WHERE bbox IS NULL GROUP BY extent_code');
-        while ($bbox = $bboxes->fetchArray(SQLITE3_ASSOC)) {
-            $extentDB->exec("UPDATE extent SET bbox = '{$bbox['bbox']}' WHERE extent_code = {$bbox['extent_code']}");
+            // Bounding box calc + update have to be done in 2 parts as the SQL function is defined as aggregate and needs a GROUP BY even though just a single row
+            $bboxes = $extentDB->query("SELECT extent_code, AsGeoJSON(Extent(GeomFromGeoJSON(original))) AS original_bbox, AsGeoJSON(Extent(GeomFromGeoJSON(buffered))) AS buffered_bbox FROM extent WHERE bbox IS NULL AND extent_code = {$extentMetaData['extent_code']} GROUP BY extent_code");
+            while ($bbox = $bboxes->fetchArray(SQLITE3_ASSOC)) {
+                if (str_contains($extentMetaData['extent_name'], '°')) { // if defined degree extent in name, assume original is accurate at extremities
+                    $extentDB->exec("UPDATE extent SET bbox = '{$bbox['original_bbox']}' WHERE extent_code = {$bbox['extent_code']}");
+                } else {
+                    $extentDB->exec("UPDATE extent SET bbox = '{$bbox['buffered_bbox']}' WHERE extent_code = {$bbox['extent_code']}");
+                }
+            }
         }
-
         $extentDB->close();
         $dataDB->close();
     }
