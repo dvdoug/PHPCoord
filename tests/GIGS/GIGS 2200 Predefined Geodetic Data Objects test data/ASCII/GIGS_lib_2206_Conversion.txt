@@ -18,33 +18,33 @@
 10405	California CS27 zone V	California zone V	Lambert Conic Conformal (2SP)	USA - California - SPCS27 - 5
 10406	California CS27 zone VI	California zone VI	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
 10408	California CS27 zone VII		Lambert Conic Conformal (2SP)	USA - California - SPCS27 - 7
-10434	SPCS83 California zone 4 (meters)	California zone 4; California CS83 zone 4	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
-10435	SPCS83 California zone 5 (meters)	California zone 5; California CS83 zone 5	Lambert Conic Conformal (2SP)	USA - California - SPCS83 - 5
-10436	SPCS83 California zone 6 (meters)	California zone 6; California CS83 zone 6	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
+10434	SPCS83 California zone 4 (meter)	California zone 4; California CS83 zone 4	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
+10435	SPCS83 California zone 5 (meter)	California zone 5; California CS83 zone 5	Lambert Conic Conformal (2SP)	USA - California - SPCS83 - 5
+10436	SPCS83 California zone 6 (meter)	California zone 6; California CS83 zone 6	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
 11701	Louisiana CS27 North zone	Louisiana North	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
 11702	Louisiana CS27 South zone	Louisiana South	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS27 - S
-11731	SPCS83 Louisiana North zone (meters)	Louisiana North; Louisiana CS83 North zone	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
-11732	SPCS83 Louisiana South zone (meters)	Louisiana South; Louisiana CS83 South zone	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS83 - S
-12142	SPCS83 Michigan Central zone (meters)	Michigan Central; Michigan CS83 Central zone	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - C
-12143	SPCS83 Michigan South zone (meters)	Michigan South; Michigan CS83 South zone	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - S
+11731	SPCS83 Louisiana North zone (meter)	Louisiana North; Louisiana CS83 North zone	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
+11732	SPCS83 Louisiana South zone (meter)	Louisiana South; Louisiana CS83 South zone	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS83 - S
+12142	SPCS83 Michigan Central zone (meter)	Michigan Central; Michigan CS83 Central zone	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - C
+12143	SPCS83 Michigan South zone (meter)	Michigan South; Michigan CS83 South zone	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - S
 13001	New Mexico CS27 East zone	New Mexico East	Transverse Mercator	USA - New Mexico - SPCS - E
-13031	SPCS83 New Mexico East zone (meters)	New Mexico East; New Mexico CS83 East zone	Transverse Mercator	USA - New Mexico - SPCS - E
+13031	SPCS83 New Mexico East zone (meter)	New Mexico East; New Mexico CS83 East zone	Transverse Mercator	USA - New Mexico - SPCS - E
 13501	Oklahoma CS27 North zone	Oklahoma North	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
 13502	Oklahoma CS27 South zone	Oklahoma South	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
-13531	SPCS83 Oklahoma North zone (meters)	Oklahoma North; Oklahoma CS83 North zone	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
-13532	SPCS83 Oklahoma South zone (meters)	Oklahoma South; Oklahoma CS83 South zone	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
+13531	SPCS83 Oklahoma North zone (meter)	Oklahoma North; Oklahoma CS83 North zone	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
+13532	SPCS83 Oklahoma South zone (meter)	Oklahoma South; Oklahoma CS83 South zone	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
 14201	Texas CS27 North zone	Texas North	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
 14203	Texas CS27 Central zone	Texas Central	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
 14204	Texas CS27 South Central zone	Texas South Central	Lambert Conic Conformal (2SP)	USA - Texas - SPCS27 - SC
 14205	Texas CS27 South zone	Texas South	Lambert Conic Conformal (2SP)	USA - Texas - SPCS27 - S
-14231	SPCS83 Texas North zone (meters)	Texas North; Texas CS83 North zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
-14232	SPCS83 Texas North Central zone (meters)	Texas North Central; Texas CS83 North Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - NC
-14233	SPCS83 Texas Central zone (meters)	Texas Central; Texas CS83 Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
-14234	SPCS83 Texas South Central zone (meters)	Texas South Central; Texas CS83 South Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - SC
-14235	SPCS83 Texas South zone (meters)	Texas South; Texas CS83 South zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - S
+14231	SPCS83 Texas North zone (meter)	Texas North; Texas CS83 North zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
+14232	SPCS83 Texas North Central zone (meter)	Texas North Central; Texas CS83 North Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - NC
+14233	SPCS83 Texas Central zone (meter)	Texas Central; Texas CS83 Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
+14234	SPCS83 Texas South Central zone (meter)	Texas South Central; Texas CS83 South Central zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - SC
+14235	SPCS83 Texas South zone (meter)	Texas South; Texas CS83 South zone	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - S
 14903	Wyoming CS27 West Central zone	Wyoming West Central	Transverse Mercator	USA - Wyoming - SPCS - WC
-14933	SPCS83 Wyoming West Central zone (meters)	Wyoming West Central; Wyoming CS83 West Central zone	Transverse Mercator	USA - Wyoming - SPCS - WC
-14937	SPCS83 Wyoming West Central zone (US Survey feet)	Wyoming CS83 West Central zone (ftUS)	Transverse Mercator	USA - Wyoming - SPCS - WC
+14933	SPCS83 Wyoming West Central zone (meter)	Wyoming West Central; Wyoming CS83 West Central zone	Transverse Mercator	USA - Wyoming - SPCS - WC
+14937	SPCS83 Wyoming West Central zone (US survey foot)	Wyoming CS83 West Central zone (ftUS)	Transverse Mercator	USA - Wyoming - SPCS - WC
 15002	Alaska CS27 zone 2	Alaska zone 2	Transverse Mercator	USA - Alaska - 144°W to 141°W
 15003	Alaska CS27 zone 3	Alaska zone 3	Transverse Mercator	USA - Alaska - 148°W to 144°W
 15004	Alaska CS27 zone 4	Alaska zone 4	Transverse Mercator	USA - Alaska - 152°W to 148°W
@@ -53,32 +53,32 @@
 15007	Alaska CS27 zone 7	Alaska zone 7	Transverse Mercator	USA - Alaska - 164°W to 160°W
 15008	Alaska CS27 zone 8	Alaska zone 8	Transverse Mercator	USA - Alaska - north of 54.5°N; 168°W to 164°W
 15009	Alaska CS27 zone 9	Alaska zone 9	Transverse Mercator	USA - Alaska - north of 54.5°N; west of 168°W
-15032	SPCS83 Alaska zone 2 (meters)	Alaska zone 2; Alaska CS83 zone 2	Transverse Mercator	USA - Alaska - 144°W to 141°W
-15034	SPCS83 Alaska zone 4 (meters)	Alaska zone 4; Alaska CS83 zone 4	Transverse Mercator	USA - Alaska - 152°W to 148°W
-15035	SPCS83 Alaska zone 5 (meters)	Alaska zone 5; Alaska CS83 zone 5	Transverse Mercator	USA - Alaska - 156°W to 152°W
-15036	SPCS83 Alaska zone 6 (meters)	Alaska zone 6; Alaska CS83 zone 6	Transverse Mercator	USA - Alaska - 160°W to 156°W
-15037	SPCS83 Alaska zone 7 (meters)	Alaska zone 7; Alaska CS83 zone 7	Transverse Mercator	USA - Alaska - 164°W to 160°W
-15038	SPCS83 Alaska zone 8 (meters)	Alaska zone 8; Alaska CS83 zone 8	Transverse Mercator	USA - Alaska - north of 54.5°N; 168°W to 164°W
-15039	SPCS83 Alaska zone 9 (meters)	Alaska zone 9; Alaska CS83 zone 9	Transverse Mercator	USA - Alaska - north of 54.5°N; west of 168°W
-15310	SPCS83 California zone 4 (US Survey feet)	California zone 4 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
-15311	SPCS83 California zone 5 (US Survey feet)	California zone 5 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS83 - 5
-15312	SPCS83 California zone 6 (US Survey feet)	California zone 6 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
-15334	SPCS83 Michigan Central zone (International feet)	Michigan Central (ft)	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - C
-15335	SPCS83 Michigan South zone (International feet)	Michigan South (ft)	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - S
-15339	SPCS83 New Mexico East zone (US Survey feet)	New Mexico East (ftUS)	Transverse Mercator	USA - New Mexico - SPCS - E
-15349	SPCS83 Oklahoma North zone (US Survey feet)	Oklahoma North (ftUS)	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
-15350	SPCS83 Oklahoma South zone (US Survey feet)	Oklahoma South (ftUS)	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
-15357	SPCS83 Texas North zone (US Survey feet)	Texas North (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
-15358	SPCS83 Texas North Central zone (US Survey feet)	Texas North Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - NC
-15359	SPCS83 Texas Central zone (US Survey feet)	Texas Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
-15360	SPCS83 Texas South Central zone (US Survey feet)	Texas South Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - SC
-15361	SPCS83 Texas South zone (US Survey feet)	Texas South (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - S
-15391	SPCS83 Louisiana North zone (US Survey feet)	Louisiana CS83 North zone (ftUS)	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
-15392	SPCS83 Louisiana South zone (US Survey feet)	Louisiana CS83 South zone (ftUS)	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS83 - S
-15914	BLM zone 14N (US survey feet)	BLM 14N (ftUS); BLM zone 14N in feet	Transverse Mercator	USA - 102°W to 96°W and GoM OCS	UTM in ftUS
-15915	BLM zone 15N (US survey feet)	BLM 15N (ftUS); BLM zone 15N in feet	Transverse Mercator	USA - 96°W to 90°W and GoM OCS	UTM in ftUS
-15916	BLM zone 16N (US survey feet)	BLM 16N (ftUS); BLM zone 16N in feet	Transverse Mercator	USA - 90°W to 84°W and GoM OCS	UTM in ftUS
-15917	BLM zone 17N (US survey feet)	BLM 17N (ftUS); BLM zone 17N in feet	Transverse Mercator	USA - 84°W to 78°W and GoM OCS	UTM in ftUS
+15032	SPCS83 Alaska zone 2 (meter)	Alaska zone 2; Alaska CS83 zone 2	Transverse Mercator	USA - Alaska - 144°W to 141°W
+15034	SPCS83 Alaska zone 4 (meter)	Alaska zone 4; Alaska CS83 zone 4	Transverse Mercator	USA - Alaska - 152°W to 148°W
+15035	SPCS83 Alaska zone 5 (meter)	Alaska zone 5; Alaska CS83 zone 5	Transverse Mercator	USA - Alaska - 156°W to 152°W
+15036	SPCS83 Alaska zone 6 (meter)	Alaska zone 6; Alaska CS83 zone 6	Transverse Mercator	USA - Alaska - 160°W to 156°W
+15037	SPCS83 Alaska zone 7 (meter)	Alaska zone 7; Alaska CS83 zone 7	Transverse Mercator	USA - Alaska - 164°W to 160°W
+15038	SPCS83 Alaska zone 8 (meter)	Alaska zone 8; Alaska CS83 zone 8	Transverse Mercator	USA - Alaska - north of 54.5°N; 168°W to 164°W
+15039	SPCS83 Alaska zone 9 (meter)	Alaska zone 9; Alaska CS83 zone 9	Transverse Mercator	USA - Alaska - north of 54.5°N; west of 168°W
+15310	SPCS83 California zone 4 (US survey foot)	California zone 4 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS - 4
+15311	SPCS83 California zone 5 (US survey foot)	California zone 5 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS83 - 5
+15312	SPCS83 California zone 6 (US survey foot)	California zone 6 (ftUS)	Lambert Conic Conformal (2SP)	USA - California - SPCS - 6
+15334	SPCS83 Michigan Central zone (international foot)	Michigan Central (ft)	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - C
+15335	SPCS83 Michigan South zone (international foot)	Michigan South (ft)	Lambert Conic Conformal (2SP)	USA - Michigan - SPCS - S
+15339	SPCS83 New Mexico East zone (US survey foot)	New Mexico East (ftUS)	Transverse Mercator	USA - New Mexico - SPCS - E
+15349	SPCS83 Oklahoma North zone (US survey foot)	Oklahoma North (ftUS)	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - N
+15350	SPCS83 Oklahoma South zone (US survey foot)	Oklahoma South (ftUS)	Lambert Conic Conformal (2SP)	USA - Oklahoma - SPCS - S
+15357	SPCS83 Texas North zone (US survey foot)	Texas North (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - N
+15358	SPCS83 Texas North Central zone (US survey foot)	Texas North Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - NC
+15359	SPCS83 Texas Central zone (US survey foot)	Texas Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS - C
+15360	SPCS83 Texas South Central zone (US survey foot)	Texas South Central (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - SC
+15361	SPCS83 Texas South zone (US survey foot)	Texas South (ftUS)	Lambert Conic Conformal (2SP)	USA - Texas - SPCS83 - S
+15391	SPCS83 Louisiana North zone (US survey foot)	Louisiana CS83 North zone (ftUS)	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS - N
+15392	SPCS83 Louisiana South zone (US survey foot)	Louisiana CS83 South zone (ftUS)	Lambert Conic Conformal (2SP)	USA - Louisiana - SPCS83 - S
+15914	BLM zone 14N (US survey foot)	BLM 14N (ftUS); BLM zone 14N in feet	Transverse Mercator	USA - 102°W to 96°W and GoM OCS	UTM in ftUS
+15915	BLM zone 15N (US survey foot)	BLM 15N (ftUS); BLM zone 15N in feet	Transverse Mercator	USA - 96°W to 90°W and GoM OCS	UTM in ftUS
+15916	BLM zone 16N (US survey foot)	BLM 16N (ftUS); BLM zone 16N in feet	Transverse Mercator	USA - 90°W to 84°W and GoM OCS	UTM in ftUS
+15917	BLM zone 17N (US survey foot)	BLM 17N (ftUS); BLM zone 17N in feet	Transverse Mercator	USA - 84°W to 78°W and GoM OCS	UTM in ftUS
 16001	UTM zone 1N		Transverse Mercator	World - N hemisphere - 180°W to 174°W
 16002	UTM zone 2N		Transverse Mercator	World - N hemisphere - 174°W to 168°W
 16003	UTM zone 3N		Transverse Mercator	World - N hemisphere - 168°W to 162°W
@@ -441,8 +441,8 @@
 18318	Libya TM zone 13		Transverse Mercator	Libya - east of 24°E onshore
 18319	Libya TM		Transverse Mercator	Libya
 19861	Laborde Grid		Laborde Oblique Mercator	Madagascar - onshore and nearshore
-19871	Rectified Skew Orthomorphic Malaya Grid (chains)	RSO Malaya (m)	Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia - onshore
-19872	Rectified Skew Orthomorphic Malaya Grid (metres)	RSO Malaya (m)	Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia - onshore
+19871	Rectified Skew Orthomorphic Malaya Grid (chain)	RSO Malaya (m)	Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia - onshore
+19872	Rectified Skew Orthomorphic Malaya Grid (metre)	RSO Malaya (m)	Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia - onshore
 19894	Borneo RSO	East Malaysia BRSO; Brunei BRSO	Hotine Oblique Mercator (variant A)	Asia - Brunei and East Malaysia
 19895	Peninsular RSO		Hotine Oblique Mercator (variant A)	Malaysia - West Malaysia
 19905	Netherlands East Indies Equatorial Zone	NEIEZ	Mercator (variant A)	Indonesia - onshore
@@ -460,10 +460,10 @@
 19941	Brazil Polyconic		American Polyconic	Brazil
 19948	Syria Lambert		Lambert Conic Conformal (1SP)	Asia - Middle East - Lebanon and Syria onshore
 19953	Qatar Grid		Cassini-Soldner	Qatar - onshore
-19956	Rectified Skew Orthomorphic Borneo Grid (chains)	RSO Borneo (chSe)	Hotine Oblique Mercator (variant B)	Asia - Brunei and East Malaysia
-19957	Rectified Skew Orthomorphic Borneo Grid (feet)	RSO Borneo (ftSe)	Hotine Oblique Mercator (variant B)	Malaysia - East Malaysia
-19958	Rectified Skew Orthomorphic Borneo Grid (metres)	RSO Borneo (m)	Hotine Oblique Mercator (variant B)	Asia - Brunei and East Malaysia
+19956	Rectified Skew Orthomorphic Borneo Grid (chain)	RSO Borneo (chSe)	Hotine Oblique Mercator (variant B)	Asia - Brunei and East Malaysia
+19957	Rectified Skew Orthomorphic Borneo Grid (foot)	RSO Borneo (ftSe)	Hotine Oblique Mercator (variant B)	Malaysia - East Malaysia
+19958	Rectified Skew Orthomorphic Borneo Grid (metre)	RSO Borneo (m)	Hotine Oblique Mercator (variant B)	Asia - Brunei and East Malaysia
 19959	Ghana National Grid	Gold Coast Grid	Transverse Mercator	Ghana
 19971	New Zealand Transverse Mercator 2000	NZTM; New Zealand Transverse Mercator; NZTM2000	Transverse Mercator	New Zealand - onshore
-19975	Trinidad Grid (Clarke's feet)		Cassini-Soldner	Trinidad and Tobago - Trinidad
+19975	Trinidad Grid (Clarke's foot)		Cassini-Soldner	Trinidad and Tobago - Trinidad
 19977	Aramco Lambert		Lambert Conic Conformal (2SP)	Saudi Arabia - onshore

@@ -2686,13 +2686,15 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * RGF93 v1 / Lambert-93 + NGF-IGN69 height
-     * Extent: France - mainland onshore.
+     * Extent: France - mainland onshore
+     * Replaced by RGF93 v2 / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2010-06-18.
      */
     public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
 
     /**
      * RGF93 v1 / Lambert-93 + NGF-IGN78 height
-     * Extent: France - Corsica onshore.
+     * Extent: France - Corsica onshore
+     * Replaced by RGF93 v2 / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2010-06-18.
      */
     public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
 
@@ -2709,10 +2711,40 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
 
     /**
+     * RGF93 v2 / Lambert-93 + NGF-IGN69 height
+     * Extent: France - mainland onshore
+     * Replaces RGF93 v1 / Lambert-93 + NGF-IGN69 height (CRS code 5698) from 2010-06-18. Replaced by RGF93 v2b /
+     * Lambert-93 + NGF-IGN69 height (CRS code 10499) from 2021-01-05.
+     */
+    public const EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10497';
+
+    /**
+     * RGF93 v2 / Lambert-93 + NGF-IGN78 height
+     * Extent: France - Corsica onshore
+     * Replaces RGF93 v1 / Lambert-93 + NGF-IGN78 height (CRS code 5699) from 2010-06-18. Replaced by RGF93 v2b /
+     * Lambert-93 + NGF-IGN78 height (CRS code 10500) from 2021-01-05.
+     */
+    public const EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10498';
+
+    /**
      * RGF93 v2b + NGF-IGN69 height
      * Extent: France - mainland onshore.
      */
     public const EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9785';
+
+    /**
+     * RGF93 v2b / Lambert-93 + NGF-IGN69 height
+     * Extent: France - mainland onshore
+     * Replaces RGF93 v2 / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2021-01-05.
+     */
+    public const EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10499';
+
+    /**
+     * RGF93 v2b / Lambert-93 + NGF-IGN78 height
+     * Extent: France - Corsica onshore
+     * Replaces RGF93 v2 / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2021-01-05.
+     */
+    public const EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10500';
 
     /**
      * RGFG95 + NGG1977 height

@@ -9410,7 +9410,7 @@ to NAD83(CSRS)v6 (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9129``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V6),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
@@ -9418,8 +9418,7 @@ to NAD83(CSRS)v6 (Geocentric)
             xAxisRotation: new ArcSecond(-0),
             yAxisRotation: new ArcSecond(-0),
             zAxisRotation: new ArcSecond(-0),
-            scaleDifference: new PartsPerBillion(-0),
-            transformationReferenceEpoch: new Year(2010)
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -9435,7 +9434,7 @@ to NAD83(CSRS)v7 (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::10416``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
@@ -9443,8 +9442,7 @@ to NAD83(CSRS)v7 (Geocentric)
             xAxisRotation: new ArcSecond(-0),
             yAxisRotation: new ArcSecond(-0),
             zAxisRotation: new ArcSecond(-0),
-            scaleDifference: new PartsPerBillion(-0),
-            transformationReferenceEpoch: new Year(2010)
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -9460,7 +9458,7 @@ to NAD83(CSRS)v8 (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::10419``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
@@ -9468,8 +9466,7 @@ to NAD83(CSRS)v8 (Geocentric)
             xAxisRotation: new ArcSecond(-0),
             yAxisRotation: new ArcSecond(-0),
             zAxisRotation: new ArcSecond(-0),
-            scaleDifference: new PartsPerBillion(-0),
-            transformationReferenceEpoch: new Year(2010)
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -9601,7 +9598,7 @@ to NAD83(CSRS)v2 (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9126``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V2),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
@@ -9609,8 +9606,7 @@ to NAD83(CSRS)v2 (Geocentric)
             xAxisRotation: new ArcSecond(-0),
             yAxisRotation: new ArcSecond(-0),
             zAxisRotation: new ArcSecond(-0),
-            scaleDifference: new PartsPerBillion(-0),
-            transformationReferenceEpoch: new Year(1997)
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -9626,7 +9622,7 @@ to NAD83(CSRS)v3 (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9127``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V3),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
@@ -9634,8 +9630,7 @@ to NAD83(CSRS)v3 (Geocentric)
             xAxisRotation: new ArcSecond(-0),
             yAxisRotation: new ArcSecond(-0),
             zAxisRotation: new ArcSecond(-0),
-            scaleDifference: new PartsPerBillion(-0),
-            transformationReferenceEpoch: new Year(1997)
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -9651,7 +9646,7 @@ to NAD83(CSRS)v4 (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9128``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V4),
             xAxisTranslation: new Metre(-0),
             yAxisTranslation: new Metre(-0),
@@ -9659,8 +9654,7 @@ to NAD83(CSRS)v4 (Geocentric)
             xAxisRotation: new ArcSecond(-0),
             yAxisRotation: new ArcSecond(-0),
             zAxisRotation: new ArcSecond(-0),
-            scaleDifference: new PartsPerBillion(-0),
-            transformationReferenceEpoch: new Year(2002)
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -9731,7 +9725,7 @@ to NAD83(CORS96) (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9126``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CORS96),
             xAxisTranslation: new Metre(0),
             yAxisTranslation: new Metre(0),
@@ -9739,8 +9733,7 @@ to NAD83(CORS96) (Geocentric)
             xAxisRotation: new ArcSecond(0),
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
-            scaleDifference: new PartsPerBillion(0),
-            transformationReferenceEpoch: new Year(1997)
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "
@@ -9808,7 +9801,7 @@ to NAD83(CORS96) (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9127``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CORS96),
             xAxisTranslation: new Metre(0),
             yAxisTranslation: new Metre(0),
@@ -9816,8 +9809,7 @@ to NAD83(CORS96) (Geocentric)
             xAxisRotation: new ArcSecond(0),
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
-            scaleDifference: new PartsPerBillion(0),
-            transformationReferenceEpoch: new Year(1997)
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "
@@ -9885,7 +9877,7 @@ to NAD83(CORS96) (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9128``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CORS96),
             xAxisTranslation: new Metre(0),
             yAxisTranslation: new Metre(0),
@@ -9893,8 +9885,7 @@ to NAD83(CORS96) (Geocentric)
             xAxisRotation: new ArcSecond(0),
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
-            scaleDifference: new PartsPerBillion(0),
-            transformationReferenceEpoch: new Year(2002)
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "
@@ -10014,7 +10005,7 @@ to NAD83(2011) (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9129``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_2011),
             xAxisTranslation: new Metre(0),
             yAxisTranslation: new Metre(0),
@@ -10022,8 +10013,7 @@ to NAD83(2011) (Geocentric)
             xAxisRotation: new ArcSecond(0),
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
-            scaleDifference: new PartsPerBillion(0),
-            transformationReferenceEpoch: new Year(2010)
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "
@@ -10091,7 +10081,7 @@ to NAD83(2011) (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::10416``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_2011),
             xAxisTranslation: new Metre(0),
             yAxisTranslation: new Metre(0),
@@ -10099,8 +10089,7 @@ to NAD83(2011) (Geocentric)
             xAxisRotation: new ArcSecond(0),
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
-            scaleDifference: new PartsPerBillion(0),
-            transformationReferenceEpoch: new Year(2010)
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "
@@ -10168,7 +10157,7 @@ to NAD83(2011) (Geocentric)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::10419``
     | Extent: North America - Canada, US (Conus+AK), PRVI",".. code-block:: php
 
-        $point->timeSpecificPositionVectorTransformation(
+        $point->positionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_2011),
             xAxisTranslation: new Metre(0),
             yAxisTranslation: new Metre(0),
@@ -10176,8 +10165,7 @@ to NAD83(2011) (Geocentric)
             xAxisRotation: new ArcSecond(0),
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
-            scaleDifference: new PartsPerBillion(0),
-            transformationReferenceEpoch: new Year(2010)
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "

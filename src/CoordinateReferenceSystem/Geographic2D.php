@@ -77,8 +77,7 @@ class Geographic2D extends Geographic
     /**
      * Accra
      * Extent: Ghana - onshore and offshore
-     * Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet.
-     * Replaced by Leigon (code 4250) in 1978.
+     * Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet. Replaced by Leigon (code 4250) in 1978.
      */
     public const EPSG_ACCRA = 'urn:ogc:def:crs:EPSG::4168';
 

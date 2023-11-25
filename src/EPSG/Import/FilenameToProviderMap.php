@@ -115,7 +115,7 @@ return [
     'SK27-83.gsb' => CoordinateOperation\NTv2NAD27NAD831986SaskatchewanProvider::class,
     'SK27-98.gsb' => CoordinateOperation\NTv2NAD27NAD83CSRS1997SaskatchewanProvider::class,
     'SK83-98.gsb' => CoordinateOperation\NTv2NAD831986NAD83CSRS1997SaskatchewanProvider::class,
-    'TOR27CSv1.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997OTorontoProvider::class,
+    'TO27CSv1.GSB' => CoordinateOperation\NTv2NAD27NAD83CSRS1997OTorontoProvider::class,
     'A66 National (13.09.01).gsb' => CoordinateOperation\NTv2AGD66GDA94AustraliaProvider::class,
     'GDA94_GDA2020_conformal_and_distortion.gsb' => CoordinateOperation\NTv2GDA94GDA2020AustraliaProvider::class,
     'National 84 (02.07.01).gsb' => CoordinateOperation\NTv2AGD84GDA94AustraliaProvider::class,

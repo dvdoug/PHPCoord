@@ -114,9 +114,7 @@ Accra
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ACCRA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4168')
 
-Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet. 
-
-Replaced by Leigon (code 4250) in 1978.
+Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet. Replaced by Leigon (code 4250) in 1978.
 
 Aden 1925
 ---------

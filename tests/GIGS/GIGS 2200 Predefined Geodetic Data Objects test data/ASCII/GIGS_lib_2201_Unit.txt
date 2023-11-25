@@ -27,7 +27,7 @@
 9040	Linear	British yard (Sears 1922)	yard; ydSe	0.914398414616029	metres per unit	36	39.370147	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
 9041	Linear	British foot (Sears 1922)	foot; ftSe	0.304799471538676	metres per unit	12	39.370147	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
 9042	Linear	British chain (Sears 1922)	chain; chSe	20.1167651215526	metres per unit	792	39.370147	East Malaysia; New Zealand	Uses Sear's 1922 British yard-metre ratio as given by Bomford as 39.370147 inches per metre
-9084	Linear	Indian yard	yard; ydInd	0.914398530744441	metres per unit	36	39.370142	South Asia	Indian Foot equal to 0.99999566 British feet (A.R.Clarke 1865); British yard (equal to 3 British feet) taken to be J.S.Clark's 1865 value of 0.9144025 metres
+9084	Linear	Indian yard	yard; ydInd	0.914398530744441	metres per unit	36	39.370142	South Asia	Indian Foot equal to 0.99999566 British feet (A.R.Clarke 1865); British yard (equal to 3 British foot) taken to be J.S.Clark's 1865 value of 0.9144025 metres
 9094	Linear	Gold Coast foot	foot; ftGC	0.304799710181509	metres per unit	6378300	20926201	Ghana	Used in Ghana and some adjacent parts of British west Africa prior to metrication; except for the metrication of projection defining parameters when British foot (Sears 1922) used
 9098	Linear	link	international link; lk	0.201168	metres per unit	20.1168	100	Fiji	Equal to 1/100 international chain
 9101	Angle	radian	rad	1	radians per unit	1	1	Colombia; USA; Canada	SI coherent derived unit (standard unit) for plane angle; used in some geocentric 7- and 10-parameter transformations

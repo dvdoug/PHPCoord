@@ -571,8 +571,7 @@ trait Geographic2DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1104'],
             'extent_name' => 'Ghana',
             'extent_description' => 'Ghana - onshore and offshore',
-            'help' => 'Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet.
-Replaced by Leigon (code 4250) in 1978.',
+            'help' => 'Ellipsoid semi-major axis (a)=20926201 exactly Gold Coast feet. Replaced by Leigon (code 4250) in 1978.',
         ],
         'urn:ogc:def:crs:EPSG::4169' => [
             'name' => 'American Samoa 1962',

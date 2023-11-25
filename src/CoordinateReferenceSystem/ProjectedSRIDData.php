@@ -971,8 +971,7 @@ trait ProjectedSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1499'],
             'extent_name' => 'Venezuela - Maracaibo - blocks I II and III',
             'extent_description' => 'Venezuela - Maracaibo area offshore blocks I, II and III',
-            'help' => 'Grid coordinates are (X=-17044 Y=29545) at Maracaibo Cathedral (10°38\'34.678"N, 71°36\'20.224"W; Lake datum).
-Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).',
+            'help' => 'Grid coordinates are (X=-17044 Y=29545) at Maracaibo Cathedral (10°38\'34.678"N, 71°36\'20.224"W; Lake datum). Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).',
         ],
         'urn:ogc:def:crs:EPSG::2105' => [
             'name' => 'NZGD2000 / Mount Eden 2000',
@@ -1292,8 +1291,7 @@ Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).',
             'extent' => ['urn:ogc:def:area:EPSG::3252'],
             'extent_name' => 'Ghana - onshore',
             'extent_description' => 'Ghana - onshore',
-            'help' => 'Ellipsoid semi-major axis (a)=20926201 Gold Coast feet. ProjCRS sometimes found in metric form: 1 Gold Coast foot = 0.3047997101815 m.
-Replaced by Leigon / Ghana Metric Grid from 1978.',
+            'help' => 'Ellipsoid semi-major axis (a)=20926201 Gold Coast feet. ProjCRS sometimes found in metric form: 1 Gold Coast foot = 0.3047997101815 m. Replaced by Leigon / Ghana Metric Grid from 1978.',
         ],
         'urn:ogc:def:crs:EPSG::2137' => [
             'name' => 'Accra / TM 1 NW',
@@ -10053,8 +10051,7 @@ Replaced by Leigon / Ghana Metric Grid from 1978.',
             'extent' => ['urn:ogc:def:area:EPSG::1412'],
             'extent_name' => 'USA - Texas',
             'extent_description' => 'United States (USA) - Texas',
-            'help' => 'Replaced by NAD83 / TSMS.
-Care: survey data in Texas uses the US survey foot, not the International foot used by this system.',
+            'help' => 'Replaced by NAD83 / TSMS. Care: survey data in Texas uses the US survey foot, not the International foot used by this system.',
         ],
         'urn:ogc:def:crs:EPSG::3081' => [
             'name' => 'NAD83 / Texas State Mapping System',
@@ -50071,9 +50068,9 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4324',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16002',
-            'extent' => ['urn:ogc:def:area:EPSG::1876'],
-            'extent_name' => 'World - S hemisphere - 174°W to 168°W',
-            'extent_description' => 'Between 174°W and 168°W, southern hemisphere between 80°S and equator, onshore and offshore',
+            'extent' => ['urn:ogc:def:area:EPSG::1875'],
+            'extent_name' => 'World - N hemisphere - 174°W to 168°W',
+            'extent_description' => 'Between 174°W and 168°W, northern hemisphere between equator and 84°N, onshore and offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::32403' => [
@@ -51553,7 +51550,7 @@ Care: survey data in Texas uses the US survey foot, not the International foot u
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16029',
             'extent' => ['urn:ogc:def:area:EPSG::2056'],
             'extent_name' => 'World - N hemisphere - 12°W to 6°W - by country',
-            'extent_description' => 'Between 12°W and 6°W, northern hemisphere between equator and 84°N, onshore and offshore. Algeria. Côte D\'Ivoire (Ivory Coast). Faroe Islands. Guinea. Ireland. Jan Mayen. Mali. Mauritania. Morocco. Portugal. Sierra Leone. Spain. United Kingdom (UK). Western Sahara',
+            'extent_description' => 'Between 12°W and 6°W, northern hemisphere between equator and 84°N, onshore and offshore. Algeria. Côte D\'Ivoire (Ivory Coast). Faroe Islands. Guinea. Ireland. Jan Mayen. Liberia, Mali. Mauritania. Morocco. Portugal. Sierra Leone. Spain. United Kingdom (UK). Western Sahara',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::32630' => [

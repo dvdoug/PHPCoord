@@ -15,5 +15,4 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
   'yAxisRotation' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::1031'),
   'zAxisRotation' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::1031'),
   'scaleDifference' => UnitOfMeasureFactory::makeUnit(0.0, 'urn:ogc:def:uom:EPSG::1028'),
-  'transformationReferenceEpoch' => UnitOfMeasureFactory::makeUnit(2002.0, 'urn:ogc:def:uom:EPSG::1029'),
 ];

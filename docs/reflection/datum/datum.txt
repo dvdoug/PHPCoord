@@ -3673,9 +3673,7 @@ Hughes 1980
 
 Centre of the Earth.
 
-Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and Special 
-
-Sensor Microwave Imager/Sounder (SSMIS) processing software.
+Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and Special Sensor Microwave Imager/Sounder (SSMIS) processing software.
 
 Hungarian Datum 1909
 --------------------
@@ -8451,9 +8449,7 @@ Porto Santo 1995
 
 SE Base on Porto Santo island. Origin and orientation constrained to those of the 1936 adjustment.
 
-Classical and GPS observations. Replaces 1936 adjustment (datum code 6615). 
-
-For Selvagens see Selvagem Grande (datum code 6616).
+Classical and GPS observations. Replaces 1936 adjustment (datum code 6615). For Selvagens see Selvagem Grande (datum code 6616).
 
 Posiciones Geodesicas Argentinas 1994
 -------------------------------------

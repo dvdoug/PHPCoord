@@ -4574,6 +4574,7 @@ RGF93 v1 / Lambert-93 + NGF-IGN69 height
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5698')
 
+Replaced by RGF93 v2 / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2010-06-18.
 
 RGF93 v1 / Lambert-93 + NGF-IGN78 height
 ----------------------------------------
@@ -4586,6 +4587,7 @@ RGF93 v1 / Lambert-93 + NGF-IGN78 height
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5699')
 
+Replaced by RGF93 v2 / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2010-06-18.
 
 RGF93 v2 + NGF-IGN69 height
 ---------------------------
@@ -4611,6 +4613,32 @@ RGF93 v2 + NGF-IGN78 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9539')
 
 
+RGF93 v2 / Lambert-93 + NGF-IGN69 height
+----------------------------------------
+| Extent: France - mainland onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10497')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10497')
+
+Replaces RGF93 v1 / Lambert-93 + NGF-IGN69 height (CRS code 5698) from 2010-06-18. Replaced by RGF93 v2b / Lambert-93 + NGF-IGN69 height (CRS code 10499) from 2021-01-05.
+
+RGF93 v2 / Lambert-93 + NGF-IGN78 height
+----------------------------------------
+| Extent: France - Corsica onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10498')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10498')
+
+Replaces RGF93 v1 / Lambert-93 + NGF-IGN78 height (CRS code 5699) from 2010-06-18. Replaced by RGF93 v2b / Lambert-93 + NGF-IGN78 height (CRS code 10500) from 2021-01-05.
+
 RGF93 v2b + NGF-IGN69 height
 ----------------------------
 | Extent: France - mainland onshore
@@ -4622,6 +4650,32 @@ RGF93 v2b + NGF-IGN69 height
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9785')
 
+
+RGF93 v2b / Lambert-93 + NGF-IGN69 height
+-----------------------------------------
+| Extent: France - mainland onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10499')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10499')
+
+Replaces RGF93 v2 / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2021-01-05.
+
+RGF93 v2b / Lambert-93 + NGF-IGN78 height
+-----------------------------------------
+| Extent: France - Corsica onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10500')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10500')
+
+Replaces RGF93 v2 / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2021-01-05.
 
 RGFG95 + NGG1977 height
 -----------------------

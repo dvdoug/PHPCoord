@@ -391,9 +391,7 @@ Accra / Ghana National Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ACCRA_GHANA_NATIONAL_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2136')
 
-Ellipsoid semi-major axis (a)=20926201 Gold Coast feet. ProjCRS sometimes found in metric form: 1 Gold Coast foot = 0.3047997101815 m.
-
-Replaced by Leigon / Ghana Metric Grid from 1978.
+Ellipsoid semi-major axis (a)=20926201 Gold Coast feet. ProjCRS sometimes found in metric form: 1 Gold Coast foot = 0.3047997101815 m. Replaced by Leigon / Ghana Metric Grid from 1978.
 
 Accra / TM 1 NW
 ---------------
@@ -14635,9 +14633,7 @@ Lake / Maracaibo La Rosa Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_LAKE_MARACAIBO_LA_ROSA_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2104')
 
-Grid coordinates are (X=-17044 Y=29545) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum).
-
-Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).
+Grid coordinates are (X=-17044 Y=29545) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).
 
 Le Pouce 1934 / Mauritius Grid
 ------------------------------
@@ -18277,9 +18273,7 @@ NAD27 / Shackleford
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD27_SHACKLEFORD)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3080')
 
-Replaced by NAD83 / TSMS.
-
-Care: survey data in Texas uses the US survey foot, not the International foot used by this system.
+Replaced by NAD83 / TSMS. Care: survey data in Texas uses the US survey foot, not the International foot used by this system.
 
 NAD27 / South Carolina North
 ----------------------------
@@ -60658,7 +60652,7 @@ WGS 72BE / UTM zone 29S
 
 WGS 72BE / UTM zone 2N
 ----------------------
-| Extent: Between 174°W and 168°W, southern hemisphere between 80°S and equator, onshore and offshore
+| Extent: Between 174°W and 168°W, northern hemisphere between equator and 84°N, onshore and offshore
 
 .. code-block:: php
 
@@ -64793,7 +64787,7 @@ WGS 84 / UTM zone 28S
 
 WGS 84 / UTM zone 29N
 ---------------------
-| Extent: Between 12°W and 6°W, northern hemisphere between equator and 84°N, onshore and offshore. Algeria. Côte D'Ivoire (Ivory Coast). Faroe Islands. Guinea. Ireland. Jan Mayen. Mali. Mauritania. Morocco. Portugal. Sierra Leone. Spain. United Kingdom (UK). Western Sahara
+| Extent: Between 12°W and 6°W, northern hemisphere between equator and 84°N, onshore and offshore. Algeria. Côte D'Ivoire (Ivory Coast). Faroe Islands. Guinea. Ireland. Jan Mayen. Liberia, Mali. Mauritania. Morocco. Portugal. Sierra Leone. Spain. United Kingdom (UK). Western Sahara
 
 .. code-block:: php
 

@@ -2705,8 +2705,7 @@ class Datum
      * Extent: World
      * Centre of the Earth.
      * Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and
-     * Special
-     * Sensor Microwave Imager/Sounder (SSMIS) processing software.
+     * Special Sensor Microwave Imager/Sounder (SSMIS) processing software.
      */
     public const EPSG_HUGHES_1980 = 'urn:ogc:def:datum:EPSG::1359';
 
@@ -6202,8 +6201,8 @@ class Datum
      * Type: Geodetic
      * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
      * SE Base on Porto Santo island. Origin and orientation constrained to those of the 1936 adjustment.
-     * Classical and GPS observations. Replaces 1936 adjustment (datum code 6615).
-     * For Selvagens see Selvagem Grande (datum code 6616).
+     * Classical and GPS observations. Replaces 1936 adjustment (datum code 6615). For Selvagens see Selvagem Grande
+     * (datum code 6616).
      */
     public const EPSG_PORTO_SANTO_1995 = 'urn:ogc:def:datum:EPSG::6663';
 
@@ -11562,9 +11561,7 @@ Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 afte
             'extent_name' => 'Poland',
             'extent_description' => 'Poland - onshore and offshore',
             'help' => 'Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network constrained to 35 EPN stations in ETRF2000@2011.0.
-Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th November 2012 on the state system of spatial reference system.
-
-',
+Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th November 2012 on the state system of spatial reference system.',
         ],
         'urn:ogc:def:datum:EPSG::1306' => [
             'name' => 'Catania 1965',
@@ -12211,8 +12208,7 @@ ETRS89 in Bosnia and Herzegovina, realized through the coordinates of 17 station
             'extent_name' => 'World',
             'extent_description' => 'World',
             'help' => 'Centre of the Earth.
-Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and Special
-Sensor Microwave Imager/Sounder (SSMIS) processing software.',
+Used in US Air Force Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager (SSM/I) and Special Sensor Microwave Imager/Sounder (SSMIS) processing software.',
         ],
         'urn:ogc:def:datum:EPSG::1360' => [
             'name' => 'NSIDC International 1924 Authalic Sphere',
@@ -17035,8 +17031,7 @@ Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coo
             'extent_name' => 'Portugal - Madeira archipelago onshore',
             'extent_description' => 'Portugal - Madeira, Porto Santo and Desertas islands - onshore',
             'help' => 'SE Base on Porto Santo island. Origin and orientation constrained to those of the 1936 adjustment.
-Classical and GPS observations. Replaces 1936 adjustment (datum code 6615).
-For Selvagens see Selvagem Grande (datum code 6616).',
+Classical and GPS observations. Replaces 1936 adjustment (datum code 6615). For Selvagens see Selvagem Grande (datum code 6616).',
         ],
         'urn:ogc:def:datum:EPSG::6664' => [
             'name' => 'Azores Oriental Islands 1995',

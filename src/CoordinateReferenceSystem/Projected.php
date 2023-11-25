@@ -228,8 +228,7 @@ class Projected extends CoordinateReferenceSystem
      * Accra / Ghana National Grid
      * Extent: Ghana - onshore
      * Ellipsoid semi-major axis (a)=20926201 Gold Coast feet. ProjCRS sometimes found in metric form: 1 Gold Coast
-     * foot = 0.3047997101815 m.
-     * Replaced by Leigon / Ghana Metric Grid from 1978.
+     * foot = 0.3047997101815 m. Replaced by Leigon / Ghana Metric Grid from 1978.
      */
     public const EPSG_ACCRA_GHANA_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::2136';
 
@@ -10492,8 +10491,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * NAD27 / Shackleford
      * Extent: United States (USA) - Texas
-     * Replaced by NAD83 / TSMS.
-     * Care: survey data in Texas uses the US survey foot, not the International foot used by this system.
+     * Replaced by NAD83 / TSMS. Care: survey data in Texas uses the US survey foot, not the International foot used by
+     * this system.
      */
     public const EPSG_NAD27_SHACKLEFORD = 'urn:ogc:def:crs:EPSG::3080';
 
@@ -37238,7 +37237,7 @@ class Projected extends CoordinateReferenceSystem
 
     /**
      * WGS 72BE / UTM zone 2N
-     * Extent: Between 174°W and 168°W, southern hemisphere between 80°S and equator, onshore and offshore.
+     * Extent: Between 174°W and 168°W, northern hemisphere between equator and 84°N, onshore and offshore.
      */
     public const EPSG_WGS_72BE_UTM_ZONE_2N = 'urn:ogc:def:crs:EPSG::32402';
 
@@ -39447,8 +39446,8 @@ class Projected extends CoordinateReferenceSystem
     /**
      * WGS 84 / UTM zone 29N
      * Extent: Between 12°W and 6°W, northern hemisphere between equator and 84°N, onshore and offshore. Algeria.
-     * Côte D'Ivoire (Ivory Coast). Faroe Islands. Guinea. Ireland. Jan Mayen. Mali. Mauritania. Morocco. Portugal.
-     * Sierra Leone. Spain. United Kingdom (UK). Western Sahara.
+     * Côte D'Ivoire (Ivory Coast). Faroe Islands. Guinea. Ireland. Jan Mayen. Liberia, Mali. Mauritania. Morocco.
+     * Portugal. Sierra Leone. Spain. United Kingdom (UK). Western Sahara.
      */
     public const EPSG_WGS_84_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::32629';
 

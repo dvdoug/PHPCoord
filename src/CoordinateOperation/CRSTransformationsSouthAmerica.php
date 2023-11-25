@@ -825,7 +825,7 @@ class CRSTransformationsSouthAmerica
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19975',
-            'name' => 'Trinidad Grid (Clarke\'s feet)',
+            'name' => 'Trinidad Grid (Clarke\'s foot)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4302',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2314',
             'accuracy' => 0,
@@ -895,14 +895,14 @@ class CRSTransformationsSouthAmerica
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8033',
-            'name' => 'TM Zone 20N (US survey feet)',
+            'name' => 'TM Zone 20N (US survey foot)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8035',
             'accuracy' => 0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8034',
-            'name' => 'TM Zone 21N (US survey feet)',
+            'name' => 'TM Zone 21N (US survey foot)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8036',
             'accuracy' => 0,
