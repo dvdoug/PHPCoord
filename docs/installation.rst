@@ -24,7 +24,7 @@ The code for the core package and the datapacks is also available to download fr
 
 Requirements
 ------------
-PHPCoord v4 is compatible with PHP 7.3+
+PHPCoord v5 is compatible with PHP 8.0+
 
 .. _Composer: https://getcomposer.org
 .. _GitHub: https://github.com/dvdoug/PHPCoord/releases
