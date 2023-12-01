@@ -10240,13 +10240,6 @@ class CoordinateOperations
             'extent_name' => 'Belgium - onshore',
             'extent_description' => 'Belgium - onshore',
         ],
-        'urn:ogc:def:coordinateOperation:EPSG::8372' => [
-            'name' => 'RGF93 v2 to NGF-IGN78 height (2)',
-            'method' => 'urn:ogc:def:method:EPSG::1073',
-            'extent' => ['urn:ogc:def:area:EPSG::1327'],
-            'extent_name' => 'France - Corsica onshore',
-            'extent_description' => 'France - Corsica onshore',
-        ],
         'urn:ogc:def:coordinateOperation:EPSG::8373' => [
             'name' => 'NCRS Las Vegas zone (m)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -14621,6 +14614,20 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::2185'],
             'extent_name' => 'USA - Colorado - SPCS - S',
             'extent_description' => 'United States (USA) - Colorado - counties Alamosa; Archuleta; Baca; Bent; Conejos; Costilla; Crowley; Custer; Dolores; Hinsdale; Huerfano; Kiowa; La Plata; Las Animas; Mineral; Montezuma; Montrose; Otero; Ouray; Prowers; Pueblo; Rio Grande; Saguache; San Juan; San Miguel',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10506' => [
+            'name' => 'RGF93 v2b to NGF-IGN78 height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1073',
+            'extent' => ['urn:ogc:def:area:EPSG::1327'],
+            'extent_name' => 'France - Corsica onshore',
+            'extent_description' => 'France - Corsica onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10508' => [
+            'name' => 'RGF93 v2b to RGF93 v2b + NGF-IGN78 height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1095',
+            'extent' => ['urn:ogc:def:area:EPSG::1327'],
+            'extent_name' => 'France - Corsica onshore',
+            'extent_description' => 'France - Corsica onshore',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10531' => [
             'name' => 'SPCS83 Colorado North zone (meter)',

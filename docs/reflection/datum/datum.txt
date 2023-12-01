@@ -1695,19 +1695,72 @@ Mean Sea Level at 10 gauges.
 
 Orthometric heights.
 
-Dansk Vertikal Reference 1990
------------------------------
+Dansk Vertikal Reference 1990 (2000)
+------------------------------------
 | Type: Vertical
 | Extent: Denmark - onshore
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990)
+    Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2000)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5206')
 
 Benchmark at Århus cathedral referenced to mean sea level determined during 1990 at 10 tide gauges: Esbjerg, Fredericia, Frederikshavn, Gedser, Hirtshals, Hornbæk, Korsør, København, Slipshavn and Århus.
 
-Normal Orthometric heights.
+Helmert orthometric heights. First realization of DVR90, based on levelling.
+
+Dansk Vertikal Reference 1990 (2002)
+------------------------------------
+| Type: Vertical
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2002)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1368')
+
+Benchmark at Århus cathedral referenced to mean sea level determined during 1990 at 10 tide gauges: Esbjerg, Fredericia, Frederikshavn, Gedser, Hirtshals, Hornbæk, Korsør, København, Slipshavn and Århus.
+
+First geoid-based realization of DVR90. Replaced by DVR90(2013).
+
+Dansk Vertikal Reference 1990 (2013)
+------------------------------------
+| Type: Vertical
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2013)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1369')
+
+Benchmark at Århus cathedral referenced to mean sea level determined during 1990 at 10 tide gauges: Esbjerg, Fredericia, Frederikshavn, Gedser, Hirtshals, Hornbæk, Korsør, København, Slipshavn and Århus.
+
+Second geoid-based realization of DVR90. Replaces DVR90(2002). Replaced by DVR90(2023).
+
+Dansk Vertikal Reference 1990 (2023)
+------------------------------------
+| Type: Vertical
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1370')
+
+Benchmark at Århus cathedral referenced to mean sea level determined during 1990 at 10 tide gauges: Esbjerg, Fredericia, Frederikshavn, Gedser, Hirtshals, Hornbæk, Korsør, København, Slipshavn and Århus.
+
+Second geoid-based realization of DVR90. Replaces DVR90(2013).
+
+Dansk Vertikal Reference 1990 ensemble
+--------------------------------------
+| Type: Ensemble
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_ENSEMBLE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1371')
+
 
 Datum 73
 --------

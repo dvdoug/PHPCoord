@@ -75,6 +75,8 @@ class EPSGCodegenFromDataImport
         1113, // Vertical Offset by velocity grid (NRCan byn)
         1114, // Geographic3D Offset by velocity grid (NRCan byn)
         1120, // Point motion (geocen) by grid (BGN)
+        1123, // Geographic3D to GravityRelatedHeight (gtg)
+        1124, // Geog3D to Geog2D+GravityRelatedHeight (gtg)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -928,6 +930,7 @@ class EPSGCodegenFromDataImport
                 'urn:ogc:def:meridian:EPSG::' || d.prime_meridian_code AS prime_meridian,
                 d.conventional_rs_code AS conventional_rs,
                 d.frame_reference_epoch,
+                d.anchor_epoch,
                 d.origin_description || '\n' || d.remarks AS constant_help,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
@@ -982,6 +985,7 @@ class EPSGCodegenFromDataImport
                 Datum::EPSG_CAIS_DA_FIGUEIRINHA => ['Cais da Figueirinha - Angra do Heroismo'],
                 Datum::EPSG_CAIS_DA_PONTINHA => ['Cais da Pontinha - Funchal'],
                 Datum::EPSG_CAIS_DA_VILA => ['Cais da Vila - Porto Santo'],
+                Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2000 => ['Dansk Vertikal Reference 1990'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);

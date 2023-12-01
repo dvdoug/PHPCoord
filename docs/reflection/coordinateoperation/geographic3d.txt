@@ -5241,24 +5241,6 @@ RGF93 v2
 --------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_RGF93_V2)``
 
-to NGF-IGN78 height (Vertical)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. csv-table::
-    :header: "EPSG", "PHPCoord"
-    :widths: 40, 60
-
-    "| Name: RGF93 v2 to NGF-IGN78 height (2)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::8372``
-    | Extent: France - Corsica onshore",".. code-block:: php
-
-        $point->geographic3DToGravityHeightFromGrid(
-            to: Vertical::fromSRID(Vertical::EPSG_NGF_IGN78_HEIGHT),
-            geoidHeightCorrectionModelFile: IGNFHeightRGF93v2NGFIGN78CorsicaProvider->provideGrid()
-        )
-
-    "
-
-
 to RGF93 v2 (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -5334,6 +5316,24 @@ to NGF-IGN69 height (Vertical)
     "
 
 
+to NGF-IGN78 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: RGF93 v2b to NGF-IGN78 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10506``
+    | Extent: France - Corsica onshore",".. code-block:: php
+
+        $point->geographic3DToGravityHeightFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_NGF_IGN78_HEIGHT),
+            geoidHeightCorrectionModelFile: IGNFHeightRGF93v2NGFIGN78CorsicaProvider->provideGrid()
+        )
+
+    "
+
+
 to RGF93 v2b (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -5381,6 +5381,24 @@ to RGF93 v2b + NGF-IGN69 height (Compound)
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT),
             geoidHeightCorrectionModelFile: IGNFHeightRGF93v2bNGFIGN69FranceProvider->provideGrid()
+        )
+
+    "
+
+
+to RGF93 v2b + NGF-IGN78 height (Compound)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: RGF93 v2b to RGF93 v2b + NGF-IGN78 height (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10508``
+    | Extent: France - Corsica onshore",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT),
+            geoidHeightCorrectionModelFile: IGNFHeightRGF93v2NGFIGN78CorsicaProvider->provideGrid()
         )
 
     "

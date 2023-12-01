@@ -176,7 +176,7 @@ return [
     'gr3dnc02b.mnt' => CoordinateOperation\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193NoumeaProvider::class,
     'gr3dnc03a.mnt' => CoordinateOperation\IGNFGeocentricTranslationNEA74NoumeaRGNC9193Provider::class,
     'RAF20.tac' => CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider::class,
-    'RAC09.mnt' => CoordinateOperation\IGNFHeightRGF93v2NGFIGN78CorsicaProvider::class,
+    'RAC23.mnt' => CoordinateOperation\IGNFHeightRGF93v2NGFIGN78CorsicaProvider::class,
     'RALD2016.mnt' => CoordinateOperation\IGNFHeightRGAF09IGN2008LaDesiradeProvider::class,
     'RALDW842016.mnt' => CoordinateOperation\IGNFHeightWGS84IGN2008LaDesiradeProvider::class,
     'RAGTBT2016.mnt' => CoordinateOperation\IGNFHeightRGAF09Guadeloupe1988Provider::class,

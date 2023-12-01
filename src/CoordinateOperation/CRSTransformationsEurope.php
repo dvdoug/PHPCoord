@@ -6291,13 +6291,6 @@ class CRSTransformationsEurope
             'accuracy' => 0,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8372',
-            'name' => 'RGF93 v2 to NGF-IGN78 height (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::9776',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::5721',
-            'accuracy' => 0.05,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9789',
             'name' => 'RGF93 v2 to ETRS89 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9777',
@@ -6382,11 +6375,25 @@ class CRSTransformationsEurope
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10508',
+            'name' => 'RGF93 v2b to RGF93 v2b + NGF-IGN78 height (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9781',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10507',
+            'accuracy' => 0.02,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9876',
             'name' => 'RGF93 v2b to NGF-IGN69 height (5)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9781',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'accuracy' => 0.01,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10506',
+            'name' => 'RGF93 v2b to NGF-IGN78 height (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9781',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5721',
+            'accuracy' => 0.02,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9877',

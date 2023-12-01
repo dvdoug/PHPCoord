@@ -448,9 +448,39 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * DVR90 height
      * Extent: Denmark - onshore
-     * Replaces Dansk Normal Null height (CRS code 5733).
+     * Reference for all realizations of DVR90 without distinction: DVR90(2000), DVR90(2002), DVR90(2013) and
+     * DVR90(2023).
      */
     public const EPSG_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::5799';
+
+    /**
+     * DVR90(2000) height
+     * Extent: Denmark - onshore
+     * Realizes DVR90 through the levelling network. Replaces Dansk Normal Null height (CRS code 5733).
+     */
+    public const EPSG_DVR90_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10482';
+
+    /**
+     * DVR90(2002) height
+     * Extent: Denmark - onshore
+     * Geoid-based realization to obtain DVR90 heights through GNSS. Replaced by DVR90(2013) height (CRS code 10484).
+     */
+    public const EPSG_DVR90_2002_HEIGHT = 'urn:ogc:def:crs:EPSG::10483';
+
+    /**
+     * DVR90(2013) height
+     * Extent: Denmark - onshore
+     * Geoid-based realization to obtain DVR90 heights through GNSS. Replaces DVR90(2002) height (CRS code 10483).
+     * Replaced by DVR90(2023) height (CRS code 10485).
+     */
+    public const EPSG_DVR90_2013_HEIGHT = 'urn:ogc:def:crs:EPSG::10484';
+
+    /**
+     * DVR90(2023) height
+     * Extent: Denmark - onshore
+     * Geoid-based realization to obtain DVR90 heights through GNSS. Replaces DVR90(2013) height (CRS code 10484).
+     */
+    public const EPSG_DVR90_2023_HEIGHT = 'urn:ogc:def:crs:EPSG::10485';
 
     /**
      * Danger 1950 height

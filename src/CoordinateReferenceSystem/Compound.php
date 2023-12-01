@@ -294,6 +294,24 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9924';
 
     /**
+     * ETRS89 + DVR90(2002) height
+     * Extent: Denmark - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_DVR90_2002_HEIGHT = 'urn:ogc:def:crs:EPSG::10486';
+
+    /**
+     * ETRS89 + DVR90(2013) height
+     * Extent: Denmark - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_DVR90_2013_HEIGHT = 'urn:ogc:def:crs:EPSG::10487';
+
+    /**
+     * ETRS89 + DVR90(2023) height
+     * Extent: Denmark - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_DVR90_2023_HEIGHT = 'urn:ogc:def:crs:EPSG::10488';
+
+    /**
      * ETRS89 + Douglas height
      * Extent: Isle of Man - onshore.
      */
@@ -2731,6 +2749,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: France - mainland onshore.
      */
     public const EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9785';
+
+    /**
+     * RGF93 v2b + NGF-IGN78 height
+     * Extent: France - Corsica onshore.
+     */
+    public const EPSG_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10507';
 
     /**
      * RGF93 v2b / Lambert-93 + NGF-IGN69 height

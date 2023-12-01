@@ -742,7 +742,59 @@ DVR90 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_DVR90_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5799')
 
-Replaces Dansk Normal Null height (CRS code 5733).
+Reference for all realizations of DVR90 without distinction: DVR90(2000), DVR90(2002), DVR90(2013) and DVR90(2023).
+
+DVR90(2000) height
+------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_DVR90_2000_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10482')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_DVR90_2000_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10482')
+
+Realizes DVR90 through the levelling network. Replaces Dansk Normal Null height (CRS code 5733).
+
+DVR90(2002) height
+------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_DVR90_2002_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10483')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_DVR90_2002_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10483')
+
+Geoid-based realization to obtain DVR90 heights through GNSS. Replaced by DVR90(2013) height (CRS code 10484).
+
+DVR90(2013) height
+------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_DVR90_2013_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10484')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_DVR90_2013_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10484')
+
+Geoid-based realization to obtain DVR90 heights through GNSS. Replaces DVR90(2002) height (CRS code 10483). Replaced by DVR90(2023) height (CRS code 10485).
+
+DVR90(2023) height
+------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_DVR90_2023_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10485')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_DVR90_2023_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10485')
+
+Geoid-based realization to obtain DVR90 heights through GNSS. Replaces DVR90(2013) height (CRS code 10484).
 
 Danger 1950 height
 ------------------

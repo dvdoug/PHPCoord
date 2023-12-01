@@ -499,6 +499,42 @@ ETRS89 + DHHN2016 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9924')
 
 
+ETRS89 + DVR90(2002) height
+---------------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DVR90_2002_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10486')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DVR90_2002_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10486')
+
+
+ETRS89 + DVR90(2013) height
+---------------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DVR90_2013_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10487')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DVR90_2013_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10487')
+
+
+ETRS89 + DVR90(2023) height
+---------------------------
+| Extent: Denmark - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DVR90_2023_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10488')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DVR90_2023_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10488')
+
+
 ETRS89 + Douglas height
 -----------------------
 | Extent: Isle of Man - onshore
@@ -4649,6 +4685,18 @@ RGF93 v2b + NGF-IGN69 height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::9785')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9785')
+
+
+RGF93 v2b + NGF-IGN78 height
+----------------------------
+| Extent: France - Corsica onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10507')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10507')
 
 
 RGF93 v2b / Lambert-93 + NGF-IGN69 height

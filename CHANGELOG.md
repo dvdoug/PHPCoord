@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 ### Changed
-- Updates to data for France
+- Updates to data for Denmark and France
 - More aggressive buffering of extent polygons
 
 ## [5.6.0] - 2023-09-30
