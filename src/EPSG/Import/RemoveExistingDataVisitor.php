@@ -14,7 +14,7 @@ use PhpParser\NodeVisitorAbstract;
 
 class RemoveExistingDataVisitor extends NodeVisitorAbstract
 {
-    private $hasSeenExistingData = false;
+    private bool $hasSeenExistingData = false;
 
     public function leaveNode(Node $node)
     {

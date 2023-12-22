@@ -16,7 +16,7 @@ use PhpParser\PrettyPrinter\Standard;
 
 class ASTPrettyPrinter extends Standard
 {
-    protected function pExpr_Array(Array_ $node)
+    protected function pExpr_Array(Array_ $node): string
     {
         if ($node->getAttribute('printMultiline', true)) {
             return '[' . $this->pCommaSeparatedMultiline($node->items, true) . $this->nl . ']';

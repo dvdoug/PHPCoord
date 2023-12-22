@@ -1917,7 +1917,7 @@ class EPSGCodegenFromDataImport
             }
         }
         foreach (RegionMap::PACKAGES as $package) {
-            $baseDir = \Composer\InstalledVersions::getInstallPath($package) . '/src/Geometry/Extents/';
+            $baseDir = InstalledVersions::getInstallPath($package) . '/src/Geometry/Extents/';
             foreach (glob($baseDir . '/[0-9]*.json') as $filename) {
                 $code = basename($filename, '.json');
                 if (!isset($extents[$code])) {

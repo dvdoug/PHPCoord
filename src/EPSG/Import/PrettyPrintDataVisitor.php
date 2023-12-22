@@ -15,9 +15,9 @@ use function in_array;
 
 class PrettyPrintDataVisitor extends NodeVisitorAbstract
 {
-    protected $multiLine = true;
+    protected bool $multiLine = true;
 
-    protected $singleLineKeys = ['extent'];
+    protected array $singleLineKeys = ['extent'];
 
     public function enterNode(Node $node)
     {

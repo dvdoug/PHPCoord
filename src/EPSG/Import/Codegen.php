@@ -27,10 +27,9 @@ use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Console\ConfigurationResolver;
 use PhpCsFixer\Tokenizer\Tokens;
 use PhpCsFixer\ToolInfo;
-use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
-use PhpParser\Parser\Php7;
+use PhpParser\ParserFactory;
 use ReflectionClass;
 use SplFileInfo;
 use ReflectionClassConstant;
@@ -82,16 +81,7 @@ class Codegen
     {
         echo "Updating constants in {$fileName}...";
 
-        $lexer = new Emulative(
-            [
-                'usedAttributes' => [
-                    'comments',
-                    'startLine', 'endLine',
-                    'startTokenPos', 'endTokenPos',
-                ],
-            ]
-        );
-        $parser = new Php7($lexer);
+        $parser = (new ParserFactory())->createForNewestSupportedVersion();
 
         $traverser = new NodeTraverser();
         $traverser->addVisitor(new CloningVisitor());
@@ -124,16 +114,7 @@ class Codegen
     {
         echo "Updating data in {$fileName}...";
 
-        $lexer = new Emulative(
-            [
-                'usedAttributes' => [
-                    'comments',
-                    'startLine', 'endLine',
-                    'startTokenPos', 'endTokenPos',
-                ],
-            ]
-        );
-        $parser = new Php7($lexer);
+        $parser = (new ParserFactory())->createForNewestSupportedVersion();
 
         $traverser = new NodeTraverser();
         $traverser->addVisitor(new CloningVisitor());
