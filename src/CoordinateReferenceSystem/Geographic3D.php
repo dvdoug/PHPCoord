@@ -1727,7 +1727,7 @@ class Geographic3D extends Geographic
             $data = static::$sridData[$srid];
             $baseCRS = $data['base_crs'] ? CoordinateReferenceSystem::fromSRID($data['base_crs']) : null;
             assert($baseCRS === null || $baseCRS instanceof Geocentric || $baseCRS instanceof self);
-            $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
+            $extent = ($data['extent'] instanceof BoundingArea) ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
             self::$cachedObjects[$srid] = new self($srid, Ellipsoidal::fromSRID($data['coordinate_system']), Datum::fromSRID($data['datum']), $extent, $data['name'], $baseCRS);
         }
 

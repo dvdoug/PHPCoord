@@ -40665,7 +40665,7 @@ class Projected extends CoordinateReferenceSystem
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
             $baseCRS = Geographic::fromSRID($data['base_crs']);
-            $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
+            $extent = ($data['extent'] instanceof BoundingArea) ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
             self::$cachedObjects[$srid] = new self($srid, Cartesian::fromSRID($data['coordinate_system']), $baseCRS->getDatum(), $extent, $data['name'], $baseCRS, $data['deriving_conversion']);
         }
 

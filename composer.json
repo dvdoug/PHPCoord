@@ -21,7 +21,7 @@
         "ext-json": "*",
         "ext-sqlite3": "*",
         "friendsofphp/php-cs-fixer": "^3.41",
-        "nikic/php-parser": "^4.18",
+        "nikic/php-parser": "^5.0",
         "php-coord/datapack-africa": "dev-master",
         "php-coord/datapack-antarctic": "dev-master",
         "php-coord/datapack-arctic": "dev-master",
