@@ -288,8 +288,6 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
      * Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt,
      * Schleswig-Holstein, Thuringen.
-     *
-     * @deprecated
      */
     public const EPSG_ETRS89_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9924';
 
@@ -912,7 +910,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 / UTM zone 31N + DHHN92 height
-     * Extent: Germany - onshore west of 6°E.
+     * Extent: Germany - onshore west of 6°E - Nordrhein-Westfalen.
      */
     public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5554';
 

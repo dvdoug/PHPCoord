@@ -1663,7 +1663,7 @@ Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-TM35FIN(N,E)/N2000 (CRS cod
 
 ETRS89 / UTM zone 31N + DHHN92 height
 -------------------------------------
-| Extent: Germany - onshore west of 6°E
+| Extent: Germany - onshore west of 6°E - Nordrhein-Westfalen
 
 .. code-block:: php
 

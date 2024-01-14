@@ -138,7 +138,7 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3901'],
             'extent_name' => 'Germany - onshore west of 6°E',
-            'extent_description' => 'Germany - onshore west of 6°E',
+            'extent_description' => 'Germany - onshore west of 6°E - Nordrhein-Westfalen',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5555' => [

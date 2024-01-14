@@ -54,6 +54,27 @@ class CRSTransformationsGlobal
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16031',
+            'name' => 'UTM zone 31N',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10284',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10731',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16032',
+            'name' => 'UTM zone 32N',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10284',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10732',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16033',
+            'name' => 'UTM zone 33N',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10284',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10733',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
             'name' => 'geocentric to geographic3D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::10297',

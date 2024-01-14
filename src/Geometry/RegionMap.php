@@ -3656,5 +3656,12 @@ class RegionMap
             'urn:ogc:def:area:EPSG::4742' => self::REGION_EUROPE,
             'urn:ogc:def:area:EPSG::4743' => self::REGION_EUROPE,
             'urn:ogc:def:area:EPSG::4744' => self::REGION_EUROPE,
+            'urn:ogc:def:area:EPSG::4745' => self::REGION_AFRICA,
+            'urn:ogc:def:area:EPSG::4746' => self::REGION_ANTARCTIC,
+            'urn:ogc:def:area:EPSG::4747' => self::REGION_ASIA,
+            'urn:ogc:def:area:EPSG::4748' => self::REGION_EUROPE,
+            'urn:ogc:def:area:EPSG::4749' => self::REGION_NORTHAMERICA,
+            'urn:ogc:def:area:EPSG::4750' => self::REGION_SOUTHAMERICA,
+            'urn:ogc:def:area:EPSG::4751' => self::REGION_OCEANIA,
         ];
 }

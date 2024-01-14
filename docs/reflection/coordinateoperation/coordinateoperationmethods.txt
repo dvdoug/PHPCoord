@@ -1118,14 +1118,6 @@ Vertical Offset by Grid Interpolation (BEV AT)
     'urn:ogc:def:method:EPSG::1080'
 
 
-Vertical Offset by Grid Interpolation (NRCan byn)
--------------------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN
-    'urn:ogc:def:method:EPSG::1112'
-
-
 Vertical Offset by Grid Interpolation (NZLVD)
 ---------------------------------------------
 .. code-block:: php
@@ -1180,6 +1172,14 @@ Vertical Perspective (Orthographic case)
 
     CoordinateOperationMethods::EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE
     'urn:ogc:def:method:EPSG::9839'
+
+
+Vertical change by geoid grid difference (NRCan)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN
+    'urn:ogc:def:method:EPSG::1126'
 
 
 Zero-tide height to mean-tide height (EVRF2019)

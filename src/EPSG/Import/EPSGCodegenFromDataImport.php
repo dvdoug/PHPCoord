@@ -54,6 +54,7 @@ use function var_export;
 use function basename;
 use function addcslashes;
 use function preg_replace;
+use function file_exists;
 
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
@@ -77,6 +78,7 @@ class EPSGCodegenFromDataImport
         1120, // Point motion (geocen) by grid (BGN)
         1123, // Geographic3D to GravityRelatedHeight (gtg)
         1124, // Geog3D to Geog2D+GravityRelatedHeight (gtg)
+        1125, // Equi-7
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -1408,6 +1410,7 @@ class EPSGCodegenFromDataImport
             FROM epsg_coordinatereferencesystem crs
             JOIN epsg_usage u ON u.object_table_name = 'epsg_coordinatereferencesystem' AND u.object_code = crs.coord_ref_sys_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
+            JOIN epsg_coordoperation o ON crs.projection_conv_code = o.coord_op_code AND o.coord_op_code NOT IN (" . implode(',', self::BLACKLISTED_OPERATIONS) . ') AND o.coord_op_method_code NOT IN (' . implode(',', self::BLACKLISTED_METHODS) . ")
             LEFT JOIN epsg_coordinatereferencesystem crs_base ON crs_base.coord_ref_sys_code = crs.base_crs_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordinatereferencesystem' AND dep.object_code = crs.coord_ref_sys_code AND dep.deprecation_date <= '2021-09-10'
             WHERE dep.deprecation_id IS NULL AND crs.coord_ref_sys_kind NOT IN ('engineering', 'derived') AND crs.coord_ref_sys_name NOT LIKE '%example%' AND crs.coord_ref_sys_name NOT LIKE '%mining%'
@@ -1785,6 +1788,7 @@ class EPSGCodegenFromDataImport
                         [
                             'eastingAndNorthingDifferenceFile',
                             'geoidHeightCorrectionModelFile',
+                            'geoidModelDifferenceFile',
                             'latitudeDifferenceFile',
                             'longitudeDifferenceFile',
                             'ellipsoidalHeightDifferenceFile',
@@ -1898,13 +1902,18 @@ class EPSGCodegenFromDataImport
             $bufferedGeoJSON = GeoJSON::format($bufferedGeoJSON);
             $baseDir = InstalledVersions::getInstallPath(RegionMap::PACKAGES[$region]) . '/src/Geometry/Extents/';
 
+            $bufferedFilename = $baseDir . "{$extentCode}.json";
+            $bboxFilename = $boundingBoxOnly . "{$extentCode}.json";
+            if (file_exists($bufferedFilename) && file_get_contents($bufferedFilename) !== $bufferedGeoJSON) {
+                file_put_contents($bufferedFilename, $bufferedGeoJSON);
+            }
             switch ($region) {
                 case RegionMap::REGION_GLOBAL:
-                    file_put_contents($baseDir . "{$extentCode}.json", $bufferedGeoJSON);
                     break;
                 default:
-                    file_put_contents($boundingBoxOnly . "{$extentCode}.json", $bboxGeoJSON);
-                    file_put_contents($baseDir . "{$extentCode}.json", $bufferedGeoJSON);
+                    if (file_exists($bboxFilename) && file_get_contents($bboxFilename) !== $bboxGeoJSON) {
+                        file_put_contents($boundingBoxOnly . "{$extentCode}.json", $bboxGeoJSON);
+                    }
                     break;
             }
         }
@@ -1936,7 +1945,7 @@ class EPSGCodegenFromDataImport
             $string = lcfirst($string);
         }
 
-        if (in_array($string, ['latitudeAndLongitudeDifferenceFile', 'geocentricTranslationFile', 'verticalOffsetFile'], true)) {
+        if (in_array($string, ['latitudeAndLongitudeDifferenceFile', 'geocentricTranslationFile', 'verticalOffsetFile', 'geoidModelDifferenceFile'], true)) {
             $string = 'offsetsFile';
         }
 

@@ -712,11 +712,6 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT = 'urn:ogc:def:method:EPSG::1080';
 
     /**
-     * Vertical Offset by Grid Interpolation (NRCan byn).
-     */
-    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN = 'urn:ogc:def:method:EPSG::1112';
-
-    /**
      * Vertical Offset by Grid Interpolation (NZLVD).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
@@ -750,6 +745,11 @@ class CoordinateOperationMethods
      * Vertical Perspective (Orthographic case).
      */
     public const EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE = 'urn:ogc:def:method:EPSG::9839';
+
+    /**
+     * Vertical change by geoid grid difference (NRCan).
+     */
+    public const EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN = 'urn:ogc:def:method:EPSG::1126';
 
     /**
      * Zero-tide height to mean-tide height (EVRF2019).
@@ -2329,19 +2329,6 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
-        'urn:ogc:def:method:EPSG::1112' => [
-            'name' => 'Vertical Offset by Grid Interpolation (NRCan byn)',
-            'reversible' => true,
-            'paramData' => [
-                'offsetsFile' => [
-                    'reverses' => true,
-                ],
-                'EPSGCodeForInterpolationCRS' => [
-                    'reverses' => false,
-                ],
-            ],
-            'help' => '',
-        ],
         'urn:ogc:def:method:EPSG::1117' => [
             'name' => 'Geographic3D to GravityRelatedHeight (ISG)',
             'reversible' => false,
@@ -2385,6 +2372,19 @@ class CoordinateOperationMethods
                     'reverses' => false,
                 ],
                 'northingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1126' => [
+            'name' => 'Vertical change by geoid grid difference (NRCan)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
                     'reverses' => false,
                 ],
             ],
@@ -4603,7 +4603,7 @@ class CoordinateOperationMethods
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NRCAN_BYN => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NRCAN_BYN => 'geographic3DToGravityHeightFromGrid',
-        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NRCAN_BYN => 'offsetFromGrid',
+        self::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',

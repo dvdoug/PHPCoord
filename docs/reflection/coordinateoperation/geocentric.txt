@@ -9755,6 +9755,30 @@ to NAD83(CSRS)v2 (Geographic3D)
 
     "
 
+
+to NAD83(CSRS)v3 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v2 to NAD83(CSRS)v3 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10511``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V3),
+            xAxisTranslation: new Metre(0),
+            yAxisTranslation: new Metre(0),
+            zAxisTranslation: new Metre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0)
+        )
+
+    "
+
 NAD83(CSRS)v3
 -------------
 ``Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V3)``
@@ -9810,6 +9834,30 @@ to NAD83(CORS96) (Geocentric)
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
             scaleDifference: new PartsPerBillion(0)
+        )
+
+    "
+
+
+to NAD83(CSRS)v2 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v2 to NAD83(CSRS)v3 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10511``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V2),
+            xAxisTranslation: new Metre(-0),
+            yAxisTranslation: new Metre(-0),
+            zAxisTranslation: new Metre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "
@@ -10035,6 +10083,54 @@ to NAD83(CSRS)v6 (Geographic3D)
 
     "
 
+
+to NAD83(CSRS)v7 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v6 to NAD83(CSRS)v7 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10512``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7),
+            xAxisTranslation: new Metre(0),
+            yAxisTranslation: new Metre(0),
+            zAxisTranslation: new Metre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0)
+        )
+
+    "
+
+
+to NAD83(CSRS)v8 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v6 to NAD83(CSRS)v8 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10513``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8),
+            xAxisTranslation: new Metre(0),
+            yAxisTranslation: new Metre(0),
+            zAxisTranslation: new Metre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0)
+        )
+
+    "
+
 NAD83(CSRS)v7
 -------------
 ``Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7)``
@@ -10095,6 +10191,30 @@ to NAD83(2011) (Geocentric)
     "
 
 
+to NAD83(CSRS)v6 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v6 to NAD83(CSRS)v7 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10512``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V6),
+            xAxisTranslation: new Metre(-0),
+            yAxisTranslation: new Metre(-0),
+            zAxisTranslation: new Metre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0)
+        )
+
+    "
+
+
 to NAD83(CSRS)v7 (Geographic3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -10107,6 +10227,30 @@ to NAD83(CSRS)v7 (Geographic3D)
 
         $point->geographicGeocentric(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V7)
+        )
+
+    "
+
+
+to NAD83(CSRS)v8 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v7 to NAD83(CSRS)v8 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10514``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V8),
+            xAxisTranslation: new Metre(0),
+            yAxisTranslation: new Metre(0),
+            zAxisTranslation: new Metre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0)
         )
 
     "
@@ -10166,6 +10310,54 @@ to NAD83(2011) (Geocentric)
             yAxisRotation: new ArcSecond(0),
             zAxisRotation: new ArcSecond(0),
             scaleDifference: new PartsPerBillion(0)
+        )
+
+    "
+
+
+to NAD83(CSRS)v6 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v6 to NAD83(CSRS)v8 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10513``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V6),
+            xAxisTranslation: new Metre(-0),
+            yAxisTranslation: new Metre(-0),
+            zAxisTranslation: new Metre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0)
+        )
+
+    "
+
+
+to NAD83(CSRS)v7 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(CSRS)v7 to NAD83(CSRS)v8 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10514``
+    | Extent: Canada",".. code-block:: php
+
+        $point->positionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_NAD83_CSRS_V7),
+            xAxisTranslation: new Metre(-0),
+            yAxisTranslation: new Metre(-0),
+            zAxisTranslation: new Metre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0)
         )
 
     "

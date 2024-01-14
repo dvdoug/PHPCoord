@@ -2021,6 +2021,13 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10543',
+            'name' => 'GDM2000 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4742',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5077',
             'name' => 'Karbala 1979 to IGRS (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',

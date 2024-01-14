@@ -795,9 +795,9 @@ to CGVD28 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: CGVD28 height to CGVD2013a(1997) height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10113``
-    | Extent: Canada",".. code-block:: php
+    "| Name: CGVD28 height to CGVD2013a(1997) height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10518``
+    | Extent: Canada - CGVD28",".. code-block:: php
 
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
@@ -816,9 +816,9 @@ to CGVD28 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: CGVD28 height to CGVD2013a(2002) height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10114``
-    | Extent: Canada",".. code-block:: php
+    "| Name: CGVD28 height to CGVD2013a(2002) height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10519``
+    | Extent: Canada - CGVD28",".. code-block:: php
 
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
@@ -837,9 +837,9 @@ to CGVD28 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: CGVD28 height to CGVD2013a(2010) height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10115``
-    | Extent: Canada",".. code-block:: php
+    "| Name: CGVD28 height to CGVD2013a(2010) height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10520``
+    | Extent: Canada - CGVD28",".. code-block:: php
 
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_CGVD28_HEIGHT),
@@ -858,9 +858,9 @@ to CGVD2013a(1997) height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: CGVD28 height to CGVD2013a(1997) height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10113``
-    | Extent: Canada",".. code-block:: php
+    "| Name: CGVD28 height to CGVD2013a(1997) height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10518``
+    | Extent: Canada - CGVD28",".. code-block:: php
 
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_1997_HEIGHT),
@@ -876,9 +876,9 @@ to CGVD2013a(2002) height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: CGVD28 height to CGVD2013a(2002) height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10114``
-    | Extent: Canada",".. code-block:: php
+    "| Name: CGVD28 height to CGVD2013a(2002) height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10519``
+    | Extent: Canada - CGVD28",".. code-block:: php
 
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2002_HEIGHT),
@@ -894,9 +894,9 @@ to CGVD2013a(2010) height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: CGVD28 height to CGVD2013a(2010) height (1)
-    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10115``
-    | Extent: Canada",".. code-block:: php
+    "| Name: CGVD28 height to CGVD2013a(2010) height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10520``
+    | Extent: Canada - CGVD28",".. code-block:: php
 
         $point->offsetFromGrid(
             to: Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT),

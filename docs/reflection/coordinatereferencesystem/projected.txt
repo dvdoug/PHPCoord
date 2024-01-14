@@ -5015,7 +5015,7 @@ ED50 / UTM zone 30N
 
 ED50 / UTM zone 31N
 -------------------
-| Extent: Europe - between 0°E and 6°E - Andorra; Denmark (North Sea); Germany offshore; Netherlands offshore; Norway including Svalbard - onshore and offshore; Spain - onshore (mainland and Balearic Islands); United Kingdom (UKCS) offshore
+| Extent: Europe - between 0°E and 6°E - Andorra; Denmark (North Sea); France - offshore; Germany - offshore; Netherlands - offshore; Norway including Svalbard - onshore and offshore; Spain - onshore (mainland and Balearic Islands); United Kingdom - offshore UKCS
 
 .. code-block:: php
 
@@ -6587,7 +6587,7 @@ ETRS89 / UTM zone 31N (N-zE)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_31N_N_ZE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5651')
 
-Variant of ETRS89 / UTM zone 31N (CRS code 25831) in which axis order is reversed and easting has zone prefix.
+Variant used in Germany of ETRS89 / UTM zone 31N (code 25831) in which axis order is reversed and easting has zone prefix. Does not distinguish between different realizations of ETRS89. For cadastre and engineering survey use DREF91/2016 CRS code 10286.
 
 ETRS89 / UTM zone 31N (zE-N)
 ----------------------------
@@ -6600,7 +6600,7 @@ ETRS89 / UTM zone 31N (zE-N)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_31N_ZE_N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5649')
 
-Variant of ETRS89 / UTM zone 31N (CRS code 25831) in which easting has zone prefix.
+Variant used in Germany of ETRS89 / UTM zone 31N (CRS code 25831) in which easting has zone prefix. Does not distinguish between different realizations of ETRS89. For cadastre and engineering survey use ETRS89/DREF91/2016 (CRS code 10287).
 
 ETRS89 / UTM zone 32N
 ---------------------
@@ -6630,7 +6630,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 32N (N-zE)
 ----------------------------
-| Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E and Schleswig-Holstein
+| Extent: Germany - onshore and offshore between 6°E and 12°E - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen
 
 .. code-block:: php
 
@@ -6639,11 +6639,11 @@ ETRS89 / UTM zone 32N (N-zE)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_32N_N_ZE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5652')
 
-Variant of ETRS89 / UTM zone 32N (CRS code 25832) in which axis order is reversed and easting has zone prefix.
+Variant used in Germany of ETRS89 / UTM zone 32N (code 25832) in which axis order is reversed and easting has zone prefix. Does not distinguish between different realizations of ETRS89. For cadastre and engineering survey use DREF91/2016 CRS code 10288.
 
 ETRS89 / UTM zone 32N (zE-N)
 ----------------------------
-| Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E and Schleswig-Holstein
+| Extent: Germany - onshore and offshore between 6°E and 12°E - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen
 
 .. code-block:: php
 
@@ -6652,7 +6652,7 @@ ETRS89 / UTM zone 32N (zE-N)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_32N_ZE_N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4647')
 
-Variant of ETRS89 / UTM zone 32N (CRS code 25832) in which easting has zone prefix.
+Variant used in Germany of ETRS89 / UTM zone 32N (CRS code 25832) in which easting has zone prefix. Does not distinguish between different realizations of ETRS89. For cadastre and engineering survey use ETRS89/DREF91/2016 (CRS code 10289).
 
 ETRS89 / UTM zone 33N
 ---------------------
@@ -6682,7 +6682,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 33N (N-zE)
 ----------------------------
-| Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west of 12°E) and Mecklenburg-Vorpommern east of 12°E
+| Extent: Germany - onshore and offshore east of 12°E, together with that part of Brandenburg state west of 12°E - Bayern, Berlin, Brandenburg (all state), Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt, Thuringen
 
 .. code-block:: php
 
@@ -6691,11 +6691,11 @@ ETRS89 / UTM zone 33N (N-zE)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_33N_N_ZE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5653')
 
-Variant of ETRS89 / UTM zone 33N (CRS code 25833) in which axis order is reversed and easting has zone prefix.
+Variant used in Germany of ETRS89 / UTM zone 33N (code 25833) in which axis order is reversed and easting has zone prefix. Does not distinguish between different realizations of ETRS89. For cadastre and engineering survey use DREF91/2016 CRS code 10290.
 
 ETRS89 / UTM zone 33N (zE-N)
 ----------------------------
-| Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west of 12°E) and Mecklenburg-Vorpommern east of 12°E
+| Extent: Germany - onshore and offshore east of 12°E, together with that part of Brandenburg state west of 12°E - Bayern, Berlin, Brandenburg (all state), Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt, Thuringen
 
 .. code-block:: php
 
@@ -6704,7 +6704,7 @@ ETRS89 / UTM zone 33N (zE-N)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_33N_ZE_N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5650')
 
-Variant of ETRS89 / UTM zone 33N (CRS code 25833) in which easting has zone prefix.
+Variant used in Germany of ETRS89 / UTM zone 33N (CRS code 25833) in which easting has zone prefix. Does not distinguish between different realizations of ETRS89. For cadastre and engineering survey use ETRS89/DREF91/2016 (CRS code 10291).
 
 ETRS89 / UTM zone 34N
 ---------------------
@@ -6849,6 +6849,19 @@ ETRS89/DREF91/2016 / 3-degree Gauss-Kruger zone 3
 
 Replaces CRS code 8395 from 2016-12-01.
 
+ETRS89/DREF91/2016 / UTM zone 31N
+---------------------------------
+| Extent: Germany - onshore and offshore west of 6°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10731')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10731')
+
+Replaces ETRS89 / UTM zone 31N (CRS code 25831) for cadastre and engineering survey in Germany.
+
 ETRS89/DREF91/2016 / UTM zone 31N (N-zE)
 ----------------------------------------
 | Extent: Germany - onshore and offshore west of 6°E
@@ -6860,7 +6873,7 @@ ETRS89/DREF91/2016 / UTM zone 31N (N-zE)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_N_ZE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10286')
 
-Replaces CRS code 5651 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 31N (zE-N) (code 10287) for similar CRS but with coordinate order reversed to easting before northing.
+Variant of ETRS89/DREF91/2016 / UTM zone 31N (CRS code 10731) in which axis order is N,E and easting has zone prefix. Replaces ETRS89 / UTM zone 31N (N-zE) (code 5651) for cadastre and engineering survey.
 
 ETRS89/DREF91/2016 / UTM zone 31N (zE-N)
 ----------------------------------------
@@ -6873,11 +6886,24 @@ ETRS89/DREF91/2016 / UTM zone 31N (zE-N)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_31N_ZE_N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10287')
 
-Replaces CRS code 5649 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 31N (N-zE) (code 10286) for similar CRS but with coordinate order reversed to northing before easting.
+Variant of ETRS89/DREF91/2016 / UTM zone 31N (CRS code 10731) in which axis order is E,N and easting has zone prefix. Replaces ETRS89 / UTM zone 31N (zE-N) (code 5649) for cadastre and engineering survey.
+
+ETRS89/DREF91/2016 / UTM zone 32N
+---------------------------------
+| Extent: Germany - onshore and offshore between 6°E and 12°E - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10732')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10732')
+
+Replaces ETRS89 / UTM zone 32N (CRS code 25832) for cadastre and engineering survey in Germany. For Brandenburg west of 12°E use CRS code 10733.
 
 ETRS89/DREF91/2016 / UTM zone 32N (N-zE)
 ----------------------------------------
-| Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E and Schleswig-Holstein
+| Extent: Germany - onshore and offshore between 6°E and 12°E - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen
 
 .. code-block:: php
 
@@ -6886,11 +6912,11 @@ ETRS89/DREF91/2016 / UTM zone 32N (N-zE)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_N_ZE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10288')
 
-Replaces CRS code 5652 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 32N (zE-N) (code 10289) for similar CRS but with coordinate order reversed to easting before northing.
+Variant of ETRS89/DREF91/2016 / UTM zone 32N (CRS code 10732) in which axis order is N,E and easting has zone prefix. Replaces ETRS89 / UTM zone 32N (N-zE) (code 5652) for cadastre and engineering survey.  For Brandenburg west of 12°E use CRS code 10290.
 
 ETRS89/DREF91/2016 / UTM zone 32N (zE-N)
 ----------------------------------------
-| Extent: Germany - onshore and offshore between 6°E and 12°E, including Mecklenburg-Vorpommern west of 12°E and Schleswig-Holstein
+| Extent: Germany - onshore and offshore between 6°E and 12°E - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen
 
 .. code-block:: php
 
@@ -6899,11 +6925,24 @@ ETRS89/DREF91/2016 / UTM zone 32N (zE-N)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_32N_ZE_N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10289')
 
-Replaces CRS code 4647 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 32N (N-zE) (code 10288) for similar CRS but with coordinate order reversed to northing before easting.
+Variant of ETRS89/DREF91/2016 / UTM zone 32N (CRS code 10732) in which axis order is E,N and easting has zone prefix. Replaces ETRS89 / UTM zone 32N (zE-N) (code 4647) for cadastre and engineering survey. For Brandenburg west of 12°E use CRS code 10291.
+
+ETRS89/DREF91/2016 / UTM zone 33N
+---------------------------------
+| Extent: Germany - onshore and offshore east of 12°E, together with that part of Brandenburg state west of 12°E - Bayern, Berlin, Brandenburg (all state), Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt, Thuringen
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10733')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10733')
+
+Replaces ETRS89 / UTM zone 33N (CRS code 25833) for cadastre and engineering survey in Germany.
 
 ETRS89/DREF91/2016 / UTM zone 33N (N-zE)
 ----------------------------------------
-| Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west of 12°E) and Mecklenburg-Vorpommern east of 12°E
+| Extent: Germany - onshore and offshore east of 12°E, together with that part of Brandenburg state west of 12°E - Bayern, Berlin, Brandenburg (all state), Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt, Thuringen
 
 .. code-block:: php
 
@@ -6912,11 +6951,11 @@ ETRS89/DREF91/2016 / UTM zone 33N (N-zE)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_N_ZE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10290')
 
-Replaces CRS code 5653 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 33N (zE-N) (code 10291) for similar CRS but with coordinate order reversed to easting before northing.
+Variant of ETRS89/DREF91/2016 / UTM zone 33N (CRS code 10733) in which axis order is N,E and easting has zone prefix. Replaces ETRS89 / UTM zone 33N (N-zE) (code 5653) for cadastre and engineering survey.
 
 ETRS89/DREF91/2016 / UTM zone 33N (zE-N)
 ----------------------------------------
-| Extent: Germany - onshore and offshore east of 12°E, including Brandenburg (all state, including that part west of 12°E) and Mecklenburg-Vorpommern east of 12°E
+| Extent: Germany - onshore and offshore east of 12°E, together with that part of Brandenburg state west of 12°E - Bayern, Berlin, Brandenburg (all state), Mecklenburg-Vorpommern, Sachsen, Sachsen-Anhalt, Thuringen
 
 .. code-block:: php
 
@@ -6925,7 +6964,7 @@ ETRS89/DREF91/2016 / UTM zone 33N (zE-N)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_DREF91_2016_UTM_ZONE_33N_ZE_N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10291')
 
-Replaces CRS code 5650 from 2016-12-01. See ETRS89/DREF91/2016 / UTM zone 33N (N-zE) (code 10290) for similar CRS but with coordinate order reversed to northing before easting.
+Variant of ETRS89/DREF91/2016 / UTM zone 33N (CRS code 10733) in which axis order is E,N and easting has zone prefix. Replaces ETRS89 / UTM zone 33N (zE-N) (code 5650) for cadastre and engineering survey.
 
 EWR2 Grid
 ---------
@@ -23634,6 +23673,19 @@ NAD83 / Yukon Albers
 
 This CRS name may sometimes be used as an alias for NAD83(CSRS) / Yukon Albers. See CRS code 3579.
 
+NAD83(2011) / Adjusted Jackson (ftUS)
+-------------------------------------
+| Extent: United States (USA) - Wisconsin - Jackson county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_2011_ADJUSTED_JACKSON_FTUS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10516')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_2011_ADJUSTED_JACKSON_FTUS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10516')
+
+Introduced in 2011 for use with the WISCORS network to emulate NAD83(HARN) / WISCRS Jackson (ftUS) (CRS code 8162)  coordinates which remain the official CRS for the county.
+
 NAD83(2011) / Alabama East
 --------------------------
 | Extent: United States (USA) - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
@@ -39296,7 +39348,7 @@ NAD83(HARN) / WISCRS Jackson (ftUS)
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_HARN_WISCRS_JACKSON_FTUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8162')
 
-Part of the Wisconsin Coordinate Reference System (WISCRS). Defined in meters - see CRS code 8161.
+Part of the Wisconsin Coordinate Reference System (WISCRS). Defined in meters - see CRS code 8161. When using the WISCORS network referenced to NAD83(2011) this CRS may be emulated through NAD83(2011) / Adjusted Jackson (ftUS) (CRS code 10516).
 
 NAD83(HARN) / WISCRS Jackson (m)
 --------------------------------
