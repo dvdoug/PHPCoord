@@ -75,6 +75,20 @@ class AutoConversionTest extends TestCase
         self::assertEquals('J 18978 11611', $to->asGridReferenceWithSpaces(12));
     }
 
+    public function testETRS89ToIrishTM(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89), new Degree(54.040039), new Degree(-6.1846184), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID);
+
+        /** @var IrishGridPoint $to */
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(318977.528, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(311611.188, $to->getNorthing()->asMetres()->getValue(), 0.01);
+
+        self::assertEquals('J 18978 11611', $to->asGridReferenceWithSpaces(12));
+    }
+
     public function testNoop(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(40.7127), new Degree(-74.0059), null);
