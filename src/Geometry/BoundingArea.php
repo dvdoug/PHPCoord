@@ -39,6 +39,17 @@ class BoundingArea
 
     private const BUFFER_THRESHOLD = 200; // rough guess at where map maker got bored adding vertices for complex shapes
 
+    /**
+     * In v5, extents are buffered when exported (and with a better algorithm) and the runtime uses as-is
+     * Here, in v4 the extents are "raw" from EPSG, and the buffering is done in-place. However, the algo is flawed
+     * and doesn't work well for some country shapes where EPSG have actually drawn something that was already
+     * detailed enough to not need buffering in the first place. Backporting the v5 changes is too complex, so just
+     * keep a list of extents that are known-good.
+     */
+    private const EXTENTS_NOT_TO_BUFFER = [
+        1305,
+    ];
+
     private const BUFFER_SIZE = 0.1; // approx 10km
 
     protected function __construct(array $vertices)
@@ -75,7 +86,9 @@ class BoundingArea
             }
 
             $extentData = self::createFromArray($extents);
-            $extentData->addBuffer();
+            if (!in_array($cacheKey, self::EXTENTS_NOT_TO_BUFFER)) {
+                $extentData->addBuffer();
+            }
 
             self::$cachedObjects[$cacheKey] = $extentData;
         }

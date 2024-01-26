@@ -2,11 +2,15 @@
 
 ## [Unreleased]
 
-## [4.7.0] - 2022-06-26
+## [4.7.1] - 2024-01-26
 The v4.x series is receiving basic maintenance only. All feature development takes place in v5.x.
 This is because one of PHP8.1's [new deprecations](https://github.com/php/php-src/commit/afc4d67c8b4e02a985a4cd27b8e79b343eb3c0ad)
 required a significant non-backwards compatible change to address.
 
+### Fixed
+ - Buffering of Irish extent
+
+## [4.7.0] - 2022-06-26
 ### Added
  - Support for defining 3D projected coordinates
 
@@ -199,6 +203,10 @@ Initial release of this fork (based off of v2.3 of original)
 
 [Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...HEAD
 
+[4.7.1]: https://github.com/dvdoug/PHPCoord/compare/v4.7.0...v4.7.1
+[4.7.0]: https://github.com/dvdoug/PHPCoord/compare/v4.6.1...v4.7.0
+[4.6.1]: https://github.com/dvdoug/PHPCoord/compare/v4.6.0...v4.6.1
+[4.6.0]: https://github.com/dvdoug/PHPCoord/compare/v4.5.0...v4.6.0
 [4.5.0]: https://github.com/dvdoug/PHPCoord/compare/v4.4.0...v4.5.0
 [4.4.0]: https://github.com/dvdoug/PHPCoord/compare/v4.3.0...v4.4.0
 [4.3.0]: https://github.com/dvdoug/PHPCoord/compare/v4.2.0...v4.3.0

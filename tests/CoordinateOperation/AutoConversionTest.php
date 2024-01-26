@@ -59,6 +59,16 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(69740.50, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
 
+    public function testWGS84ToIrishTM(): void
+    {
+        $from = GeographicPoint::create(new Degree(54.040039), new Degree(-6.1846184), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        $toCRS = Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(318977.528, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(311611.188, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
     public function testNoop(): void
     {
         $from = GeographicPoint::create(new Degree(40.7127), new Degree(-74.0059), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
