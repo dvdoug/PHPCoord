@@ -8,10 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-use function count;
-use function in_array;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;
+
+use function count;
+use function in_array;
 
 class AngleTest extends TestCase
 {
@@ -25,7 +26,18 @@ class AngleTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Angle::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void
@@ -48,7 +60,7 @@ class AngleTest extends TestCase
         $newUnit = Angle::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Angle::getSupportedSRIDs() as $srid => $name) {

@@ -17,7 +17,7 @@ class USSurveyFootTest extends TestCase
         $original = new USSurveyFoot(0.3937);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -29,19 +29,19 @@ class USSurveyFootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new USSurveyFoot(0.12);
-        self::assertEquals('US survey feet', $original->getUnitName());
+        self::assertEquals('US survey foot', $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new USSurveyFoot(1))->add((new USSurveyFoot(2)));
+        $result = (new USSurveyFoot(1))->add(new USSurveyFoot(2));
         self::assertInstanceOf(USSurveyFoot::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new USSurveyFoot(4))->subtract((new USSurveyFoot(3)));
+        $result = (new USSurveyFoot(4))->subtract(new USSurveyFoot(3));
         self::assertInstanceOf(USSurveyFoot::class, $result);
         self::assertEquals(1, $result->getValue());
     }

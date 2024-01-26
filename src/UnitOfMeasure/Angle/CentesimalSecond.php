@@ -10,7 +10,7 @@ namespace PHPCoord\UnitOfMeasure\Angle;
 
 use const M_PI;
 
-class ArcSecond extends Angle
+class CentesimalSecond extends Angle
 {
     private float $angle;
 
@@ -21,7 +21,7 @@ class ArcSecond extends Angle
 
     public function asRadians(): Radian
     {
-        return new Radian($this->angle / 3600 * M_PI / 180);
+        return new Radian($this->angle * M_PI / 2000000);
     }
 
     public function getValue(): float
@@ -31,6 +31,6 @@ class ArcSecond extends Angle
 
     public function getUnitName(): string
     {
-        return 'arc-second';
+        return 'centesimal second';
     }
 }

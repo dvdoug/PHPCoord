@@ -8,9 +8,10 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Length;
 
-use function count;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class LengthTest extends TestCase
 {
@@ -24,7 +25,18 @@ class LengthTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Length::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void
@@ -39,7 +51,7 @@ class LengthTest extends TestCase
         $newUnit = Length::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Length::getSupportedSRIDs() as $srid => $name) {

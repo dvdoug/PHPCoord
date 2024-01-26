@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -20,74 +21,86 @@ use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
+use function array_map;
+
 class Rate implements UnitOfMeasure
 {
     /**
-     * arc-seconds per year
+     * Arc-seconds per year
      * =((pi/180) / 3600) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM code
      * 1029.
      */
     public const EPSG_ARC_SECONDS_PER_YEAR = 'urn:ogc:def:uom:EPSG::1043';
 
     /**
-     * centimetres per year
+     * Centimetres per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_CENTIMETRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1034';
 
     /**
-     * metres per year
+     * Metres per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_METRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1042';
 
     /**
-     * milliarc-seconds per year
+     * Milliarc-seconds per year
      * = ((pi/180) / 3600 / 1000) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM
      * code 1029.
      */
     public const EPSG_MILLIARC_SECONDS_PER_YEAR = 'urn:ogc:def:uom:EPSG::1032';
 
     /**
-     * millimetres per year
+     * Millimetres per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_MILLIMETRES_PER_YEAR = 'urn:ogc:def:uom:EPSG::1027';
 
     /**
-     * parts per billion per year
+     * Parts per billion per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029. Billion is internationally
      * ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.
      */
     public const EPSG_PARTS_PER_BILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1030';
 
     /**
-     * parts per million per year
+     * Parts per million per year
      * Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.
      */
     public const EPSG_PARTS_PER_MILLION_PER_YEAR = 'urn:ogc:def:uom:EPSG::1041';
 
+    /**
+     * @var array<string, array{name: string, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1027' => [
             'name' => 'millimetres per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1030' => [
             'name' => 'parts per billion per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029. Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.',
         ],
         'urn:ogc:def:uom:EPSG::1032' => [
             'name' => 'milliarc-seconds per year',
+            'help' => '= ((pi/180) / 3600 / 1000) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1034' => [
             'name' => 'centimetres per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1041' => [
             'name' => 'parts per million per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1042' => [
             'name' => 'metres per year',
+            'help' => 'Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
         'urn:ogc:def:uom:EPSG::1043' => [
             'name' => 'arc-seconds per year',
+            'help' => '=((pi/180) / 3600) radians per year. Year taken to be IUGS definition of 31556925.445 seconds; see UoM code 1029.',
         ],
     ];
 
@@ -95,14 +108,11 @@ class Rate implements UnitOfMeasure
 
     private Time $time;
 
-    private static array $supportedCache = [];
-
     public function __construct(UnitOfMeasure $change, Time $time)
     {
         if ($change instanceof Time) {
             throw new InvalidRateException('A rate is a change per unit of time, the change cannot be time');
         }
-
         $this->change = $change;
         $this->time = $time;
     }
@@ -137,9 +147,14 @@ class Rate implements UnitOfMeasure
         return (string) $this->getValue();
     }
 
+    public function multiply(float $multiplicand): self
+    {
+        return new self($this->change->multiply($multiplicand), $this->time);
+    }
+
     public static function makeUnit(float $measurement, string $srid): self
     {
-        if (!isset(static::$sridData[$srid])) {
+        if (!isset(self::$sridData[$srid])) {
             throw new UnknownUnitOfMeasureException($srid);
         }
 
@@ -163,14 +178,22 @@ class Rate implements UnitOfMeasure
         throw new UnknownUnitOfMeasureException($srid); // @codeCoverageIgnore
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
+        return array_map(fn (array $data) => $data['name'], static::$sridData);
+    }
 
-        return self::$supportedCache;
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 }

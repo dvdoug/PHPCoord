@@ -34,14 +34,14 @@ class MillimetreTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Millimetre(1))->add((new Millimetre(2)));
+        $result = (new Millimetre(1))->add(new Millimetre(2));
         self::assertInstanceOf(Millimetre::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Millimetre(4))->subtract((new Millimetre(3)));
+        $result = (new Millimetre(4))->subtract(new Millimetre(3));
         self::assertInstanceOf(Millimetre::class, $result);
         self::assertEquals(1, $result->getValue());
     }

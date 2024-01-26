@@ -8,8 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-use const M_PI;
 use PHPUnit\Framework\TestCase;
+
+use const M_PI;
 
 class GradTest extends TestCase
 {

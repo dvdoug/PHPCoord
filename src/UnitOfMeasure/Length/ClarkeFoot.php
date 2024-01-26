@@ -29,6 +29,6 @@ class ClarkeFoot extends Length
 
     public function getUnitName(): string
     {
-        return 'Clarke feet';
+        return "Clarke's foot";
     }
 }

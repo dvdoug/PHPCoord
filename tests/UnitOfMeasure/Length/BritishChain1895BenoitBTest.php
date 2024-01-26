@@ -17,7 +17,7 @@ class BritishChain1895BenoitBTest extends TestCase
         $original = new BritishChain1895BenoitB(0.005965168636363636);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -29,19 +29,19 @@ class BritishChain1895BenoitBTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishChain1895BenoitB(0.12);
-        self::assertEquals('British(1895 Benoit B) chain', $original->getUnitName());
+        self::assertEquals('British chain (Benoit B 1895)', $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new BritishChain1895BenoitB(1))->add((new BritishChain1895BenoitB(2)));
+        $result = (new BritishChain1895BenoitB(1))->add(new BritishChain1895BenoitB(2));
         self::assertInstanceOf(BritishChain1895BenoitB::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishChain1895BenoitB(4))->subtract((new BritishChain1895BenoitB(3)));
+        $result = (new BritishChain1895BenoitB(4))->subtract(new BritishChain1895BenoitB(3));
         self::assertInstanceOf(BritishChain1895BenoitB::class, $result);
         self::assertEquals(1, $result->getValue());
     }

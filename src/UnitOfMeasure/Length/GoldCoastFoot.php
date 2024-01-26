@@ -32,6 +32,6 @@ class GoldCoastFoot extends Length
 
     public function getUnitName(): string
     {
-        return 'Gold Coast feet';
+        return 'Gold Coast foot';
     }
 }

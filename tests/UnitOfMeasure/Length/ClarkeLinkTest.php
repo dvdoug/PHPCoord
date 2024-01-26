@@ -17,7 +17,7 @@ class ClarkeLinkTest extends TestCase
         $original = new ClarkeLink(0.5965216964121155);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -29,19 +29,19 @@ class ClarkeLinkTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new ClarkeLink(0.12);
-        self::assertEquals('Clarke link', $original->getUnitName());
+        self::assertEquals("Clarke's link", $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new ClarkeLink(1))->add((new ClarkeLink(2)));
+        $result = (new ClarkeLink(1))->add(new ClarkeLink(2));
         self::assertInstanceOf(ClarkeLink::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new ClarkeLink(4))->subtract((new ClarkeLink(3)));
+        $result = (new ClarkeLink(4))->subtract(new ClarkeLink(3));
         self::assertInstanceOf(ClarkeLink::class, $result);
         self::assertEquals(1, $result->getValue());
     }

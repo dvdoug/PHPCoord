@@ -8,11 +8,12 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
-use function count;
-use function in_array;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPUnit\Framework\TestCase;
+
+use function count;
+use function in_array;
 
 class UnitOfMeasureFactoryTest extends TestCase
 {
@@ -27,6 +28,7 @@ class UnitOfMeasureFactoryTest extends TestCase
     }
 
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void
@@ -49,7 +51,7 @@ class UnitOfMeasureFactoryTest extends TestCase
         $newUnit = UnitOfMeasureFactory::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (UnitOfMeasureFactory::getSupportedSRIDs() as $srid => $name) {

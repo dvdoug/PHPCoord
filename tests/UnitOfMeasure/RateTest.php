@@ -8,12 +8,13 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
-use function count;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class RateTest extends TestCase
 {
@@ -51,7 +52,18 @@ class RateTest extends TestCase
         }
     }
 
+    public function testCanGetSupportedWithHelp(): void
+    {
+        $supported = Rate::getSupportedSRIDsWithHelp();
+        self::assertGreaterThan(0, count($supported));
+        foreach ($supported as $key => $value) {
+            self::assertStringStartsWith('urn:ogc:def:', $key);
+            self::assertIsArray($value);
+        }
+    }
+
     /**
+     * @group integration
      * @dataProvider unitsOfMeasure
      */
     public function testCanCreateAllUnits(string $srid): void
@@ -66,7 +78,7 @@ class RateTest extends TestCase
         $newUnit = Rate::makeUnit(1, 'foo');
     }
 
-    public function unitsOfMeasure(): array
+    public static function unitsOfMeasure(): array
     {
         $data = [];
         foreach (Rate::getSupportedSRIDs() as $srid => $name) {

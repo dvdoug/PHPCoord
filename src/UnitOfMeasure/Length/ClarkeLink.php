@@ -29,6 +29,6 @@ class ClarkeLink extends Length
 
     public function getUnitName(): string
     {
-        return 'Clarke link';
+        return "Clarke's link";
     }
 }

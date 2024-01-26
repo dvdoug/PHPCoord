@@ -17,7 +17,7 @@ class ClarkeYardTest extends TestCase
         $original = new ClarkeYard(0.1312347732106654);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -34,14 +34,14 @@ class ClarkeYardTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new ClarkeYard(1))->add((new ClarkeYard(2)));
+        $result = (new ClarkeYard(1))->add(new ClarkeYard(2));
         self::assertInstanceOf(ClarkeYard::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new ClarkeYard(4))->subtract((new ClarkeYard(3)));
+        $result = (new ClarkeYard(4))->subtract(new ClarkeYard(3));
         self::assertInstanceOf(ClarkeYard::class, $result);
         self::assertEquals(1, $result->getValue());
     }

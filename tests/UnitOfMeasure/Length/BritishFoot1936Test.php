@@ -17,7 +17,7 @@ class BritishFoot1936Test extends TestCase
         $original = new BritishFoot1936(0.3936998198145177);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -29,19 +29,19 @@ class BritishFoot1936Test extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishFoot1936(0.12);
-        self::assertEquals('British(1936) feet', $original->getUnitName());
+        self::assertEquals('British foot (1936)', $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new BritishFoot1936(1))->add((new BritishFoot1936(2)));
+        $result = (new BritishFoot1936(1))->add(new BritishFoot1936(2));
         self::assertInstanceOf(BritishFoot1936::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishFoot1936(4))->subtract((new BritishFoot1936(3)));
+        $result = (new BritishFoot1936(4))->subtract(new BritishFoot1936(3));
         self::assertInstanceOf(BritishFoot1936::class, $result);
         self::assertEquals(1, $result->getValue());
     }

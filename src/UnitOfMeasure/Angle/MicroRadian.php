@@ -8,9 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Angle;
 
-use const M_PI;
-
-class ArcSecond extends Angle
+class MicroRadian extends Angle
 {
     private float $angle;
 
@@ -21,7 +19,7 @@ class ArcSecond extends Angle
 
     public function asRadians(): Radian
     {
-        return new Radian($this->angle / 3600 * M_PI / 180);
+        return new Radian($this->angle / 1000000);
     }
 
     public function getValue(): float
@@ -31,6 +29,6 @@ class ArcSecond extends Angle
 
     public function getUnitName(): string
     {
-        return 'arc-second';
+        return 'microradian';
     }
 }

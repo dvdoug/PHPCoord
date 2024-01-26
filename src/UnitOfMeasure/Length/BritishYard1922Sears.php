@@ -29,6 +29,6 @@ class BritishYard1922Sears extends Length
 
     public function getUnitName(): string
     {
-        return 'British(1922 Sears) yard';
+        return 'British yard (Sears 1922)';
     }
 }

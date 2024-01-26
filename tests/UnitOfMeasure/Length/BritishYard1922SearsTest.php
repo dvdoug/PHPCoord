@@ -29,19 +29,19 @@ class BritishYard1922SearsTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishYard1922Sears(0.12);
-        self::assertEquals('British(1922 Sears) yard', $original->getUnitName());
+        self::assertEquals('British yard (Sears 1922)', $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new BritishYard1922Sears(1))->add((new BritishYard1922Sears(2)));
+        $result = (new BritishYard1922Sears(1))->add(new BritishYard1922Sears(2));
         self::assertInstanceOf(BritishYard1922Sears::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishYard1922Sears(4))->subtract((new BritishYard1922Sears(3)));
+        $result = (new BritishYard1922Sears(4))->subtract(new BritishYard1922Sears(3));
         self::assertInstanceOf(BritishYard1922Sears::class, $result);
         self::assertEquals(1, $result->getValue());
     }

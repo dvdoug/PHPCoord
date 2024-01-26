@@ -29,6 +29,6 @@ class Unity extends Scale
 
     public function getUnitName(): string
     {
-        return '';
+        return 'unity';
     }
 }

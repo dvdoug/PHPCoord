@@ -81,8 +81,8 @@ class GeographicPointTest extends TestCase
     public function test2DWithRadianAsUnits(): void
     {
         $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), null, Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
-        self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
-        self::assertEquals(7.047380880109133, $object->getLongitude()->getValue());
+        self::assertEqualsWithDelta(7.047380880109133, $object->getLatitude()->getValue(), 0.00000000000001);
+        self::assertEqualsWithDelta(7.047380880109133, $object->getLongitude()->getValue(), 0.00000000000001);
     }
 
     public function test2DWithHeight(): void
@@ -104,9 +104,9 @@ class GeographicPointTest extends TestCase
     public function test3DWithRadianAndFeetAsUnits(): void
     {
         $object = GeographicPoint::create(new Radian(0.123), new Radian(0.123), new Foot(123), Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84));
-        self::assertEquals(7.047380880109133, $object->getLatitude()->getValue());
-        self::assertEquals(7.047380880109133, $object->getLongitude()->getValue());
-        self::assertEquals(37.4904, $object->getHeight()->getValue());
+        self::assertEqualsWithDelta(7.047380880109133, $object->getLatitude()->getValue(), 0.00000000000001);
+        self::assertEqualsWithDelta(7.047380880109133, $object->getLongitude()->getValue(), 0.00000000000001);
+        self::assertEqualsWithDelta(37.4904, $object->getHeight()->getValue(), 0.00000000000001);
     }
 
     public function test3DWithoutHeight(): void

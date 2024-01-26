@@ -29,19 +29,19 @@ class ClarkeFootTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new ClarkeFoot(0.12);
-        self::assertEquals('Clarke feet', $original->getUnitName());
+        self::assertEquals("Clarke's foot", $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new ClarkeFoot(1))->add((new ClarkeFoot(2)));
+        $result = (new ClarkeFoot(1))->add(new ClarkeFoot(2));
         self::assertInstanceOf(ClarkeFoot::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new ClarkeFoot(4))->subtract((new ClarkeFoot(3)));
+        $result = (new ClarkeFoot(4))->subtract(new ClarkeFoot(3));
         self::assertInstanceOf(ClarkeFoot::class, $result);
         self::assertEquals(1, $result->getValue());
     }

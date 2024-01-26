@@ -34,6 +34,6 @@ class Foot extends Length
 
     public function getUnitName(): string
     {
-        return 'feet';
+        return 'foot';
     }
 }

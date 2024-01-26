@@ -17,7 +17,7 @@ class KilometreTest extends TestCase
         $original = new Kilometre(0.00012);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -34,14 +34,14 @@ class KilometreTest extends TestCase
 
     public function testAdd(): void
     {
-        $result = (new Kilometre(1))->add((new Kilometre(2)));
+        $result = (new Kilometre(1))->add(new Kilometre(2));
         self::assertInstanceOf(Kilometre::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new Kilometre(4))->subtract((new Kilometre(3)));
+        $result = (new Kilometre(4))->subtract(new Kilometre(3));
         self::assertInstanceOf(Kilometre::class, $result);
         self::assertEquals(1, $result->getValue());
     }

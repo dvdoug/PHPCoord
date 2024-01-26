@@ -34,6 +34,6 @@ class USSurveyFoot extends Length
 
     public function getUnitName(): string
     {
-        return 'US survey feet';
+        return 'US survey foot';
     }
 }

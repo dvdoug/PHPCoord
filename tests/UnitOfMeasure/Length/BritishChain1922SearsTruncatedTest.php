@@ -17,7 +17,7 @@ class BritishChain1922SearsTruncatedTest extends TestCase
         $original = new BritishChain1922SearsTruncated(0.005965176492671085);
         $asMetre = $original->asMetres();
         self::assertInstanceOf(Metre::class, $asMetre);
-        self::assertEquals(0.12, $asMetre->getValue());
+        self::assertEqualsWithDelta(0.12, $asMetre->getValue(), 0.00000000000001);
     }
 
     public function testGetValue(): void
@@ -29,19 +29,19 @@ class BritishChain1922SearsTruncatedTest extends TestCase
     public function testGetUnitName(): void
     {
         $original = new BritishChain1922SearsTruncated(0.12);
-        self::assertEquals('British(1922 Sears truncated) chain', $original->getUnitName());
+        self::assertEquals('British chain (Sears 1922 truncated)', $original->getUnitName());
     }
 
     public function testAdd(): void
     {
-        $result = (new BritishChain1922SearsTruncated(1))->add((new BritishChain1922SearsTruncated(2)));
+        $result = (new BritishChain1922SearsTruncated(1))->add(new BritishChain1922SearsTruncated(2));
         self::assertInstanceOf(BritishChain1922SearsTruncated::class, $result);
         self::assertEquals(3, $result->getValue());
     }
 
     public function testSubtract(): void
     {
-        $result = (new BritishChain1922SearsTruncated(4))->subtract((new BritishChain1922SearsTruncated(3)));
+        $result = (new BritishChain1922SearsTruncated(4))->subtract(new BritishChain1922SearsTruncated(3));
         self::assertInstanceOf(BritishChain1922SearsTruncated::class, $result);
         self::assertEquals(1, $result->getValue());
     }

@@ -29,6 +29,6 @@ class BritishFoot1922Sears extends Length
 
     public function getUnitName(): string
     {
-        return 'British(1922 Sears) feet';
+        return 'British foot (Sears 1922)';
     }
 }

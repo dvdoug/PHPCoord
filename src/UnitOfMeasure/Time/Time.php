@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -11,25 +12,34 @@ namespace PHPCoord\UnitOfMeasure\Time;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
+use function array_map;
+
 abstract class Time implements UnitOfMeasure
 {
     /**
-     * year.
+     * Year.
      */
     public const EPSG_YEAR = 'urn:ogc:def:uom:EPSG::1029';
 
+    /**
+     * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1029' => [
             'name' => 'year',
+            'help' => '',
         ],
     ];
 
-    private static array $supportedCache = [];
+    abstract public function __construct(float $time);
 
     abstract public function asYears(): Year;
 
     public function add(self $unit): self
     {
+        if (get_class($this) === get_class($unit)) {
+            return new static($this->getValue() + $unit->getValue());
+        }
         $resultAsYears = new Year($this->asYears()->getValue() + $unit->asYears()->getValue());
         $conversionRatio = (new static(1))->asYears()->getValue();
 
@@ -38,6 +48,9 @@ abstract class Time implements UnitOfMeasure
 
     public function subtract(self $unit): self
     {
+        if (get_class($this) === get_class($unit)) {
+            return new static($this->getValue() - $unit->getValue());
+        }
         $resultAsYears = new Year($this->asYears()->getValue() - $unit->asYears()->getValue());
         $conversionRatio = (new static(1))->asYears()->getValue();
 
@@ -64,15 +77,23 @@ abstract class Time implements UnitOfMeasure
         throw new UnknownUnitOfMeasureException($srid);
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
+        return array_map(fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
+    }
 
-        return self::$supportedCache;
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public function __toString(): string

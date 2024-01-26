@@ -45,8 +45,8 @@ class BoundingAreaTest extends TestCase
         );
         [$latitude, $longitude] = $polygon->getPointInside();
 
-        self::assertEquals(55.38, $latitude->getValue());
-        self::assertEquals(-3.495, $longitude->getValue());
+        self::assertEqualsWithDelta(55.38, $latitude->getValue(), 0.0000000000001);
+        self::assertEqualsWithDelta(-3.495, $longitude->getValue(), 0.0000000000001);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50), new Degree(-8), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(50), new Degree(-9.1), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
@@ -68,8 +68,8 @@ class BoundingAreaTest extends TestCase
         );
         [$latitude, $longitude] = $polygon->getPointInside();
 
-        self::assertEquals(-40.915, $latitude->getValue());
-        self::assertEquals(174.7, $longitude->getValue());
+        self::assertEqualsWithDelta(-40.915, $latitude->getValue(), 0.0000000000001);
+        self::assertEqualsWithDelta(174.7, $longitude->getValue(), 0.0000000000001);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(-55), new Degree(170), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(-55), new Degree(0), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }

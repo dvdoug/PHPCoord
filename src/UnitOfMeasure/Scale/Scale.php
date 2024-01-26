@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPCoord.
  *
@@ -11,55 +12,67 @@ namespace PHPCoord\UnitOfMeasure\Scale;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 
+use function array_map;
+
 abstract class Scale implements UnitOfMeasure
 {
     /**
-     * coefficient
+     * Coefficient
      * Used when parameters are coefficients.  They inherently take the units which depend upon the term to which the
      * coefficient applies.
      */
     public const EPSG_COEFFICIENT = 'urn:ogc:def:uom:EPSG::9203';
 
     /**
-     * parts per billion
+     * Parts per billion
      * Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be
      * 1E+9.
      */
     public const EPSG_PARTS_PER_BILLION = 'urn:ogc:def:uom:EPSG::1028';
 
     /**
-     * parts per million.
+     * Parts per million.
      */
     public const EPSG_PARTS_PER_MILLION = 'urn:ogc:def:uom:EPSG::9202';
 
     /**
-     * unity
+     * Unity
      * EPSG standard unit for scale. SI coherent derived unit (standard unit) for dimensionless quantity, expressed by
      * the number one but this is not explicitly shown.
      */
     public const EPSG_UNITY = 'urn:ogc:def:uom:EPSG::9201';
 
+    /**
+     * @var array<string, array{name: string, fqcn?: class-string<self>, help: string}>
+     */
     protected static array $sridData = [
         'urn:ogc:def:uom:EPSG::1028' => [
             'name' => 'parts per billion',
+            'help' => 'Billion is internationally ambiguous, in different languages being 1E+9 and 1E+12. One billion taken here to be 1E+9.',
         ],
         'urn:ogc:def:uom:EPSG::9201' => [
             'name' => 'unity',
+            'help' => 'EPSG standard unit for scale. SI coherent derived unit (standard unit) for dimensionless quantity, expressed by the number one but this is not explicitly shown.',
         ],
         'urn:ogc:def:uom:EPSG::9202' => [
             'name' => 'parts per million',
+            'help' => '',
         ],
         'urn:ogc:def:uom:EPSG::9203' => [
             'name' => 'coefficient',
+            'help' => 'Used when parameters are coefficients.  They inherently take the units which depend upon the term to which the coefficient applies.',
         ],
     ];
 
-    private static array $supportedCache = [];
+    abstract public function __construct(float $scale);
 
     abstract public function asUnity(): Unity;
 
     public function add(self $unit): self
     {
+        if (get_class($this) === get_class($unit)) {
+            return new static($this->getValue() + $unit->getValue());
+        }
         $resultAsUnity = new Unity($this->asUnity()->getValue() + $unit->asUnity()->getValue());
         $conversionRatio = (new static(1))->asUnity()->getValue();
 
@@ -68,6 +81,9 @@ abstract class Scale implements UnitOfMeasure
 
     public function subtract(self $unit): self
     {
+        if (get_class($this) === get_class($unit)) {
+            return new static($this->getValue() - $unit->getValue());
+        }
         $resultAsUnity = new Unity($this->asUnity()->getValue() - $unit->asUnity()->getValue());
         $conversionRatio = (new static(1))->asUnity()->getValue();
 
@@ -100,15 +116,23 @@ abstract class Scale implements UnitOfMeasure
         throw new UnknownUnitOfMeasureException($srid);
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSupportedSRIDs(): array
     {
-        if (!self::$supportedCache) {
-            foreach (static::$sridData as $srid => $data) {
-                self::$supportedCache[$srid] = $data['name'];
-            }
-        }
+        return array_map(fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
+    }
 
-        return self::$supportedCache;
+    /**
+     * @return array<string, array{name: string, help: string}>
+     */
+    public static function getSupportedSRIDsWithHelp(): array
+    {
+        return array_map(fn (array $data) => [
+            'name' => $data['name'],
+            'help' => $data['help'],
+        ], static::$sridData);
     }
 
     public function __toString(): string
