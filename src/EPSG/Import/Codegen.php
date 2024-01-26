@@ -8,15 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_flip;
-use function array_reverse;
-use function dirname;
-use function fclose;
-use function file_get_contents;
-use function file_put_contents;
-use function fopen;
-use function fwrite;
-use const PHP_EOL;
 use PhpCsFixer\AbstractFixer;
 use PhpCsFixer\Config;
 use PhpCsFixer\Console\ConfigurationResolver;
@@ -28,12 +19,23 @@ use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use ReflectionClass;
 use SplFileInfo;
+
+use function array_flip;
+use function array_reverse;
+use function dirname;
+use function fclose;
+use function file_get_contents;
+use function file_put_contents;
+use function fopen;
+use function fwrite;
 use function str_repeat;
 use function str_replace;
 use function strlen;
 use function strtolower;
 use function trim;
 use function ucfirst;
+
+use const PHP_EOL;
 
 class Codegen
 {
@@ -153,8 +155,8 @@ class Codegen
 
         foreach ($fixers as $fixer) {
             if (
-                !$fixer instanceof AbstractFixer &&
-                (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
+                !$fixer instanceof AbstractFixer
+                && (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
             ) {
                 continue;
             }
@@ -192,18 +194,18 @@ class Codegen
                 fwrite($file, '| Type: ' . ucfirst($row['type']) . "\n");
             }
             if (isset($row['extent']) && $row['extent']) {
-                fwrite($file, "| Used: {$row['extent']}" . "\n");
+                fwrite($file, "| Used: {$row['extent']}\n");
             }
 
             fwrite($file, "\n.. code-block:: php\n\n");
             $invokeClass = $reflectionClass;
             do {
                 if ($invokeClass->hasMethod('fromSRID')) {
-                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
-                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')" . "\n");
+                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})\n");
+                    fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')\n");
                 } elseif ($invokeClass->hasMethod('makeUnit')) {
-                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})" . "\n");
-                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')" . "\n");
+                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, {$reflectionClass->getShortName()}::{$constants[$urn]})\n");
+                    fwrite($file, "    {$invokeClass->getShortName()}::makeUnit(\$measurement, '{$urn}')\n");
                 }
             } while ($invokeClass = $invokeClass->getParentClass());
             fwrite($file, "\n");
@@ -212,7 +214,7 @@ class Codegen
                 $help = str_replace("\n", "\n\n", trim($row['doc_help']));
                 $help = str_replace('Convert to degrees using algorithm.', '', $help);
                 $help = str_replace('Convert to deg using algorithm.', '', $help);
-                fwrite($file, "{$help}" . "\n");
+                fwrite($file, "{$help}\n");
             }
             fwrite($file, "\n");
         }

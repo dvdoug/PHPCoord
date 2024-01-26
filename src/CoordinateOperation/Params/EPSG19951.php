@@ -5,6 +5,7 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 /** @internal */ return [
   'latitudeOfProjectionCentre' => [
     'value' => 27.31077837,

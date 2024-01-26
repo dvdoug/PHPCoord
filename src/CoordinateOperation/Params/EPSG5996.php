@@ -5,6 +5,7 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 /** @internal */ return [
   'latitudeOfFalseOrigin' => [
     'value' => 78.42264151,

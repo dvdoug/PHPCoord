@@ -9,18 +9,20 @@ declare(strict_types=1);
 namespace PHPCoord;
 
 use DateTimeInterface;
-use function floor;
-use function implode;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
+use function floor;
+use function implode;
 use function str_pad;
-use const STR_PAD_LEFT;
 use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
+
+use const STR_PAD_LEFT;
 
 /**
  * N.B. This is the older 1975 system, not the current ITM system for which @see IrishTransverseMercatorPoint.
@@ -29,7 +31,7 @@ class IrishGridPoint extends ProjectedPoint
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
-    public function __construct(Length $easting, Length $northing, ?DateTimeInterface $epoch = null)
+    public function __construct(Length $easting, Length $northing, DateTimeInterface $epoch = null)
     {
         parent::__construct($easting, $northing, null, null, Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID), $epoch);
     }
@@ -37,7 +39,7 @@ class IrishGridPoint extends ProjectedPoint
     /**
      * @param string $reference Irish grid reference (e.g. "T514131")
      */
-    public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
+    public static function fromGridReference(string $reference, DateTimeInterface $epoch = null): self
     {
         $reference = str_replace(' ', '', $reference);
 
@@ -45,11 +47,11 @@ class IrishGridPoint extends ProjectedPoint
             throw new InvalidCoordinateException('Grid ref must be an even number of characters');
         }
 
-        //Letter is 100km grid sq, origin at 0,0 of this square
+        // Letter is 100km grid sq, origin at 0,0 of this square
         $minorEasting = strpos(static::GRID_LETTERS, $reference[0]) % 5 * 100000;
-        $minorNorthing = (floor(strpos(static::GRID_LETTERS, $reference[0]) / 5)) * 100000;
+        $minorNorthing = floor(strpos(static::GRID_LETTERS, $reference[0]) / 5) * 100000;
 
-        //numbers are a division of that square into smaller and smaller pieces
+        // numbers are a division of that square into smaller and smaller pieces
         $numericPortion = substr($reference, 1);
         $numericPortionSize = strlen($numericPortion) / 2;
         $gridSizeInMetres = 1 * (10 ** (5 - $numericPortionSize));
@@ -88,7 +90,7 @@ class IrishGridPoint extends ProjectedPoint
         $easting = str_pad((string) $x, 6, '0', STR_PAD_LEFT);
         $northing = str_pad((string) $y, 6, '0', STR_PAD_LEFT);
 
-        //second (minor) letter is 100km grid sq, origin at 0,0 of this square
+        // second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = $easting[0] % 5;
         $minorSquaresNorth = $northing[0] % 5;
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);

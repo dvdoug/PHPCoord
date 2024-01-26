@@ -8,17 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function abs;
-use function acos;
-use function array_values;
-use function asin;
-use function atan;
-use function atan2;
-use function cos;
 use DateTimeImmutable;
-use function lcfirst;
-use const M_PI;
-use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\GeographicValue;
@@ -32,15 +22,27 @@ use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use Stringable;
+
+use function abs;
+use function acos;
+use function array_values;
+use function asin;
+use function atan;
+use function atan2;
+use function cos;
+use function lcfirst;
 use function preg_match;
 use function sin;
 use function sqrt;
 use function sscanf;
 use function str_replace;
 use function str_starts_with;
-use Stringable;
 use function tan;
 use function ucwords;
+
+use const M_PI;
+use const PHP_MAJOR_VERSION;
 
 abstract class Point implements Stringable
 {

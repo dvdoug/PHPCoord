@@ -8,12 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function array_unique;
-use function class_exists;
 use DateTime;
-use function explode;
-use function fgetcsv;
-use function fopen;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -35,6 +30,12 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UTMPoint;
 use PHPCoord\VerticalPoint;
 use PHPUnit\Framework\TestCase;
+
+use function array_unique;
+use function class_exists;
+use function explode;
+use function fgetcsv;
+use function fopen;
 
 class AutoConversionTest extends TestCase
 {
@@ -334,7 +335,7 @@ class AutoConversionTest extends TestCase
             $sourceHorizontalCRS = $sourceCRS->getHorizontal();
             if ($sourceHorizontalCRS instanceof Geographic2D) {
                 $centre = $extent->getPointInside();
-                $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+                $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
 
                 $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
             } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
@@ -346,7 +347,7 @@ class AutoConversionTest extends TestCase
             $originalPoint = CompoundPoint::create($horizontalPoint, $verticalPoint, $sourceCRS, $epoch);
         } elseif ($sourceCRS instanceof Geographic) {
             $centre = $extent->getPointInside();
-            $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+            $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
             $height = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
 
             $originalPoint = GeographicPoint::create($centre[0], $centre[1], $height, $sourceCRS, $epoch);

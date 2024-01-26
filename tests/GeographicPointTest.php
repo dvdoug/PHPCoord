@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\NADCON5NAD27NAD831986CONUSLatitudeProvider;
@@ -42,6 +41,8 @@ use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPUnit\Framework\TestCase;
+
+use function class_exists;
 
 class GeographicPointTest extends TestCase
 {

@@ -5,6 +5,7 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 /** @internal */ return [
   'ordinate1OfEvaluationPointInSourceCRS' => [
     'value' => 155000.0,

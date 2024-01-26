@@ -11,6 +11,7 @@ namespace PHPCoord\CoordinateOperation;
 use PHPCoord\GeographicPoint;
 use SplFileObject;
 use UnexpectedValueException;
+
 use function unpack;
 
 class NADCON5Grid extends SplFileObject
@@ -68,11 +69,11 @@ class NADCON5Grid extends SplFileObject
         // a 3x3 window around $latitude.
         $difla = ($latitude - $this->startLatitude);
         $ratla = $difla / ($this->latitudeGridSize / 2);
-        $ila = (int) ($ratla) + 1;
+        $ila = (int) $ratla + 1;
         if ($ila % 2 != 0) {
             $jla = ($ila + 1) / 2 - 1;
         } else {
-            $jla = ($ila) / 2;
+            $jla = $ila / 2;
         }
 
         // Fix any edge overlaps
@@ -87,11 +88,11 @@ class NADCON5Grid extends SplFileObject
         // a 3x3 window around $longitude.
         $diflo = ($longitude - $this->startLongitude);
         $ratlo = $diflo / ($this->longitudeGridSize / 2);
-        $ilo = (int) ($ratlo) + 1;
+        $ilo = (int) $ratlo + 1;
         if ($ilo % 2 != 0) {
             $jlo = ($ilo + 1) / 2 - 1;
         } else {
-            $jlo = ($ilo) / 2;
+            $jlo = $ilo / 2;
         }
 
         // Fix any edge overlaps
@@ -141,7 +142,7 @@ class NADCON5Grid extends SplFileObject
         $rawRow = $this->fread($recordLength);
         $row = unpack("Gstartbuffer/{$this->gridDataType}{$this->numberLongitudes}lon/Gendbuffer", $rawRow);
 
-        return $row['lon' . ($longitudeIndex)];
+        return $row['lon' . $longitudeIndex];
     }
 
     private function getHeader(): array

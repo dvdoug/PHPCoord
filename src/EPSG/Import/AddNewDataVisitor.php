@@ -8,14 +8,16 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_unshift;
-use function ksort;
 use PhpParser\BuilderFactory;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\NodeVisitorAbstract;
-use const SORT_NATURAL;
+
+use function array_unshift;
+use function ksort;
 use function str_replace;
+
+use const SORT_NATURAL;
 
 class AddNewDataVisitor extends NodeVisitorAbstract
 {

@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -22,6 +21,8 @@ use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
+
+use function class_exists;
 
 class VerticalPointTest extends TestCase
 {
@@ -159,7 +160,7 @@ class VerticalPointTest extends TestCase
             $needsNonExistentFile = false;
 
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                //filter out operations that require a grid file that we don't have
+                // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
                     if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
                         $needsNonExistentFile = true;

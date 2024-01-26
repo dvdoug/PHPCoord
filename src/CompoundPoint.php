@@ -64,7 +64,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
      * Constructor.
      * @param GeographicPoint|ProjectedPoint $horizontalPoint
      */
-    protected function __construct(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, DateTimeInterface $epoch = null)
     {
         $this->horizontalPoint = $horizontalPoint;
         $this->verticalPoint = $verticalPoint;
@@ -79,7 +79,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
     /**
      * @param GeographicPoint|ProjectedPoint $horizontalPoint
      */
-    public static function create(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, ?DateTimeInterface $epoch = null)
+    public static function create(Point $horizontalPoint, VerticalPoint $verticalPoint, Compound $crs, DateTimeInterface $epoch = null)
     {
         return new static($horizontalPoint, $verticalPoint, $crs, $epoch);
     }
@@ -130,7 +130,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         } catch (UnknownConversionException $e) {
             if ($this->getHorizontalPoint() instanceof ConvertiblePoint) {
                 // if 2D target, try again with just the horizontal component
-                if (($to instanceof Geographic2D || $to instanceof Projected)) {
+                if ($to instanceof Geographic2D || $to instanceof Projected) {
                     return $this->getHorizontalPoint()->convert($to, $ignoreBoundaryRestrictions);
                 }
 

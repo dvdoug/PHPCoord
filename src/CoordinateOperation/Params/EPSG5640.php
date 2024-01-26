@@ -5,6 +5,7 @@
  * @author Doug Wright
  */
 declare(strict_types=1);
+
 /** @internal */ return [
   'latitudeOf1stStandardParallel' => [
     'value' => -2.0,

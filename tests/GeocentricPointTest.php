@@ -8,10 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function class_exists;
 use DateTime;
 use DateTimeImmutable;
-use function in_array;
 use InvalidArgumentException;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -32,6 +30,9 @@ use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\TestCase;
+
+use function class_exists;
+use function in_array;
 
 class GeocentricPointTest extends TestCase
 {
@@ -391,7 +392,7 @@ class GeocentricPointTest extends TestCase
         $toTest = [];
         foreach (CRSTransformations::getSupportedTransformations() as $transformation) {
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                //filter out operations that require a grid file that we don't have
+                // filter out operations that require a grid file that we don't have
                 $needsNonExistentFile = false;
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
                     if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {

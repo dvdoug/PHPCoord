@@ -8,14 +8,15 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
-use function atan2;
-use function cos;
-use function hypot;
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
+use function abs;
+use function atan2;
+use function cos;
+use function hypot;
 use function sin;
 use function sqrt;
 
@@ -27,7 +28,7 @@ class GeocentricValue
 {
     protected const ITERATION_CONVERGENCE = 1e-10;
 
-    private Metre$x;
+    private Metre $x;
 
     private Metre $y;
 
@@ -71,7 +72,7 @@ class GeocentricValue
         $longitude += $this->datum->getPrimeMeridian()->getGreenwichLongitude()->asRadians()->getValue();
         $p = hypot($x, $y);
 
-        $latitude = atan2($z, ($p * (1 - $e2)));
+        $latitude = atan2($z, $p * (1 - $e2));
 
         do {
             $phi1 = $latitude;

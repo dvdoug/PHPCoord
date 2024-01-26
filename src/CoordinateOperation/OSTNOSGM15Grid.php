@@ -8,14 +8,16 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
-use const PHP_MAJOR_VERSION;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFileObject;
+
+use function abs;
+
+use const PHP_MAJOR_VERSION;
 
 class OSTNOSGM15Grid extends SplFileObject
 {
@@ -80,9 +82,9 @@ class OSTNOSGM15Grid extends SplFileObject
         $t = $dx / self::GRID_SIZE;
         $u = $dy / self::GRID_SIZE;
 
-        $se = (1 - $t) * (1 - $u) * $corner0[3] + ($t) * (1 - $u) * $corner1[3] + ($t) * ($u) * $corner2[3] + (1 - $t) * ($u) * $corner3[3];
-        $sn = (1 - $t) * (1 - $u) * $corner0[4] + ($t) * (1 - $u) * $corner1[4] + ($t) * ($u) * $corner2[4] + (1 - $t) * ($u) * $corner3[4];
-        $sh = (1 - $t) * (1 - $u) * $corner0[5] + ($t) * (1 - $u) * $corner1[5] + ($t) * ($u) * $corner2[5] + (1 - $t) * ($u) * $corner3[5];
+        $se = (1 - $t) * (1 - $u) * $corner0[3] + $t * (1 - $u) * $corner1[3] + $t * $u * $corner2[3] + (1 - $t) * $u * $corner3[3];
+        $sn = (1 - $t) * (1 - $u) * $corner0[4] + $t * (1 - $u) * $corner1[4] + $t * $u * $corner2[4] + (1 - $t) * $u * $corner3[4];
+        $sh = (1 - $t) * (1 - $u) * $corner0[5] + $t * (1 - $u) * $corner1[5] + $t * $u * $corner2[5] + (1 - $t) * $u * $corner3[5];
 
         return [$se, $sn, $sh];
     }

@@ -8,8 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
-use function end;
 use PHPCoord\Exception\UnknownDatumException;
+
+use function end;
 
 class Datum
 {

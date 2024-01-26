@@ -8,10 +8,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function count;
 use PHPCoord\CoordinateOperation\CRSTransformations;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPUnit\Framework\TestCase;
+
+use function count;
 
 class ProjectedTest extends TestCase
 {

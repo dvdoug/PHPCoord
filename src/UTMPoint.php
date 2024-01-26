@@ -40,7 +40,7 @@ class UTMPoint extends ProjectedPoint
      */
     protected Geographic $baseCRS;
 
-    public function __construct(Length $easting, Length $northing, int $zone, string $hemisphere, Geographic $crs, ?DateTimeInterface $epoch = null)
+    public function __construct(Length $easting, Length $northing, int $zone, string $hemisphere, Geographic $crs, DateTimeInterface $epoch = null)
     {
         $this->zone = $zone;
         $this->hemisphere = $hemisphere;

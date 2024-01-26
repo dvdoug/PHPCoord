@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function abs;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -31,6 +30,8 @@ use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
+
+use function abs;
 use function sprintf;
 
 /**
@@ -65,7 +66,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Length $x, Length $y, Length $z, Geocentric $crs, DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
         $this->x = $x::convert($x, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
@@ -83,7 +84,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      * @param Length $y refer to CRS for preferred unit of measure, but any length unit accepted
      * @param Length $z refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Length $x, Length $y, Length $z, Geocentric $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Length $x, Length $y, Length $z, Geocentric $crs, DateTimeInterface $epoch = null): self
     {
         return new static($x, $y, $z, $crs, $epoch);
     }

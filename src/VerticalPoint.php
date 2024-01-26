@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function abs;
-use function cos;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -18,6 +16,9 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+
+use function abs;
+use function cos;
 use function sin;
 use function sqrt;
 
@@ -45,7 +46,7 @@ class VerticalPoint extends Point
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    protected function __construct(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(Length $height, Vertical $crs, DateTimeInterface $epoch = null)
     {
         $this->height = $height::convert($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
         $this->crs = $crs;
@@ -60,7 +61,7 @@ class VerticalPoint extends Point
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Length $height, Vertical $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(Length $height, Vertical $crs, DateTimeInterface $epoch = null): self
     {
         return new static($height, $crs, $epoch);
     }

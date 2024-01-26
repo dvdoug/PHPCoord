@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_unshift;
-use function explode;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
@@ -17,6 +15,9 @@ use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassLike;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
+
+use function array_unshift;
+use function explode;
 use function preg_replace;
 use function str_replace;
 use function strtoupper;

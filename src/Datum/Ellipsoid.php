@@ -10,6 +10,7 @@ namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPCoord\UnitOfMeasure\Length\Length;
+
 use function sqrt;
 
 class Ellipsoid

@@ -8,18 +8,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function abs;
-use function array_column;
-use function array_merge;
-use function array_shift;
-use function array_sum;
-use function assert;
-use function class_exists;
-use function count;
 use DateTimeImmutable;
-use function end;
 use Generator;
-use function in_array;
 use PHPCoord\CompoundPoint;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -30,7 +20,18 @@ use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Point;
 use PHPCoord\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Time\Year;
-use function strpos;
+
+use function abs;
+use function array_column;
+use function array_merge;
+use function array_shift;
+use function array_sum;
+use function assert;
+use function class_exists;
+use function count;
+use function end;
+use function in_array;
+use function str_starts_with;
 use function usort;
 
 /**
@@ -70,7 +71,7 @@ trait AutoConversion
             return $this;
         }
 
-        if (strpos($this->getCRS()->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) !== 0 || strpos($to->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) !== 0) {
+        if (!str_starts_with($this->getCRS()->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG) || !str_starts_with($to->getSRID(), CoordinateReferenceSystem::CRS_SRID_PREFIX_EPSG)) {
             throw new UnknownConversionException('Automatic conversions are only supported for EPSG CRSs');
         }
 
@@ -112,7 +113,7 @@ trait AutoConversion
         foreach ($candidatePath as $pathStep) {
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
             if ($boundaryCheckPoint) {
-                //filter out operations that only operate outside this point
+                // filter out operations that only operate outside this point
                 $polygon = BoundingArea::createFromExtentCodes($operation['extent_code']);
                 if (!$polygon->containsPoint($boundaryCheckPoint)) {
                     return false;
@@ -121,14 +122,14 @@ trait AutoConversion
 
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
 
-            //filter out operations that require an epoch if we don't have one
+            // filter out operations that require an epoch if we don't have one
             if (isset(self::$methodsThatRequireCoordinateEpoch[$operation['method']]) && !$this->getCoordinateEpoch()) {
                 return false;
             }
 
             $params = CoordinateOperations::getParamData($pathStep['operation']);
 
-            //filter out operations that require a specific epoch
+            // filter out operations that require a specific epoch
             if (isset(self::$methodsThatRequireASpecificEpoch[$operation['method']]) && $this->getCoordinateEpoch()) {
                 $pointEpoch = Year::fromDateTime($this->getCoordinateEpoch());
                 if (!(abs($pointEpoch->getValue() - $params['transformationReferenceEpoch']['value']) <= 0.001)) {
@@ -136,8 +137,8 @@ trait AutoConversion
                 }
             }
 
-            //filter out operations that require a grid file that we don't have, or where boundaries are not being
-            //checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
+            // filter out operations that require a grid file that we don't have, or where boundaries are not being
+            // checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...
             foreach ($params as $param) {
                 if (isset($param['fileProvider']) && (!$boundaryCheckPoint || !class_exists($param['fileProvider']))) {
                     return false;

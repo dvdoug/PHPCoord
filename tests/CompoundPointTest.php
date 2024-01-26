@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function class_exists;
 use DateTime;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -27,6 +26,8 @@ use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
+
+use function class_exists;
 
 class CompoundPointTest extends TestCase
 {
@@ -155,7 +156,7 @@ class CompoundPointTest extends TestCase
         $sourceHorizontalCRS = $sourceCRS->getHorizontal();
         if ($sourceHorizontalCRS instanceof Geographic2D) {
             $centre = $operationExtent->getPointInside();
-            $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); //compensate for non-Greenwich prime meridian
+            $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
 
             $horizontalPoint = GeographicPoint::create($centre[0], $centre[1], null, $sourceHorizontalCRS);
         } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
@@ -192,7 +193,7 @@ class CompoundPointTest extends TestCase
             $needsNonExistentFile = false;
 
             if (isset(static::$sridData[$transformation['source_crs']])) {
-                //filter out operations that require a grid file that we don't have
+                // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $param) {
                     if (isset($param['fileProvider']) && !class_exists($param['fileProvider'])) {
                         $needsNonExistentFile = true;

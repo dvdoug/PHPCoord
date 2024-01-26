@@ -8,13 +8,14 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateReferenceSystem;
 
-use function assert;
-use function count;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
+
+use function assert;
+use function count;
 
 class Vertical extends CoordinateReferenceSystem
 {

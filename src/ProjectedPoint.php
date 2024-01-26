@@ -8,24 +8,9 @@ declare(strict_types=1);
 
 namespace PHPCoord;
 
-use function abs;
-use function asinh;
-use function atan;
-use function atan2;
-use function atanh;
-use function cos;
-use function cosh;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-use function hypot;
-use function implode;
-use function is_nan;
-use function log;
-use const M_E;
-use const M_PI;
-use const M_PI_2;
-use function max;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ComplexNumber;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
@@ -47,12 +32,29 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+
+use function abs;
+use function asinh;
+use function atan;
+use function atan2;
+use function atanh;
+use function cos;
+use function cosh;
+use function hypot;
+use function implode;
+use function is_nan;
+use function log;
+use function max;
 use function sin;
 use function sinh;
 use function sqrt;
 use function substr;
 use function tan;
 use function tanh;
+
+use const M_E;
+use const M_PI;
+use const M_PI_2;
 
 /**
  * Coordinate representing a point on a map projection.
@@ -91,7 +93,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null)
+    protected function __construct(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
 
@@ -126,7 +128,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $this->epoch = $epoch;
     }
 
-    public static function create(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function create(?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, Projected $crs, DateTimeInterface $epoch = null): self
     {
         if ($crs->getSRID() === Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID) {
             return new BritishNationalGridPoint($easting, $northing, $epoch);
@@ -143,17 +145,17 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         return new static($easting, $northing, $westing, $southing, $crs, $epoch);
     }
 
-    public static function createFromEastingNorthing(Length $easting, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromEastingNorthing(Length $easting, Length $northing, Projected $crs, DateTimeInterface $epoch = null): self
     {
         return static::create($easting, $northing, null, null, $crs, $epoch);
     }
 
-    public static function createFromWestingNorthing(Length $westing, Length $northing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingNorthing(Length $westing, Length $northing, Projected $crs, DateTimeInterface $epoch = null): self
     {
         return static::create(null, $northing, $westing, null, $crs, $epoch);
     }
 
-    public static function createFromWestingSouthing(Length $westing, Length $southing, Projected $crs, ?DateTimeInterface $epoch = null): self
+    public static function createFromWestingSouthing(Length $westing, Length $southing, Projected $crs, DateTimeInterface $epoch = null): self
     {
         return static::create(null, null, $westing, $southing, $crs, $epoch);
     }
@@ -366,7 +368,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
                 $C = sqrt(1 - $e2 * sin($latitude) ** 2) * tan($latitude);
             } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE_FORMULA);
 
-            $longitude = $longitudeOrigin + (self::asin($easting * $C / $a)) / sin($latitude);
+            $longitude = $longitudeOrigin + self::asin($easting * $C / $a) / sin($latitude);
         }
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
@@ -401,7 +403,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
         $e1 = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
 
-        $latitude = $mu + ((3 * $e1 / 2) - (27 * $e1 ** 3 / 32)) * sin(2 * $mu) + ((21 * $e1 ** 2 / 16) - (55 * $e1 ** 4 / 32)) * sin(4 * $mu) + ((151 * $e1 ** 3 / 96)) * sin(6 * $mu) + ((1097 * $e1 ** 4 / 512)) * sin(8 * $mu);
+        $latitude = $mu + ((3 * $e1 / 2) - (27 * $e1 ** 3 / 32)) * sin(2 * $mu) + ((21 * $e1 ** 2 / 16) - (55 * $e1 ** 4 / 32)) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
         $m = cos($latitude) / sqrt(1 - $e2 * sin($latitude) ** 2);
 
         if ($m === 0.0) {
@@ -444,7 +446,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
         $e1 = (1 - sqrt(1 - $e2)) / (1 + sqrt(1 - $e2));
 
-        $latitude = $mu + ((3 * $e1 / 2) - (27 * $e1 ** 3 / 32)) * sin(2 * $mu) + ((21 * $e1 ** 2 / 16) - (55 * $e1 ** 4 / 32)) * sin(4 * $mu) + ((151 * $e1 ** 3 / 96)) * sin(6 * $mu) + ((1097 * $e1 ** 4 / 512)) * sin(8 * $mu);
+        $latitude = $mu + ((3 * $e1 / 2) - (27 * $e1 ** 3 / 32)) * sin(2 * $mu) + ((21 * $e1 ** 2 / 16) - (55 * $e1 ** 4 / 32)) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
         $m = cos($latitude) / sqrt(1 - $e2 * sin($latitude) ** 2);
 
         if ($m === 0.0) {
@@ -502,7 +504,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $mu = $M / ($a * (1 - $e2 / 4 - 3 * $e4 / 64 - 5 * $e6 / 256));
         $latitudeCentralMeridian = $mu + (3 * $e1 / 2 - 27 * $e1 ** 3 / 32) * sin(2 * $mu) + (21 * $e1 ** 2 / 16 - 55 * $e1 ** 4 / 32) * sin(4 * $mu) + (151 * $e1 ** 3 / 96) * sin(6 * $mu) + (1097 * $e1 ** 4 / 512) * sin(8 * $mu);
 
-        $nu = $a / sqrt((1 - $e2 * sin($latitudeCentralMeridian) ** 2));
+        $nu = $a / sqrt(1 - $e2 * sin($latitudeCentralMeridian) ** 2);
         $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitudeCentralMeridian) ** 2) ** 1.5;
 
         $T = tan($latitudeCentralMeridian) ** 2;
@@ -540,7 +542,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $latitude1 = $latitudeOrigin + $northing / 1567446;
 
-        $nu = $a / sqrt((1 - $e2 * sin($latitude1) ** 2));
+        $nu = $a / sqrt(1 - $e2 * sin($latitude1) ** 2);
         $rho = $a * (1 - $e2) / (1 - $e2 * sin($latitude1) ** 2) ** 1.5;
 
         $qPrime = $northing ** 3 / (6 * $rho * $nu);
@@ -620,7 +622,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         do {
             $thetaN = $theta;
             $correctionFactor = ($theta * (1.340264 - 0.081106 * $theta ** 2 + $theta ** 6 * (0.000893 + 0.003796 * $theta ** 2)) - $northing / $Rq) / (1.340264 - 0.243318 * $theta ** 2 + $theta ** 6 * (0.006251 + 0.034164 * $theta ** 2));
-            $theta = $theta - $correctionFactor;
+            $theta -= $correctionFactor;
         } while (abs($theta - $thetaN) >= static::ITERATION_CONVERGENCE_FORMULA);
 
         $beta = self::asin(2 * sin($theta) / sqrt(3));
@@ -1359,8 +1361,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         $g = 2 * $R * $scaleFactorOrigin * tan(M_PI / 4 - $chiOrigin / 2);
         $h = 4 * $R * $scaleFactorOrigin * tan($chiOrigin) + $g;
-        $i = atan2($easting, ($h + $northing));
-        $j = atan2($easting, ($g - $northing)) - $i;
+        $i = atan2($easting, $h + $northing);
+        $j = atan2($easting, $g - $northing) - $i;
         $chi = $chiOrigin + 2 * atan(($northing - $easting * tan($j / 2)) / (2 * $R * $scaleFactorOrigin));
         $lambda = $j + 2 * $i + $longitudeOrigin;
 
@@ -1371,7 +1373,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $latitude = 2 * atan(M_E ** $psi) - M_PI / 2;
         do {
             $latitudeN = $latitude;
-            $psiN = log((tan($latitudeN / 2 + M_PI / 4)) * ((1 - $e * sin($latitudeN)) / (1 + $e * sin($latitudeN))) ** ($e / 2));
+            $psiN = log(tan($latitudeN / 2 + M_PI / 4) * ((1 - $e * sin($latitudeN)) / (1 + $e * sin($latitudeN))) ** ($e / 2));
             $latitude = $latitudeN - ($psiN - $psi) * cos($latitudeN) * (1 - $e2 * sin($latitudeN) ** 2) / (1 - $e2);
         } while (abs($latitude - $latitudeN) >= static::ITERATION_CONVERGENCE_FORMULA);
 
@@ -1684,13 +1686,13 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
         $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
-        $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
+        $D = $B * sqrt(1 - $e2) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
         $DD = max(1, $D ** 2);
         $F = $D + sqrt($DD - 1) * static::sign($latC);
-        $H = $F * ($tO) ** $B;
+        $H = $F * $tO ** $B;
         $G = ($F - 1 / $F) / 2;
         $gammaO = self::asin(sin($alphaC) / $D);
-        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
+        $lonO = $lonC - self::asin($G * tan($gammaO)) / $B;
 
         $v = $easting * cos($gammaC) - $northing * sin($gammaC);
         $u = $northing * cos($gammaC) + $easting * sin($gammaC);
@@ -1705,7 +1707,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $chi = M_PI / 2 - 2 * atan($t);
 
         $latitude = $chi + sin(2 * $chi) * ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) + sin(4 * $chi) * (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) + sin(6 * $chi) * (7 * $e6 / 120 + 81 * $e8 / 1120) + sin(8 * $chi) * (4279 * $e8 / 161280);
-        $longitude = $lonO - atan2(($S * cos($gammaO) - $V * sin($gammaO)), cos($B * $u / $A)) / $B;
+        $longitude = $lonO - atan2($S * cos($gammaO) - $V * sin($gammaO), cos($B * $u / $A)) / $B;
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1741,13 +1743,13 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $B = sqrt(1 + ($e2 * cos($latC) ** 4 / (1 - $e2)));
         $A = $a * $B * $kC * sqrt(1 - $e2) / (1 - $e2 * sin($latC) ** 2);
         $tO = tan(M_PI / 4 - $latC / 2) / ((1 - $e * sin($latC)) / (1 + $e * sin($latC))) ** ($e / 2);
-        $D = $B * sqrt((1 - $e2)) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
+        $D = $B * sqrt(1 - $e2) / (cos($latC) * sqrt(1 - $e2 * sin($latC) ** 2));
         $DD = max(1, $D ** 2);
         $F = $D + sqrt($DD - 1) * static::sign($latC);
-        $H = $F * ($tO) ** $B;
+        $H = $F * $tO ** $B;
         $G = ($F - 1 / $F) / 2;
         $gammaO = self::asin(sin($alphaC) / $D);
-        $lonO = $lonC - (self::asin($G * tan($gammaO))) / $B;
+        $lonO = $lonC - self::asin($G * tan($gammaO)) / $B;
         $vC = 0;
         if ($alphaC === M_PI / 2) {
             $uC = $A * ($lonC - $lonO);
@@ -1768,7 +1770,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $chi = M_PI / 2 - 2 * atan($t);
 
         $latitude = $chi + sin(2 * $chi) * ($e2 / 2 + 5 * $e4 / 24 + $e6 / 12 + 13 * $e8 / 360) + sin(4 * $chi) * (7 * $e4 / 48 + 29 * $e6 / 240 + 811 * $e8 / 11520) + sin(6 * $chi) * (7 * $e6 / 120 + 81 * $e8 / 1120) + sin(8 * $chi) * (4279 * $e8 / 161280);
-        $longitude = $lonO - atan2(($S * cos($gammaO) - $V * sin($gammaO)), cos($B * $u / $A)) / $B;
+        $longitude = $lonO - atan2($S * cos($gammaO) - $V * sin($gammaO), cos($B * $u / $A)) / $B;
 
         return GeographicPoint::create(new Radian($latitude), new Radian($longitude), null, $to, $this->epoch);
     }
@@ -1807,7 +1809,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $H = $H0->divide($H0->pow(3)->multiply($G)->add($H0));
         do {
             $HN = $H;
-            $H = ($HN->pow(3)->multiply($G)->multiply(new ComplexNumber(2, 0))->add($H0))->divide($HN->pow(2)->multiply($G)->multiply(new ComplexNumber(3, 0))->add(new ComplexNumber(1, 0)));
+            $H = $HN->pow(3)->multiply($G)->multiply(new ComplexNumber(2, 0))->add($H0)->divide($HN->pow(2)->multiply($G)->multiply(new ComplexNumber(3, 0))->add(new ComplexNumber(1, 0)));
         } while (abs($H0->subtract($H)->subtract($H->pow(3)->multiply($G))->getReal()) >= static::ITERATION_CONVERGENCE_FORMULA);
 
         $LPrime = -1 * $H->getReal();
@@ -2074,8 +2076,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Scale $A4,
         Scale $A5,
         Scale $A6,
-        ?Scale $A7 = null,
-        ?Scale $A8 = null
+        Scale $A7 = null,
+        Scale $A8 = null
     ): self {
         $xs = $this->easting->getValue();
         $ys = $this->northing->getValue();

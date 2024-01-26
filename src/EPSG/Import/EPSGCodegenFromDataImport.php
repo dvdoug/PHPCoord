@@ -8,26 +8,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use function array_column;
-use function array_merge;
-use function array_unique;
-use function array_values;
-use function class_exists;
-use function count;
-use function dirname;
 use Exception;
-use function explode;
-use function file_get_contents;
-use function file_put_contents;
-use function glob;
-use function implode;
-use function in_array;
-use function json_decode;
-use const JSON_THROW_ON_ERROR;
-use function lcfirst;
-use function max;
-use function min;
-use const PHP_EOL;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -47,16 +28,37 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
+use SQLite3;
+
+use function array_column;
+use function array_merge;
+use function array_unique;
+use function array_values;
+use function class_exists;
+use function count;
+use function dirname;
+use function explode;
+use function file_get_contents;
+use function file_put_contents;
+use function glob;
+use function implode;
+use function in_array;
+use function json_decode;
+use function lcfirst;
+use function max;
+use function min;
 use function preg_match;
 use function preg_replace;
 use function sleep;
-use SQLite3;
-use const SQLITE3_ASSOC;
-use const SQLITE3_OPEN_READONLY;
 use function str_replace;
 use function ucwords;
 use function unlink;
 use function var_export;
+
+use const JSON_THROW_ON_ERROR;
+use const PHP_EOL;
+use const SQLITE3_ASSOC;
+use const SQLITE3_OPEN_READONLY;
 
 class EPSGCodegenFromDataImport
 {
@@ -119,7 +121,7 @@ class EPSGCodegenFromDataImport
         1036, // Cartesian Grid Offsets from Form Function
         1040, // GNTRANS
 
-        //replaced with OSGM15
+        // replaced with OSGM15
         1045, // Geographic3D to GravityRelatedHeight (OSGM02-Ire)
 
         // replaced by NTv2
@@ -1688,8 +1690,8 @@ class EPSGCodegenFromDataImport
                     $paramsRow['value'] = 'urn:ogc:def:crs:EPSG::' . $paramsRow['value'];
                 }
                 if (
-                    isset($filenameToProviderMap[(string) $paramsRow['value']]) &&
-                    in_array(
+                    isset($filenameToProviderMap[(string) $paramsRow['value']])
+                    && in_array(
                         $paramsRow['name'],
                         [
                             'eastingAndNorthingDifferenceFile',
