@@ -21,6 +21,7 @@ use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
+use function round;
 
 use const STR_PAD_LEFT;
 
@@ -71,6 +72,14 @@ class IrishGridPoint extends ProjectedPoint
     }
 
     /**
+     * Grid reference with spaces. e.g. T 514 131.
+     */
+    public function asGridReferenceWithSpaces(int $length): string
+    {
+        return implode(' ', $this->gridReference($length));
+    }
+
+    /**
      * Convert this grid reference into a grid reference string of a
      * given length (2, 4, 6, 8 or 10) including the character
      * designation for the 100km square. e.g. T514131.
@@ -87,8 +96,8 @@ class IrishGridPoint extends ProjectedPoint
 
         $x = $this->easting->asMetres()->getValue();
         $y = $this->northing->asMetres()->getValue();
-        $easting = str_pad((string) $x, 6, '0', STR_PAD_LEFT);
-        $northing = str_pad((string) $y, 6, '0', STR_PAD_LEFT);
+        $easting = str_pad((string) round($x), $halfLength, '0', STR_PAD_LEFT);
+        $northing = str_pad((string) round($y), $halfLength, '0', STR_PAD_LEFT);
 
         // second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = $easting[0] % 5;

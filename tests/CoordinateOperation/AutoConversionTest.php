@@ -19,6 +19,7 @@ use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\IrishGridPoint;
 use PHPCoord\Point\CompoundPoint;
 use PHPCoord\Point\GeocentricPoint;
 use PHPCoord\Point\GeographicPoint;
@@ -70,6 +71,8 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(318977.585, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(311611.131, $to->getNorthing()->asMetres()->getValue(), 0.01);
+
+        self::assertEquals('J 18978 11611', $to->asGridReferenceWithSpaces(12));
     }
 
     public function testNoop(): void
