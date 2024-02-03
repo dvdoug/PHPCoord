@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [5.8.0] - 2024-02-03
+### Added
+- Support for compressed grid files to reduce distribution sizes
+
 ## [5.7.0] - 2024-01-27
 ### Changed
 - Updates to data for Canada, Denmark, France, Germany and USA
@@ -317,8 +321,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.7.0..master
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.8.0..master
 
+[5.8.0]: https://github.com/dvdoug/PHPCoord/compare/v5.7.0..v5.8.0
 [5.7.0]: https://github.com/dvdoug/PHPCoord/compare/v5.6.0..v5.7.0
 [5.6.0]: https://github.com/dvdoug/PHPCoord/compare/v5.5.0..v5.6.0
 [5.5.0]: https://github.com/dvdoug/PHPCoord/compare/v5.4.0..v5.5.0
