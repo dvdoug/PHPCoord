@@ -67,7 +67,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Geocentric $crs, Length $x, Length $y, Length $z, DateTimeInterface $epoch = null)
+    protected function __construct(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null)
     {
         $this->crs = $crs;
         $this->x = $x::convert($x, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
@@ -85,7 +85,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      * @param Length $y refer to CRS for preferred unit of measure, but any length unit accepted
      * @param Length $z refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    public static function create(Geocentric $crs, Length $x, Length $y, Length $z, DateTimeInterface $epoch = null): self
+    public static function create(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null): self
     {
         return new self($crs, $x, $y, $z, $epoch);
     }

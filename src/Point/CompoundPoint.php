@@ -64,7 +64,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, DateTimeInterface $epoch = null)
+    protected function __construct(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null)
     {
         $this->horizontalPoint = $horizontalPoint;
         $this->verticalPoint = $verticalPoint;
@@ -76,7 +76,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         $this->epoch = $epoch;
     }
 
-    public static function create(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, DateTimeInterface $epoch = null): self
+    public static function create(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null): self
     {
         return new self($crs, $horizontalPoint, $verticalPoint, $epoch);
     }

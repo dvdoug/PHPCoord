@@ -40688,7 +40688,7 @@ class Projected extends CoordinateReferenceSystem
     private static array $cachedObjects = [
     ];
 
-    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', Geographic2D|Geographic3D $baseCRS = null, string $derivingConversion = null)
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', Geographic2D|Geographic3D|null $baseCRS = null, ?string $derivingConversion = null)
     {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;

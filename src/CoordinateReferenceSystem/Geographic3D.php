@@ -1702,7 +1702,7 @@ class Geographic3D extends Geographic
     private static array $cachedObjects = [
     ];
 
-    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', Geocentric|self $baseCRS = null)
+    public function __construct(string $srid, CoordinateSystem $coordinateSystem, Datum $datum, BoundingArea $boundingArea, string $name = '', Geocentric|self|null $baseCRS = null)
     {
         $this->srid = $srid;
         $this->coordinateSystem = $coordinateSystem;
@@ -1754,7 +1754,7 @@ class Geographic3D extends Geographic
         ], static::$sridData);
     }
 
-    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $baseCRSSrid = null, string $help = ''): void
+    public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, ?string $baseCRSSrid = null, string $help = ''): void
     {
         self::$sridData[$srid] = [
             'name' => $name,

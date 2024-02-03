@@ -32,7 +32,7 @@ class IrishGridPoint extends ProjectedPoint
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
-    public function __construct(Length $easting, Length $northing, DateTimeInterface $epoch = null)
+    public function __construct(Length $easting, Length $northing, ?DateTimeInterface $epoch = null)
     {
         parent::__construct(Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID), $easting, $northing, null, null, $epoch, null);
     }
@@ -40,7 +40,7 @@ class IrishGridPoint extends ProjectedPoint
     /**
      * @param string $reference Irish grid reference (e.g. "T514131")
      */
-    public static function fromGridReference(string $reference, DateTimeInterface $epoch = null): self
+    public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
     {
         $reference = str_replace(' ', '', $reference);
 

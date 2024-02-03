@@ -150,7 +150,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $this->height = $height;
     }
 
-    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, DateTimeInterface $epoch = null, Length $height = null): self
+    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
         return match ($crs->getSRID()) {
             Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => new BritishNationalGridPoint($easting, $northing, $epoch),
@@ -160,17 +160,17 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         };
     }
 
-    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, DateTimeInterface $epoch = null, Length $height = null): self
+    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
         return static::create($crs, $easting, $northing, null, null, $epoch, $height);
     }
 
-    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, DateTimeInterface $epoch = null, Length $height = null): self
+    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
         return static::create($crs, null, $northing, $westing, null, $epoch, $height);
     }
 
-    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, DateTimeInterface $epoch = null, Length $height = null): self
+    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
     {
         return static::create($crs, null, null, $westing, $southing, $epoch, $height);
     }
@@ -2166,8 +2166,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Scale $A4,
         Scale $A5,
         Scale $A6,
-        Scale $A7 = null,
-        Scale $A8 = null
+        ?Scale $A7 = null,
+        ?Scale $A8 = null
     ): self {
         $xs = $this->easting->getValue();
         $ys = $this->northing->getValue();
