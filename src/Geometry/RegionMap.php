@@ -3663,5 +3663,6 @@ class RegionMap
             'urn:ogc:def:area:EPSG::4749' => self::REGION_NORTHAMERICA,
             'urn:ogc:def:area:EPSG::4750' => self::REGION_SOUTHAMERICA,
             'urn:ogc:def:area:EPSG::4751' => self::REGION_OCEANIA,
+            'urn:ogc:def:area:EPSG::4755' => self::REGION_EUROPE,
         ];
 }

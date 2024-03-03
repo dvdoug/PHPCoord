@@ -165,6 +165,27 @@ to ETRS89 (Geographic3D)
 
     "
 
+ETRS89 + Cascais height
+-----------------------
+``Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CASCAIS_HEIGHT)``
+
+to ETRS89 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89 to ETRS89 + Cascais height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10546``
+    | Extent: Portugal - mainland - onshore",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),
+            geoidHeightCorrectionModelFile: DATETRS89CascaisPortugalProvider->provideGrid()
+        )
+
+    "
+
 ETRS89 + Ceuta 2 height
 -----------------------
 ``Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CEUTA_2_HEIGHT)``

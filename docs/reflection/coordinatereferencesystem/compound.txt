@@ -463,6 +463,18 @@ ETRS89 + Cagliari 1956 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9725')
 
 
+ETRS89 + Cascais height
+-----------------------
+| Extent: Portugal - mainland - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_CASCAIS_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10545')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_CASCAIS_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10545')
+
+
 ETRS89 + Catania 1965 height
 ----------------------------
 | Extent: Italy - Sicily onshore

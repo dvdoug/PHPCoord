@@ -272,6 +272,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_CAGLIARI_1956_HEIGHT = 'urn:ogc:def:crs:EPSG::9725';
 
     /**
+     * ETRS89 + Cascais height
+     * Extent: Portugal - mainland - onshore.
+     */
+    public const EPSG_ETRS89_PLUS_CASCAIS_HEIGHT = 'urn:ogc:def:crs:EPSG::10545';
+
+    /**
      * ETRS89 + Catania 1965 height
      * Extent: Italy - Sicily onshore.
      */

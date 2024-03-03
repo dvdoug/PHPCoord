@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Updates to data for Portugal
+
 ## [5.8.0] - 2024-02-03
 ### Added
 - Support for compressed grid files to reduce distribution sizes

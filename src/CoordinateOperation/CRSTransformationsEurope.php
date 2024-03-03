@@ -3932,6 +3932,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.05,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10546',
+            'name' => 'ETRS89 to ETRS89 + Cascais height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10545',
+            'accuracy' => 0.04,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7711',
             'name' => 'ETRS89 to ODN height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
@@ -4007,6 +4014,13 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'accuracy' => 0.02,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10544',
+            'name' => 'ETRS89 to Cascais height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5780',
+            'accuracy' => 0.04,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9410',

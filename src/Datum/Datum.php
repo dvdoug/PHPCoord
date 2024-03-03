@@ -1659,12 +1659,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1989
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the AM02 geophysical model.
      * Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).
@@ -1674,12 +1669,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1990
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * AM02 geophysical model.
@@ -1691,12 +1681,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1991
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * AM02 geophysical model.
@@ -1708,12 +1693,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1992
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1 geophysical model.
@@ -1725,12 +1705,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1993
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * ITRF93 velocity field.
@@ -1742,12 +1717,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1994
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1A geophysical model.
@@ -1759,12 +1729,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1996
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1A geophysical model.
@@ -1776,12 +1741,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 1997
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * NNR-NUVEL-1A geophysical model.
@@ -1793,12 +1753,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 2000
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * ITRF2000 velocity field.
@@ -1811,12 +1766,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 2005
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
      * ITRF2005 velocity field.
@@ -1829,12 +1779,7 @@ class Datum
     /**
      * European Terrestrial Reference Frame 2014
      * Type: Geodetic
-     * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
-     * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the ITRF2014 velocity field.
      * Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically
@@ -10262,8 +10207,8 @@ Defined by SHGEOID15 geoid model (transformation code 7891) applied to SHGD2015 
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).',
         ],
@@ -10275,8 +10220,8 @@ Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum 
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum code 1178). Replaced by ETRF91 (datum code 1180).',
         ],
@@ -10288,8 +10233,8 @@ Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
 Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum code 1179). Replaced by ETRF92 (datum code 1181).',
         ],
@@ -10301,8 +10246,8 @@ Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1 geophysical model.
 Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum code 1180). Replaced by ETRF93 (datum code 1182).',
         ],
@@ -10314,8 +10259,8 @@ Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF93 velocity field.
 Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum code 1181). Replaced by ETRF94 (datum code 1183).',
         ],
@@ -10327,8 +10272,8 @@ Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum code 1182). Replaced by ETRF96 (datum code 1184).',
         ],
@@ -10340,8 +10285,8 @@ Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum code 1183). Replaced by ETRF97 (datum code 1185).',
         ],
@@ -10353,8 +10298,8 @@ Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
 Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum code 1184). Replaced by ETRF2000 (datum code 1186).',
         ],
@@ -10366,8 +10311,8 @@ Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum cod
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2000 velocity field.
 Defined by transformation from ITRF2000 (CT 7940). Replaces ETRF97. On the publication of ETRF2005 the EUREF TWG recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 1206) is technically superior to all earlier realizations of ETRS89.',
         ],
@@ -10587,8 +10532,8 @@ Uses Normal heights.',
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2005 velocity field.
 Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of this reference frame, the EUREF TWG recommended that ETRF2000 rather than this reference frame remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 1206).',
         ],
@@ -10600,8 +10545,8 @@ Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of thi
             'conventional_rs' => 1025,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
             'help' => 'Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2014 velocity field.
 Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically superior to ETRF2000 (datum code 1186).',
         ],

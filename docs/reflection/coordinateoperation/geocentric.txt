@@ -455,7 +455,7 @@ to ETRS89 (Geographic3D)
 
     "| Name: ETRS89 to ETRF2000 (geog3D to geocen)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::32777``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->geographicGeocentric(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89)
@@ -496,7 +496,7 @@ to ITRF2000 (Geocentric)
 
     "| Name: ITRF2000 to ETRF2000 (2)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7941``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2000),
@@ -528,7 +528,7 @@ to ITRF2005 (Geocentric)
 
     "| Name: ITRF2005 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7950``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2005),
@@ -560,7 +560,7 @@ to ITRF2008 (Geocentric)
 
     "| Name: ITRF2008 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7951``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2008),
@@ -592,7 +592,7 @@ to ITRF2014 (Geocentric)
 
     "| Name: ITRF2014 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8405``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2014),
@@ -624,7 +624,7 @@ to ITRF89 (Geocentric)
 
     "| Name: ITRF89 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7942``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF89),
@@ -656,7 +656,7 @@ to ITRF90 (Geocentric)
 
     "| Name: ITRF90 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7943``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF90),
@@ -688,7 +688,7 @@ to ITRF91 (Geocentric)
 
     "| Name: ITRF91 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7944``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF91),
@@ -720,7 +720,7 @@ to ITRF92 (Geocentric)
 
     "| Name: ITRF92 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7945``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF92),
@@ -752,7 +752,7 @@ to ITRF93 (Geocentric)
 
     "| Name: ITRF93 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7946``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF93),
@@ -784,7 +784,7 @@ to ITRF94 (Geocentric)
 
     "| Name: ITRF94 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7947``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF94),
@@ -816,7 +816,7 @@ to ITRF96 (Geocentric)
 
     "| Name: ITRF96 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7948``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF96),
@@ -848,7 +848,7 @@ to ITRF97 (Geocentric)
 
     "| Name: ITRF97 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7949``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF97),
@@ -920,7 +920,7 @@ to ITRF2005 (Geocentric)
 
     "| Name: ITRF2005 to ETRF2005 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5900``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2005),
@@ -972,7 +972,7 @@ to ITRF2000 (Geocentric)
 
     "| Name: ITRF2000 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8871``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2000),
@@ -1004,7 +1004,7 @@ to ITRF2005 (Geocentric)
 
     "| Name: ITRF2005 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8870``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2005),
@@ -1036,7 +1036,7 @@ to ITRF2008 (Geocentric)
 
     "| Name: ITRF2008 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8869``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2008),
@@ -1068,7 +1068,7 @@ to ITRF2014 (Geocentric)
 
     "| Name: ITRF2014 to ETRF2014 (2)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8880``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2014),
@@ -1100,7 +1100,7 @@ to ITRF89 (Geocentric)
 
     "| Name: ITRF89 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8879``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF89),
@@ -1132,7 +1132,7 @@ to ITRF90 (Geocentric)
 
     "| Name: ITRF90 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8878``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF90),
@@ -1164,7 +1164,7 @@ to ITRF91 (Geocentric)
 
     "| Name: ITRF91 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8877``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF91),
@@ -1196,7 +1196,7 @@ to ITRF92 (Geocentric)
 
     "| Name: ITRF92 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8876``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF92),
@@ -1228,7 +1228,7 @@ to ITRF93 (Geocentric)
 
     "| Name: ITRF93 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8875``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF93),
@@ -1260,7 +1260,7 @@ to ITRF94 (Geocentric)
 
     "| Name: ITRF94 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8874``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF94),
@@ -1292,7 +1292,7 @@ to ITRF96 (Geocentric)
 
     "| Name: ITRF96 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8873``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF96),
@@ -1324,7 +1324,7 @@ to ITRF97 (Geocentric)
 
     "| Name: ITRF97 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8872``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF97),
@@ -1376,7 +1376,7 @@ to ITRF89 (Geocentric)
 
     "| Name: ITRF89 to ETRF89 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7932``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF89),
@@ -1428,7 +1428,7 @@ to ITRF90 (Geocentric)
 
     "| Name: ITRF90 to ETRF90 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7933``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF90),
@@ -1480,7 +1480,7 @@ to ITRF91 (Geocentric)
 
     "| Name: ITRF91 to ETRF91 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7934``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF91),
@@ -1532,7 +1532,7 @@ to ITRF92 (Geocentric)
 
     "| Name: ITRF92 to ETRF92 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7935``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF92),
@@ -1584,7 +1584,7 @@ to ITRF93 (Geocentric)
 
     "| Name: ITRF93 to ETRF93 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7936``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF93),
@@ -1636,7 +1636,7 @@ to ITRF94 (Geocentric)
 
     "| Name: ITRF94 to ETRF94 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7937``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF94),
@@ -1688,7 +1688,7 @@ to ITRF96 (Geocentric)
 
     "| Name: ITRF96 to ETRF96 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7938``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF96),
@@ -1740,7 +1740,7 @@ to ITRF97 (Geocentric)
 
     "| Name: ITRF97 to ETRF97 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7939``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ITRF97),
@@ -3770,7 +3770,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF2000 to ETRF2000 (2)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7941``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -3802,7 +3802,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF2000 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8871``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -4347,7 +4347,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF2005 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7950``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -4379,7 +4379,7 @@ to ETRF2005 (Geocentric)
 
     "| Name: ITRF2005 to ETRF2005 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5900``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2005),
@@ -4411,7 +4411,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF2005 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8870``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -4616,7 +4616,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF2008 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7951``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -4648,7 +4648,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF2008 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8869``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -5096,7 +5096,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF2014 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8405``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -5128,7 +5128,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF2014 to ETRF2014 (2)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8880``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -6616,7 +6616,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF89 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7942``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -6648,7 +6648,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF89 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8879``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -6680,7 +6680,7 @@ to ETRF89 (Geocentric)
 
     "| Name: ITRF89 to ETRF89 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7932``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF89),
@@ -6844,7 +6844,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF90 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7943``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -6876,7 +6876,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF90 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8878``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -6908,7 +6908,7 @@ to ETRF90 (Geocentric)
 
     "| Name: ITRF90 to ETRF90 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7933``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF90),
@@ -7096,7 +7096,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF91 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7944``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -7128,7 +7128,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF91 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8877``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -7160,7 +7160,7 @@ to ETRF91 (Geocentric)
 
     "| Name: ITRF91 to ETRF91 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7934``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF91),
@@ -7324,7 +7324,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF92 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7945``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -7356,7 +7356,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF92 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8876``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -7388,7 +7388,7 @@ to ETRF92 (Geocentric)
 
     "| Name: ITRF92 to ETRF92 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7935``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF92),
@@ -7584,7 +7584,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF93 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7946``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -7616,7 +7616,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF93 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8875``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -7648,7 +7648,7 @@ to ETRF93 (Geocentric)
 
     "| Name: ITRF93 to ETRF93 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7936``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF93),
@@ -7828,7 +7828,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF94 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7947``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -7860,7 +7860,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF94 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8874``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -7892,7 +7892,7 @@ to ETRF94 (Geocentric)
 
     "| Name: ITRF94 to ETRF94 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7937``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF94),
@@ -8121,7 +8121,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF96 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7948``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -8153,7 +8153,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF96 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8873``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -8185,7 +8185,7 @@ to ETRF96 (Geocentric)
 
     "| Name: ITRF96 to ETRF96 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7938``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF96),
@@ -8397,7 +8397,7 @@ to ETRF2000 (Geocentric)
 
     "| Name: ITRF97 to ETRF2000 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7949``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
@@ -8429,7 +8429,7 @@ to ETRF2014 (Geocentric)
 
     "| Name: ITRF97 to ETRF2014 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8872``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
@@ -8461,7 +8461,7 @@ to ETRF97 (Geocentric)
 
     "| Name: ITRF97 to ETRF97 (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7939``
-    | Extent: Europe - ETRF by country",".. code-block:: php
+    | Extent: Europe - ETRF",".. code-block:: php
 
         $point->timeDependentPositionVectorTransformation(
             to: Geocentric::fromSRID(Geocentric::EPSG_ETRF97),

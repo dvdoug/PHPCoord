@@ -4251,6 +4251,16 @@ trait CompoundSRIDData
             'extent_description' => 'France - Corsica onshore',
             'help' => '',
         ],
+        'urn:ogc:def:crs:EPSG::10545' => [
+            'name' => 'ETRS89 + Cascais height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5780',
+            'extent' => ['urn:ogc:def:area:EPSG::1294'],
+            'extent_name' => 'Portugal - mainland - onshore',
+            'extent_description' => 'Portugal - mainland - onshore',
+            'help' => '',
+        ],
         'urn:ogc:def:crs:EPSG::20001' => [
             'name' => 'ETRS89 + SVD2006 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',

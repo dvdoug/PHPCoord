@@ -1,6 +1,6 @@
 {
     "id": "urn:ogc:def:area:EPSG::1298",
-    "title": "Europe-FSU/Europe - ETRF by country",
+    "title": "Europe-FSU/Europe - ETRF",
     "type": "Polygon",
     "coordinates": [
         [

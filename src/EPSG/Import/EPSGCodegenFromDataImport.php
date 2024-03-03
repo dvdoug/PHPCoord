@@ -1904,14 +1904,14 @@ class EPSGCodegenFromDataImport
 
             $bufferedFilename = $baseDir . "{$extentCode}.json";
             $bboxFilename = $boundingBoxOnly . "{$extentCode}.json";
-            if (file_exists($bufferedFilename) && file_get_contents($bufferedFilename) !== $bufferedGeoJSON) {
+            if (!file_exists($bufferedFilename) || file_get_contents($bufferedFilename) !== $bufferedGeoJSON) {
                 file_put_contents($bufferedFilename, $bufferedGeoJSON);
             }
             switch ($region) {
                 case RegionMap::REGION_GLOBAL:
                     break;
                 default:
-                    if (file_exists($bboxFilename) && file_get_contents($bboxFilename) !== $bboxGeoJSON) {
+                    if (!file_exists($bboxFilename) || file_get_contents($bboxFilename) !== $bboxGeoJSON) {
                         file_put_contents($boundingBoxOnly . "{$extentCode}.json", $bboxGeoJSON);
                     }
                     break;
