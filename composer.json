@@ -32,7 +32,7 @@
         "php-coord/datapack-oceania": "dev-master",
         "php-coord/datapack-southamerica": "dev-master",
         "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^9.6||^10.0"
+        "phpunit/phpunit": "^9.6||^10.0||^11.0"
     },
     "suggest": {
         "php-coord/datapack-africa": "High-accuracy addon datapack for Africa",
