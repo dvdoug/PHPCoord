@@ -133,6 +133,16 @@ to ETRS89 (Geographic3D)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
+    "| Name: ETRS89 to ETRS89 + Baltic 1957 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10568``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89),
+            geoidHeightCorrectionModelFile: GTXETRS89Baltic1957CzechiaProvider->provideGrid()
+        )
+
+    "
     "| Name: ETRS89 to ETRS89 + Baltic 1957 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8361``
     | Extent: Slovakia",".. code-block:: php
@@ -681,7 +691,7 @@ to GDA94 (Geographic3D)
 
     "| Name: GDA94 to GDA94 + AHD height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9467``
-    | Extent: Australia Christmas and Cocos - onshore",".. code-block:: php
+    | Extent: Australia - onshore",".. code-block:: php
 
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_GDA94),
@@ -1277,7 +1287,7 @@ to RGAF09 (Geographic3D)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: RGAF09 to IGN 2008 LD height (1)
+    "| Name: RGAF09 to RGAF09 + IGN 2008 LD height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9636``
     | Extent: Guadeloupe - La Desirade - onshore",".. code-block:: php
 

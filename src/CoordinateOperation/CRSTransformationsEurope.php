@@ -2868,6 +2868,13 @@ class CRSTransformationsEurope
             'accuracy' => 10.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10595',
+            'name' => 'GLANCE projection - Europe',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10596',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1888',
             'name' => 'Porto Santo to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4615',
@@ -3638,6 +3645,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.1,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10576',
+            'name' => 'ITRF2005 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7950',
             'name' => 'ITRF2005 to ETRF2000 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4896',
@@ -3701,6 +3715,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10585',
+            'name' => 'ITRF89 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7932',
             'name' => 'ITRF89 to ETRF89 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
@@ -3719,6 +3740,13 @@ class CRSTransformationsEurope
             'name' => 'ITRF89 to ETRF2014 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4911',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10584',
+            'name' => 'ITRF90 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4912',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
             'accuracy' => 0.0,
         ],
         [
@@ -3743,6 +3771,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10583',
+            'name' => 'ITRF91 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7934',
             'name' => 'ITRF91 to ETRF91 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
@@ -3761,6 +3796,13 @@ class CRSTransformationsEurope
             'name' => 'ITRF91 to ETRF2014 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4913',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10582',
+            'name' => 'ITRF92 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4914',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
             'accuracy' => 0.0,
         ],
         [
@@ -3785,6 +3827,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10581',
+            'name' => 'ITRF93 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7936',
             'name' => 'ITRF93 to ETRF93 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
@@ -3803,6 +3852,13 @@ class CRSTransformationsEurope
             'name' => 'ITRF93 to ETRF2014 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4915',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10580',
+            'name' => 'ITRF94 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4916',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
             'accuracy' => 0.0,
         ],
         [
@@ -3827,6 +3883,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10579',
+            'name' => 'ITRF96 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7938',
             'name' => 'ITRF96 to ETRF96 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4917',
@@ -3848,6 +3911,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10578',
+            'name' => 'ITRF97 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7939',
             'name' => 'ITRF97 to ETRF97 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
@@ -3866,6 +3936,13 @@ class CRSTransformationsEurope
             'name' => 'ITRF97 to ETRF2014 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4918',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10577',
+            'name' => 'ITRF2000 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
             'accuracy' => 0.0,
         ],
         [
@@ -4077,6 +4154,20 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
             'target_crs' => 'urn:ogc:def:crs:EPSG::7931',
             'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10567',
+            'name' => 'ETRS89 to Baltic 1957 height (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8357',
+            'accuracy' => 0.03,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10568',
+            'name' => 'ETRS89 to ETRS89 + Baltic 1957 height (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4937',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8360',
+            'accuracy' => 0.03,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8361',
@@ -4448,6 +4539,13 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::5324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9947',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10575',
+            'name' => 'ITRF2008 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7951',
@@ -4871,7 +4969,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5419',
-            'name' => 'NGF IGN69 height to EVRF2000 height (1)',
+            'name' => 'NGF-IGN69 height to EVRF2000 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
@@ -4955,7 +5053,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5428',
-            'name' => 'NVN99 height to EVRF2000 height (1)',
+            'name' => 'SVS2000 height to EVRF2000 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5779',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
@@ -5039,7 +5137,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5424',
-            'name' => 'EOMA height 1980 to EVRF2000 height (1)',
+            'name' => 'EOMA 1980 height to EVRF2000 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5787',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'accuracy' => 0.1,
@@ -5941,6 +6039,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.1,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10574',
+            'name' => 'ITRF2014 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8405',
             'name' => 'ITRF2014 to ETRF2000 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
@@ -6541,6 +6646,34 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::9974',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9977',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10572',
+            'name' => 'ITRF2020 to ETRF2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10573',
+            'name' => 'ITRF2020 to ETRF2020 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10569',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10586',
+            'name' => 'ITRF2020 to ETRF2000 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::7930',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10587',
+            'name' => 'ITRF2020 to ETRF2014 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::8401',
+            'accuracy' => 0.0,
         ],
     ];
 

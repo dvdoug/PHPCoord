@@ -451,7 +451,7 @@ trait Geographic2DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1306'],
             'extent_name' => 'Europe - Czechoslovakia',
             'extent_description' => 'Czechia; Slovakia',
-            'help' => 'Greenwich-referenced equivalent to S-JTSK (CRS code 4818). Technically improved and replaced through JTSK/05 in the Czech Republic and S-JTSK [JTSK03] in Slovakia, CRSs 5228 and 5229 (CZ) and 8351 (SK).',
+            'help' => 'Greenwich-referenced equivalent to S-JTSK (CRS code 4818). Technically improved and replaced through S-JTSK [JTSK03] in Slovakia, CRS code 8351. Remains the legal system in Czechia but see scientific working system CRSs 5228 and 5229.',
         ],
         'urn:ogc:def:crs:EPSG::4157' => [
             'name' => 'Mount Dillon',
@@ -3701,7 +3701,7 @@ trait Geographic2DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1079'],
             'extent_name' => 'Czechia',
             'extent_description' => 'Czechia',
-            'help' => 'Derived through projCRS 5515 to improve the scale and homogeneity of CRS 4156 within the Czech Republic. See CRS code 5229 for Ferro-referenced alternative.',
+            'help' => 'Derived through projCRS 5515 to improve the scale and homogeneity of CRS 4156 within Czechia as a scientific working system, but CRS 4156 remains the legal system. See CRS code 5229 for Ferro-referenced alternative.',
         ],
         'urn:ogc:def:crs:EPSG::5229' => [
             'name' => 'S-JTSK/05 (Ferro)',
@@ -3711,7 +3711,7 @@ trait Geographic2DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1079'],
             'extent_name' => 'Czechia',
             'extent_description' => 'Czechia',
-            'help' => 'Derived through projCRS 5224 to improve the scale and homogeneity of CRS 4818 within the Czech Republic. See CRS code 5228 for Greenwich-referenced alternative.',
+            'help' => 'Derived through projCRS code 5224 to improve the scale and homogeneity of CRS 4818 within Czechia as a scientific working system, but CRS 4818 remains the legal system. See CRS code 5228 for Greenwich-referenced alternative.',
         ],
         'urn:ogc:def:crs:EPSG::5233' => [
             'name' => 'SLD99',
@@ -5041,7 +5041,7 @@ trait Geographic2DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
             'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
-            'help' => 'Replaces ETRF97 (code 9066). On the publication of ETRF2005 (code 9068), the EUREF Technical Working Group recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 9069) is technically superior to all earlier realizations of ETRS89.',
+            'help' => 'Replaces ETRF97 (code 9066). On the publication of ETRF2005 the EUREF Technical Working Group recommended ETRF2000 be the realization of ETRS89. ETRF2014 and ETRF2020 (codes 9069 and 10571) are technically superior to all earlier realizations of ETRS89.',
         ],
         'urn:ogc:def:crs:EPSG::9068' => [
             'name' => 'ETRF2005',
@@ -5321,7 +5321,7 @@ trait Geographic2DSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
             'extent_description' => 'World',
-            'help' => 'Replaces WGS 84 (G1762) (CRS code 9057) from 2021-01-03.',
+            'help' => 'Replaces WGS 84 (G1762) (CRS code 9057) from 2021-01-03. Replaced by WGS 84 (G2296) (CRS code 10606) from 2024-01-07.',
         ],
         'urn:ogc:def:crs:EPSG::9758' => [
             'name' => 'ECML14_NB-IRF',
@@ -5782,6 +5782,26 @@ trait Geographic2DSRIDData
             'extent_name' => 'Europe - Brenner',
             'extent_description' => 'Austria and Italy - on or related to the Brenner Base Tunnel rail route from Innsbruck to Fortezza (Franzensfeste)',
             'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10571' => [
+            'name' => 'ETRF2020',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10570',
+            'datum' => 'urn:ogc:def:datum:EPSG::1382',
+            'extent' => ['urn:ogc:def:area:EPSG::1298'],
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
+            'help' => 'Replaces ETRF2014 (code 9069). ETRF2020 is technically superior to ETRF2000 but ETRF2000 and other previous realizations may be preferred for backward compatibility reasons. Differences between ETRF2020 and ETRF2000 can reach 7cm.',
+        ],
+        'urn:ogc:def:crs:EPSG::10606' => [
+            'name' => 'WGS 84 (G2296)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::10605',
+            'datum' => 'urn:ogc:def:datum:EPSG::1383',
+            'extent' => ['urn:ogc:def:area:EPSG::1262'],
+            'extent_name' => 'World',
+            'extent_description' => 'World',
+            'help' => 'Replaces WGS 84 (G2139) (CRS code 9755) from 2024-01-07.',
         ],
         'urn:ogc:def:crs:EPSG::20033' => [
             'name' => 'MWC18-IRF',

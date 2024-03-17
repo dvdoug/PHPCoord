@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 ### Changed
-- Updates to data for Portugal
+- Updates to data for Czechia, Denmark, ETRS89, Portugal and St Helena
 
 ## [5.8.0] - 2024-02-03
 ### Added

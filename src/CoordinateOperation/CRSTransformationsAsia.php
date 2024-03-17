@@ -1237,6 +1237,13 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10593',
+            'name' => 'GLANCE projection - Asia',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10594',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16716',
             'name' => 'TM 116 SE',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
@@ -1683,13 +1690,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3000',
             'accuracy' => 0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1838',
-            'name' => 'Segara to WGS 84 (4)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4613',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1897',
@@ -3636,6 +3636,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::8999',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6990',
             'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10589',
+            'name' => 'ITRF2014 to Segara (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9000',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4613',
+            'accuracy' => 0.2,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9298',

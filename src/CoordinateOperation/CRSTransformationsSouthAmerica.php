@@ -887,6 +887,13 @@ class CRSTransformationsSouthAmerica
             'accuracy' => 11.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10602',
+            'name' => 'GLANCE projection - South America',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10603',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6702',
             'name' => 'TM 60 SW',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',

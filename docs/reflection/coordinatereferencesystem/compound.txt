@@ -511,6 +511,54 @@ ETRS89 + DHHN2016 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9924')
 
 
+ETRS89 + DKLAT(2022) depth
+--------------------------
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DKLAT_2022_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10554')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DKLAT_2022_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10554')
+
+
+ETRS89 + DKLAT(2023) depth
+--------------------------
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DKLAT_2023_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10556')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DKLAT_2023_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10556')
+
+
+ETRS89 + DKMSL(2022) depth
+--------------------------
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DKMSL_2022_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10553')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DKMSL_2022_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10553')
+
+
+ETRS89 + DKMSL(2023) depth
+--------------------------
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_DKMSL_2023_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10555')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRS89_PLUS_DKMSL_2023_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10555')
+
+
 ETRS89 + DVR90(2002) height
 ---------------------------
 | Extent: Denmark - onshore
@@ -4274,7 +4322,7 @@ NAD83(PA11) + ASVD02 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9526')
 
 
-NTF (Paris) + NGF IGN69 height
+NTF (Paris) + NGF-IGN69 height
 ------------------------------
 | Extent: France - mainland onshore
 

@@ -262,10 +262,11 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * CGVD28 height
-     * Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest
-     * Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of
-     * 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N;
-     * Yukon
+     * Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 59°N; New Brunswick; Newfoundland,
+     * Labrador between 52°50’N and 54°30’N; Northwest Territories south west of a line between 60°40’N,
+     * 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°20'N; Prince Edward Island; Quebec - mainland
+     * south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W,
+     * and Anticosta island; Saskatchewan south of 58°30’N; Yukon
      * From November 2013 replaced by CGVD2013 height (CRS code 6647).
      */
     public const EPSG_CGVD28_HEIGHT = 'urn:ogc:def:crs:EPSG::5713';
@@ -437,6 +438,48 @@ class Vertical extends CoordinateReferenceSystem
      * 7837).
      */
     public const EPSG_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5783';
+
+    /**
+     * DKLAT depth
+     * Extent: Denmark - offshore
+     * Reference for all realizations of DKLAT depth without distinction.
+     */
+    public const EPSG_DKLAT_DEPTH = 'urn:ogc:def:crs:EPSG::10552';
+
+    /**
+     * DKLAT(2022) depth
+     * Extent: Denmark - offshore
+     * Replaced by DKLAT(2023) depth.
+     */
+    public const EPSG_DKLAT_2022_DEPTH = 'urn:ogc:def:crs:EPSG::10548';
+
+    /**
+     * DKLAT(2023) depth
+     * Extent: Denmark - offshore
+     * Replaces DKLAT(2022) depth (CRS code 10548).
+     */
+    public const EPSG_DKLAT_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10550';
+
+    /**
+     * DKMSL depth
+     * Extent: Denmark - offshore
+     * Reference for all realizations of DKMSL without distinction.
+     */
+    public const EPSG_DKMSL_DEPTH = 'urn:ogc:def:crs:EPSG::10551';
+
+    /**
+     * DKMSL(2022) depth
+     * Extent: Denmark - offshore
+     * Replaced by DKMSL(2023) depth.
+     */
+    public const EPSG_DKMSL_2022_DEPTH = 'urn:ogc:def:crs:EPSG::10547';
+
+    /**
+     * DKMSL(2023) depth
+     * Extent: Denmark - offshore
+     * Replaces DKMSL(2022) depth (CRS code 10547).
+     */
+    public const EPSG_DKMSL_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10549';
 
     /**
      * DNN height
@@ -707,6 +750,13 @@ class Vertical extends CoordinateReferenceSystem
      * For scientific purposes see EVRF2000 Austria height (CRS code 9274).
      */
     public const EPSG_GHA_HEIGHT = 'urn:ogc:def:crs:EPSG::5778';
+
+    /**
+     * GLLMSL(2022) height
+     * Extent: Greenland - onshore
+     * Collection of 77 disconnected local levelling nets each tied to local mean sea level.
+     */
+    public const EPSG_GLLMSL_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::10565';
 
     /**
      * GNTRANS height

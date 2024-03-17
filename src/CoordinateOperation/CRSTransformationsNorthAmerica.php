@@ -6704,6 +6704,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10597',
+            'name' => 'GLANCE projection - North America',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10598',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15914',
             'name' => 'BLM zone 14N (US survey foot)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
@@ -9442,7 +9449,7 @@ class CRSTransformationsNorthAmerica
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9636',
-            'name' => 'RGAF09 to IGN 2008 LD height (1)',
+            'name' => 'RGAF09 to RGAF09 + IGN 2008 LD height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5488',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9536',
             'accuracy' => 0.2,
@@ -14545,10 +14552,10 @@ class CRSTransformationsNorthAmerica
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10511',
-            'name' => 'NAD83(CSRS)v2 to NAD83(CSRS)v3 (1)',
+            'name' => 'NAD83(CSRS)v2 to NAD83(CSRS)v3 (3)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8233',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8238',
-            'accuracy' => 0.0,
+            'accuracy' => 0.01,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10112',
@@ -15024,7 +15031,7 @@ class CRSTransformationsNorthAmerica
             'name' => 'NAD83(CSRS)v7 to NAD83(CSRS)v8 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::10412',
-            'accuracy' => 0.001,
+            'accuracy' => 0.01,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10416',

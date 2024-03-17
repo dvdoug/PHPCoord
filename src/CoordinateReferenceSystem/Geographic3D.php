@@ -137,9 +137,9 @@ class Geographic3D extends Geographic
     /**
      * ETRF2000
      * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
-     * Replaces ETRF97 (code 7929). On the publication of ETRF2005 (code 8399), the EUREF Technical Working Group
-     * recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 8403) is technically superior to all
-     * earlier realizations of ETRS89.
+     * Replaces ETRF97 (code 7929). On the publication of ETRF2005 the EUREF Technical Working Group recommended
+     * ETRF2000 be the realization of ETRS89. ETRF2014 and ETRF2020 (codes 8403 and 10570) are technically superior to
+     * all earlier realizations of ETRS89.
      */
     public const EPSG_ETRF2000 = 'urn:ogc:def:crs:EPSG::7931';
 
@@ -166,6 +166,15 @@ class Geographic3D extends Geographic
      * reach 7cm.
      */
     public const EPSG_ETRF2014 = 'urn:ogc:def:crs:EPSG::8403';
+
+    /**
+     * ETRF2020
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+     * Replaces ETRF2014 (code 8403). ETRF2020 is technically superior to ETRF2000 but ETRF2000 and other previous
+     * realizations may be preferred for backward compatibility reasons. Differences between ETRF2020 and ETRF2000 can
+     * reach 7cm.
+     */
+    public const EPSG_ETRF2020 = 'urn:ogc:def:crs:EPSG::10570';
 
     /**
      * ETRF89
@@ -1597,9 +1606,17 @@ class Geographic3D extends Geographic
     /**
      * WGS 84 (G2139)
      * Extent: World
-     * Replaces WGS 84 (G1762) (CRS code 7665) from 2021-01-03.
+     * Replaces WGS 84 (G1762) (CRS code 7665) from 2021-01-03. Replaced by WGS 84 (G2296) (CRS code 10605) from
+     * 2024-01-07.
      */
     public const EPSG_WGS_84_G2139 = 'urn:ogc:def:crs:EPSG::9754';
+
+    /**
+     * WGS 84 (G2296)
+     * Extent: World
+     * Replaces WGS 84 (G2139) (CRS code 9754) from 2024-01-07.
+     */
+    public const EPSG_WGS_84_G2296 = 'urn:ogc:def:crs:EPSG::10605';
 
     /**
      * WGS 84 (G730)

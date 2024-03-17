@@ -1819,7 +1819,7 @@ to EVRF2000 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: EOMA height 1980 to EVRF2000 height (1)
+    "| Name: EOMA 1980 height to EVRF2000 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5424``
     | Extent: Hungary",".. code-block:: php
 
@@ -2113,7 +2113,7 @@ to EOMA 1980 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: EOMA height 1980 to EVRF2000 height (1)
+    "| Name: EOMA 1980 height to EVRF2000 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5424``
     | Extent: Hungary",".. code-block:: php
 
@@ -2279,7 +2279,7 @@ to NGF-IGN69 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: NGF IGN69 height to EVRF2000 height (1)
+    "| Name: NGF-IGN69 height to EVRF2000 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5419``
     | Extent: France - mainland onshore",".. code-block:: php
 
@@ -2412,7 +2412,7 @@ to SVS2000 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: NVN99 height to EVRF2000 height (1)
+    "| Name: SVS2000 height to EVRF2000 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5428``
     | Extent: Slovenia - onshore",".. code-block:: php
 
@@ -4302,7 +4302,7 @@ to EVRF2000 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: NGF IGN69 height to EVRF2000 height (1)
+    "| Name: NGF-IGN69 height to EVRF2000 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5419``
     | Extent: France - mainland onshore",".. code-block:: php
 
@@ -5402,7 +5402,7 @@ to EVRF2000 height (Vertical)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: NVN99 height to EVRF2000 height (1)
+    "| Name: SVS2000 height to EVRF2000 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::5428``
     | Extent: Slovenia - onshore",".. code-block:: php
 

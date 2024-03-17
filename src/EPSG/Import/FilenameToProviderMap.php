@@ -221,4 +221,5 @@ return [
     'os_2022.gsb' => CoordinateOperation\ETRS89OstenfeldIRFProvider::class,
     'GCG2016.txt' => CoordinateOperation\DATETRS89DHHN2016Provider::class,
     'GeodPT08.dat' => CoordinateOperation\DATETRS89CascaisPortugalProvider::class,
+    'CR2005_GTX.gtx' => CoordinateOperation\GTXETRS89Baltic1957CzechiaProvider::class,
 ];

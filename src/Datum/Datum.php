@@ -824,10 +824,11 @@ class Datum
     /**
      * Canadian Geodetic Vertical Datum of 1928
      * Type: Vertical
-     * Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest
-     * Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of
-     * 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N;
-     * Yukon
+     * Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 59°N; New Brunswick; Newfoundland,
+     * Labrador between 52°50’N and 54°30’N; Northwest Territories south west of a line between 60°40’N,
+     * 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°20'N; Prince Edward Island; Quebec - mainland
+     * south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W,
+     * and Anticosta island; Saskatchewan south of 58°30’N; Yukon
      * Based on the mean sea level determined from several tidal gauges located in strategic areas of the country.
      * From November 2013 replaced by CGVD2013 (datum code 1127).
      */
@@ -1296,6 +1297,62 @@ class Datum
      * Fundamental point: Trig. 254 Deir. Latitude: 35°21'49.975"N, longitude: 40°05'46.770"E (of Greenwich).
      */
     public const EPSG_DEIR_EZ_ZOR = 'urn:ogc:def:datum:EPSG::6227';
+
+    /**
+     * Denmark Lowest Astronomic Tide (2023)
+     * Type: Vertical
+     * Extent: Denmark - offshore
+     * Mean sea level as determined by updated satellite altimetry adjusted to LAT using coastal tide gauges and
+     * improved global tide models. Defined with respect to ETRS89 through the dklat_2023 hydroid model.
+     * Replaces DKLAT(2022).
+     */
+    public const EPSG_DENMARK_LOWEST_ASTRONOMIC_TIDE_2023 = 'urn:ogc:def:datum:EPSG::1375';
+
+    /**
+     * Denmark Lowest Astronomical Tide
+     * Type: Ensemble
+     * Extent: Denmark - offshore
+     * LAT as defined through any DKLAT hydroid model without distinction.
+     */
+    public const EPSG_DENMARK_LOWEST_ASTRONOMICAL_TIDE = 'urn:ogc:def:datum:EPSG::1377';
+
+    /**
+     * Denmark Lowest Astronomical Tide (2022)
+     * Type: Vertical
+     * Extent: Denmark - offshore
+     * Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide
+     * models. Defined with respect to ETRS89 through the dklat_2022 hydroid model.
+     * Replaced by DKLAT(2023).
+     */
+    public const EPSG_DENMARK_LOWEST_ASTRONOMICAL_TIDE_2022 = 'urn:ogc:def:datum:EPSG::1373';
+
+    /**
+     * Denmark Mean Sea Level
+     * Type: Ensemble
+     * Extent: Denmark - offshore
+     * MSL as defined through any DKMSL hydroid model without distinction.
+     */
+    public const EPSG_DENMARK_MEAN_SEA_LEVEL = 'urn:ogc:def:datum:EPSG::1376';
+
+    /**
+     * Denmark Mean Sea Level (2022)
+     * Type: Vertical
+     * Extent: Denmark - offshore
+     * Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to ETRS89
+     * through the dkmsl_2022 hydroid model.
+     * Replaced by DKMSL(2023).
+     */
+    public const EPSG_DENMARK_MEAN_SEA_LEVEL_2022 = 'urn:ogc:def:datum:EPSG::1372';
+
+    /**
+     * Denmark Mean Sea Level (2023)
+     * Type: Vertical
+     * Extent: Denmark - offshore
+     * Mean sea level as determined by updated satellite altimetry and coastal tide gauges. Defined with respect to
+     * ETRS89 through the dkmsl_2023 hydroid model.
+     * Replaces DKMSL(2022).
+     */
+    public const EPSG_DENMARK_MEAN_SEA_LEVEL_2023 = 'urn:ogc:def:datum:EPSG::1374';
 
     /**
      * Deutsche Bahn Reference System
@@ -1788,6 +1845,17 @@ class Datum
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2014 = 'urn:ogc:def:datum:EPSG::1206';
 
     /**
+     * European Terrestrial Reference Frame 2020
+     * Type: Geodetic
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+     * Coincides with ITRF2020 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
+     * rotation rates derived from the ITRF2020 velocity field.
+     * Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datum code 1206). Technically
+     * superior to ETRF2000 (datum code 1186).
+     */
+    public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2020 = 'urn:ogc:def:datum:EPSG::1382';
+
+    /**
      * European Terrestrial Reference System 1989 ensemble
      * Type: Ensemble
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
@@ -1796,8 +1864,8 @@ class Datum
      * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
      * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
      * of Man; Vatican City State
-     * Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and
-     * ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
+     * Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005,
+     * ETRF2014 and ETRF2020. This 'ensemble' covers any or all of these realizations without distinction.
      */
     public const EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE = 'urn:ogc:def:datum:EPSG::6258';
 
@@ -2330,6 +2398,16 @@ class Datum
      * Replaces Ammassalik 1958, Qornoq 1927 and Scoresbysund 1952.
      */
     public const EPSG_GREENLAND_1996 = 'urn:ogc:def:datum:EPSG::6747';
+
+    /**
+     * Greenland Local Mean Sea Level (2022)
+     * Type: Vertical
+     * Extent: Greenland - onshore
+     * 77 disconnected local levelling nets introduced between 1945 and 1983 each tied to local mean sea level.
+     * GLLMSL has been introduced to accomodate transformations between older local height systems and the modern
+     * nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.
+     */
+    public const EPSG_GREENLAND_LOCAL_MEAN_SEA_LEVEL_2022 = 'urn:ogc:def:datum:EPSG::1378';
 
     /**
      * Greenland Vertical Reference 2000
@@ -5182,7 +5260,7 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is
+     * Defined at reference epoch 1997.00 by a transformation from ITRF96 (see transformation code 8259). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta,
      * Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by
@@ -5196,7 +5274,7 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is
+     * Defined at reference epoch 1997.00 by a transformation from ITRF97 (see transformation code 8260). The frame is
      * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of
      * British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces
@@ -5210,8 +5288,8 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is
-     * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+     * Defined at reference epoch 2002.00 by a transformation from ITRF2000 (see transformation code 8261). The frame
+     * is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of
      * British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3.
      * Replaced by NAD83(CSRS)v5.
@@ -5224,8 +5302,8 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is
-     * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+     * Defined at reference epoch 2006.00 by a transformation from ITRF2005 (see transformation code 9227). The frame
+     * is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by
      * NAD83(CSRS)v6.
      */
@@ -5237,8 +5315,8 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is
-     * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+     * Defined at reference epoch 2010.00 by a transformation from ITRF2008 (see transformation code 8264). The frame
+     * is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba
      * (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces
      * NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.
@@ -5251,8 +5329,8 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is
-     * kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+     * Defined at reference epoch 2010.00 by a transformation from ITRF2014 (see transformation code 8265). The frame
+     * is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of
      * Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.
      */
@@ -5264,7 +5342,7 @@ class Datum
      * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
      * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
      * Yukon
-     * Defined at reference epoch 2010.0 by a transformation from ITRF2020 (see transformation code 10415). The frame
+     * Defined at reference epoch 2010.00 by a transformation from ITRF2020 (see transformation code 10415). The frame
      * is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
      * Published 2022-11-27; adopted by the Canadian federal government (2023). Replaces NAD83(CSRS)v7.
      */
@@ -8075,9 +8153,20 @@ class Datum
      * Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0.
      * The IGb14 station coordinates are considered to be equivalent to ITRF2014.
      * Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28
-     * when NGA implemented IGS definition of antenna phase centre offset.
+     * when NGA implemented IGS definition of antenna phase centre offset. Replaced by  World Geodetic System 1984
+     * (G2296) from 2024-01-07.
      */
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G2139 = 'urn:ogc:def:datum:EPSG::1309';
+
+    /**
+     * World Geodetic System 1984 (G2296)
+     * Type: Dynamic geodetic
+     * Extent: World
+     * Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0.
+     * The IGS20 station coordinates are considered to be equivalent to ITRF2020.
+     * Replaces World Geodetic System 1984 (G2139) from 2024-01-07.
+     */
+    public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G2296 = 'urn:ogc:def:datum:EPSG::1383';
 
     /**
      * World Geodetic System 1984 (G730)
@@ -8120,8 +8209,8 @@ class Datum
      * Type: Ensemble
      * Extent: World
      * EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent
-     * (G730, G873, G1150, G1674, G1762 and G2139) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of
-     * the then current ITRF.
+     * (G730, G873, G1150, G1674, G1762, G2139 and G2296) WGS 84 frames. Since 1997, WGS 84 has been maintained within
+     * 10cm of the then current ITRF.
      */
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE = 'urn:ogc:def:datum:EPSG::6326';
 
@@ -10401,10 +10490,10 @@ Adopted by the Canadian federal government from 1996-01-01. Replaces NAD83 [some
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 1997.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 1997.00 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.',
         ],
         'urn:ogc:def:datum:EPSG::1194' => [
@@ -10414,10 +10503,10 @@ Published 1998-01-01; adopted by the Canadian federal government and the provinc
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 1997.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 1997.00 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.',
         ],
         'urn:ogc:def:datum:EPSG::1195' => [
@@ -10427,10 +10516,10 @@ Published 1999-01-01; adopted by the Canadian federal government (2000) and the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2002.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 2002.00 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.',
         ],
         'urn:ogc:def:datum:EPSG::1196' => [
@@ -10440,10 +10529,10 @@ Published 2002-01-01; adopted by the Canadian federal government (2002) and the 
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2006.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 2006.00 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.',
         ],
         'urn:ogc:def:datum:EPSG::1197' => [
@@ -10453,10 +10542,10 @@ Published 2007-01-01; adopted by the Canadian federal government in 2007. Replac
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2010.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 2010.00 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.',
         ],
         'urn:ogc:def:datum:EPSG::1198' => [
@@ -10466,10 +10555,10 @@ Published 2010-01-01; adopted by the Canadian government (2012) and the provinci
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2010.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 2010.00 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.',
         ],
         'urn:ogc:def:datum:EPSG::1199' => [
@@ -11874,7 +11963,7 @@ Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the 
             'extent_name' => 'World',
             'extent_description' => 'World',
             'help' => 'Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
-Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset.',
+Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset. Replaced by  World Geodetic System 1984 (G2296) from 2024-01-07.',
         ],
         'urn:ogc:def:datum:EPSG::1310' => [
             'name' => 'ECML14_NB Intermediate Reference Frame',
@@ -12597,10 +12686,10 @@ Orthometric heights. Replaces an earlier vertical datum in Ceuta harbour measure
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2010.0,
             'extent_name' => 'Canada',
             'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
-            'help' => 'Defined at reference epoch 2010.0 by a transformation from ITRF2020 (see transformation code 10415). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+            'help' => 'Defined at reference epoch 2010.00 by a transformation from ITRF2020 (see transformation code 10415). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 Published 2022-11-27; adopted by the Canadian federal government (2023). Replaces NAD83(CSRS)v7.',
         ],
         'urn:ogc:def:datum:EPSG::1366' => [
@@ -12634,7 +12723,7 @@ Network of BBT stations, including existing nearby stations of the Austrian AREF
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
-            'conventional_rs' => null,
+            'conventional_rs' => 1027,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'Denmark - onshore',
@@ -12647,7 +12736,7 @@ First geoid-based realization of DVR90. Replaced by DVR90(2013).',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
-            'conventional_rs' => null,
+            'conventional_rs' => 1027,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'Denmark - onshore',
@@ -12660,7 +12749,7 @@ Second geoid-based realization of DVR90. Replaces DVR90(2002). Replaced by DVR90
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
-            'conventional_rs' => null,
+            'conventional_rs' => 1027,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'Denmark - onshore',
@@ -12686,6 +12775,131 @@ Second geoid-based realization of DVR90. Replaces DVR90(2013).',
             ],
             'help' => '
 ',
+        ],
+        'urn:ogc:def:datum:EPSG::1372' => [
+            'name' => 'Denmark Mean Sea Level (2022)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => 1028,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Denmark - offshore',
+            'extent_description' => 'Denmark - offshore',
+            'help' => 'Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to ETRS89 through the dkmsl_2022 hydroid model.
+Replaced by DKMSL(2023).',
+        ],
+        'urn:ogc:def:datum:EPSG::1373' => [
+            'name' => 'Denmark Lowest Astronomical Tide (2022)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => 1029,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Denmark - offshore',
+            'extent_description' => 'Denmark - offshore',
+            'help' => 'Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to ETRS89 through the dklat_2022 hydroid model.
+Replaced by DKLAT(2023).',
+        ],
+        'urn:ogc:def:datum:EPSG::1374' => [
+            'name' => 'Denmark Mean Sea Level (2023)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => 1028,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Denmark - offshore',
+            'extent_description' => 'Denmark - offshore',
+            'help' => 'Mean sea level as determined by updated satellite altimetry and coastal tide gauges. Defined with respect to ETRS89 through the dkmsl_2023 hydroid model.
+Replaces DKMSL(2022).',
+        ],
+        'urn:ogc:def:datum:EPSG::1375' => [
+            'name' => 'Denmark Lowest Astronomic Tide (2023)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => 1029,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Denmark - offshore',
+            'extent_description' => 'Denmark - offshore',
+            'help' => 'Mean sea level as determined by updated satellite altimetry adjusted to LAT using coastal tide gauges and improved global tide models. Defined with respect to ETRS89 through the dklat_2023 hydroid model.
+Replaces DKLAT(2022).',
+        ],
+        'urn:ogc:def:datum:EPSG::1376' => [
+            'name' => 'Denmark Mean Sea Level ',
+            'type' => 'ensemble',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Denmark - offshore',
+            'extent_description' => 'Denmark - offshore',
+            'ensemble' => [
+                'urn:ogc:def:datum:EPSG::1372',
+                'urn:ogc:def:datum:EPSG::1374',
+            ],
+            'help' => '
+MSL as defined through any DKMSL hydroid model without distinction.',
+        ],
+        'urn:ogc:def:datum:EPSG::1377' => [
+            'name' => 'Denmark Lowest Astronomical Tide ',
+            'type' => 'ensemble',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Denmark - offshore',
+            'extent_description' => 'Denmark - offshore',
+            'ensemble' => [
+                'urn:ogc:def:datum:EPSG::1373',
+                'urn:ogc:def:datum:EPSG::1375',
+            ],
+            'help' => '
+LAT as defined through any DKLAT hydroid model without distinction.',
+        ],
+        'urn:ogc:def:datum:EPSG::1378' => [
+            'name' => 'Greenland Local Mean Sea Level (2022)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Greenland - onshore',
+            'extent_description' => 'Greenland - onshore',
+            'help' => '77 disconnected local levelling nets introduced between 1945 and 1983 each tied to local mean sea level.
+GLLMSL has been introduced to accomodate transformations between older local height systems and the modern nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.',
+        ],
+        'urn:ogc:def:datum:EPSG::1382' => [
+            'name' => 'European Terrestrial Reference Frame 2020',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => 1025,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Europe - ETRF',
+            'extent_description' => 'Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N',
+            'help' => 'Coincides with ITRF2020 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2020 velocity field.
+Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datum code 1206). Technically superior to ETRF2000 (datum code 1186).',
+        ],
+        'urn:ogc:def:datum:EPSG::1383' => [
+            'name' => 'World Geodetic System 1984 (G2296)',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7030',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => 1024,
+            'frame_reference_epoch' => 2020.0,
+            'anchor_epoch' => null,
+            'extent_name' => 'World',
+            'extent_description' => 'World',
+            'help' => 'Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0. The IGS20 station coordinates are considered to be equivalent to ITRF2020.
+Replaces World Geodetic System 1984 (G2139) from 2024-01-07.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -12852,7 +13066,7 @@ Not specific to any location or epoch.',
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'Canada - CGVD28',
-            'extent_description' => 'Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N; Yukon',
+            'extent_description' => 'Canada - onshore - Alberta; British Columbia; Manitoba south of 59°N; New Brunswick; Newfoundland, Labrador between 52°50’N and 54°30’N; Northwest Territories south west of a line between 60°40’N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°20\'N; Prince Edward Island; Quebec - mainland south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W, and Anticosta island; Saskatchewan south of 58°30’N; Yukon',
             'help' => 'Based on the mean sea level determined from several tidal gauges located in strategic areas of the country.
 From November 2013 replaced by CGVD2013 (datum code 1127).',
         ],
@@ -14044,7 +14258,7 @@ Dynamic heights. Replaces IGLD 1955 from January 1992.',
             'type' => 'vertical',
             'ellipsoid' => null,
             'prime_meridian' => null,
-            'conventional_rs' => null,
+            'conventional_rs' => 1027,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'Denmark - onshore',
@@ -16349,9 +16563,10 @@ South East Island 1943 (datum code 1138) used for topographic mapping, cadastral
                 'urn:ogc:def:datum:EPSG::1186',
                 'urn:ogc:def:datum:EPSG::1204',
                 'urn:ogc:def:datum:EPSG::1206',
+                'urn:ogc:def:datum:EPSG::1382',
             ],
             'help' => '
-Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This \'ensemble\' covers any or all of these realizations without distinction.',
+Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005, ETRF2014 and ETRF2020. This \'ensemble\' covers any or all of these realizations without distinction.',
         ],
         'urn:ogc:def:datum:EPSG::6259' => [
             'name' => 'Malongo 1987',
@@ -17048,9 +17263,10 @@ Alleged datum for use with Transit broadcast ephemeris prior to 1989. Relationsh
                 'urn:ogc:def:datum:EPSG::1155',
                 'urn:ogc:def:datum:EPSG::1156',
                 'urn:ogc:def:datum:EPSG::1309',
+                'urn:ogc:def:datum:EPSG::1383',
             ],
             'help' => '
-EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent (G730, G873, G1150, G1674, G1762 and G2139) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of the then current ITRF.',
+EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent (G730, G873, G1150, G1674, G1762, G2139 and G2296) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of the then current ITRF.',
         ],
         'urn:ogc:def:datum:EPSG::6600' => [
             'name' => 'Anguilla 1957',

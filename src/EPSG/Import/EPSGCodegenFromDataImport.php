@@ -79,6 +79,9 @@ class EPSGCodegenFromDataImport
         1123, // Geographic3D to GravityRelatedHeight (gtg)
         1124, // Geog3D to Geog2D+GravityRelatedHeight (gtg)
         1125, // Equi-7
+        1127, // Geographic3D to Depth (gtg)
+        1128, // Geog3D to Geog2D+Depth (gtg)
+        1129, // Vertical Offset by Grid Interpolation (gtg)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -530,6 +533,7 @@ class EPSGCodegenFromDataImport
         9618, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
         9704, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
         9706, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
+        10614, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
 
         // Not available for public download
         9305, // GTX INAGEOID20.gtx
@@ -616,6 +620,7 @@ class EPSGCodegenFromDataImport
         9900, // ASC it_2019z.asc
         9921, // ASC it_2019m.asc
         7655, // PNG08.DAT
+        10615, // NTv2 BC_98_05.GSB
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb

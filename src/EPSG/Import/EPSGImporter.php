@@ -120,7 +120,7 @@ class EPSGImporter
 
         /*
          * Time-dependent transformations from/to ETRS89 are only present in transforms involving specific realisations
-         * so add transforms to/from the generic ensemble codes to ETRF2000 (ETRF2014 is technically better, ETRF2000
+         * so add transforms to/from the generic ensemble codes to ETRF2000 (ETRF2020 is technically better, ETRF2000
          * is still recommended by EUREF for georeferencing)
          * XXX technically, the ensemble accuracy is 0.1m not 0, but we're actively assuming the relevant realisation
          */

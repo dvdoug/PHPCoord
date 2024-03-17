@@ -298,6 +298,30 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9924';
 
     /**
+     * ETRS89 + DKLAT(2022) depth
+     * Extent: Denmark - offshore.
+     */
+    public const EPSG_ETRS89_PLUS_DKLAT_2022_DEPTH = 'urn:ogc:def:crs:EPSG::10554';
+
+    /**
+     * ETRS89 + DKLAT(2023) depth
+     * Extent: Denmark - offshore.
+     */
+    public const EPSG_ETRS89_PLUS_DKLAT_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10556';
+
+    /**
+     * ETRS89 + DKMSL(2022) depth
+     * Extent: Denmark - offshore.
+     */
+    public const EPSG_ETRS89_PLUS_DKMSL_2022_DEPTH = 'urn:ogc:def:crs:EPSG::10553';
+
+    /**
+     * ETRS89 + DKMSL(2023) depth
+     * Extent: Denmark - offshore.
+     */
+    public const EPSG_ETRS89_PLUS_DKMSL_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10555';
+
+    /**
      * ETRS89 + DVR90(2002) height
      * Extent: Denmark - onshore.
      */
@@ -2534,7 +2558,7 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NAD83_PA11_PLUS_ASVD02_HEIGHT = 'urn:ogc:def:crs:EPSG::9526';
 
     /**
-     * NTF (Paris) + NGF IGN69 height
+     * NTF (Paris) + NGF-IGN69 height
      * Extent: France - mainland onshore.
      */
     public const EPSG_NTF_PARIS_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::7400';

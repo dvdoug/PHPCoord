@@ -775,9 +775,9 @@ class Geographic2D extends Geographic
     /**
      * ETRF2000
      * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
-     * Replaces ETRF97 (code 9066). On the publication of ETRF2005 (code 9068), the EUREF Technical Working Group
-     * recommended that ETRF2000 be the realization of ETRS89. ETRF2014 (code 9069) is technically superior to all
-     * earlier realizations of ETRS89.
+     * Replaces ETRF97 (code 9066). On the publication of ETRF2005 the EUREF Technical Working Group recommended
+     * ETRF2000 be the realization of ETRS89. ETRF2014 and ETRF2020 (codes 9069 and 10571) are technically superior to
+     * all earlier realizations of ETRS89.
      */
     public const EPSG_ETRF2000 = 'urn:ogc:def:crs:EPSG::9067';
 
@@ -803,6 +803,15 @@ class Geographic2D extends Geographic
      * reach 7cm.
      */
     public const EPSG_ETRF2014 = 'urn:ogc:def:crs:EPSG::9069';
+
+    /**
+     * ETRF2020
+     * Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+     * Replaces ETRF2014 (code 9069). ETRF2020 is technically superior to ETRF2000 but ETRF2000 and other previous
+     * realizations may be preferred for backward compatibility reasons. Differences between ETRF2020 and ETRF2000 can
+     * reach 7cm.
+     */
+    public const EPSG_ETRF2020 = 'urn:ogc:def:crs:EPSG::10571';
 
     /**
      * ETRF89
@@ -3385,8 +3394,9 @@ class Geographic2D extends Geographic
     /**
      * S-JTSK
      * Extent: Czechia; Slovakia
-     * Greenwich-referenced equivalent to S-JTSK (CRS code 4818). Technically improved and replaced through JTSK/05 in
-     * the Czech Republic and S-JTSK [JTSK03] in Slovakia, CRSs 5228 and 5229 (CZ) and 8351 (SK).
+     * Greenwich-referenced equivalent to S-JTSK (CRS code 4818). Technically improved and replaced through S-JTSK
+     * [JTSK03] in Slovakia, CRS code 8351. Remains the legal system in Czechia but see scientific working system CRSs
+     * 5228 and 5229.
      */
     public const EPSG_S_JTSK = 'urn:ogc:def:crs:EPSG::4156';
 
@@ -3410,16 +3420,17 @@ class Geographic2D extends Geographic
     /**
      * S-JTSK/05
      * Extent: Czechia
-     * Derived through projCRS 5515 to improve the scale and homogeneity of CRS 4156 within the Czech Republic. See CRS
-     * code 5229 for Ferro-referenced alternative.
+     * Derived through projCRS 5515 to improve the scale and homogeneity of CRS 4156 within Czechia as a scientific
+     * working system, but CRS 4156 remains the legal system. See CRS code 5229 for Ferro-referenced alternative.
      */
     public const EPSG_S_JTSK_05 = 'urn:ogc:def:crs:EPSG::5228';
 
     /**
      * S-JTSK/05 (Ferro)
      * Extent: Czechia
-     * Derived through projCRS 5224 to improve the scale and homogeneity of CRS 4818 within the Czech Republic. See CRS
-     * code 5228 for Greenwich-referenced alternative.
+     * Derived through projCRS code 5224 to improve the scale and homogeneity of CRS 4818 within Czechia as a
+     * scientific working system, but CRS 4818 remains the legal system. See CRS code 5228 for Greenwich-referenced
+     * alternative.
      */
     public const EPSG_S_JTSK_05_FERRO = 'urn:ogc:def:crs:EPSG::5229';
 
@@ -4208,9 +4219,17 @@ class Geographic2D extends Geographic
     /**
      * WGS 84 (G2139)
      * Extent: World
-     * Replaces WGS 84 (G1762) (CRS code 9057) from 2021-01-03.
+     * Replaces WGS 84 (G1762) (CRS code 9057) from 2021-01-03. Replaced by WGS 84 (G2296) (CRS code 10606) from
+     * 2024-01-07.
      */
     public const EPSG_WGS_84_G2139 = 'urn:ogc:def:crs:EPSG::9755';
+
+    /**
+     * WGS 84 (G2296)
+     * Extent: World
+     * Replaces WGS 84 (G2139) (CRS code 9755) from 2024-01-07.
+     */
+    public const EPSG_WGS_84_G2296 = 'urn:ogc:def:crs:EPSG::10606';
 
     /**
      * WGS 84 (G730)

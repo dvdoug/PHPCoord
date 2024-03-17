@@ -54741,7 +54741,7 @@ S-JTSK (Ferro) / Krovak
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_FERRO_KROVAK)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2065')
 
-Original definition. In CZ, remains legal system for cadastre, but for non-cadastral purposes replaced by S-JTSK/05 (Ferro) / Modified Krovak (CRS code 5224). In SK, deprecated and replaced by Greenwich-meridian equivalent CRS code 5513.
+Original definition. In Slovakia, deprecated and replaced by Greenwich-meridian equivalent CRS code 5513. In Czechia remains legal system, but see S-JTSK/05 (Ferro) / Modified Krovak (CRS code 5224) for a scientific working system.
 
 S-JTSK (Ferro) / Krovak East North
 ----------------------------------
@@ -54754,7 +54754,7 @@ S-JTSK (Ferro) / Krovak East North
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_FERRO_KROVAK_EAST_NORTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5221')
 
-North-orientated alternative to south-orientated S-JTSK / Krovak (Ferro) (CRS code 2065) for GIS purposes. Coordinates are negative. In SK deprecated and replaced by equivalent CRS referenced to the Greenwich meridian, CRS code 5514.
+North-orientated alternative for GIS purposes to the south-orientated S-JTSK / Krovak (Ferro) legal system (CRS code 2065) . Coordinates are negative. In SK deprecated and replaced by equivalent CRS referenced to the Greenwich meridian, CRS code 5514.
 
 S-JTSK / Krovak
 ---------------
@@ -54767,7 +54767,7 @@ S-JTSK / Krovak
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_KROVAK)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5513')
 
-Equivalent to CRS code 2065 but referenced to Greenwich meridian. In SK remains legal system for cadastre, but for non-cadastral purposes replaced by S-JTSK [JTSK03] / Krovak (CRS code 8352). In CZ replaced by S-JTSK/05 / Modified Krovak, CRS code 5515.
+Equivalent to CRS code 2065 but referenced to Greenwich meridian. In Slovakia remains the legal system for cadastre but for non-cadastral purposes replaced by CRS 8352. In Czechia remains the legal system but see CRS 5515 for a scientific working system.
 
 S-JTSK / Krovak East North
 --------------------------
@@ -54780,7 +54780,7 @@ S-JTSK / Krovak East North
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_KROVAK_EAST_NORTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5514')
 
-North-orientated alternative to south-orientated S-JTSK / Krovak (CRS code 5513) for GIS purposes. Coordinates are negative.
+North-orientated alternative for GIS purposes to south-orientated S-JTSK / Krovak (CRS code 5513) which remains the legal system. Coordinates are negative.
 
 S-JTSK [JTSK03] / Krovak
 ------------------------
@@ -54819,7 +54819,7 @@ S-JTSK/05 (Ferro) / Modified Krovak
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5224')
 
-Improves the scale and homogineity of CRS code 2065 in the Czech Republic. See CRS code 5515 for Greenwich-referenced equivalent; 5225 for north-orientated alternative used for GIS purposes. For cadastre in Czech Republic, use CRS code 2065.
+Improves the scale and homogineity of CRS code 2065 in Czechia as a scientific working system, but 2065 remains the legal system. See CRS code 5515 for Greenwich-referenced equivalent; 5225 for north-orientated alternative used for GIS purposes.
 
 S-JTSK/05 (Ferro) / Modified Krovak East North
 ----------------------------------------------
@@ -54845,7 +54845,7 @@ S-JTSK/05 / Modified Krovak
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_05_MODIFIED_KROVAK)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5515')
 
-Greenwich-referenced alternative to S-JTSK/05 (Ferro) / Modified Krovak, CRS code 5224.
+Greenwich-referenced alternative to S-JTSK/05 (Ferro) / Modified Krovak, CRS code 5224. S-JTSK / Krovak, CRS code 5513, remains the legal system.
 
 S-JTSK/05 / Modified Krovak East North
 --------------------------------------
@@ -54858,7 +54858,7 @@ S-JTSK/05 / Modified Krovak East North
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_S_JTSK_05_MODIFIED_KROVAK_EAST_NORTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5516')
 
-North-orientated alternative to S-JTSK/05 / Modified Krovak (CRS code 5515) for GIS purposes. Coordinates are negative. See CRS code 5225 for Ferro-referenced equivalent.
+North-orientated alternative to S-JTSK/05 / Modified Krovak (CRS code 5515) for GIS purposes. Coordinates are negative. See CRS code 5225 for Ferro-referenced equivalent. S-JTSK / Krovak (CRS code 5513) remains the legal system.
 
 S34J reconstruction east-orientated
 -----------------------------------
@@ -62512,6 +62512,84 @@ WGS 84 / Equal Earth Greenwich
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_EQUAL_EARTH_GREENWICH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8857')
 
+
+WGS 84 / GLANCE Africa
+----------------------
+| Extent: Africa and the Arabian peninsula
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_GLANCE_AFRICA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10592')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_GLANCE_AFRICA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10592')
+
+Basis for the equal area continental tiling system for Africa used by the GLANCE land cover products.
+
+WGS 84 / GLANCE Asia
+--------------------
+| Extent: Asia excluding Russia west of the Ural Mountains
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_GLANCE_ASIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10594')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_GLANCE_ASIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10594')
+
+Basis for the equal area continental tiling system for Asia used by the GLANCE land cover products.
+
+WGS 84 / GLANCE Europe
+----------------------
+| Extent: Europe including Russia west of the Ural Mountains
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_GLANCE_EUROPE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10596')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_GLANCE_EUROPE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10596')
+
+Basis for the equal area continental tiling system for Europe used by the GLANCE land cover products. For compatibility with EU INSPIRE regulations use ETRS89-extended / LAEA Europe (CRS code 3035).
+
+WGS 84 / GLANCE North America
+-----------------------------
+| Extent: North America, the Caribbean and Central America excluding Panama
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_GLANCE_NORTH_AMERICA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10598')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_GLANCE_NORTH_AMERICA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10598')
+
+Basis for the equal area continental tiling system for North America used by the GLANCE land cover products.
+
+WGS 84 / GLANCE Oceania
+-----------------------
+| Extent: Australasia and the western Pacific Ocean
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_GLANCE_OCEANIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10601')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_GLANCE_OCEANIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10601')
+
+Basis for the equal area continental tiling system for Oceania used by the GLANCE land cover products.
+
+WGS 84 / GLANCE South America
+-----------------------------
+| Extent: South America including Panama
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_GLANCE_SOUTH_AMERICA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10603')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_GLANCE_SOUTH_AMERICA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10603')
+
+Basis for the equal area continental tiling system for South America used by the GLANCE land cover products.
 
 WGS 84 / Gabon TM
 -----------------

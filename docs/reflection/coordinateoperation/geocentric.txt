@@ -616,6 +616,38 @@ to ITRF2014 (Geocentric)
     "
 
 
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to ETRF2000 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10586``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Millimetre(-53.8),
+            yAxisTranslation: new Millimetre(-51.8),
+            zAxisTranslation: new Millimetre(82.2),
+            xAxisRotation: new ArcSecond(-0.002106),
+            yAxisRotation: new ArcSecond(-0.01274),
+            zAxisRotation: new ArcSecond(0.020592),
+            scaleDifference: new PartsPerBillion(-2.25),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(1.7), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.1E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.00049), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000792), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.11), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to ITRF89 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -1092,6 +1124,38 @@ to ITRF2014 (Geocentric)
     "
 
 
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to ETRF2014 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10587``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Millimetre(1.4),
+            yAxisTranslation: new Millimetre(0.9),
+            zAxisTranslation: new Millimetre(-1.4),
+            xAxisRotation: new ArcSecond(-0.00221),
+            yAxisRotation: new ArcSecond(-0.013806),
+            zAxisRotation: new ArcSecond(0.02002),
+            scaleDifference: new PartsPerBillion(0.42),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0.2), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.5E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000531), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.00077), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to ITRF89 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -1343,6 +1407,466 @@ to ITRF97 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.00079), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+ETRF2020
+--------
+``Geocentric::fromSRID(Geocentric::EPSG_ETRF2020)``
+
+to ETRF2020 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_ETRF2020)
+        )
+
+    "
+
+
+to ITRF2000 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2000 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10577``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2000),
+            xAxisTranslation: new Millimetre(-0.2),
+            yAxisTranslation: new Millimetre(0.8),
+            zAxisTranslation: new Millimetre(-34.2),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019578),
+            scaleDifference: new PartsPerBillion(2.25),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-1.7), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.11), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF2005 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2005 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10576``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2005),
+            xAxisTranslation: new Millimetre(2.7),
+            yAxisTranslation: new Millimetre(0.1),
+            zAxisTranslation: new Millimetre(-1.4),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019578),
+            scaleDifference: new PartsPerBillion(0.65),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.3), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.03), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF2008 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2008 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10575``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2008),
+            xAxisTranslation: new Millimetre(0.2),
+            yAxisTranslation: new Millimetre(1),
+            zAxisTranslation: new Millimetre(3.3),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019578),
+            scaleDifference: new PartsPerBillion(-0.29),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.03), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF2014 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2014 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10574``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2014),
+            xAxisTranslation: new Millimetre(-1.4),
+            yAxisTranslation: new Millimetre(-0.9),
+            zAxisTranslation: new Millimetre(1.4),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019578),
+            scaleDifference: new PartsPerBillion(-0.42),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0.2), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10572``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Millimetre(-0),
+            yAxisTranslation: new Millimetre(-0),
+            zAxisTranslation: new Millimetre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0), new Year(1)),
+            parameterReferenceEpoch: new Year(1989)
+        )
+
+    "
+    "| Name: ITRF2020 to ETRF2020 (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10573``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Millimetre(-0),
+            yAxisTranslation: new Millimetre(-0),
+            zAxisTranslation: new Millimetre(-0),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019578),
+            scaleDifference: new PartsPerBillion(-0),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF89 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF89 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10585``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF89),
+            xAxisTranslation: new Millimetre(29.5),
+            yAxisTranslation: new Millimetre(32.1),
+            zAxisTranslation: new Millimetre(-145.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(8.37),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF90 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF90 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10584``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF90),
+            xAxisTranslation: new Millimetre(24.5),
+            yAxisTranslation: new Millimetre(8.1),
+            zAxisTranslation: new Millimetre(-107.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(4.97),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF91 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF91 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10583``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF91),
+            xAxisTranslation: new Millimetre(26.5),
+            yAxisTranslation: new Millimetre(12.1),
+            zAxisTranslation: new Millimetre(-91.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(4.67),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF92 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF92 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10582``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF92),
+            xAxisTranslation: new Millimetre(14.5),
+            yAxisTranslation: new Millimetre(-1.9),
+            zAxisTranslation: new Millimetre(-85.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(3.27),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF93 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF93 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10581``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF93),
+            xAxisTranslation: new Millimetre(-65.8),
+            yAxisTranslation: new Millimetre(1.9),
+            zAxisTranslation: new Millimetre(-71.3),
+            xAxisRotation: new ArcSecond(-0.005596),
+            yAxisRotation: new ArcSecond(-0.017824),
+            zAxisRotation: new ArcSecond(0.020328),
+            scaleDifference: new PartsPerBillion(4.47),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-2.8), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.2), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-2.3), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-0.000196), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000709), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000823), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF94 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF94 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10580``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF94),
+            xAxisTranslation: new Millimetre(6.5),
+            yAxisTranslation: new Millimetre(-3.9),
+            zAxisTranslation: new Millimetre(-77.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(3.98),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF96 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF96 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10579``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF96),
+            xAxisTranslation: new Millimetre(6.5),
+            yAxisTranslation: new Millimetre(-3.9),
+            zAxisTranslation: new Millimetre(-77.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(3.98),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ITRF97 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF97 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10578``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF97),
+            xAxisTranslation: new Millimetre(6.5),
+            yAxisTranslation: new Millimetre(-3.9),
+            zAxisTranslation: new Millimetre(-77.9),
+            xAxisRotation: new ArcSecond(-0.002236),
+            yAxisRotation: new ArcSecond(-0.013494),
+            zAxisRotation: new ArcSecond(0.019938),
+            scaleDifference: new PartsPerBillion(3.98),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -3826,6 +4350,38 @@ to ETRF2014 (Geocentric)
     "
 
 
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2000 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10577``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(0.2),
+            yAxisTranslation: new Millimetre(-0.8),
+            zAxisTranslation: new Millimetre(34.2),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019578),
+            scaleDifference: new PartsPerBillion(-2.25),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(1.7), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.11), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to GDA94 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -4435,6 +4991,38 @@ to ETRF2014 (Geocentric)
     "
 
 
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2005 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10576``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-2.7),
+            yAxisTranslation: new Millimetre(-0.1),
+            zAxisTranslation: new Millimetre(1.4),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019578),
+            scaleDifference: new PartsPerBillion(-0.65),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.3), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.03), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to GDA94 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -4667,6 +5255,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00077), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.03), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2008 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10575``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-0.2),
+            yAxisTranslation: new Millimetre(-1),
+            zAxisTranslation: new Millimetre(-3.3),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019578),
+            scaleDifference: new PartsPerBillion(0.29),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.03), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -5147,6 +5767,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00077), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2014 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10574``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(1.4),
+            yAxisTranslation: new Millimetre(0.9),
+            zAxisTranslation: new Millimetre(-1.4),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019578),
+            scaleDifference: new PartsPerBillion(0.42),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-0.2), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -5911,6 +6563,126 @@ ITRF2020
 --------
 ``Geocentric::fromSRID(Geocentric::EPSG_ITRF2020)``
 
+to ETRF2000 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to ETRF2000 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10586``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2000),
+            xAxisTranslation: new Millimetre(53.8),
+            yAxisTranslation: new Millimetre(51.8),
+            zAxisTranslation: new Millimetre(-82.2),
+            xAxisRotation: new ArcSecond(0.002106),
+            yAxisRotation: new ArcSecond(0.01274),
+            zAxisRotation: new ArcSecond(-0.020592),
+            scaleDifference: new PartsPerBillion(2.25),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(-1.7), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.1E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.00049), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000792), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0.11), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ETRF2014 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to ETRF2014 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10587``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
+            xAxisTranslation: new Millimetre(-1.4),
+            yAxisTranslation: new Millimetre(-0.9),
+            zAxisTranslation: new Millimetre(1.4),
+            xAxisRotation: new ArcSecond(0.00221),
+            yAxisRotation: new ArcSecond(0.013806),
+            zAxisRotation: new ArcSecond(-0.02002),
+            scaleDifference: new PartsPerBillion(-0.42),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0.2), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.5E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000531), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00077), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10572``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(0),
+            yAxisTranslation: new Millimetre(0),
+            zAxisTranslation: new Millimetre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
+            parameterReferenceEpoch: new Year(1989)
+        )
+
+    "
+    "| Name: ITRF2020 to ETRF2020 (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10573``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(0),
+            yAxisTranslation: new Millimetre(0),
+            zAxisTranslation: new Millimetre(0),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019578),
+            scaleDifference: new PartsPerBillion(0),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(0), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to IGS20 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -6496,6 +7268,30 @@ to NAD83(PA11) (Geocentric)
 
     "
 
+
+to WGS 84 (G2296) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: WGS 84 (G2296) to ITRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10608``
+    | Extent: World",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G2296),
+            xAxisTranslation: new Millimetre(-0),
+            yAxisTranslation: new Millimetre(-0),
+            zAxisTranslation: new Millimetre(-0),
+            xAxisRotation: new ArcSecond(-0),
+            yAxisRotation: new ArcSecond(-0),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0)
+        )
+
+    "
+
 ITRF88
 ------
 ``Geocentric::fromSRID(Geocentric::EPSG_ITRF88)``
@@ -6667,6 +7463,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00079), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF89 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10585``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-29.5),
+            yAxisTranslation: new Millimetre(-32.1),
+            zAxisTranslation: new Millimetre(145.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-8.37),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -6895,6 +7723,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00079), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF90 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10584``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-24.5),
+            yAxisTranslation: new Millimetre(-8.1),
+            zAxisTranslation: new Millimetre(107.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-4.97),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -7152,6 +8012,38 @@ to ETRF2014 (Geocentric)
     "
 
 
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF91 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10583``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-26.5),
+            yAxisTranslation: new Millimetre(-12.1),
+            zAxisTranslation: new Millimetre(91.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-4.67),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to ETRF91 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -7375,6 +8267,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00079), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF92 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10582``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-14.5),
+            yAxisTranslation: new Millimetre(1.9),
+            zAxisTranslation: new Millimetre(85.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-3.27),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -7640,6 +8564,38 @@ to ETRF2014 (Geocentric)
     "
 
 
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF93 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10581``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(65.8),
+            yAxisTranslation: new Millimetre(-1.9),
+            zAxisTranslation: new Millimetre(71.3),
+            xAxisRotation: new ArcSecond(0.005596),
+            yAxisRotation: new ArcSecond(0.017824),
+            zAxisRotation: new ArcSecond(-0.020328),
+            scaleDifference: new PartsPerBillion(-4.47),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(2.8), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.2), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(2.3), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(0.000196), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000709), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000823), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to ETRF93 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -7879,6 +8835,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00079), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF94 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10580``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-6.5),
+            yAxisTranslation: new Millimetre(3.9),
+            zAxisTranslation: new Millimetre(77.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-3.98),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -8177,6 +9165,38 @@ to ETRF2014 (Geocentric)
     "
 
 
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF96 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10579``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-6.5),
+            yAxisTranslation: new Millimetre(3.9),
+            zAxisTranslation: new Millimetre(77.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-3.98),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
 to ETRF96 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -8448,6 +9468,38 @@ to ETRF2014 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.00079), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
             parameterReferenceEpoch: new Year(2010)
+        )
+
+    "
+
+
+to ETRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF97 to ETRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10578``
+    | Extent: Europe - ETRF",".. code-block:: php
+
+        $point->timeDependentPositionVectorTransformation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ETRF2020),
+            xAxisTranslation: new Millimetre(-6.5),
+            yAxisTranslation: new Millimetre(3.9),
+            zAxisTranslation: new Millimetre(77.9),
+            xAxisRotation: new ArcSecond(0.002236),
+            yAxisRotation: new ArcSecond(0.013494),
+            zAxisRotation: new ArcSecond(-0.019938),
+            scaleDifference: new PartsPerBillion(-3.98),
+            rateOfChangeOfXAxisTranslation: new Rate(new Millimetre(-0.1), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Millimetre(0.6), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Millimetre(3.1), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(8.6E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000519), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000773), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(-0.12), new Year(1)),
+            parameterReferenceEpoch: new Year(2015)
         )
 
     "
@@ -9762,7 +10814,7 @@ to NAD83(CSRS)v3 (Geocentric)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: NAD83(CSRS)v2 to NAD83(CSRS)v3 (1)
+    "| Name: NAD83(CSRS)v2 to NAD83(CSRS)v3 (3)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::10511``
     | Extent: Canada",".. code-block:: php
 
@@ -9845,7 +10897,7 @@ to NAD83(CSRS)v2 (Geocentric)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: NAD83(CSRS)v2 to NAD83(CSRS)v3 (1)
+    "| Name: NAD83(CSRS)v2 to NAD83(CSRS)v3 (3)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::10511``
     | Extent: Canada",".. code-block:: php
 
@@ -13776,6 +14828,30 @@ to WGS 84 (G2139) (Geographic3D)
     "
 
 
+to WGS 84 (G2296) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: WGS 84 (G2139) to WGS 84 (G2296) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10607``
+    | Extent: World",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G2296),
+            xAxisTranslation: new Millimetre(2.6),
+            yAxisTranslation: new Millimetre(5.4),
+            zAxisTranslation: new Millimetre(-0.9),
+            xAxisRotation: new ArcSecond(-1.0E-5),
+            yAxisRotation: new ArcSecond(-7.0E-5),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0.06)
+        )
+
+    "
+
+
 to WGS 84 (Geographic3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -13788,6 +14864,74 @@ to WGS 84 (Geographic3D)
 
         $point->geographicGeocentric(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84)
+        )
+
+    "
+
+WGS 84 (G2296)
+--------------
+``Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G2296)``
+
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: WGS 84 (G2296) to ITRF2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10608``
+    | Extent: World",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Millimetre(0),
+            yAxisTranslation: new Millimetre(0),
+            zAxisTranslation: new Millimetre(0),
+            xAxisRotation: new ArcSecond(0),
+            yAxisRotation: new ArcSecond(0),
+            zAxisRotation: new ArcSecond(0),
+            scaleDifference: new PartsPerBillion(0)
+        )
+
+    "
+
+
+to WGS 84 (G2139) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: WGS 84 (G2139) to WGS 84 (G2296) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10607``
+    | Extent: World",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G2139),
+            xAxisTranslation: new Millimetre(-2.6),
+            yAxisTranslation: new Millimetre(-5.4),
+            zAxisTranslation: new Millimetre(0.9),
+            xAxisRotation: new ArcSecond(1.0E-5),
+            yAxisRotation: new ArcSecond(7.0E-5),
+            zAxisRotation: new ArcSecond(-0),
+            scaleDifference: new PartsPerBillion(-0.06)
+        )
+
+    "
+
+
+to WGS 84 (G2296) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84_G2296)
         )
 
     "

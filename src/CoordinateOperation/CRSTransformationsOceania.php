@@ -1146,6 +1146,13 @@ class CRSTransformationsOceania
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10599',
+            'name' => 'GLANCE projection - Oceania',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10601',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19843',
             'name' => 'Mercator 41',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',

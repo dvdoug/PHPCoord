@@ -1174,7 +1174,7 @@ Fundamental point: Campo Inchauspe. Latitude: 35°58'16.56"S, longitude: 62°10'
 Canadian Geodetic Vertical Datum of 1928
 ----------------------------------------
 | Type: Vertical
-| Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 57°N; New Brunswick; Northwest Territories south west of a line between 60°N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°N; Prince Edward Island; Quebec - mainland west of 66°W and south of 55°N; Saskatchewan south of 55°N; Yukon
+| Extent: Canada - onshore - Alberta; British Columbia; Manitoba south of 59°N; New Brunswick; Newfoundland, Labrador between 52°50’N and 54°30’N; Northwest Territories south west of a line between 60°40’N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°20'N; Prince Edward Island; Quebec - mainland south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W, and Anticosta island; Saskatchewan south of 58°30’N; Yukon
 
 .. code-block:: php
 
@@ -1839,6 +1839,86 @@ Deir ez Zor
 
 Fundamental point: Trig. 254 Deir. Latitude: 35°21'49.975"N, longitude: 40°05'46.770"E (of Greenwich).
 
+Denmark Lowest Astronomic Tide (2023)
+-------------------------------------
+| Type: Vertical
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DENMARK_LOWEST_ASTRONOMIC_TIDE_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1375')
+
+Mean sea level as determined by updated satellite altimetry adjusted to LAT using coastal tide gauges and improved global tide models. Defined with respect to ETRS89 through the dklat_2023 hydroid model.
+
+Replaces DKLAT(2022).
+
+Denmark Lowest Astronomical Tide
+--------------------------------
+| Type: Ensemble
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DENMARK_LOWEST_ASTRONOMICAL_TIDE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1377')
+
+LAT as defined through any DKLAT hydroid model without distinction.
+
+Denmark Lowest Astronomical Tide (2022)
+---------------------------------------
+| Type: Vertical
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DENMARK_LOWEST_ASTRONOMICAL_TIDE_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1373')
+
+Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to ETRS89 through the dklat_2022 hydroid model.
+
+Replaced by DKLAT(2023).
+
+Denmark Mean Sea Level
+----------------------
+| Type: Ensemble
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DENMARK_MEAN_SEA_LEVEL)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1376')
+
+MSL as defined through any DKMSL hydroid model without distinction.
+
+Denmark Mean Sea Level (2022)
+-----------------------------
+| Type: Vertical
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DENMARK_MEAN_SEA_LEVEL_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1372')
+
+Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to ETRS89 through the dkmsl_2022 hydroid model.
+
+Replaced by DKMSL(2023).
+
+Denmark Mean Sea Level (2023)
+-----------------------------
+| Type: Vertical
+| Extent: Denmark - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DENMARK_MEAN_SEA_LEVEL_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1374')
+
+Mean sea level as determined by updated satellite altimetry and coastal tide gauges. Defined with respect to ETRS89 through the dkmsl_2023 hydroid model.
+
+Replaces DKMSL(2022).
+
 Deutsche Bahn Reference System
 ------------------------------
 | Type: Geodetic
@@ -2474,6 +2554,20 @@ Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasia
 
 Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum code 1204). Technically superior to ETRF2000 (datum code 1186).
 
+European Terrestrial Reference Frame 2020
+-----------------------------------------
+| Type: Geodetic
+| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_FRAME_2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1382')
+
+Coincides with ITRF2020 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2020 velocity field.
+
+Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datum code 1206). Technically superior to ETRF2000 (datum code 1186).
+
 European Terrestrial Reference System 1989 ensemble
 ---------------------------------------------------
 | Type: Ensemble
@@ -2484,7 +2578,7 @@ European Terrestrial Reference System 1989 ensemble
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6258')
 
-Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
+Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005, ETRF2014 and ETRF2020. This 'ensemble' covers any or all of these realizations without distinction.
 
 European Vertical Reference Frame 2000
 --------------------------------------
@@ -3209,6 +3303,20 @@ Greenland 1996
 ITRF94 at epoch 1996.62
 
 Replaces Ammassalik 1958, Qornoq 1927 and Scoresbysund 1952.
+
+Greenland Local Mean Sea Level (2022)
+-------------------------------------
+| Type: Vertical
+| Extent: Greenland - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_LOCAL_MEAN_SEA_LEVEL_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1378')
+
+77 disconnected local levelling nets introduced between 1945 and 1983 each tied to local mean sea level.
+
+GLLMSL has been introduced to accomodate transformations between older local height systems and the modern nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.
 
 Greenland Vertical Reference 2000
 ---------------------------------
@@ -7195,7 +7303,7 @@ North American Datum of 1983 (CSRS) version 2
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_2)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1193')
 
-Defined at reference epoch 1997.0 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 1997.00 by a transformation from ITRF96 (see transformation code 8259). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 1998-01-01; adopted by the Canadian federal government and the provincial governments of Alberta, Saskatchewan, Manitoba, Quebec, New Brunswick and Prince Edward Island. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3.
 
@@ -7209,7 +7317,7 @@ North American Datum of 1983 (CSRS) version 3
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_3)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1194')
 
-Defined at reference epoch 1997.0 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 1997.00 by a transformation from ITRF97 (see transformation code 8260). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 1999-01-01; adopted by the Canadian federal government (2000) and the provincial governments of British Columbia (CRD in 2000, all Victoria Island 2005), Ontario (2008) and Nova Scotia (2000). Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.
 
@@ -7223,7 +7331,7 @@ North American Datum of 1983 (CSRS) version 4
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_4)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1195')
 
-Defined at reference epoch 2002.0 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2002.00 by a transformation from ITRF2000 (see transformation code 8261). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 2002-01-01; adopted by the Canadian federal government (2002) and the provincial governments of British Columbia (for mainland only, not Victoria Island) (2005) and Alberta (2004). Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5.
 
@@ -7237,7 +7345,7 @@ North American Datum of 1983 (CSRS) version 5
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_5)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1196')
 
-Defined at reference epoch 2006.0 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2006.00 by a transformation from ITRF2005 (see transformation code 9227). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 2007-01-01; adopted by the Canadian federal government in 2007. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6.
 
@@ -7251,7 +7359,7 @@ North American Datum of 1983 (CSRS) version 6
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_6)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1197')
 
-Defined at reference epoch 2010.0 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2010.00 by a transformation from ITRF2008 (see transformation code 8264). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 2010-01-01; adopted by the Canadian government (2012) and the provincial governments of Manitoba (2014), Ontario (2013), Prince Edward Island (2014), Nova Scotia (2014) and Newfoundland (2012). Replaces NAD83(CSRSv5). Replaced by NAD83(CSRS)v7.
 
@@ -7265,7 +7373,7 @@ North American Datum of 1983 (CSRS) version 7
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_7)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1198')
 
-Defined at reference epoch 2010.0 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2010.00 by a transformation from ITRF2014 (see transformation code 8265). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 2017-05-01; adopted by the Canadian federal government (2017) and the provincial governments of Alberta (2021) and Prince Edward Island (2020). Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.
 
@@ -7279,7 +7387,7 @@ North American Datum of 1983 (CSRS) version 8
     Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_DATUM_OF_1983_CSRS_VERSION_8)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1365')
 
-Defined at reference epoch 2010.0 by a transformation from ITRF2020 (see transformation code 10415). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
+Defined at reference epoch 2010.00 by a transformation from ITRF2020 (see transformation code 10415). The frame is kept aligned with the North American tectonic plate at other epochs using the NNR-Nuvel 1A model.
 
 Published 2022-11-27; adopted by the Canadian federal government (2023). Replaces NAD83(CSRS)v7.
 
@@ -11116,7 +11224,21 @@ World Geodetic System 1984 (G2139)
 
 Defined through coordinates of 19 GPS tracking stations aligned with a subset of IGb14 stations at epoch 2016.0. The IGb14 station coordinates are considered to be equivalent to ITRF2014.
 
-Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset.
+Replaces World Geodetic System 1984 (G1762) from 2021-01-03. Tracking station coordinate changes on 2021-03-28 when NGA implemented IGS definition of antenna phase centre offset. Replaced by  World Geodetic System 1984 (G2296) from 2024-01-07.
+
+World Geodetic System 1984 (G2296)
+----------------------------------
+| Type: Dynamic geodetic
+| Extent: World
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G2296)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1383')
+
+Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0. The IGS20 station coordinates are considered to be equivalent to ITRF2020.
+
+Replaces World Geodetic System 1984 (G2139) from 2024-01-07.
 
 World Geodetic System 1984 (G730)
 ---------------------------------
@@ -11170,7 +11292,7 @@ World Geodetic System 1984 ensemble
     Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6326')
 
-EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent (G730, G873, G1150, G1674, G1762 and G2139) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of the then current ITRF.
+EPSG::6326 has been the then current realization. No distinction is made between the original and subsequent (G730, G873, G1150, G1674, G1762, G2139 and G2296) WGS 84 frames. Since 1997, WGS 84 has been maintained within 10cm of the then current ITRF.
 
 Xian 1980
 ---------

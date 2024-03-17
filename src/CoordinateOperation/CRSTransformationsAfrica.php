@@ -1181,6 +1181,13 @@ class CRSTransformationsAfrica
             'accuracy' => 30.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10591',
+            'name' => 'GLANCE projection - Africa',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10592',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16636',
             'name' => 'TM 36 SE',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',

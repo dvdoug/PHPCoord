@@ -490,6 +490,26 @@ to ETRF2014 (Geographic2D)
 
     "
 
+ETRF2020
+--------
+``Geographic3D::fromSRID(Geographic3D::EPSG_ETRF2020)``
+
+to ETRF2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_ETRF2020)
+        )
+
+    "
+
 ETRF89
 ------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_ETRF89)``
@@ -728,6 +748,24 @@ to BI height (Vertical)
     "
 
 
+to Baltic 1957 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89 to Baltic 1957 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10567``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->geographic3DToGravityHeightFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_BALTIC_1957_HEIGHT),
+            geoidHeightCorrectionModelFile: GTXETRS89Baltic1957CzechiaProvider->provideGrid()
+        )
+
+    "
+
+
 to Belfast height (Vertical)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -914,6 +952,16 @@ to ETRS89 + Baltic 1957 height (Compound)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
+    "| Name: ETRS89 to ETRS89 + Baltic 1957 height (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10568``
+    | Extent: Czechia",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_BALTIC_1957_HEIGHT),
+            geoidHeightCorrectionModelFile: GTXETRS89Baltic1957CzechiaProvider->provideGrid()
+        )
+
+    "
     "| Name: ETRS89 to ETRS89 + Baltic 1957 height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::8361``
     | Extent: Slovakia",".. code-block:: php
@@ -1824,7 +1872,7 @@ to GDA94 + AHD height (Compound)
 
     "| Name: GDA94 to GDA94 + AHD height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9467``
-    | Extent: Australia Christmas and Cocos - onshore",".. code-block:: php
+    | Extent: Australia - onshore",".. code-block:: php
 
         $point->geographic3DTo2DPlusGravityHeightFromGrid(
             to: Compound::fromSRID(Compound::EPSG_GDA94_PLUS_AHD_HEIGHT),
@@ -5167,7 +5215,7 @@ to RGAF09 + IGN 2008 LD height (Compound)
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: RGAF09 to IGN 2008 LD height (1)
+    "| Name: RGAF09 to RGAF09 + IGN 2008 LD height (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::9636``
     | Extent: Guadeloupe - La Desirade - onshore",".. code-block:: php
 
@@ -8321,6 +8369,26 @@ to WGS 84 (G2139) (Geographic2D)
 
         $point->threeDToTwoD(
             to: Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84_G2139)
+        )
+
+    "
+
+WGS 84 (G2296)
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84_G2296)``
+
+to WGS 84 (G2296) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84_G2296)
         )
 
     "
