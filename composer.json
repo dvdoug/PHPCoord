@@ -21,7 +21,7 @@
     "require-dev": {
         "ext-json": "*",
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^3.41",
+        "friendsofphp/php-cs-fixer": "^3.52.1",
         "nikic/php-parser": "^5.0",
         "php-coord/datapack-africa": "dev-master",
         "php-coord/datapack-antarctic": "dev-master",

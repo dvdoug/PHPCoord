@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightETRF2000Baltic1986PolandProvider',
+    'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightETRF2000Baltic1986PolandProvider',
 ];

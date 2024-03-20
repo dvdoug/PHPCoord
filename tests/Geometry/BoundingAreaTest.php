@@ -39,7 +39,7 @@ class BoundingAreaTest extends TestCase
                         new Position(-9, 49.75),
                     ),
                 ),
-          ],
+            ],
             RegionMap::REGION_EUROPE
         );
         [$latitude, $longitude] = $polygon->getPointInside();

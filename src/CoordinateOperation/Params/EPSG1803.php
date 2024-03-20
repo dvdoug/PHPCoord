@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'offsetsFile' => 'PHPCoord\\CoordinateOperation\\NTv2AGD66GDA94AustraliaProvider',
+    'offsetsFile' => 'PHPCoord\\CoordinateOperation\\NTv2AGD66GDA94AustraliaProvider',
 ];

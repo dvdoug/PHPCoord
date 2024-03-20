@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintBarthelemyProvider',
+    'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintBarthelemyProvider',
 ];

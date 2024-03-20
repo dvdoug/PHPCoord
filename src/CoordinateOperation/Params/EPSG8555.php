@@ -7,7 +7,7 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'latitudeDifferenceFile' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLatitudeProvider',
-  'longitudeDifferenceFile' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLongitudeProvider',
-  'ellipsoidalHeightDifferenceFile' => null,
+    'latitudeDifferenceFile' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLatitudeProvider',
+    'longitudeDifferenceFile' => 'PHPCoord\\CoordinateOperation\\NADCON5NAD27NAD831986CONUSLongitudeProvider',
+    'ellipsoidalHeightDifferenceFile' => null,
 ];

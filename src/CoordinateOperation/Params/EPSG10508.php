@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGF93v2NGFIGN78CorsicaProvider',
+    'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGF93v2NGFIGN78CorsicaProvider',
 ];

@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\KMSSlovenia1996SVS2010Provider',
+    'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\KMSSlovenia1996SVS2010Provider',
 ];

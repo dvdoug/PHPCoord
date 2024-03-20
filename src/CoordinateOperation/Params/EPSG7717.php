@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
+    'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\OSTN15OSGM15Provider',
 ];

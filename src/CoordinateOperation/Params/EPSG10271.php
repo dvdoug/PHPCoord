@@ -7,5 +7,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-  'offsetsFile' => 'PHPCoord\\CoordinateOperation\\ETRS89OstenfeldIRFProvider',
+    'offsetsFile' => 'PHPCoord\\CoordinateOperation\\ETRS89OstenfeldIRFProvider',
 ];
