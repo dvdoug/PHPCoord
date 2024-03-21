@@ -39,6 +39,8 @@ use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -95,9 +97,7 @@ class CompoundPointTest extends TestCase
         self::assertEquals('((123, 456), (789))', $object->__toString());
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculation(): void
     {
         $from = CompoundPoint::create(
@@ -113,9 +113,7 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceDifferentCRS(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
@@ -288,10 +286,8 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.01);
     }
 
-    /**
-     * @group integration
-     * @dataProvider supportedOperations
-     */
+    #[DataProvider('supportedOperations')]
+    #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);

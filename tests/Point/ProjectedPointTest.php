@@ -32,6 +32,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -77,9 +78,7 @@ class ProjectedPointTest extends TestCase
         self::assertEquals(37.4904, $object->getNorthing()->getValue());
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculationEastingNorthing(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(438700), new Metre(114800));
@@ -87,9 +86,7 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(115423.134596, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceDifferentCRSEastingNorthing(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_WGS_84_WORLD_MERCATOR), new Metre(438700), new Metre(114800));
@@ -97,9 +94,7 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(114739.81913, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceDifferentCRSNoAutoconversion(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
@@ -124,9 +119,7 @@ class ProjectedPointTest extends TestCase
         self::assertEquals(37.4904, $object->getNorthing()->getValue());
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculationWestingNorthing(): void
     {
         $from = ProjectedPoint::createFromWestingNorthing(Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT), new Metre(438700), new Metre(114800));
@@ -150,9 +143,7 @@ class ProjectedPointTest extends TestCase
         self::assertEquals(37.4904, $object->getSouthing()->getValue());
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculationWestingSouthing(): void
     {
         $from = ProjectedPoint::createFromWestingSouthing(Projected::fromSRID(Projected::EPSG_ST_STEPHEN_GRID_FERRO), new Metre(438700), new Metre(114800));

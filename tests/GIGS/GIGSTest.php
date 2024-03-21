@@ -37,6 +37,9 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Depends;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use SplFileObject;
 
@@ -57,14 +60,10 @@ use function substr;
 use function trim;
 use function ucwords;
 
-/**
- * @group gigs
- */
+#[Group('gigs')]
 class GIGSTest extends TestCase
 {
-    /**
-     * @dataProvider series2200UnitData
-     */
+    #[DataProvider('series2200UnitData')]
     public function testSeries2200Units(string $epsgCode, string $unitType, string $unitName, string $baseUnitsPerUnit): void
     {
         $unit = UnitOfMeasureFactory::makeUnit(1, 'urn:ogc:def:uom:EPSG::' . $epsgCode);
@@ -91,9 +90,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200EllipsoidData
-     */
+    #[DataProvider('series2200EllipsoidData')]
     public function testSeries2200Ellipsoids(string $epsgCode, string $name, string $semiMajorAxis, string $semiMajorAxisUnitName, string $semiMajorAxisAsMetres, string $inverseFlattening, string $semiMinorAxis): void
     {
         $ellipsoid = Ellipsoid::fromSRID('urn:ogc:def:ellipsoid:EPSG::' . $epsgCode);
@@ -122,9 +119,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200PrimeMeridianData
-     */
+    #[DataProvider('series2200PrimeMeridianData')]
     public function testSeries2200PrimeMeridians(string $epsgCode, string $name, string $longitudeFromGreenwich, string $longitudeFromGreenwichDegrees): void
     {
         $meridian = PrimeMeridian::fromSRID('urn:ogc:def:meridian:EPSG::' . $epsgCode);
@@ -146,9 +141,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200GeodeticDatumData
-     */
+    #[DataProvider('series2200GeodeticDatumData')]
     public function testSeries2200GeodeticDatums(string $epsgCode, string $name, string $ellipsoidName, string $primeMeridianName): void
     {
         $datum = Datum::fromSRID('urn:ogc:def:datum:EPSG::' . $epsgCode);
@@ -166,9 +159,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200GeodeticCRSData
-     */
+    #[DataProvider('series2200GeodeticCRSData')]
     public function testSeries2200GeodeticCRSs(string $epsgCode, string $type, string $name, string $datumCode): void
     {
         $crs = CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
@@ -198,9 +189,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200ProjectedCRSData
-     */
+    #[DataProvider('series2200ProjectedCRSData')]
     public function testSeries2200ProjectedCRSs(string $epsgCode, string $datumCode, string $name): void
     {
         $crs = Projected::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
@@ -217,9 +206,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200VerticalDatumData
-     */
+    #[DataProvider('series2200VerticalDatumData')]
     public function testSeries2200VerticalDatums(string $epsgCode, string $name): void
     {
         $datum = Datum::fromSRID('urn:ogc:def:datum:EPSG::' . $epsgCode);
@@ -235,9 +222,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200VerticalCRSData
-     */
+    #[DataProvider('series2200VerticalCRSData')]
     public function testSeries2200VerticalCRSs(string $epsgCode, string $name, string $datumCode): void
     {
         $crs = Vertical::fromSRID('urn:ogc:def:crs:EPSG::' . $epsgCode);
@@ -254,9 +239,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series2200OperationData
-     */
+    #[DataProvider('series2200OperationData')]
     public function testSeries2200Operations(string $epsgCode, string $name, string $method): void
     {
         $operation = CoordinateOperations::getOperationData('urn:ogc:def:coordinateOperation:EPSG::' . $epsgCode);
@@ -287,9 +270,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series3200UnitData
-     */
+    #[DataProvider('series3200UnitData')]
     public function testSeries3200Units(string $gigsCode, string $unitType, string $unitName, string $baseUnitsPerUnit, string $epsgCode): void
     {
         if ($unitType === 'Angle') {
@@ -408,10 +389,8 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200Units
-     * @dataProvider series3200EllipsoidData
-     */
+    #[Depends('testSeries3200Units')]
+    #[DataProvider('series3200EllipsoidData')]
     public function testSeries3200Ellipsoids(string $gigsCode, string $gigsName, string $semiMajorAxis, $unitName, string $inverseFlattening, string $semiMinorAxis): void
     {
         if ($semiMinorAxis === '0' && $inverseFlattening === '0') {
@@ -439,10 +418,8 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200Units
-     * @dataProvider series3200PrimeMeridianData
-     */
+    #[Depends('testSeries3200Units')]
+    #[DataProvider('series3200PrimeMeridianData')]
     public function testSeries3200PrimeMeridians(string $gigsCode, string $gigsName, string $longitudeFromGreenwich, string $unitName): void
     {
         if ($unitName !== 'sexagesimal DMS') {
@@ -468,11 +445,9 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200Ellipsoids
-     * @depends testSeries3200PrimeMeridians
-     * @dataProvider series3200GeodeticDatumData
-     */
+    #[Depends('testSeries3200Ellipsoids')]
+    #[Depends('testSeries3200PrimeMeridians')]
+    #[DataProvider('series3200GeodeticDatumData')]
     public function testSeries3200GeodeticDatums(string $gigsCode, string $name, string $ellipsoidName, string $primeMeridianName): void
     {
         $ellipsoid = array_flip(Ellipsoid::getSupportedSRIDs())[$ellipsoidName];
@@ -491,10 +466,8 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200GeodeticDatums
-     * @dataProvider series3200GeodeticCRSData
-     */
+    #[Depends('testSeries3200GeodeticDatums')]
+    #[DataProvider('series3200GeodeticCRSData')]
     public function testSeries3200GeodeticCRSs(string $gigsCode, string $name, string $type, string $datumCode, string $epsgCSCode): void
     {
         if ($type === 'Geocentric') {
@@ -520,9 +493,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series3200ConversionData
-     */
+    #[DataProvider('series3200ConversionData')]
     public function testSeries3200Conversions(string $gigsCode, string $name, string $methodName, string $param1Name, string $param1Value, string $param1Unit, string $param2Name, string $param2Value, string $param2Unit, string $param3Name, string $param3Value, string $param3Unit, string $param4Name, string $param4Value, string $param4Unit, string $param5Name, string $param5Value, string $param5Unit, string $param6Name, string $param6Value, string $param6Unit, string $param7Name, string $param7Value, string $param7Unit, string $epsgOperationCode): void
     {
         $uoms = [
@@ -617,10 +588,8 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200GeodeticCRSs
-     * @dataProvider series3200ProjectionData
-     */
+    #[Depends('testSeries3200GeodeticCRSs')]
+    #[DataProvider('series3200ProjectionData')]
     public function testSeries3200Projections(string $gigsCode, string $name, string $baseCRSCode, string $baseCRSName, string $derivingConversionCode, string $derivingConversionName, string $csEPSGCode, string $epsgCode): void
     {
         $baseCRS = Geographic2D::fromSRID('urn:ogc:def:crs:GIGS::' . $baseCRSCode);
@@ -643,9 +612,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series3200TransformationData
-     */
+    #[DataProvider('series3200TransformationData')]
     public function testSeries3200Transformations(string $gigsCode, string $name, string $gigsSourceCRS, string $gigsTargetCRS, string $methodName, string $param1Name, string $param1Value, string $param1Unit, string $param2Name, string $param2Value, string $param2Unit, string $param3Name, string $param3Value, string $param3Unit, string $param4Name, string $param4Value, string $param4Unit, string $param5Name, string $param5Value, string $param5Unit, string $param6Name, string $param6Value, string $param6Unit, string $param7Name, string $param7Value, string $param7Unit, string $param8Name, string $param8Value, string $param8Unit, string $param9Name, string $param9Value, string $param9Unit, string $param10Name, string $param10Value, string $param10Unit, string $epsgOperationCode): void
     {
         $uoms = [
@@ -759,9 +726,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series3200VerticalDatumData
-     */
+    #[DataProvider('series3200VerticalDatumData')]
     public function testSeries3200VerticalDatums(string $gigsCode, string $name): void
     {
         Datum::registerCustomDatum('urn:ogc:def:datum:GIGS::' . $gigsCode, $name, Datum::DATUM_TYPE_VERTICAL, null, null, null);
@@ -778,10 +743,8 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200VerticalDatums
-     * @dataProvider series3200VerticalCRSData
-     */
+    #[Depends('testSeries3200VerticalDatums')]
+    #[DataProvider('series3200VerticalCRSData')]
     public function testSeries3200VerticalCRSs(string $gigsCode, string $name, string $datumCode, string $epsgCSCode): void
     {
         Vertical::registerCustomCRS('urn:ogc:def:crs:GIGS::' . $gigsCode, $name, 'urn:ogc:def:cs:EPSG::' . $epsgCSCode, 'urn:ogc:def:datum:GIGS::' . $datumCode, BoundingArea::createWorld());
@@ -799,9 +762,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series3200VerticalTransformationData
-     */
+    #[DataProvider('series3200VerticalTransformationData')]
     public function testSeries3200VerticalTransformations(string $gigsCode, string $name, string $gigsSourceCRS, string $gigsTargetCRS, string $methodName, string $param1Name, string $param1Value, string $param1Unit, string $param2Name, string $param2Value, string $param2Unit, string $param3Name, string $param3Value, string $param3Unit, string $param4Name, string $param4Value, string $param4Unit, string $param5Name, string $param5Value, string $param5Unit, string $epsgOperationCode): void
     {
         if ($epsgOperationCode) {
@@ -870,34 +831,32 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries2200Operations
-     * @depends testSeries3200GeodeticCRSs
-     * @depends testSeries3200Projections
-     * @depends testSeries3200Conversions
-     * @depends testSeries3200Transformations
-     * @dataProvider series5100TransverseMercatorPart1Data
-     * @dataProvider series5100TransverseMercatorPart2Data
-     * @dataProvider series5100TransverseMercatorPart3Data
-     * @dataProvider series5100TransverseMercatorPart4Data
-     * @dataProvider series5100LCC1Part1Data
-     * @dataProvider series5100LCC1Part2Data
-     * @dataProvider series5100LCC2Part1Data
-     * @dataProvider series5100LCC2Part2Data
-     * @dataProvider series5100LCC2Part3Data
-     * @dataProvider series5100OblStereoData
-     * @dataProvider series5100HOMBPart1Data
-     * @dataProvider series5100HOMBPart2Data
-     * @dataProvider series5100HOMAData
-     * @dataProvider series5100AmericanPolyconicData
-     * @dataProvider series5100CassiniSoldnerData
-     * @dataProvider series5100AlbersData
-     * @dataProvider series5100LAEAData
-     * @dataProvider series5100MercatorAPart1Data
-     * @dataProvider series5100MercatorAPart2Data
-     * @dataProvider series5100MercatorBData
-     * @dataProvider series5100TransverseMercatorSouthOrientatedData
-     */
+    #[Depends('testSeries2200Operations')]
+    #[Depends('testSeries3200GeodeticCRSs')]
+    #[Depends('testSeries3200Projections')]
+    #[Depends('testSeries3200Conversions')]
+    #[Depends('testSeries3200Transformations')]
+    #[DataProvider('series5100TransverseMercatorPart1Data')]
+    #[DataProvider('series5100TransverseMercatorPart2Data')]
+    #[DataProvider('series5100TransverseMercatorPart3Data')]
+    #[DataProvider('series5100TransverseMercatorPart4Data')]
+    #[DataProvider('series5100LCC1Part1Data')]
+    #[DataProvider('series5100LCC1Part2Data')]
+    #[DataProvider('series5100LCC2Part1Data')]
+    #[DataProvider('series5100LCC2Part2Data')]
+    #[DataProvider('series5100LCC2Part3Data')]
+    #[DataProvider('series5100OblStereoData')]
+    #[DataProvider('series5100HOMBPart1Data')]
+    #[DataProvider('series5100HOMBPart2Data')]
+    #[DataProvider('series5100HOMAData')]
+    #[DataProvider('series5100AmericanPolyconicData')]
+    #[DataProvider('series5100CassiniSoldnerData')]
+    #[DataProvider('series5100AlbersData')]
+    #[DataProvider('series5100LAEAData')]
+    #[DataProvider('series5100MercatorAPart1Data')]
+    #[DataProvider('series5100MercatorAPart2Data')]
+    #[DataProvider('series5100MercatorBData')]
+    #[DataProvider('series5100TransverseMercatorSouthOrientatedData')]
     public function testSeries5100Projections(Angle $latitude, Angle $longitude, Length $easting, Length $northing, bool $inReverse, string $geographicCRSSrid, string $projectedCRSSrid, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance, bool $roundTripPoint): void
     {
         $geographicCRS = Geographic2D::fromSRID($geographicCRSSrid);
@@ -1296,10 +1255,8 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200GeodeticCRSs
-     * @dataProvider series5200GeogGeocenData
-     */
+    #[Depends('testSeries3200GeodeticCRSs')]
+    #[DataProvider('series5200GeogGeocenData')]
     public function testSeries5200GeographicGeocentric(Length $x, Length $y, Length $z, Angle $latitude, Angle $longitude, Length $height, bool $inReverse, string $geocentricCRSSrid, string $geographicCRSSrid, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance, bool $roundTripPoint): void
     {
         $geocentricCRS = Geocentric::fromSRID($geocentricCRSSrid);
@@ -1362,18 +1319,16 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @depends testSeries3200GeodeticCRSs
-     * @depends testSeries3200Transformations
-     * @dataProvider series5200PosVecPart1Data
-     * @dataProvider series5200PosVecPart2Data
-     * @dataProvider series5200CoordFramePart1Data
-     * @dataProvider series5200CoordFramePart2Data
-     * @dataProvider series5200MolBadPart1Data
-     * @dataProvider series5200MolBadPart2Data
-     * @dataProvider series5200Geog3DGeoCenData
-     * @dataProvider series5200Geog2DGeoCenData
-     */
+    #[Depends('testSeries3200GeodeticCRSs')]
+    #[Depends('testSeries3200Transformations')]
+    #[DataProvider('series5200PosVecPart1Data')]
+    #[DataProvider('series5200PosVecPart2Data')]
+    #[DataProvider('series5200CoordFramePart1Data')]
+    #[DataProvider('series5200CoordFramePart2Data')]
+    #[DataProvider('series5200MolBadPart1Data')]
+    #[DataProvider('series5200MolBadPart2Data')]
+    #[DataProvider('series5200Geog3DGeoCenData')]
+    #[DataProvider('series5200Geog2DGeoCenData')]
     public function testSeries5200GeographicTransformations(Angle $latitude1, Angle $longitude1, ?Length $height1, Angle $latitude2, Angle $longitude2, ?Length $height2, bool $inReverse, string $geographicCRSSrid1, string $geographicCRSSrid2, float $cartesianTolerance, float $geographicTolerance, float $roundTripCartesianTolerance, float $roundTripGeographicTolerance, bool $roundTripPoint, string $operation): void
     {
         $geographicCRS1 = Geographic::fromSRID($geographicCRSSrid1);
@@ -1567,9 +1522,7 @@ class GIGSTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider series7000DeprecationData
-     */
+    #[DataProvider('series7000DeprecationData')]
     public function testSeries7000Deprecation(string $epsgCode, string $entityType): void
     {
         $this->expectException(UnknownSRIDException::class);

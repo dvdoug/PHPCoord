@@ -37,6 +37,8 @@ use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Year;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -88,9 +90,7 @@ class GeocentricPointTest extends TestCase
         self::assertEquals(37.4904, $object->getZ()->getValue());
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculation(): void
     {
         $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_WGS_84), new Metre(6121151.5493), new Metre(-1563978.9235), new Metre(-872615.3556));
@@ -98,9 +98,7 @@ class GeocentricPointTest extends TestCase
         self::assertEqualsWithDelta(6824225.464, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceDifferentCRSsNoAutoconversion(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -344,10 +342,8 @@ class GeocentricPointTest extends TestCase
         self::assertEqualsWithDelta(-1690895.108, $to->getZ()->getValue(), 0.001);
     }
 
-    /**
-     * @group integration
-     * @dataProvider supportedOperations
-     */
+    #[DataProvider('supportedOperations')]
+    #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);

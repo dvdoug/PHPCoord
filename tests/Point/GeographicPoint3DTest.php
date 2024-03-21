@@ -43,6 +43,8 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -316,10 +318,8 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(135.8810, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
     }
 
-    /**
-     * @group integration
-     * @dataProvider supportedOperations
-     */
+    #[DataProvider('supportedOperations')]
+    #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);

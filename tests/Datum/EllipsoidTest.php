@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownEllipsoidException;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -35,10 +37,8 @@ class EllipsoidTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider ellipsoids
-     */
+    #[DataProvider('ellipsoids')]
+    #[Group('integration')]
     public function testCanCreateSupported(string $srid): void
     {
         $object = Ellipsoid::fromSRID($srid);

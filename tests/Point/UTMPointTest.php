@@ -11,6 +11,7 @@ namespace PHPCoord\Point;
 use DateTime;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 class UTMPointTest extends TestCase
@@ -33,9 +34,7 @@ class UTMPointTest extends TestCase
         self::assertEqualsWithDelta(151.211111, $to->getLongitude()->getValue(), 0.00001);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceSameZone(): void
     {
         $from = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Metre(630084), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH);
@@ -45,9 +44,7 @@ class UTMPointTest extends TestCase
         self::assertEquals($distance->getValue(), 500);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceSameZoneDifferentCRS(): void
     {
         $from = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Metre(630084), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH, new DateTime('1989-01-01'));
@@ -57,9 +54,7 @@ class UTMPointTest extends TestCase
         self::assertEqualsWithDelta($distance->getValue(), 500, 0.1);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceDifferentZoneSameCRS(): void
     {
         $from = new UTMPoint(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Metre(630084), new Metre(4833439), 32, UTMPoint::HEMISPHERE_NORTH);

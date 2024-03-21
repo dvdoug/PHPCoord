@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace PHPCoord\Geometry;
 
-use Composer\InstalledVersions;
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\Datum\Datum;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -100,9 +99,7 @@ class BoundingAreaTest extends TestCase
 
     public function testNetherlandsBufferedCorrectly(): void
     {
-        if (InstalledVersions::isInstalled(RegionMap::PACKAGES[RegionMap::REGION_EUROPE])) {
-            $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::1275']);
-            self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50.965613067768), new Degree(5.8249181759236), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
-        }
+        $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::1275']);
+        self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50.965613067768), new Degree(5.8249181759236), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
 }

@@ -10,6 +10,8 @@ namespace PHPCoord\UnitOfMeasure;
 
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -27,10 +29,8 @@ class UnitOfMeasureFactoryTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider unitsOfMeasure
-     */
+    #[DataProvider('unitsOfMeasure')]
+    #[Group('integration')]
     public function testCanCreateAllUnits(string $srid): void
     {
         $dummyValue = 1;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateSystem;
 
 use PHPCoord\Exception\UnknownCoordinateSystemException;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -35,10 +37,8 @@ class CartesianTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider cartesian
-     */
+    #[DataProvider('cartesian')]
+    #[Group('integration')]
     public function testCanCreateSupportedCartesian(string $srid): void
     {
         $object = Cartesian::fromSRID($srid);

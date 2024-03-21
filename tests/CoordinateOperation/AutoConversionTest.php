@@ -31,6 +31,8 @@ use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function array_unique;
@@ -565,10 +567,8 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(43.0197, $to->getHeight()->asMetres()->getValue(), 0.0001);
     }
 
-    /**
-     * @group integration
-     * @dataProvider EPSGConcatenatedOperations
-     */
+    #[DataProvider('EPSGConcatenatedOperations')]
+    #[Group('integration')]
     public function testEPSGConcatenatedOperations(string $sourceCrsSrid, string $targetCrsSrid, array $extentCodes, bool $canReverse): void
     {
         $extent = BoundingArea::createFromExtentCodes($extentCodes);

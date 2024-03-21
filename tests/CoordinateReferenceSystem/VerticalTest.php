@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace PHPCoord\CoordinateReferenceSystem;
 
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -37,10 +39,8 @@ class VerticalTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider coordinateReferenceSystems
-     */
+    #[DataProvider('coordinateReferenceSystems')]
+    #[Group('integration')]
     public function testCanCreateSupported(string $srid): void
     {
         $object = Vertical::fromSRID($srid);

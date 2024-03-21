@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace PHPCoord\UnitOfMeasure\Length;
 
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -35,10 +37,8 @@ class LengthTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider unitsOfMeasure
-     */
+    #[DataProvider('unitsOfMeasure')]
+    #[Group('integration')]
     public function testCanCreateAllUnits(string $srid): void
     {
         $newUnit = Length::makeUnit(1, $srid);

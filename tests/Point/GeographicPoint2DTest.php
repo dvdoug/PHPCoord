@@ -26,6 +26,8 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2DSRIDData;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -35,10 +37,8 @@ class GeographicPoint2DTest extends TestCase
 {
     use Geographic2DSRIDData;
 
-    /**
-     * @group integration
-     * @dataProvider supportedOperations
-     */
+    #[DataProvider('supportedOperations')]
+    #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);

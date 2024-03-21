@@ -10,6 +10,8 @@ namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownDatumException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -36,10 +38,8 @@ class DatumTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider datums
-     */
+    #[DataProvider('datums')]
+    #[Group('integration')]
     public function testCanCreateSupported(string $srid): void
     {
         $object = Datum::fromSRID($srid);

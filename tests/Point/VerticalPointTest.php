@@ -32,6 +32,8 @@ use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -74,9 +76,7 @@ class VerticalPointTest extends TestCase
         self::assertEquals(37.4904, $object->getHeight()->getValue());
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculation(): void
     {
         $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EGM2008_HEIGHT), new Metre(100));
@@ -84,9 +84,7 @@ class VerticalPointTest extends TestCase
         self::assertEqualsWithDelta(20, $from->calculateDistance($to)->getValue(), 0.000001);
     }
 
-    /**
-     * @group distance
-     */
+    #[Group('distance')]
     public function testDistanceCalculationDifferentCRS(): void
     {
         $this->expectException(InvalidCoordinateReferenceSystemException::class);
@@ -191,10 +189,8 @@ class VerticalPointTest extends TestCase
         self::assertEqualsWithDelta(247.599, $to->getHeight()->getValue(), 0.001);
     }
 
-    /**
-     * @group integration
-     * @dataProvider supportedOperations
-     */
+    #[DataProvider('supportedOperations')]
+    #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $sourceCRS = Vertical::fromSRID($sourceCrsSrid);

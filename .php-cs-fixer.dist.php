@@ -19,6 +19,7 @@ return $config->setRules(
         '@PHP74Migration' => true,
         '@PHP80Migration:risky' => true,
         '@PHP80Migration' => true,
+        '@PHP81Migration' => true,
         'concat_space' => ['spacing' => 'one'],
         'fopen_flags' => ['b_mode' => true],
         'native_function_invocation' => ['include' => ['@all']],

@@ -12,7 +12,7 @@
     ],
     "license": "(MIT and proprietary)",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-zip": "*",
         "composer-runtime-api": "^2.1",
         "composer/pcre": "^3.1",
@@ -32,7 +32,7 @@
         "php-coord/datapack-oceania": "dev-master",
         "php-coord/datapack-southamerica": "dev-master",
         "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^9.6||^10.0||^11.0"
+        "phpunit/phpunit": "^10.5||^11.0"
     },
     "suggest": {
         "php-coord/datapack-africa": "High-accuracy addon datapack for Africa",

@@ -10,6 +10,8 @@ namespace PHPCoord\Datum;
 
 use PHPCoord\Exception\UnknownPrimeMeridianException;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -36,10 +38,8 @@ class PrimeMeridianTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider primeMeridians
-     */
+    #[DataProvider('primeMeridians')]
+    #[Group('integration')]
     public function testCanCreateSupported(string $srid): void
     {
         $object = PrimeMeridian::fromSRID($srid);

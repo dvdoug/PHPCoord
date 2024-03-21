@@ -25,7 +25,7 @@
         <ini name="error_logging" value="-1"/>
     </php>
 
-    <coverage pathCoverage="true" cacheDirectory="build/php-code-coverage-cache">
+    <source>
         <include>
             <directory suffix=".php">src</directory>
         </include>
@@ -34,7 +34,9 @@
             <directory suffix=".php">src/CoordinateOperation/Params</directory>
             <directory suffix=".php">src/Geometry/Extents</directory>
         </exclude>
+    </source>
 
+    <coverage pathCoverage="true" cacheDirectory="build/php-code-coverage-cache">
         <report>
             <text outputFile="php://stdout" showOnlySummary="true"/>
             <html outputDirectory="build/coverage-phpunit"/>

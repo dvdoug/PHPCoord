@@ -12,6 +12,8 @@ use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -62,10 +64,8 @@ class RateTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider unitsOfMeasure
-     */
+    #[DataProvider('unitsOfMeasure')]
+    #[Group('integration')]
     public function testCanCreateAllUnits(string $srid): void
     {
         $newUnit = Rate::makeUnit(1, $srid);

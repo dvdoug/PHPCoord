@@ -4,6 +4,7 @@
 
 ### Changed
 - Updates to data for Czechia, Denmark, ETRS89, Portugal and St Helena
+- Minimum PHP version increased to 8.1
 
 ## [5.8.0] - 2024-02-03
 ### Added

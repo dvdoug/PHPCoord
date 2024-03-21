@@ -10,6 +10,8 @@ namespace PHPCoord\CoordinateReferenceSystem;
 
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function count;
@@ -38,10 +40,8 @@ class ProjectedTest extends TestCase
         }
     }
 
-    /**
-     * @group integration
-     * @dataProvider coordinateReferenceSystems
-     */
+    #[DataProvider('coordinateReferenceSystems')]
+    #[Group('integration')]
     public function testCanCreateSupported(string $srid): void
     {
         $object = Projected::fromSRID($srid);
