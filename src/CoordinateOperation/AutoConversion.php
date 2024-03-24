@@ -101,10 +101,19 @@ trait AutoConversion
     {
         foreach ($candidatePath as $pathStep) {
             $operation = CoordinateOperations::getOperationData($pathStep['operation']);
-            if ($boundaryCheckPoint) {
-                // filter out operations that only operate outside this point
-                $polygon = $operation['extent'] = $operation['extent'] instanceof BoundingArea ? $operation['extent'] : BoundingArea::createFromExtentCodes($operation['extent']);
-                if (!$polygon->containsPoint($boundaryCheckPoint)) {
+
+            if ($boundaryCheckPoint) { // Filter out operations that only operate outside this point
+                // First, eliminate based on bounding box if possible, that's quicker as only 4 corners
+                if (!$operation['extent'] instanceof BoundingArea) {
+                    $bbox = BoundingArea::createFromExtentCodes($operation['extent'], true);
+                    if (!$bbox->containsPoint($boundaryCheckPoint)) {
+                        return false;
+                    }
+                }
+
+                // Then (or only) check the point is inside the full, complex shape
+                $polygon = $operation['extent'] instanceof BoundingArea ? $operation['extent'] : BoundingArea::createFromExtentCodes($operation['extent']);
+                if ((!isset($bbox) || $polygon !== $bbox) && !$polygon->containsPoint($boundaryCheckPoint)) {
                     return false;
                 }
             }

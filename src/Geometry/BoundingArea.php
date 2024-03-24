@@ -105,9 +105,9 @@ class BoundingArea
      * @internal
      * @param string[] $extentCodes
      */
-    public static function createFromExtentCodes(array $extentCodes): self
+    public static function createFromExtentCodes(array $extentCodes, bool $boundingBoxOnly = false): self
     {
-        $cacheKey = implode('|', $extentCodes);
+        $cacheKey = implode('|', $extentCodes) . ($boundingBoxOnly ? 'bboxOnly' : '');
         if (!isset(self::$cachedObjects[$cacheKey])) {
             $regions = [];
 
@@ -121,7 +121,7 @@ class BoundingArea
                 $pathToExtent = __DIR__ . '/Extents/BoundingBoxOnly/' . $filename;
                 if (InstalledVersions::isInstalled(RegionMap::PACKAGES[$region])) {
                     $baseDir = InstalledVersions::getInstallPath(RegionMap::PACKAGES[$region]) . '/src/Geometry/Extents/';
-                    if (file_exists($baseDir . $filename)) {
+                    if ((!$boundingBoxOnly || $region === RegionMap::REGION_GLOBAL) && file_exists($baseDir . $filename)) {
                         $pathToExtent = $baseDir . $filename;
                     }
                 }
