@@ -7670,6 +7670,20 @@ class CRSTransformationsGlobal
             'accuracy' => 2.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32771',
+            'name' => 'WGS 84 to WGS 84 (G2296) (geog2D to geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10604',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32769',
+            'name' => 'WGS 84 to WGS 84 (G2296) (geog2D)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10606',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16406',
             'name' => 'TM 6 NE',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
@@ -8753,20 +8767,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9354',
             'accuracy' => 0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32771',
-            'name' => 'WGS 84 to WGS 84 (G2139) (geog2D to geocen)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
-            'accuracy' => 0.0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32769',
-            'name' => 'WGS 84 to WGS 84 (G2139) (geog2D)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9755',
-            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16021',
@@ -12661,6 +12661,13 @@ class CRSTransformationsGlobal
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32768',
+            'name' => 'WGS 84 to WGS 84 (G2296) (geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4978',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10604',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',
             'name' => 'geocentric to geographic3D',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4978',
@@ -12668,10 +12675,17 @@ class CRSTransformationsGlobal
             'accuracy' => 0,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32768',
-            'name' => 'WGS 84 to WGS 84 (G2139) (geocen)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4978',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32772',
+            'name' => 'WGS 84 to WGS 84 (G2296) (geog3D to geocen)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10604',
+            'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32770',
+            'name' => 'WGS 84 to WGS 84 (G2296) (geog3D)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10605',
             'accuracy' => 0.0,
         ],
         [
@@ -12680,20 +12694,6 @@ class CRSTransformationsGlobal
             'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32772',
-            'name' => 'WGS 84 to WGS 84 (G2139) (geog3D to geocen)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9753',
-            'accuracy' => 0.0,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::32770',
-            'name' => 'WGS 84 to WGS 84 (G2139) (geog3D)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4979',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9754',
-            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15592',

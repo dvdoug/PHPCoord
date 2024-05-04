@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4761",
+    "title": "Europe-FSU/Europe - 12°E to 18°E and ETRF",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [12, 34.49805514800005], [18, 34.49805514800005], [18, 84], [12, 84], [12, 34.49805514800005]
+        ]
+    ]
+}

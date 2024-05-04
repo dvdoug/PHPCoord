@@ -8260,18 +8260,18 @@ to Tokyo + JSLD69 height (Compound)
     "
 
 
-to WGS 84 (G2139) (Geocentric)
+to WGS 84 (G2296) (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
     :header: "EPSG", "PHPCoord"
     :widths: 40, 60
 
-    "| Name: WGS 84 to WGS 84 (G2139) (geog3D to geocen)
+    "| Name: WGS 84 to WGS 84 (G2296) (geog3D to geocen)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::32772``
     | Extent: World",".. code-block:: php
 
         $point->geographicGeocentric(
-            to: Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G2139)
+            to: Geocentric::fromSRID(Geocentric::EPSG_WGS_84_G2296)
         )
 
     "

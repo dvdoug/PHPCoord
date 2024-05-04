@@ -348,6 +348,20 @@ class CRSTransformationsEurope
             'accuracy' => 1.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10625',
+            'name' => 'ECML14-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10623',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10626',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10631',
+            'name' => 'WC05-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10628',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10632',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10127',
             'name' => 'MWC18-TM',
             'source_crs' => 'urn:ogc:def:crs:EPSG::20033',

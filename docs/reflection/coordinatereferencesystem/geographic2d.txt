@@ -1425,6 +1425,21 @@ EBBWV14-IRF
 
 Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection (code 9942).
 
+ECML14-IRF
+----------
+| Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to Edinburgh
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ECML14_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10623')
+    Geographic::fromSRID(Geographic2D::EPSG_ECML14_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10623')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ECML14_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10623')
+
+Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / ECML14 SnakeGrid projected CRS through transformation ETRS89 to ECML14-IRF (1) (code 10624) used in conjunction with the ECML14-TM map projection (code 10625).
+
 ECML14_NB-IRF
 -------------
 | Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth
@@ -1751,7 +1766,7 @@ Replaces ETRF96 (code 9065). Replaced by ETRF2000 (code 9067).
 
 ETRS89
 ------
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -8250,6 +8265,21 @@ Voirol 1879 (Paris)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4821')
 
 The appropriate usage of CRSs using the Voirol 1875 and 1879 datums is lost in antiquity. They differ by about 9 metres. Oil industry references to one could in reality be to either. All replaced by Nord Sahara 1959 (CRS code 4307).
+
+WC05-IRF
+--------
+| Extent: United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_WC05_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10628')
+    Geographic::fromSRID(Geographic2D::EPSG_WC05_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10628')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_WC05_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10628')
+
+Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / WC05 SnakeGrid projected CRS through transformation ETRS89 to WC05-IRF (1) (code 10629) used in conjunction with the WC05-TM map projection (code 10631).
 
 WGS 66
 ------

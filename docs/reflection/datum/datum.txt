@@ -2117,6 +2117,20 @@ Defined through the application of the EBBWV14 NTv2 transformation to ETRS89 as 
 
 Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of the EBBWV14 Snake map projection.
 
+ECML14 Intermediate Reference Frame
+-----------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to Edinburgh
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ECML14_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1385')
+
+Defined through the application of the ECML14 NTv2 transformation from ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2024 to support intermediate CRS "ECML14-IRF" in the emulation of the ECML14 Snake map projection.
+
 ECML14_NB Intermediate Reference Frame
 --------------------------------------
 | Type: Geodetic
@@ -2571,7 +2585,7 @@ Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datu
 European Terrestrial Reference System 1989 ensemble
 ---------------------------------------------------
 | Type: Ensemble
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
+| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -11082,6 +11096,20 @@ Voirol 1879 (Paris)
 Fundamental point: Voirol. Latitude: 40.835864 grads N, longitude: 0.788735 grads E (of Paris).
 
 Replaces Voirol 1875 (Paris) (code 6811).
+
+WC05 Intermediate Reference Frame
+---------------------------------
+| Type: Geodetic
+| Extent: United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_WC05_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1386')
+
+Defined through the application of the WC05 NTv2 transformation from ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the WC05 Snake map projection.
 
 WGS 72 Transit Broadcast Ephemeris
 ----------------------------------

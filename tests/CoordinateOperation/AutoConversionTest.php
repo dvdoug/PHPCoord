@@ -239,8 +239,8 @@ class AutoConversionTest extends TestCase
         $to = $from->convert($toCRS);
 
         if (class_exists(OSTN15OSGM15Provider::class)) {
-            self::assertEqualsWithDelta(31326368.093447, $to->getEasting()->getValue(), 0.0001);
-            self::assertEqualsWithDelta(5708454.8262056, $to->getNorthing()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(31326368.092043, $to->getEasting()->getValue(), 0.0001);
+            self::assertEqualsWithDelta(5708454.8271929, $to->getNorthing()->getValue(), 0.0001);
         } else {
             self::assertEqualsWithDelta(31326366.078970, $to->getEasting()->getValue(), 0.0001);
             self::assertEqualsWithDelta(5708454.600444621, $to->getNorthing()->getValue(), 0.0001);
@@ -275,8 +275,8 @@ class AutoConversionTest extends TestCase
             self::assertEqualsWithDelta(651409.804, $to->getEasting()->asMetres()->getValue(), 0.001);
             self::assertEqualsWithDelta(313177.450, $to->getNorthing()->asMetres()->getValue(), 0.001);
         } else {
-            self::assertEqualsWithDelta(651411.218, $to->getEasting()->asMetres()->getValue(), 0.001);
-            self::assertEqualsWithDelta(313180.712, $to->getNorthing()->asMetres()->getValue(), 0.001);
+            self::assertEqualsWithDelta(651411.216, $to->getEasting()->asMetres()->getValue(), 0.001);
+            self::assertEqualsWithDelta(313180.713, $to->getNorthing()->asMetres()->getValue(), 0.001);
         }
     }
 
@@ -450,7 +450,7 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(51.728601862, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(4.712119466, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(301.791109663, $to->getHeight()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(301.797544112, $to->getHeight()->asMetres()->getValue(), 0.00001);
     }
 
     public function testRDNAPToWGS84Geocentric(): void
@@ -475,9 +475,9 @@ class AutoConversionTest extends TestCase
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(3945517.9248343, $to->getX()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(325220.85089141, $to->getY()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(4984392.8283033, $to->getZ()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(3945517.9278914, $to->getX()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(325220.849328, $to->getY()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(4984392.8341967, $to->getZ()->asMetres()->getValue(), 0.00001);
     }
 
     public function testNAD83NAD27SouthCarolina(): void
@@ -506,7 +506,7 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(39.99999431, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(-99.99998594, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(25.50538621, $to->getVerticalPoint()->getHeight()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(25.50618365, $to->getVerticalPoint()->getHeight()->getValue(), 0.00000001);
     }
 
     public function testWGS84NAD832011(): void
@@ -517,7 +517,7 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(39.99999431, $to->getLatitude()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(-99.99998594, $to->getLongitude()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(0.9499795716, $to->getHeight()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(0.9507770240, $to->getHeight()->getValue(), 0.00000001);
     }
 
     public function testRGF2BLambert93Corsica(): void

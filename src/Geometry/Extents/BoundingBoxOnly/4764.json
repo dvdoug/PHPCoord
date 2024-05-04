@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4764",
+    "title": "Europe-FSU/Europe - 30°E to 36°E and ETRF",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [30, 33.91907509300006], [36, 33.91907509300006], [36, 84], [30, 84], [30, 33.91907509300006]
+        ]
+    ]
+}

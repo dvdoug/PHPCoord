@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4774",
+    "title": "Europe-FSU/UK - London to Edinburgh",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-3.55, 51.35], [0.15, 51.35], [0.15, 56.2], [-3.55, 56.2], [-3.55, 51.35]
+        ]
+    ]
+}

@@ -703,6 +703,16 @@ class Geographic2D extends Geographic
     public const EPSG_EBBWV14_IRF = 'urn:ogc:def:crs:EPSG::9939';
 
     /**
+     * ECML14-IRF
+     * Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via
+     * Newcastle to Edinburgh
+     * Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / ECML14 SnakeGrid projected CRS through
+     * transformation ETRS89 to ECML14-IRF (1) (code 10624) used in conjunction with the ECML14-TM map projection (code
+     * 10625).
+     */
+    public const EPSG_ECML14_IRF = 'urn:ogc:def:crs:EPSG::10623';
+
+    /**
      * ECML14_NB-IRF
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
      * Junction, and the section from Bedlington to Morpeth
@@ -872,11 +882,11 @@ class Geographic2D extends Geographic
     /**
      * ETRS89
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
+     * Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San
+     * Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; United Kingdom
+     * (UK) including Channel Islands and Isle of Man; Vatican City State
      * Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and
      * ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
      */
@@ -4164,6 +4174,16 @@ class Geographic2D extends Geographic
      * 4307).
      */
     public const EPSG_VOIROL_1879_PARIS = 'urn:ogc:def:crs:EPSG::4821';
+
+    /**
+     * WC05-IRF
+     * Extent: United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via
+     * Carlisle to Glasgow
+     * Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / WC05 SnakeGrid projected CRS through
+     * transformation ETRS89 to WC05-IRF (1) (code 10629) used in conjunction with the WC05-TM map projection (code
+     * 10631).
+     */
+    public const EPSG_WC05_IRF = 'urn:ogc:def:crs:EPSG::10628';
 
     /**
      * WGS 66

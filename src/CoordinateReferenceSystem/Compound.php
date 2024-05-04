@@ -195,6 +195,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_EBBWV14_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9944';
 
     /**
+     * ECML14 Grid + ODN height
+     * Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via
+     * Newcastle to Edinburgh.
+     */
+    public const EPSG_ECML14_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10627';
+
+    /**
      * ECML14_NB Grid + ODN height
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
      * Junction, and the section from Bedlington to Morpeth.
@@ -2729,6 +2736,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Martinique - onshore.
      */
     public const EPSG_RGAF09_PLUS_MARTINIQUE_1987_HEIGHT = 'urn:ogc:def:crs:EPSG::9537';
+
+    /**
+     * RGAF09 / UTM zone 20N + Martinique 1987 height
+     * Extent: Martinique - onshore.
+     */
+    public const EPSG_RGAF09_UTM_ZONE_20N_PLUS_MARTINIQUE_1987_HEIGHT = 'urn:ogc:def:crs:EPSG::10633';
 
     /**
      * RGF93 v1 / Lambert-93 + NGF-IGN69 height

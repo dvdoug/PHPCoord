@@ -4708,6 +4708,19 @@ EBBWV14 Grid
 
 Defined through transformation ETRS89 to EBBWV14-IRF (1) (code 9941) and map projection EBBWV14-TM (code 9942). Emulates the EBBWV14 Snake projection applied to ETRS89 as realized through OSNet 2009.
 
+ECML14 Grid
+-----------
+| Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to Edinburgh
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_ECML14_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10626')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ECML14_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10626')
+
+Defined through transformation ETRS89 to ECML14-IRF (1) (code 10624) and map projection ECML14-TM (code 10625). Emulates the ECML14 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 ECML14_NB Grid
 --------------
 | Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth
@@ -5979,6 +5992,7 @@ ETRS89 / Gauss-Kruger CM 9E
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GAUSS_KRUGER_CM_9E)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8395')
 
+See ETRS89/DREF91/2016 / 3-degree Gauss-Kruger zone 3 (CRS code 10285) for an alternative based on the German national realization of ETRS89.
 
 ETRS89 / Guernsey Grid
 ----------------------
@@ -6483,7 +6497,7 @@ ETRS89 / UTM zone 28N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_28N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25828')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 28N (N-E) (CRS code 3040) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 28N (N-E)
 ---------------------------
@@ -6500,7 +6514,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 29N
 ---------------------
-| Extent: Europe between 12°W and 6°W: Faroe Islands - onshore and offshore; Ireland - offshore; Jan Mayen - onshore and offshore; Portugal - onshore and offshore; Spain - onshore and offshore; United Kingdom - UKCS offshore
+| Extent: Europe between 12°W and 6°W: Faroe Islands - offshore; Ireland - offshore; Jan Mayen - onshore and offshore; Portugal - mainland - onshore and offshore; Spain - mainland - onshore and offshore; United Kingdom - UKCS offshore, Europe between 12°W and 6°W and approximately 34°50'N to 74°10'N
 
 .. code-block:: php
 
@@ -6509,11 +6523,11 @@ ETRS89 / UTM zone 29N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_29N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25829')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 29N (N-E) (CRS code 3041) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 29N (N-E)
 ---------------------------
-| Extent: Europe between 12°W and 6°W: Faroe Islands - onshore and offshore; Ireland - offshore; Jan Mayen - onshore and offshore; Portugal - onshore and offshore; Spain - onshore and offshore; United Kingdom - UKCS offshore
+| Extent: Europe between 12°W and 6°W and approximately 34°50'N to 74°10'N: Faroe Islands - offshore; Ireland - offshore; Jan Mayen - onshore and offshore; Portugal - mainland - onshore and offshore; Spain - mainland - onshore and offshore; United Kingdom - UKCS offshore
 
 .. code-block:: php
 
@@ -6526,7 +6540,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 30N
 ---------------------
-| Extent: Europe between 6°W and 0°W: Faroe Islands offshore; Ireland - offshore; Jan Mayen - offshore; Norway including Svalbard - offshore; Spain - onshore and offshore
+| Extent: Europe between 6°W and 0°W: Faroe Islands offshore; Ireland - offshore; Jan Mayen - offshore; Norway including Svalbard - offshore; Spain - mainland - onshore and offshore, Europe between 6°W and 0°W and approximately 35°15'N to 80°30'N
 
 .. code-block:: php
 
@@ -6535,11 +6549,11 @@ ETRS89 / UTM zone 30N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_30N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25830')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 30N (N-E) (CRS code 3042) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 30N (N-E)
 ---------------------------
-| Extent: Europe between 6°W and 0°W: Faroe Islands offshore; Ireland - offshore; Jan Mayen - offshore; Norway including Svalbard - offshore; Spain - onshore and offshore
+| Extent: Europe between 6°W and 0°W and approximately 35°15'N to 80°30'N: Faroe Islands - offshore; Ireland - offshore; Jan Mayen - offshore; Norway including Svalbard - offshore; Spain - mainland - onshore and offshore
 
 .. code-block:: php
 
@@ -6552,7 +6566,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 31N
 ---------------------
-| Extent: Europe between 0°E and 6°E: Andorra; Belgium - onshore and offshore; Denmark - offshore; Germany - offshore; Jan Mayen - offshore; Norway including Svalbard - onshore and offshore; Spain - onshore and offshore
+| Extent: Europe between 0°E and 6°E: Andorra; Denmark - offshore; Germany - offshore; Jan Mayen - offshore; Norway including Svalbard - onshore and offshore; Spain - mainland and Balearic islands - onshore and offshore, Europe between 0°E and 6°E and approximately 37°N to 82°27'N
 
 .. code-block:: php
 
@@ -6561,11 +6575,11 @@ ETRS89 / UTM zone 31N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_31N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25831')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 31N (N-E) (CRS code 3043) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 31N (N-E)
 ---------------------------
-| Extent: Europe between 0°E and 6°E: Andorra; Belgium - onshore and offshore; Denmark - offshore; Germany - offshore; Jan Mayen - offshore; Norway including Svalbard - onshore and offshore; Spain - onshore and offshore
+| Extent: Europe between 0°E and 6°E and approximately 37°N to 82°27'N: Andorra; Denmark - offshore; Germany - offshore; Jan Mayen - offshore; Norway including Svalbard - onshore and offshore; Spain - mainland and Balearic islands - onshore and offshore
 
 .. code-block:: php
 
@@ -6604,7 +6618,7 @@ Variant used in Germany of ETRS89 / UTM zone 31N (CRS code 25831) in which easti
 
 ETRS89 / UTM zone 32N
 ---------------------
-| Extent: Europe between 6°E and 12°E: Austria; Belgium; Denmark - onshore and offshore; Germany - onshore and offshore; Norway including - onshore and offshore; Spain - offshore
+| Extent: Europe between 6°E and 12°E: Austria; Denmark - onshore and offshore; Germany - onshore and offshore; Italy - onshore and offshore; Norway including Svalbard - onshore and offshore; Spain - offshore, Europe between 6°E and 12°E and approximately 36°30'N to 84°N
 
 .. code-block:: php
 
@@ -6613,11 +6627,11 @@ ETRS89 / UTM zone 32N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_32N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25832')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 32N (N-E) (CRS code 3044) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 32N (N-E)
 ---------------------------
-| Extent: Europe between 6°E and 12°E: Austria; Belgium; Denmark - onshore and offshore; Germany - onshore and offshore; Norway including - onshore and offshore; Spain - offshore
+| Extent: Europe between 6°E and 12°E and approximately 36°30'N to 84°N: Austria; Denmark - onshore and offshore; Germany - onshore and offshore; Italy - onshore and offshore; Norway including Svalbard - onshore and offshore; Spain - offshore
 
 .. code-block:: php
 
@@ -6656,7 +6670,7 @@ Variant used in Germany of ETRS89 / UTM zone 32N (CRS code 25832) in which easti
 
 ETRS89 / UTM zone 33N
 ---------------------
-| Extent: Europe between 12°E and 18°E: Austria; Denmark - offshore and offshore; Germany - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 12°E and 18°E: Austria; Croatia; Denmark - offshore and offshore; Germany - onshore and offshore; Italy - onshore and offshore; Norway including Svalbard - onshore and offshore, Europe between 12°E and 18°E and approximately 34°30'N to 84°N
 
 .. code-block:: php
 
@@ -6665,11 +6679,11 @@ ETRS89 / UTM zone 33N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_33N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25833')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 33N (N-E) (CRS code 3045) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 33N (N-E)
 ---------------------------
-| Extent: Europe between 12°E and 18°E: Austria; Denmark - offshore and offshore; Germany - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 12°E and 18°E and approximately 34°30'N to 84°N.: Austria; Croatia; Denmark - offshore and offshore; Germany - onshore and offshore; Italy - onshore and offshore; Norway including Svalbard - onshore and offshore
 
 .. code-block:: php
 
@@ -6708,7 +6722,7 @@ Variant used in Germany of ETRS89 / UTM zone 33N (CRS code 25833) in which easti
 
 ETRS89 / UTM zone 34N
 ---------------------
-| Extent: Europe between 18°E and 24°E: Finland - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 18°E and 24°E: Bulgaria; Croatia; Italy - onshore and offshore; Norway including Svalbard - onshore and offshore, Europe between 18°E and 24°E and approximately 33°36'N to 84°N
 
 .. code-block:: php
 
@@ -6717,11 +6731,11 @@ ETRS89 / UTM zone 34N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_34N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25834')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 34N (N-E) (CRS code 3046) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 34N (N-E)
 ---------------------------
-| Extent: Europe between 18°E and 24°E: Finland - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 18°E and 24°E and approximately 33°36'N to 84°N: Bulgaria; Croatia; Italy - onshore and offshore; Norway including Svalbard - onshore and offshore
 
 .. code-block:: php
 
@@ -6734,7 +6748,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 35N
 ---------------------
-| Extent: Europe between 24°E and 30°E: Finland - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 24°E and 30°E: Bulgaria - onshore and offshore; Norway including Svalbard - onshore and offshore, Europe between 24°E and 30°E and approximately 33°15'N to 84°N
 
 .. code-block:: php
 
@@ -6743,11 +6757,11 @@ ETRS89 / UTM zone 35N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_35N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25835')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 35N (N-E) (CRS code 3047) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 35N (N-E)
 ---------------------------
-| Extent: Europe between 24°E and 30°E: Finland - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 24°E and 30°E and approximately 33°15'N to 84°N: Bulgaria - onshore and offshore; Norway including Svalbard - onshore and offshore
 
 .. code-block:: php
 
@@ -6760,7 +6774,7 @@ ETRS89-LCC (CRS code 3034) used for conformal mapping at 1:500,000 and smaller s
 
 ETRS89 / UTM zone 36N
 ---------------------
-| Extent: Europe between 30°E and 36°E: Finland - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 30°E and 36°E: Bulgaria - offshore; Norway including Svalbard - onshore and offshore, Europe between 30°E and 36°E and approximately 33°55'N to 84°N
 
 .. code-block:: php
 
@@ -6769,11 +6783,11 @@ ETRS89 / UTM zone 36N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_36N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25836')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 36N (N-E) (CRS code 3048) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 36N (N-E)
 ---------------------------
-| Extent: Europe between 30°E and 36°E: Finland - onshore and offshore; Norway including Svalbard - onshore and offshore
+| Extent: Europe between 30°E and 36°E and approximately 33°55'N to 84°N: Bulgaria - offshore; Norway including Svalbard - onshore and offshore
 
 .. code-block:: php
 
@@ -6795,7 +6809,7 @@ ETRS89 / UTM zone 37N
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_UTM_ZONE_37N)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25837')
 
-The distinction in usage between ETRF89 and ETRS89 is confused: although in principle conceptually different in practice both are used as synonyms.
+See ETRS89 / UTM zone 37N (N-E) (CRS code 3049) for alternative CRS with north-east axis order.
 
 ETRS89 / UTM zone 37N (N-E)
 ---------------------------
@@ -58732,6 +58746,19 @@ Voirol 1879 / Sud Algerie (ancienne)
 
 Replaced by Nord Sahara 1959 / Voirol Unifie Sud (code 30792). The appropriate usage of CRSs using the Voirol 1875 and 1879 datums is lost in antiquity. They differ by about 9 metres. Oil industry references to one could in reality be to either.
 
+WC05 Grid
+---------
+| Extent: United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WC05_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10632')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WC05_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10632')
+
+Defined through transformation ETRS89 to WC05-IRF (1) (code 10629) and map projection WC05-TM (code 10631). Emulates the WC05 Snake projection applied to ETRS89 as realized through OSNet 2009.
+
 WGS 72 / UTM zone 10N
 ---------------------
 | Extent: Between 126°W and 120°W, northern hemisphere between equator and 84°N, onshore and offshore
@@ -62528,7 +62555,7 @@ Basis for the equal area continental tiling system for Africa used by the GLANCE
 
 WGS 84 / GLANCE Asia
 --------------------
-| Extent: Asia excluding Russia west of the Ural Mountains
+| Extent: Asia including Maldives and British Indian Ocean Territory
 
 .. code-block:: php
 
@@ -62554,7 +62581,7 @@ Basis for the equal area continental tiling system for Europe used by the GLANCE
 
 WGS 84 / GLANCE North America
 -----------------------------
-| Extent: North America, the Caribbean and Central America excluding Panama
+| Extent: North America including Greenland, the Caribbean and Central America, together with circum-polar area north of 83°40'N. Excluding the circum-polar area, the longitude extent is from 167.65° in west across the 180° meridian to 15.72° in east
 
 .. code-block:: php
 

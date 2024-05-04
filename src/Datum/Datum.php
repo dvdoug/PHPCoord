@@ -1502,6 +1502,17 @@ class Datum
     public const EPSG_EBBWV14_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1319';
 
     /**
+     * ECML14 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via
+     * Newcastle to Edinburgh
+     * Defined through the application of the ECML14 NTv2 transformation from ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2024 to support intermediate CRS "ECML14-IRF" in the emulation of the ECML14 Snake map projection.
+     */
+    public const EPSG_ECML14_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1385';
+
+    /**
      * ECML14_NB Intermediate Reference Frame
      * Type: Geodetic
      * Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North
@@ -1859,11 +1870,11 @@ class Datum
      * European Terrestrial Reference System 1989 ensemble
      * Type: Ensemble
      * Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria;
-     * Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
+     * Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary;
      * Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro;
-     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino;
-     * Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle
-     * of Man; Vatican City State
+     * Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San
+     * Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; United Kingdom
+     * (UK) including Channel Islands and Isle of Man; Vatican City State
      * Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005,
      * ETRF2014 and ETRF2020. This 'ensemble' covers any or all of these realizations without distinction.
      */
@@ -8050,6 +8061,17 @@ class Datum
     public const EPSG_VOIROL_1879_PARIS = 'urn:ogc:def:datum:EPSG::6821';
 
     /**
+     * WC05 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via
+     * Carlisle to Glasgow
+     * Defined through the application of the WC05 NTv2 transformation from ETRS89 as realized through OSNet v2009
+     * CORS.
+     * Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the WC05 Snake map projection.
+     */
+    public const EPSG_WC05_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1386';
+
+    /**
      * WGS 72 Transit Broadcast Ephemeris
      * Type: Dynamic geodetic
      * Extent: World
@@ -12505,7 +12527,7 @@ Created in 2022 to support intermediate CRS OS-IRF in the transformation of coor
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'UK – Okehampton to Penstone',
+            'extent_name' => 'UK - Okehampton to Penstone',
             'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone',
             'help' => 'Defined through the application of the SMITB20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the SMITB20 Snake map projection.',
@@ -12518,7 +12540,7 @@ Created in 2022 to support intermediate CRS SMITB20-IRF in the emulation of the 
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'UK – Reading to Penzance',
+            'extent_name' => 'UK - Reading to Penzance',
             'extent_description' => 'United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance',
             'help' => 'Defined through the application of the RBEPP12 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2022 to support intermediate CRS RBEPP12-IRF in the emulation of the RBEPP12 Snake map projection.',
@@ -12900,6 +12922,32 @@ Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datu
             'extent_description' => 'World',
             'help' => 'Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0. The IGS20 station coordinates are considered to be equivalent to ITRF2020.
 Replaces World Geodetic System 1984 (G2139) from 2024-01-07.',
+        ],
+        'urn:ogc:def:datum:EPSG::1385' => [
+            'name' => 'ECML14 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'UK - London to Edinburgh',
+            'extent_description' => 'United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to Edinburgh',
+            'help' => 'Defined through the application of the ECML14 NTv2 transformation from ETRS89 as realized through OSNet v2009 CORS.
+Created in 2024 to support intermediate CRS "ECML14-IRF" in the emulation of the ECML14 Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1386' => [
+            'name' => 'WC05 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'UK - London to Glasgow',
+            'extent_description' => 'United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow',
+            'help' => 'Defined through the application of the WC05 NTv2 transformation from ETRS89 as realized through OSNet v2009 CORS.
+Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the WC05 Snake map projection.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -16550,7 +16598,7 @@ South East Island 1943 (datum code 1138) used for topographic mapping, cadastral
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF by country',
-            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Cyprus; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
+            'extent_description' => 'Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State',
             'ensemble' => [
                 'urn:ogc:def:datum:EPSG::1178',
                 'urn:ogc:def:datum:EPSG::1179',
