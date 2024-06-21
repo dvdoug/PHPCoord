@@ -41,6 +41,7 @@ return $config->setRules(
     ]
 )
     ->setRiskyAllowed(true)
+    ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->in(__DIR__ . '/resources')
