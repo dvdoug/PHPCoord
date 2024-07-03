@@ -6380,7 +6380,7 @@ Mean Sea Level Netherlands
 
 Surface defined through the nlgeo geoid model applied to ETRS89.
 
-Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.
+Coincides with NAP datum plane, extended offshore through the nlgeo geoid model. Approximates physical mean sea surface to a few decimetres.
 
 Mean Sea Level UK & Ireland VORF08
 ----------------------------------

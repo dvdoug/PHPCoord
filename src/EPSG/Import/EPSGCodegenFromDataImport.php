@@ -640,6 +640,7 @@ class EPSGCodegenFromDataImport
     ];
 
     private const BLACKLISTED_OPERATION_SCOPES = [
+        1029, // Engineering survey
         1138, // Engineering survey, harbour hydrography.
         1139, // Engineering survey and construction for Fehmarnbelt tunnel.
         1140, // Engineering survey for onshore facilities for South Pars phase 11 and Pars LNG.
@@ -652,6 +653,7 @@ class EPSGCodegenFromDataImport
         1260, // Engineering survey for HS2 project phases 1 and 2a.
         1265, // Hydrography, drilling, offshore engineering.
         1271, // Engineering survey and mapping for the Trans-Europe Lyon-Turin (TELT) railway project.
+        1285, // Engineering survey and mapping for the Brenner base tunnel (BBT) railway project.
     ];
 
     public function __construct()

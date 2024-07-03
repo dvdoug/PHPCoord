@@ -4551,7 +4551,8 @@ class Datum
      * Type: Vertical
      * Extent: Netherlands - offshore North Sea and nearshore
      * Surface defined through the nlgeo geoid model applied to ETRS89.
-     * Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.
+     * Coincides with NAP datum plane, extended offshore through the nlgeo geoid model. Approximates physical mean sea
+     * surface to a few decimetres.
      */
     public const EPSG_MEAN_SEA_LEVEL_NETHERLANDS = 'urn:ogc:def:datum:EPSG::1270';
 
@@ -11465,7 +11466,7 @@ Realized by 333 GNSS stations in Saudi Arabia aligned to ITRF2014 through core n
             'extent_name' => 'Netherlands - offshore and nearshore ',
             'extent_description' => 'Netherlands - offshore North Sea and nearshore',
             'help' => 'Surface defined through the nlgeo geoid model applied to ETRS89.
-Coincides with NAP datum plane. Approximates physical mean sea surface to a few decimetres.',
+Coincides with NAP datum plane, extended offshore through the nlgeo geoid model. Approximates physical mean sea surface to a few decimetres.',
         ],
         'urn:ogc:def:datum:EPSG::1271' => [
             'name' => 'MML07 Intermediate Reference Frame',

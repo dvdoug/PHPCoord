@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 ### Changed
-- Updates to data for Czechia, Denmark, ETRS89, Germany, Portugal, St Helena and WGS84
+- Updates to data for Czechia, Denmark, ETRS89, Germany, Martinique, Portugal, St Helena, UK and WGS84
 - Minimum PHP version increased to 8.1
 
 ## [5.8.0] - 2024-02-03

@@ -2606,7 +2606,7 @@ class CRSTransformationsEurope
             'name' => 'Amersfoort to ETRS89 (9)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4289',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
-            'accuracy' => 0.001,
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19972',
