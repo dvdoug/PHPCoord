@@ -34,6 +34,7 @@ use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\Geodesic;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
@@ -203,7 +204,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
             }
 
             /** @var GeographicPoint $to */
-            return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+            $geodesic = new Geodesic($this->getCRS()->getDatum()->getEllipsoid());
+
+            return $geodesic->distance($this->asGeographicValue(), $to->asGeographicValue());
         }
     }
 

@@ -22,6 +22,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\Geometry\Geodesic;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -129,8 +130,10 @@ class GeocentricPoint extends Point implements ConvertiblePoint
                 throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
             }
 
-            /** @var GeocentricPoint $to */
-            return static::vincenty($this->asGeographicValue(), $to->asGeographicValue(), $this->getCRS()->getDatum()->getEllipsoid());
+            /** @var GeographicPoint $to */
+            $geodesic = new Geodesic($this->getCRS()->getDatum()->getEllipsoid());
+
+            return $geodesic->distance($this->asGeographicValue(), $to->asGeographicValue());
         }
     }
 

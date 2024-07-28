@@ -4,6 +4,7 @@
 
 ### Changed
 - Updates to data for Czechia, Denmark, ETRS89, Germany, Martinique, Portugal, St Helena, UK and WGS84
+- Switched from Vincenty to Karney algorithm for calculating distance between two Geographic points
 - Minimum PHP version increased to 8.1
 
 ## [5.8.0] - 2024-02-03

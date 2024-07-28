@@ -43,10 +43,13 @@ use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
+use function explode;
+use function file_get_contents;
 
 class GeographicPointTest extends TestCase
 {
@@ -129,6 +132,22 @@ class GeographicPointTest extends TestCase
     }
 
     #[Group('distance')]
+    public function testDistanceCalculationKarneyEdgecase1(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(48.522876735459), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(-48.52287673545898293), new Degree(179.599720456223079643), null);
+        self::assertEqualsWithDelta(19989144.773857698, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    #[Group('distance')]
+    public function testDistanceCalculationKarneyEdgecase2(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(20.001), new Degree(0), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(20.001), new Degree(0), null);
+        self::assertEqualsWithDelta(0, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    #[Group('distance')]
     public function testDistanceCalculationReversedOrder(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(51.507977), new Degree(-0.124588), null);
@@ -187,7 +206,6 @@ class GeographicPointTest extends TestCase
     #[Group('distance')]
     public function testDistanceCalculationAntipodeWikiExample2(): void
     {
-        self::markTestSkipped(); // this doesn't work the rest do, think it might be rounding issues
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(0), null);
         $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0.5), new Degree(179.7), null);
         self::assertEqualsWithDelta(19944127.421, $from->calculateDistance($to)->getValue(), 0.001);
@@ -220,7 +238,6 @@ class GeographicPointTest extends TestCase
     #[Group('distance')]
     public function testDistanceCalculationAntipodeVincentyExample4(): void
     {
-        self::markTestSkipped(); // this doesn't work the rest do, think it might be rounding issues
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('600000.00000'), new Degree(0), null);
         $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ED50), Degree::fromSexagesimalDMSS('-595900.00000'), Degree::fromSexagesimalDMSS('1795000.00000'), null);
         self::assertEqualsWithDelta(20000433.9629, $from->calculateDistance($to)->getValue(), 0.0001);
@@ -270,6 +287,14 @@ class GeographicPointTest extends TestCase
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_CHINA_GEODETIC_COORDINATE_SYSTEM_2000), new Degree(51.54105), new Degree(-0.12319), null);
         $to = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_TENERIFE_HEIGHT), new Metre(10));
         $from->calculateDistance($to);
+    }
+
+    #[Group('distance')]
+    public function testDistanceIssue64(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(-33.81083333), new Degree(19.91));
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(-18.2), new Degree(-178.8161111));
+        self::assertEqualsWithDelta(13917773.830057, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
     public function testGeographicGeocentric(): void
@@ -1369,5 +1394,43 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(-22.26612488, $to->getLatitude()->asDegrees()->getValue(), 0.000001);
         self::assertEqualsWithDelta(166.42277537, $to->getLongitude()->asDegrees()->getValue(), 0.000001);
         self::assertNull($to->getHeight());
+    }
+
+    #[Group('distance')]
+    #[Group('integration')]
+    #[DataProvider('karneyTestData')]
+    /**
+     * Test data from https://zenodo.org/records/32156.
+     */
+    public function testDistanceCalculations($lat1, $lon1, $lat2, $lon2, float $expectedDistance): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree((float) $lat1), new Degree((float) $lon1), null);
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree((float) $lat2), new Degree((float) $lon2), null);
+        self::assertEqualsWithDelta($expectedDistance, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    public static function karneyTestData(): array
+    {
+        $data = [];
+        $lines = explode("\n", file_get_contents(__DIR__ . '/../GeodTest-short.dat'));
+        foreach ($lines as $line) {
+            if ($line) {
+                [
+                    $lat1,
+                    $lon1,
+                    $azi1,
+                    $lat2,
+                    $lon2,
+                    $azi2,
+                    $distance,
+                    $arcDistance,
+                    $reducedLength,
+                    $area
+                ] = explode(' ', $line);
+                $data[] = [(float) $lat1, (float) $lon1, (float) $lat2, (float) $lon2, (float) $distance];
+            }
+        }
+
+        return $data;
     }
 }

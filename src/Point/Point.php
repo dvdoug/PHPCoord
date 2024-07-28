@@ -11,7 +11,6 @@ namespace PHPCoord\Point;
 use DateTimeImmutable;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
-use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\CoordinateOperation\Grid;
 use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -21,33 +20,24 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
-use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
-use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
 use Stringable;
 
-use function abs;
 use function acos;
 use function asin;
+use function assert;
 use function atan;
 use function atan2;
-use function cos;
-use function sin;
-use function sqrt;
-use function sscanf;
-use function str_starts_with;
-use function tan;
-use function str_ends_with;
 use function class_exists;
-use function assert;
-use function property_exists;
 use function is_string;
-
-use const M_PI;
+use function property_exists;
+use function sscanf;
+use function str_ends_with;
+use function str_starts_with;
 
 abstract class Point implements Stringable
 {
@@ -149,73 +139,6 @@ abstract class Point implements Stringable
         }
 
         return 1;
-    }
-
-    /**
-     * Calculate surface distance between two points.
-     */
-    protected static function vincenty(GeographicValue $from, GeographicValue $to, Ellipsoid $ellipsoid): Length
-    {
-        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
-        $b = $ellipsoid->getSemiMinorAxis()->asMetres()->getValue();
-        $f = $ellipsoid->getFlattening();
-        $U1 = atan((1 - $f) * tan($from->getLatitude()->asRadians()->getValue()));
-        $U2 = atan((1 - $f) * tan($to->getLatitude()->asRadians()->getValue()));
-        $L = $to->getLongitude()->subtract($from->getLongitude())->asRadians()->getValue();
-
-        $lambda = $L;
-        do {
-            $lambdaN = $lambda;
-
-            $sinSigma = sqrt((cos($U2) * sin($lambda)) ** 2 + (cos($U1) * sin($U2) - sin($U1) * cos($U2) * cos($lambda)) ** 2);
-            $cosSigma = sin($U1) * sin($U2) + cos($U1) * cos($U2) * cos($lambda);
-            $sigma = atan2($sinSigma, $cosSigma);
-
-            $sinAlpha = $sinSigma ? (cos($U1) * cos($U2) * sin($lambda) / $sinSigma) : 0;
-            $cosSqAlpha = (1 - $sinAlpha ** 2);
-            $cos2SigmaM = $cosSqAlpha ? $cosSigma - (2 * sin($U1) * sin($U2) / $cosSqAlpha) : 0;
-            $C = $f / 16 * $cosSqAlpha * (4 + $f * (4 - 3 * $cosSqAlpha));
-            $lambda = $L + (1 - $C) * $f * $sinAlpha * ($sigma + $C * $sinSigma * ($cos2SigmaM + $C * $cosSigma * (-1 + 2 * $cos2SigmaM ** 2)));
-        } while (abs($lambda - $lambdaN) >= static::ITERATION_CONVERGENCE_FORMULA && abs($lambda) < M_PI);
-
-        // Antipodal case
-        if (abs($lambda) >= M_PI) {
-            if ($L >= 0) {
-                $LPrime = M_PI - $L;
-            } else {
-                $LPrime = -M_PI - $L;
-            }
-
-            $lambdaPrime = 0;
-            $sigma = M_PI - abs($U1 + $U2);
-            $sinSigma = sin($sigma);
-            $cosSqAlpha = 0.5;
-            $sinAlpha = 0;
-
-            do {
-                $sinAlphaN = $sinAlpha;
-
-                $C = $f / 16 * $cosSqAlpha * (4 + $f * (4 - 3 * $cosSqAlpha));
-                $cos2SigmaM = $cosSqAlpha ? cos($sigma) - 2 * sin($U1) * sin($U2) / $cosSqAlpha : 0;
-                $D = (1 - $C) * $f * ($sigma + $C * $sinSigma * ($cos2SigmaM + $C * cos($sigma) * (-1 + 2 * $cos2SigmaM ** 2)));
-                $sinAlpha = ($LPrime - $lambdaPrime) / $D;
-                $cosSqAlpha = (1 - $sinAlpha ** 2);
-                $sinLambdaPrime = ($sinAlpha * $sinSigma) / (cos($U1) * cos($U2));
-                $lambdaPrime = self::asin($sinLambdaPrime);
-                $sinSqSigma = (cos($U2) * $sinLambdaPrime) ** 2 + (cos($U1) * sin($U2) + sin($U1) * cos($U2) * cos($lambdaPrime)) ** 2;
-                $sinSigma = sqrt($sinSqSigma);
-            } while (abs($sinAlpha - $sinAlphaN) >= static::ITERATION_CONVERGENCE_FORMULA);
-        }
-
-        $E = sqrt(1 + (($a ** 2 - $b ** 2) / $b ** 2) * $cosSqAlpha);
-        $F = ($E - 1) / ($E + 1);
-
-        $A = (1 + $F ** 2 / 4) / (1 - $F);
-        $B = $F * (1 - 3 / 8 * $F ** 2);
-
-        $deltaSigma = $B * $sinSigma * ($cos2SigmaM + $B / 4 * ($cosSigma * (-1 + 2 * $cos2SigmaM ** 2) - $B / 6 * $cos2SigmaM * (-3 + 4 * $sinSigma ** 2) * (-3 + 4 * $cos2SigmaM ** 2)));
-
-        return new Metre($b * $A * ($sigma - $deltaSigma));
     }
 
     /**

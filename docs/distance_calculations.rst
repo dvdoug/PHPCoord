@@ -8,8 +8,8 @@ PHPCoord can calculate the distance between two ``Point``\s via the ``calculateD
         Point $to,
     ): Length
 
-* The distance between two ``ProjectedPoint``\s is calculated via Pythagoras
-* The distance between two ``GeographicPoint``\s or two ``GeocentricPoint``\s is calculated via Vincenty's formula
+* The distance between two ``ProjectedPoint``\s is calculated via Pythagoras' theorem
+* The distance between two ``GeographicPoint``\s or two ``GeocentricPoint``\s is calculated via Karney's formula
 * The distance between two ``VerticalPoint``\s is calculated as simple difference
 
 Example
