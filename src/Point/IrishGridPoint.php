@@ -100,8 +100,8 @@ class IrishGridPoint extends ProjectedPoint
         $northing = str_pad((string) round($y), $halfLength, '0', STR_PAD_LEFT);
 
         // second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorSquaresEast = $easting[0] % 5;
-        $minorSquaresNorth = $northing[0] % 5;
+        $minorSquaresEast = (int) $easting[0] % 5;
+        $minorSquaresNorth = (int) $northing[0] % 5;
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 

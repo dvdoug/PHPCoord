@@ -44,7 +44,7 @@ class BYNHeightGrid extends GeographicGeoidHeightGrid
 
         foreach ($data as $key => $value) {
             if (in_array($key, ['SOUTH', 'EAST', 'NORTH', 'WEST']) && $value > 2147483647) {
-                $data[$key] -= 4294967295;
+                $data[$key] -= 4294967295; // @phpstan-ignore assignOp.invalid
             }
         }
 
