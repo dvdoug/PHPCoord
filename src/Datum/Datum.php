@@ -2421,6 +2421,24 @@ class Datum
     public const EPSG_GREENLAND_LOCAL_MEAN_SEA_LEVEL_2022 = 'urn:ogc:def:datum:EPSG::1378';
 
     /**
+     * Greenland Lowest Astronomic Tide (2023)
+     * Type: Vertical
+     * Extent: Greenland - offshore
+     * Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide
+     * models. Defined with respect to GR96 through the gllat_2023 hydroid model.
+     */
+    public const EPSG_GREENLAND_LOWEST_ASTRONOMIC_TIDE_2023 = 'urn:ogc:def:datum:EPSG::1388';
+
+    /**
+     * Greenland Mean Sea Level (2023)
+     * Type: Vertical
+     * Extent: Greenland - offshore
+     * Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to GR96
+     * through the glmsl_2023 hydroid model.
+     */
+    public const EPSG_GREENLAND_MEAN_SEA_LEVEL_2023 = 'urn:ogc:def:datum:EPSG::1387';
+
+    /**
      * Greenland Vertical Reference 2000
      * Type: Vertical
      * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W
@@ -12949,6 +12967,32 @@ Created in 2024 to support intermediate CRS "ECML14-IRF" in the emulation of the
             'extent_description' => 'United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow',
             'help' => 'Defined through the application of the WC05 NTv2 transformation from ETRS89 as realized through OSNet v2009 CORS.
 Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the WC05 Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1387' => [
+            'name' => 'Greenland Mean Sea Level (2023)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => 1030,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Greenland - offshore',
+            'extent_description' => 'Greenland - offshore',
+            'help' => 'Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to GR96 through the glmsl_2023 hydroid model.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1388' => [
+            'name' => 'Greenland Lowest Astronomic Tide (2023)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => 1031,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Greenland - offshore',
+            'extent_description' => 'Greenland - offshore',
+            'help' => 'Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to GR96 through the gllat_2023 hydroid model.
+',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',

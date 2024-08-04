@@ -3332,6 +3332,30 @@ Greenland Local Mean Sea Level (2022)
 
 GLLMSL has been introduced to accomodate transformations between older local height systems and the modern nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.
 
+Greenland Lowest Astronomic Tide (2023)
+---------------------------------------
+| Type: Vertical
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_LOWEST_ASTRONOMIC_TIDE_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1388')
+
+Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to GR96 through the gllat_2023 hydroid model.
+
+Greenland Mean Sea Level (2023)
+-------------------------------
+| Type: Vertical
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_MEAN_SEA_LEVEL_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1387')
+
+Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to GR96 through the glmsl_2023 hydroid model.
+
 Greenland Vertical Reference 2000
 ---------------------------------
 | Type: Vertical

@@ -752,11 +752,23 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_GHA_HEIGHT = 'urn:ogc:def:crs:EPSG::5778';
 
     /**
+     * GLLAT(2023) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GLLAT_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10650';
+
+    /**
      * GLLMSL(2022) height
      * Extent: Greenland - onshore
      * Collection of 77 disconnected local levelling nets each tied to local mean sea level.
      */
     public const EPSG_GLLMSL_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::10565';
+
+    /**
+     * GLMSL(2023) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GLMSL_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10649';
 
     /**
      * GNTRANS height
@@ -2149,7 +2161,7 @@ class Vertical extends CoordinateReferenceSystem
         }
         if (!isset(self::$cachedObjects[$srid])) {
             $data = static::$sridData[$srid];
-            $extent = ($data['extent'] instanceof BoundingArea) ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
+            $extent = $data['extent'] instanceof BoundingArea ? $data['extent'] : BoundingArea::createFromExtentCodes($data['extent']);
             self::$cachedObjects[$srid] = new self($srid, VerticalCS::fromSRID($data['coordinate_system']), Datum::fromSRID($data['datum']), $extent, $data['name']);
         }
 

@@ -3686,5 +3686,6 @@ class RegionMap
         'urn:ogc:def:area:EPSG::4773' => self::REGION_EUROPE,
         'urn:ogc:def:area:EPSG::4774' => self::REGION_EUROPE,
         'urn:ogc:def:area:EPSG::4775' => self::REGION_EUROPE,
+        'urn:ogc:def:area:EPSG::4776' => self::REGION_EUROPE,
     ];
 }

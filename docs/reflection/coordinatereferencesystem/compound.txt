@@ -2051,6 +2051,30 @@ GDA94 + AHD height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9464')
 
 
+GR96 + GLLAT(2023) depth
+------------------------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_GR96_PLUS_GLLAT_2023_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10652')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_GR96_PLUS_GLLAT_2023_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10652')
+
+
+GR96 + GLMSL(2023) depth
+------------------------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_GR96_PLUS_GLMSL_2023_DEPTH)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10651')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_GR96_PLUS_GLMSL_2023_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10651')
+
+
 GR96 + GVR2000 height
 ---------------------
 | Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W

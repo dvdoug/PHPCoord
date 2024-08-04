@@ -1252,6 +1252,18 @@ GHA height
 
 For scientific purposes see EVRF2000 Austria height (CRS code 9274).
 
+GLLAT(2023) depth
+-----------------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GLLAT_2023_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10650')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLLAT_2023_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10650')
+
+
 GLLMSL(2022) height
 -------------------
 | Extent: Greenland - onshore
@@ -1264,6 +1276,18 @@ GLLMSL(2022) height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10565')
 
 Collection of 77 disconnected local levelling nets each tied to local mean sea level.
+
+GLMSL(2023) depth
+-----------------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GLMSL_2023_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10649')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLMSL_2023_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10649')
+
 
 GNTRANS height
 --------------

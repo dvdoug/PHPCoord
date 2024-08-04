@@ -1115,6 +1115,18 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_GDA94_PLUS_AHD_HEIGHT = 'urn:ogc:def:crs:EPSG::9464';
 
     /**
+     * GR96 + GLLAT(2023) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GR96_PLUS_GLLAT_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10652';
+
+    /**
+     * GR96 + GLMSL(2023) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GR96_PLUS_GLMSL_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10651';
+
+    /**
      * GR96 + GVR2000 height
      * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W
      * Replaced by GR96 + GVR2016 height (CRS code 8350).
