@@ -41,24 +41,24 @@ parameters:
 			path: src/Point/CompoundPoint.php
 
 		-
-			message: "#^Call to an undefined method PHPCoord\\\\UnitOfMeasure\\\\UnitOfMeasure\\:\\:multiply\\(\\)\\.$#"
-			count: 14
-			path: src/Point/GeocentricPoint.php
-
-		-
-			message: "#^Cannot call method getUnitOfMeasureId\\(\\) on PHPCoord\\\\CoordinateSystem\\\\Axis\\|null\\.$#"
-			count: 3
-			path: src/Point/GeocentricPoint.php
-
-		-
 			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Geocentric and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
 			count: 1
 			path: src/Point/GeocentricPoint.php
 
 		-
-			message: "#^Cannot call method getUnitOfMeasureId\\(\\) on PHPCoord\\\\CoordinateSystem\\\\Axis\\|null\\.$#"
-			count: 3
-			path: src/Point/GeographicPoint.php
+			message: "#^Parameter \\#1 \\$unit of method PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\:\\:add\\(\\) expects PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle, PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale given\\.$#"
+			count: 6
+			path: src/Point/GeocentricPoint.php
+
+		-
+			message: "#^Parameter \\#1 \\$unit of method PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\:\\:add\\(\\) expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale given\\.$#"
+			count: 6
+			path: src/Point/GeocentricPoint.php
+
+		-
+			message: "#^Parameter \\#1 \\$unit of method PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale\\:\\:add\\(\\) expects PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale, PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale given\\.$#"
+			count: 2
+			path: src/Point/GeocentricPoint.php
 
 		-
 			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Geographic2D\\|PHPCoord\\\\CoordinateReferenceSystem\\\\Geographic3D and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
@@ -104,23 +104,3 @@ parameters:
 			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\Point\\\\IrishTransverseMercatorPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
 			count: 1
 			path: src/Point/ProjectedPoint.php
-
-		-
-			message: "#^Left side of \\|\\| is always false\\.$#"
-			count: 1
-			path: src/UnitOfMeasure/Angle/Degree.php
-
-		-
-			message: "#^Call to an undefined method PHPCoord\\\\UnitOfMeasure\\\\UnitOfMeasure\\:\\:divide\\(\\)\\.$#"
-			count: 1
-			path: src/UnitOfMeasure/Rate.php
-
-		-
-			message: "#^Call to an undefined method PHPCoord\\\\UnitOfMeasure\\\\UnitOfMeasure\\:\\:multiply\\(\\)\\.$#"
-			count: 1
-			path: src/UnitOfMeasure/Rate.php
-
-		-
-			message: "#^Method PHPCoord\\\\UnitOfMeasure\\\\Time\\\\Year\\:\\:asDateTime\\(\\) should return DateTimeImmutable but returns DateTimeImmutable\\|false\\.$#"
-			count: 1
-			path: src/UnitOfMeasure/Time/Year.php

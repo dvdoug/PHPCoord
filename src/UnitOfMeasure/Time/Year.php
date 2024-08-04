@@ -12,6 +12,7 @@ use DateTimeImmutable;
 use DateTimeInterface;
 
 use function round;
+use function assert;
 
 class Year extends Time
 {
@@ -38,7 +39,10 @@ class Year extends Time
         $yearPortion = $this->time - $year;
         $days = round($yearPortion * 365.25);
 
-        return DateTimeImmutable::createFromFormat('Yz', $year . $days);
+        $date = DateTimeImmutable::createFromFormat('Yz', $year . $days);
+        assert($date instanceof DateTimeImmutable);
+
+        return $date;
     }
 
     public function getValue(): float

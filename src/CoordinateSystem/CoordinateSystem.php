@@ -58,8 +58,13 @@ abstract class CoordinateSystem
         return $this->axes;
     }
 
-    public function getAxisByName(string $name): ?Axis
+    public function getAxisByName(string $name): Axis
     {
-        return $this->axesByName[$name] ?? null;
+        return $this->axesByName[$name];
+    }
+
+    public function hasAxisByName(string $name): bool
+    {
+        return isset($this->axesByName[$name]);
     }
 }

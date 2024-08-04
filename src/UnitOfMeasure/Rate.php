@@ -9,15 +9,16 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
-use PHPCoord\Exception\InvalidRateException;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Length\Centimetre;
+use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Length\Millimetre;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerBillion;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
@@ -104,25 +105,22 @@ class Rate implements UnitOfMeasure
         ],
     ];
 
-    private UnitOfMeasure $change;
+    private Angle|Length|Scale $change;
 
     private Time $time;
 
-    public function __construct(UnitOfMeasure $change, Time $time)
+    public function __construct(Angle|Length|Scale $change, Time $time)
     {
-        if ($change instanceof Time) {
-            throw new InvalidRateException('A rate is a change per unit of time, the change cannot be time');
-        }
         $this->change = $change;
         $this->time = $time;
     }
 
-    public function getChange(): UnitOfMeasure
+    public function getChange(): Angle|Length|Scale
     {
         return $this->change;
     }
 
-    public function getChangePerYear(): UnitOfMeasure
+    public function getChangePerYear(): Angle|Length|Scale
     {
         return $this->change->divide($this->time->asYears()->getValue());
     }

@@ -116,11 +116,12 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         }
 
         $this->crs = $crs;
+        $cs = $this->crs->getCoordinateSystem();
 
-        $eastingAxis = $this->crs->getCoordinateSystem()->getAxisByName(Axis::EASTING);
-        $westingAxis = $this->crs->getCoordinateSystem()->getAxisByName(Axis::WESTING);
-        $northingAxis = $this->crs->getCoordinateSystem()->getAxisByName(Axis::NORTHING);
-        $southingAxis = $this->crs->getCoordinateSystem()->getAxisByName(Axis::SOUTHING);
+        $eastingAxis = $cs->hasAxisByName(Axis::EASTING) ? $cs->getAxisByName(Axis::EASTING) : null;
+        $westingAxis = $cs->hasAxisByName(Axis::WESTING) ? $cs->getAxisByName(Axis::WESTING) : null;
+        $northingAxis = $cs->hasAxisByName(Axis::NORTHING) ? $cs->getAxisByName(Axis::NORTHING) : null;
+        $southingAxis = $cs->hasAxisByName(Axis::SOUTHING) ? $cs->getAxisByName(Axis::SOUTHING) : null;
 
         if ($easting && $eastingAxis) {
             $this->easting = $easting::convert($easting, $eastingAxis->getUnitOfMeasureId());

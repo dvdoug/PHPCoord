@@ -157,7 +157,7 @@ class Degree extends Angle
         $degrees += ((float) ($angleParts['arcseconds'] ?? 0) / 3600);
         $degrees += isset($angleParts['fractionarcseconds']) ? ((float) $angleParts['fractionarcseconds'] / 3600 / 10 ** strlen($angleParts['fractionarcseconds'])) : 0;
 
-        if ($angleParts['negative'] ?? '' || in_array($angleParts['hemisphere'] ?? [], ['S', 'W'], true)) {
+        if (($angleParts['negative'] ?? '') || in_array($angleParts['hemisphere'] ?? [], ['S', 'W'], true)) {
             $degrees *= -1;
         }
 
