@@ -18432,6 +18432,12 @@ class Projected extends CoordinateReferenceSystem
     public const EPSG_NAD83_2011_SAN_FRANCISCO_CS13_FTUS = 'urn:ogc:def:crs:EPSG::7132';
 
     /**
+     * NAD83(2011) / San Francisco SFO-B18 (ftUS)
+     * Extent: USA - California - San Francisco international airport.
+     */
+    public const EPSG_NAD83_2011_SAN_FRANCISCO_SFO_B18_FTUS = 'urn:ogc:def:crs:EPSG::10622';
+
+    /**
      * NAD83(2011) / South Carolina
      * Extent: United States (USA) - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg;
      * Barnwell; Beaufort; Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton;

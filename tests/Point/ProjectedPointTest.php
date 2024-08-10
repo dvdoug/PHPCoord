@@ -688,4 +688,14 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(52.658007833, $to->getLatitude()->asDegrees()->getValue(), 0.0001);
         self::assertEqualsWithDelta(1.716073972, $to->getLongitude()->asDegrees()->getValue(), 0.0001);
     }
+
+    public function testLocalOrthographic(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_NAD83_2011_SAN_FRANCISCO_SFO_B18_FTUS), new Metre(876.136), new Metre(98.974));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011);
+        $to = $from->localOrthographic($toCRS, new Radian(0.656749406), new Radian(-2.136177266), new Radian(0.485075480), new Unity(0.9999968), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(0.656698927, $to->getLatitude()->asRadians()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-2.136014902, $to->getLongitude()->asRadians()->getValue(), 0.0001);
+    }
 }

@@ -36183,6 +36183,16 @@ trait ProjectedSRIDData
             'extent_description' => 'South America including Panama',
             'help' => 'Basis for the equal area continental tiling system for South America used by the GLANCE land cover products.',
         ],
+        'urn:ogc:def:crs:EPSG::10622' => [
+            'name' => 'NAD83(2011) / San Francisco SFO-B18 (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4497',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10621',
+            'extent' => ['urn:ogc:def:area:EPSG::4529'],
+            'extent_name' => 'USA - California - San Francisco international airport',
+            'extent_description' => 'USA - California - San Francisco international airport',
+            'help' => '',
+        ],
         'urn:ogc:def:crs:EPSG::10626' => [
             'name' => 'ECML14 Grid',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',

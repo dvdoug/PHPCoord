@@ -9511,6 +9511,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10621',
+            'name' => 'San Francisco International Airport B18 grid (ftUS)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10622',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10148',
             'name' => 'Amtrak North East Corridor Coordinate System 2021 (international foot)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',

@@ -1396,6 +1396,16 @@ class GeographicPointTest extends TestCase
         self::assertNull($to->getHeight());
     }
 
+    public function testLocalOrthographic(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011), new Radian(0.656698927), new Radian(-2.136014902), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_NAD83_2011_SAN_FRANCISCO_SFO_B18_FTUS);
+        $to = $from->localOrthographic($toCRS, new Radian(0.656749406), new Radian(-2.136177266), new Radian(0.485075480), new Unity(0.9999968), new Metre(0), new Metre(0));
+
+        self::assertEqualsWithDelta(876.136, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(98.974, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
     #[Group('distance')]
     #[Group('integration')]
     #[DataProvider('karneyTestData')]

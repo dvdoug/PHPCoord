@@ -3443,6 +3443,7 @@ class RegionMap
         'urn:ogc:def:area:EPSG::4526' => self::REGION_ASIA,
         'urn:ogc:def:area:EPSG::4527' => self::REGION_ASIA,
         'urn:ogc:def:area:EPSG::4528' => self::REGION_ASIA,
+        'urn:ogc:def:area:EPSG::4529' => self::REGION_NORTHAMERICA,
         'urn:ogc:def:area:EPSG::4530' => self::REGION_SOUTHAMERICA,
         'urn:ogc:def:area:EPSG::4531' => self::REGION_NORTHAMERICA,
         'urn:ogc:def:area:EPSG::4532' => self::REGION_NORTHAMERICA,

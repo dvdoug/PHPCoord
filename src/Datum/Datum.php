@@ -8203,8 +8203,8 @@ class Datum
      * World Geodetic System 1984 (G2296)
      * Type: Dynamic geodetic
      * Extent: World
-     * Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0.
-     * The IGS20 station coordinates are considered to be equivalent to ITRF2020.
+     * Defined through coordinates at epoch 2024.00 of 9 GPS tracking stations which are included within the IGS GNSS
+     * station network. The IGS20 station coordinates are considered equivalent to ITRF2020.
      * Replaces World Geodetic System 1984 (G2139) from 2024-01-07.
      */
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G2296 = 'urn:ogc:def:datum:EPSG::1383';
@@ -12935,11 +12935,11 @@ Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datu
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7030',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1024,
-            'frame_reference_epoch' => 2020.0,
+            'frame_reference_epoch' => 2024.0,
             'anchor_epoch' => null,
             'extent_name' => 'World',
             'extent_description' => 'World',
-            'help' => 'Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0. The IGS20 station coordinates are considered to be equivalent to ITRF2020.
+            'help' => 'Defined through coordinates at epoch 2024.00 of 9 GPS tracking stations which are included within the IGS GNSS station network. The IGS20 station coordinates are considered equivalent to ITRF2020.
 Replaces World Geodetic System 1984 (G2139) from 2024-01-07.',
         ],
         'urn:ogc:def:datum:EPSG::1385' => [

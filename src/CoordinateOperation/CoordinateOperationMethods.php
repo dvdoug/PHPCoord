@@ -447,6 +447,11 @@ class CoordinateOperationMethods
     public const EPSG_LAMBERT_CYLINDRICAL_EQUAL_AREA_SPHERICAL = 'urn:ogc:def:method:EPSG::9834';
 
     /**
+     * Local Orthographic.
+     */
+    public const EPSG_LOCAL_ORTHOGRAPHIC = 'urn:ogc:def:method:EPSG::1130';
+
+    /**
      * Longitude rotation.
      */
     public const EPSG_LONGITUDE_ROTATION = 'urn:ogc:def:method:EPSG::9601';
@@ -2390,6 +2395,31 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1130' => [
+            'name' => 'Local Orthographic',
+            'reversible' => true,
+            'paramData' => [
+                'latitudeOfProjectionCentre' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfProjectionCentre' => [
+                    'reverses' => false,
+                ],
+                'azimuthAtProjectionCentre' => [
+                    'reverses' => false,
+                ],
+                'scaleFactorAtProjectionCentre' => [
+                    'reverses' => false,
+                ],
+                'eastingAtProjectionCentre' => [
+                    'reverses' => false,
+                ],
+                'northingAtProjectionCentre' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::9601' => [
             'name' => 'Longitude rotation',
             'reversible' => true,
@@ -3971,13 +4001,13 @@ class CoordinateOperationMethods
                 'longitudeOfProjectionCentre' => [
                     'reverses' => false,
                 ],
-                'azimuthOfInitialLine' => [
+                'azimuthAtProjectionCentre' => [
                     'reverses' => false,
                 ],
                 'angleFromRectifiedToSkewGrid' => [
                     'reverses' => false,
                 ],
-                'scaleFactorOnInitialLine' => [
+                'scaleFactorAtProjectionCentre' => [
                     'reverses' => false,
                 ],
                 'falseEasting' => [
@@ -3999,10 +4029,10 @@ class CoordinateOperationMethods
                 'longitudeOfProjectionCentre' => [
                     'reverses' => false,
                 ],
-                'azimuthOfInitialLine' => [
+                'azimuthAtProjectionCentre' => [
                     'reverses' => false,
                 ],
-                'scaleFactorOnInitialLine' => [
+                'scaleFactorAtProjectionCentre' => [
                     'reverses' => false,
                 ],
                 'falseEasting' => [
@@ -4043,13 +4073,13 @@ class CoordinateOperationMethods
                 'longitudeOfProjectionCentre' => [
                     'reverses' => false,
                 ],
-                'azimuthOfInitialLine' => [
+                'azimuthAtProjectionCentre' => [
                     'reverses' => false,
                 ],
                 'angleFromRectifiedToSkewGrid' => [
                     'reverses' => false,
                 ],
-                'scaleFactorOnInitialLine' => [
+                'scaleFactorAtProjectionCentre' => [
                     'reverses' => false,
                 ],
                 'eastingAtProjectionCentre' => [
@@ -4612,6 +4642,7 @@ class CoordinateOperationMethods
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ISG => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ISG => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_LOCAL_ORTHOGRAPHIC => 'localOrthographic',
     ];
 
     public static function getFunctionName(string $srid): string

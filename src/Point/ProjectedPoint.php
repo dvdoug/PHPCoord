@@ -1726,9 +1726,9 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfProjectionCentre,
-        Angle $azimuthOfInitialLine,
+        Angle $azimuthAtProjectionCentre,
         Angle $angleFromRectifiedToSkewGrid,
-        Scale $scaleFactorOnInitialLine,
+        Scale $scaleFactorAtProjectionCentre,
         Length $falseEasting,
         Length $falseNorthing
     ): GeographicPoint {
@@ -1737,8 +1737,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
         $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
         $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
-        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
-        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $alphaC = $azimuthAtProjectionCentre->asRadians()->getValue();
+        $kC = $scaleFactorAtProjectionCentre->asUnity()->getValue();
         $gammaC = $angleFromRectifiedToSkewGrid->asRadians()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e = $ellipsoid->getEccentricity();
@@ -1783,9 +1783,9 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfProjectionCentre,
-        Angle $azimuthOfInitialLine,
+        Angle $azimuthAtProjectionCentre,
         Angle $angleFromRectifiedToSkewGrid,
-        Scale $scaleFactorOnInitialLine,
+        Scale $scaleFactorAtProjectionCentre,
         Length $eastingAtProjectionCentre,
         Length $northingAtProjectionCentre
     ): GeographicPoint {
@@ -1794,8 +1794,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $northing = $this->northing->asMetres()->getValue() - $northingAtProjectionCentre->asMetres()->getValue();
         $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
         $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
-        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
-        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $alphaC = $azimuthAtProjectionCentre->asRadians()->getValue();
+        $kC = $scaleFactorAtProjectionCentre->asUnity()->getValue();
         $gammaC = $angleFromRectifiedToSkewGrid->asRadians()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e = $ellipsoid->getEccentricity();
@@ -1846,8 +1846,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Geographic2D|Geographic3D $to,
         Angle $latitudeOfProjectionCentre,
         Angle $longitudeOfProjectionCentre,
-        Angle $azimuthOfInitialLine,
-        Scale $scaleFactorOnInitialLine,
+        Angle $azimuthAtProjectionCentre,
+        Scale $scaleFactorAtProjectionCentre,
         Length $falseEasting,
         Length $falseNorthing
     ): GeographicPoint {
@@ -1856,8 +1856,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $northing = $this->northing->asMetres()->getValue() - $falseNorthing->asMetres()->getValue();
         $latC = $latitudeOfProjectionCentre->asRadians()->getValue();
         $lonC = $longitudeOfProjectionCentre->asRadians()->getValue();
-        $alphaC = $azimuthOfInitialLine->asRadians()->getValue();
-        $kC = $scaleFactorOnInitialLine->asUnity()->getValue();
+        $alphaC = $azimuthAtProjectionCentre->asRadians()->getValue();
+        $kC = $scaleFactorAtProjectionCentre->asUnity()->getValue();
         $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
         $e = $ellipsoid->getEccentricity();
         $e2 = $ellipsoid->getEccentricitySquared();
@@ -2212,5 +2212,43 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $asETRS89 = $eastingAndNorthingDifferenceFile->applyReverseHorizontalAdjustment($this);
 
         return $asETRS89->transverseMercator($to, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
+    }
+
+    public function localOrthographic(
+        Geographic2D $to,
+        Angle $latitudeOfProjectionCentre,
+        Angle $longitudeOfProjectionCentre,
+        Angle $azimuthAtProjectionCentre,
+        Scale $scaleFactorAtProjectionCentre,
+        Length $eastingAtProjectionCentre,
+        Length $northingAtProjectionCentre
+    ): GeographicPoint {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
+        $latitudeCentre = $latitudeOfProjectionCentre->asRadians()->getValue();
+        $longitudeCentre = $longitudeOfProjectionCentre->asRadians()->getValue();
+        $azimuthCentre = $azimuthAtProjectionCentre->asRadians()->getValue();
+        $scaleFactorCentre = $scaleFactorAtProjectionCentre->asUnity()->getValue();
+
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
+        $vc = $a / sqrt(1 - $e2 * sin($latitudeCentre) ** 2);
+
+        $easting = $this->easting->subtract($eastingAtProjectionCentre)->asMetres()->getValue();
+        $northing = $this->northing->subtract($northingAtProjectionCentre)->asMetres()->getValue();
+
+        $xp = cos($azimuthCentre) * $easting / $scaleFactorCentre + sin($azimuthCentre) * $northing / $scaleFactorCentre;
+        $yp = -sin($azimuthCentre) * $easting / $scaleFactorCentre + cos($azimuthCentre) * $northing / $scaleFactorCentre;
+
+        $B = 1 - $e2 * cos($latitudeCentre) ** 2;
+        $C = $yp - $vc * sin($latitudeCentre) * cos($latitudeCentre) + $vc * (1 - $e2) * cos($latitudeCentre) * sin($latitudeCentre);
+        $D = sqrt((1 - $e2) * ($a ** 2 - $xp ** 2) * (1 - $e2 * cos($latitudeCentre) ** 2) - $C ** 2);
+        $xg = (-$C * sin($latitudeCentre) + $D * cos($latitudeCentre)) / $B;
+        $yg = $xp;
+        $zg = ($C * cos($latitudeCentre) * (1 - $e2) + $D * sin($latitudeCentre)) / $B;
+
+        $latitude = atan2($zg, (1 - $e2) * sqrt($xg ** 2 + $yg ** 2));
+        $longitude = $longitudeCentre + atan2($yg, $xg);
+
+        return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
 }

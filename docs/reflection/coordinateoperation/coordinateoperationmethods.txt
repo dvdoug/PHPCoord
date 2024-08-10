@@ -694,6 +694,14 @@ Lambert Cylindrical Equal Area (Spherical)
     'urn:ogc:def:method:EPSG::9834'
 
 
+Local Orthographic
+------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_LOCAL_ORTHOGRAPHIC
+    'urn:ogc:def:method:EPSG::1130'
+
+
 Longitude rotation
 ------------------
 .. code-block:: php

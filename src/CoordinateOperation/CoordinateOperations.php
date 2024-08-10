@@ -14895,6 +14895,13 @@ class CoordinateOperations
             'extent_name' => 'World',
             'extent_description' => 'World',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10621' => [
+            'name' => 'San Francisco International Airport B18 grid (ftUS)',
+            'method' => 'urn:ogc:def:method:EPSG::1130',
+            'extent' => ['urn:ogc:def:area:EPSG::4529'],
+            'extent_name' => 'USA - California - San Francisco international airport',
+            'extent_description' => 'USA - California - San Francisco international airport',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10625' => [
             'name' => 'ECML14-TM',
             'method' => 'urn:ogc:def:method:EPSG::9807',

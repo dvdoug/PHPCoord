@@ -29862,6 +29862,18 @@ NAD83(2011) / San Francisco CS13 (ftUS)
 
 Initial definition is metric - see CRS code 7131. Designed for 0.003 ft precision in city and county of San Francisco, adequate for 0.03 ft precision for GIS use in 10-county area.
 
+NAD83(2011) / San Francisco SFO-B18 (ftUS)
+------------------------------------------
+| Extent: USA - California - San Francisco international airport
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NAD83_2011_SAN_FRANCISCO_SFO_B18_FTUS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10622')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NAD83_2011_SAN_FRANCISCO_SFO_B18_FTUS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10622')
+
+
 NAD83(2011) / South Carolina
 ----------------------------
 | Extent: United States (USA) - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort; Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon; Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw; Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens; Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York

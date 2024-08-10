@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Updates to data for USA and WGS84
+
 ## [5.9.0] - 2024-08-04
 ### Changed
 - Updates to data for Czechia, Denmark, ETRS89, Germany, Martinique, Portugal, St Helena, UK and WGS84

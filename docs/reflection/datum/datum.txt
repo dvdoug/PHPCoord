@@ -11288,7 +11288,7 @@ World Geodetic System 1984 (G2296)
     Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_G2296)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1383')
 
-Defined through coordinates of 17 GPS tracking stations aligned with a subset of IGS stations at epoch 2020.0. The IGS20 station coordinates are considered to be equivalent to ITRF2020.
+Defined through coordinates at epoch 2024.00 of 9 GPS tracking stations which are included within the IGS GNSS station network. The IGS20 station coordinates are considered equivalent to ITRF2020.
 
 Replaces World Geodetic System 1984 (G2139) from 2024-01-07.
 
