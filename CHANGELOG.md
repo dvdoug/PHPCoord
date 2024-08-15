@@ -7,6 +7,9 @@
 - Updates to data for USA and WGS84
 - Support for Irish polynomial transformation in the ETRS89 to TM75 direction (TM75 to ETRS89 was already supported)
 
+### Fixed
+- British and Irish Grid references were rounding rather than truncating causing a sometimes off-by-1 error
+
 ## [5.9.0] - 2024-08-04
 ### Changed
 - Updates to data for Czechia, Denmark, ETRS89, Germany, Martinique, Portugal, St Helena, UK and WGS84

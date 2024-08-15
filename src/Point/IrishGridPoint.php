@@ -21,7 +21,6 @@ use function str_replace;
 use function strlen;
 use function strpos;
 use function substr;
-use function round;
 
 use const STR_PAD_LEFT;
 
@@ -96,8 +95,8 @@ class IrishGridPoint extends ProjectedPoint
 
         $x = $this->easting->asMetres()->getValue();
         $y = $this->northing->asMetres()->getValue();
-        $easting = str_pad((string) round($x), $halfLength, '0', STR_PAD_LEFT);
-        $northing = str_pad((string) round($y), $halfLength, '0', STR_PAD_LEFT);
+        $easting = str_pad((string) (int) $x, $halfLength, '0', STR_PAD_LEFT);
+        $northing = str_pad((string) (int) $y, $halfLength, '0', STR_PAD_LEFT);
 
         // second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = (int) $easting[0] % 5;
