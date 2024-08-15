@@ -71,10 +71,10 @@ class AutoConversionTest extends TestCase
         $toCRS = Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(318977.585, $to->getEasting()->asMetres()->getValue(), 0.01);
-        self::assertEqualsWithDelta(311611.131, $to->getNorthing()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(318977.534, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(311611.219, $to->getNorthing()->asMetres()->getValue(), 0.01);
 
-        self::assertEquals('J 18978 11611', $to->asGridReferenceWithSpaces(12));
+        self::assertEquals('J 18977 11611', $to->asGridReferenceWithSpaces(12));
     }
 
     public function testETRS89ToIrishTM(): void
@@ -85,10 +85,10 @@ class AutoConversionTest extends TestCase
         /** @var IrishGridPoint $to */
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(318977.528, $to->getEasting()->asMetres()->getValue(), 0.01);
-        self::assertEqualsWithDelta(311611.188, $to->getNorthing()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(318977.475, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(311611.277, $to->getNorthing()->asMetres()->getValue(), 0.01);
 
-        self::assertEquals('J 18978 11611', $to->asGridReferenceWithSpaces(12));
+        self::assertEquals('J 18977 11611', $to->asGridReferenceWithSpaces(12));
     }
 
     public function testNoop(): void
@@ -538,6 +538,16 @@ class AutoConversionTest extends TestCase
 
         self::assertEqualsWithDelta(41.596016636, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(9.274852923, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+    }
+
+    public function testIRENET95TM75(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_IRENET95), new Degree(53.349803), new Degree(-6.2628240));
+        $toCRS = Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(315732.8042, $to->getEasting()->getValue(), 0.001);
+        self::assertEqualsWithDelta(234667.6783, $to->getNorthing()->getValue(), 0.001);
     }
 
     public function testRDNAPToITRF2014(): void

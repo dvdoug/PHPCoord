@@ -63,6 +63,8 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
         CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN,
+        CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 => CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2,
+        CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6,
     ];
 
     /**
@@ -157,6 +159,51 @@ abstract class Point implements Stringable
         Scale $scalingFactorForTargetCRSCoordDifferences,
         Scale $A0,
         Scale $B0,
+        array $powerCoefficients,
+        bool $inReverse
+    ): array {
+        if (!$inReverse) {
+            return $this->generalPolynomialUnitlessForward(
+                $xs,
+                $ys,
+                $ordinate1OfEvaluationPointInSourceCRS,
+                $ordinate2OfEvaluationPointInSourceCRS,
+                $ordinate1OfEvaluationPointInTargetCRS,
+                $ordinate2OfEvaluationPointInTargetCRS,
+                $scalingFactorForSourceCRSCoordDifferences,
+                $scalingFactorForTargetCRSCoordDifferences,
+                $A0,
+                $B0,
+                $powerCoefficients,
+            );
+        } else {
+            return $this->generalPolynomialUnitlessReverse(
+                $xs,
+                $ys,
+                $ordinate1OfEvaluationPointInSourceCRS,
+                $ordinate2OfEvaluationPointInSourceCRS,
+                $ordinate1OfEvaluationPointInTargetCRS,
+                $ordinate2OfEvaluationPointInTargetCRS,
+                $scalingFactorForSourceCRSCoordDifferences,
+                $scalingFactorForTargetCRSCoordDifferences,
+                $A0,
+                $B0,
+                $powerCoefficients,
+            );
+        }
+    }
+
+    protected function generalPolynomialUnitlessForward(
+        float $xs,
+        float $ys,
+        UnitOfMeasure $ordinate1OfEvaluationPointInSourceCRS,
+        UnitOfMeasure $ordinate2OfEvaluationPointInSourceCRS,
+        UnitOfMeasure $ordinate1OfEvaluationPointInTargetCRS,
+        UnitOfMeasure $ordinate2OfEvaluationPointInTargetCRS,
+        Scale $scalingFactorForSourceCRSCoordDifferences,
+        Scale $scalingFactorForTargetCRSCoordDifferences,
+        Scale $A0,
+        Scale $B0,
         array $powerCoefficients
     ): array {
         $xso = $ordinate1OfEvaluationPointInSourceCRS->getValue();
@@ -187,6 +234,45 @@ abstract class Point implements Stringable
         $yt = $ys - $yso + $yto + $mTdY / $scalingFactorForTargetCRSCoordDifferences->asUnity()->getValue();
 
         return ['xt' => $xt, 'yt' => $yt];
+    }
+
+    protected function generalPolynomialUnitlessReverse(
+        float $xs,
+        float $ys,
+        UnitOfMeasure $ordinate1OfEvaluationPointInSourceCRS,
+        UnitOfMeasure $ordinate2OfEvaluationPointInSourceCRS,
+        UnitOfMeasure $ordinate1OfEvaluationPointInTargetCRS,
+        UnitOfMeasure $ordinate2OfEvaluationPointInTargetCRS,
+        Scale $scalingFactorForSourceCRSCoordDifferences,
+        Scale $scalingFactorForTargetCRSCoordDifferences,
+        Scale $A0,
+        Scale $B0,
+        array $powerCoefficients
+    ): array {
+        $result = ['xt' => $xs, 'yt' => $ys];
+        for ($i = 0; $i <= 15; ++$i) {
+            $forwardShiftedCoordinates = $this->generalPolynomialUnitlessForward(
+                $result['xt'],
+                $result['yt'],
+                $ordinate1OfEvaluationPointInSourceCRS,
+                $ordinate2OfEvaluationPointInSourceCRS,
+                $ordinate1OfEvaluationPointInTargetCRS,
+                $ordinate2OfEvaluationPointInTargetCRS,
+                $scalingFactorForSourceCRSCoordDifferences,
+                $scalingFactorForTargetCRSCoordDifferences,
+                $A0,
+                $B0,
+                $powerCoefficients
+            );
+            $deltaError = [
+                'xt' => $forwardShiftedCoordinates['xt'] - $xs,
+                'yt' => $forwardShiftedCoordinates['yt'] - $ys,
+            ];
+            $result['xt'] -= $deltaError['xt'];
+            $result['yt'] -= $deltaError['yt'];
+        }
+
+        return $result;
     }
 
     /**

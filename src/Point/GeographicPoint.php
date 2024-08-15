@@ -2041,7 +2041,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Scale $scalingFactorForTargetCRSCoordDifferences,
         Scale $A0,
         Scale $B0,
-        array $powerCoefficients
+        array $powerCoefficients,
+        bool $inReverse
     ): self {
         $xs = $this->latitude->getValue();
         $ys = $this->longitude->getValue();
@@ -2057,7 +2058,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $scalingFactorForTargetCRSCoordDifferences,
             $A0,
             $B0,
-            $powerCoefficients
+            $powerCoefficients,
+            $inReverse
         );
 
         $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();

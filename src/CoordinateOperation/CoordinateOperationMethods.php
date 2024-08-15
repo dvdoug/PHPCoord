@@ -3018,7 +3018,7 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::9648' => [
             'name' => 'General polynomial of degree 6',
-            'reversible' => false,
+            'reversible' => true,
             'paramData' => [
                 'ordinate1OfEvaluationPointInSourceCRS' => [
                     'reverses' => false,

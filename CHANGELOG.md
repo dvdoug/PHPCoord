@@ -2,7 +2,10 @@
 
 ## [Unreleased]
 
+## [5.9.1] - 2024-08-15
+### Changed
 - Updates to data for USA and WGS84
+- Support for Irish polynomial transformation in the ETRS89 to TM75 direction (TM75 to ETRS89 was already supported)
 
 ## [5.9.0] - 2024-08-04
 ### Changed

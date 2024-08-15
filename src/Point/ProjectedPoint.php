@@ -2043,7 +2043,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         Scale $scalingFactorForTargetCRSCoordDifferences,
         Scale $A0,
         Scale $B0,
-        array $powerCoefficients
+        array $powerCoefficients,
+        bool $inReverse
     ): self {
         $xs = $this->easting->getValue();
         $ys = $this->northing->getValue();
@@ -2059,7 +2060,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             $scalingFactorForTargetCRSCoordDifferences,
             $A0,
             $B0,
-            $powerCoefficients
+            $powerCoefficients,
+            $inReverse
         );
 
         $xtUnit = $to->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId();

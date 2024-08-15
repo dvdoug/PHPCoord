@@ -958,7 +958,8 @@ class GeographicPointTest extends TestCase
                 'Bu3v2' => new Coefficient(-95.377),
                 'Bu2v3' => new Coefficient(-284.294),
                 'Bu3v3' => new Coefficient(-853.95),
-            ]
+            ],
+            false,
         );
 
         self::assertEqualsWithDelta(55.00002972, $to->getLatitude()->getValue(), 0.00000001);
