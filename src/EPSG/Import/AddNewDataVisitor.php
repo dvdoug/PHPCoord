@@ -44,6 +44,7 @@ class AddNewDataVisitor extends NodeVisitorAbstract
             unset($dataRow['deprecated']);
             unset($dataRow['doc_help']);
             unset($dataRow['method_name']);
+            unset($dataRow['extent_description']);
             if (isset($dataRow['name'])) {
                 $dataRow['name'] = str_replace('_LOWERCASE', '', $dataRow['name']);
             }
@@ -51,11 +52,6 @@ class AddNewDataVisitor extends NodeVisitorAbstract
                 $dataRow['extent_name'] = array_unique(explode('|', $dataRow['extent_name']));
                 $dataRow['extent_name'] = array_map(fn (string $extentName) => rtrim($extentName, '.'), $dataRow['extent_name']);
                 $dataRow['extent_name'] = implode(', ', $dataRow['extent_name']);
-            }
-            if (isset($dataRow['extent_description'])) {
-                $dataRow['extent_description'] = array_unique(explode('|', $dataRow['extent_description']));
-                $dataRow['extent_description'] = array_map(fn (string $extentDescription) => rtrim($extentDescription, '.'), $dataRow['extent_description']);
-                $dataRow['extent_description'] = implode(', ', $dataRow['extent_description']);
             }
         }
         ksort($this->data, SORT_NATURAL);

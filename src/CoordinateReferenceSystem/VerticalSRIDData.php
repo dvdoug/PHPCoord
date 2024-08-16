@@ -29,7 +29,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1027',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Zero-height surface resulting from the application of the EGM2008 geoid model to the WGS 84 ellipsoid. Replaces EGM96 height (CRS code 5773).',
         ],
         'urn:ogc:def:crs:EPSG::3886' => [
@@ -38,7 +37,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1028',
             'extent' => ['urn:ogc:def:area:EPSG::3625'],
             'extent_name' => 'Iraq - onshore',
-            'extent_description' => 'Iraq - onshore',
             'help' => 'Replaces Fao height (CRS code 5751) for national map agency work in Iraq. At time of record creation some irrigation project data still referenced to Fao. Usage in oil industry is uncertain.',
         ],
         'urn:ogc:def:crs:EPSG::3900' => [
@@ -47,7 +45,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1030',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
-            'extent_description' => 'Finland - onshore',
             'help' => 'Replaces N43 height and N60 height (CRS codes 8675 and 5717).',
         ],
         'urn:ogc:def:crs:EPSG::4440' => [
@@ -56,7 +53,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1039',
             'extent' => ['urn:ogc:def:area:EPSG::1175'],
             'extent_name' => 'New Zealand',
-            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands',
             'help' => 'Replaced by NZVD2016 from 2016-06-27.',
         ],
         'urn:ogc:def:crs:EPSG::4458' => [
@@ -65,7 +61,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1040',
             'extent' => ['urn:ogc:def:area:EPSG::3806'],
             'extent_name' => 'New Zealand - South Island - Dunedin-Bluff vcrs',
-            'extent_description' => 'New Zealand - South Island - Dunedin-Bluff vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5193' => [
@@ -74,7 +69,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1049',
             'extent' => ['urn:ogc:def:area:EPSG::3266'],
             'extent_name' => 'Korea, Republic of (South Korea) - onshore',
-            'extent_description' => 'Republic of Korea (South Korea) - onshore',
             'help' => 'Normal-orthometric heights.',
         ],
         'urn:ogc:def:crs:EPSG::5195' => [
@@ -83,7 +77,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1050',
             'extent' => ['urn:ogc:def:area:EPSG::2370'],
             'extent_name' => 'Europe - former Yugoslavia onshore',
-            'extent_description' => 'Bosnia and Herzegovina; Croatia - onshore; Kosovo; Montenegro - onshore; North Macedonia; Serbia; Slovenia - onshore',
             'help' => 'In Croatia replaced by HVRS71 height (CRS code 5610). In Serbia replaced by SRB_VRS12 height (CRS code 8691). In Slovenia replaced by SVS2000 height (CRS code 5779).',
         ],
         'urn:ogc:def:crs:EPSG::5214' => [
@@ -92,7 +85,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1051',
             'extent' => ['urn:ogc:def:area:EPSG::3736'],
             'extent_name' => 'Italy - mainland and Sicily',
-            'extent_description' => 'Italy - mainland (including San Marino and Vatican City State) and Sicily',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5237' => [
@@ -101,7 +93,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1054',
             'extent' => ['urn:ogc:def:area:EPSG::3310'],
             'extent_name' => 'Sri Lanka - onshore',
-            'extent_description' => 'Sri Lanka - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5317' => [
@@ -110,7 +101,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1059',
             'extent' => ['urn:ogc:def:area:EPSG::3248'],
             'extent_name' => 'Faroe Islands - onshore',
-            'extent_description' => 'Faroe Islands - onshore',
             'help' => 'Introduced in 2010.',
         ],
         'urn:ogc:def:crs:EPSG::5336' => [
@@ -119,7 +109,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5134',
             'extent' => ['urn:ogc:def:area:EPSG::1102'],
             'extent_name' => 'Georgia',
-            'extent_description' => 'Georgia - onshore and offshore',
             'help' => 'Black Sea datum is 0.4m below Baltic datum.',
         ],
         'urn:ogc:def:crs:EPSG::5597' => [
@@ -128,7 +117,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1079',
             'extent' => ['urn:ogc:def:area:EPSG::3890'],
             'extent_name' => 'Europe - Fehmarnbelt inner',
-            'extent_description' => 'Fehmarnbelt area of Denmark and Germany',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5600' => [
@@ -137,7 +125,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5195',
             'extent' => ['urn:ogc:def:area:EPSG::3134'],
             'extent_name' => 'French Polynesia - Society Islands - main islands',
-            'extent_description' => 'French Polynesia - Society Islands - Bora Bora, Huahine, Maupiti, Moorea, Raiatea, Tahaa and Tahiti',
             'help' => 'The collection of heterogeneous vertical coordinate reference systems throughout the Society Islands of French Polynesia.',
         ],
         'urn:ogc:def:crs:EPSG::5601' => [
@@ -146,7 +133,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5196',
             'extent' => ['urn:ogc:def:area:EPSG::3124'],
             'extent_name' => 'French Polynesia - Society Islands - Tahiti',
-            'extent_description' => 'French Polynesia - Society Islands - Tahiti',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5602' => [
@@ -155,7 +141,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5197',
             'extent' => ['urn:ogc:def:area:EPSG::3125'],
             'extent_name' => 'French Polynesia - Society Islands - Moorea',
-            'extent_description' => 'French Polynesia - Society Islands - Moorea',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5603' => [
@@ -164,7 +149,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5198',
             'extent' => ['urn:ogc:def:area:EPSG::3136'],
             'extent_name' => 'French Polynesia - Society Islands - Raiatea',
-            'extent_description' => 'French Polynesia - Society Islands - Raiatea',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5604' => [
@@ -173,7 +157,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5199',
             'extent' => ['urn:ogc:def:area:EPSG::3126'],
             'extent_name' => 'French Polynesia - Society Islands - Maupiti',
-            'extent_description' => 'French Polynesia - Society Islands - Maupiti',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5605' => [
@@ -182,7 +165,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5200',
             'extent' => ['urn:ogc:def:area:EPSG::3135'],
             'extent_name' => 'French Polynesia - Society Islands - Huahine',
-            'extent_description' => 'French Polynesia - Society Islands - Huahine',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5606' => [
@@ -191,7 +173,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5201',
             'extent' => ['urn:ogc:def:area:EPSG::3138'],
             'extent_name' => 'French Polynesia - Society Islands - Tahaa',
-            'extent_description' => 'French Polynesia - Society Islands - Tahaa',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5607' => [
@@ -200,7 +181,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5202',
             'extent' => ['urn:ogc:def:area:EPSG::3137'],
             'extent_name' => 'French Polynesia - Society Islands - Bora Bora',
-            'extent_description' => 'French Polynesia - Society Islands - Bora Bora',
             'help' => 'Part of NGPF (CRS code 5600).',
         ],
         'urn:ogc:def:crs:EPSG::5608' => [
@@ -209,7 +189,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5204',
             'extent' => ['urn:ogc:def:area:EPSG::3468'],
             'extent_name' => 'North America - Great Lakes basin and St Lawrence Seaway',
-            'extent_description' => 'Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway',
             'help' => 'Replaces several earlier systems. Replaced by IGLD 1985 (CRS code 5609).',
         ],
         'urn:ogc:def:crs:EPSG::5609' => [
@@ -218,7 +197,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5205',
             'extent' => ['urn:ogc:def:area:EPSG::3468'],
             'extent_name' => 'North America - Great Lakes basin and St Lawrence Seaway',
-            'extent_description' => 'Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway',
             'help' => 'Replaces IGLD 1955 (CRS code 5608).',
         ],
         'urn:ogc:def:crs:EPSG::5610' => [
@@ -227,7 +205,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5207',
             'extent' => ['urn:ogc:def:area:EPSG::3234'],
             'extent_name' => 'Croatia - onshore',
-            'extent_description' => 'Croatia - onshore',
             'help' => 'Replaces Trieste height (CRS code 5195).',
         ],
         'urn:ogc:def:crs:EPSG::5611' => [
@@ -236,7 +213,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5106',
             'extent' => ['urn:ogc:def:area:EPSG::1291'],
             'extent_name' => 'Asia - FSU - Caspian Sea',
-            'extent_description' => 'Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore',
             'help' => 'Caspian Sea water levels are now offset appreciably from this datum.',
         ],
         'urn:ogc:def:crs:EPSG::5612' => [
@@ -245,7 +221,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5105',
             'extent' => ['urn:ogc:def:area:EPSG::2423'],
             'extent_name' => 'Europe - FSU onshore',
-            'extent_description' => 'Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5613' => [
@@ -254,7 +229,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5208',
             'extent' => ['urn:ogc:def:area:EPSG::3313'],
             'extent_name' => 'Sweden - onshore',
-            'extent_description' => 'Sweden - onshore',
             'help' => 'Replaces RH70 (CRS code 5718) from 2005.',
         ],
         'urn:ogc:def:crs:EPSG::5614' => [
@@ -263,7 +237,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5187',
             'extent' => ['urn:ogc:def:area:EPSG::3267'],
             'extent_name' => 'Kuwait - onshore',
-            'extent_description' => 'Kuwait - onshore',
             'help' => 'See CRS code 5789 for equivalent system in feet.',
         ],
         'urn:ogc:def:crs:EPSG::5615' => [
@@ -272,7 +245,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5209',
             'extent' => ['urn:ogc:def:area:EPSG::3313'],
             'extent_name' => 'Sweden - onshore',
-            'extent_description' => 'Sweden - onshore',
             'help' => 'Replaced by RH70 (CRS code 5718).',
         ],
         'urn:ogc:def:crs:EPSG::5616' => [
@@ -281,7 +253,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5210',
             'extent' => ['urn:ogc:def:area:EPSG::2895'],
             'extent_name' => 'Guadeloupe - Les Saintes - onshore',
-            'extent_description' => 'Guadeloupe - onshore - Les Saintes',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5617' => [
@@ -290,7 +261,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5211',
             'extent' => ['urn:ogc:def:area:EPSG::2894'],
             'extent_name' => 'Guadeloupe - Marie-Galante - onshore',
-            'extent_description' => 'Guadeloupe - onshore - Marie-Galante',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5618' => [
@@ -299,7 +269,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5212',
             'extent' => ['urn:ogc:def:area:EPSG::2893'],
             'extent_name' => 'Guadeloupe - La Desirade - onshore',
-            'extent_description' => 'Guadeloupe - onshore - La Desirade',
             'help' => 'Replaced by IGN 2008 LD height (CRS code 9130).',
         ],
         'urn:ogc:def:crs:EPSG::5619' => [
@@ -308,7 +277,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5213',
             'extent' => ['urn:ogc:def:area:EPSG::2891'],
             'extent_name' => 'Guadeloupe - St Barthelemy - onshore',
-            'extent_description' => 'Guadeloupe - onshore - St Barthelemy island',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5620' => [
@@ -317,7 +285,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5214',
             'extent' => ['urn:ogc:def:area:EPSG::2890'],
             'extent_name' => 'Guadeloupe - St Martin - onshore',
-            'extent_description' => 'Guadeloupe - onshore - St Martin island',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5621' => [
@@ -326,7 +293,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5215',
             'extent' => ['urn:ogc:def:area:EPSG::3594'],
             'extent_name' => 'Europe - EVRF2007',
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State',
             'help' => 'Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2019 height (CRS code 9389).',
         ],
         'urn:ogc:def:crs:EPSG::5701' => [
@@ -335,7 +301,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5101',
             'extent' => ['urn:ogc:def:area:EPSG::2792'],
             'extent_name' => 'UK - Great Britain mainland onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5702' => [
@@ -344,7 +309,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5102',
             'extent' => ['urn:ogc:def:area:EPSG::1323'],
             'extent_name' => 'USA - CONUS - onshore',
-            'extent_description' => 'United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => 'Replaced by NAVD88 height (ftUS) (CRS code 6360).',
         ],
         'urn:ogc:def:crs:EPSG::5703' => [
@@ -353,7 +317,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
             'extent' => ['urn:ogc:def:area:EPSG::4161'],
             'extent_name' => 'North America - Mexico and USA - onshore',
-            'extent_description' => 'Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5705' => [
@@ -362,7 +325,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5105',
             'extent' => ['urn:ogc:def:area:EPSG::2423'],
             'extent_name' => 'Europe - FSU onshore',
-            'extent_description' => 'Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan',
             'help' => 'The adjustment also included the Czech and Slovak Republics but not adopted there, with earlier 1957 adjustment remaining in use: see CRS code 8357.',
         ],
         'urn:ogc:def:crs:EPSG::5706' => [
@@ -371,7 +333,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5106',
             'extent' => ['urn:ogc:def:area:EPSG::1291'],
             'extent_name' => 'Asia - FSU - Caspian Sea',
-            'extent_description' => 'Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore',
             'help' => 'Caspian Sea water levels are now offset appreciably from this datum.',
         ],
         'urn:ogc:def:crs:EPSG::5709' => [
@@ -380,7 +341,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5109',
             'extent' => ['urn:ogc:def:area:EPSG::1172'],
             'extent_name' => 'Netherlands',
-            'extent_description' => 'Netherlands - onshore and offshore',
             'help' => 'Use has been extended from Netherlands onshore to Netherlands onshore and offshore from 2018.',
         ],
         'urn:ogc:def:crs:EPSG::5710' => [
@@ -389,7 +349,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5110',
             'extent' => ['urn:ogc:def:area:EPSG::1347'],
             'extent_name' => 'Belgium - onshore',
-            'extent_description' => 'Belgium - onshore',
             'help' => 'No gravity corrections applied.',
         ],
         'urn:ogc:def:crs:EPSG::5711' => [
@@ -398,7 +357,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5111',
             'extent' => ['urn:ogc:def:area:EPSG::4493'],
             'extent_name' => 'Australia Christmas and Cocos - onshore',
-            'extent_description' => 'Australia - Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Western Australia and Victoria - onshore. Christmas Island - onshore. Cocos and Keeling Islands - onshore',
             'help' => 'Appropriate for cadastral and local engineering survey including construction or mining. Only suitable onshore. AVWS height (CRS code 9458) is more accurate than AHD height for applications over distances greater than 10 km and also extends offshore.',
         ],
         'urn:ogc:def:crs:EPSG::5712' => [
@@ -407,7 +365,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5112',
             'extent' => ['urn:ogc:def:area:EPSG::2947'],
             'extent_name' => 'Australia - Tasmania mainland onshore',
-            'extent_description' => 'Australia - Tasmania mainland - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5713' => [
@@ -416,7 +373,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5114',
             'extent' => ['urn:ogc:def:area:EPSG::1289'],
             'extent_name' => 'Canada - CGVD28',
-            'extent_description' => 'Canada - onshore - Alberta; British Columbia; Manitoba south of 59°N; New Brunswick; Newfoundland, Labrador between 52°50’N and 54°30’N; Northwest Territories south west of a line between 60°40’N, 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°20\'N; Prince Edward Island; Quebec - mainland south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W, and Anticosta island; Saskatchewan south of 58°30’N; Yukon',
             'help' => 'From November 2013 replaced by CGVD2013 height (CRS code 6647).',
         ],
         'urn:ogc:def:crs:EPSG::5714' => [
@@ -425,7 +381,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5100',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5715' => [
@@ -434,7 +389,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5100',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5716' => [
@@ -443,7 +397,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5115',
             'extent' => ['urn:ogc:def:area:EPSG::3254'],
             'extent_name' => 'Greece - onshore',
-            'extent_description' => 'Greece - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5717' => [
@@ -452,7 +405,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5116',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
-            'extent_description' => 'Finland - onshore',
             'help' => 'In use since 1968. Replaced by N2000 height (CRS code 3900).',
         ],
         'urn:ogc:def:crs:EPSG::5718' => [
@@ -461,7 +413,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5117',
             'extent' => ['urn:ogc:def:area:EPSG::3313'],
             'extent_name' => 'Sweden - onshore',
-            'extent_description' => 'Sweden - onshore',
             'help' => 'Replaces RH00 (CRS code 5615). Replaced by RH2000 (CRS code 5613) from 2005.',
         ],
         'urn:ogc:def:crs:EPSG::5719' => [
@@ -470,7 +421,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5118',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
-            'extent_description' => 'France - mainland onshore',
             'help' => 'Generally but not entirely replaced by NGF IGN69 height (CRS code 5720).',
         ],
         'urn:ogc:def:crs:EPSG::5720' => [
@@ -479,7 +429,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5119',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
-            'extent_description' => 'France - mainland onshore',
             'help' => 'Generally but not entirely replaces NGF Lallemand height (CRS code 5719).',
         ],
         'urn:ogc:def:crs:EPSG::5721' => [
@@ -488,7 +437,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5120',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
-            'extent_description' => 'France - Corsica onshore',
             'help' => 'Replaces NGC 1948 height (CRS code 5791).',
         ],
         'urn:ogc:def:crs:EPSG::5722' => [
@@ -497,7 +445,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5121',
             'extent' => ['urn:ogc:def:area:EPSG::3281'],
             'extent_name' => 'Mozambique - onshore',
-            'extent_description' => 'Mozambique - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5723' => [
@@ -506,7 +453,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5122',
             'extent' => ['urn:ogc:def:area:EPSG::4166'],
             'extent_name' => 'Japan - onshore - Honshu, Shikoku, Kyushu',
-            'extent_description' => 'Japan - onshore mainland - Honshu, Shikoku, Kyushu',
             'help' => 'Replaces JSLD49. Replaced by JGD2000 (vertical) (CRS code 6694) with effect from April 2002.',
         ],
         'urn:ogc:def:crs:EPSG::5724' => [
@@ -515,7 +461,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5123',
             'extent' => ['urn:ogc:def:area:EPSG::3288'],
             'extent_name' => 'Oman - onshore',
-            'extent_description' => 'Oman - onshore. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands',
             'help' => 'Replaces Fahud Height Datum height (CRS code 5725) from 1993.',
         ],
         'urn:ogc:def:crs:EPSG::5725' => [
@@ -524,7 +469,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5124',
             'extent' => ['urn:ogc:def:area:EPSG::4009'],
             'extent_name' => 'Oman - mainland',
-            'extent_description' => 'Oman - mainland onshore',
             'help' => 'Replaced by PHD93 height (CRS code 5724) from 1993.',
         ],
         'urn:ogc:def:crs:EPSG::5726' => [
@@ -533,7 +477,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5125',
             'extent' => ['urn:ogc:def:area:EPSG::1302'],
             'extent_name' => 'Asia - Cambodia and Vietnam - mainland',
-            'extent_description' => 'Cambodia - mainland onshore; Vietnam - mainland onshore',
             'help' => 'In Vietnam replaced by Hon Dau height (CRS code 5727) from 1992.',
         ],
         'urn:ogc:def:crs:EPSG::5727' => [
@@ -542,7 +485,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5126',
             'extent' => ['urn:ogc:def:area:EPSG::4015'],
             'extent_name' => 'Vietnam - mainland',
-            'extent_description' => 'Vietnam - mainland onshore',
             'help' => 'In Vietnam replaces Ha Tien height (CRS code 5726) from 1992.',
         ],
         'urn:ogc:def:crs:EPSG::5728' => [
@@ -551,7 +493,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5127',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
-            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Replaced by LHN95 height (CRS code 5729).',
         ],
         'urn:ogc:def:crs:EPSG::5729' => [
@@ -560,7 +501,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5128',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
-            'extent_description' => 'Liechtenstein; Switzerland',
             'help' => 'Replaces LN02 height (CRS code 5728).',
         ],
         'urn:ogc:def:crs:EPSG::5730' => [
@@ -569,7 +509,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5129',
             'extent' => ['urn:ogc:def:area:EPSG::1299'],
             'extent_name' => 'Europe - EVRF2000',
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State',
             'help' => 'Uses Normal heights. Replaced by EVRF2007 height (CRS code 5621). In Austria, orthometric heights used instead - see CRS code 9274.',
         ],
         'urn:ogc:def:crs:EPSG::5731' => [
@@ -578,7 +517,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5130',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Topographic mapping at all scales in Republic and medium and small scales in Northern Ireland. Belfast Lough height (CRS code 5732) used for large scale topographic mapping in Northern Ireland.',
         ],
         'urn:ogc:def:crs:EPSG::5732' => [
@@ -587,7 +525,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5131',
             'extent' => ['urn:ogc:def:area:EPSG::2530'],
             'extent_name' => 'UK - Northern Ireland - onshore',
-            'extent_description' => 'United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Malin Head height (CRS code 5731) used for medium and small scale topographic mapping.',
         ],
         'urn:ogc:def:crs:EPSG::5733' => [
@@ -596,7 +533,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5132',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
-            'extent_description' => 'Denmark - onshore',
             'help' => 'Replaced by DVR90 height (CRS code 5799).',
         ],
         'urn:ogc:def:crs:EPSG::5734' => [
@@ -605,7 +541,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5133',
             'extent' => ['urn:ogc:def:area:EPSG::2592'],
             'extent_name' => 'Azerbaijan - offshore and Sangachal',
-            'extent_description' => 'Azerbaijan - Caspian offshore and onshore Sangachal terminal',
             'help' => 'Also used by AIOC and BP as a height system for engineering survey at Sangachal terminal (see CRS code 5797). AIOC95 datum is 1.7m above Caspian datum and 26.3m below Baltic datum.',
         ],
         'urn:ogc:def:crs:EPSG::5735' => [
@@ -614,7 +549,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5134',
             'extent' => ['urn:ogc:def:area:EPSG::3251'],
             'extent_name' => 'Georgia - onshore',
-            'extent_description' => 'Georgia - onshore',
             'help' => 'Black Sea datum is 0.4m below Baltic datum.',
         ],
         'urn:ogc:def:crs:EPSG::5736' => [
@@ -623,7 +557,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5104',
             'extent' => ['urn:ogc:def:area:EPSG::3228'],
             'extent_name' => 'China - onshore',
-            'extent_description' => 'China - onshore',
             'help' => 'Replaced by Yellow Sea 1985 height (CRS code 5737).',
         ],
         'urn:ogc:def:crs:EPSG::5737' => [
@@ -632,7 +565,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5137',
             'extent' => ['urn:ogc:def:area:EPSG::3228'],
             'extent_name' => 'China - onshore',
-            'extent_description' => 'China - onshore',
             'help' => 'Replaces Yellow Sea 1956 height (CRS code 5736).',
         ],
         'urn:ogc:def:crs:EPSG::5738' => [
@@ -641,7 +573,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5135',
             'extent' => ['urn:ogc:def:area:EPSG::3334'],
             'extent_name' => 'China - Hong Kong - onshore',
-            'extent_description' => 'China - Hong Kong - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5739' => [
@@ -650,7 +581,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5136',
             'extent' => ['urn:ogc:def:area:EPSG::3335'],
             'extent_name' => 'China - Hong Kong - offshore',
-            'extent_description' => 'China - Hong Kong - offshore',
             'help' => 'Chart datum is 0.15 metres below Hong Kong Principal Datum (CRS code 5738) and 1.38m below MSL at Quarry Bay.',
         ],
         'urn:ogc:def:crs:EPSG::5740' => [
@@ -659,7 +589,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5138',
             'extent' => ['urn:ogc:def:area:EPSG::2793'],
             'extent_name' => 'UK - Orkney Islands onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5741' => [
@@ -668,7 +597,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5139',
             'extent' => ['urn:ogc:def:area:EPSG::2794'],
             'extent_name' => 'UK - Fair Isle onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore',
             'help' => 'Replaced by ODN (Offshore) height (CRS code 7707) in 2016.',
         ],
         'urn:ogc:def:crs:EPSG::5742' => [
@@ -677,7 +605,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5140',
             'extent' => ['urn:ogc:def:area:EPSG::2795'],
             'extent_name' => 'UK - Shetland Islands onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5743' => [
@@ -686,7 +613,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5141',
             'extent' => ['urn:ogc:def:area:EPSG::2796'],
             'extent_name' => 'UK - Foula onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Foula onshore',
             'help' => 'Replaced by ODN (Offshore) height (CRS code 7707) in 2016.',
         ],
         'urn:ogc:def:crs:EPSG::5744' => [
@@ -695,7 +621,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5142',
             'extent' => ['urn:ogc:def:area:EPSG::2797'],
             'extent_name' => 'UK - Sule Skerry onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore',
             'help' => 'Replaced by ODN (Offshore) height (CRS code 7707) in 2016.',
         ],
         'urn:ogc:def:crs:EPSG::5745' => [
@@ -704,7 +629,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5143',
             'extent' => ['urn:ogc:def:area:EPSG::2798'],
             'extent_name' => 'UK - North Rona onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - North Rona onshore',
             'help' => 'Replaced by ODN (Offshore) height (CRS code 7707) in 2016.',
         ],
         'urn:ogc:def:crs:EPSG::5746' => [
@@ -713,7 +637,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5144',
             'extent' => ['urn:ogc:def:area:EPSG::2799'],
             'extent_name' => 'UK - Outer Hebrides onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5747' => [
@@ -722,7 +645,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5145',
             'extent' => ['urn:ogc:def:area:EPSG::2800'],
             'extent_name' => 'UK - St. Kilda onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore',
             'help' => 'Replaced by ODN (Offshore) height (CRS code 7707) in 2016.',
         ],
         'urn:ogc:def:crs:EPSG::5748' => [
@@ -731,7 +653,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5146',
             'extent' => ['urn:ogc:def:area:EPSG::2801'],
             'extent_name' => 'UK - Flannan Isles onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore',
             'help' => 'Replaced by ODN (Offshore) height (CRS code 7707) in 2016.',
         ],
         'urn:ogc:def:crs:EPSG::5749' => [
@@ -740,7 +661,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5147',
             'extent' => ['urn:ogc:def:area:EPSG::2802'],
             'extent_name' => 'UK - Scilly Isles onshore',
-            'extent_description' => 'United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5750' => [
@@ -749,7 +669,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5148',
             'extent' => ['urn:ogc:def:area:EPSG::2803'],
             'extent_name' => 'Isle of Man - onshore',
-            'extent_description' => 'Isle of Man - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5751' => [
@@ -758,7 +677,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5149',
             'extent' => ['urn:ogc:def:area:EPSG::3390'],
             'extent_name' => 'Asia - Middle East -SE Iraq and SW Iran',
-            'extent_description' => 'Iraq - onshore southeast; Iran - onshore northern Gulf coast and west bordering southeast Iraq',
             'help' => 'Replaced by Bandar Abbas (CRS code 5752) in Iran and Fao 1979 (code 3886) in Iraq. At time of record creation NIOC data in Ahwaz area of Iran and some irrigation project data in Iraq still usually referenced to Fao. Usage in Iraqi oil industry uncertain.',
         ],
         'urn:ogc:def:crs:EPSG::5752' => [
@@ -767,7 +685,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5150',
             'extent' => ['urn:ogc:def:area:EPSG::3336'],
             'extent_name' => 'Iran - onshore',
-            'extent_description' => 'Iran - onshore',
             'help' => 'Replaces Fao height (CRS code 5751) for national map agency work in Iran. At time of record creation NIOC data still generally referenced to Fao.',
         ],
         'urn:ogc:def:crs:EPSG::5753' => [
@@ -776,7 +693,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5151',
             'extent' => ['urn:ogc:def:area:EPSG::2822'],
             'extent_name' => 'New Caledonia - Grande Terre',
-            'extent_description' => 'New Caledonia - Grande Terre',
             'help' => 'Replaced by NGNC08 height (CRS code 9351).',
         ],
         'urn:ogc:def:crs:EPSG::5754' => [
@@ -785,7 +701,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5152',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of Ireland. Replaced by Belfast Lough height and Malin Head height (CRS codes 5732 and 5731).',
         ],
         'urn:ogc:def:crs:EPSG::5755' => [
@@ -794,7 +709,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5153',
             'extent' => ['urn:ogc:def:area:EPSG::3146'],
             'extent_name' => 'French Guiana - onshore',
-            'extent_description' => 'French Guiana - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5756' => [
@@ -803,7 +717,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5154',
             'extent' => ['urn:ogc:def:area:EPSG::3276'],
             'extent_name' => 'Martinique - onshore',
-            'extent_description' => 'Martinique - onshore',
             'help' => 'Replaces Martinique 1955 height (CRS code 5794)',
         ],
         'urn:ogc:def:crs:EPSG::5757' => [
@@ -812,7 +725,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5155',
             'extent' => ['urn:ogc:def:area:EPSG::2892'],
             'extent_name' => 'Guadeloupe - Grande-Terre and Basse-Terre - onshore',
-            'extent_description' => 'Guadeloupe - onshore - Basse-Terre and Grande-Terre',
             'help' => 'Replaces Guadeloupe 1951 height (CRS code 5795).',
         ],
         'urn:ogc:def:crs:EPSG::5758' => [
@@ -821,7 +733,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5156',
             'extent' => ['urn:ogc:def:area:EPSG::3337'],
             'extent_name' => 'Reunion - onshore',
-            'extent_description' => 'Reunion - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5759' => [
@@ -830,7 +741,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5157',
             'extent' => ['urn:ogc:def:area:EPSG::3764'],
             'extent_name' => 'New Zealand - North Island - Auckland vcrs',
-            'extent_description' => 'New Zealand - North Island - Auckland vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5760' => [
@@ -839,7 +749,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5158',
             'extent' => ['urn:ogc:def:area:EPSG::3801'],
             'extent_name' => 'New Zealand - South Island - Bluff vcrs',
-            'extent_description' => 'New Zealand - South Island - Bluff vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5761' => [
@@ -848,7 +757,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5159',
             'extent' => ['urn:ogc:def:area:EPSG::3803'],
             'extent_name' => 'New Zealand - South Island - Dunedin vcrs',
-            'extent_description' => 'New Zealand - South Island - between approximately 44°S and 46°S - Dunedin vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5762' => [
@@ -857,7 +765,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5160',
             'extent' => ['urn:ogc:def:area:EPSG::3771'],
             'extent_name' => 'New Zealand - North Island - Gisborne vcrs',
-            'extent_description' => 'New Zealand - North Island - Gisborne vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5763' => [
@@ -866,7 +773,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5161',
             'extent' => ['urn:ogc:def:area:EPSG::3804'],
             'extent_name' => 'New Zealand - South Island - Lyttleton vcrs',
-            'extent_description' => 'New Zealand - South Island - between approximately 41°20\'S and 45°S - Lyttleton vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5764' => [
@@ -875,7 +781,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5162',
             'extent' => ['urn:ogc:def:area:EPSG::3768'],
             'extent_name' => 'New Zealand - North Island - Moturiki vcrs',
-            'extent_description' => 'New Zealand - North Island - Moturiki vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5765' => [
@@ -884,7 +789,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5163',
             'extent' => ['urn:ogc:def:area:EPSG::3772'],
             'extent_name' => 'New Zealand - North Island - Hawkes Bay mc Napier vcrs',
-            'extent_description' => 'New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5766' => [
@@ -893,7 +797,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5164',
             'extent' => ['urn:ogc:def:area:EPSG::3802'],
             'extent_name' => 'New Zealand - South Island - Nelson vcrs',
-            'extent_description' => 'New Zealand - South Island - north of approximately 42°20\'S - Nelson vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5767' => [
@@ -902,7 +805,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5165',
             'extent' => ['urn:ogc:def:area:EPSG::3762'],
             'extent_name' => 'New Zealand - North Island - One Tree vcrs',
-            'extent_description' => 'New Zealand - North Island - One Tree Point vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5768' => [
@@ -911,7 +813,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5166',
             'extent' => ['urn:ogc:def:area:EPSG::3818'],
             'extent_name' => 'New Zealand - North Island - Tararu vcrs',
-            'extent_description' => 'New Zealand - North Island - Tararu vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5769' => [
@@ -920,7 +821,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5167',
             'extent' => ['urn:ogc:def:area:EPSG::3769'],
             'extent_name' => 'New Zealand - North Island - Taranaki vcrs',
-            'extent_description' => 'New Zealand - North Island - Taranaki vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5770' => [
@@ -929,7 +829,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5168',
             'extent' => ['urn:ogc:def:area:EPSG::3773'],
             'extent_name' => 'New Zealand - North Island - Wellington vcrs',
-            'extent_description' => 'New Zealand - North Island - Wellington vertical CRS area',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5771' => [
@@ -938,7 +837,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5169',
             'extent' => ['urn:ogc:def:area:EPSG::3894'],
             'extent_name' => 'New Zealand - Chatham Island onshore',
-            'extent_description' => 'New Zealand - Chatham Island - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5772' => [
@@ -947,7 +845,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5170',
             'extent' => ['urn:ogc:def:area:EPSG::3338'],
             'extent_name' => 'New Zealand - Stewart Island',
-            'extent_description' => 'New Zealand - Stewart Island',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5773' => [
@@ -956,7 +853,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5171',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Zero-height surface resulting from the application of the EGM96 geoid model to the WGS 84 ellipsoid. Replaces EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).',
         ],
         'urn:ogc:def:crs:EPSG::5774' => [
@@ -965,7 +861,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5172',
             'extent' => ['urn:ogc:def:area:EPSG::1146'],
             'extent_name' => 'Luxembourg',
-            'extent_description' => 'Luxembourg',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5775' => [
@@ -974,7 +869,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5173',
             'extent' => ['urn:ogc:def:area:EPSG::3322'],
             'extent_name' => 'Turkey - onshore',
-            'extent_description' => 'Türkiye (Turkey) - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5776' => [
@@ -983,7 +877,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5174',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
-            'extent_description' => 'Norway - onshore',
             'help' => 'Replaced by NN2000 height (CRS code 5941).',
         ],
         'urn:ogc:def:crs:EPSG::5777' => [
@@ -992,7 +885,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5175',
             'extent' => ['urn:ogc:def:area:EPSG::3212'],
             'extent_name' => 'Albania - onshore',
-            'extent_description' => 'Albania - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5778' => [
@@ -1001,7 +893,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5176',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
-            'extent_description' => 'Austria',
             'help' => 'For scientific purposes see EVRF2000 Austria height (CRS code 9274).',
         ],
         'urn:ogc:def:crs:EPSG::5779' => [
@@ -1010,7 +901,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5177',
             'extent' => ['urn:ogc:def:area:EPSG::3307'],
             'extent_name' => 'Slovenia - onshore',
-            'extent_description' => 'Slovenia - onshore',
             'help' => 'Replaces Trieste height (CRS code 5195) in Slovenia from 2000. Replaced by SVS2010 (CRS code 8690) from 2019-01.',
         ],
         'urn:ogc:def:crs:EPSG::5780' => [
@@ -1019,7 +909,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5178',
             'extent' => ['urn:ogc:def:area:EPSG::1294'],
             'extent_name' => 'Portugal - mainland - onshore',
-            'extent_description' => 'Portugal - mainland - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5781' => [
@@ -1028,7 +917,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5179',
             'extent' => ['urn:ogc:def:area:EPSG::3295'],
             'extent_name' => 'Romania - onshore',
-            'extent_description' => 'Romania - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5782' => [
@@ -1037,7 +925,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5180',
             'extent' => ['urn:ogc:def:area:EPSG::4188'],
             'extent_name' => 'Spain and Gibraltar - onshore',
-            'extent_description' => 'Gibraltar - onshore; Spain - mainland onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5783' => [
@@ -1046,7 +933,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5181',
             'extent' => ['urn:ogc:def:area:EPSG::3339'],
             'extent_name' => 'Germany - onshore',
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Replaces SNN76 height (CRS code 5785) and DHHN85 height (CRS code 5784). Replaced by DHHN2016 height (CRS code 7837).',
         ],
         'urn:ogc:def:crs:EPSG::5784' => [
@@ -1055,7 +941,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5182',
             'extent' => ['urn:ogc:def:area:EPSG::2326'],
             'extent_name' => 'Germany - West Germany all states',
-            'extent_description' => 'Germany - states of former West Germany onshore - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Schleswig-Holstein',
             'help' => 'Replaced by DNNH92 height (CRS code 5783).',
         ],
         'urn:ogc:def:crs:EPSG::5785' => [
@@ -1064,7 +949,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5183',
             'extent' => ['urn:ogc:def:area:EPSG::1343'],
             'extent_name' => 'Germany - East Germany all states',
-            'extent_description' => 'Germany - states of former East Germany - Berlin, Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen',
             'help' => 'Replaced by DNNH92 height (CRS code 5783).',
         ],
         'urn:ogc:def:crs:EPSG::5786' => [
@@ -1073,7 +957,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5184',
             'extent' => ['urn:ogc:def:area:EPSG::3224'],
             'extent_name' => 'Bulgaria - onshore',
-            'extent_description' => 'Bulgaria - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5787' => [
@@ -1082,7 +965,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5185',
             'extent' => ['urn:ogc:def:area:EPSG::1119'],
             'extent_name' => 'Hungary',
-            'extent_description' => 'Hungary',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5788' => [
@@ -1091,7 +973,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5186',
             'extent' => ['urn:ogc:def:area:EPSG::3267'],
             'extent_name' => 'Kuwait - onshore',
-            'extent_description' => 'Kuwait - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5789' => [
@@ -1100,7 +981,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5187',
             'extent' => ['urn:ogc:def:area:EPSG::3267'],
             'extent_name' => 'Kuwait - onshore',
-            'extent_description' => 'Kuwait - onshore',
             'help' => 'See CRS code 5614 for equivalent system in feet.',
         ],
         'urn:ogc:def:crs:EPSG::5790' => [
@@ -1109,7 +989,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5188',
             'extent' => ['urn:ogc:def:area:EPSG::3267'],
             'extent_name' => 'Kuwait - onshore',
-            'extent_description' => 'Kuwait - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5791' => [
@@ -1118,7 +997,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5189',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
-            'extent_description' => 'France - Corsica onshore',
             'help' => 'Replaced by IGN78 height (CRS code 5721)',
         ],
         'urn:ogc:def:crs:EPSG::5792' => [
@@ -1127,7 +1005,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5190',
             'extent' => ['urn:ogc:def:area:EPSG::3299'],
             'extent_name' => 'St Pierre and Miquelon - onshore',
-            'extent_description' => 'St Pierre and Miquelon - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5793' => [
@@ -1136,7 +1013,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5191',
             'extent' => ['urn:ogc:def:area:EPSG::3340'],
             'extent_name' => 'Mayotte - onshore',
-            'extent_description' => 'Mayotte - onshore',
             'help' => 'Referred to as \'SHOM 1953\' in government regulations but confirmed by IGN as being the Mayotte 1950 system.',
         ],
         'urn:ogc:def:crs:EPSG::5794' => [
@@ -1145,7 +1021,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5192',
             'extent' => ['urn:ogc:def:area:EPSG::3276'],
             'extent_name' => 'Martinique - onshore',
-            'extent_description' => 'Martinique - onshore',
             'help' => 'Replaced by Martinique 1987 height (CRS code 5756)',
         ],
         'urn:ogc:def:crs:EPSG::5795' => [
@@ -1154,7 +1029,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5193',
             'extent' => ['urn:ogc:def:area:EPSG::2892'],
             'extent_name' => 'Guadeloupe - Grande-Terre and Basse-Terre - onshore',
-            'extent_description' => 'Guadeloupe - onshore - Basse-Terre and Grande-Terre',
             'help' => 'Replaced by Guadeloupe 1988 height (CRS code 5757).',
         ],
         'urn:ogc:def:crs:EPSG::5796' => [
@@ -1163,7 +1037,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5194',
             'extent' => ['urn:ogc:def:area:EPSG::3287'],
             'extent_name' => 'Nigeria - onshore',
-            'extent_description' => 'Nigeria - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5797' => [
@@ -1172,7 +1045,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5133',
             'extent' => ['urn:ogc:def:area:EPSG::2592'],
             'extent_name' => 'Azerbaijan - offshore and Sangachal',
-            'extent_description' => 'Azerbaijan - Caspian offshore and onshore Sangachal terminal',
             'help' => 'AIOC95 datum is 1.7m above Caspian datum and 26.3m below Baltic datum. Also used by AIOC and BP as the depth system for all offshore Azerbaijan activities (see CRS code 5734).',
         ],
         'urn:ogc:def:crs:EPSG::5798' => [
@@ -1181,7 +1053,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5203',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Zero-height surface resulting from the application of the EGM84 geoid model to the WGS 84 ellipsoid. Replaced by EGM96 height (CRS code 5773).',
         ],
         'urn:ogc:def:crs:EPSG::5799' => [
@@ -1190,7 +1061,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1371',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
-            'extent_description' => 'Denmark - onshore',
             'help' => 'Reference for all realizations of DVR90 without distinction: DVR90(2000), DVR90(2002), DVR90(2013) and DVR90(2023).',
         ],
         'urn:ogc:def:crs:EPSG::5829' => [
@@ -1199,7 +1069,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5113',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Height relative to instantaneous water level uncorrected for tide. Not specific to any location or epoch.',
         ],
         'urn:ogc:def:crs:EPSG::5831' => [
@@ -1208,7 +1077,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5113',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Depth relative to instantaneous water level uncorrected for tide. Not specific to any location or epoch.',
         ],
         'urn:ogc:def:crs:EPSG::5843' => [
@@ -1217,7 +1085,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1146',
             'extent' => ['urn:ogc:def:area:EPSG::4225'],
             'extent_name' => 'UAE - Abu Dhabi - onshore',
-            'extent_description' => 'United Arab Emirates (UAE) - Abu Dhabi onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5861' => [
@@ -1226,7 +1093,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1080',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "LAT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5862' => [
@@ -1235,7 +1101,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1083',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "LLWLT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5863' => [
@@ -1244,7 +1109,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1085',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "ISLW at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5864' => [
@@ -1253,7 +1117,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1086',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model..',
         ],
         'urn:ogc:def:crs:EPSG::5865' => [
@@ -1262,7 +1125,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1087',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5866' => [
@@ -1271,7 +1133,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1089',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLLW at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5867' => [
@@ -1280,7 +1141,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1091',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Low Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5868' => [
@@ -1289,7 +1149,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1092',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean High Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5869' => [
@@ -1298,7 +1157,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1090',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MHHW at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5870' => [
@@ -1307,7 +1165,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1088',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MHWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5871' => [
@@ -1316,7 +1173,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1084',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "HHWLT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5872' => [
@@ -1325,7 +1181,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1082',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "HAT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5873' => [
@@ -1334,7 +1189,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1093',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Low Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5874' => [
@@ -1343,7 +1197,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1094',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "High Water at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::5941' => [
@@ -1352,7 +1205,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1096',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
-            'extent_description' => 'Norway - onshore',
             'help' => 'Replaces NN54 height (CRS code 5776).',
         ],
         'urn:ogc:def:crs:EPSG::6130' => [
@@ -1361,7 +1213,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1097',
             'extent' => ['urn:ogc:def:area:EPSG::3185'],
             'extent_name' => 'Cayman Islands - Grand Cayman',
-            'extent_description' => 'Cayman Islands - Grand Cayman',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6131' => [
@@ -1370,7 +1221,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1098',
             'extent' => ['urn:ogc:def:area:EPSG::4121'],
             'extent_name' => 'Cayman Islands - Little Cayman',
-            'extent_description' => 'Cayman Islands - Little Cayman',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6132' => [
@@ -1379,7 +1229,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1099',
             'extent' => ['urn:ogc:def:area:EPSG::3207'],
             'extent_name' => 'Cayman Islands - Cayman Brac',
-            'extent_description' => 'Cayman Islands - Cayman Brac',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6178' => [
@@ -1388,7 +1237,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1101',
             'extent' => ['urn:ogc:def:area:EPSG::4125'],
             'extent_name' => 'Portugal - Madeira and Desertas islands onshore',
-            'extent_description' => 'Portugal - Madeira and Desertas islands - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6179' => [
@@ -1397,7 +1245,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1102',
             'extent' => ['urn:ogc:def:area:EPSG::3680'],
             'extent_name' => 'Portugal - Porto Santo island onshore',
-            'extent_description' => 'Portugal - Porto Santo island (Madeira archipelago) onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6180' => [
@@ -1406,7 +1253,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1103',
             'extent' => ['urn:ogc:def:area:EPSG::2875'],
             'extent_name' => 'Portugal - Azores C - S Jorge onshore',
-            'extent_description' => 'Portugal - central Azores - Sao Jorge island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6181' => [
@@ -1415,7 +1261,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1104',
             'extent' => ['urn:ogc:def:area:EPSG::2873'],
             'extent_name' => 'Portugal - Azores C - Faial onshore',
-            'extent_description' => 'Portugal - central Azores - Faial island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6182' => [
@@ -1424,7 +1269,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1105',
             'extent' => ['urn:ogc:def:area:EPSG::2874'],
             'extent_name' => 'Portugal - Azores C - Pico onshore',
-            'extent_description' => 'Portugal - central Azores - Pico island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6183' => [
@@ -1433,7 +1277,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1106',
             'extent' => ['urn:ogc:def:area:EPSG::3681'],
             'extent_name' => 'Portugal - Azores C - Graciosa onshore',
-            'extent_description' => 'Portugal - central Azores - Graciosa island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6184' => [
@@ -1442,7 +1285,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1107',
             'extent' => ['urn:ogc:def:area:EPSG::2872'],
             'extent_name' => 'Portugal - Azores C - Terceira onshore',
-            'extent_description' => 'Portugal - central Azores - Terceira island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6185' => [
@@ -1451,7 +1293,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1108',
             'extent' => ['urn:ogc:def:area:EPSG::1344'],
             'extent_name' => 'Portugal - Azores W - onshore',
-            'extent_description' => 'Portugal - western Azores onshore - Flores, Corvo',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6186' => [
@@ -1460,7 +1301,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1109',
             'extent' => ['urn:ogc:def:area:EPSG::4126'],
             'extent_name' => 'Portugal - Azores E onshore - Santa Maria and Formigas',
-            'extent_description' => 'Portugal - eastern Azores onshore - Santa Maria, Formigas',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6187' => [
@@ -1469,7 +1309,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1110',
             'extent' => ['urn:ogc:def:area:EPSG::2871'],
             'extent_name' => 'Portugal - Azores E - S Miguel onshore',
-            'extent_description' => 'Portugal - eastern Azores - Sao Miguel island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6357' => [
@@ -1478,7 +1317,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
             'extent' => ['urn:ogc:def:area:EPSG::4161'],
             'extent_name' => 'North America - Mexico and USA - onshore',
-            'extent_description' => 'Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6358' => [
@@ -1487,7 +1325,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
             'extent' => ['urn:ogc:def:area:EPSG::3664'],
             'extent_name' => 'USA - CONUS and Alaska - onshore',
-            'extent_description' => 'United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => 'Replaces NGVD29 depth (ftUS) (CRS code 6359).',
         ],
         'urn:ogc:def:crs:EPSG::6359' => [
@@ -1496,7 +1333,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5102',
             'extent' => ['urn:ogc:def:area:EPSG::1323'],
             'extent_name' => 'USA - CONUS - onshore',
-            'extent_description' => 'United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => 'Replaced by NAVD88 depth (ftUS) (CRS code 6358).',
         ],
         'urn:ogc:def:crs:EPSG::6360' => [
@@ -1505,7 +1341,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
             'extent' => ['urn:ogc:def:area:EPSG::3664'],
             'extent_name' => 'USA - CONUS and Alaska - onshore',
-            'extent_description' => 'United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => 'Replaces NGVD29 height (ftUS) (CRS code 5702).',
         ],
         'urn:ogc:def:crs:EPSG::6638' => [
@@ -1514,7 +1349,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1121',
             'extent' => ['urn:ogc:def:area:EPSG::2288'],
             'extent_name' => 'American Samoa - Tutuila island',
-            'extent_description' => 'American Samoa - Tutuila island',
             'help' => 'Replaced by ASVD02 height (CRS code 6643).',
         ],
         'urn:ogc:def:crs:EPSG::6639' => [
@@ -1523,7 +1357,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1122',
             'extent' => ['urn:ogc:def:area:EPSG::3255'],
             'extent_name' => 'Guam - onshore',
-            'extent_description' => 'Guam - onshore',
             'help' => 'Replaced by GUVD04 height (CRS code 6644).',
         ],
         'urn:ogc:def:crs:EPSG::6640' => [
@@ -1532,7 +1365,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1119',
             'extent' => ['urn:ogc:def:area:EPSG::4171'],
             'extent_name' => 'Northern Mariana Islands - Rota, Saipan and Tinian',
-            'extent_description' => 'Northern Mariana Islands - onshore - Rota, Saipan and Tinian',
             'help' => 'Replaces all earlier vertical CRSs on these islands.',
         ],
         'urn:ogc:def:crs:EPSG::6641' => [
@@ -1541,7 +1373,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1123',
             'extent' => ['urn:ogc:def:area:EPSG::3294'],
             'extent_name' => 'Puerto Rico - onshore',
-            'extent_description' => 'Puerto Rico - onshore',
             'help' => 'Replaces all earlier vertical CRSs for Puerto Rico.',
         ],
         'urn:ogc:def:crs:EPSG::6642' => [
@@ -1550,7 +1381,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1124',
             'extent' => ['urn:ogc:def:area:EPSG::3330'],
             'extent_name' => 'Virgin Islands, US - onshore',
-            'extent_description' => 'US Virgin Islands - onshore - St Croix, St John, and St Thomas',
             'help' => 'Replaces all earlier vertical CRSs on these islands.',
         ],
         'urn:ogc:def:crs:EPSG::6643' => [
@@ -1559,7 +1389,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1125',
             'extent' => ['urn:ogc:def:area:EPSG::2288'],
             'extent_name' => 'American Samoa - Tutuila island',
-            'extent_description' => 'American Samoa - Tutuila island',
             'help' => 'Replaces Tutuila 1962 height (CRS code 6638). Replaced by Pago Pago 2020 height after ASVD02 benchmarks destroyed by earthquake activity.',
         ],
         'urn:ogc:def:crs:EPSG::6644' => [
@@ -1568,7 +1397,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1126',
             'extent' => ['urn:ogc:def:area:EPSG::3255'],
             'extent_name' => 'Guam - onshore',
-            'extent_description' => 'Guam - onshore',
             'help' => 'Replaces Guam 1963 height (CRS code 6639).',
         ],
         'urn:ogc:def:crs:EPSG::6647' => [
@@ -1577,7 +1405,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1127',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Replaces CGVD28 height (CRS code 5713). CGVD2013(CGG2013) height is realized by geoid model CGG2013 (CT code 9246). Replaced by CGVD2013a(1997 / 2002 / 2010) height. CGG2013a is identical to CGG2013 except in the western sector of Lake of the Woods.',
         ],
         'urn:ogc:def:crs:EPSG::6693' => [
@@ -1586,7 +1413,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1129',
             'extent' => ['urn:ogc:def:area:EPSG::4168'],
             'extent_name' => 'Japan - onshore - Hokkaido',
-            'extent_description' => 'Japan - onshore mainland - Hokkaido',
             'help' => 'Replaced by JGD2000 (vertical) (CRS code 6694) with effect from April 2002.',
         ],
         'urn:ogc:def:crs:EPSG::6694' => [
@@ -1595,7 +1421,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1130',
             'extent' => ['urn:ogc:def:area:EPSG::3263'],
             'extent_name' => 'Japan - onshore mainland',
-            'extent_description' => 'Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu',
             'help' => 'Replaced JSLD69 and JSLD72 (CRS codes 5723 and 6693) from April 2002. Replaced by JGD2011 (vertical) (CRS code 6695) with effect from 21st October 2011.',
         ],
         'urn:ogc:def:crs:EPSG::6695' => [
@@ -1604,7 +1429,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1131',
             'extent' => ['urn:ogc:def:area:EPSG::3263'],
             'extent_name' => 'Japan - onshore mainland',
-            'extent_description' => 'Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu',
             'help' => 'Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011.',
         ],
         'urn:ogc:def:crs:EPSG::6916' => [
@@ -1613,7 +1437,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1140',
             'extent' => ['urn:ogc:def:area:EPSG::1210'],
             'extent_name' => 'Singapore',
-            'extent_description' => 'Singapore - onshore and offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7446' => [
@@ -1622,7 +1445,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1148',
             'extent' => ['urn:ogc:def:area:EPSG::3236'],
             'extent_name' => 'Cyprus - onshore',
-            'extent_description' => 'Cyprus - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7447' => [
@@ -1631,7 +1453,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1149',
             'extent' => ['urn:ogc:def:area:EPSG::4384'],
             'extent_name' => 'Papua New Guinea - 0°N to 12°S and 140°E to 158°E',
-            'extent_description' => 'Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore',
             'help' => 'PNG08 height = PNG94 ellipsoidal height - value of geoid undulation derived by bilinear interpolation of PNG08 geoid model (see transformation code 7655).',
         ],
         'urn:ogc:def:crs:EPSG::7651' => [
@@ -1640,7 +1461,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1150',
             'extent' => ['urn:ogc:def:area:EPSG::4013'],
             'extent_name' => 'Papua New Guinea - PFTB',
-            'extent_description' => 'Papua New Guinea - Papuan fold and thrust belt',
             'help' => 'Kumul 34 height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM96 geoid model - 0.87m = EGM96 height - 0.87m. See CRS code 5773 and transformation code 10084.',
         ],
         'urn:ogc:def:crs:EPSG::7652' => [
@@ -1649,7 +1469,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1151',
             'extent' => ['urn:ogc:def:area:EPSG::4383'],
             'extent_name' => 'Papua New Guinea - onshore south of 5°S and west of 144°E',
-            'extent_description' => 'Papua New Guinea - onshore south of 5°S and west of 144°E',
             'help' => 'Kiunga height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008 geoid model - 3.0m = EGM2008 height - 3.0m. See CRS code 3855 and transformation code 3858.',
         ],
         'urn:ogc:def:crs:EPSG::7699' => [
@@ -1658,7 +1477,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1161',
             'extent' => ['urn:ogc:def:area:EPSG::3339'],
             'extent_name' => 'Germany - onshore',
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Replaced by SNN56 and then SNN76 in East Germany and by DHHN85 in West Germany.',
         ],
         'urn:ogc:def:crs:EPSG::7700' => [
@@ -1667,7 +1485,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1162',
             'extent' => ['urn:ogc:def:area:EPSG::3268'],
             'extent_name' => 'Latvia - onshore',
-            'extent_description' => 'Latvia - onshore',
             'help' => 'In Latvia replaces Baltic 1977 system (CRS code 5705) from December 2014.',
         ],
         'urn:ogc:def:crs:EPSG::7707' => [
@@ -1676,7 +1493,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1164',
             'extent' => ['urn:ogc:def:area:EPSG::4391'],
             'extent_name' => 'UK - offshore 49°45\'N to 61°N, 9°W to 2°E',
-            'extent_description' => 'United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E',
             'help' => 'Defined through OSGM geoid model (transformation code 7713). Replaces Fair Isle height, Flannan Isles height, Foula height, North Rona height, St Kilda height and Sule Skerry height (CRS codes 5741, 5748, 5743, 5745, 5747 and 5744) from 2016.',
         ],
         'urn:ogc:def:crs:EPSG::7832' => [
@@ -1685,7 +1501,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1171',
             'extent' => ['urn:ogc:def:area:EPSG::4425'],
             'extent_name' => 'Papua New Guinea - onshore - Central province and Gulf province east of 144°E',
-            'extent_description' => 'Papua New Guinea - onshore - Gulf province east of 144°24\'E, Central province and National Capital District',
             'help' => 'POM96 height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM96 geoid model - 1.58m = EGM96 height - 1.58m. See CRS code 5773 and transformation code 10084.',
         ],
         'urn:ogc:def:crs:EPSG::7837' => [
@@ -1694,7 +1509,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1170',
             'extent' => ['urn:ogc:def:area:EPSG::1103'],
             'extent_name' => 'Germany',
-            'extent_description' => 'Germany - onshore and offshore',
             'help' => 'Replaces DHHN92 height (CRS code 5783) from 2016-12-01.',
         ],
         'urn:ogc:def:crs:EPSG::7839' => [
@@ -1703,7 +1517,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1169',
             'extent' => ['urn:ogc:def:area:EPSG::1175'],
             'extent_name' => 'New Zealand',
-            'extent_description' => 'New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands',
             'help' => 'Normal-orthometric heights. Replaces NZVD2009 height (CRS code 4440).',
         ],
         'urn:ogc:def:crs:EPSG::7841' => [
@@ -1712,7 +1525,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1172',
             'extent' => ['urn:ogc:def:area:EPSG::4425'],
             'extent_name' => 'Papua New Guinea - onshore - Central province and Gulf province east of 144°E',
-            'extent_description' => 'Papua New Guinea - onshore - Gulf province east of 144°24\'E, Central province and National Capital District',
             'help' => 'POM08 height = WGS 84 ellipsoid height - value of geoid undulation derived by bilinear interpolation of EGM2008 geoid model - 0.93m = EGM2008 height - 0.93m. See CRS code 3855 and transformation codes 3858 and 3859.',
         ],
         'urn:ogc:def:crs:EPSG::7888' => [
@@ -1721,7 +1533,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1175',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'Replaced by SHVD2016 (CRS code 7890) from 2016.',
         ],
         'urn:ogc:def:crs:EPSG::7889' => [
@@ -1730,7 +1541,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1176',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'Replaced by SHVD2016 (CRS code 7890) from 2016.',
         ],
         'urn:ogc:def:crs:EPSG::7890' => [
@@ -1739,7 +1549,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1177',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
-            'extent_description' => 'St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore',
             'help' => 'Replaces Jamestown 1971 height and Tritan 2011 height (CRS codes 7888-89) from 2016.',
         ],
         'urn:ogc:def:crs:EPSG::7962' => [
@@ -1748,7 +1557,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5152',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
-            'extent_description' => 'Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore',
             'help' => 'CRS in metres used only for transformation of heights referenced to Poolbeg height (ft). For CRS in feet see code 5754.',
         ],
         'urn:ogc:def:crs:EPSG::7968' => [
@@ -1757,7 +1565,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5102',
             'extent' => ['urn:ogc:def:area:EPSG::1323'],
             'extent_name' => 'USA - CONUS - onshore',
-            'extent_description' => 'United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming',
             'help' => 'System defined by IOGP to allow transformation of heights to and from NGVD29. See CRS code 5702 for system in US survey feet in actual use.',
         ],
         'urn:ogc:def:crs:EPSG::7976' => [
@@ -1766,7 +1573,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5135',
             'extent' => ['urn:ogc:def:area:EPSG::3334'],
             'extent_name' => 'China - Hong Kong - onshore',
-            'extent_description' => 'China - Hong Kong - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7979' => [
@@ -1775,7 +1581,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5187',
             'extent' => ['urn:ogc:def:area:EPSG::3267'],
             'extent_name' => 'Kuwait - onshore',
-            'extent_description' => 'Kuwait - onshore',
             'help' => 'See CRS code 5789 for equivalent depth system.',
         ],
         'urn:ogc:def:crs:EPSG::8050' => [
@@ -1784,7 +1589,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5100',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::8051' => [
@@ -1793,7 +1597,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5100',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'extent_description' => 'World',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::8052' => [
@@ -1802,7 +1605,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5100',
             'extent' => ['urn:ogc:def:area:EPSG::1245'],
             'extent_name' => 'USA',
-            'extent_description' => 'United States (USA) - onshore and offshore',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::8053' => [
@@ -1811,7 +1613,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5100',
             'extent' => ['urn:ogc:def:area:EPSG::1245'],
             'extent_name' => 'USA',
-            'extent_description' => 'United States (USA) - onshore and offshore',
             'help' => 'Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.',
         ],
         'urn:ogc:def:crs:EPSG::8089' => [
@@ -1820,7 +1621,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1190',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
-            'extent_description' => 'Iceland - onshore',
             'help' => 'National system replacing older local systems from March 2011.',
         ],
         'urn:ogc:def:crs:EPSG::8228' => [
@@ -1829,7 +1629,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
             'extent' => ['urn:ogc:def:area:EPSG::4464'],
             'extent_name' => 'USA - onshore - AZ MI MT ND OR SC',
-            'extent_description' => 'United States (USA) - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina',
             'help' => 'Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed State Plane legislation in International feet (note: not US survet feet).',
         ],
         'urn:ogc:def:crs:EPSG::8266' => [
@@ -1838,7 +1637,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1199',
             'extent' => ['urn:ogc:def:area:EPSG::4461'],
             'extent_name' => 'Greenland - 59°N to 84°N',
-            'extent_description' => 'Greenland - onshore and offshore between 59°N and 84°N and west of 10°W',
             'help' => 'Replaced by GVR2016 height (CRS code 8267). GVR2000 is realized by gravimetric geoid model 2000 (transformation code 8268) applied to GR96 (CRS code 4909).',
         ],
         'urn:ogc:def:crs:EPSG::8267' => [
@@ -1847,7 +1645,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1200',
             'extent' => ['urn:ogc:def:area:EPSG::4454'],
             'extent_name' => 'Greenland - 58°N to 85°N',
-            'extent_description' => 'Greenland - onshore and offshore between 58°N and 85°N and west of 7°W',
             'help' => 'Replaces GVR2000 height (CRS code 8266). GVR2016 is realized by gravimetric geoid model 2016 (transformation code 8269) applied to GR96 (CRS code 4909).',
         ],
         'urn:ogc:def:crs:EPSG::8357' => [
@@ -1856,7 +1653,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1202',
             'extent' => ['urn:ogc:def:area:EPSG::1306'],
             'extent_name' => 'Europe - Czechoslovakia',
-            'extent_description' => 'Czechia; Slovakia',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8358' => [
@@ -1865,7 +1661,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1202',
             'extent' => ['urn:ogc:def:area:EPSG::1306'],
             'extent_name' => 'Europe - Czechoslovakia',
-            'extent_description' => 'Czechia; Slovakia',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8434' => [
@@ -1874,7 +1669,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1210',
             'extent' => ['urn:ogc:def:area:EPSG::1147'],
             'extent_name' => 'China - Macao',
-            'extent_description' => 'China - Macao - onshore and offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8675' => [
@@ -1883,7 +1677,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1213',
             'extent' => ['urn:ogc:def:area:EPSG::4522'],
             'extent_name' => 'Finland - mainland south of 66°N',
-            'extent_description' => 'Finland - onshore mainland south of approximately 66°N',
             'help' => 'Introduced during second national precise levelling as a temporary height system (or intended to be such). Replaced by N60 height (CRS code 5717).',
         ],
         'urn:ogc:def:crs:EPSG::8690' => [
@@ -1892,7 +1685,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1215',
             'extent' => ['urn:ogc:def:area:EPSG::3307'],
             'extent_name' => 'Slovenia - onshore',
-            'extent_description' => 'Slovenia - onshore',
             'help' => 'Replaces SVS2000 height (CRS code 5779) from 2019-01.',
         ],
         'urn:ogc:def:crs:EPSG::8691' => [
@@ -1901,7 +1693,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1216',
             'extent' => ['urn:ogc:def:area:EPSG::4543'],
             'extent_name' => 'Serbia',
-            'extent_description' => 'Serbia including Vojvodina',
             'help' => 'Replaces Trieste height (CRS code 5195) in Serbia from 2012-03.',
         ],
         'urn:ogc:def:crs:EPSG::8841' => [
@@ -1910,7 +1701,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1219',
             'extent' => ['urn:ogc:def:area:EPSG::3303'],
             'extent_name' => 'Saudi Arabia - onshore',
-            'extent_description' => 'Saudi Arabia - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8881' => [
@@ -1919,7 +1709,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1267',
             'extent' => ['urn:ogc:def:area:EPSG::4585'],
             'extent_name' => 'Austria - Vienna',
-            'extent_description' => 'Austria - Vienna city state',
             'help' => 'Defined from GHA height (EPSG:5778) using a vertical offset (Wiener Null is 156.68m above GHA height).',
         ],
         'urn:ogc:def:crs:EPSG::8904' => [
@@ -1928,7 +1717,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1224',
             'extent' => ['urn:ogc:def:area:EPSG::3982'],
             'extent_name' => 'Taiwan - onshore - mainland',
-            'extent_description' => 'Taiwan, Republic of China - onshore - Taiwan Island',
             'help' => 'Replaces TWVD79.',
         ],
         'urn:ogc:def:crs:EPSG::8911' => [
@@ -1937,7 +1725,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1226',
             'extent' => ['urn:ogc:def:area:EPSG::3232'],
             'extent_name' => 'Costa Rica - onshore',
-            'extent_description' => 'Costa Rica - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9130' => [
@@ -1946,7 +1733,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1250',
             'extent' => ['urn:ogc:def:area:EPSG::2893'],
             'extent_name' => 'Guadeloupe - La Desirade - onshore',
-            'extent_description' => 'Guadeloupe - onshore - La Desirade',
             'help' => 'Replaces IGN 1992 LD height (CRS code 5618).',
         ],
         'urn:ogc:def:crs:EPSG::9245' => [
@@ -1955,7 +1741,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1256',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily due to glacial isostasy. This CRS is a static snapshot at epoch 2010.0 for use with NAD83(CSRS)v6 and v7. For other epochs see CRSs 20034/20035.',
         ],
         'urn:ogc:def:crs:EPSG::9255' => [
@@ -1964,7 +1749,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1260',
             'extent' => ['urn:ogc:def:area:EPSG::4573'],
             'extent_name' => 'Argentina - onshore',
-            'extent_description' => 'Argentina - onshore',
             'help' => 'Orthometric heights. Replaces SRVN71.',
         ],
         'urn:ogc:def:crs:EPSG::9274' => [
@@ -1973,7 +1757,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1261',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
-            'extent_description' => 'Austria',
             'help' => 'Austria-specific version of EVRF using orthometric heights instead of the Normal heights used in EVRF2000 (CRS code 5730). Used for scientific purposes. See GHA height (CRS code 5778) for cadastral and other land survey purposes.',
         ],
         'urn:ogc:def:crs:EPSG::9279' => [
@@ -1982,7 +1765,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1262',
             'extent' => ['urn:ogc:def:area:EPSG::3309'],
             'extent_name' => 'South Africa - onshore',
-            'extent_description' => 'South Africa - mainland onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9287' => [
@@ -1991,7 +1773,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1290',
             'extent' => ['urn:ogc:def:area:EPSG::4742'],
             'extent_name' => 'Netherlands - offshore and nearshore ',
-            'extent_description' => 'Netherlands - offshore North Sea and nearshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9288' => [
@@ -2000,7 +1781,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1270',
             'extent' => ['urn:ogc:def:area:EPSG::4742'],
             'extent_name' => 'Netherlands - offshore and nearshore ',
-            'extent_description' => 'Netherlands - offshore North Sea and nearshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9303' => [
@@ -2009,7 +1789,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1265',
             'extent' => ['urn:ogc:def:area:EPSG::4582'],
             'extent_name' => 'UK - London to Birmingham and Crewe',
-            'extent_description' => 'United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe',
             'help' => 'HS2-VRF height is equivalent to ODN height as historically realized through OSNet v2001 and OSGM02. After the ODN realization was updated to be through OSNet v2009 and OSGM15, HS2-VRF height was introduced for backward consistency.',
         ],
         'urn:ogc:def:crs:EPSG::9335' => [
@@ -2018,7 +1797,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1269',
             'extent' => ['urn:ogc:def:area:EPSG::3303'],
             'extent_name' => 'Saudi Arabia - onshore',
-            'extent_description' => 'Saudi Arabia - onshore',
             'help' => 'Orthometric heights.',
         ],
         'urn:ogc:def:crs:EPSG::9351' => [
@@ -2027,7 +1805,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1255',
             'extent' => ['urn:ogc:def:area:EPSG::3430'],
             'extent_name' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands',
-            'extent_description' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands (Lifou, Mare, Ouvea)',
             'help' => 'On Grande Terre replaces NGNC69 (CRS code 5753).',
         ],
         'urn:ogc:def:crs:EPSG::9389' => [
@@ -2036,7 +1813,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1274',
             'extent' => ['urn:ogc:def:area:EPSG::4608'],
             'extent_name' => 'Europe - EVRF2019',
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State',
             'help' => 'September 2020 adjustment. Replaces 2019 adjustment and EVRF2007 height (CRS code 5621). Uses Normal heights. Zero-tide solution. See EVRF2019 mean-tide height (CRS code 9390) for solution more appropriate for oceanography and GNSS-related activities.',
         ],
         'urn:ogc:def:crs:EPSG::9390' => [
@@ -2045,7 +1821,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1287',
             'extent' => ['urn:ogc:def:area:EPSG::4608'],
             'extent_name' => 'Europe - EVRF2019',
-            'extent_description' => 'Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State',
             'help' => 'September 2020 adjustment. Replaces 2019 adjustment. Uses Normal heights. Mean-tide solution. See EVRF2019 height (CRS code 9389) for zero-tide solution more appropriate for gravity-related activities.',
         ],
         'urn:ogc:def:crs:EPSG::9392' => [
@@ -2054,7 +1829,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1275',
             'extent' => ['urn:ogc:def:area:EPSG::4602'],
             'extent_name' => 'Spain - Balearic Islands - Mallorca',
-            'extent_description' => 'Spain - Balearic Islands - Mallorca onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9393' => [
@@ -2063,7 +1837,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1276',
             'extent' => ['urn:ogc:def:area:EPSG::4603'],
             'extent_name' => 'Spain - Balearic Islands - Menorca',
-            'extent_description' => 'Spain - Balearic Islands - Menorca onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9394' => [
@@ -2072,7 +1845,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1277',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
             'extent_name' => 'Spain - Balearic Islands - Ibiza',
-            'extent_description' => 'Spain - Balearic Islands - Ibiza - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9395' => [
@@ -2081,7 +1853,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1278',
             'extent' => ['urn:ogc:def:area:EPSG::4591'],
             'extent_name' => 'Spain - Canary Islands - Lanzarote',
-            'extent_description' => 'Spain - Canary Islands - Lanzarote onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9396' => [
@@ -2090,7 +1861,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1279',
             'extent' => ['urn:ogc:def:area:EPSG::4592'],
             'extent_name' => 'Spain - Canary Islands - Fuerteventura',
-            'extent_description' => 'Spain - Canary Islands - Fuerteventura onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9397' => [
@@ -2099,7 +1869,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1280',
             'extent' => ['urn:ogc:def:area:EPSG::4593'],
             'extent_name' => 'Spain - Canary Islands - Gran Canaria',
-            'extent_description' => 'Spain - Canary Islands - Gran Canaria onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9398' => [
@@ -2108,7 +1877,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1281',
             'extent' => ['urn:ogc:def:area:EPSG::4594'],
             'extent_name' => 'Spain - Canary Islands - Tenerife',
-            'extent_description' => 'Spain - Canary Islands - Tenerife onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9399' => [
@@ -2117,7 +1885,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1282',
             'extent' => ['urn:ogc:def:area:EPSG::4595'],
             'extent_name' => 'Spain - Canary Islands - La Gomera',
-            'extent_description' => 'Spain - Canary Islands - La Gomera onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9400' => [
@@ -2126,7 +1893,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1283',
             'extent' => ['urn:ogc:def:area:EPSG::4596'],
             'extent_name' => 'Spain - Canary Islands - La Palma',
-            'extent_description' => 'Spain - Canary Islands - La Palma onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9401' => [
@@ -2135,7 +1901,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1284',
             'extent' => ['urn:ogc:def:area:EPSG::4597'],
             'extent_name' => 'Spain - Canary Islands - El Hierro',
-            'extent_description' => 'Spain - Canary Islands - El Hierro onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9402' => [
@@ -2144,7 +1909,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1285',
             'extent' => ['urn:ogc:def:area:EPSG::4590'],
             'extent_name' => 'Spain - Ceuta',
-            'extent_description' => 'Spain - Ceuta onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9451' => [
@@ -2153,7 +1917,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1288',
             'extent' => ['urn:ogc:def:area:EPSG::4606'],
             'extent_name' => 'Europe - British Isles - UK and Ireland onshore, UKCS',
-            'extent_description' => 'United Kingdom (UK) - offshore to boundary of UKCS within 49°45\'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9458' => [
@@ -2162,7 +1925,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1292',
             'extent' => ['urn:ogc:def:area:EPSG::4177'],
             'extent_name' => 'Australia - GDA',
-            'extent_description' => 'Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore',
             'help' => 'For cadastral and local engineering applications see AHD height (CRS code 5711). AVWS is more accurate than AHD for applications over distances greater than 10 km.',
         ],
         'urn:ogc:def:crs:EPSG::9471' => [
@@ -2171,7 +1933,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1294',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
-            'extent_description' => 'Indonesia - onshore and offshore',
             'help' => 'Physical height component of national vertical control network (JKVN). Orthometric heights. Replaced by INAGeoid2020 v2 height (code 20036).',
         ],
         'urn:ogc:def:crs:EPSG::9650' => [
@@ -2180,7 +1941,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1296',
             'extent' => ['urn:ogc:def:area:EPSG::3293'],
             'extent_name' => 'Poland - onshore',
-            'extent_description' => 'Poland - onshore',
             'help' => 'Initially valid until 2019-12-31, but that extended to 2023-12-31. Will be replaced by EVRF2007-PL height (CRS 9651) after 2023-12-31.',
         ],
         'urn:ogc:def:crs:EPSG::9651' => [
@@ -2189,7 +1949,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1297',
             'extent' => ['urn:ogc:def:area:EPSG::3293'],
             'extent_name' => 'Poland - onshore',
-            'extent_description' => 'Poland - onshore',
             'help' => 'Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.',
         ],
         'urn:ogc:def:crs:EPSG::9663' => [
@@ -2198,7 +1957,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1298',
             'extent' => ['urn:ogc:def:area:EPSG::3246'],
             'extent_name' => 'Estonia - onshore',
-            'extent_description' => 'Estonia - onshore',
             'help' => 'In Estonia replaces Baltic 1977 system (CRS code 5705) from January 2018.',
         ],
         'urn:ogc:def:crs:EPSG::9666' => [
@@ -2207,7 +1965,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1299',
             'extent' => ['urn:ogc:def:area:EPSG::3272'],
             'extent_name' => 'Lithuania - onshore',
-            'extent_description' => 'Lithuania - onshore',
             'help' => 'In Lithuania replaces Baltic 1977 system (CRS code 5705) from January 2016.',
         ],
         'urn:ogc:def:crs:EPSG::9669' => [
@@ -2216,7 +1973,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1300',
             'extent' => ['urn:ogc:def:area:EPSG::3224'],
             'extent_name' => 'Bulgaria - onshore',
-            'extent_description' => 'Bulgaria - onshore',
             'help' => 'Adopted 2010-07-29 as official Bulgarian reference datum through decree 153, replacing Baltic 1982 system (CRS code 5786).',
         ],
         'urn:ogc:def:crs:EPSG::9672' => [
@@ -2225,7 +1981,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1301',
             'extent' => ['urn:ogc:def:area:EPSG::4615'],
             'extent_name' => 'Norway, Svalbard and Jan Mayen - offshore',
-            'extent_description' => 'Norway (offshore) and Svalbard and Jan Mayen (offshore)',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9675' => [
@@ -2234,7 +1989,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1302',
             'extent' => ['urn:ogc:def:area:EPSG::2288'],
             'extent_name' => 'American Samoa - Tutuila island',
-            'extent_description' => 'American Samoa - Tutuila island',
             'help' => 'Replaces ASVD02 height (CRS 6643) from March 2020.',
         ],
         'urn:ogc:def:crs:EPSG::9681' => [
@@ -2243,7 +1997,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1303',
             'extent' => ['urn:ogc:def:area:EPSG::3217'],
             'extent_name' => 'Bangladesh - onshore',
-            'extent_description' => 'Bangladesh - onshore',
             'help' => 'Replaces PWD Datum.',
         ],
         'urn:ogc:def:crs:EPSG::9721' => [
@@ -2252,7 +2005,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1306',
             'extent' => ['urn:ogc:def:area:EPSG::2340'],
             'extent_name' => 'Italy - Sicily onshore',
-            'extent_description' => 'Italy - Sicily onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9722' => [
@@ -2261,7 +2013,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1307',
             'extent' => ['urn:ogc:def:area:EPSG::2339'],
             'extent_name' => 'Italy - Sardinia onshore',
-            'extent_description' => 'Italy - Sardinia onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9923' => [
@@ -2270,7 +2021,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1316',
             'extent' => ['urn:ogc:def:area:EPSG::3339'],
             'extent_name' => 'Germany - onshore',
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Introduced in 2003. Replaces DB Netz use of DHHN12, SNN76, DHHN85 and DHHN92 as variously adopted by German states but which DB Netz used with smoothing across boundary discontinuity. Replaced by GNTRANS2016 height (CRS code 9927).',
         ],
         'urn:ogc:def:crs:EPSG::9927' => [
@@ -2279,7 +2029,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1318',
             'extent' => ['urn:ogc:def:area:EPSG::3339'],
             'extent_name' => 'Germany - onshore',
-            'extent_description' => 'Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen',
             'help' => 'Replaces GNTRANS height [also called GNTRANS2003 height] (CRS code 9923). Approximates national DHHN2016 height system (CRS code 7837) to around 1cm in lowlands and 2cm in high mountains.',
         ],
         'urn:ogc:def:crs:EPSG::10150' => [
@@ -2288,7 +2037,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1330',
             'extent' => ['urn:ogc:def:area:EPSG::4668'],
             'extent_name' => 'Europe - Ireland and UK offshore',
-            'extent_description' => 'Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore',
             'help' => 'For offshore engineering on UKCS, use Ordnance Datum Newlyn (Offshore).',
         ],
         'urn:ogc:def:crs:EPSG::10151' => [
@@ -2297,7 +2045,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1331',
             'extent' => ['urn:ogc:def:area:EPSG::4668'],
             'extent_name' => 'Europe - Ireland and UK offshore',
-            'extent_description' => 'Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10190' => [
@@ -2306,7 +2053,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1354',
             'extent' => ['urn:ogc:def:area:EPSG::3213'],
             'extent_name' => 'Algeria - onshore',
-            'extent_description' => 'Algeria - onshore',
             'help' => 'In practice realised by application of geoid model recommended by the Institut National de Cartographie et de Télédétection (INCT) to WGS 84 ellipsoidal heights.',
         ],
         'urn:ogc:def:crs:EPSG::10349' => [
@@ -2315,7 +2061,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1361',
             'extent' => ['urn:ogc:def:area:EPSG::4738'],
             'extent_name' => 'Portugal - offshore',
-            'extent_description' => 'Portugal - offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10352' => [
@@ -2324,7 +2069,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1362',
             'extent' => ['urn:ogc:def:area:EPSG::4739'],
             'extent_name' => 'Spain - Balearic Islands - Formentera',
-            'extent_description' => 'Spain - Balearic Islands - Formentera - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10353' => [
@@ -2333,7 +2077,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1363',
             'extent' => ['urn:ogc:def:area:EPSG::4741'],
             'extent_name' => 'Spain - Alboran',
-            'extent_description' => 'Spain - Alboran island - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10354' => [
@@ -2342,7 +2085,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1364',
             'extent' => ['urn:ogc:def:area:EPSG::4740'],
             'extent_name' => 'Spain - Melilla',
-            'extent_description' => 'Spain - Melilla onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10364' => [
@@ -2351,7 +2093,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5178',
             'extent' => ['urn:ogc:def:area:EPSG::1294'],
             'extent_name' => 'Portugal - mainland - onshore',
-            'extent_description' => 'Portugal - mainland - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10370' => [
@@ -2360,7 +2101,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1101',
             'extent' => ['urn:ogc:def:area:EPSG::4125'],
             'extent_name' => 'Portugal - Madeira and Desertas islands onshore',
-            'extent_description' => 'Portugal - Madeira and Desertas islands - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10371' => [
@@ -2369,7 +2109,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1102',
             'extent' => ['urn:ogc:def:area:EPSG::3680'],
             'extent_name' => 'Portugal - Porto Santo island onshore',
-            'extent_description' => 'Portugal - Porto Santo island (Madeira archipelago) onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10372' => [
@@ -2378,7 +2117,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1108',
             'extent' => ['urn:ogc:def:area:EPSG::3684'],
             'extent_name' => 'Portugal - Azores W - Flores onshore',
-            'extent_description' => 'Portugal - western Azores - Flores island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10373' => [
@@ -2387,7 +2125,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1104',
             'extent' => ['urn:ogc:def:area:EPSG::2873'],
             'extent_name' => 'Portugal - Azores C - Faial onshore',
-            'extent_description' => 'Portugal - central Azores - Faial island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10374' => [
@@ -2396,7 +2133,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1105',
             'extent' => ['urn:ogc:def:area:EPSG::2874'],
             'extent_name' => 'Portugal - Azores C - Pico onshore',
-            'extent_description' => 'Portugal - central Azores - Pico island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10375' => [
@@ -2405,7 +2141,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1103',
             'extent' => ['urn:ogc:def:area:EPSG::2875'],
             'extent_name' => 'Portugal - Azores C - S Jorge onshore',
-            'extent_description' => 'Portugal - central Azores - Sao Jorge island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10376' => [
@@ -2414,7 +2149,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1106',
             'extent' => ['urn:ogc:def:area:EPSG::3681'],
             'extent_name' => 'Portugal - Azores C - Graciosa onshore',
-            'extent_description' => 'Portugal - central Azores - Graciosa island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10377' => [
@@ -2423,7 +2157,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1107',
             'extent' => ['urn:ogc:def:area:EPSG::2872'],
             'extent_name' => 'Portugal - Azores C - Terceira onshore',
-            'extent_description' => 'Portugal - central Azores - Terceira island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10378' => [
@@ -2432,7 +2165,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1110',
             'extent' => ['urn:ogc:def:area:EPSG::2871'],
             'extent_name' => 'Portugal - Azores E - S Miguel onshore',
-            'extent_description' => 'Portugal - eastern Azores - Sao Miguel island onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10379' => [
@@ -2441,7 +2173,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1109',
             'extent' => ['urn:ogc:def:area:EPSG::4126'],
             'extent_name' => 'Portugal - Azores E onshore - Santa Maria and Formigas',
-            'extent_description' => 'Portugal - eastern Azores onshore - Santa Maria, Formigas',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10482' => [
@@ -2450,7 +2181,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5206',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
-            'extent_description' => 'Denmark - onshore',
             'help' => 'Realizes DVR90 through the levelling network. Replaces Dansk Normal Null height (CRS code 5733).',
         ],
         'urn:ogc:def:crs:EPSG::10483' => [
@@ -2459,7 +2189,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1368',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
-            'extent_description' => 'Denmark - onshore',
             'help' => 'Geoid-based realization to obtain DVR90 heights through GNSS. Replaced by DVR90(2013) height (CRS code 10484).',
         ],
         'urn:ogc:def:crs:EPSG::10484' => [
@@ -2468,7 +2197,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1369',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
-            'extent_description' => 'Denmark - onshore',
             'help' => 'Geoid-based realization to obtain DVR90 heights through GNSS. Replaces DVR90(2002) height (CRS code 10483). Replaced by DVR90(2023) height (CRS code 10485).',
         ],
         'urn:ogc:def:crs:EPSG::10485' => [
@@ -2477,7 +2205,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1370',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
-            'extent_description' => 'Denmark - onshore',
             'help' => 'Geoid-based realization to obtain DVR90 heights through GNSS. Replaces DVR90(2013) height (CRS code 10484).',
         ],
         'urn:ogc:def:crs:EPSG::10547' => [
@@ -2486,7 +2213,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1372',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
-            'extent_description' => 'Denmark - offshore',
             'help' => 'Replaced by DKMSL(2023) depth.',
         ],
         'urn:ogc:def:crs:EPSG::10548' => [
@@ -2495,7 +2221,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1373',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
-            'extent_description' => 'Denmark - offshore',
             'help' => 'Replaced by DKLAT(2023) depth.',
         ],
         'urn:ogc:def:crs:EPSG::10549' => [
@@ -2504,7 +2229,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1374',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
-            'extent_description' => 'Denmark - offshore',
             'help' => 'Replaces DKMSL(2022) depth (CRS code 10547).',
         ],
         'urn:ogc:def:crs:EPSG::10550' => [
@@ -2513,7 +2237,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1375',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
-            'extent_description' => 'Denmark - offshore',
             'help' => 'Replaces DKLAT(2022) depth (CRS code 10548).',
         ],
         'urn:ogc:def:crs:EPSG::10551' => [
@@ -2522,7 +2245,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1376',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
-            'extent_description' => 'Denmark - offshore',
             'help' => 'Reference for all realizations of DKMSL without distinction.',
         ],
         'urn:ogc:def:crs:EPSG::10552' => [
@@ -2531,7 +2253,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1377',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
-            'extent_description' => 'Denmark - offshore',
             'help' => 'Reference for all realizations of DKLAT depth without distinction.',
         ],
         'urn:ogc:def:crs:EPSG::10565' => [
@@ -2540,7 +2261,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1378',
             'extent' => ['urn:ogc:def:area:EPSG::3119'],
             'extent_name' => 'Greenland - onshore',
-            'extent_description' => 'Greenland - onshore',
             'help' => 'Collection of 77 disconnected local levelling nets each tied to local mean sea level.',
         ],
         'urn:ogc:def:crs:EPSG::10649' => [
@@ -2549,7 +2269,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1387',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
-            'extent_description' => 'Greenland - offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10650' => [
@@ -2558,7 +2277,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1388',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
-            'extent_description' => 'Greenland - offshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20000' => [
@@ -2567,7 +2285,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1323',
             'extent' => ['urn:ogc:def:area:EPSG::4058'],
             'extent_name' => 'Arctic - 81°10\'N to 76°10\'N, 4°W to 38°E',
-            'extent_description' => 'Arctic (Norway (Svalbard) onshore and offshore) - between 81°10\'N and 76°10\'N',
             'help' => 'Defined through the arcgp-2006-sk geoid model.',
         ],
         'urn:ogc:def:crs:EPSG::20034' => [
@@ -2576,7 +2293,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1325',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily due to glacial isostasy. This CRS is a static snapshot at epoch 2002.0 for use with NAD83(CSRS)v4. For other epochs see CRSs 9245 & 20035.',
         ],
         'urn:ogc:def:crs:EPSG::20035' => [
@@ -2585,7 +2301,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1326',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
-            'extent_description' => 'Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon',
             'help' => 'Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily due to glacial isostasy. This CRS is a static snapshot at epoch 1997.0 for use with NAD83(CSRS)v2 and 3. For other epochs see CRSs 9245 & 20034.',
         ],
         'urn:ogc:def:crs:EPSG::20036' => [
@@ -2594,7 +2309,6 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1328',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
-            'extent_description' => 'Indonesia - onshore and offshore',
             'help' => 'Physical height component of national vertical control network (JKVN). Orthometric heights. Replaces INAGeoid2020 v1 height (CRS code 9471).',
         ],
     ];

@@ -66,7 +66,7 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * AVWS height
      * Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island,
-     * Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
+     * Cocos (Keeling) Islands, Norfolk Island
      * For cadastral and local engineering applications see AHD height (CRS code 5711). AVWS is more accurate than AHD
      * for applications over distances greater than 10 km.
      */
@@ -86,7 +86,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Antalya height
-     * Extent: Türkiye (Turkey) - onshore.
+     * Extent: Turkey - onshore.
      */
     public const EPSG_ANTALYA_HEIGHT = 'urn:ogc:def:crs:EPSG::5775';
 
@@ -106,8 +106,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * BI height
-     * Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore
-     * Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
+     * Extent: UK - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain
+     * (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore.
      */
     public const EPSG_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9451';
 
@@ -126,16 +126,14 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Baltic 1977 depth
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
-     * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
-     * onshore; Uzbekistan.
+     * onshore; Lithuania - onshore; Moldova; Russia - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan.
      */
     public const EPSG_BALTIC_1977_DEPTH = 'urn:ogc:def:crs:EPSG::5612';
 
     /**
      * Baltic 1977 height
      * Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia -
-     * onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine -
-     * onshore; Uzbekistan
+     * onshore; Lithuania - onshore; Moldova; Russia - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan
      * The adjustment also included the Czech and Slovak Republics but not adopted there, with earlier 1957 adjustment
      * remaining in use: see CRS code 8357.
      */
@@ -165,14 +163,14 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Belfast height
-     * Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+     * Extent: UK - Northern Ireland (Ulster) - onshore
      * Malin Head height (CRS code 5731) used for medium and small scale topographic mapping.
      */
     public const EPSG_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::5732';
 
     /**
      * Black Sea depth
-     * Extent: Georgia - onshore and offshore
+     * Extent: Georgia
      * Black Sea datum is 0.4m below Baltic datum.
      */
     public const EPSG_BLACK_SEA_DEPTH = 'urn:ogc:def:crs:EPSG::5336';
@@ -211,16 +209,14 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * CD UK & Ireland VORF08 depth
-     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
-     * offshore.
+     * Extent: Ireland and UK (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.
      */
     public const EPSG_CD_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10151';
 
     /**
      * CGVD2013(CGG2013) height
-     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
-     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
      * Replaces CGVD28 height (CRS code 5713). CGVD2013(CGG2013) height is realized by geoid model CGG2013 (CT code
      * 9246). Replaced by CGVD2013a(1997 / 2002 / 2010) height. CGG2013a is identical to CGG2013 except in the western
      * sector of Lake of the Woods.
@@ -229,9 +225,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * CGVD2013a(1997) height
-     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
-     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
      * Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily
      * due to glacial isostasy. This CRS is a static snapshot at epoch 1997.0 for use with NAD83(CSRS)v2 and 3. For
      * other epochs see CRSs 9245 & 20034.
@@ -240,9 +235,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * CGVD2013a(2002) height
-     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
-     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
      * Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily
      * due to glacial isostasy. This CRS is a static snapshot at epoch 2002.0 for use with NAD83(CSRS)v4. For other
      * epochs see CRSs 9245 & 20035.
@@ -251,9 +245,8 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * CGVD2013a(2010) height
-     * Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and
-     * Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan;
-     * Yukon
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
      * Replaces CGVD2013(CGG2013) height. Although its datum is static CGVD2013a heights change with time, primarily
      * due to glacial isostasy. This CRS is a static snapshot at epoch 2010.0 for use with NAD83(CSRS)v6 and v7. For
      * other epochs see CRSs 20034/20035.
@@ -363,14 +356,14 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Caspian depth
-     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore
+     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russia - Caspian Sea; Turkmenistan - offshore
      * Caspian Sea water levels are now offset appreciably from this datum.
      */
     public const EPSG_CASPIAN_DEPTH = 'urn:ogc:def:crs:EPSG::5706';
 
     /**
      * Caspian height
-     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore
+     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russia - Caspian Sea; Turkmenistan - offshore
      * Caspian Sea water levels are now offset appreciably from this datum.
      */
     public const EPSG_CASPIAN_HEIGHT = 'urn:ogc:def:crs:EPSG::5611';
@@ -416,7 +409,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * DHHN2016 height
-     * Extent: Germany - onshore and offshore
+     * Extent: Germany
      * Replaces DHHN92 height (CRS code 5783) from 2016-12-01.
      */
     public const EPSG_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::7837';
@@ -606,8 +599,7 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark;
      * Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
-     * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
-     * City State
+     * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Vatican City State
      * Uses Normal heights. Replaced by EVRF2007 height (CRS code 5621). In Austria, orthometric heights used instead -
      * see CRS code 9274.
      */
@@ -618,8 +610,7 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia;
      * Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia;
      * Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino;
-     * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican
-     * City State
+     * Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Vatican City State
      * Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2019 height (CRS code 9389).
      */
     public const EPSG_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::5621';
@@ -637,7 +628,7 @@ class Vertical extends CoordinateReferenceSystem
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
      * Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden;
-     * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State
+     * Switzerland; UK - Great Britain mainland; Ukraine; Vatican City State
      * September 2020 adjustment. Replaces 2019 adjustment and EVRF2007 height (CRS code 5621). Uses Normal heights.
      * Zero-tide solution. See EVRF2019 mean-tide height (CRS code 9390) for solution more appropriate for oceanography
      * and GNSS-related activities.
@@ -650,7 +641,7 @@ class Vertical extends CoordinateReferenceSystem
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
      * Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland;
      * Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden;
-     * Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State
+     * Switzerland; UK - Great Britain mainland; Ukraine; Vatican City State
      * September 2020 adjustment. Replaces 2019 adjustment. Uses Normal heights. Mean-tide solution. See EVRF2019
      * height (CRS code 9389) for zero-tide solution more appropriate for gravity-related activities.
      */
@@ -684,7 +675,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Fair Isle height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore
+     * Extent: UK - Great Britain - Scotland - Fair Isle onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_FAIR_ISLE_HEIGHT = 'urn:ogc:def:crs:EPSG::5741';
@@ -714,7 +705,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Flannan Isles height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore
+     * Extent: UK - Great Britain - Scotland - Flannan Isles onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_FLANNAN_ISLES_HEIGHT = 'urn:ogc:def:crs:EPSG::5748';
@@ -727,7 +718,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Foula height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore
+     * Extent: UK - Great Britain - Scotland - Foula onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_FOULA_HEIGHT = 'urn:ogc:def:crs:EPSG::5743';
@@ -800,7 +791,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * GVR2000 height
-     * Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W
+     * Extent: Greenland between 59°N and 84°N and west of 10°W
      * Replaced by GVR2016 height (CRS code 8267). GVR2000 is realized by gravimetric geoid model 2000 (transformation
      * code 8268) applied to GR96 (CRS code 4909).
      */
@@ -808,7 +799,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * GVR2016 height
-     * Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W
+     * Extent: Greenland between 58°N and 85°N and west of 7°W
      * Replaces GVR2000 height (CRS code 8266). GVR2016 is realized by gravimetric geoid model 2016 (transformation
      * code 8269) applied to GR96 (CRS code 4909).
      */
@@ -892,8 +883,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * HS2-VRF height
-     * Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and
-     * Crewe
+     * Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe
      * HS2-VRF height is equivalent to ODN height as historically realized through OSNet v2001 and OSGM02. After the
      * ODN realization was updated to be through OSNet v2009 and OSGM15, HS2-VRF height was introduced for backward
      * consistency.
@@ -951,14 +941,14 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * IGLD 1955 height
-     * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway
+     * Extent: Canada and USA - Great Lakes basin and St Lawrence Seaway
      * Replaces several earlier systems. Replaced by IGLD 1985 (CRS code 5609).
      */
     public const EPSG_IGLD_1955_HEIGHT = 'urn:ogc:def:crs:EPSG::5608';
 
     /**
      * IGLD 1985 height
-     * Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway
+     * Extent: Canada and USA - Great Lakes basin and St Lawrence Seaway
      * Replaces IGLD 1955 (CRS code 5608).
      */
     public const EPSG_IGLD_1985_HEIGHT = 'urn:ogc:def:crs:EPSG::5609';
@@ -1010,7 +1000,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * INAGeoid2020 v1 height
-     * Extent: Indonesia - onshore and offshore
+     * Extent: Indonesia
      * Physical height component of national vertical control network (JKVN). Orthometric heights. Replaced by
      * INAGeoid2020 v2 height (code 20036).
      */
@@ -1018,7 +1008,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * INAGeoid2020 v2 height
-     * Extent: Indonesia - onshore and offshore
+     * Extent: Indonesia
      * Physical height component of national vertical control network (JKVN). Orthometric heights. Replaces
      * INAGeoid2020 v1 height (CRS code 9471).
      */
@@ -1243,7 +1233,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Lerwick height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore.
+     * Extent: UK - Great Britain - Scotland - Shetland Islands onshore.
      */
     public const EPSG_LERWICK_HEIGHT = 'urn:ogc:def:crs:EPSG::5742';
 
@@ -1333,8 +1323,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * MSL UK & Ireland VORF08 depth
-     * Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and
-     * offshore
+     * Extent: Ireland and UK (including Isle of Man and Channel Islands) - inshore, nearshore and offshore
      * For offshore engineering on UKCS, use Ordnance Datum Newlyn (Offshore).
      */
     public const EPSG_MSL_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10150';
@@ -1359,7 +1348,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * MSL depth (ftUS)
-     * Extent: United States (USA) - onshore and offshore
+     * Extent: USA
      * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
      * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
      * a specified geoid/hydroid model.
@@ -1386,7 +1375,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * MSL height (ftUS)
-     * Extent: United States (USA) - onshore and offshore
+     * Extent: USA
      * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
      * instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through
      * a specified geoid/hydroid model.
@@ -1401,13 +1390,13 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Macao height
-     * Extent: China - Macao - onshore and offshore.
+     * Extent: China - Macao.
      */
     public const EPSG_MACAO_HEIGHT = 'urn:ogc:def:crs:EPSG::8434';
 
     /**
      * Malin Head height
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
      * Topographic mapping at all scales in Republic and medium and small scales in Northern Ireland. Belfast Lough
      * height (CRS code 5732) used for large scale topographic mapping in Northern Ireland.
      */
@@ -1502,48 +1491,48 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAP height
-     * Extent: Netherlands - onshore and offshore
+     * Extent: Netherlands
      * Use has been extended from Netherlands onshore to Netherlands onshore and offshore from 2018.
      */
     public const EPSG_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::5709';
 
     /**
      * NAVD88 depth
-     * Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas;
-     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
-     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
-     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
-     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California;
+     * Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana;
+     * Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New
+     * Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania;
+     * Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West
+     * Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAVD88_DEPTH = 'urn:ogc:def:crs:EPSG::6357';
 
     /**
      * NAVD88 depth (ftUS)
-     * Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
-     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
-     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
-     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
-     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming
+     * Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado;
+     * Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine;
+     * Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire;
+     * New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode
+     * Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia;
+     * Wisconsin; Wyoming
      * Replaces NGVD29 depth (ftUS) (CRS code 6359).
      */
     public const EPSG_NAVD88_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::6358';
 
     /**
      * NAVD88 height
-     * Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas;
-     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
-     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
-     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
-     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California;
+     * Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana;
+     * Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New
+     * Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania;
+     * Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West
+     * Virginia; Wisconsin; Wyoming.
      */
     public const EPSG_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5703';
 
     /**
      * NAVD88 height (ft)
-     * Extent: United States (USA) - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina
+     * Extent: USA - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina
      * Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed
      * State Plane legislation in International feet (note: not US survet feet).
      */
@@ -1551,12 +1540,12 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAVD88 height (ftUS)
-     * Extent: United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas;
-     * California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky;
-     * Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska;
-     * Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon;
-     * Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington;
-     * West Virginia; Wisconsin; Wyoming
+     * Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado;
+     * Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine;
+     * Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire;
+     * New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode
+     * Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia;
+     * Wisconsin; Wyoming
      * Replaces NGVD29 height (ftUS) (CRS code 5702).
      */
     public const EPSG_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::6360';
@@ -1633,33 +1622,33 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NGVD29 depth (ftUS)
-     * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
-     * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
-     * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
-     * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
+     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
+     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
+     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
+     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
      * Replaced by NAVD88 depth (ftUS) (CRS code 6358).
      */
     public const EPSG_NGVD29_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::6359';
 
     /**
      * NGVD29 height (ftUS)
-     * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
-     * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
-     * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
-     * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
+     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
+     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
+     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
+     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
      * Replaced by NAVD88 height (ftUS) (CRS code 6360).
      */
     public const EPSG_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::5702';
 
     /**
      * NGVD29 height (m)
-     * Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut;
-     * Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland;
-     * Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey;
-     * New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South
-     * Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
+     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
+     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
+     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
+     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
      * System defined by IOGP to allow transformation of heights to and from NGVD29. See CRS code 5702 for system in US
      * survey feet in actual use.
      */
@@ -1695,16 +1684,16 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NZVD2009 height
-     * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
-     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
+     * Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell
+     * Island, Kermadec Islands, Raoul Island and Snares Islands
      * Replaced by NZVD2016 from 2016-06-27.
      */
     public const EPSG_NZVD2009_HEIGHT = 'urn:ogc:def:crs:EPSG::4440';
 
     /**
      * NZVD2016 height
-     * Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands,
-     * Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
+     * Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell
+     * Island, Kermadec Islands, Raoul Island and Snares Islands
      * Normal-orthometric heights. Replaces NZVD2009 height (CRS code 4440).
      */
     public const EPSG_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::7839';
@@ -1723,15 +1712,14 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * North Rona height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore
+     * Extent: UK - Great Britain - Scotland - North Rona onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_NORTH_RONA_HEIGHT = 'urn:ogc:def:crs:EPSG::5745';
 
     /**
      * ODN (Offshore) height
-     * Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and
-     * 9°W to 2°E
+     * Extent: UK - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E
      * Defined through OSGM geoid model (transformation code 7713). Replaces Fair Isle height, Flannan Isles height,
      * Foula height, North Rona height, St Kilda height and Sule Skerry height (CRS codes 5741, 5748, 5743, 5745, 5747
      * and 5744) from 2016.
@@ -1740,14 +1728,13 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * ODN Orkney height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore.
+     * Extent: UK - Great Britain - Scotland - Orkney Islands onshore.
      */
     public const EPSG_ODN_ORKNEY_HEIGHT = 'urn:ogc:def:crs:EPSG::5740';
 
     /**
      * ODN height
-     * Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and
-     * Inner Hebrides.
+     * Extent: UK - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
      */
     public const EPSG_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::5701';
 
@@ -1773,7 +1760,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * PNG08 height
-     * Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore
+     * Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E
      * PNG08 height = PNG94 ellipsoidal height - value of geoid undulation derived by bilinear interpolation of PNG08
      * geoid model (see transformation code 7655).
      */
@@ -1831,7 +1818,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Poolbeg height (ft(Br36))
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
      * Topographic mapping before 1956 in Northern Ireland and 1970 in the Republic of Ireland. Replaced by Belfast
      * Lough height and Malin Head height (CRS codes 5732 and 5731).
      */
@@ -1839,7 +1826,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Poolbeg height (m)
-     * Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
      * CRS in metres used only for transformation of heights referenced to Poolbeg height (ft). For CRS in feet see
      * code 5754.
      */
@@ -1875,7 +1862,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Ras Ghumays height
-     * Extent: United Arab Emirates (UAE) - Abu Dhabi onshore.
+     * Extent: UAE - Abu Dhabi onshore.
      */
     public const EPSG_RAS_GHUMAYS_HEIGHT = 'urn:ogc:def:crs:EPSG::5843';
 
@@ -1893,7 +1880,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * SHD height
-     * Extent: Singapore - onshore and offshore.
+     * Extent: Singapore.
      */
     public const EPSG_SHD_HEIGHT = 'urn:ogc:def:crs:EPSG::6916';
 
@@ -1934,7 +1921,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * SVD2006 height
-     * Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N
+     * Extent: Arctic (Norway (Svalbard)) - between 81°10'N and 76°10'N
      * Defined through the arcgp-2006-sk geoid model.
      */
     public const EPSG_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::20000';
@@ -1986,14 +1973,14 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * St. Kilda height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore
+     * Extent: UK - Great Britain - Scotland - St Kilda onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_ST_KILDA_HEIGHT = 'urn:ogc:def:crs:EPSG::5747';
 
     /**
      * St. Marys height
-     * Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore.
+     * Extent: UK - Great Britain - England - Isles of Scilly onshore.
      */
     public const EPSG_ST_MARYS_HEIGHT = 'urn:ogc:def:crs:EPSG::5749';
 
@@ -2005,13 +1992,13 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * Stornoway height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore.
+     * Extent: UK - Great Britain - Scotland - Outer Hebrides onshore.
      */
     public const EPSG_STORNOWAY_HEIGHT = 'urn:ogc:def:crs:EPSG::5746';
 
     /**
      * Sule Skerry height
-     * Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore
+     * Extent: UK - Great Britain - Scotland - Sule Skerry onshore
      * Replaced by ODN (Offshore) height (CRS code 7707) in 2016.
      */
     public const EPSG_SULE_SKERRY_HEIGHT = 'urn:ogc:def:crs:EPSG::5744';
@@ -2183,7 +2170,7 @@ class Vertical extends CoordinateReferenceSystem
     {
         return array_map(fn (array $data) => [
             'name' => $data['name'],
-            'extent_description' => $data['extent_description'],
+            'extent_description' => $data['name'],
             'help' => $data['help'],
         ], static::$sridData);
     }

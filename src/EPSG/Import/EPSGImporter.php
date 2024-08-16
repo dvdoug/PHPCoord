@@ -149,6 +149,26 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_usage SET extent_code = 1262 WHERE extent_code IN (1263, 2346, 2830, 4393, 4520, 4523)');
 
         /*
+         * Shorten extent names
+         */
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'United Arab Emirates (UAE)', 'UAE')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'United Kingdom (UK)', 'UK')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'United States (USA)', 'USA')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'Russian Federation', 'Russia')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'Türkiye (Turkey)', 'Turkey')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, ' All onshore and offshore.', '')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, ' - onshore and offshore', '')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'onshore and offshore - ', '- ')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, ', onshore and offshore.', '.')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, ', onshore and offshore', ', ')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, 'onshore and offshore.', '.')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = REPLACE(extent_description, ' onshore and offshore', '')");
+
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = RTRIM(extent_description, ' ')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = RTRIM(extent_description, ',')");
+        $sqlite->exec("UPDATE epsg_extent SET extent_description = RTRIM(extent_description, '.') WHERE extent_description NOT LIKE '%.%.'");
+
+        /*
          * Ireland TM75 Polynomial is not "reversible" but can be reversed via iteration
          */
         $sqlite->exec('UPDATE epsg_coordoperationmethod SET reverse_op = 1 WHERE coord_op_method_code = 9648');

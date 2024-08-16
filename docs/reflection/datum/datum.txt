@@ -15,7 +15,7 @@ AIOC 1995 datum is 1.7m above Caspian datum and 26.3m below Baltic datum.
 AbInvA96_2020 Intermediate Reference Frame
 ------------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the A96 highway from Aberdeen to Inverness
+| Extent: UK - on or related to the A96 highway from Aberdeen to Inverness
 
 .. code-block:: php
 
@@ -29,7 +29,7 @@ Created in 2020 to support intermediate CRS "AbInvA96_2020-IRF" in the emulation
 Abidjan 1987
 ------------
 | Type: Geodetic
-| Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore
+| Extent: Côte d'Ivoire (Ivory Coast)
 
 .. code-block:: php
 
@@ -41,7 +41,7 @@ Fundamental point: Abidjan I. Latitude: 5°18'51.01"N, longitude: 4°02'06.04"W 
 Accra
 -----
 | Type: Geodetic
-| Extent: Ghana - onshore and offshore
+| Extent: Ghana
 
 .. code-block:: php
 
@@ -226,7 +226,7 @@ Fundamental point: station A4, Police.
 Antalya
 -------
 | Type: Vertical
-| Extent: Türkiye (Turkey) - onshore
+| Extent: Turkey - onshore
 
 .. code-block:: php
 
@@ -333,7 +333,7 @@ Australian Antarctic Datum 1998
 Australian Geodetic Datum 1966
 ------------------------------
 | Type: Geodetic
-| Extent: Australia - onshore and offshore. Papua New Guinea - onshore
+| Extent: Australia. Papua New Guinea - onshore
 
 .. code-block:: php
 
@@ -385,7 +385,7 @@ MSL 1972 at Hobart and Burnie.
 Australian Terrestrial Reference Frame 2014
 -------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island
 
 .. code-block:: php
 
@@ -399,7 +399,7 @@ Densification of ITRF2014 in the Australian region.
 Australian Vertical Working Surface
 -----------------------------------
 | Type: Vertical
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island
 
 .. code-block:: php
 
@@ -439,7 +439,7 @@ In use from 1979. To be phased out in late 1990's.
 Ayabelle Lighthouse
 -------------------
 | Type: Geodetic
-| Extent: Djibouti - onshore and offshore
+| Extent: Djibouti
 
 .. code-block:: php
 
@@ -547,7 +547,7 @@ Uses Normal heights.
 Baltic 1977
 -----------
 | Type: Vertical
-| Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan
+| Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russia - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan
 
 .. code-block:: php
 
@@ -664,7 +664,7 @@ Beduaram
 Beijing 1954
 ------------
 | Type: Geodetic
-| Extent: China - onshore and offshore
+| Extent: China
 
 .. code-block:: php
 
@@ -689,7 +689,7 @@ Bekaa Valley 1920
 Belfast Lough
 -------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -727,7 +727,7 @@ Fundamental point: Fort George base. Latitude 32°22'44.36"N, longitude 64°40'5
 Bermuda 2000
 ------------
 | Type: Geodetic
-| Extent: Bermuda - onshore and offshore
+| Extent: Bermuda
 
 .. code-block:: php
 
@@ -787,7 +787,7 @@ Bissau
 Black Sea
 ---------
 | Type: Vertical
-| Extent: Georgia - onshore and offshore
+| Extent: Georgia
 
 .. code-block:: php
 
@@ -865,7 +865,7 @@ Network of BBT stations, including existing nearby stations of the Austrian AREF
 British Isles height ensemble
 -----------------------------
 | Type: Ensemble
-| Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore
+| Extent: UK - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland) and Northern Ireland. Ireland onshore. Isle of Man onshore
 
 .. code-block:: php
 
@@ -891,7 +891,7 @@ Bukit Rimpah
 Bulgaria Geodetic System 2005
 -----------------------------
 | Type: Geodetic
-| Extent: Bulgaria - onshore and offshore
+| Extent: Bulgaria
 
 .. code-block:: php
 
@@ -955,7 +955,7 @@ Fundamental point: Zimmerwald observatory.
 CNH22 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Crewe via Chester to Holyhead
+| Extent: UK - on or related to the rail route from Crewe via Chester to Holyhead
 
 .. code-block:: php
 
@@ -969,7 +969,7 @@ Created in 2022 to support intermediate CRS CNH22-IRF in the emulation of the CN
 COV23 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - in and around the area of Coventry city centre and the route to Birmingham airport
+| Extent: UK - in and around the area of Coventry city centre and the route to Birmingham airport
 
 .. code-block:: php
 
@@ -983,7 +983,7 @@ Created in 2023 to support intermediate CRS COV23-IRF in the emulation of the CO
 CR-SIRGAS
 ---------
 | Type: Geodetic
-| Extent: Costa Rica - onshore and offshore
+| Extent: Costa Rica
 
 .. code-block:: php
 
@@ -997,7 +997,7 @@ Replaces CR05 from April 2018.
 CWS13 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from from Chester via Wrexham to Shrewsbury
+| Extent: UK - on or related to the rail route from from Chester via Wrexham to Shrewsbury
 
 .. code-block:: php
 
@@ -1123,7 +1123,7 @@ Orthometric heights.
 Camacupa 1948
 -------------
 | Type: Geodetic
-| Extent: Angola - Angola proper - onshore and offshore
+| Extent: Angola - Angola proper
 
 .. code-block:: php
 
@@ -1137,7 +1137,7 @@ Provisional adjustment, replaced in 2015 for onshore use by Camacupa 2015.
 Camacupa 2015
 -------------
 | Type: Geodetic
-| Extent: Angola - onshore and offshore
+| Extent: Angola
 
 .. code-block:: php
 
@@ -1188,7 +1188,7 @@ From November 2013 replaced by CGVD2013 (datum code 1127).
 Canadian Geodetic Vertical Datum of 2013 (CGG2013)
 --------------------------------------------------
 | Type: Vertical
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1202,7 +1202,7 @@ Replaces CGVD28 from November 2013. Replaced by CGVD2013(CGG2013a) epoch 2010 fr
 Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 1997
 --------------------------------------------------------------
 | Type: Vertical
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1216,7 +1216,7 @@ CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change w
 Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2002
 --------------------------------------------------------------
 | Type: Vertical
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1230,7 +1230,7 @@ CGVD2013(CGG2013a) is a static datum; however, heights referenced to it change w
 Canadian Geodetic Vertical Datum of 2013 (CGG2013a) epoch 2010
 --------------------------------------------------------------
 | Type: Vertical
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -1268,7 +1268,7 @@ Fundamental point: Central 1950.  Latitude: 28°29'32.36555"N, longitude 80°34'
 Carthage
 --------
 | Type: Geodetic
-| Extent: Tunisia - onshore and offshore
+| Extent: Tunisia
 
 .. code-block:: php
 
@@ -1310,7 +1310,7 @@ Orthometric heights.
 Caspian Sea
 -----------
 | Type: Vertical
-| Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russian Federation - Caspian Sea; Turkmenistan - offshore
+| Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russia - Caspian Sea; Turkmenistan - offshore
 
 .. code-block:: php
 
@@ -1347,7 +1347,7 @@ Cayman Brac Vertical Datum 1961
 Cayman Islands Geodetic Datum 2011
 ----------------------------------
 | Type: Geodetic
-| Extent: Cayman Islands - onshore and offshore. Includes Grand Cayman, Little Cayman and Cayman Brac
+| Extent: Cayman Islands. Includes Grand Cayman, Little Cayman and Cayman Brac
 
 .. code-block:: php
 
@@ -1403,7 +1403,7 @@ ZH is located below the level of the Lowest Astronomical Tide (LAT).
 Chart Datum UK & Ireland VORF08
 -------------------------------
 | Type: Vertical
-| Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore
+| Extent: Ireland and UK (including Isle of Man and Channel Islands) - inshore, nearshore and offshore
 
 .. code-block:: php
 
@@ -1443,7 +1443,7 @@ Replaces Chatham Islands Datum 1971 (code 6672). Replaced by New Zealand Geodeti
 China 2000
 ----------
 | Type: Geodetic
-| Extent: China - onshore and offshore
+| Extent: China
 
 .. code-block:: php
 
@@ -1523,7 +1523,7 @@ Fundamental point: Conakry. Latitude: 10.573766g N, longitude: 17.833682g W (of 
 Congo 1960 Pointe Noire
 -----------------------
 | Type: Geodetic
-| Extent: Congo - onshore and offshore
+| Extent: Congo
 
 .. code-block:: php
 
@@ -1591,7 +1591,7 @@ Replaces 1961 adjustment (datum code 1074). Superseded by SAD69. NIMA gives coor
 Costa Rica 2005
 ---------------
 | Type: Geodetic
-| Extent: Costa Rica - onshore and offshore
+| Extent: Costa Rica
 
 .. code-block:: php
 
@@ -1605,7 +1605,7 @@ Replaces Ocotepeque (datum code 1070) in Costa Rica from March 2007.
 Croatian Terrestrial Reference System
 -------------------------------------
 | Type: Geodetic
-| Extent: Croatia - onshore and offshore
+| Extent: Croatia
 
 .. code-block:: php
 
@@ -1647,7 +1647,7 @@ Survey plans and maps produced by DLS after 1993.
 DIBA15 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Didcot to Banbury
+| Extent: UK - on or related to the rail route from Didcot to Banbury
 
 .. code-block:: php
 
@@ -1791,7 +1791,7 @@ Orthometric heights.
 Datum Geodesi Nasional 1995
 ---------------------------
 | Type: Geodetic
-| Extent: Indonesia - onshore and offshore
+| Extent: Indonesia
 
 .. code-block:: php
 
@@ -1988,7 +1988,7 @@ Replaces DHHN85 in West Germany and SNN76 in East Germany. Uses Normal heights.
 Deutsches Haupthoehennetz 2016
 ------------------------------
 | Type: Vertical
-| Extent: Germany - onshore and offshore
+| Extent: Germany
 
 .. code-block:: php
 
@@ -2014,7 +2014,7 @@ Fundamental point: ISTS 073.
 DoPw22 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Dovey Junction to Pwllheli
+| Extent: UK - on or related to the rail route from Dovey Junction to Pwllheli
 
 .. code-block:: php
 
@@ -2106,7 +2106,7 @@ Normal-orthometric heights.
 EBBWV14 Intermediate Reference Frame
 ------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Newport (Park Junction) to Ebbw Vale
+| Extent: UK - on or related to the rail route from Newport (Park Junction) to Ebbw Vale
 
 .. code-block:: php
 
@@ -2120,7 +2120,7 @@ Created in 2022 to support intermediate CRS "EBBWV14-IRF" in the emulation of th
 ECML14 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to Edinburgh
+| Extent: UK - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to Edinburgh
 
 .. code-block:: php
 
@@ -2134,7 +2134,7 @@ Created in 2024 to support intermediate CRS "ECML14-IRF" in the emulation of the
 ECML14_NB Intermediate Reference Frame
 --------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth
+| Extent: UK - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the section from Bedlington to Morpeth
 
 .. code-block:: php
 
@@ -2190,7 +2190,7 @@ Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 10
 EOS21 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee.
+| Extent: UK - on or related to the complex of rail routes in the East of Scotland, incorporating the route from Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and Cowdenbeath; and routes via Leuchars and Perth to Dundee
 
 .. code-block:: php
 
@@ -2204,7 +2204,7 @@ Created in 2021 to support intermediate CRS "EOS21-IRF" in the emulation of the 
 ETRF2000 Poland
 ---------------
 | Type: Geodetic
-| Extent: Poland - onshore and offshore
+| Extent: Poland
 
 .. code-block:: php
 
@@ -2218,7 +2218,7 @@ Adopted as official Polish reference frame from 2012-12-01 through Ordinance of 
 ETRS89/DREF91 Realization 2016
 ------------------------------
 | Type: Geodetic
-| Extent: Germany - onshore and offshore
+| Extent: Germany
 
 .. code-block:: php
 
@@ -2232,7 +2232,7 @@ German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 f
 EWR2 Intermediate Reference Frame
 ---------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough
+| Extent: UK - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough
 
 .. code-block:: php
 
@@ -2257,7 +2257,7 @@ Easter Island 1967
 Egypt 1907
 ----------
 | Type: Geodetic
-| Extent: Egypt - onshore and offshore
+| Extent: Egypt
 
 .. code-block:: php
 
@@ -2325,7 +2325,7 @@ Based on ETRS89 as established during the 1992 Baltic campaign. Replaced by Esto
 Estonia 1997
 ------------
 | Type: Geodetic
-| Extent: Estonia - onshore and offshore
+| Extent: Estonia
 
 .. code-block:: php
 
@@ -2353,7 +2353,7 @@ Uses Normal heights.
 European Datum 1950
 -------------------
 | Type: Geodetic
-| Extent: Europe - west: Andorra; Cyprus; Denmark - onshore and offshore; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard - onshore and offshore; Portugal - mainland - offshore; Spain - onshore; Türkiye (Turkey) - onshore and offshore; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan
+| Extent: Europe - west: Andorra; Cyprus; Denmark; Faroe Islands - onshore; France - offshore; Germany - offshore North Sea; Gibraltar; Greece - offshore; Israel - offshore; Italy including San Marino and Vatican City State; Ireland offshore; Malta; Netherlands - offshore; North Sea; Norway including Svalbard; Portugal - mainland - offshore; Spain - onshore; Turkey; United Kingdom - UKCS offshore east of 6°W including Channel Islands (Guernsey and Jersey). Egypt - Western Desert; Iraq - onshore; Jordan
 
 .. code-block:: php
 
@@ -2365,7 +2365,7 @@ Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22'51.4456"N, longitud
 European Datum 1950(1977)
 -------------------------
 | Type: Geodetic
-| Extent: Iran - onshore and offshore
+| Extent: Iran
 
 .. code-block:: php
 
@@ -2405,7 +2405,7 @@ Fundamental point: Potsdam (Helmert Tower). Latitude: 52°22'51.4456"N, longitud
 European Libyan Datum 1979
 --------------------------
 | Type: Geodetic
-| Extent: Libya - onshore and offshore
+| Extent: Libya
 
 .. code-block:: php
 
@@ -2417,7 +2417,7 @@ Extension of ED50 over Libya.
 European Terrestrial Reference Frame 1989
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2431,7 +2431,7 @@ Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum 
 European Terrestrial Reference Frame 1990
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2445,7 +2445,7 @@ Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum cod
 European Terrestrial Reference Frame 1991
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2459,7 +2459,7 @@ Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum cod
 European Terrestrial Reference Frame 1992
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2473,7 +2473,7 @@ Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum cod
 European Terrestrial Reference Frame 1993
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2487,7 +2487,7 @@ Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum cod
 European Terrestrial Reference Frame 1994
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2501,7 +2501,7 @@ Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum cod
 European Terrestrial Reference Frame 1996
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2515,7 +2515,7 @@ Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum cod
 European Terrestrial Reference Frame 1997
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2529,7 +2529,7 @@ Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum cod
 European Terrestrial Reference Frame 2000
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2543,7 +2543,7 @@ Defined by transformation from ITRF2000 (CT 7940). Replaces ETRF97. On the publi
 European Terrestrial Reference Frame 2005
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2557,7 +2557,7 @@ Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of thi
 European Terrestrial Reference Frame 2014
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2571,7 +2571,7 @@ Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum
 European Terrestrial Reference Frame 2020
 -----------------------------------------
 | Type: Geodetic
-| Extent: Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
+| Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
 
 .. code-block:: php
 
@@ -2585,7 +2585,7 @@ Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datu
 European Terrestrial Reference System 1989 ensemble
 ---------------------------------------------------
 | Type: Ensemble
-| Extent: Europe - onshore and offshore: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; United Kingdom (UK) including Channel Islands and Isle of Man; Vatican City State
+| Extent: Europe: Albania; Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Faroe Islands; Finland; France; Germany; Gibraltar; Greece; Hungary; Ireland; Italy; Kosovo; Latvia; Liechtenstein; Lithuania; Luxembourg; Malta; Moldova; Monaco; Montenegro; Netherlands; North Macedonia; Norway including Svalbard and Jan Mayen; Poland; Portugal - mainland; Romania; San Marino; Serbia; Slovakia; Slovenia; Spain - mainland and Balearic islands; Sweden; Switzerland; UK including Channel Islands and Isle of Man; Vatican City State
 
 .. code-block:: php
 
@@ -2597,7 +2597,7 @@ Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96
 European Vertical Reference Frame 2000
 --------------------------------------
 | Type: Vertical
-| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar; Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Vatican City State
 
 .. code-block:: php
 
@@ -2625,7 +2625,7 @@ Geoid surface is smoother than the EVRF2000 quasigeoid.
 European Vertical Reference Frame 2007
 --------------------------------------
 | Type: Vertical
-| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Vatican City State
+| Extent: Europe - onshore - Andorra; Austria; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; Norway; Poland; Portugal - mainland; Romania; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Vatican City State
 
 .. code-block:: php
 
@@ -2655,7 +2655,7 @@ Uses Normal heights.
 European Vertical Reference Frame 2019
 --------------------------------------
 | Type: Vertical
-| Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State
+| Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Ukraine; Vatican City State
 
 .. code-block:: php
 
@@ -2669,7 +2669,7 @@ Following EVRS conventions, EVRF2019 is a zero-tide surface. Replaces EVRF2007 (
 European Vertical Reference Frame 2019 mean tide
 ------------------------------------------------
 | Type: Vertical
-| Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; United Kingdom (UK) - Great Britain mainland; Ukraine; Vatican City State
+| Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Ukraine; Vatican City State
 
 .. code-block:: php
 
@@ -2683,7 +2683,7 @@ Mean-tide surface, describing how water flows. See EVRF2019 (datum code 1274) fo
 FNL22 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Inverness to Thurso and Wick
+| Extent: UK - on or related to the rail route from Inverness to Thurso and Wick
 
 .. code-block:: php
 
@@ -2725,7 +2725,7 @@ Based on reciprocal trigonometric heighting. Replaced by PHD93 Datum (code 5123)
 Fair Isle
 ---------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Fair Isle onshore
+| Extent: UK - Great Britain - Scotland - Fair Isle onshore
 
 .. code-block:: php
 
@@ -2885,7 +2885,7 @@ Network included in Nahrwan 1967 adjustment.
 Flannan Isles
 -------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Flannan Isles onshore
+| Extent: UK - Great Britain - Scotland - Flannan Isles onshore
 
 .. code-block:: php
 
@@ -2923,7 +2923,7 @@ Replaced by RRAF 1991 (datum code 1047).
 Foula
 -----
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Foula onshore
+| Extent: UK - Great Britain - Scotland - Foula onshore
 
 .. code-block:: php
 
@@ -2949,7 +2949,7 @@ Orthometric heights.
 GBK19 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride
+| Extent: UK - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East Kilbride
 
 .. code-block:: php
 
@@ -2991,7 +2991,7 @@ Approximates the national DHHN2016 levelling surface to around 1cm in lowlands a
 GWPBS22 Intermediate Reference Frame
 ------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from London (Paddington) to Swansea
+| Extent: UK - on or related to the rail route from London (Paddington) to Swansea
 
 .. code-block:: php
 
@@ -3005,7 +3005,7 @@ Created in 2022 to support intermediate CRS GWPBS22-IRF in the emulation of the 
 GWWAB22 Intermediate Reference Frame
 ------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail routes around Cardiff and the valleys
+| Extent: UK - on or related to the rail routes around Cardiff and the valleys
 
 .. code-block:: php
 
@@ -3019,7 +3019,7 @@ Created in 2022 to support intermediate CRS GWWAB22-IRF in the emulation of the 
 GWWWA22 Intermediate Reference Frame
 ------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard
+| Extent: UK - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard
 
 .. code-block:: php
 
@@ -3124,7 +3124,7 @@ Orthometric heights.
 Geocentric Datum Brunei Darussalam 2009
 ---------------------------------------
 | Type: Geodetic
-| Extent: Brunei Darussalam - onshore and offshore
+| Extent: Brunei Darussalam
 
 .. code-block:: php
 
@@ -3138,7 +3138,7 @@ Replaces use of Timbalai from July 2009.
 Geocentric Datum of Australia 1994
 ----------------------------------
 | Type: Geodetic
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island
 
 .. code-block:: php
 
@@ -3150,7 +3150,7 @@ ITRF92 at epoch 1994.0.
 Geocentric Datum of Australia 2020
 ----------------------------------
 | Type: Geodetic
-| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island. All onshore and offshore
+| Extent: Australia including Lord Howe Island, Macquarie Island, Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Norfolk Island
 
 .. code-block:: php
 
@@ -3162,7 +3162,7 @@ ITRF2014 at epoch 2020.0.
 Geodetic Datum of 1965
 ----------------------
 | Type: Geodetic
-| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -3176,7 +3176,7 @@ Differences from the 1965 adjustment (datum code 6299) are: average difference i
 Geodetic Datum of Malaysia 2000
 -------------------------------
 | Type: Geodetic
-| Extent: Malaysia - onshore and offshore. Includes peninsular Malayasia, Sabah and Sarawak
+| Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak
 
 .. code-block:: php
 
@@ -3190,7 +3190,7 @@ Replaces all older Malaysian datums.
 Geodezicheskaya Sistema Koordinat 2011
 --------------------------------------
 | Type: Geodetic
-| Extent: Russian Federation - onshore and offshore
+| Extent: Russia
 
 .. code-block:: php
 
@@ -3307,7 +3307,7 @@ Replaced (old) Greek datum. Oil industry work based on ED50.
 Greenland 1996
 --------------
 | Type: Geodetic
-| Extent: Greenland - onshore and offshore
+| Extent: Greenland
 
 .. code-block:: php
 
@@ -3359,7 +3359,7 @@ Mean sea level as determined by satellite altimetry and coastal tide gauges. Def
 Greenland Vertical Reference 2000
 ---------------------------------
 | Type: Vertical
-| Extent: Greenland - onshore and offshore between 59°N and 84°N and west of 10°W
+| Extent: Greenland between 59°N and 84°N and west of 10°W
 
 .. code-block:: php
 
@@ -3373,7 +3373,7 @@ Orthometric heights. Replaced by GVR2016.
 Greenland Vertical Reference 2016
 ---------------------------------
 | Type: Vertical
-| Extent: Greenland - onshore and offshore between 58°N and 85°N and west of 7°W
+| Extent: Greenland between 58°N and 85°N and west of 7°W
 
 .. code-block:: php
 
@@ -3481,7 +3481,7 @@ Replaces Guam Vertical Datum of 1963 (datum code 1122).
 Gulshan 303
 -----------
 | Type: Geodetic
-| Extent: Bangladesh - onshore and offshore
+| Extent: Bangladesh
 
 .. code-block:: php
 
@@ -3531,7 +3531,7 @@ Fundamental point: Gusterberg. Latitude: 48°02'18.47"N, longitude: 31°48'15.05
 HS2 Intermediate Reference Frame
 --------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe
+| Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe
 
 .. code-block:: php
 
@@ -3545,7 +3545,7 @@ Created to support intermediate CRS "HS2-IRF" in the emulation of the HS2P1+14 S
 HS2 Vertical Reference Frame
 ----------------------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe
+| Extent: UK - HS2 phases 1 and 2a railway corridor from London to Birmingham, Lichfield and Crewe
 
 .. code-block:: php
 
@@ -3559,7 +3559,7 @@ After introduction of OSNet v2009 CORS, OSTN15 and the OSGM15 geoid model, the H
 HULLEE13 Intermediate Reference Frame
 -------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from the Morley tunnel through Leeds to Hull
+| Extent: UK - on or related to the rail route from the Morley tunnel through Leeds to Hull
 
 .. code-block:: php
 
@@ -3596,7 +3596,7 @@ Hanoi 1972
 Hartebeesthoek94
 ----------------
 | Type: Geodetic
-| Extent: Eswatini (Swaziland); Lesotho; South Africa - onshore and offshore
+| Extent: Eswatini (Swaziland); Lesotho; South Africa
 
 .. code-block:: php
 
@@ -3703,7 +3703,7 @@ The highest tide level which can be predicted to occur under average meteorologi
 Hito XVIII 1963
 ---------------
 | Type: Geodetic
-| Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, onshore and offshore Atlantic west of 66°W
+| Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego,  Atlantic west of 66°W
 
 .. code-block:: php
 
@@ -3741,7 +3741,7 @@ Replaces Ha Tien in Vietnam.
 Hong Kong 1963
 --------------
 | Type: Geodetic
-| Extent: China - Hong Kong - onshore and offshore
+| Extent: China - Hong Kong
 
 .. code-block:: php
 
@@ -3755,7 +3755,7 @@ Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by H
 Hong Kong 1963(67)
 ------------------
 | Type: Geodetic
-| Extent: China - Hong Kong - onshore and offshore
+| Extent: China - Hong Kong
 
 .. code-block:: php
 
@@ -3769,7 +3769,7 @@ Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kon
 Hong Kong 1980
 --------------
 | Type: Geodetic
-| Extent: China - Hong Kong - onshore and offshore
+| Extent: China - Hong Kong
 
 .. code-block:: php
 
@@ -3797,7 +3797,7 @@ Chart datum is 0.15 metres below Hong Kong Principal Datum (code 5135) and 1.38m
 Hong Kong Geodetic
 ------------------
 | Type: Geodetic
-| Extent: China - Hong Kong - onshore and offshore
+| Extent: China - Hong Kong
 
 .. code-block:: php
 
@@ -4255,7 +4255,7 @@ Used for IGS products from GPS week 2106 (2020-05-17). Replaces IGS14. Compared 
 IRENET95
 --------
 | Type: Geodetic
-| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -4295,7 +4295,7 @@ Extension of Kalianpur 1937 over Myanmar and Thailand.
 Indian 1960
 -----------
 | Type: Geodetic
-| Extent: Cambodia - onshore; Vietnam - onshore and offshore Cuu Long basin
+| Extent: Cambodia - onshore; Vietnam Cuu Long basin
 
 .. code-block:: php
 
@@ -4349,7 +4349,7 @@ Replaced by DGN95.
 Indonesian Geoid 2020 version 1
 -------------------------------
 | Type: Vertical
-| Extent: Indonesia - onshore and offshore
+| Extent: Indonesia
 
 .. code-block:: php
 
@@ -4363,7 +4363,7 @@ Uses gravity data observed to 2019 fitted to control points on Java and Bali.
 Indonesian Geoid 2020 version 2
 -------------------------------
 | Type: Vertical
-| Extent: Indonesia - onshore and offshore
+| Extent: Indonesia
 
 .. code-block:: php
 
@@ -4405,7 +4405,7 @@ Replaced by IGC 1962 Arc of the 6th Parallel South, except for oil industry acti
 International Great Lakes Datum 1955
 ------------------------------------
 | Type: Vertical
-| Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway
+| Extent: Canada and USA - Great Lakes basin and St Lawrence Seaway
 
 .. code-block:: php
 
@@ -4419,7 +4419,7 @@ Dynamic heights. Adopted in 1962. Replaced by IGLD 1985 in January 1992.
 International Great Lakes Datum 1985
 ------------------------------------
 | Type: Vertical
-| Extent: Canada and United States (USA) - Great Lakes basin and St Lawrence Seaway
+| Extent: Canada and USA - Great Lakes basin and St Lawrence Seaway
 
 .. code-block:: php
 
@@ -4641,7 +4641,7 @@ Four stations established between September and December 1991 determined by GPS 
 Iraqi Geospatial Reference System
 ---------------------------------
 | Type: Geodetic
-| Extent: Iraq - onshore and offshore
+| Extent: Iraq
 
 .. code-block:: php
 
@@ -4653,7 +4653,7 @@ ITRF2000 at epoch 1997.0
 Islands Net 1993
 ----------------
 | Type: Geodetic
-| Extent: Iceland - onshore and offshore
+| Extent: Iceland
 
 .. code-block:: php
 
@@ -4667,7 +4667,7 @@ Replaced by ISN2004 (datum code 1060).
 Islands Net 2004
 ----------------
 | Type: Geodetic
-| Extent: Iceland - onshore and offshore
+| Extent: Iceland
 
 .. code-block:: php
 
@@ -4681,7 +4681,7 @@ Replaces ISN93 (datum code 6659). Replaced by ISN2016 (datum code 1087).
 Islands Net 2016
 ----------------
 | Type: Geodetic
-| Extent: Iceland - onshore and offshore
+| Extent: Iceland
 
 .. code-block:: php
 
@@ -4709,7 +4709,7 @@ Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).
 Israeli Geodetic Datum 2005
 ---------------------------
 | Type: Geodetic
-| Extent: Israel - onshore and offshore
+| Extent: Israel
 
 .. code-block:: php
 
@@ -4723,7 +4723,7 @@ Replaces Israel 1993 (datum code 6141). Replaced by IGD05/12 (datum code 1115).
 Israeli Geodetic Datum 2005(2012)
 ---------------------------------
 | Type: Geodetic
-| Extent: Israel - onshore and offshore
+| Extent: Israel
 
 .. code-block:: php
 
@@ -4737,7 +4737,7 @@ Replaces IGD05 (datum code 1114).
 Istituto Geografico Militaire 1995
 ----------------------------------
 | Type: Geodetic
-| Extent: Italy - onshore and offshore; San Marino, Vatican City State
+| Extent: Italy; San Marino, Vatican City State
 
 .. code-block:: php
 
@@ -4787,7 +4787,7 @@ Fundamental point: Fort Charles Flagstaff. Latitude: 17°55'55.800"N, longitude:
 Jamaica 2001
 ------------
 | Type: Geodetic
-| Extent: Jamaica - onshore and offshore. Includes Morant Cays and Pedro Cays
+| Extent: Jamaica. Includes Morant Cays and Pedro Cays
 
 .. code-block:: php
 
@@ -4811,7 +4811,7 @@ MSL at Jamestown 1971 defined through elevation of triangulation station Astro D
 Japanese Geodetic Datum 2000
 ----------------------------
 | Type: Geodetic
-| Extent: Japan - onshore and offshore
+| Extent: Japan
 
 .. code-block:: php
 
@@ -4839,7 +4839,7 @@ Orthometric heights. Replaces JSLD69 and JSLD72 with effect from April 2002. Rep
 Japanese Geodetic Datum 2011
 ----------------------------
 | Type: Geodetic
-| Extent: Japan - onshore and offshore
+| Extent: Japan
 
 .. code-block:: php
 
@@ -4970,7 +4970,7 @@ Replaces 1880 adjustment except for topographic mapping. Replaced in Bangladesh 
 Kalianpur 1962
 --------------
 | Type: Geodetic
-| Extent: Pakistan - onshore and offshore
+| Extent: Pakistan
 
 .. code-block:: php
 
@@ -5078,7 +5078,7 @@ Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncati
 Kertau 1968
 -----------
 | Type: Geodetic
-| Extent: Malaysia - West Malaysia onshore and offshore east coast; Singapore - onshore and offshore
+| Extent: Malaysia - West Malaysia east coast; Singapore
 
 .. code-block:: php
 
@@ -5092,7 +5092,7 @@ Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 in
 Kingdom of Saudi Arabia Geodetic Reference Frame 2017
 -----------------------------------------------------
 | Type: Geodetic
-| Extent: Saudi Arabia - onshore and offshore
+| Extent: Saudi Arabia
 
 .. code-block:: php
 
@@ -5155,7 +5155,7 @@ Korean Datum 1995
 Korean Geodetic Datum 2002
 --------------------------
 | Type: Geodetic
-| Extent: Republic of Korea (South Korea) - onshore and offshore
+| Extent: Republic of Korea (South Korea)
 
 .. code-block:: php
 
@@ -5335,7 +5335,7 @@ Mean sea level at Lagos, 1912-1928.
 Lake
 ----
 | Type: Geodetic
-| Extent: Venezuela - Lake Maracaibo area, onshore and offshore in lake
+| Extent: Venezuela - Lake Maracaibo area,  in lake
 
 .. code-block:: php
 
@@ -5443,7 +5443,7 @@ Uses Normal heights.
 Latvian coordinate system 2020
 ------------------------------
 | Type: Geodetic
-| Extent: Latvia - onshore and offshore
+| Extent: Latvia
 
 .. code-block:: php
 
@@ -5457,7 +5457,7 @@ LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum co
 Latvian geodetic coordinate system 1992
 ---------------------------------------
 | Type: Geodetic
-| Extent: Latvia - onshore and offshore
+| Extent: Latvia
 
 .. code-block:: php
 
@@ -5483,7 +5483,7 @@ Fundamental point: Le Pouce. Latitude: 20°11'42.25"S, longitude: 57°31'18.58"E
 Leigon
 ------
 | Type: Geodetic
-| Extent: Ghana - onshore and offshore
+| Extent: Ghana
 
 .. code-block:: php
 
@@ -5497,7 +5497,7 @@ Replaced Accra datum (code 6168) from 1978. Coordinates at Leigon fundamental po
 Lerwick
 -------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Shetland Islands onshore
+| Extent: UK - Great Britain - Scotland - Shetland Islands onshore
 
 .. code-block:: php
 
@@ -5523,7 +5523,7 @@ Fundamental point: Robertsfield. Latitude: 6°13'53.02"N, longitude: 10°21'35.4
 Libyan Geodetic Datum 2006
 --------------------------
 | Type: Geodetic
-| Extent: Libya - onshore and offshore
+| Extent: Libya
 
 .. code-block:: php
 
@@ -5593,7 +5593,7 @@ Replaces Lisbon 1890 adjustment (which used Bessel 1841 ellipsoid).
 Lithuania 1994 (ETRS89)
 -----------------------
 | Type: Geodetic
-| Extent: Lithuania - onshore and offshore
+| Extent: Lithuania
 
 .. code-block:: php
 
@@ -5646,7 +5646,7 @@ Normal-orthometric heights. Replaces ASVD02 (datum code 1125) in March 2020 afte
 Locodjo 1965
 ------------
 | Type: Geodetic
-| Extent: Côte d'Ivoire (Ivory Coast) - onshore and offshore
+| Extent: Côte d'Ivoire (Ivory Coast)
 
 .. code-block:: php
 
@@ -5672,7 +5672,7 @@ Replaced by La Canoa (code 6247).
 Lome
 ----
 | Type: Geodetic
-| Extent: Togo - onshore and offshore
+| Extent: Togo
 
 .. code-block:: php
 
@@ -5791,7 +5791,7 @@ MSL at Lyttelton harbour over 9 years between 1918 and 1933.
 M'poraloko
 ----------
 | Type: Geodetic
-| Extent: Gabon - onshore and offshore
+| Extent: Gabon
 
 .. code-block:: php
 
@@ -5802,7 +5802,7 @@ M'poraloko
 MALS09 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from London (Marylebone) to Leamington Spa
+| Extent: UK - on or related to the rail route from London (Marylebone) to Leamington Spa
 
 .. code-block:: php
 
@@ -5830,7 +5830,7 @@ The longitude of the datum origin equates to the Albrecht 1902 value for the Fer
 MML07 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the Midland Mainline rail route from Sheffield to London
+| Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London
 
 .. code-block:: php
 
@@ -5844,7 +5844,7 @@ Created in 2020 to support intermediate CRS "MML07-IRF" in the emulation of the 
 MOLDOR11 Intermediate Reference Frame
 -------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction
+| Extent: UK - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore Junction
 
 .. code-block:: php
 
@@ -5870,7 +5870,7 @@ Densification of ETRS89.
 MOMRA Terrestrial Reference Frame 2000
 --------------------------------------
 | Type: Geodetic
-| Extent: Saudi Arabia - onshore and offshore
+| Extent: Saudi Arabia
 
 .. code-block:: php
 
@@ -5907,7 +5907,7 @@ MOP78
 MRH21 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln
+| Extent: UK - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby, Birmingham, Leicester, and Lincoln
 
 .. code-block:: php
 
@@ -5921,7 +5921,7 @@ Created in 2021 to support intermediate CRS "MRH21-IRF" in the emulation of the 
 MWC18 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Manchester via Wigan and Liverpool to Chester
+| Extent: UK - on or related to the rail route from Manchester via Wigan and Liverpool to Chester
 
 .. code-block:: php
 
@@ -5935,7 +5935,7 @@ Created in 2022 to support intermediate CRS MWC18-IRF in the emulation of the MW
 Macao 1920
 ----------
 | Type: Geodetic
-| Extent: China - Macao - onshore and offshore
+| Extent: China - Macao
 
 .. code-block:: php
 
@@ -5949,7 +5949,7 @@ Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unr
 Macao Geodetic Datum 2008
 -------------------------
 | Type: Geodetic
-| Extent: China - Macao - onshore and offshore
+| Extent: China - Macao
 
 .. code-block:: php
 
@@ -5963,7 +5963,7 @@ Locally sometimes referred to as ITRF2005, this is not strictly correct as it ap
 Macao Height Datum
 ------------------
 | Type: Vertical
-| Extent: China - Macao - onshore and offshore
+| Extent: China - Macao
 
 .. code-block:: php
 
@@ -6041,7 +6041,7 @@ Fundamental point: station P1, Moncongloe. Latitude 5°08'41.42"S, longitude 12�
 Malin Head
 ----------
 | Type: Vertical
-| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -6109,7 +6109,7 @@ Mean sea level at Maputo.
 Marco Geocentrico Nacional de Referencia
 ----------------------------------------
 | Type: Geodetic
-| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank
+| Extent: Colombia. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank
 
 .. code-block:: php
 
@@ -6123,7 +6123,7 @@ Densification of SIRGAS 1995 within Colombia. Replaces Bogota 1975 (datum code 6
 Marco Geocentrico Nacional de Referencia 2018
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Colombia - onshore and offshore. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank
+| Extent: Colombia. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla Bank
 
 .. code-block:: php
 
@@ -6216,7 +6216,7 @@ Orthometric heights. Replaces Martinique 1955 (datum code 5192).
 Massawa
 -------
 | Type: Geodetic
-| Extent: Eritrea - onshore and offshore
+| Extent: Eritrea
 
 .. code-block:: php
 
@@ -6255,7 +6255,7 @@ Included as part of NGPF - see datum code 5195.
 Mauritania 1999
 ---------------
 | Type: Geodetic
-| Extent: Mauritania - onshore and offshore
+| Extent: Mauritania
 
 .. code-block:: php
 
@@ -6409,7 +6409,7 @@ Coincides with NAP datum plane, extended offshore through the nlgeo geoid model.
 Mean Sea Level UK & Ireland VORF08
 ----------------------------------
 | Type: Vertical
-| Extent: Ireland and United Kingdom (UK) (including Isle of Man and Channel Islands) - inshore, nearshore and offshore
+| Extent: Ireland and UK (including Isle of Man and Channel Islands) - inshore, nearshore and offshore
 
 .. code-block:: php
 
@@ -6463,7 +6463,7 @@ Fundamental point: Merchich. Latitude: 33°26'59.672"N, longitude: 7°33'27.295"
 Mexico ITRF2008
 ---------------
 | Type: Geodetic
-| Extent: Mexico - onshore and offshore
+| Extent: Mexico
 
 .. code-block:: php
 
@@ -6477,7 +6477,7 @@ Realised by a frame of 15 active GPS stations observed and adjusted in the ITRF2
 Mexico ITRF92
 -------------
 | Type: Geodetic
-| Extent: Mexico - onshore and offshore
+| Extent: Mexico
 
 .. code-block:: php
 
@@ -6505,7 +6505,7 @@ Origin coordinates determined by Transit single point position using 32 passes a
 Mhast (onshore)
 ---------------
 | Type: Geodetic
-| Extent: Angola (Cabinda) - onshore and offshore; The Democratic Republic of the Congo (Zaire) - onshore coastal area and offshore
+| Extent: Angola (Cabinda); The Democratic Republic of the Congo (Zaire) - onshore coastal area and offshore
 
 .. code-block:: php
 
@@ -6582,7 +6582,7 @@ Developed by the Servicio de Hidrografia Naval.
 Minna
 -----
 | Type: Geodetic
-| Extent: Nigeria - onshore and offshore
+| Extent: Nigeria
 
 .. code-block:: php
 
@@ -6608,7 +6608,7 @@ A variation of this datum has been adopted by the oil industry but incorrectly u
 Monte Mario
 -----------
 | Type: Geodetic
-| Extent: Italy - onshore and offshore; San Marino, Vatican City State
+| Extent: Italy; San Marino, Vatican City State
 
 .. code-block:: php
 
@@ -6622,7 +6622,7 @@ Replaced Genova datum, Bessel 1841 ellipsoid, from 1940.
 Monte Mario (Rome)
 ------------------
 | Type: Geodetic
-| Extent: Italy - onshore and offshore; San Marino, Vatican City State
+| Extent: Italy; San Marino, Vatican City State
 
 .. code-block:: php
 
@@ -6700,7 +6700,7 @@ Fundamental point: Mount Dillon triangulation station. Latitude: 11°15'07.843"N
 Moznet (ITRF94)
 ---------------
 | Type: Geodetic
-| Extent: Mozambique - onshore and offshore
+| Extent: Mozambique
 
 .. code-block:: php
 
@@ -6726,7 +6726,7 @@ Realized through the third precise levelling network. Uses normal heights. Repla
 NAD83 (Continuously Operating Reference Station 1996)
 -----------------------------------------------------
 | Type: Geodetic
-| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
+| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
 
 .. code-block:: php
 
@@ -6740,7 +6740,7 @@ Replaced by NAD83(2011) from 2011-09-06.
 NAD83 (Federal Base Network)
 ----------------------------
 | Type: Geodetic
-| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
+| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -6766,7 +6766,7 @@ In PRVI replaces NAD83(HARN) to correct errors. Replaced by NAD83(FBN).
 NAD83 (High Accuracy Reference Network)
 ---------------------------------------
 | Type: Geodetic
-| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. United States (USA) - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
+| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -6780,7 +6780,7 @@ In CONUS, American Samoa and Guam replaced by NAD83(FBN). In Alaska replaced by 
 NAD83 (National Spatial Reference System 2007)
 ----------------------------------------------
 | Type: Geodetic
-| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
+| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
 
 .. code-block:: php
 
@@ -6794,7 +6794,7 @@ Replaced by NAD83 (National Spatial Reference System 2011), datum code 1116.
 NAD83 (National Spatial Reference System 2011)
 ----------------------------------------------
 | Type: Geodetic
-| Extent: Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore
+| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
 
 .. code-block:: php
 
@@ -6808,7 +6808,7 @@ Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to
 NAD83 (National Spatial Reference System MA11)
 ----------------------------------------------
 | Type: Geodetic
-| Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
+| Extent: Guam, Northern Mariana Islands and Palau;
 
 .. code-block:: php
 
@@ -6822,7 +6822,7 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. ITRF2008 is understood to u
 NAD83 (National Spatial Reference System PA11)
 ----------------------------------------------
 | Type: Geodetic
-| Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore
+| Extent: American Samoa, Marshall Islands, USA - Hawaii, United States minor outlying islands;
 
 .. code-block:: php
 
@@ -6836,7 +6836,7 @@ Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. ITRF2008 is un
 NAD83 Canadian Spatial Reference System
 ---------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -6922,7 +6922,7 @@ This adjustment later discovered to have a significant orientation error. In Ira
 Nahrwan 1967
 ------------
 | Type: Geodetic
-| Extent: Arabian Gulf; Qatar - offshore; United Arab Emirates (UAE) - Abu Dhabi; Dubai; Sharjah; Ajman; Fujairah; Ras Al Kaimah; Umm Al Qaiwain - onshore and offshore
+| Extent: Arabian Gulf; Qatar - offshore; UAE - Abu Dhabi; Dubai; Sharjah; Ajman; Fujairah; Ras Al Kaimah; Umm Al Qaiwain
 
 .. code-block:: php
 
@@ -6998,7 +6998,7 @@ Replaces 1984 adjustment which used the WGS72 ellipsoid.
 National Geodetic Vertical Datum 1929
 -------------------------------------
 | Type: Vertical
-| Extent: United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
 
 .. code-block:: php
 
@@ -7076,7 +7076,7 @@ Replaced by New Zealand Geodetic Datum 2000 (code 6167) from March 2000.
 New Zealand Geodetic Datum 2000
 -------------------------------
 | Type: Geodetic
-| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
+| Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
 
 .. code-block:: php
 
@@ -7090,7 +7090,7 @@ Replaces New Zealand Geodetic Datum 1949 (code 6272) and Chatham Islands Datum 1
 New Zealand Vertical Datum 2009
 -------------------------------
 | Type: Vertical
-| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
+| Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
 
 .. code-block:: php
 
@@ -7102,7 +7102,7 @@ New Zealand Quasigeoid 2009 which is defined by the application of the NZ geoid 
 New Zealand Vertical Datum 2016
 -------------------------------
 | Type: Vertical
-| Extent: New Zealand - onshore and offshore. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
+| Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
 
 .. code-block:: php
 
@@ -7250,7 +7250,7 @@ Pseudo-orthometric heights.
 Nord Sahara 1959
 ----------------
 | Type: Geodetic
-| Extent: Algeria - onshore and offshore
+| Extent: Algeria
 
 .. code-block:: php
 
@@ -7264,7 +7264,7 @@ Adjustment includes Morocco and Tunisia but use only in Algeria. Within Algeria 
 Normaal Amsterdams Peil
 -----------------------
 | Type: Vertical
-| Extent: Netherlands - onshore and offshore
+| Extent: Netherlands
 
 .. code-block:: php
 
@@ -7278,7 +7278,7 @@ Orthometric heights. From 2018, use has been extended from Netherlands onshore t
 North American Datum 1927
 -------------------------
 | Type: Geodetic
-| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba - onshore and offshore. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. United States (USA) onshore and offshore - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore
+| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -7320,7 +7320,7 @@ NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generall
 North American Datum 1983
 -------------------------
 | Type: Geodetic
-| Extent: North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. United States (USA) - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands
+| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands
 
 .. code-block:: php
 
@@ -7334,7 +7334,7 @@ Although the 1986 adjustment included connections to Greenland and Mexico, it ha
 North American Datum of 1983 (CSRS) version 2
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7348,7 +7348,7 @@ Published 1998-01-01; adopted by the Canadian federal government and the provinc
 North American Datum of 1983 (CSRS) version 3
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7362,7 +7362,7 @@ Published 1999-01-01; adopted by the Canadian federal government (2000) and the 
 North American Datum of 1983 (CSRS) version 4
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7376,7 +7376,7 @@ Published 2002-01-01; adopted by the Canadian federal government (2002) and the 
 North American Datum of 1983 (CSRS) version 5
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7390,7 +7390,7 @@ Published 2007-01-01; adopted by the Canadian federal government in 2007. Replac
 North American Datum of 1983 (CSRS) version 6
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7404,7 +7404,7 @@ Published 2010-01-01; adopted by the Canadian government (2012) and the provinci
 North American Datum of 1983 (CSRS) version 7
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7418,7 +7418,7 @@ Published 2017-05-01; adopted by the Canadian federal government (2017) and the 
 North American Datum of 1983 (CSRS) version 8
 ---------------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7432,7 +7432,7 @@ Published 2022-11-27; adopted by the Canadian federal government (2023). Replace
 North American Datum of 1983 (CSRS96)
 -------------------------------------
 | Type: Geodetic
-| Extent: Canada - onshore and offshore - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+| Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
 
 .. code-block:: php
 
@@ -7446,7 +7446,7 @@ Adopted by the Canadian federal government from 1996-01-01. Replaces NAD83 [some
 North American Datum of 1983 (MARP00)
 -------------------------------------
 | Type: Geodetic
-| Extent: Guam, Northern Mariana Islands and Palau; onshore and offshore
+| Extent: Guam, Northern Mariana Islands and Palau;
 
 .. code-block:: php
 
@@ -7460,7 +7460,7 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).
 North American Datum of 1983 (PACP00)
 -------------------------------------
 | Type: Geodetic
-| Extent: American Samoa, Marshall Islands, United States (USA) - Hawaii, United States minor outlying islands; onshore and offshore
+| Extent: American Samoa, Marshall Islands, USA - Hawaii, United States minor outlying islands;
 
 .. code-block:: php
 
@@ -7474,7 +7474,7 @@ Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NA
 North American Vertical Datum 1988
 ----------------------------------
 | Type: Vertical
-| Extent: Mexico - onshore. United States (USA) - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
 
 .. code-block:: php
 
@@ -7488,7 +7488,7 @@ Helmert orthometric heights.
 North Rona
 ----------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - North Rona onshore
+| Extent: UK - Great Britain - Scotland - North Rona onshore
 
 .. code-block:: php
 
@@ -8074,7 +8074,7 @@ Fundamental point: Pantheon. Latitude: 54.273618g N, longitude: 0.0106921g E (of
 OS (SN) 1980
 ------------
 | Type: Geodetic
-| Extent: Ireland - onshore. United Kingdom (UK) - onshore - England; Scotland; Wales; Northern Ireland. Isle of Man
+| Extent: Ireland - onshore. UK - onshore - England; Scotland; Wales; Northern Ireland. Isle of Man
 
 .. code-block:: php
 
@@ -8086,7 +8086,7 @@ Fundamental point: Herstmonceux. Latitude: 50°51'55.271"N, longitude: 0°20'45.
 OSGB 1970 (SN)
 --------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore
+| Extent: UK - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore
 
 .. code-block:: php
 
@@ -8098,7 +8098,7 @@ Fundamental point: Herstmonceux. Latitude: 50°51'55.271"N, longitude: 0°20'45.
 OSNI 1952
 ---------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -8140,7 +8140,7 @@ Replaced in Costa Rica by Costa Rica 2005 (CR05) from March 2007 and replaced in
 Old Hawaiian
 ------------
 | Type: Geodetic
-| Extent: United States (USA) - Hawaii - main islands onshore
+| Extent: USA - Hawaii - main islands onshore
 
 .. code-block:: php
 
@@ -8154,7 +8154,7 @@ Hawaiian Islands were never on NAD27 but rather on Old Hawaiian Datum. NADCON co
 Oman National Geodetic Datum 2014
 ---------------------------------
 | Type: Geodetic
-| Extent: Oman - onshore and offshore
+| Extent: Oman
 
 .. code-block:: php
 
@@ -8168,7 +8168,7 @@ Replaces WGS 84 (G873). Replaced by ONGD17.
 Oman National Geodetic Datum 2017
 ---------------------------------
 | Type: Geodetic
-| Extent: Oman - onshore and offshore
+| Extent: Oman
 
 .. code-block:: php
 
@@ -8194,7 +8194,7 @@ MSL at Whangarei harbour 1960-1963.
 Ordnance Datum Newlyn
 ---------------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides
+| Extent: UK - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides
 
 .. code-block:: php
 
@@ -8208,7 +8208,7 @@ Orthometric heights.
 Ordnance Datum Newlyn (Offshore)
 --------------------------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E
+| Extent: UK - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E
 
 .. code-block:: php
 
@@ -8222,7 +8222,7 @@ Extension of Ordnance Datum Newlyn offshore through geoid model. Orthometric hei
 Ordnance Datum Newlyn (Orkney Isles)
 ------------------------------------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Orkney Islands onshore
+| Extent: UK - Great Britain - Scotland - Orkney Islands onshore
 
 .. code-block:: php
 
@@ -8236,7 +8236,7 @@ Considered as separate from Newlyn because the accuracy of the trigonometric con
 Ordnance Survey of Great Britain 1936
 -------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore
+| Extent: UK - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain (England, Wales and Scotland). Isle of Man onshore
 
 .. code-block:: php
 
@@ -8278,7 +8278,7 @@ Created in 2022 to support intermediate CRS OS-IRF in the transformation of coor
 OxWo08 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Oxford to Worcester
+| Extent: UK - on or related to the rail route from Oxford to Worcester
 
 .. code-block:: php
 
@@ -8318,7 +8318,7 @@ Replaces Fahud datum (code 6232). Maximum differences to Fahud adjustment are 20
 PNG08
 -----
 | Type: Vertical
-| Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E - onshore and offshore
+| Extent: Papua New Guinea - between 0°N and 12°S and 140°E and 158°E
 
 .. code-block:: php
 
@@ -8368,7 +8368,7 @@ Reports of the existence of an Ancon datum are probably erroneous, considering t
 Papua New Guinea Geodetic Datum 1994
 ------------------------------------
 | Type: Geodetic
-| Extent: Papua New Guinea - onshore and offshore. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands
+| Extent: Papua New Guinea. Includes Bismark archipelago, Louisade archipelago, Admiralty Islands, d'Entrecasteaux Islands, northern Solomon Islands, Trobriand Islands, New Britain, New Ireland, Woodlark, and associated islands
 
 .. code-block:: php
 
@@ -8424,7 +8424,7 @@ Replaces PZ-90.02 from 2014-01-15.
 Peru96
 ------
 | Type: Geodetic
-| Extent: Peru - onshore and offshore
+| Extent: Peru
 
 .. code-block:: php
 
@@ -8450,7 +8450,7 @@ Fundamental point: Astro station DZ on Ile de Petrels. Latitude: 66°40'00"S, lo
 Philippine Reference System 1992
 --------------------------------
 | Type: Geodetic
-| Extent: Philippines - onshore and offshore
+| Extent: Philippines
 
 .. code-block:: php
 
@@ -8583,7 +8583,7 @@ Orthometric heights.
 Poolbeg
 -------
 | Type: Vertical
-| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -8653,7 +8653,7 @@ Classical and GPS observations. Replaces 1936 adjustment (datum code 6615). For 
 Posiciones Geodesicas Argentinas 1994
 -------------------------------------
 | Type: Geodetic
-| Extent: Argentina - onshore and offshore
+| Extent: Argentina
 
 .. code-block:: php
 
@@ -8667,7 +8667,7 @@ Adopted as defining the National Geodetic Reference Network from 9th May 1997. T
 Posiciones Geodesicas Argentinas 1998
 -------------------------------------
 | Type: Geodetic
-| Extent: Argentina - onshore and offshore
+| Extent: Argentina
 
 .. code-block:: php
 
@@ -8681,7 +8681,7 @@ Replaced POSGAR 1994 (datum code 6694) for technical, but not legal, purposes. R
 Posiciones Geodesicas Argentinas 2007
 -------------------------------------
 | Type: Geodetic
-| Extent: Argentina - onshore and offshore
+| Extent: Argentina
 
 .. code-block:: php
 
@@ -8763,7 +8763,7 @@ Replaces all earlier vertical datums for Puerto Rico.
 Pulkovo 1942
 ------------
 | Type: Geodetic
-| Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russian Federation - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan
+| Extent: Armenia; Azerbaijan; Belarus; Estonia - onshore; Georgia - onshore; Kazakhstan; Kyrgyzstan; Latvia - onshore; Lithuania - onshore; Moldova; Russia - onshore; Tajikistan; Turkmenistan; Ukraine - onshore; Uzbekistan
 
 .. code-block:: php
 
@@ -8803,7 +8803,7 @@ Fundamental point: Pulkovo observatory. Latitude: 59°46'18.550"N, longitude: 30
 Pulkovo 1995
 ------------
 | Type: Geodetic
-| Extent: Russian Federation - onshore and offshore
+| Extent: Russia
 
 .. code-block:: php
 
@@ -8827,7 +8827,7 @@ Fundamental point: Sokey 0 M. Latitude: 25°22'56.500"N, longitude: 50°45'41.00
 Qatar 1974
 ----------
 | Type: Geodetic
-| Extent: Qatar - onshore and offshore
+| Extent: Qatar
 
 .. code-block:: php
 
@@ -8863,7 +8863,7 @@ Fundamental point: Station 7008. Latitude: 64°31'06.27"N, longitude: 51°12'24.
 RBEPP12 Intermediate Reference Frame
 ------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Reading via Newbury to Penzance
+| Extent: UK - on or related to the rail route from Reading via Newbury to Penzance
 
 .. code-block:: php
 
@@ -8891,7 +8891,7 @@ Included as part of NGPF - see datum code 5195.
 Ras Ghumays
 -----------
 | Type: Vertical
-| Extent: United Arab Emirates (UAE) - Abu Dhabi onshore
+| Extent: UAE - Abu Dhabi onshore
 
 .. code-block:: php
 
@@ -8931,7 +8931,7 @@ RD/83 is the realization of DHDN in Saxony. It is the resultant of applying a tr
 Red Geodesica Para Mineria en Chile
 -----------------------------------
 | Type: Dynamic geodetic
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -8943,7 +8943,7 @@ Realized through 26 stations in the IGS (SIRGAS-CON) active reference station ne
 Red Geodesica Venezolana
 ------------------------
 | Type: Geodetic
-| Extent: Venezuela - onshore and offshore
+| Extent: Venezuela
 
 .. code-block:: php
 
@@ -8955,7 +8955,7 @@ Realised by a frame of 67 stations observed in 1995 as a densification of the SI
 Red Geodesica de Canarias 1995
 ------------------------------
 | Type: Geodetic
-| Extent: Spain - Canary Islands onshore and offshore
+| Extent: Spain - Canary Islands
 
 .. code-block:: php
 
@@ -8969,7 +8969,7 @@ Replaces Pico de las Nieves 1968 (PN68) and Pico de las Nieves 1984 (PN84).
 Reference System de Angola 2013
 -------------------------------
 | Type: Geodetic
-| Extent: Angola - onshore and offshore
+| Extent: Angola
 
 .. code-block:: php
 
@@ -8983,7 +8983,7 @@ Established through daily PPP solutions in GPS week G1610.
 Reseau Geodesique Francais 1993 v1
 ----------------------------------
 | Type: Geodetic
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -8997,7 +8997,7 @@ RGF93 v1 is a realization of ETRS89. Replaced by RGF93 v2 (datum code 1312) from
 Reseau Geodesique Francais 1993 v2
 ----------------------------------
 | Type: Geodetic
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -9011,7 +9011,7 @@ RGF93 v2 is a realization of ETRS89. Replaces RGF93 v1 (datum code 6171) from 20
 Reseau Geodesique Francais 1993 v2b
 -----------------------------------
 | Type: Geodetic
-| Extent: France - onshore and offshore, mainland and Corsica (France métropolitaine including Corsica)
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
 
 .. code-block:: php
 
@@ -9025,7 +9025,7 @@ RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93
 Reseau Geodesique Francais Guyane 1995
 --------------------------------------
 | Type: Geodetic
-| Extent: French Guiana - onshore and offshore
+| Extent: French Guiana
 
 .. code-block:: php
 
@@ -9039,7 +9039,7 @@ Replaces CSG67 (datum code 6623).
 Reseau Geodesique de Mayotte 2004
 ---------------------------------
 | Type: Geodetic
-| Extent: Mayotte - onshore and offshore
+| Extent: Mayotte
 
 .. code-block:: php
 
@@ -9053,7 +9053,7 @@ Replaces Combani 1950 (datum code 6632) except for cadastral purposes. (Cadastre
 Reseau Geodesique de Nouvelle Caledonie 2015
 --------------------------------------------
 | Type: Geodetic
-| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
+| Extent: New Caledonia. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
 
 .. code-block:: php
 
@@ -9067,7 +9067,7 @@ Replaces RGNC91-93.
 Reseau Geodesique de Nouvelle Caledonie 91-93
 ---------------------------------------------
 | Type: Geodetic
-| Extent: New Caledonia - onshore and offshore. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
+| Extent: New Caledonia. Isle de Pins, Loyalty Islands, Huon Islands, Belep archipelago, Chesterfield Islands, and Walpole
 
 .. code-block:: php
 
@@ -9081,7 +9081,7 @@ Replaced by RGNC15 (datum code 1357).
 Reseau Geodesique de Saint Pierre et Miquelon 2006
 --------------------------------------------------
 | Type: Geodetic
-| Extent: St Pierre and Miquelon - onshore and offshore
+| Extent: St Pierre and Miquelon
 
 .. code-block:: php
 
@@ -9095,7 +9095,7 @@ Replaces Saint Pierre et Miquelon 1950 (datum code 6638).
 Reseau Geodesique de Wallis et Futuna 1996
 ------------------------------------------
 | Type: Geodetic
-| Extent: Wallis and Futuna - onshore and offshore - Uvea, Futuna, and Alofi
+| Extent: Wallis and Futuna - Uvea, Futuna, and Alofi
 
 .. code-block:: php
 
@@ -9107,7 +9107,7 @@ Coincident with ITRF94 at epoch 1993.00.
 Reseau Geodesique de la Polynesie Francaise
 -------------------------------------------
 | Type: Geodetic
-| Extent: French Polynesia - onshore and offshore. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands
+| Extent: French Polynesia. Includes Society archipelago, Tuamotu archipelago, Marquesas Islands, Gambier Islands and Austral Islands
 
 .. code-block:: php
 
@@ -9121,7 +9121,7 @@ Replaces Tahaa 54 (datum code 6629), IGN 63 Hiva Oa (6689), IGN 72 Nuku Hiva (66
 Reseau Geodesique de la RDC 2005
 --------------------------------
 | Type: Geodetic
-| Extent: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto - onshore and offshore
+| Extent: The Democratic Republic of the Congo (Zaire) - south of a line through Bandundu, Seke and Pweto
 
 .. code-block:: php
 
@@ -9133,7 +9133,7 @@ ITRF2000 at epoch 2005.4.
 Reseau Geodesique de la Reunion 1992
 ------------------------------------
 | Type: Geodetic
-| Extent: Reunion - onshore and offshore
+| Extent: Reunion
 
 .. code-block:: php
 
@@ -9147,7 +9147,7 @@ Replaces Piton des Neiges (code 6626).
 Reseau Geodesique des Antilles Francaises 2009
 ----------------------------------------------
 | Type: Geodetic
-| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
+| Extent: French Antilles - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
 
 .. code-block:: php
 
@@ -9161,7 +9161,7 @@ Replaces RRAF91 in Martinique and Guadeloupe.
 Reseau Geodesique des Terres Australes et Antarctiques Francaises 2007
 ----------------------------------------------------------------------
 | Type: Geodetic
-| Extent: French Southern Territories - onshore and offshore: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area
+| Extent: French Southern Territories: Amsterdam and St Paul, Crozet, Europa and Kerguelen. Antarctica - Adelie Land coastal area
 
 .. code-block:: php
 
@@ -9211,7 +9211,7 @@ Fundamental point: Uccle observatory. Latitude: 50°47'57.704"N, longitude: 4°2
 Reseau de Reference des Antilles Francaises 1991
 ------------------------------------------------
 | Type: Geodetic
-| Extent: French Antilles onshore and offshore - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
+| Extent: French Antilles - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; St Martin
 
 .. code-block:: php
 
@@ -9225,7 +9225,7 @@ Replaces Fort Marigot and Sainte Anne (datum codes 6621-22) in Guadeloupe and Fo
 Rete Dinamica Nazionale 2008
 ----------------------------
 | Type: Geodetic
-| Extent: Italy - onshore and offshore; San Marino, Vatican City State
+| Extent: Italy; San Marino, Vatican City State
 
 .. code-block:: php
 
@@ -9321,7 +9321,7 @@ Realized through the third precise levelling network of 1979-2003. Adopted in 20
 Rikets koordinatsystem 1990
 ---------------------------
 | Type: Geodetic
-| Extent: Sweden - onshore and offshore
+| Extent: Sweden
 
 .. code-block:: php
 
@@ -9345,7 +9345,7 @@ Based on ITRF96 at epoch 2000.0
 SCM22 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness
+| Extent: UK - on or related to the Scottish central mainline rail route from Motherwell through Perth and Pitlochry to Inverness
 
 .. code-block:: php
 
@@ -9359,7 +9359,7 @@ Created in 2022 to support intermediate CRS "SCM22-IRF" in the emulation of the 
 SIRGAS Continuously Operating Network DGF00P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9373,7 +9373,7 @@ DGF00P01 is included in ITRF2000 as a regional densification for South America. 
 SIRGAS Continuously Operating Network DGF01P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9387,7 +9387,7 @@ Replaces DGF00P01 (datum code 1227). Replaced by DGF01P02 (datum code 1229).
 SIRGAS Continuously Operating Network DGF01P02
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9401,7 +9401,7 @@ Replaces DGF01P01 (datum code 1228). Replaced by DGF02P01 (datum code 1230).
 SIRGAS Continuously Operating Network DGF02P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9415,7 +9415,7 @@ Replaces DGF01P02 (datum code 1229). Replaced by DGF04P01 (datum code 1331).
 SIRGAS Continuously Operating Network DGF04P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9429,7 +9429,7 @@ Replaces DGF02P01 (datum code 1230). Replaced by DGF05P01 (datum code 1232).
 SIRGAS Continuously Operating Network DGF05P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9443,7 +9443,7 @@ Replaces DGF04P01 (datum code 1231). Replaced by DGF06P01 (datum code 1233).
 SIRGAS Continuously Operating Network DGF06P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9457,7 +9457,7 @@ Replaces DGF05P01 (datum code 1232). Replaced by DGF07P01 (datum code 1234).
 SIRGAS Continuously Operating Network DGF07P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9471,7 +9471,7 @@ Replaces DGF06P01 (datum code 1233). Replaced by DGF08P01 (datum code 1235).
 SIRGAS Continuously Operating Network DGF08P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9485,7 +9485,7 @@ Replaces DGF07P01 (datum code 1234). Replaced by SIR09P01 (datum code 1236).
 SIRGAS Continuously Operating Network SIR09P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9499,7 +9499,7 @@ Replaces DGF08P01 (datum code 1235). Replaced by SIR10P01 (datum code 1237).
 SIRGAS Continuously Operating Network SIR10P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9513,7 +9513,7 @@ Replaces SIR09P01 (datum code 1236). Replaced by SIR11P01 (datum code 1238).
 SIRGAS Continuously Operating Network SIR11P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9527,7 +9527,7 @@ Replaces SIR10P01 (datum code 1237). Replaced by SIR13P01 (datum code 1239). Las
 SIRGAS Continuously Operating Network SIR13P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9541,7 +9541,7 @@ Replaces SIR11P01 (datum code 1238). Replaced by SIR14P01 (datum code 1240). Fir
 SIRGAS Continuously Operating Network SIR14P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9555,7 +9555,7 @@ Replaces SIR13P01 (datum code 1239). Replaced by SIR15P01 (datum code 1241).
 SIRGAS Continuously Operating Network SIR15P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9569,7 +9569,7 @@ Replaces SIR14P01 (datum code 1240). Replaced by SIR17P01 (datum code 1242).
 SIRGAS Continuously Operating Network SIR17P01
 ----------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Latin America - Central America and South America, onshore and offshore
+| Extent: Latin America - Central America and South America
 
 .. code-block:: php
 
@@ -9583,7 +9583,7 @@ Replaces SIR15P01 (datum code 1241).
 SIRGAS-Chile realization 1 epoch 2002
 -------------------------------------
 | Type: Geodetic
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -9597,7 +9597,7 @@ Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (datum code 6248) in 
 SIRGAS-Chile realization 2 epoch 2010
 -------------------------------------
 | Type: Geodetic
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -9611,7 +9611,7 @@ Replaces SIRGAS-Chile realization 1 epoch 2002, following significant tectonic d
 SIRGAS-Chile realization 3 epoch 2013
 -------------------------------------
 | Type: Geodetic
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -9625,7 +9625,7 @@ Replaces SIRGAS-Chile realization 2 epoch 2010, following significant tectonic d
 SIRGAS-Chile realization 4 epoch 2016
 -------------------------------------
 | Type: Geodetic
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -9639,7 +9639,7 @@ Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realiza
 SIRGAS-Chile realization 5 epoch 2021
 -------------------------------------
 | Type: Geodetic
-| Extent: Chile - onshore and offshore. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
@@ -9653,7 +9653,7 @@ Replaces SIRGAS-Chile realization 4 epoch 2016 from August 2021 due to significa
 SIRGAS-ROU98
 ------------
 | Type: Geodetic
-| Extent: Uruguay - onshore and offshore
+| Extent: Uruguay
 
 .. code-block:: php
 
@@ -9667,7 +9667,7 @@ Densification of SIRGAS 1995 within Uruguay. Replaces Yacare (datum code 6309) i
 SIRGAS_ES2007.8
 ---------------
 | Type: Geodetic
-| Extent: El Salvador - onshore and offshore
+| Extent: El Salvador
 
 .. code-block:: php
 
@@ -9681,7 +9681,7 @@ SIRGAS-ES2007.8 is the national SIRGAS densification.
 SMITB20 Intermediate Reference Frame
 ------------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Okehampton to Penstone
+| Extent: UK - on or related to the rail route from Okehampton to Penstone
 
 .. code-block:: php
 
@@ -9730,7 +9730,7 @@ Ouloup.
 SVY21
 -----
 | Type: Geodetic
-| Extent: Singapore - onshore and offshore
+| Extent: Singapore
 
 .. code-block:: php
 
@@ -9744,7 +9744,7 @@ Replaces Kertau 1968 for cadastral purposes from August 2004.
 SWEREF99
 --------
 | Type: Geodetic
-| Extent: Sweden - onshore and offshore
+| Extent: Sweden
 
 .. code-block:: php
 
@@ -9758,7 +9758,7 @@ The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been co
 SYC20 Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Crewe
+| Extent: UK - on or related to the rail route from Shrewsbury to Crewe
 
 .. code-block:: php
 
@@ -9847,7 +9847,7 @@ Sapper Hill 1943
 Schwarzeck
 ----------
 | Type: Geodetic
-| Extent: Namibia - onshore and offshore
+| Extent: Namibia
 
 .. code-block:: php
 
@@ -9935,7 +9935,7 @@ Fundamental point: Ep A. Latitude: 1°06'10.60"N, longitude: 105°00'59.82"E (of
 ShAb07 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the rail route from Shrewsbury to Aberystwyth
+| Extent: UK - on or related to the rail route from Shrewsbury to Aberystwyth
 
 .. code-block:: php
 
@@ -9987,7 +9987,7 @@ Fundamental point: Kortright. Latitude: 8°28'44.4"N, longitude: 13°13'03.81"W 
 Singapore Height Datum
 ----------------------
 | Type: Vertical
-| Extent: Singapore - onshore and offshore
+| Extent: Singapore
 
 .. code-block:: php
 
@@ -10001,7 +10001,7 @@ Orthometric heights. Network readjusted in 2009.
 Sistem Referensi Geospasial Indonesia 2013
 ------------------------------------------
 | Type: Dynamic geodetic
-| Extent: Indonesia - onshore and offshore
+| Extent: Indonesia
 
 .. code-block:: php
 
@@ -10015,7 +10015,7 @@ Semi-dynamic datum. Geometric element of geodetic control network (JKG). Replace
 Sistema Geodesico Nacional de Panama MACARIO SOLIS
 --------------------------------------------------
 | Type: Geodetic
-| Extent: Panama - onshore and offshore
+| Extent: Panama
 
 .. code-block:: php
 
@@ -10027,7 +10027,7 @@ ITRF2000 at epoch 2000.0. Densification of SIRGAS 2000 network in Panama, consis
 Sistema de Referencia Geocentrico para America del Sur 1995
 -----------------------------------------------------------
 | Type: Geodetic
-| Extent: South America - onshore and offshore. Ecuador (mainland and Galapagos) - onshore and offshore
+| Extent: South America. Ecuador (mainland and Galapagos)
 
 .. code-block:: php
 
@@ -10041,7 +10041,7 @@ Realized by a frame of 58 stations observed in 1995 and adjusted in ITRF94. Prov
 Sistema de Referencia Geocentrico para las AmericaS 2000
 --------------------------------------------------------
 | Type: Geodetic
-| Extent: Latin America - Central America and South America - onshore and offshore. Brazil - onshore and offshore
+| Extent: Latin America - Central America and South America. Brazil
 
 .. code-block:: php
 
@@ -10083,7 +10083,7 @@ Replaced by CIGD11 (datum code 1100).
 Slovenia Geodetic Datum 1996
 ----------------------------
 | Type: Geodetic
-| Extent: Slovenia - onshore and offshore
+| Extent: Slovenia
 
 .. code-block:: php
 
@@ -10135,7 +10135,7 @@ Fundamental point: GUX 1.
 Sonatrach Reference Frame 2020
 ------------------------------
 | Type: Geodetic
-| Extent: Algeria - onshore and offshore
+| Extent: Algeria
 
 .. code-block:: php
 
@@ -10163,7 +10163,7 @@ Orthometric heights.
 South American Datum 1969
 -------------------------
 | Type: Geodetic
-| Extent: Brazil - onshore and offshore. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego
+| Extent: Brazil. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego
 
 .. code-block:: php
 
@@ -10177,7 +10177,7 @@ SAD69 uses GRS 1967 ellipsoid but with 1/f to exactly 2 decimal places. In Brazi
 South American Datum 1969(96)
 -----------------------------
 | Type: Geodetic
-| Extent: Brazil - onshore and offshore. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim Vaz and Sao Pedro e Sao Paulo
+| Extent: Brazil. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim Vaz and Sao Pedro e Sao Paulo
 
 .. code-block:: php
 
@@ -10256,7 +10256,7 @@ Normal-orthometric heights, but often referred to as "orthometric".
 St. George Island
 -----------------
 | Type: Geodetic
-| Extent: United States (USA) - Alaska - Pribilof Islands - St George Island
+| Extent: USA - Alaska - Pribilof Islands - St George Island
 
 .. code-block:: php
 
@@ -10324,7 +10324,7 @@ Defined by SHGEOID15 geoid model (transformation code 7891) applied to SHGD2015 
 St. Kilda
 ---------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - St Kilda onshore
+| Extent: UK - Great Britain - Scotland - St Kilda onshore
 
 .. code-block:: php
 
@@ -10348,7 +10348,7 @@ Fundamental point: station K12.
 St. Lawrence Island
 -------------------
 | Type: Geodetic
-| Extent: United States (USA) - Alaska - St Lawrence Island
+| Extent: USA - Alaska - St Lawrence Island
 
 .. code-block:: php
 
@@ -10372,7 +10372,7 @@ Fundamental point: station DCS3.
 St. Marys
 ---------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - England - Isles of Scilly onshore
+| Extent: UK - Great Britain - England - Isles of Scilly onshore
 
 .. code-block:: php
 
@@ -10386,7 +10386,7 @@ Orthometric heights.
 St. Paul Island
 ---------------
 | Type: Geodetic
-| Extent: United States (USA) - Alaska - Pribilof Islands - St Paul Island
+| Extent: USA - Alaska - Pribilof Islands - St Paul Island
 
 .. code-block:: php
 
@@ -10478,7 +10478,7 @@ Replaced by RT90 adjustment (datum code 6124)
 Stornoway
 ---------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Outer Hebrides onshore
+| Extent: UK - Great Britain - Scotland - Outer Hebrides onshore
 
 .. code-block:: php
 
@@ -10492,7 +10492,7 @@ Orthometric heights.
 Sule Skerry
 -----------
 | Type: Vertical
-| Extent: United Kingdom (UK) - Great Britain - Scotland - Sule Skerry onshore
+| Extent: UK - Great Britain - Scotland - Sule Skerry onshore
 
 .. code-block:: php
 
@@ -10504,7 +10504,7 @@ Orthometric heights.
 Svalbard vertical datum 2006
 ----------------------------
 | Type: Vertical
-| Extent: Arctic (Norway (Svalbard) onshore and offshore) - between 81°10'N and 76°10'N
+| Extent: Arctic (Norway (Svalbard)) - between 81°10'N and 76°10'N
 
 .. code-block:: php
 
@@ -10631,7 +10631,7 @@ Constrained to S-JTSK but realised through readjustment in projected CRS domain.
 TM65
 ----
 | Type: Geodetic
-| Extent: Ireland - onshore. United Kingdom (UK) - Northern Ireland (Ulster) - onshore
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
 
 .. code-block:: php
 
@@ -10645,7 +10645,7 @@ Differences between OSNI 1952 and TM65 at these stations are RMS 0.25m east, 0.2
 TPEN11 Intermediate Reference Frame
 -----------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds
+| Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds
 
 .. code-block:: php
 
@@ -10729,7 +10729,7 @@ Adopted in 1980. TWD67 uses the GRS 1967 ellipsoid but with 1/f to exactly 2 dec
 Taiwan Datum 1997
 -----------------
 | Type: Geodetic
-| Extent: Taiwan, Republic of China - onshore and offshore - Taiwan Island, Penghu (Pescadores) Islands
+| Extent: Taiwan, Republic of China - Taiwan Island, Penghu (Pescadores) Islands
 
 .. code-block:: php
 
@@ -10831,7 +10831,7 @@ Orthometric heights.
 Tern Island 1961
 ----------------
 | Type: Geodetic
-| Extent: United States (USA) - Hawaii - Tern Island and Sorel Atoll
+| Extent: USA - Hawaii - Tern Island and Sorel Atoll
 
 .. code-block:: php
 
@@ -10857,7 +10857,7 @@ Fundamental point: Tete.
 Timbalai 1948
 -------------
 | Type: Geodetic
-| Extent: Brunei - onshore and offshore; Malaysia - East Malaysia (Sabah; Sarawak) - onshore and offshore
+| Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
 
 .. code-block:: php
 
@@ -10899,7 +10899,7 @@ Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum cod
 Tonga Geodetic Datum 2005
 -------------------------
 | Type: Geodetic
-| Extent: Tonga - onshore and offshore
+| Extent: Tonga
 
 .. code-block:: php
 
@@ -10925,7 +10925,7 @@ Normal-orthometric heights. In Croatia replaced by HVRS71 (datum code 5207).
 Trinidad 1903
 -------------
 | Type: Geodetic
-| Extent: Trinidad and Tobago - Trinidad - onshore and offshore
+| Extent: Trinidad and Tobago - Trinidad
 
 .. code-block:: php
 
@@ -10950,7 +10950,7 @@ Tristan 1968
 Trucial Coast 1948
 ------------------
 | Type: Geodetic
-| Extent: United Arab Emirates (UAE) - Abu Dhabi onshore and Dubai onshore
+| Extent: UAE - Abu Dhabi onshore and Dubai onshore
 
 .. code-block:: php
 
@@ -10962,7 +10962,7 @@ Fundamental point: TC1. Latitude: 25°23'50.190"N, longitude: 55°26'43.950"E (o
 Turkish National Reference Frame
 --------------------------------
 | Type: Geodetic
-| Extent: Türkiye (Turkey) - onshore and offshore
+| Extent: Turkey
 
 .. code-block:: php
 
@@ -10988,7 +10988,7 @@ Replaced by American Samoa Vertical Datum of 2002 (datum code 1125).
 Ukraine 2000
 ------------
 | Type: Geodetic
-| Extent: Ukraine - onshore and offshore
+| Extent: Ukraine
 
 .. code-block:: php
 
@@ -11124,7 +11124,7 @@ Replaces Voirol 1875 (Paris) (code 6811).
 WC05 Intermediate Reference Frame
 ---------------------------------
 | Type: Geodetic
-| Extent: United Kingdom (UK) - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
+| Extent: UK - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
 
 .. code-block:: php
 
@@ -11401,7 +11401,7 @@ Replaces Yellow Sea 1956 datum.
 Yemen National Geodetic Network 1996
 ------------------------------------
 | Type: Geodetic
-| Extent: Yemen - onshore and offshore
+| Extent: Yemen
 
 .. code-block:: php
 
@@ -11413,7 +11413,7 @@ Sana'a IGN reference marker.
 Yoff
 ----
 | Type: Geodetic
-| Extent: Senegal - onshore and offshore
+| Extent: Senegal
 
 .. code-block:: php
 
@@ -11425,7 +11425,7 @@ Fundamental point: Yoff. Latitude: 14°44'41.62"N, longitude: 17°29'07.02"W (of
 Zanderij
 --------
 | Type: Geodetic
-| Extent: Suriname - onshore and offshore
+| Extent: Suriname
 
 .. code-block:: php
 
