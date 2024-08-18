@@ -55,10 +55,14 @@ use function basename;
 use function addcslashes;
 use function preg_replace;
 use function file_exists;
+use function array_chunk;
+use function array_filter;
+use function ceil;
 
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
 use const PHP_EOL;
+use const ARRAY_FILTER_USE_KEY;
 
 class EPSGCodegenFromDataImport
 {
@@ -1437,29 +1441,42 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/Projected.php',
-            $data,
-            'public',
-            [
-                Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
-                Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 4'],
-                Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
-                Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS => ['NAD83(CSRS) / Quebec Albers'],
-                Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT => ['NAD83(CSRS) / Quebec Lambert'],
-                Projected::EPSG_LKS_92_LATVIA_TM => ['LKS92 / Latvia TM'],
-                Projected::EPSG_KGD2002_CENTRAL_BELT => ['Korea 2000 / Central Belt'],
-                Projected::EPSG_KGD2002_CENTRAL_BELT_2010 => ['Korea 2000 / Central Belt 2010'],
-                Projected::EPSG_KGD2002_CENTRAL_BELT_JEJU => ['Korea 2000 / Central Belt Jeju'],
-                Projected::EPSG_KGD2002_EAST_BELT => ['Korea 2000 / East Belt'],
-                Projected::EPSG_KGD2002_EAST_BELT_2010 => ['Korea 2000 / East Belt 2010'],
-                Projected::EPSG_KGD2002_EAST_SEA_BELT => ['Korea 2000 / East Sea Belt'],
-                Projected::EPSG_KGD2002_EAST_SEA_BELT_2010 => ['Korea 2000 / East Sea Belt 2010'],
-                Projected::EPSG_KGD2002_UNIFIED_CS => ['Korea 2000 / Unified CS'],
-                Projected::EPSG_KGD2002_WEST_BELT => ['Korea 2000 / West Belt'],
-                Projected::EPSG_KGD2002_WEST_BELT_2010 => ['Korea 2000 / West Belt 2010'],
-            ]
-        );
+        $updateProjectionData = function ($filename, $data): void {
+            $this->codeGen->updateFileConstants(
+                $filename,
+                $data,
+                'public',
+                array_filter(
+                    [
+                        Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
+                        Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 4'],
+                        Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
+                        Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS => ['NAD83(CSRS) / Quebec Albers'],
+                        Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT => ['NAD83(CSRS) / Quebec Lambert'],
+                        Projected::EPSG_LKS_92_LATVIA_TM => ['LKS92 / Latvia TM'],
+                        Projected::EPSG_KGD2002_CENTRAL_BELT => ['Korea 2000 / Central Belt'],
+                        Projected::EPSG_KGD2002_CENTRAL_BELT_2010 => ['Korea 2000 / Central Belt 2010'],
+                        Projected::EPSG_KGD2002_CENTRAL_BELT_JEJU => ['Korea 2000 / Central Belt Jeju'],
+                        Projected::EPSG_KGD2002_EAST_BELT => ['Korea 2000 / East Belt'],
+                        Projected::EPSG_KGD2002_EAST_BELT_2010 => ['Korea 2000 / East Belt 2010'],
+                        Projected::EPSG_KGD2002_EAST_SEA_BELT => ['Korea 2000 / East Sea Belt'],
+                        Projected::EPSG_KGD2002_EAST_SEA_BELT_2010 => ['Korea 2000 / East Sea Belt 2010'],
+                        Projected::EPSG_KGD2002_UNIFIED_CS => ['Korea 2000 / Unified CS'],
+                        Projected::EPSG_KGD2002_WEST_BELT => ['Korea 2000 / West Belt'],
+                        Projected::EPSG_KGD2002_WEST_BELT_2010 => ['Korea 2000 / West Belt 2010'],
+                    ],
+                    fn ($urn) => isset($data[$urn]),
+                    ARRAY_FILTER_USE_KEY
+                )
+            );
+        };
+        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/Projected81.php', $data);
+        $chunkedData = array_chunk($data, (int) ceil(count($data) / 4), true);
+        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk1.php', $chunkedData[0]);
+        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk2.php', $chunkedData[1]);
+        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk3.php', $chunkedData[2]);
+        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk4.php', $chunkedData[3]);
+
         $this->codeGen->updateDocs(Projected::class, $data);
 
         /*

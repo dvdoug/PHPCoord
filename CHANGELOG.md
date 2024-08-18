@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [5.9.2] - 2024-08-18
+### Changed
+- Split declaration of the `Projected::EPSG_*` constants into multiple files internally to aid with static analysis
+  in IDEs (there are so many, the file defining them was over the max file size analysis threshold for Intelephense)
+
 ## [5.9.1] - 2024-08-15
 ### Changed
 - Updates to data for USA and WGS84
@@ -335,9 +340,11 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.9.0..master
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.9.2..master
 
-[5.9.0]: https://github.com/dvdoug/PHPCoord/compare/v5.7.0..v5.9.0
+[5.9.2]: https://github.com/dvdoug/PHPCoord/compare/v5.9.1..v5.9.2
+[5.9.1]: https://github.com/dvdoug/PHPCoord/compare/v5.9.0..v5.9.1
+[5.9.0]: https://github.com/dvdoug/PHPCoord/compare/v5.8.0..v5.9.0
 [5.8.0]: https://github.com/dvdoug/PHPCoord/compare/v5.7.0..v5.8.0
 [5.7.0]: https://github.com/dvdoug/PHPCoord/compare/v5.6.0..v5.7.0
 [5.6.0]: https://github.com/dvdoug/PHPCoord/compare/v5.5.0..v5.6.0

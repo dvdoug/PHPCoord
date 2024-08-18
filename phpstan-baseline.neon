@@ -6,9 +6,9 @@ parameters:
 			path: src/CoordinateOperation/NADCON5Grid.php
 
 		-
-			message: "#^Method PHPCoord\\\\CoordinateReferenceSystem\\\\Projected\\:\\:getDerivingConversion\\(\\) should return string but returns string\\|null\\.$#"
+			message: "#^Method PHPCoord\\\\CoordinateReferenceSystem\\\\ProjectedBase\\:\\:getDerivingConversion\\(\\) should return string but returns string\\|null\\.$#"
 			count: 1
-			path: src/CoordinateReferenceSystem/Projected.php
+			path: src/CoordinateReferenceSystem/ProjectedBase.php
 
 		-
 			message: "#^Method PHPCoord\\\\Datum\\\\Datum\\:\\:getEllipsoid\\(\\) should return PHPCoord\\\\Datum\\\\Ellipsoid but returns PHPCoord\\\\Datum\\\\Ellipsoid\\|null\\.$#"
