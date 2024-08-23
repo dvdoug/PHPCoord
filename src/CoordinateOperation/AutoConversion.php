@@ -75,6 +75,16 @@ trait AutoConversion
     }
 
     /**
+     * Calculates if the point as constructed actually lies within the bounding box of the CRS.
+     */
+    public function isWithinCRSBoundingArea(): bool
+    {
+        $pointAsWGS84 = $this->getPointForBoundaryCheck(); // some obscure CRSs might not be able to convert
+
+        return !$pointAsWGS84 instanceof GeographicValue || $this->crs->getBoundingArea()->containsPoint($pointAsWGS84);
+    }
+
+    /**
      * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>
      */
     protected function findOperationPath(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, bool $ignoreBoundaryRestrictions): array

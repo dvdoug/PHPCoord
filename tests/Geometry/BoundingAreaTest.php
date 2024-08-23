@@ -9,8 +9,13 @@ declare(strict_types=1);
 namespace PHPCoord\Geometry;
 
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Point\GeographicPoint;
+use PHPCoord\Point\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
+use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\TestCase;
 
 class BoundingAreaTest extends TestCase
@@ -101,5 +106,37 @@ class BoundingAreaTest extends TestCase
     {
         $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::1275']);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50.965613067768), new Degree(5.8249181759236), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
+    }
+
+    public function testBoundaryChecking(): void
+    {
+        $newYorkInED50 = GeographicPoint::create(
+            latitude: new Degree(40.689167),
+            longitude: new Degree(-74.044444),
+            crs: Geographic2D::fromSRID(Geographic2D::EPSG_ED50)
+        );
+
+        $newYorkInNAD83 = GeographicPoint::create(
+            latitude: new Degree(40.689167),
+            longitude: new Degree(-74.044444),
+            crs: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011)
+        );
+
+        $newYorkInCorrectUTM = ProjectedPoint::createFromEastingNorthing(
+            easting: new Metre(580741),
+            northing: new Metre(4504692),
+            crs: Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_18N)
+        );
+
+        $newYorkInOSGB = ProjectedPoint::createFromEastingNorthing(
+            easting: new Metre(580741),
+            northing: new Metre(4504692),
+            crs: Projected::fromSRID(Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID)
+        );
+
+        self::assertFalse($newYorkInED50->isWithinCRSBoundingArea());
+        self::assertTrue($newYorkInNAD83->isWithinCRSBoundingArea());
+        self::assertTrue($newYorkInCorrectUTM->isWithinCRSBoundingArea());
+        self::assertFalse($newYorkInOSGB->isWithinCRSBoundingArea());
     }
 }
