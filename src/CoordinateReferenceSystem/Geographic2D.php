@@ -328,12 +328,6 @@ class Geographic2D extends Geographic
     public const EPSG_BERMUDA_1957 = 'urn:ogc:def:crs:EPSG::4216';
 
     /**
-     * Bern 1898 (Bern)
-     * Extent: Liechtenstein; Switzerland.
-     */
-    public const EPSG_BERN_1898_BERN = 'urn:ogc:def:crs:EPSG::4801';
-
-    /**
      * Bern 1938
      * Extent: Liechtenstein; Switzerland
      * Used for the geographic coordinates overprinted on topographic maps constructed on the CH1903 / LV03 projected
@@ -386,6 +380,13 @@ class Geographic2D extends Geographic
      * Replaced by CH1903+.
      */
     public const EPSG_CH1903 = 'urn:ogc:def:crs:EPSG::4149';
+
+    /**
+     * CH1903 (Bern)
+     * Extent: Liechtenstein; Switzerland
+     * Replaced by CH1903 (CRS code 4149).
+     */
+    public const EPSG_CH1903_BERN = 'urn:ogc:def:crs:EPSG::4801';
 
     /**
      * CH1903+
@@ -4305,6 +4306,11 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_KGD2002 instead
      */
     public const EPSG_KOREA_2000 = 'urn:ogc:def:crs:EPSG::4737';
+
+    /**
+     * @deprecated use EPSG_CH1903_BERN instead
+     */
+    public const EPSG_BERN_1898_BERN = 'urn:ogc:def:crs:EPSG::4801';
     protected Geographic2D|Geographic3D|null $baseCRS;
 
     /**

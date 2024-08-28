@@ -662,20 +662,6 @@ Bermuda 1957
 
 Replaced by BDA2000 (CRS code 4762).
 
-Bern 1898 (Bern)
-----------------
-| Extent: Liechtenstein; Switzerland
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_BERN_1898_BERN)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4801')
-    Geographic::fromSRID(Geographic2D::EPSG_BERN_1898_BERN)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4801')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BERN_1898_BERN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4801')
-
-
 Bern 1938
 ---------
 | Extent: Liechtenstein; Switzerland
@@ -792,6 +778,21 @@ CH1903
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4149')
 
 Replaced by CH1903+.
+
+CH1903 (Bern)
+-------------
+| Extent: Liechtenstein; Switzerland
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CH1903_BERN)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4801')
+    Geographic::fromSRID(Geographic2D::EPSG_CH1903_BERN)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4801')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CH1903_BERN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4801')
+
+Replaced by CH1903 (CRS code 4149).
 
 CH1903+
 -------

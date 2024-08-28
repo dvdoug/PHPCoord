@@ -2012,19 +2012,6 @@ Bermuda 1957 / UTM zone 20N
 
 Replaced by BDA2000 / Bermuda 2000 National Grid (alias BNG2000) (CRS code 3770).
 
-Bern 1898 (Bern) / LV03C
-------------------------
-| Extent: Liechtenstein; Switzerland
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_BERN_1898_BERN_LV03C)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::21780')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BERN_1898_BERN_LV03C)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21780')
-
-In Switzerland, replaced by CH1903 / LV03 (CRS code 21781). For use in Liechtenstein may be implemented through Greenwich based equivalent CRS code 21782.
-
 Bissau / UTM zone 28N
 ---------------------
 | Extent: Guinea-Bissau - onshore
@@ -2944,6 +2931,19 @@ CGRS93 / Cyprus Local Transverse Mercator
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_CGRS93_CYPRUS_LOCAL_TRANSVERSE_MERCATOR)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6312')
 
+
+CH1903 (Bern) / LV03C
+---------------------
+| Extent: Liechtenstein; Switzerland
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_CH1903_BERN_LV03C)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::21780')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_CH1903_BERN_LV03C)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21780')
+
+In Switzerland, replaced by CH1903 / LV03 (CRS code 21781). For use in Liechtenstein may be implemented through Greenwich based equivalent CRS code 21782.
 
 CH1903 / LV03
 -------------
@@ -11236,7 +11236,7 @@ See Gulshan 303 / TM 90 NE (CRS code 3106) for topographic mapping and offshore 
 
 Gulshan 303 / TM 90 NE
 ----------------------
-| Extent: Bangladesh, Bangladesh - onshore
+| Extent: Bangladesh - onshore, Bangladesh
 
 .. code-block:: php
 
@@ -15809,7 +15809,7 @@ Introduced in 1924. In Croatia replaced by HTRS96 / Croatia TM (CRS code 3765). 
 
 MGI 1901 / Balkans zone 7
 -------------------------
-| Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between 19°30'E and 22°30'E
+| Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between 19°30'E and 22°30'E, North Macedonia
 
 .. code-block:: php
 
@@ -34104,7 +34104,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 13N
 ----------------------------
-| Extent: Canada - Saskatchewan, Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
+| Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
 
 .. code-block:: php
 
@@ -55495,6 +55495,19 @@ SIRGAS 2000 / Brazil Polyconic
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5880')
 
 Replaces SAD69 / Brazil Polyconic (CRS code 29101) and SAD69(96) / Brazil Polyconic (CRS code 5530).
+
+SIRGAS 2000 / Porto Alegre TM
+-----------------------------
+| Extent: Brazil - Porto Alegre municipality
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SIRGAS_2000_PORTO_ALEGRE_TM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10665')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SIRGAS_2000_PORTO_ALEGRE_TM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10665')
+
+Replaces the Porto Alegre Gauss-Kruger Cartographic Reference System of the Brazilian General Chart Commission (SCR-CCG) from 2013-06-20.
 
 SIRGAS 2000 / UTM zone 11N
 --------------------------

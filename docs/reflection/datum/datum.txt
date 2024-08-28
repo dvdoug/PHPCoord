@@ -1931,6 +1931,8 @@ Deutsche Bahn Reference System
 
 Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across all German states.
 
+In DB_REF2016 only the vertical CRS component is updated, the geodetic CRS component of DB_REF is unchanged.
+
 Deutsches Hauptdreiecksnetz
 ---------------------------
 | Type: Geodetic

@@ -1,1 +1,1 @@
-.. |numOfCRS| replace:: 6993
+.. |numOfCRS| replace:: 6996

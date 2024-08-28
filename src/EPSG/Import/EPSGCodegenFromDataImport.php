@@ -1349,6 +1349,7 @@ class EPSGCodegenFromDataImport
                 Geographic2D::EPSG_LUREF => ['Luxembourg 1930'],
                 Geographic2D::EPSG_LKS_92 => ['LKS92'],
                 Geographic2D::EPSG_KGD2002 => ['Korea 2000'],
+                Geographic2D::EPSG_CH1903_BERN => ['Bern 1898 (Bern)'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1464,6 +1465,7 @@ class EPSGCodegenFromDataImport
                         Projected::EPSG_KGD2002_UNIFIED_CS => ['Korea 2000 / Unified CS'],
                         Projected::EPSG_KGD2002_WEST_BELT => ['Korea 2000 / West Belt'],
                         Projected::EPSG_KGD2002_WEST_BELT_2010 => ['Korea 2000 / West Belt 2010'],
+                        Projected::EPSG_CH1903_BERN_LV03C => ['Bern 1898 (Bern) / LV03C'],
                     ],
                     fn ($urn) => isset($data[$urn]),
                     ARRAY_FILTER_USE_KEY

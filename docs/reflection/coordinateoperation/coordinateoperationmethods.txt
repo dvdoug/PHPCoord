@@ -310,6 +310,14 @@ Geog3D to Geog2D+GravityRelatedHeight (ITAL2005)
     'urn:ogc:def:method:EPSG::1105'
 
 
+Geog3D to Geog2D+GravityRelatedHeight (NGS bin)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NGS_BIN
+    'urn:ogc:def:method:EPSG::1135'
+
+
 Geog3D to Geog2D+GravityRelatedHeight (NRCan byn)
 -------------------------------------------------
 .. code-block:: php
@@ -460,6 +468,14 @@ Geographic3D to GravityRelatedHeight (ITAL2005)
 
     CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ITAL2005
     'urn:ogc:def:method:EPSG::1106'
+
+
+Geographic3D to GravityRelatedHeight (NGS bin)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NGS_BIN
+    'urn:ogc:def:method:EPSG::1134'
 
 
 Geographic3D to GravityRelatedHeight (NRCan byn)

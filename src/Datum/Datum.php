@@ -1356,6 +1356,7 @@ class Datum
      * Schleswig-Holstein, Thuringen
      * Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across
      * all German states.
+     * In DB_REF2016 only the vertical CRS component is updated, the geodetic CRS component of DB_REF is unchanged.
      */
     public const EPSG_DEUTSCHE_BAHN_REFERENCE_SYSTEM = 'urn:ogc:def:datum:EPSG::1081';
 
@@ -9031,7 +9032,7 @@ The lowest tide level which can be predicted to occur under average meteorologic
             'anchor_epoch' => null,
             'extent_name' => 'Germany - onshore',
             'help' => 'Defined by transformation from ETRS89 (transformation code 5826) to be an average of DHDN realizations across all German states.
-',
+In DB_REF2016 only the vertical CRS component is updated, the geodetic CRS component of DB_REF is unchanged.',
         ],
         'urn:ogc:def:datum:EPSG::1082' => [
             'name' => 'Highest Astronomical Tide',

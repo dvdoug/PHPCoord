@@ -3102,13 +3102,13 @@ trait Geographic2DSRIDData
             'help' => 'Replaces MG! alias D48 (CRS code 4312).',
         ],
         'urn:ogc:def:crs:EPSG::4801' => [
-            'name' => 'Bern 1898 (Bern)',
+            'name' => 'CH1903 (Bern)',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6422',
             'base_crs' => null,
             'datum' => 'urn:ogc:def:datum:EPSG::6801',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
-            'help' => '',
+            'help' => 'Replaced by CH1903 (CRS code 4149).',
         ],
         'urn:ogc:def:crs:EPSG::4802' => [
             'name' => 'Bogota 1975 (Bogota)',

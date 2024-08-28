@@ -2768,6 +2768,14 @@ trait ProjectedConstantsChunk4
     public const EPSG_SIRGAS_2000_BRAZIL_POLYCONIC = 'urn:ogc:def:crs:EPSG::5880';
 
     /**
+     * SIRGAS 2000 / Porto Alegre TM
+     * Extent: Brazil - Porto Alegre municipality
+     * Replaces the Porto Alegre Gauss-Kruger Cartographic Reference System of the Brazilian General Chart Commission
+     * (SCR-CCG) from 2013-06-20.
+     */
+    public const EPSG_SIRGAS_2000_PORTO_ALEGRE_TM = 'urn:ogc:def:crs:EPSG::10665';
+
+    /**
      * SIRGAS 2000 / UTM zone 11N
      * Extent: Latin America between 120°W and 114°W, northern hemisphere.
      */

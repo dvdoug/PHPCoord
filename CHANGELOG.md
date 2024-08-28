@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [5.10.1] - 2024-09-24
+### Fixed
+- Compatibility with opcache preloading
+
 ## [5.10.0] - 2024-08-23
 ### Added
 - Added a new method `isWithinCRSBoundingArea()` on most `Point` objects to check if they lie within the bounds
@@ -345,8 +349,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.10.0..master
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.10.1..master
 
+[5.10.1]: https://github.com/dvdoug/PHPCoord/compare/v5.10.0..v5.10.1
 [5.10.0]: https://github.com/dvdoug/PHPCoord/compare/v5.9.2..v5.10.0
 [5.9.2]: https://github.com/dvdoug/PHPCoord/compare/v5.9.1..v5.9.2
 [5.9.1]: https://github.com/dvdoug/PHPCoord/compare/v5.9.0..v5.9.1

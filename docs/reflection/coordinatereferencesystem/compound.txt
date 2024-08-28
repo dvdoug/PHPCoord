@@ -355,6 +355,18 @@ EOS21 Grid + ODN height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9742')
 
 
+ETRF2000 + EOMA 1980 height
+---------------------------
+| Extent: Hungary
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ETRF2000_PLUS_EOMA_1980_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10659')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ETRF2000_PLUS_EOMA_1980_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10659')
+
+
 ETRF2000-PL + Baltic 1986 height
 --------------------------------
 | Extent: Poland - onshore
@@ -2135,6 +2147,18 @@ GWWWA22 Grid + ODN height
     Compound::fromSRID('urn:ogc:def:crs:EPSG::10223')
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_GWWWA22_GRID_PLUS_ODN_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10223')
+
+
+HD72 / EOV + EOMA 1980 height
+-----------------------------
+| Extent: Hungary
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_HD72_EOV_PLUS_EOMA_1980_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10660')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_HD72_EOV_PLUS_EOMA_1980_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10660')
 
 
 HS2 Survey Grid + HS2-VRF height

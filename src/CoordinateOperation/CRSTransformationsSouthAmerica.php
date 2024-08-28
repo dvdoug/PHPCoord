@@ -1132,6 +1132,13 @@ class CRSTransformationsSouthAmerica
             'accuracy' => 1.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10664',
+            'name' => 'Porto Alegre Transverse Mercator',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4674',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10665',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15894',
             'name' => 'SIRGAS 2000 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4674',

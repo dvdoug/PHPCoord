@@ -302,7 +302,7 @@ trait ProjectedConstantsChunk3
 
     /**
      * NAD83(CSRS)v2 / UTM zone 13N
-     * Extent: Canada - Saskatchewan, Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
+     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
      * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
      * zone used throughout all SK for province-wide mapping and spatial referencing.
      */

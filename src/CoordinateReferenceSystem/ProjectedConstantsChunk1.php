@@ -1163,14 +1163,6 @@ trait ProjectedConstantsChunk1
     public const EPSG_BERMUDA_1957_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::3769';
 
     /**
-     * Bern 1898 (Bern) / LV03C
-     * Extent: Liechtenstein; Switzerland
-     * In Switzerland, replaced by CH1903 / LV03 (CRS code 21781). For use in Liechtenstein may be implemented through
-     * Greenwich based equivalent CRS code 21782.
-     */
-    public const EPSG_BERN_1898_BERN_LV03C = 'urn:ogc:def:crs:EPSG::21780';
-
-    /**
      * Bissau / UTM zone 28N
      * Extent: Guinea-Bissau - onshore.
      */
@@ -1666,6 +1658,14 @@ trait ProjectedConstantsChunk1
      * Extent: Cyprus - onshore.
      */
     public const EPSG_CGRS93_CYPRUS_LOCAL_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::6312';
+
+    /**
+     * CH1903 (Bern) / LV03C
+     * Extent: Liechtenstein; Switzerland
+     * In Switzerland, replaced by CH1903 / LV03 (CRS code 21781). For use in Liechtenstein may be implemented through
+     * Greenwich based equivalent CRS code 21782.
+     */
+    public const EPSG_CH1903_BERN_LV03C = 'urn:ogc:def:crs:EPSG::21780';
 
     /**
      * CH1903 / LV03
@@ -6418,7 +6418,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh, Bangladesh - onshore
+     * Extent: Bangladesh - onshore, Bangladesh
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -8975,8 +8975,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
-     * Serbia - between 19°30'E and 22°30'E
+     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
+     * 19°30'E and 22°30'E, North Macedonia
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
      * (CRS code 10329).
@@ -9546,4 +9546,9 @@ trait ProjectedConstantsChunk1
      * @deprecated use EPSG_KGD2002_WEST_BELT_2010 instead
      */
     public const EPSG_KOREA_2000_WEST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5185';
+
+    /**
+     * @deprecated use EPSG_CH1903_BERN_LV03C instead
+     */
+    public const EPSG_BERN_1898_BERN_LV03C = 'urn:ogc:def:crs:EPSG::21780';
 }

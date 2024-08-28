@@ -207,6 +207,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1105';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (NGS bin).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NGS_BIN = 'urn:ogc:def:method:EPSG::1135';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (NRCan byn).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NRCAN_BYN = 'urn:ogc:def:method:EPSG::1090';
@@ -300,6 +305,11 @@ class CoordinateOperationMethods
      * Geographic3D to GravityRelatedHeight (ITAL2005).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ITAL2005 = 'urn:ogc:def:method:EPSG::1106';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (NGS bin).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NGS_BIN = 'urn:ogc:def:method:EPSG::1134';
 
     /**
      * Geographic3D to GravityRelatedHeight (NRCan byn).
@@ -2415,6 +2425,29 @@ class CoordinateOperationMethods
                     'reverses' => false,
                 ],
                 'northingAtProjectionCentre' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1134' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (NGS bin)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1135' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (NGS bin)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
                     'reverses' => false,
                 ],
             ],
@@ -4621,6 +4654,8 @@ class CoordinateOperationMethods
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => 'offsetFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NGS_BIN => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NGS_BIN => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DTo2DPlusGravityHeightFromGrid',

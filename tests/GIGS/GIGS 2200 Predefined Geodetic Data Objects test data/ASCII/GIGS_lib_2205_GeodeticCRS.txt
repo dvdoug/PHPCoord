@@ -443,7 +443,7 @@
 4765	Geographic 2D	Slovenia 1996	D96	6765	Slovenia
 4883	Geographic 3D	Slovenia 1996	D96	6765	Slovenia
 4882	Geocentric	Slovenia 1996	D96	6765	Slovenia
-4801	Geographic 2D	Bern 1898 (Bern)		6801	Europe - Liechtenstein and Switzerland
+4801	Geographic 2D	CH1903 (Bern)		6801	Europe - Liechtenstein and Switzerland
 4802	Geographic 2D	Bogota 1975 (Bogota)		6802	Colombia - mainland
 4803	Geographic 2D	Lisbon (Lisbon)	Lisbon 1937 (Lisbon)	6803	Portugal - mainland - onshore
 4804	Geographic 2D	Makassar (Jakarta)		6804	Indonesia - Sulawesi SW

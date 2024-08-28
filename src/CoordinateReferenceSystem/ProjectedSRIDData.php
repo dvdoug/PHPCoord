@@ -9253,8 +9253,8 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4682',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16490',
-            'extent' => ['urn:ogc:def:area:EPSG::1041', 'urn:ogc:def:area:EPSG::3217'],
-            'extent_name' => 'Bangladesh, Bangladesh - onshore',
+            'extent' => ['urn:ogc:def:area:EPSG::3217', 'urn:ogc:def:area:EPSG::1041'],
+            'extent_name' => 'Bangladesh - onshore, Bangladesh',
             'help' => 'Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See Gulshan 303 / BTM (code 9678) for other uses including water resource management.',
         ],
         'urn:ogc:def:crs:EPSG::3107' => [
@@ -21349,8 +21349,8 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4498',
             'base_crs' => 'urn:ogc:def:crs:EPSG::3906',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::18277',
-            'extent' => ['urn:ogc:def:area:EPSG::1148', 'urn:ogc:def:area:EPSG::1711'],
-            'extent_name' => 'North Macedonia, Europe - former Yugoslavia onshore 19.5°E to 22.5°E',
+            'extent' => ['urn:ogc:def:area:EPSG::1711', 'urn:ogc:def:area:EPSG::1148'],
+            'extent_name' => 'Europe - former Yugoslavia onshore 19.5°E to 22.5°E, North Macedonia',
             'help' => 'Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM (CRS code 10329).',
         ],
         'urn:ogc:def:crs:EPSG::6328' => [
@@ -32594,6 +32594,15 @@ trait ProjectedSRIDData
             'extent_name' => 'UK - London to Glasgow',
             'help' => 'Defined through transformation ETRS89 to WC05-IRF (1) (code 10629) and map projection WC05-TM (code 10631). Emulates the WC05 Snake projection applied to ETRS89 as realized through OSNet 2009.',
         ],
+        'urn:ogc:def:crs:EPSG::10665' => [
+            'name' => 'SIRGAS 2000 / Porto Alegre TM',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
+            'base_crs' => 'urn:ogc:def:crs:EPSG::4674',
+            'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::10664',
+            'extent' => ['urn:ogc:def:area:EPSG::4777'],
+            'extent_name' => 'Brazil - Porto Alegre municipality',
+            'help' => 'Replaces the Porto Alegre Gauss-Kruger Cartographic Reference System of the Brazilian General Chart Commission (SCR-CCG) from 2013-06-20.',
+        ],
         'urn:ogc:def:crs:EPSG::10731' => [
             'name' => 'ETRS89/DREF91/2016 / UTM zone 31N',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
@@ -35196,7 +35205,7 @@ trait ProjectedSRIDData
             'help' => 'Replaced by BD72 / Belge Lambert 72 (code 31300) and BD72 / Belgian Lambert 72 (code 31370).',
         ],
         'urn:ogc:def:crs:EPSG::21780' => [
-            'name' => 'Bern 1898 (Bern) / LV03C',
+            'name' => 'CH1903 (Bern) / LV03C',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4498',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4801',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::19923',
@@ -35551,8 +35560,8 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
-            'extent' => ['urn:ogc:def:area:EPSG::2375', 'urn:ogc:def:area:EPSG::3526'],
-            'extent_name' => 'Canada - Saskatchewan, Canada - 108°W to 102°W',
+            'extent' => ['urn:ogc:def:area:EPSG::3526', 'urn:ogc:def:area:EPSG::2375'],
+            'extent_name' => 'Canada - 108°W to 102°W, Canada - Saskatchewan',
             'help' => 'Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This zone used throughout all SK for province-wide mapping and spatial referencing.',
         ],
         'urn:ogc:def:crs:EPSG::22214' => [

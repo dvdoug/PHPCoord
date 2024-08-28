@@ -3688,5 +3688,6 @@ class RegionMap
         'urn:ogc:def:area:EPSG::4774' => self::REGION_EUROPE,
         'urn:ogc:def:area:EPSG::4775' => self::REGION_EUROPE,
         'urn:ogc:def:area:EPSG::4776' => self::REGION_EUROPE,
+        'urn:ogc:def:area:EPSG::4777' => self::REGION_SOUTHAMERICA,
     ];
 }

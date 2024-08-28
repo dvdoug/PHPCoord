@@ -3359,7 +3359,7 @@ class CRSTransformationsEurope
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1765',
-            'name' => 'Bern 1898 (Bern) to CH1903 (1)',
+            'name' => 'CH1903 (Bern) to CH1903 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4801',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4149',
             'accuracy' => 0.0,

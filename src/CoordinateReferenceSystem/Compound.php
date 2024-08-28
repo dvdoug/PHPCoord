@@ -217,6 +217,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_EOS21_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9742';
 
     /**
+     * ETRF2000 + EOMA 1980 height
+     * Extent: Hungary.
+     */
+    public const EPSG_ETRF2000_PLUS_EOMA_1980_HEIGHT = 'urn:ogc:def:crs:EPSG::10659';
+
+    /**
      * ETRF2000-PL + Baltic 1986 height
      * Extent: Poland - onshore.
      */
@@ -1151,6 +1157,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: UK - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard.
      */
     public const EPSG_GWWWA22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10223';
+
+    /**
+     * HD72 / EOV + EOMA 1980 height
+     * Extent: Hungary.
+     */
+    public const EPSG_HD72_EOV_PLUS_EOMA_1980_HEIGHT = 'urn:ogc:def:crs:EPSG::10660';
 
     /**
      * HS2 Survey Grid + HS2-VRF height

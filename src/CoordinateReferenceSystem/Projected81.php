@@ -1167,14 +1167,6 @@ class Projected81 extends ProjectedBase
     public const EPSG_BERMUDA_1957_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::3769';
 
     /**
-     * Bern 1898 (Bern) / LV03C
-     * Extent: Liechtenstein; Switzerland
-     * In Switzerland, replaced by CH1903 / LV03 (CRS code 21781). For use in Liechtenstein may be implemented through
-     * Greenwich based equivalent CRS code 21782.
-     */
-    public const EPSG_BERN_1898_BERN_LV03C = 'urn:ogc:def:crs:EPSG::21780';
-
-    /**
      * Bissau / UTM zone 28N
      * Extent: Guinea-Bissau - onshore.
      */
@@ -1670,6 +1662,14 @@ class Projected81 extends ProjectedBase
      * Extent: Cyprus - onshore.
      */
     public const EPSG_CGRS93_CYPRUS_LOCAL_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::6312';
+
+    /**
+     * CH1903 (Bern) / LV03C
+     * Extent: Liechtenstein; Switzerland
+     * In Switzerland, replaced by CH1903 / LV03 (CRS code 21781). For use in Liechtenstein may be implemented through
+     * Greenwich based equivalent CRS code 21782.
+     */
+    public const EPSG_CH1903_BERN_LV03C = 'urn:ogc:def:crs:EPSG::21780';
 
     /**
      * CH1903 / LV03
@@ -6422,7 +6422,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh, Bangladesh - onshore
+     * Extent: Bangladesh - onshore, Bangladesh
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -8979,8 +8979,8 @@ class Projected81 extends ProjectedBase
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
-     * Serbia - between 19°30'E and 22°30'E
+     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
+     * 19°30'E and 22°30'E, North Macedonia
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
      * (CRS code 10329).
@@ -21041,7 +21041,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * NAD83(CSRS)v2 / UTM zone 13N
-     * Extent: Canada - Saskatchewan, Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
+     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
      * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
      * zone used throughout all SK for province-wide mapping and spatial referencing.
      */
@@ -34271,6 +34271,14 @@ class Projected81 extends ProjectedBase
     public const EPSG_SIRGAS_2000_BRAZIL_POLYCONIC = 'urn:ogc:def:crs:EPSG::5880';
 
     /**
+     * SIRGAS 2000 / Porto Alegre TM
+     * Extent: Brazil - Porto Alegre municipality
+     * Replaces the Porto Alegre Gauss-Kruger Cartographic Reference System of the Brazilian General Chart Commission
+     * (SCR-CCG) from 2013-06-20.
+     */
+    public const EPSG_SIRGAS_2000_PORTO_ALEGRE_TM = 'urn:ogc:def:crs:EPSG::10665';
+
+    /**
      * SIRGAS 2000 / UTM zone 11N
      * Extent: Latin America between 120°W and 114°W, northern hemisphere.
      */
@@ -40481,4 +40489,9 @@ class Projected81 extends ProjectedBase
      * @deprecated use EPSG_KGD2002_WEST_BELT_2010 instead
      */
     public const EPSG_KOREA_2000_WEST_BELT_2010 = 'urn:ogc:def:crs:EPSG::5185';
+
+    /**
+     * @deprecated use EPSG_CH1903_BERN_LV03C instead
+     */
+    public const EPSG_BERN_1898_BERN_LV03C = 'urn:ogc:def:crs:EPSG::21780';
 }
