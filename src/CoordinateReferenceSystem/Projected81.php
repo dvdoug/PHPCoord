@@ -6422,7 +6422,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh - onshore, Bangladesh
+     * Extent: Bangladesh, Bangladesh - onshore
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -8979,8 +8979,8 @@ class Projected81 extends ProjectedBase
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
-     * 19°30'E and 22°30'E, North Macedonia
+     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
+     * Serbia - between 19°30'E and 22°30'E
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
      * (CRS code 10329).
@@ -21041,7 +21041,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * NAD83(CSRS)v2 / UTM zone 13N
-     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
+     * Extent: Canada - Saskatchewan, Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
      * zone used throughout all SK for province-wide mapping and spatial referencing.
      */

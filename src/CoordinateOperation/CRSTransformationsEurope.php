@@ -1566,6 +1566,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.4,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10668',
+            'name' => 'HD72 to ETRF2000 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4237',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9067',
+            'accuracy' => 0.015,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10161',
             'name' => 'ETRS89 to S34J-IRF (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4258',

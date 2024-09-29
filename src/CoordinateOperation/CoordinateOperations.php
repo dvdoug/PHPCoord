@@ -12800,6 +12800,12 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::4777'],
             'extent_name' => 'Brazil - Porto Alegre municipality',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10668' => [
+            'name' => 'HD72 to ETRF2000 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent' => ['urn:ogc:def:area:EPSG::1119'],
+            'extent_name' => 'Hungary',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10700' => [
             'name' => 'Delaware CS27',
             'method' => 'urn:ogc:def:method:EPSG::9807',

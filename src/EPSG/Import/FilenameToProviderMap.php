@@ -222,4 +222,5 @@ return [
     'GCG2016.txt' => CoordinateOperation\DATETRS89DHHN2016Provider::class,
     'GeodPT08.dat' => CoordinateOperation\DATETRS89CascaisPortugalProvider::class,
     'CR2005_GTX.gtx' => CoordinateOperation\GTXETRS89Baltic1957CzechiaProvider::class,
+    'hu_bme_hd72corr.gsb' => CoordinateOperation\ETRS89HD72Provider::class,
 ];

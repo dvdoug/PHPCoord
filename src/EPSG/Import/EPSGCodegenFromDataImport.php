@@ -560,6 +560,7 @@ class EPSGCodegenFromDataImport
         10322, // gr3dncl08.tac inside Circe-NC allegedly, but I can't get it out
         10368, // KNGeoid18.gri
         10369, // KNGeoid18.gri
+        10663, // hu_sgo_hd72corr.gsb
 
         // Construction/engineering/scientific projects not of general use
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac

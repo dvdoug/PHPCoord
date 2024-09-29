@@ -6418,7 +6418,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh - onshore, Bangladesh
+     * Extent: Bangladesh, Bangladesh - onshore
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -8975,8 +8975,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
-     * 19°30'E and 22°30'E, North Macedonia
+     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
+     * Serbia - between 19°30'E and 22°30'E
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
      * (CRS code 10329).

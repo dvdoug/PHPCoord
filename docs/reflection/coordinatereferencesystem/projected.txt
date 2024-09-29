@@ -11236,7 +11236,7 @@ See Gulshan 303 / TM 90 NE (CRS code 3106) for topographic mapping and offshore 
 
 Gulshan 303 / TM 90 NE
 ----------------------
-| Extent: Bangladesh - onshore, Bangladesh
+| Extent: Bangladesh, Bangladesh - onshore
 
 .. code-block:: php
 
@@ -15809,7 +15809,7 @@ Introduced in 1924. In Croatia replaced by HTRS96 / Croatia TM (CRS code 3765). 
 
 MGI 1901 / Balkans zone 7
 -------------------------
-| Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between 19°30'E and 22°30'E, North Macedonia
+| Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between 19°30'E and 22°30'E
 
 .. code-block:: php
 
@@ -34104,7 +34104,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 13N
 ----------------------------
-| Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
+| Extent: Canada - Saskatchewan, Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
 
 .. code-block:: php
 

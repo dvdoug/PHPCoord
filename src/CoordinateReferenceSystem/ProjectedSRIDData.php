@@ -9253,8 +9253,8 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::4682',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16490',
-            'extent' => ['urn:ogc:def:area:EPSG::3217', 'urn:ogc:def:area:EPSG::1041'],
-            'extent_name' => 'Bangladesh - onshore, Bangladesh',
+            'extent' => ['urn:ogc:def:area:EPSG::1041', 'urn:ogc:def:area:EPSG::3217'],
+            'extent_name' => 'Bangladesh, Bangladesh - onshore',
             'help' => 'Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See Gulshan 303 / BTM (code 9678) for other uses including water resource management.',
         ],
         'urn:ogc:def:crs:EPSG::3107' => [
@@ -21349,8 +21349,8 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4498',
             'base_crs' => 'urn:ogc:def:crs:EPSG::3906',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::18277',
-            'extent' => ['urn:ogc:def:area:EPSG::1711', 'urn:ogc:def:area:EPSG::1148'],
-            'extent_name' => 'Europe - former Yugoslavia onshore 19.5°E to 22.5°E, North Macedonia',
+            'extent' => ['urn:ogc:def:area:EPSG::1148', 'urn:ogc:def:area:EPSG::1711'],
+            'extent_name' => 'North Macedonia, Europe - former Yugoslavia onshore 19.5°E to 22.5°E',
             'help' => 'Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM (CRS code 10329).',
         ],
         'urn:ogc:def:crs:EPSG::6328' => [
@@ -35560,8 +35560,8 @@ trait ProjectedSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::4400',
             'base_crs' => 'urn:ogc:def:crs:EPSG::8237',
             'deriving_conversion' => 'urn:ogc:def:coordinateOperation:EPSG::16013',
-            'extent' => ['urn:ogc:def:area:EPSG::3526', 'urn:ogc:def:area:EPSG::2375'],
-            'extent_name' => 'Canada - 108°W to 102°W, Canada - Saskatchewan',
+            'extent' => ['urn:ogc:def:area:EPSG::2375', 'urn:ogc:def:area:EPSG::3526'],
+            'extent_name' => 'Canada - Saskatchewan, Canada - 108°W to 102°W',
             'help' => 'Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This zone used throughout all SK for province-wide mapping and spatial referencing.',
         ],
         'urn:ogc:def:crs:EPSG::22214' => [
