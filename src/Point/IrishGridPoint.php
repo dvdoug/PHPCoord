@@ -91,12 +91,16 @@ class IrishGridPoint extends ProjectedPoint
             throw new InvalidCoordinateException('Chosen length must be an even number');
         }
 
+        if ($length > 10) {
+            throw new InvalidCoordinateException('Grid squares are 100,000m wide, max precision is 10');
+        }
+
         $halfLength = $length / 2;
 
         $x = $this->easting->asMetres()->getValue();
         $y = $this->northing->asMetres()->getValue();
-        $easting = str_pad((string) (int) $x, $halfLength, '0', STR_PAD_LEFT);
-        $northing = str_pad((string) (int) $y, $halfLength, '0', STR_PAD_LEFT);
+        $easting = str_pad((string) (int) $x, $halfLength + 1, '0', STR_PAD_LEFT);
+        $northing = str_pad((string) (int) $y, $halfLength + 1, '0', STR_PAD_LEFT);
 
         // second (minor) letter is 100km grid sq, origin at 0,0 of this square
         $minorSquaresEast = (int) $easting[0] % 5;

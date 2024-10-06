@@ -124,4 +124,16 @@ class BritishNationalGridPointTest extends TestCase
         $expected = 'TQ38';
         self::assertEquals($expected, $point->asGridReference(2));
     }
+
+    public function testRoundTripping1(): void
+    {
+        $point = BritishNationalGridPoint::fromGridReference('SX 70000 30000');
+        self::assertEquals('SX 70000 30000', $point->asGridReferenceWithSpaces(10));
+    }
+
+    public function testRoundTripping2(): void
+    {
+        $point = BritishNationalGridPoint::fromGridReference('NF 90000 70000');
+        self::assertEquals('NF 90000 70000', $point->asGridReferenceWithSpaces(10));
+    }
 }

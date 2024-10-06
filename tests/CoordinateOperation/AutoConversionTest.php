@@ -74,7 +74,7 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(318977.534, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(311611.219, $to->getNorthing()->asMetres()->getValue(), 0.01);
 
-        self::assertEquals('J 18977 11611', $to->asGridReferenceWithSpaces(12));
+        self::assertEquals('J 18977 11611', $to->asGridReferenceWithSpaces(10));
     }
 
     public function testETRS89ToIrishTM(): void
@@ -88,7 +88,7 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(318977.475, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(311611.277, $to->getNorthing()->asMetres()->getValue(), 0.01);
 
-        self::assertEquals('J 18977 11611', $to->asGridReferenceWithSpaces(12));
+        self::assertEquals('J 18977 11611', $to->asGridReferenceWithSpaces(10));
     }
 
     public function testNoop(): void

@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [5.10.2] - 2024-10-06
+### Fixed
+- Fix off by 1 error when computing certain British/Irish grid references
+
 ## [5.10.1] - 2024-09-24
 ### Fixed
 - Compatibility with opcache preloading
@@ -349,8 +353,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.10.1..master
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.10.2..master
 
+[5.10.2]: https://github.com/dvdoug/PHPCoord/compare/v5.10.1..v5.10.2
 [5.10.1]: https://github.com/dvdoug/PHPCoord/compare/v5.10.0..v5.10.1
 [5.10.0]: https://github.com/dvdoug/PHPCoord/compare/v5.9.2..v5.10.0
 [5.9.2]: https://github.com/dvdoug/PHPCoord/compare/v5.9.1..v5.9.2
