@@ -644,7 +644,7 @@ class AutoConversionTest extends TestCase
         $toTest = [];
 
         $dataFile = fopen(__DIR__ . '/EPSGConcatenatedOperations.csv', 'rb');
-        while ($data = fgetcsv($dataFile)) {
+        while ($data = fgetcsv($dataFile, escape: '')) {
             $toTest[$data[0] . ':' . $data[1]] = [$data[2], $data[3], array_map(fn (string $code) => 'urn:ogc:def:area:EPSG::' . $code, array_unique(explode('|', $data[4]))), (bool) $data[5]];
         }
 
