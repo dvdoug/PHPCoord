@@ -373,7 +373,7 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5114',
             'extent' => ['urn:ogc:def:area:EPSG::1289'],
             'extent_name' => 'Canada - CGVD28',
-            'help' => 'From November 2013 replaced by CGVD2013 height (CRS code 6647).',
+            'help' => 'Supplemented by CGVD28(HTv2.0) height (CRS code 10588) outside area where levelling network exists. From November 2013 replaced by CGVD2013 height (CRS code 6647).',
         ],
         'urn:ogc:def:crs:EPSG::5714' => [
             'name' => 'MSL height',
@@ -2263,6 +2263,14 @@ trait VerticalSRIDData
             'extent_name' => 'Greenland - onshore',
             'help' => 'Collection of 77 disconnected local levelling nets each tied to local mean sea level.',
         ],
+        'urn:ogc:def:crs:EPSG::10588' => [
+            'name' => 'CGVD28(HTv2.0) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1384',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+            'help' => 'Hybrid geoid realization of CGVD28. Defines CGVD28 where the levelling-based CGVD28 network (CRS 5713) does not exist. Both CGVD28 height and CGVD28(HTv2.0) height replaced by CGVD2013 height then by CGVD2013a height at epochs 1997.0, 2002.0 and 2010.0.',
+        ],
         'urn:ogc:def:crs:EPSG::10649' => [
             'name' => 'GLMSL(2023) depth',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
@@ -2277,6 +2285,14 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1388',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10678' => [
+            'name' => 'BSCD2000 depth',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
+            'datum' => 'urn:ogc:def:datum:EPSG::1390',
+            'extent' => ['urn:ogc:def:area:EPSG::4779'],
+            'extent_name' => 'Europe - Baltic Sea',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20000' => [

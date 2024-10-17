@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for Canada and Germany
 
 ## [5.10.2] - 2024-10-06
 ### Fixed

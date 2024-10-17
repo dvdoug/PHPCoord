@@ -223,4 +223,5 @@ return [
     'GeodPT08.dat' => CoordinateOperation\DATETRS89CascaisPortugalProvider::class,
     'CR2005_GTX.gtx' => CoordinateOperation\GTXETRS89Baltic1957CzechiaProvider::class,
     'hu_bme_hd72corr.gsb' => CoordinateOperation\ETRS89HD72Provider::class,
+    'de_tlbg_thuringen_NTv2gridTH.gsb' => CoordinateOperation\NTv2PD83ETRS89ThuringiaProvider::class,
 ];

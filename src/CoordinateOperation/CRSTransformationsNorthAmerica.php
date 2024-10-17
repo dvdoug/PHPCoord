@@ -26,6 +26,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10613',
+            'name' => 'NAD83(CSRS)v8 to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10413',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'accuracy' => 0.03,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10418',
             'name' => 'NAD83(CSRS)v8 to CGVD28 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::10413',
@@ -38,6 +45,27 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::10413',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'accuracy' => 0.03,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10618',
+            'name' => 'CGVD28(HTv2.0) height to CGVD2013a(2002) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20034',
+            'accuracy' => 0.02,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10617',
+            'name' => 'CGVD28(HTv2.0) height to CGVD2013a(1997) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::20035',
+            'accuracy' => 0.03,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10619',
+            'name' => 'CGVD28(HTv2.0) height to CGVD2013a(2010) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9245',
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19945',
@@ -9469,6 +9497,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 1.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10620',
+            'name' => 'CGVD28 height to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5713',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'accuracy' => 0.05,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10519',
             'name' => 'CGVD28 height to CGVD2013a(2002) height (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5713',
@@ -14565,6 +14600,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0.01,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10590',
+            'name' => 'NAD83(CSRS)v2 to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8235',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'accuracy' => 0.01,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10112',
             'name' => 'NAD83(CSRS)v2 to CGVD2013a(1997) height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8235',
@@ -14698,6 +14740,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10609',
+            'name' => 'NAD83(CSRS)v3 to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8239',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10111',
             'name' => 'NAD83(CSRS)v3 to CGVD2013a(1997) height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8239',
@@ -14810,6 +14859,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 0.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10610',
+            'name' => 'NAD83(CSRS)v4 to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8244',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'accuracy' => 0.02,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10110',
             'name' => 'NAD83(CSRS)v4 to CGVD2013a(2002) height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8244',
@@ -14878,6 +14934,13 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8250',
             'target_crs' => 'urn:ogc:def:crs:EPSG::8253',
             'accuracy' => 0.01,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10611',
+            'name' => 'NAD83(CSRS)v6 to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8251',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5713',
+            'accuracy' => 0.03,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9986',
@@ -15046,6 +15109,13 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::8253',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6317',
             'accuracy' => 0.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10612',
+            'name' => 'NAD83(CSRS)v7 to CGVD28(HTv2.0) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8254',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10588',
+            'accuracy' => 0.03,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9987',

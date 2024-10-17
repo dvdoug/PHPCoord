@@ -438,6 +438,19 @@ class Datum
     public const EPSG_BALTIC_1986 = 'urn:ogc:def:datum:EPSG::1296';
 
     /**
+     * Baltic Sea Chart Datum 2000
+     * Type: Vertical
+     * Extent: Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Norway, Poland, Russia and Sweden - offshore
+     * Baltic Sea including Skagerrak east of 8°30'E, Kattegat, Gulf of Bothnia, and Gulf of Finland
+     * Equipotential surface of the Earth’s gravity field based on the definitions for EVRS and ETRS89 with reference
+     * epoch 2000.0 for the postglacial land uplift in Fennoscandia. Zero level is Normaal Amsterdams Peil (NAP).
+     * Defined by the BSCD2000 model.
+     * Realized at the national level through coordinates at reference epoch 2000.0 using existing national geodetic
+     * infrastructure (see BSCD2000 Specifications document).
+     */
+    public const EPSG_BALTIC_SEA_CHART_DATUM_2000 = 'urn:ogc:def:datum:EPSG::1390';
+
+    /**
      * Bandar Abbas
      * Type: Vertical
      * Extent: Iran - onshore
@@ -829,9 +842,25 @@ class Datum
      * south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W,
      * and Anticosta island; Saskatchewan south of 58°30’N; Yukon
      * Based on the mean sea level determined from several tidal gauges located in strategic areas of the country.
-     * From November 2013 replaced by CGVD2013 (datum code 1127).
+     * Supplemented by CGVD28(HTv2.0) (datum code 1384) outside area where levelling network exists. From November 2013
+     * replaced by CGVD2013 (datum code 1127).
      */
     public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_1928 = 'urn:ogc:def:datum:EPSG::5114';
+
+    /**
+     * Canadian Geodetic Vertical Datum of 1928 (Height Transformation version 2.0)
+     * Type: Vertical
+     * Extent: Canada between 41°N and 84°N and west of 48°W - Alberta; British Columbia; Manitoba; New Brunswick;
+     * Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec;
+     * Saskatchewan; Yukon
+     * Derived from CGG2000 gravimetric geoid fitted to 1926 benchmarks with CGVD28 levellng-based heights and
+     * NAD83(CSRS)v3 ellipsoid heights at epoch 1997.00. Defined by the hybrid geoid model HTv2.0 (Height
+     * Transformation version 2.0).
+     * Orthometric heights. Defines CGVD28 where the CGVD28 levelling-based network (datum code 5114) does not exist.
+     * Defines CGVD28(HTv2.0) throughout the HTv2.0 coverage. Both CGVD28 and CGVD28(HTv2.0) replaced by CGVD2013
+     * (datum code 1127).
+     */
+    public const EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_1928_HEIGHT_TRANSFORMATION_VERSION_2_0 = 'urn:ogc:def:datum:EPSG::1384';
 
     /**
      * Canadian Geodetic Vertical Datum of 2013 (CGG2013)
@@ -8162,9 +8191,11 @@ class Datum
      * World Geodetic System 1984 (G2296)
      * Type: Dynamic geodetic
      * Extent: World
-     * Defined through coordinates at epoch 2024.00 of 9 GPS tracking stations which are included within the IGS GNSS
-     * station network. The IGS20 station coordinates are considered equivalent to ITRF2020.
-     * Replaces World Geodetic System 1984 (G2139) from 2024-01-07.
+     * Aligned to IGS20 through a 7.4 year (2016-01 to 2023-05) time series of daily positions and derived velocities
+     * of the 17 WGS 84 tracking stations, determined by Precise Point Positioning (PPP) using IGS precise orbits,
+     * clocks and antenna calibrations.
+     * WGS 84 (G2296) is considered to be aligned to IGS20 and  ITRF2020 at all epochs. Replaces World Geodetic System
+     * 1984 (G2139) from 2024-01-07.
      */
     public const EPSG_WORLD_GEODETIC_SYSTEM_1984_G2296 = 'urn:ogc:def:datum:EPSG::1383';
 
@@ -12549,8 +12580,20 @@ Defined by transformation from ITRF2020 (CT code 10572). Replaces ETRF2014 (datu
             'frame_reference_epoch' => 2024.0,
             'anchor_epoch' => null,
             'extent_name' => 'World',
-            'help' => 'Defined through coordinates at epoch 2024.00 of 9 GPS tracking stations which are included within the IGS GNSS station network. The IGS20 station coordinates are considered equivalent to ITRF2020.
-Replaces World Geodetic System 1984 (G2139) from 2024-01-07.',
+            'help' => 'Aligned to IGS20 through a 7.4 year (2016-01 to 2023-05) time series of daily positions and derived velocities of the 17 WGS 84 tracking stations, determined by Precise Point Positioning (PPP) using IGS precise orbits, clocks and antenna calibrations.
+WGS 84 (G2296) is considered to be aligned to IGS20 and  ITRF2020 at all epochs. Replaces World Geodetic System 1984 (G2139) from 2024-01-07.',
+        ],
+        'urn:ogc:def:datum:EPSG::1384' => [
+            'name' => 'Canadian Geodetic Vertical Datum of 1928 (Height Transformation version 2.0)',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 1997.0,
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+            'help' => 'Derived from CGG2000 gravimetric geoid fitted to 1926 benchmarks with CGVD28 levellng-based heights and NAD83(CSRS)v3 ellipsoid heights at epoch 1997.00. Defined by the hybrid geoid model HTv2.0 (Height Transformation version 2.0).
+Orthometric heights. Defines CGVD28 where the CGVD28 levelling-based network (datum code 5114) does not exist. Defines CGVD28(HTv2.0) throughout the HTv2.0 coverage. Both CGVD28 and CGVD28(HTv2.0) replaced by CGVD2013 (datum code 1127).',
         ],
         'urn:ogc:def:datum:EPSG::1385' => [
             'name' => 'ECML14 Intermediate Reference Frame',
@@ -12599,6 +12642,18 @@ Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the W
             'extent_name' => 'Greenland - offshore',
             'help' => 'Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to GR96 through the gllat_2023 hydroid model.
 ',
+        ],
+        'urn:ogc:def:datum:EPSG::1390' => [
+            'name' => 'Baltic Sea Chart Datum 2000',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Europe - Baltic Sea',
+            'help' => 'Equipotential surface of the Earth’s gravity field based on the definitions for EVRS and ETRS89 with reference epoch 2000.0 for the postglacial land uplift in Fennoscandia. Zero level is Normaal Amsterdams Peil (NAP). Defined by the BSCD2000 model.
+Realized at the national level through coordinates at reference epoch 2000.0 using existing national geodetic infrastructure (see BSCD2000 Specifications document).',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -12754,7 +12809,7 @@ Not specific to any location or epoch.',
             'anchor_epoch' => null,
             'extent_name' => 'Canada - CGVD28',
             'help' => 'Based on the mean sea level determined from several tidal gauges located in strategic areas of the country.
-From November 2013 replaced by CGVD2013 (datum code 1127).',
+Supplemented by CGVD28(HTv2.0) (datum code 1384) outside area where levelling network exists. From November 2013 replaced by CGVD2013 (datum code 1127).',
         ],
         'urn:ogc:def:datum:EPSG::5115' => [
             'name' => 'Piraeus Harbour 1986',

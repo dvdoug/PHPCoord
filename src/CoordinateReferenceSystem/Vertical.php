@@ -112,6 +112,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9451';
 
     /**
+     * BSCD2000 depth
+     * Extent: Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Norway, Poland, Russia and Sweden - offshore
+     * Baltic Sea including Skagerrak east of 8°30'E, Kattegat, Gulf of Bothnia, and Gulf of Finland.
+     */
+    public const EPSG_BSCD2000_DEPTH = 'urn:ogc:def:crs:EPSG::10678';
+
+    /**
      * Baltic 1957 depth
      * Extent: Czechia; Slovakia.
      */
@@ -260,9 +267,21 @@ class Vertical extends CoordinateReferenceSystem
      * 110°W and the coast at 132°W; Nova Scotia; Ontario south of 52°20'N; Prince Edward Island; Quebec - mainland
      * south of 55°N and west of 64°W, north of 55°N between 70°W and 66°W, coastal area between 66°W and 64°W,
      * and Anticosta island; Saskatchewan south of 58°30’N; Yukon
-     * From November 2013 replaced by CGVD2013 height (CRS code 6647).
+     * Supplemented by CGVD28(HTv2.0) height (CRS code 10588) outside area where levelling network exists. From
+     * November 2013 replaced by CGVD2013 height (CRS code 6647).
      */
     public const EPSG_CGVD28_HEIGHT = 'urn:ogc:def:crs:EPSG::5713';
+
+    /**
+     * CGVD28(HTv2.0) height
+     * Extent: Canada between 41°N and 84°N and west of 48°W - Alberta; British Columbia; Manitoba; New Brunswick;
+     * Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec;
+     * Saskatchewan; Yukon
+     * Hybrid geoid realization of CGVD28. Defines CGVD28 where the levelling-based CGVD28 network (CRS 5713) does not
+     * exist. Both CGVD28 height and CGVD28(HTv2.0) height replaced by CGVD2013 height then by CGVD2013a height at
+     * epochs 1997.0, 2002.0 and 2010.0.
+     */
+    public const EPSG_CGVD28_HTV2_0_HEIGHT = 'urn:ogc:def:crs:EPSG::10588';
 
     /**
      * Cagliari 1956 height

@@ -3927,6 +3927,15 @@ trait CompoundSRIDData
             'extent_name' => 'Hungary',
             'help' => '',
         ],
+        'urn:ogc:def:crs:EPSG::10679' => [
+            'name' => 'ETRS89 + BSCD2000 depth',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'horizontal_crs_type' => 'geographic 2D',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::10678',
+            'extent' => ['urn:ogc:def:area:EPSG::4779'],
+            'extent_name' => 'Europe - Baltic Sea',
+            'help' => '',
+        ],
         'urn:ogc:def:crs:EPSG::20001' => [
             'name' => 'ETRS89 + SVD2006 height',
             'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4258',

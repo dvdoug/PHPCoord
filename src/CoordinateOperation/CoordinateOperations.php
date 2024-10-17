@@ -12716,6 +12716,12 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::1328'],
             'extent_name' => 'Indonesia - Kalimantan - Mahakam delta',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10590' => [
+            'name' => 'NAD83(CSRS)v2 to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10591' => [
             'name' => 'GLANCE projection - Africa',
             'method' => 'urn:ogc:def:method:EPSG::9820',
@@ -12770,6 +12776,60 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10609' => [
+            'name' => 'NAD83(CSRS)v3 to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10610' => [
+            'name' => 'NAD83(CSRS)v4 to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10611' => [
+            'name' => 'NAD83(CSRS)v6 to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10612' => [
+            'name' => 'NAD83(CSRS)v7 to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10613' => [
+            'name' => 'NAD83(CSRS)v8 to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1060',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10617' => [
+            'name' => 'CGVD28(HTv2.0) height to CGVD2013a(1997) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1126',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10618' => [
+            'name' => 'CGVD28(HTv2.0) height to CGVD2013a(2002) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1126',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10619' => [
+            'name' => 'CGVD28(HTv2.0) height to CGVD2013a(2010) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1126',
+            'extent' => ['urn:ogc:def:area:EPSG::4778'],
+            'extent_name' => 'Canada - CGVD28(HTv2.0)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10620' => [
+            'name' => 'CGVD28 height to CGVD28(HTv2.0) height (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9616',
+            'extent' => ['urn:ogc:def:area:EPSG::1289'],
+            'extent_name' => 'Canada - CGVD28',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10621' => [
             'name' => 'San Francisco International Airport B18 grid (ftUS)',
             'method' => 'urn:ogc:def:method:EPSG::1130',
@@ -12805,6 +12865,12 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9615',
             'extent' => ['urn:ogc:def:area:EPSG::1119'],
             'extent_name' => 'Hungary',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10677' => [
+            'name' => 'PD/83 to ETRS89 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9615',
+            'extent' => ['urn:ogc:def:area:EPSG::2544'],
+            'extent_name' => 'Germany - Thuringen',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::10700' => [
             'name' => 'Delaware CS27',

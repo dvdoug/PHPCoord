@@ -254,6 +254,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_BI_HEIGHT = 'urn:ogc:def:crs:EPSG::9452';
 
     /**
+     * ETRS89 + BSCD2000 depth
+     * Extent: Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Norway, Poland, Russia and Sweden - offshore
+     * Baltic Sea including Skagerrak east of 8°30'E, Kattegat, Gulf of Bothnia, and Gulf of Finland.
+     */
+    public const EPSG_ETRS89_PLUS_BSCD2000_DEPTH = 'urn:ogc:def:crs:EPSG::10679';
+
+    /**
      * ETRS89 + Baltic 1957 height
      * Extent: Czechia; Slovakia.
      */

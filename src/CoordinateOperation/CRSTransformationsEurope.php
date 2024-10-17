@@ -3309,6 +3309,13 @@ class CRSTransformationsEurope
             'accuracy' => 0.03,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10677',
+            'name' => 'PD/83 to ETRS89 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4746',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4258',
+            'accuracy' => 0.3,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15867',
             'name' => 'PD/83 to ETRS89 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4746',
