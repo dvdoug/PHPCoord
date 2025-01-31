@@ -385,6 +385,10 @@ class Geodesic
                 $csig2,
                 $dn2,
             );
+
+            if ($sig12 < 1) {
+                $s12x *= $this->b;
+            }
         } elseif ($sbet1 == 0 && $lon12s >= $this->f * 180) {
             $s12x = $this->a * $lam12;
         } else {

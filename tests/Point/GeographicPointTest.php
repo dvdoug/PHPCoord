@@ -298,6 +298,14 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(13917773.830057, $from->calculateDistance($to)->getValue(), 0.001);
     }
 
+    #[Group('distance')]
+    public function testIssue72(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(49.200221), new Degree(16.607841));
+        $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(49.204719), new Degree(16.607841));
+        self::assertEqualsWithDelta(500.239, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
     public function testGeographicGeocentric(): void
     {
         $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84), new Degree(53.80939444), new Degree(2.12955000), new Metre(73.0));
