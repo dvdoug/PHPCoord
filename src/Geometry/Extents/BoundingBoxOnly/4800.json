@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4800",
+    "title": "Australasia and Oceania/Papua New Guinea - onshore and offshore - Western, Gulf and Central provinces",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [139.1011416756326, -12.1], [149.7672222218932, -12.1], [149.7672222218932, -4.889668954200298], [139.1011416756326, -4.889668954200298], [139.1011416756326, -12.1]
+        ]
+    ]
+}

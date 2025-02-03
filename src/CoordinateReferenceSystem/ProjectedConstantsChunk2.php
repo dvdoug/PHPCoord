@@ -12,6 +12,12 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk2
 {
     /**
+     * NAD27 / Alaska zone 3
+     * Extent: USA - Alaska - between 148°W and 144°W.
+     */
+    public const EPSG_NAD27_ALASKA_ZONE_3 = 'urn:ogc:def:crs:EPSG::26733';
+
+    /**
      * NAD27 / Alaska zone 4
      * Extent: USA - Alaska - between 152°W and 148°W, onshore.
      */
@@ -1651,7 +1657,7 @@ trait ProjectedConstantsChunk2
      * NAD83 / Alabama East
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
      * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
     public const EPSG_NAD83_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::26929';
@@ -4789,7 +4795,7 @@ trait ProjectedConstantsChunk2
      * NAD83(2011) / Alabama East
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
      * Replaces NAD83(NSRS2007) / Alabama East (CRS code 3465).
      */
     public const EPSG_NAD83_2011_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::6355';
@@ -4798,7 +4804,7 @@ trait ProjectedConstantsChunk2
      * NAD83(2011) / Alabama East (ftUS)
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
      * The Federal government does not recognise this system because the State of Alabama has no legislation defining
      * the foot to be used for NAD83. US survey foot required by ALDOT. See NAD83(2011) / Alabama East (CRS code 6355)
      * for official metric definition.
@@ -11269,4 +11275,33 @@ trait ProjectedConstantsChunk2
      * 3580) but at the scales involved the positional difference of under 2 metres may not be significant.
      */
     public const EPSG_NAD83_CSRS_NWT_LAMBERT = 'urn:ogc:def:crs:EPSG::3581';
+
+    /**
+     * NAD83(CSRS) / New Brunswick Stereographic
+     * Extent: Canada - New Brunswick
+     * In use from 1999.
+     */
+    public const EPSG_NAD83_CSRS_NEW_BRUNSWICK_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::2953';
+
+    /**
+     * NAD83(CSRS) / Ontario MNR Lambert
+     * Extent: Canada - Ontario
+     * One of a number of similar projected CRSs used by Ontario MNR.
+     */
+    public const EPSG_NAD83_CSRS_ONTARIO_MNR_LAMBERT = 'urn:ogc:def:crs:EPSG::3162';
+
+    /**
+     * NAD83(CSRS) / Prince Edward Isl. Stereographic (NAD83)
+     * Extent: Canada - Prince Edward Island.
+     */
+    public const EPSG_NAD83_CSRS_PRINCE_EDWARD_ISL_STEREOGRAPHIC_NAD83 = 'urn:ogc:def:crs:EPSG::2954';
+
+    /**
+     * NAD83(CSRS) / Statistics Canada Lambert
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+     * This CRS may sometimes be called "NAD83 / STC Lambert". That is the name of a different system (see CRS code
+     * 3347) but at the scales involved the positional difference of under 2 metres may not be significant.
+     */
+    public const EPSG_NAD83_CSRS_STATISTICS_CANADA_LAMBERT = 'urn:ogc:def:crs:EPSG::3348';
 }

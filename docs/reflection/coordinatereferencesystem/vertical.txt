@@ -298,6 +298,18 @@ Bluff 1955 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5760')
 
 
+Bonaire height
+--------------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_BONAIRE_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10763')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_BONAIRE_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10763')
+
+
 Bora Bora SAU 2001 height
 -------------------------
 | Extent: French Polynesia - Society Islands - Bora Bora
@@ -1482,7 +1494,7 @@ Approximate because not specific to any location or epoch. Users are advised to 
 
 HKCD depth
 ----------
-| Extent: China - Hong Kong - offshore
+| Extent: Hong Kong - offshore
 
 .. code-block:: php
 
@@ -1495,7 +1507,7 @@ Chart datum is 0.15 metres below Hong Kong Principal Datum (CRS code 5738) and 1
 
 HKPD depth
 ----------
-| Extent: China - Hong Kong - onshore
+| Extent: Hong Kong - onshore
 
 .. code-block:: php
 
@@ -1507,7 +1519,7 @@ HKPD depth
 
 HKPD height
 -----------
-| Extent: China - Hong Kong - onshore
+| Extent: Hong Kong - onshore
 
 .. code-block:: php
 
@@ -2063,7 +2075,7 @@ LHN95 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LHN95_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5729')
 
-Replaces LN02 height (CRS code 5728).
+Replaces LN02 height (CRS code 5728) for scientific purposes.
 
 LLWLT depth
 -----------
@@ -2089,7 +2101,7 @@ LN02 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LN02_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5728')
 
-Replaced by LHN95 height (CRS code 5729).
+Repeated measurements of the national levelling network have shown a relative uplift of the Alps of up to 1.5 millimetres a year with respect to the Central Plateau. LN02 heights exclude gravity reduction. Remains in use as the official height system and is available in the form of continually revised lists. For scientific purposes replaced by LHN95 height (CRS code 5729).
 
 La Gomera height
 ----------------
@@ -2397,7 +2409,7 @@ MVGC height
 
 Macao height
 ------------
-| Extent: China - Macao
+| Extent: Macao
 
 .. code-block:: php
 
@@ -3347,6 +3359,18 @@ SVS2010 height
 
 Replaces SVS2000 height (CRS code 5779) from 2019-01.
 
+Saba height
+-----------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_SABA_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10642')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SABA_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10642')
+
+
 Santa Cruz da Graciosa depth
 ----------------------------
 | Extent: Portugal - central Azores - Graciosa island onshore
@@ -3393,6 +3417,18 @@ Santa Cruz das Flores height
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::6185')
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SANTA_CRUZ_DAS_FLORES_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6185')
+
+
+Sint Eustatius height
+---------------------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_SINT_EUSTATIUS_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10740')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SINT_EUSTATIUS_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10740')
 
 
 St. Helena Tritan 2011 height

@@ -3339,7 +3339,7 @@ to HKPD depth (Vertical)
 
     "| Name: HKPD depth to HKCD depth (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7977``
-    | Extent: China - Hong Kong - offshore",".. code-block:: php
+    | Extent: Hong Kong - offshore",".. code-block:: php
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_HKPD_DEPTH),
@@ -3360,7 +3360,7 @@ to HKCD depth (Vertical)
 
     "| Name: HKPD depth to HKCD depth (1)
     | Code: ``urn:ogc:def:coordinateOperation:EPSG::7977``
-    | Extent: China - Hong Kong - offshore",".. code-block:: php
+    | Extent: Hong Kong - offshore",".. code-block:: php
 
         $point->offset(
             to: Vertical::fromSRID(Vertical::EPSG_HKCD_DEPTH),

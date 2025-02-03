@@ -124,6 +124,12 @@ class Cartesian extends CoordinateSystem
     public const EPSG_2D_AXES_EASTING_NORTHING_Y_X_ORIENTATIONS_EAST_NORTH_UOM_M = 'urn:ogc:def:cs:EPSG::4498';
 
     /**
+     * 2D Axes: easting, northing (x,y). Orientations: east, north. Units: metre
+     * Used in projected and engineering coordinate reference systems.
+     */
+    public const EPSG_2D_AXES_EASTING_NORTHING_X_Y_ORIENTATIONS_EAST_NORTH_UOM_M_LOWERCASE = 'urn:ogc:def:cs:EPSG::1054';
+
+    /**
      * 2D Axes: easting, northing [E(X),N(Y)]. Orientations: east, north. Units: metre
      * Used in projected and engineering coordinate reference systems.
      */
@@ -743,6 +749,24 @@ class Cartesian extends CoordinateSystem
                     'abbreviation' => 'E',
                     'name' => 'Easting',
                     'uom' => 'urn:ogc:def:uom:EPSG::9003',
+                ],
+            ],
+            'help' => 'Used in projected and engineering coordinate reference systems.',
+        ],
+        'urn:ogc:def:cs:EPSG::1054' => [
+            'name' => '2D Axes: easting, northing (x,y). Orientations: east, north. UoM: m.',
+            'axes' => [
+                [
+                    'orientation' => 'east',
+                    'abbreviation' => 'x',
+                    'name' => 'Easting',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
+                ],
+                [
+                    'orientation' => 'north',
+                    'abbreviation' => 'y',
+                    'name' => 'Northing',
+                    'uom' => 'urn:ogc:def:uom:EPSG::9001',
                 ],
             ],
             'help' => 'Used in projected and engineering coordinate reference systems.',

@@ -49,6 +49,18 @@ class Geographic3D extends Geographic
     public const EPSG_BDA2000 = 'urn:ogc:def:crs:EPSG::4887';
 
     /**
+     * BES2020 Saba
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_BES2020_SABA = 'urn:ogc:def:crs:EPSG::10638';
+
+    /**
+     * BES2020 Sint Eustatius
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_BES2020_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10738';
+
+    /**
      * BGS2005
      * Extent: Bulgaria
      * Adopted 2010-07-29.
@@ -60,6 +72,12 @@ class Geographic3D extends Geographic
      * Extent: Bosnia and Herzegovina.
      */
     public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10327';
+
+    /**
+     * Bonaire 2004
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore.
+     */
+    public const EPSG_BONAIRE_2004 = 'urn:ogc:def:crs:EPSG::10761';
 
     /**
      * CGRS93
@@ -253,6 +271,13 @@ class Geographic3D extends Geographic
     public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10283';
 
     /**
+     * EUREF-FIN
+     * Extent: Finland
+     * EUREF-FIN is the national realization of ETRS89 in Finland.
+     */
+    public const EPSG_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10689';
+
+    /**
      * FEH2010
      * Extent: Fehmarnbelt area of Denmark and Germany.
      */
@@ -310,21 +335,21 @@ class Geographic3D extends Geographic
 
     /**
      * Hong Kong Geodetic CS
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct.
      */
     public const EPSG_HONG_KONG_GEODETIC_CS = 'urn:ogc:def:crs:EPSG::8426';
 
     /**
      * IG05 Intermediate CRS
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Intermediate system not used for spatial referencing - use IGD05 (CRS code 6979).
      */
     public const EPSG_IG05_INTERMEDIATE_CRS = 'urn:ogc:def:crs:EPSG::6982';
 
     /**
      * IG05/12 Intermediate CRS
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 6986).
      */
     public const EPSG_IG05_12_INTERMEDIATE_CRS = 'urn:ogc:def:crs:EPSG::6989';
@@ -392,8 +417,8 @@ class Geographic3D extends Geographic
     /**
      * IGS20
      * Extent: World
-     * Used for products from the International GNSS Service (IGS) from 2022-11-27. Replaces IGb14 (code 9379). For
-     * most practical purposes IGS20 is equivalent to ITRF2020.
+     * Used for products from the International GNSS Service (IGS) from 2022-11-27 to 2025-02-01. Replaces IGb14 (code
+     * 9379). Replaced by IGb20 (code 10784). For most practical purposes IGS20 is equivalent to ITRF2020.
      */
     public const EPSG_IGS20 = 'urn:ogc:def:crs:EPSG::10177';
 
@@ -428,6 +453,14 @@ class Geographic3D extends Geographic
      * replaced by IGS20 (code 10177). For most practical purposes IGb14 is equivalent to ITRF2014.
      */
     public const EPSG_IGB14 = 'urn:ogc:def:crs:EPSG::9379';
+
+    /**
+     * IGb20
+     * Extent: World
+     * Used for products from the International GNSS Service (IGS) from 2025-02-02. Replaces IGS20 (code 10177). For
+     * most practical purposes IGb20 is equivalent to ITRF2020-u2023.
+     */
+    public const EPSG_IGB20 = 'urn:ogc:def:crs:EPSG::10784';
 
     /**
      * IRENET95
@@ -487,9 +520,16 @@ class Geographic3D extends Geographic
     /**
      * ITRF2020
      * Extent: World
-     * Replaces ITRF2014 (code 7912).
+     * Replaces ITRF2014 (code 7912).  Replaced by ITRF2020-u2023 (CRS code 10780).
      */
     public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9989';
+
+    /**
+     * ITRF2020-u2023
+     * Extent: World
+     * Replaces ITRF2020 (code 9989).
+     */
+    public const EPSG_ITRF2020_U2023 = 'urn:ogc:def:crs:EPSG::10780';
 
     /**
      * ITRF88
@@ -607,14 +647,14 @@ class Geographic3D extends Geographic
     /**
      * LKS-2020
      * Extent: Latvia
-     * Replaces LKS-92 (CRS code 4949).
+     * Replaces LKS-92 (CRS code 4949) from 2025-10-01.
      */
     public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10304';
 
     /**
      * LKS-92
      * Extent: Latvia
-     * Replaced by LKS-2020 (CRS code 10304).
+     * Replaced by LKS-2020 (CRS code 10304) from 2025-10-01.
      */
     public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4949';
 
@@ -651,6 +691,12 @@ class Geographic3D extends Geographic
      * Replaces Lao 1993. Lao 1993 coordinate values are within 1m of Lao 1997 values.
      */
     public const EPSG_LAO_1997 = 'urn:ogc:def:crs:EPSG::4993';
+
+    /**
+     * LibRef21
+     * Extent: Liberia.
+     */
+    public const EPSG_LIBREF21 = 'urn:ogc:def:crs:EPSG::10799';
 
     /**
      * MACARIO SOLIS
@@ -701,7 +747,7 @@ class Geographic3D extends Geographic
 
     /**
      * Macao 2008
-     * Extent: China - Macao
+     * Extent: Macao
      * Locally sometimes referred to as ITRF2005, this is not strictly correct.
      */
     public const EPSG_MACAO_2008 = 'urn:ogc:def:crs:EPSG::8430';
@@ -1127,17 +1173,34 @@ class Geographic3D extends Geographic
     /**
      * RGM04
      * Extent: Mayotte
-     * See CRS code 7038 for alternate system with horizontal axes reversed used by IGN for GIS purposes.
+     * Replaced by RGM23 (CRS code 10670) from 2023-01-01. See CRS code 7038 for alternate system with horizontal axes
+     * reversed used by IGN for GIS purposes.
      */
     public const EPSG_RGM04 = 'urn:ogc:def:crs:EPSG::4469';
 
     /**
      * RGM04 (lon-lat)
      * Extent: Mayotte
-     * See CRS code 4469 for system with horizontal axes in sequence lat-lon to be used for air, land and sea
-     * navigation and safety of life purposes.
+     * Replaced by RGM23 (lon-lat) (CRS code 10672) with effect from 2023-01-01. See CRS code 4469 for system with
+     * horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
      */
     public const EPSG_RGM04_LON_LAT = 'urn:ogc:def:crs:EPSG::7038';
+
+    /**
+     * RGM23
+     * Extent: Mayotte
+     * Replaces RGM04 (CRS code 4469) with effect from 2023-01-01. See CRS code 10672 for alternate system with
+     * horizontal axes reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_RGM23 = 'urn:ogc:def:crs:EPSG::10670';
+
+    /**
+     * RGM23 (lon-lat)
+     * Extent: Mayotte
+     * Replaces RGM04 (lon-lat) (CRS code 7038) with effect from 2023-01-01. See CRS code 10670 for system with
+     * horizontal axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+     */
+    public const EPSG_RGM23_LON_LAT = 'urn:ogc:def:crs:EPSG::10672';
 
     /**
      * RGNC15
@@ -1495,6 +1558,18 @@ class Geographic3D extends Geographic
     public const EPSG_SWEREF99 = 'urn:ogc:def:crs:EPSG::4977';
 
     /**
+     * Saba
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_SABA = 'urn:ogc:def:crs:EPSG::10635';
+
+    /**
+     * Sint Eustatius
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10735';
+
+    /**
      * Slovenia 1996
      * Extent: Slovenia.
      */
@@ -1532,6 +1607,18 @@ class Geographic3D extends Geographic
      * Adopted 1st January 2007.
      */
     public const EPSG_UCS_2000 = 'urn:ogc:def:crs:EPSG::5560';
+
+    /**
+     * UGRF
+     * Extent: Uganda.
+     */
+    public const EPSG_UGRF = 'urn:ogc:def:crs:EPSG::10790';
+
+    /**
+     * UZGD2024
+     * Extent: Uzbekistan.
+     */
+    public const EPSG_UZGD2024 = 'urn:ogc:def:crs:EPSG::10724';
 
     /**
      * WGS 66

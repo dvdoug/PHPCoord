@@ -2349,6 +2349,13 @@ class CRSTransformationsOceania
             'target_crs' => 'urn:ogc:def:crs:EPSG::7842',
             'accuracy' => 0.03,
         ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10853',
+            'name' => 'ITRF2020 to PNG94 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::5544',
+            'accuracy' => 0.15,
+        ],
     ];
 
     /**

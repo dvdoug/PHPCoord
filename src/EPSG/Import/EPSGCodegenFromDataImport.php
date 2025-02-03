@@ -78,6 +78,7 @@ class EPSGCodegenFromDataImport
     private const BLACKLISTED_METHODS = [
         // not implemented yet
         1070, // Point motion by grid (Canada NTv2_Vel)
+        1085, // Vertical Offset by Grid Interpolation (asc)
         1113, // Vertical Offset by velocity grid (NRCan byn)
         1114, // Geographic3D Offset by velocity grid (NRCan byn)
         1120, // Point motion (geocen) by grid (BGN)
@@ -87,6 +88,15 @@ class EPSGCodegenFromDataImport
         1127, // Geographic3D to Depth (gtg)
         1128, // Geog3D to Geog2D+Depth (gtg)
         1129, // Vertical Offset by Grid Interpolation (gtg)
+
+        1131, // Geog3D to Geog2D+GravityRelatedHeight
+        1136, // Geographic3D to GravityRelatedHeight
+        1141, // Point motion by grid (NEU domain) (NTv2_Vel)
+        1145, // Geographic2D Offsets by TIN Interpolation (JSON)
+
+        1132, // Coordinate Frame rotation full matrix (geocen)
+        1133, // Coordinate Frame rotation full matrix (geog2d)
+        1140, // Coordinate Frame rotation full matrix (geog3d)
 
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
@@ -132,6 +142,10 @@ class EPSGCodegenFromDataImport
 
         // Complex, very little accuracy improvement
         1079, // New Zealand Deformation Model
+
+        // Complex, only used for converting a couple of ancient Finnish systems
+        1137, // Vertical Offset by TIN Interpolation (JSON)
+        1138, // Cartesian Grid Offsets by TIN Interpolation (JSON)
     ];
 
     private const BLACKLISTED_OPERATIONS = [
@@ -1014,7 +1028,7 @@ class EPSGCodegenFromDataImport
         $sql = "
             SELECT
                 'urn:ogc:def:cs:EPSG::' || cs.coord_sys_code AS urn,
-                REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian ', ''), 'CS. ', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' ELSE '' END AS name,
+                REPLACE(REPLACE(cs.coord_sys_name, 'Cartesian ', ''), 'CS. ', '') || CASE cs.coord_sys_code WHEN 4531 THEN '_LOWERCASE' WHEN 1054 THEN '_LOWERCASE' ELSE '' END AS name,
                 cs.remarks AS constant_help,
                 cs.remarks AS doc_help,
                 cs.deprecated
@@ -1253,6 +1267,8 @@ class EPSGCodegenFromDataImport
                 Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS) / UTM zone 15N + CGVD2013a height'],
                 Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS)v6 + CGVD2013(CGG2013a) height'],
                 Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT => ['SRGI2013 + INAGeoid2020 height'],
+                Compound::EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT => ['ETRS89 / TM35FIN(N,E) + N60 height'],
+                Compound::EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT => ['ETRS89 / TM35FIN(N,E) + N2000 height'],
             ]
         );
         $this->codeGen->updateDocs(Compound::class, $data);
@@ -1468,6 +1484,34 @@ class EPSGCodegenFromDataImport
                         Projected::EPSG_KGD2002_WEST_BELT => ['Korea 2000 / West Belt'],
                         Projected::EPSG_KGD2002_WEST_BELT_2010 => ['Korea 2000 / West Belt 2010'],
                         Projected::EPSG_CH1903_BERN_LV03C => ['Bern 1898 (Bern) / LV03C'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK19FIN => ['ETRS89 / ETRS-GK19FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK20FIN => ['ETRS89 / ETRS-GK20FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK21FIN => ['ETRS89 / ETRS-GK21FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK22FIN => ['ETRS89 / ETRS-GK22FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK23FIN => ['ETRS89 / ETRS-GK23FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK24FIN => ['ETRS89 / ETRS-GK24FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK25FIN => ['ETRS89 / ETRS-GK25FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK26FIN => ['ETRS89 / ETRS-GK26FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK27FIN => ['ETRS89 / ETRS-GK27FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK28FIN => ['ETRS89 / ETRS-GK28FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK29FIN => ['ETRS89 / ETRS-GK29FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK30FIN => ['ETRS89 / ETRS-GK30FIN'],
+                        Projected::EPSG_EUREF_FIN_ETRS_GK31FIN => ['ETRS89 / ETRS-GK31FIN'],
+                        Projected::EPSG_EUREF_FIN_GK19FIN => ['ETRS89 / GK19FIN'],
+                        Projected::EPSG_EUREF_FIN_GK20FIN => ['ETRS89 / GK20FIN'],
+                        Projected::EPSG_EUREF_FIN_GK21FIN => ['ETRS89 / GK21FIN'],
+                        Projected::EPSG_EUREF_FIN_GK22FIN => ['ETRS89 / GK22FIN'],
+                        Projected::EPSG_EUREF_FIN_GK23FIN => ['ETRS89 / GK23FIN'],
+                        Projected::EPSG_EUREF_FIN_GK24FIN => ['ETRS89 / GK24FIN'],
+                        Projected::EPSG_EUREF_FIN_GK25FIN => ['ETRS89 / GK25FIN'],
+                        Projected::EPSG_EUREF_FIN_GK26FIN => ['ETRS89 / GK26FIN'],
+                        Projected::EPSG_EUREF_FIN_GK27FIN => ['ETRS89 / GK27FIN'],
+                        Projected::EPSG_EUREF_FIN_GK28FIN => ['ETRS89 / GK28FIN'],
+                        Projected::EPSG_EUREF_FIN_GK29FIN => ['ETRS89 / GK29FIN'],
+                        Projected::EPSG_EUREF_FIN_GK30FIN => ['ETRS89 / GK30FIN'],
+                        Projected::EPSG_EUREF_FIN_GK31FIN => ['ETRS89 / GK31FIN'],
+                        Projected::EPSG_EUREF_FIN_TM35FIN_E_N => ['ETRS89 / TM35FIN(E,N)'],
+                        Projected::EPSG_EUREF_FIN_TM35FIN_N_E => ['ETRS89 / TM35FIN(N,E)'],
                     ],
                     fn ($urn) => isset($data[$urn]),
                     ARRAY_FILTER_USE_KEY

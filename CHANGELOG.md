@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Updates to data for BES Islands, Brazil, Canada, Finland, ITRF, Latvia, Liberia, Mayotte, Uganda and Uzbekistan
 
 ## [5.10.3] - 2025-01-31
 ### Changed

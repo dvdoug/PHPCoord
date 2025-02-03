@@ -2014,12 +2014,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Compound $to,
         Angle $latitudeOffset,
         Angle $longitudeOffset,
-        Length $geoidUndulation
+        Length $geoidHeight
     ): CompoundPoint {
         assert($this->height instanceof Length);
         $toLatitude = $this->latitude->add($latitudeOffset);
         $toLongitude = $this->longitude->add($longitudeOffset);
-        $toHeight = $this->height->add($geoidUndulation);
+        $toHeight = $this->height->add($geoidHeight);
 
         assert($to->getHorizontal() instanceof Geographic2D);
         $horizontal = static::create($to->getHorizontal(), $toLatitude, $toLongitude, null, $this->epoch);

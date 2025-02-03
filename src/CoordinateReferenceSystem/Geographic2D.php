@@ -263,6 +263,18 @@ class Geographic2D extends Geographic
     public const EPSG_BDA2000 = 'urn:ogc:def:crs:EPSG::4762';
 
     /**
+     * BES2020 Saba
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_BES2020_SABA = 'urn:ogc:def:crs:EPSG::10639';
+
+    /**
+     * BES2020 Sint Eustatius
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_BES2020_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10739';
+
+    /**
      * BGS2005
      * Extent: Bulgaria
      * Adopted 2010-07-29. Replaces earlier systems.
@@ -360,6 +372,18 @@ class Geographic2D extends Geographic
      * Replaces earlier 3 adjustments of 1951, 1944 and 1941.
      */
     public const EPSG_BOGOTA_1975_BOGOTA = 'urn:ogc:def:crs:EPSG::4802';
+
+    /**
+     * Bonaire
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore.
+     */
+    public const EPSG_BONAIRE = 'urn:ogc:def:crs:EPSG::10758';
+
+    /**
+     * Bonaire 2004
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore.
+     */
+    public const EPSG_BONAIRE_2004 = 'urn:ogc:def:crs:EPSG::10762';
 
     /**
      * Bukit Rimpah
@@ -900,14 +924,34 @@ class Geographic2D extends Geographic
     public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10284';
 
     /**
+     * EUREF-FIN
+     * Extent: Finland
+     * EUREF-FIN is the national realization of ETRS89 in Finland.
+     */
+    public const EPSG_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10690';
+
+    /**
      * EWR2-IRF
      * Extent: UK - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford,
      * and from Claydon Junction to Aylesbury and Princes Risborough
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through
      * transformation ETRS89 to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code
-     * 9765).
+     * 9765). In 2024 the EWR2 Grid (ETRS89 / EWR2 SnakeGrid) was extended eastwards as the EWR3 Grid (ETRS89 / EWR3
+     * SnakeGrid). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this extent the EWR3
+     * Grid replaces the EWR2 Grid.
      */
     public const EPSG_EWR2_IRF = 'urn:ogc:def:crs:EPSG::9763';
+
+    /**
+     * EWR3-IRF
+     * Extent: UK - on or related to the East West Rail (Phases 2 and 3) route from Oxford to Cambridge via Bicester,
+     * Bletchley and Bedford, including the route from Claydon Junction to Aylesbury and Princes Risborough
+     * Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / EWR3 SnakeGrid projected CRS through
+     * transformation ETRS89 to EWR3-IRF (1) (code 10850) used in conjunction with the EWR3-TM map projection (code
+     * 9765). The EWR3 SnakeGrid is an extension of the EWR2 SnakeGrid, and between Oxford and Bedford the two grids
+     * are identical.
+     */
+    public const EPSG_EWR3_IRF = 'urn:ogc:def:crs:EPSG::10849';
 
     /**
      * Easter Island 1967
@@ -1265,7 +1309,7 @@ class Geographic2D extends Geographic
 
     /**
      * Hong Kong 1963
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Replaced by Hong Kong 1963(67) (CRS code 4839) for military purposes only. For all purposes, replaced by Hong
      * Kong 1980 (CRS code 4611).
      */
@@ -1273,21 +1317,21 @@ class Geographic2D extends Geographic
 
     /**
      * Hong Kong 1963(67)
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * For military purposes only, replaces Hong Kong 1963. Replaced by Hong Kong 1980 (CRS code 4611).
      */
     public const EPSG_HONG_KONG_1963_67 = 'urn:ogc:def:crs:EPSG::4739';
 
     /**
      * Hong Kong 1980
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Replaces Hong Kong 1963 and Hong Kong 1963(67).
      */
     public const EPSG_HONG_KONG_1980 = 'urn:ogc:def:crs:EPSG::4611';
 
     /**
      * Hong Kong Geodetic CS
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct.
      */
     public const EPSG_HONG_KONG_GEODETIC_CS = 'urn:ogc:def:crs:EPSG::8427';
@@ -1314,7 +1358,7 @@ class Geographic2D extends Geographic
 
     /**
      * IG05 Intermediate CRS
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Intermediate system not used for spatial referencing - use IGD05 (CRS code 6980). Referred to in Israeli
      * documentation as "in GRS80".
      */
@@ -1322,7 +1366,7 @@ class Geographic2D extends Geographic
 
     /**
      * IG05/12 Intermediate CRS
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 6987). Referred to in Israeli
      * documentation as "in GRS80".
      */
@@ -1455,8 +1499,8 @@ class Geographic2D extends Geographic
     /**
      * IGS20
      * Extent: World
-     * Used for products from the International GNSS Service (IGS) from 2022-11-27. Replaces IGb14 (code 9380). For
-     * most practical purposes IGS20 is equivalent to ITRF2020.
+     * Used for products from the International GNSS Service (IGS) from 2022-11-27 to 2025-02-01. Replaces IGb14 (code
+     * 9380). Replaced by IGb20 (code 10785). For most practical purposes IGS20 is equivalent to ITRF2020.
      */
     public const EPSG_IGS20 = 'urn:ogc:def:crs:EPSG::10178';
 
@@ -1491,6 +1535,14 @@ class Geographic2D extends Geographic
      * replaced by IGS20 (code 10178). For most practical purposes IGb14 is equivalent to ITRF2014.
      */
     public const EPSG_IGB14 = 'urn:ogc:def:crs:EPSG::9380';
+
+    /**
+     * IGb20
+     * Extent: World
+     * Used for products from the International GNSS Service (IGS) from 2025-02-02. Replaces IGS20 (code 10178). For
+     * most practical purposes IGb20 is equivalent to ITRF2020-u2023.
+     */
+    public const EPSG_IGB20 = 'urn:ogc:def:crs:EPSG::10785';
 
     /**
      * IKBD-92
@@ -1556,9 +1608,16 @@ class Geographic2D extends Geographic
     /**
      * ITRF2020
      * Extent: World
-     * Replaces ITRF2014 (code 9000).
+     * Replaces ITRF2014 (code 9000).  Replaced by ITRF2020-u2023 (CRS code 10781).
      */
     public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9990';
+
+    /**
+     * ITRF2020-u2023
+     * Extent: World
+     * Replaces ITRF2020 (code 9990).
+     */
+    public const EPSG_ITRF2020_U2023 = 'urn:ogc:def:crs:EPSG::10781';
 
     /**
      * ITRF88
@@ -1643,7 +1702,7 @@ class Geographic2D extends Geographic
 
     /**
      * Israel 1993
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Replaces Palestine 1923 (CRS code 4281) from June 1998. Replaced by IGD05 (CRS code 6980) from January 2005.
      */
     public const EPSG_ISRAEL_1993 = 'urn:ogc:def:crs:EPSG::4141';
@@ -1858,14 +1917,14 @@ class Geographic2D extends Geographic
     /**
      * LKS-2020
      * Extent: Latvia
-     * Replaces LKS-92 (CRS code 4661).
+     * Replaces LKS-92 (CRS code 4661) from 2025-10-01.
      */
     public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10305';
 
     /**
      * LKS-92
      * Extent: Latvia
-     * Replaced by LKS-2020 (CRS code 10305).
+     * Replaced by LKS-2020 (CRS code 10305) from 2025-10-01.
      */
     public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4661';
 
@@ -1929,6 +1988,13 @@ class Geographic2D extends Geographic
      * Replaced Accra (code 4168) from 1978.
      */
     public const EPSG_LEIGON = 'urn:ogc:def:crs:EPSG::4250';
+
+    /**
+     * LibRef21
+     * Extent: Liberia
+     * Replaces Liberia 1964 (code 4251).
+     */
+    public const EPSG_LIBREF21 = 'urn:ogc:def:crs:EPSG::10800';
 
     /**
      * Liberia 1964
@@ -2065,8 +2131,8 @@ class Geographic2D extends Geographic
     /**
      * MML07-IRF
      * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London
-     * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS t(code
-     * 9373) hrough transformation ETRS89 to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map
+     * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS (code
+     * 9373) through transformation ETRS89 to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map
      * projection (code 9370).
      */
     public const EPSG_MML07_IRF = 'urn:ogc:def:crs:EPSG::9372';
@@ -2134,13 +2200,13 @@ class Geographic2D extends Geographic
 
     /**
      * Macao 1920
-     * Extent: China - Macao.
+     * Extent: Macao.
      */
     public const EPSG_MACAO_1920 = 'urn:ogc:def:crs:EPSG::8428';
 
     /**
      * Macao 2008
-     * Extent: China - Macao
+     * Extent: Macao
      * Locally sometimes referred to as ITRF2005, this is not strictly correct.
      */
     public const EPSG_MACAO_2008 = 'urn:ogc:def:crs:EPSG::8431';
@@ -2266,8 +2332,8 @@ class Geographic2D extends Geographic
      * Mhast (onshore)
      * Extent: Angola (Cabinda); The Democratic Republic of the Congo (Zaire) - onshore coastal area and offshore
      * Adopted by CABGOC with intention of being Mhast 1951 (CRS code 4703) but because it uses a different ellipsoid
-     * it is a different system. From 1979, offshore use replaced by Mhast (offshore) (CRS code 4705) from which this
-     * CRS differes by approx. 10m.
+     * it is a different system. From 1979, for offshore use replaced by Mhast (offshore) (CRS code 4705) from which
+     * this CRS differs by approximately 10m.
      */
     public const EPSG_MHAST_ONSHORE = 'urn:ogc:def:crs:EPSG::4704';
 
@@ -2893,7 +2959,7 @@ class Geographic2D extends Geographic
 
     /**
      * Palestine 1923
-     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore.
+     * Extent: Israel - onshore; Jordan; Palestine - onshore.
      */
     public const EPSG_PALESTINE_1923 = 'urn:ogc:def:crs:EPSG::4281';
 
@@ -3181,18 +3247,36 @@ class Geographic2D extends Geographic
      * RGM04
      * Extent: Mayotte
      * Replaces Combani 1950 (CRS code 4632) except for cadastral purposes which uses Cadastre 1997 (CRS code 4475).
-     * See CRS code 7039 for alternate system with axes reversed used by IGN for GIS purposes.
+     * Replaced by RGM23 (CRS code 10671) from 2023-01-01. See CRS code 7039 for alternate system with axes reversed
+     * used by IGN for GIS purposes.
      */
     public const EPSG_RGM04 = 'urn:ogc:def:crs:EPSG::4470';
 
     /**
      * RGM04 (lon-lat)
      * Extent: Mayotte
-     * Replaces Combani 1950 (CRS code 4632) except for cadastral purposes which use Cadastre 1997 (CRS code 4475). See
-     * CRS code 4470 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of
-     * life purposes.
+     * Replaces Combani 1950. Replaced by RGM23 (lon-lat) from 2023-01-01 except for cadastral purposes which use
+     * Cadastre 1997. See CRS code 4470 for system with axes in sequence lat-lon to be used for air, land and sea
+     * navigation and safety of life purposes.
      */
     public const EPSG_RGM04_LON_LAT = 'urn:ogc:def:crs:EPSG::7039';
+
+    /**
+     * RGM23
+     * Extent: Mayotte
+     * Replaces RGM04 (CRS code 4470) with effect from 2023-01-01. See CRS code 10673 for alternate system with axes
+     * reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_RGM23 = 'urn:ogc:def:crs:EPSG::10671';
+
+    /**
+     * RGM23 (lon-lat)
+     * Extent: Mayotte
+     * Replaces RGM04 (lon-lat) (code 7039) from 2023-01-01 except for cadastral purposes which use Cadastre 1997 (code
+     * 4475). See CRS code 10671 for system with axes in sequence lat-lon to be used for air, land and sea navigation
+     * and safety of life purposes.
+     */
+    public const EPSG_RGM23_LON_LAT = 'urn:ogc:def:crs:EPSG::10673';
 
     /**
      * RGNC15
@@ -3401,7 +3485,7 @@ class Geographic2D extends Geographic
     /**
      * S-JTSK [JTSK03]
      * Extent: Slovakia
-     * Defined by transfomation from ETRS89 (ETRF2000 realization) (transformation code 8365) to improve the scale and
+     * Defined by transformation from ETRS89 (ETRF2000 realization) (transformation code 8365) to improve the scale and
      * homogeneity of S-JTSK (CRS 4156) within Slovakia.
      */
     public const EPSG_S_JTSK_JTSK03 = 'urn:ogc:def:crs:EPSG::8351';
@@ -3750,6 +3834,12 @@ class Geographic2D extends Geographic
     public const EPSG_SYC20_IRF = 'urn:ogc:def:crs:EPSG::10237';
 
     /**
+     * Saba
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_SABA = 'urn:ogc:def:crs:EPSG::10636';
+
+    /**
      * Saint Pierre et Miquelon 1950
      * Extent: St Pierre and Miquelon - onshore
      * Replaced by RGSPM06 (CRS code 4463).
@@ -3841,6 +3931,12 @@ class Geographic2D extends Geographic
      * Replaces Sierra Leone 1960. The 1968 readjustment coordinates are within 3m of the 1960 provisional adjustment.
      */
     public const EPSG_SIERRA_LEONE_1968 = 'urn:ogc:def:crs:EPSG::4175';
+
+    /**
+     * Sint Eustatius
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10736';
 
     /**
      * Slovenia 1996
@@ -4047,7 +4143,8 @@ class Geographic2D extends Geographic
 
     /**
      * Tokyo
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
+     * Extent: Japan - onshore; Democratic People's Republic of Korea (North Korea) - onshore; Republic of Korea (South
+     * Korea) - onshore
      * In Japan, replaces Tokyo 1892 (CRS code 5132) and replaced by JGD2000 (code 4612) from April 2002. In Korea used
      * only for geodetic applications before being replaced by Korean 1985 (code 4162).
      */
@@ -4055,7 +4152,8 @@ class Geographic2D extends Geographic
 
     /**
      * Tokyo 1892
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
+     * Extent: Japan - onshore; Democratic People's Republic of Korea (North Korea) - onshore; Republic of Korea (South
+     * Korea) - onshore
      * Extended from Japan to Korea in 1898. In Japan, replaced by Tokyo 1918 (CRS code 4301). In South Korea replaced
      * by Tokyo 1918 only for geodetic applications; for all other purposes replaced by Korean 1985 (code 4162).
      */
@@ -4080,6 +4178,20 @@ class Geographic2D extends Geographic
      * Adopted 1st January 2007, replacing Pulkovo 1942 (CRS 4284).
      */
     public const EPSG_UCS_2000 = 'urn:ogc:def:crs:EPSG::5561';
+
+    /**
+     * UGRF
+     * Extent: Uganda
+     * Replaces Arc 1960 (code 4210) in Uganda.
+     */
+    public const EPSG_UGRF = 'urn:ogc:def:crs:EPSG::10791';
+
+    /**
+     * UZGD2024
+     * Extent: Uzbekistan
+     * Replaces usage of Pulkovo 1942 in Uzbekistan from 4th July 2024.
+     */
+    public const EPSG_UZGD2024 = 'urn:ogc:def:crs:EPSG::10725';
 
     /**
      * VN-2000

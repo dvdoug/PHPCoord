@@ -11,5 +11,5 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 /** @internal */ return [
     'latitudeOffset' => UnitOfMeasureFactory::makeUnit(9.21, 'urn:ogc:def:uom:EPSG::9104'),
     'longitudeOffset' => UnitOfMeasureFactory::makeUnit(-13.51, 'urn:ogc:def:uom:EPSG::9104'),
-    'geoidUndulation' => UnitOfMeasureFactory::makeUnit(27.5, 'urn:ogc:def:uom:EPSG::9001'),
+    'geoidHeight' => UnitOfMeasureFactory::makeUnit(27.5, 'urn:ogc:def:uom:EPSG::9001'),
 ];

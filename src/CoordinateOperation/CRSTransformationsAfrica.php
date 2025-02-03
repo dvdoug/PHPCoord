@@ -26,6 +26,27 @@ class CRSTransformationsAfrica
             'accuracy' => 1.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10684',
+            'name' => 'RGM23 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10671',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10797',
+            'name' => 'UGRF to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10791',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10803',
+            'name' => 'LibRef21 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10800',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17412',
             'name' => 'Congo Transverse Mercator zone 12',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4046',
@@ -584,6 +605,13 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::4209',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 17.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10796',
+            'name' => 'Arc 1960 to UGRF (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4210',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10791',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1122',
@@ -1223,6 +1251,20 @@ class CRSTransformationsAfrica
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10682',
+            'name' => 'RGM04 to RGM23 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4470',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10671',
+            'accuracy' => 0.1,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10683',
+            'name' => 'RGM04 to RGM23 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4470',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10671',
+            'accuracy' => 0.05,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4476',
             'name' => 'RGM04 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4470',
@@ -1704,6 +1746,13 @@ class CRSTransformationsAfrica
             'source_crs' => 'urn:ogc:def:crs:EPSG::7073',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10848',
+            'name' => 'ITRF2014 to LibRef21 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10798',
+            'accuracy' => 0.01,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7876',

@@ -742,11 +742,6 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON = 'urn:ogc:def:method:EPSG::9658';
 
     /**
-     * Vertical Offset by Grid Interpolation (asc).
-     */
-    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC = 'urn:ogc:def:method:EPSG::1085';
-
-    /**
      * Vertical Offset by Grid Interpolation (gtx).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX = 'urn:ogc:def:method:EPSG::1084';
@@ -2043,19 +2038,6 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
-        'urn:ogc:def:method:EPSG::1085' => [
-            'name' => 'Vertical Offset by Grid Interpolation (asc)',
-            'reversible' => true,
-            'paramData' => [
-                'offsetsFile' => [
-                    'reverses' => true,
-                ],
-                'EPSGCodeForInterpolationCRS' => [
-                    'reverses' => false,
-                ],
-            ],
-            'help' => '',
-        ],
         'urn:ogc:def:method:EPSG::1086' => [
             'name' => 'Point motion (geocen) by grid (INADEFORM)',
             'reversible' => true,
@@ -2650,7 +2632,7 @@ class CoordinateOperationMethods
                 'longitudeOffset' => [
                     'reverses' => true,
                 ],
-                'geoidUndulation' => [
+                'geoidHeight' => [
                     'reverses' => true,
                 ],
             ],
@@ -3246,51 +3228,6 @@ class CoordinateOperationMethods
             'name' => 'Reversible polynomial of degree 2',
             'reversible' => true,
             'paramData' => [
-                'ordinate1OfEvaluationPoint' => [
-                    'reverses' => false,
-                ],
-                'ordinate2OfEvaluationPoint' => [
-                    'reverses' => false,
-                ],
-                'scalingFactorForCoordDifferences' => [
-                    'reverses' => false,
-                ],
-                'A0' => [
-                    'reverses' => true,
-                ],
-                'Au1v0' => [
-                    'reverses' => true,
-                ],
-                'Au0v1' => [
-                    'reverses' => true,
-                ],
-                'Au2v0' => [
-                    'reverses' => true,
-                ],
-                'Au1v1' => [
-                    'reverses' => true,
-                ],
-                'Au0v2' => [
-                    'reverses' => true,
-                ],
-                'B0' => [
-                    'reverses' => true,
-                ],
-                'Bu1v0' => [
-                    'reverses' => true,
-                ],
-                'Bu0v1' => [
-                    'reverses' => true,
-                ],
-                'Bu2v0' => [
-                    'reverses' => true,
-                ],
-                'Bu1v1' => [
-                    'reverses' => true,
-                ],
-                'Bu0v2' => [
-                    'reverses' => true,
-                ],
             ],
             'help' => '',
         ],

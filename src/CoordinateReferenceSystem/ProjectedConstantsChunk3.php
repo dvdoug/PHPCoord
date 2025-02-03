@@ -12,35 +12,6 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk3
 {
     /**
-     * NAD83(CSRS) / New Brunswick Stereographic
-     * Extent: Canada - New Brunswick
-     * In use from 1999.
-     */
-    public const EPSG_NAD83_CSRS_NEW_BRUNSWICK_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::2953';
-
-    /**
-     * NAD83(CSRS) / Ontario MNR Lambert
-     * Extent: Canada - Ontario
-     * One of a number of similar projected CRSs used by Ontario MNR.
-     */
-    public const EPSG_NAD83_CSRS_ONTARIO_MNR_LAMBERT = 'urn:ogc:def:crs:EPSG::3162';
-
-    /**
-     * NAD83(CSRS) / Prince Edward Isl. Stereographic (NAD83)
-     * Extent: Canada - Prince Edward Island.
-     */
-    public const EPSG_NAD83_CSRS_PRINCE_EDWARD_ISL_STEREOGRAPHIC_NAD83 = 'urn:ogc:def:crs:EPSG::2954';
-
-    /**
-     * NAD83(CSRS) / Statistics Canada Lambert
-     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
-     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
-     * This CRS may sometimes be called "NAD83 / STC Lambert". That is the name of a different system (see CRS code
-     * 3347) but at the scales involved the positional difference of under 2 metres may not be significant.
-     */
-    public const EPSG_NAD83_CSRS_STATISTICS_CANADA_LAMBERT = 'urn:ogc:def:crs:EPSG::3348';
-
-    /**
      * NAD83(CSRS) / Teranet Ontario Lambert
      * Extent: Canada - Ontario
      * This CRS may sometimes be called "NAD83 / Teranet Ontario Lambert". That is the name of a different system (see
@@ -1242,7 +1213,7 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Alabama East
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
      * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
     public const EPSG_NAD83_HARN_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::2759';
@@ -4610,7 +4581,7 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Alabama East
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
      * Replaces NAD83(HARN) / SPCS.
      */
     public const EPSG_NAD83_NSRS2007_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::3465';
@@ -9107,28 +9078,28 @@ trait ProjectedConstantsChunk3
 
     /**
      * Palestine 1923 / Israeli CS Grid
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * See projection remarks. Replaced by Israeli TM Grid (EPSG code 2039).
      */
     public const EPSG_PALESTINE_1923_ISRAELI_CS_GRID = 'urn:ogc:def:crs:EPSG::28193';
 
     /**
      * Palestine 1923 / Palestine Belt
-     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
      * See projection remarks. Also found without 1 million added to FN: see CRS code 7142.
      */
     public const EPSG_PALESTINE_1923_PALESTINE_BELT = 'urn:ogc:def:crs:EPSG::28192';
 
     /**
      * Palestine 1923 / Palestine Grid
-     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
      * Replaced by CRS 28192 (AMS use) and 28193 (in Israel).
      */
     public const EPSG_PALESTINE_1923_PALESTINE_GRID = 'urn:ogc:def:crs:EPSG::28191';
 
     /**
      * Palestine 1923 / Palestine Grid modified
-     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
      * See projection remarks. Also found with 1 million added to FN: see CRS code 28192.
      */
     public const EPSG_PALESTINE_1923_PALESTINE_GRID_MODIFIED = 'urn:ogc:def:crs:EPSG::7142';
@@ -10774,6 +10745,81 @@ trait ProjectedConstantsChunk3
      * To be phased out after 2009. Replaced by ETRS89 / Poland CS2000 zone 6 (code 2177).
      */
     public const EPSG_PULKOVO_1942_58_POLAND_ZONE_V = 'urn:ogc:def:crs:EPSG::2175';
+
+    /**
+     * Pulkovo 1942(58) / Stereo70
+     * Extent: Romania.
+     */
+    public const EPSG_PULKOVO_1942_58_STEREO70 = 'urn:ogc:def:crs:EPSG::3844';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3
+     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3837). In Thuringen replaced by PD/83 / Gauss
+     * Kruger zone 3. See CRS code 5673 for variant with axes order reversed to easting before northing for use in GIS
+     * applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::2397';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (E-N)
+     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (CRS code 2397) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5673';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4
+     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3838). In Brandenburg replaced by ETRS89 /
+     * UTM zone 33N. In Sachsen replaced by CRS 3398. In Thuringen replaced by CRS 3397. See CRS code 5674 for variant
+     * with axes order reversed.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::2398';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (E-N)
+     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (CRS code 2398) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::5674';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5
+     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore east of
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary - west of 16°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3329). In Brandenburg replaced by ETRS89 /
+     * UTM zone 33N. In Sachsen replaced by RD/83 / Gauss Kruger zone 5. See CRS code 5675 for variant with axes order
+     * reversed.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::2399';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (E-N)
+     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore east of
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary - west of 16°30'E
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (CRS code 2399) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N = 'urn:ogc:def:crs:EPSG::5675';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 6
+     * Extent: Czechia - east of 16°30'E. Hungary - between 16°30'E and 19°30'E. Slovakia - west of 19°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 6 (CRS code 3330).
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::3841';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 7
+     * Extent: Hungary and Slovakia - between 19°30'E and 22°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 7 (CRS code 3331).
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::4417';
 
     /**
      * @deprecated use EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 instead

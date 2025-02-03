@@ -68,7 +68,7 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1049',
             'extent' => ['urn:ogc:def:area:EPSG::3266'],
-            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_name' => 'South Korea - onshore',
             'help' => 'Normal-orthometric heights.',
         ],
         'urn:ogc:def:crs:EPSG::5195' => [
@@ -493,7 +493,7 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5127',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
-            'help' => 'Replaced by LHN95 height (CRS code 5729).',
+            'help' => 'Repeated measurements of the national levelling network have shown a relative uplift of the Alps of up to 1.5 millimetres a year with respect to the Central Plateau. LN02 heights exclude gravity reduction. Remains in use as the official height system and is available in the form of continually revised lists. For scientific purposes replaced by LHN95 height (CRS code 5729).',
         ],
         'urn:ogc:def:crs:EPSG::5729' => [
             'name' => 'LHN95 height',
@@ -501,7 +501,7 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5128',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
-            'help' => 'Replaces LN02 height (CRS code 5728).',
+            'help' => 'Replaces LN02 height (CRS code 5728) for scientific purposes.',
         ],
         'urn:ogc:def:crs:EPSG::5730' => [
             'name' => 'EVRF2000 height',
@@ -572,7 +572,7 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::5135',
             'extent' => ['urn:ogc:def:area:EPSG::3334'],
-            'extent_name' => 'China - Hong Kong - onshore',
+            'extent_name' => 'Hong Kong - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5739' => [
@@ -580,7 +580,7 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
             'datum' => 'urn:ogc:def:datum:EPSG::5136',
             'extent' => ['urn:ogc:def:area:EPSG::3335'],
-            'extent_name' => 'China - Hong Kong - offshore',
+            'extent_name' => 'Hong Kong - offshore',
             'help' => 'Chart datum is 0.15 metres below Hong Kong Principal Datum (CRS code 5738) and 1.38m below MSL at Quarry Bay.',
         ],
         'urn:ogc:def:crs:EPSG::5740' => [
@@ -668,7 +668,7 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::5148',
             'extent' => ['urn:ogc:def:area:EPSG::2803'],
-            'extent_name' => 'Isle of Man - onshore',
+            'extent_name' => 'Isle of Man',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5751' => [
@@ -1572,7 +1572,7 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
             'datum' => 'urn:ogc:def:datum:EPSG::5135',
             'extent' => ['urn:ogc:def:area:EPSG::3334'],
-            'extent_name' => 'China - Hong Kong - onshore',
+            'extent_name' => 'Hong Kong - onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7979' => [
@@ -1668,7 +1668,7 @@ trait VerticalSRIDData
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
             'datum' => 'urn:ogc:def:datum:EPSG::1210',
             'extent' => ['urn:ogc:def:area:EPSG::1147'],
-            'extent_name' => 'China - Macao',
+            'extent_name' => 'Macao',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8675' => [
@@ -2271,6 +2271,14 @@ trait VerticalSRIDData
             'extent_name' => 'Canada - CGVD28(HTv2.0)',
             'help' => 'Hybrid geoid realization of CGVD28. Defines CGVD28 where the levelling-based CGVD28 network (CRS 5713) does not exist. Both CGVD28 height and CGVD28(HTv2.0) height replaced by CGVD2013 height then by CGVD2013a height at epochs 1997.0, 2002.0 and 2010.0.',
         ],
+        'urn:ogc:def:crs:EPSG::10642' => [
+            'name' => 'Saba height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1381',
+            'extent' => ['urn:ogc:def:area:EPSG::4757'],
+            'extent_name' => 'BES Islands - Saba onshore',
+            'help' => '',
+        ],
         'urn:ogc:def:crs:EPSG::10649' => [
             'name' => 'GLMSL(2023) depth',
             'coordinate_system' => 'urn:ogc:def:cs:EPSG::6498',
@@ -2293,6 +2301,22 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1390',
             'extent' => ['urn:ogc:def:area:EPSG::4779'],
             'extent_name' => 'Europe - Baltic Sea',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10740' => [
+            'name' => 'Sint Eustatius height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1395',
+            'extent' => ['urn:ogc:def:area:EPSG::4788'],
+            'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10763' => [
+            'name' => 'Bonaire height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1398',
+            'extent' => ['urn:ogc:def:area:EPSG::3822'],
+            'extent_name' => 'BES Islands - Bonaire onshore',
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20000' => [

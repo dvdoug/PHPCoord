@@ -3652,11 +3652,32 @@ class CRSTransformationsAsia
             'accuracy' => 0.1,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10775',
+            'name' => 'KSA-GRF17 to KSA-VRF14 height (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9332',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9335',
+            'accuracy' => 0.02,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10776',
+            'name' => 'KSA-GRF17 to KSA-GRF17 + KSA-VRF14 height (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9332',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9520',
+            'accuracy' => 0.02,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9383',
             'name' => 'KSA-GRF17 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9333',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10777',
+            'name' => 'ITRF2020 to KSA-GRF17 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9331',
+            'accuracy' => 0.001,
         ],
     ];
 

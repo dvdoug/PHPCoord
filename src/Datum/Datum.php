@@ -378,6 +378,22 @@ class Datum
     public const EPSG_AZORES_ORIENTAL_ISLANDS_1995 = 'urn:ogc:def:datum:EPSG::6664';
 
     /**
+     * BES2020 Saba
+     * Type: Geodetic
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+     * Coordinates of two GNSS reference stations (SABA00BES and SABY00BES) in ITRF2014 at epoch 2020.0.
+     */
+    public const EPSG_BES2020_SABA = 'urn:ogc:def:datum:EPSG::1380';
+
+    /**
+     * BES2020 Sint Eustatius
+     * Type: Geodetic
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Coordinates of two GNSS reference stations (SEUT00BES and SEUS00BES) in ITRF2014 at epoch 2020.0.
+     */
+    public const EPSG_BES2020_SINT_EUSTATIUS = 'urn:ogc:def:datum:EPSG::1394';
+
+    /**
      * BH_ETRS89
      * Type: Geodetic
      * Extent: Bosnia and Herzegovina
@@ -610,6 +626,32 @@ class Datum
      * Fundamental point: Bogota observatory. Latitude: 4°35'56.570"N, longitude: 0°E (of Bogota).
      */
     public const EPSG_BOGOTA_1975_BOGOTA = 'urn:ogc:def:datum:EPSG::6802';
+
+    /**
+     * Bonaire
+     * Type: Geodetic
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore
+     * Defined by the coordinates of the surviving DP points.
+     */
+    public const EPSG_BONAIRE = 'urn:ogc:def:datum:EPSG::1396';
+
+    /**
+     * Bonaire 2004
+     * Type: Geodetic
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore
+     * Coordinates of one GNSS reference station (Kadaster office 2004) in an approximation of ITRF2000 at epoch
+     * 2001.0.
+     */
+    public const EPSG_BONAIRE_2004 = 'urn:ogc:def:datum:EPSG::1397';
+
+    /**
+     * Bonaire Vertical Datum
+     * Type: Vertical
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore
+     * Defined by the coordinates of the surviving KADpeil benchmarks. Original definition with respect to mean sea
+     * level is unknown.
+     */
+    public const EPSG_BONAIRE_VERTICAL_DATUM = 'urn:ogc:def:datum:EPSG::1398';
 
     /**
      * Bora Bora SAU 2001
@@ -1613,15 +1655,37 @@ class Datum
     public const EPSG_ETRS89_DREF91_REALIZATION_2016 = 'urn:ogc:def:datum:EPSG::1353';
 
     /**
+     * EUREF-FIN
+     * Type: Geodetic
+     * Extent: Finland
+     * ETRF96 at epoch 1997.0.
+     * EUREF-FIN was realized with a GPS campaign in 1996-1997. Resulting ITRF96 coordinates at epoch 1997.0 were
+     * transformed to ETRF96 according to EUREF Technical Note 1. Formulas correct only rigid plate motion, thus epoch
+     * for postglacial rebound is 1997.0.
+     */
+    public const EPSG_EUREF_FIN = 'urn:ogc:def:datum:EPSG::1391';
+
+    /**
      * EWR2 Intermediate Reference Frame
      * Type: Geodetic
      * Extent: UK - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford,
      * and from Claydon Junction to Aylesbury and Princes Risborough
-     * Defined through the application of the EWR2 NTv2 transformation (code 9763) to ETRS89 as realized through OSNet
+     * Defined through the application of the EWR2 NTv2 transformation (code 9764) to ETRS89 as realized through OSNet
      * v2009 CORS.
      * Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the EWR2 Snake map projection.
      */
     public const EPSG_EWR2_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1311';
+
+    /**
+     * EWR3 Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: UK - on or related to the East West Rail (Phases 2 and 3) route from Oxford to Cambridge via Bicester,
+     * Bletchley and Bedford, including the route from Claydon Junction to Aylesbury and Princes Risborough
+     * Defined through the application of the EWR3 NTv2 transformation (code 10850) to ETRS89 as realized through OSNet
+     * v2009 CORS.
+     * Created in 2024 to support intermediate CRS "EWR3-IRF" in the emulation of the EWR3 Snake map projection.
+     */
+    public const EPSG_EWR3_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1405';
 
     /**
      * Easter Island 1967
@@ -1749,7 +1813,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1989
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the AM02 geophysical model.
@@ -1759,7 +1823,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1990
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1771,7 +1835,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1991
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1783,7 +1847,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1992
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1795,7 +1859,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1993
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1807,7 +1871,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1994
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1819,7 +1883,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1996
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1831,7 +1895,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 1997
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1843,7 +1907,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 2000
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1856,7 +1920,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 2005
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3
      * translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the
@@ -1869,7 +1933,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 2014
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the ITRF2014 velocity field.
@@ -1880,7 +1944,7 @@ class Datum
 
     /**
      * European Terrestrial Reference Frame 2020
-     * Type: Geodetic
+     * Type: Dynamic geodetic
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Coincides with ITRF2020 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3
      * rotation rates derived from the ITRF2020 velocity field.
@@ -2077,7 +2141,7 @@ class Datum
      * Type: Geodetic
      * Extent: Fehmarnbelt area of Denmark and Germany
      * ITRF2005 at epoch 2010.14.
-     * Defined through coordinates of four permanant GNSS stations.
+     * Defined through coordinates of four permanent GNSS stations.
      */
     public const EPSG_FEHMARNBELT_DATUM_2010 = 'urn:ogc:def:datum:EPSG::1078';
 
@@ -2435,7 +2499,7 @@ class Datum
      * Type: Vertical
      * Extent: Greenland - onshore
      * 77 disconnected local levelling nets introduced between 1945 and 1983 each tied to local mean sea level.
-     * GLLMSL has been introduced to accomodate transformations between older local height systems and the modern
+     * GLLMSL has been introduced to accommodate transformations between older local height systems and the modern
      * nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.
      */
     public const EPSG_GREENLAND_LOCAL_MEAN_SEA_LEVEL_2022 = 'urn:ogc:def:datum:EPSG::1378';
@@ -2725,7 +2789,7 @@ class Datum
     /**
      * Hong Kong 1963
      * Type: Geodetic
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
      * Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by Hong Kong 1980.
@@ -2735,7 +2799,7 @@ class Datum
     /**
      * Hong Kong 1963(67)
      * Type: Geodetic
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
      * Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kong 1980.
@@ -2745,7 +2809,7 @@ class Datum
     /**
      * Hong Kong 1980
      * Type: Geodetic
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude
      * 22°18'12.82"N, longitude 114°10'18.75"E (of Greenwich).
      * Replaces Hong Kong 1963 and Hong Kong 1963(67).
@@ -2755,7 +2819,7 @@ class Datum
     /**
      * Hong Kong Chart Datum
      * Type: Vertical
-     * Extent: China - Hong Kong - offshore
+     * Extent: Hong Kong - offshore
      * Approximates to Lowest Astronomic Tide level (LAT).
      * Chart datum is 0.15 metres below Hong Kong Principal Datum (code 5135) and 1.38m below MSL at Quarry Bay.
      */
@@ -2764,7 +2828,7 @@ class Datum
     /**
      * Hong Kong Geodetic
      * Type: Geodetic
-     * Extent: China - Hong Kong
+     * Extent: Hong Kong
      * ITRF96 at epoch 1998.121
      * Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch
      * 1998.121 and ignores subsequent tectonic plate motion.
@@ -2774,7 +2838,7 @@ class Datum
     /**
      * Hong Kong Principal Datum
      * Type: Vertical
-     * Extent: China - Hong Kong - onshore
+     * Extent: Hong Kong - onshore
      * 1.23m below the mean of 19 years (1965-83) observations of tide levels at North Point, Victoria Harbour.
      */
     public const EPSG_HONG_KONG_PRINCIPAL_DATUM = 'urn:ogc:def:datum:EPSG::5135';
@@ -2838,7 +2902,7 @@ class Datum
     /**
      * IG05 Intermediate Datum
      * Type: Geodetic
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Defined by transformation from IGD05 at epoch 2004.75.
      */
     public const EPSG_IG05_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1142';
@@ -2846,7 +2910,7 @@ class Datum
     /**
      * IG05/12 Intermediate Datum
      * Type: Geodetic
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Defined by transformation from IGD05/12 at epoch 2012.00.
      */
     public const EPSG_IG05_12_INTERMEDIATE_DATUM = 'urn:ogc:def:datum:EPSG::1144';
@@ -3095,6 +3159,17 @@ class Datum
      * coincident with ITRF2014.
      */
     public const EPSG_IGB14 = 'urn:ogc:def:datum:EPSG::1272';
+
+    /**
+     * IGb20
+     * Type: Dynamic geodetic
+     * Extent: World
+     * A subset of 343 stable, well-performing IGS stations from ITRF2020.
+     * Used for IGS products from GPS week 2352 (2025-02-02). Replaces IGS20. Compared to IGS20, IGb20 contains 11 new
+     * stations, mostly in previously sparsely covered areas. For all practical purposes coincident with
+     * ITRF2020-u2023.
+     */
+    public const EPSG_IGB20 = 'urn:ogc:def:datum:EPSG::1400';
 
     /**
      * IRENET95
@@ -3365,9 +3440,21 @@ class Datum
      * ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates
      * between the ITRF2020 and ITRF2014.
      * Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April
-     * 2022.
+     * 2022. Replaced by ITRF2020-u2023 (datum code 1399) from December 2024.
      */
     public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2020 = 'urn:ogc:def:datum:EPSG::1322';
+
+    /**
+     * International Terrestrial Reference Frame 2020-u2023
+     * Type: Dynamic geodetic
+     * Extent: World
+     * Aligned to ITRF2020 in origin, scale and orientation through no-net-translation, no-net-scale and
+     * no-net-rotation constraints applied at 815 stations with coordinates and seasonal motions unaffected by the
+     * addition of three more years of input data.
+     * Update of station coordinates and velocities, generated by adding three years of data (2021.0 – 2024.0) after
+     * the end of the data used for ITRF2020.
+     */
+    public const EPSG_INTERNATIONAL_TERRESTRIAL_REFERENCE_FRAME_2020_U2023 = 'urn:ogc:def:datum:EPSG::1399';
 
     /**
      * Iraq-Kuwait Boundary Datum 1992
@@ -3415,7 +3502,7 @@ class Datum
     /**
      * Israel 1993
      * Type: Geodetic
-     * Extent: Israel - onshore; Palestine Territory - onshore
+     * Extent: Israel - onshore; Palestine onshore
      * Fundamental point:  Latitude: 31°44'03.817"N, longitude: 35°12'16.261"E (of Greenwich).
      * Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).
      */
@@ -3753,7 +3840,7 @@ class Datum
      * Type: Geodetic
      * Extent: Kosovo
      * Densification of ETRF97 in Kosovo at epoch 2001.25.
-     * First order network of 32 stations connected to 8 EUREF Permanant Network (EPN) stations observed march-April
+     * First order network of 32 stations connected to 8 EUREF Permanent Network (EPN) stations observed march-April
      * 2001. Densified in 2012.
      */
     public const EPSG_KOSOVO_REFERENCE_SYSTEM_2001 = 'urn:ogc:def:datum:EPSG::1251';
@@ -3875,7 +3962,7 @@ class Datum
      * Extent: Liechtenstein; Switzerland
      * Origin at Repere Pierre du Niton (RPN) defined as 373.6 metres above msl. This value derived from msl at
      * Marseille in 1897 through the French Lallemand network.
-     * Levelling observations not corrected for gravity field. For scientific purposes, replaced by LHHN95.
+     * Levelling observations not corrected for gravity field. For scientific purposes, replaced by LHN95.
      */
     public const EPSG_LANDESNIVELLEMENT_1902 = 'urn:ogc:def:datum:EPSG::5127';
 
@@ -3930,9 +4017,11 @@ class Datum
      * Latvian coordinate system 2020
      * Type: Geodetic
      * Extent: Latvia
-     * Aligned with ETRF2014 at epoch 2020.28. Derived at 5 well-distributed base stations of the Latvian GNSS
-     * permanent network (LATREF) in IGb14, transformed to ETRF2014 using EUREF parameters (CT code 8366).
-     * LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661).
+     * Aligned with ETRF2020 at 12th April 2020 (epoch 2020.28). Derived at 5 well-distributed base stations of the
+     * Latvian GNSS permanent network (LATREF) in IGS20 (ITRF2020), transformed to ETRF2020 using EUREF parameters (CT
+     * code 10572).
+     * LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661) with effect from
+     * 2025-10-01.
      */
     public const EPSG_LATVIAN_COORDINATE_SYSTEM_2020 = 'urn:ogc:def:datum:EPSG::1356';
 
@@ -3942,7 +4031,7 @@ class Datum
      * Extent: Latvia
      * Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
      * Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code
-     * 1356).
+     * 1356) with effect from 2025-10-01.
      */
     public const EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992 = 'urn:ogc:def:datum:EPSG::6661';
 
@@ -3981,6 +4070,18 @@ class Datum
      * Fundamental point: Robertsfield. Latitude: 6°13'53.02"N, longitude: 10°21'35.44"W (of Greenwich).
      */
     public const EPSG_LIBERIA_1964 = 'urn:ogc:def:datum:EPSG::6251';
+
+    /**
+     * Liberia Reference Frame 2021
+     * Type: Geodetic
+     * Extent: Liberia
+     * Network of 13 points adjusted in IGS14 at epoch 2022.446, coordinates then transformed to epoch 2021.112 using
+     * the ITRF2014 Nubian plate motion model, then translated to the pre-existing coordinates of the LLA CORS station
+     * in Monrovia.
+     * Approximately aligned to ITRF2014 at epoch 2021.112. Offset at LLA in Monrovia is -2.8mm east, -4.9 mm north and
+     * 48.6 mm up.
+     */
+    public const EPSG_LIBERIA_REFERENCE_FRAME_2021 = 'urn:ogc:def:datum:EPSG::1402';
 
     /**
      * Libyan Geodetic Datum 2006
@@ -4268,7 +4369,7 @@ class Datum
     /**
      * Macao 1920
      * Type: Geodetic
-     * Extent: China - Macao
+     * Extent: Macao
      * Fundamental point: Avenida Conselheiro Borja base A, later transferred to Monte da Barra, latitude
      * 22°11'03.139"N, longitude 113°31'43.625"E (of Greenwich).
      * Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unresolvable conflicts and the 1920
@@ -4279,7 +4380,7 @@ class Datum
     /**
      * Macao Geodetic Datum 2008
      * Type: Geodetic
-     * Extent: China - Macao
+     * Extent: Macao
      * ITRF2005 at epoch 2008.38.
      * Locally sometimes referred to as ITRF2005, this is not strictly correct as it applies only at epoch 2008.38 and
      * ignores subsequent tectonic plate motion.
@@ -4289,7 +4390,7 @@ class Datum
     /**
      * Macao Height Datum
      * Type: Vertical
-     * Extent: China - Macao
+     * Extent: Macao
      * Mean sea level Ma Kau Seak 1925-1964.
      */
     public const EPSG_MACAO_HEIGHT_DATUM = 'urn:ogc:def:datum:EPSG::1210';
@@ -4506,6 +4607,15 @@ class Datum
      * (Grand-Terre) in 1979.
      */
     public const EPSG_MAYOTTE_1950 = 'urn:ogc:def:datum:EPSG::5191';
+
+    /**
+     * Mayotte Geodetic Reference Frame 2023
+     * Type: Geodetic
+     * Extent: Mayotte
+     * ITRF2020 at epoch 2023.75.
+     * Replaces RGM04 (datum code 1036) with effect from 2023-01-01.
+     */
+    public const EPSG_MAYOTTE_GEODETIC_REFERENCE_FRAME_2023 = 'urn:ogc:def:datum:EPSG::1389';
 
     /**
      * Mean High Water
@@ -4896,7 +5006,7 @@ class Datum
      * Virgin Islands
      * Coordinates of a nationwide adjustment of 79,546 NGS "passive" control stations in CONUS and Alaska, constrained
      * to 1,171 current CORS station coordinates at epoch 2010.0.
-     * Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to underlay the CORS station
+     * Replaces NAD83(NSRS2007). Transformation code 7807 from ITRF2008 is understood to underlay the CORS station
      * coordinates.
      */
     public const EPSG_NAD83_NATIONAL_SPATIAL_REFERENCE_SYSTEM_2011 = 'urn:ogc:def:datum:EPSG::1116';
@@ -6062,7 +6172,7 @@ class Datum
     /**
      * Palestine 1923
      * Type: Geodetic
-     * Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
      * Fundamental point: Point 82'M  Jerusalem. Latitude: 31°44' 2.749"N, longitude: 35°12'43.490"E (of Greenwich).
      */
     public const EPSG_PALESTINE_1923 = 'urn:ogc:def:datum:EPSG::6281';
@@ -7117,6 +7227,25 @@ class Datum
     public const EPSG_SYC20_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1345';
 
     /**
+     * Saba
+     * Type: Geodetic
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+     * Defined by the coordinates of the surviving DP points.
+     * Created in 2020 to support intermediate geographic CRS "Saba" in the emulation of the original triangulation
+     * network.
+     */
+    public const EPSG_SABA = 'urn:ogc:def:datum:EPSG::1379';
+
+    /**
+     * Saba Vertical Datum
+     * Type: Vertical
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+     * Defined by the coordinates of the surviving DP points. Original definition with respect to mean sea level is
+     * unknown.
+     */
+    public const EPSG_SABA_VERTICAL_DATUM = 'urn:ogc:def:datum:EPSG::1381';
+
+    /**
      * Saint Pierre et Miquelon 1950
      * Type: Geodetic
      * Extent: St Pierre and Miquelon - onshore
@@ -7270,6 +7399,25 @@ class Datum
      * Orthometric heights. Network readjusted in 2009.
      */
     public const EPSG_SINGAPORE_HEIGHT_DATUM = 'urn:ogc:def:datum:EPSG::1140';
+
+    /**
+     * Sint Eustatius
+     * Type: Geodetic
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Defined by the coordinates of the surviving DP points.
+     * Created in 2020 to support intermediate geographic CRS "Sint Eustatius" in the emulation of the original
+     * triangulation network.
+     */
+    public const EPSG_SINT_EUSTATIUS = 'urn:ogc:def:datum:EPSG::1393';
+
+    /**
+     * Sint Eustatius Vertical Datum
+     * Type: Vertical
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Defined by the coordinates of the surviving DP points. Original definition with respect to mean sea level is
+     * unknown.
+     */
+    public const EPSG_SINT_EUSTATIUS_VERTICAL_DATUM = 'urn:ogc:def:datum:EPSG::1395';
 
     /**
      * Sistem Referensi Geospasial Indonesia 2013
@@ -7890,7 +8038,8 @@ class Datum
     /**
      * Tokyo
      * Type: Geodetic
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
+     * Extent: Japan - onshore; Democratic People's Republic of Korea (North Korea) - onshore; Republic of Korea (South
+     * Korea) - onshore
      * Fundamental point: Nikon-Keido-Genten. Latitude: 35°39'17.5148"N, longitude: 139°44'40.5020"E (of Greenwich).
      * Longitude derived in 1918.
      * In Japan, replaces Tokyo 1892 (code 1048) and replaced by Japanese Geodetic Datum 2000 (code 6611). In Korea
@@ -7901,7 +8050,8 @@ class Datum
     /**
      * Tokyo 1892
      * Type: Geodetic
-     * Extent: Japan - onshore; North Korea - onshore; South Korea - onshore
+     * Extent: Japan - onshore; Democratic People's Republic of Korea (North Korea) - onshore; Republic of Korea (South
+     * Korea) - onshore
      * Fundamental point: Nikon-Keido-Genten. Latitude: 35°39'17.5148"N, longitude: 139°44'30.0970"E (of Greenwich).
      * Longitude derived in 1892.
      * Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum code 6301). In South Korea replaced
@@ -7973,6 +8123,15 @@ class Datum
     public const EPSG_TUTUILA_VERTICAL_DATUM_OF_1962 = 'urn:ogc:def:datum:EPSG::1121';
 
     /**
+     * Uganda Geodetic Reference Frame
+     * Type: Geodetic
+     * Extent: Uganda
+     * A network of 9 zero-order points was aligned to ITRF2005 at epoch 2010.0.
+     * Replaces Arc 1960 datum (code 6210) in Uganda.
+     */
+    public const EPSG_UGANDA_GEODETIC_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1401';
+
+    /**
      * Ukraine 2000
      * Type: Geodetic
      * Extent: Ukraine
@@ -7980,6 +8139,14 @@ class Datum
      * between reference ellipsoid and quasigeoid in territory of Ukraine.
      */
     public const EPSG_UKRAINE_2000 = 'urn:ogc:def:datum:EPSG::1077';
+
+    /**
+     * Uzbekistan Geodetic Datum 2024
+     * Type: Geodetic
+     * Extent: Uzbekistan
+     * Aligned to ITRF2014 at epoch 2010.0.
+     */
+    public const EPSG_UZBEKISTAN_GEODETIC_DATUM_2024 = 'urn:ogc:def:datum:EPSG::1392';
 
     /**
      * Vanua Levu 1915
@@ -8677,7 +8844,7 @@ Extended from Japan to Korea in 1898. In Japan replaced by Tokyo 1918 (datum cod
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_name' => 'South Korea - onshore',
             'help' => 'MSL 1913-1916 at Incheon Bay for mainland. For far offshore islands the MSL is determined through a local tide gauge.
 ',
         ],
@@ -9027,7 +9194,7 @@ Adopted 1996. Coincident with WGS 84 in 1994 but rapidly divergent due to signif
             'anchor_epoch' => null,
             'extent_name' => 'Europe - Fehmarnbelt outer',
             'help' => 'ITRF2005 at epoch 2010.14.
-Defined through coordinates of four permanant GNSS stations.',
+Defined through coordinates of four permanent GNSS stations.',
         ],
         'urn:ogc:def:datum:EPSG::1079' => [
             'name' => 'Fehmarnbelt Vertical Reference 2010',
@@ -9480,10 +9647,10 @@ Replaces IGD05 (datum code 1114).',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2010.0,
             'extent_name' => 'USA - CONUS and Alaska; PRVI',
             'help' => 'Coordinates of a nationwide adjustment of 79,546 NGS "passive" control stations in CONUS and Alaska, constrained to 1,171 current CORS station coordinates at epoch 2010.0.
-Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to underlay the CORS station coordinates.',
+Replaces NAD83(NSRS2007). Transformation code 7807 from ITRF2008 is understood to underlay the CORS station coordinates.',
         ],
         'urn:ogc:def:datum:EPSG::1117' => [
             'name' => 'NAD83 (National Spatial Reference System PA11)',
@@ -9492,7 +9659,7 @@ Replaces NAD83(NSRS2007). Transformaton code 7807 from ITRF2008 is understood to
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2010.0,
             'extent_name' => 'Pacific - US interests Pacific plate',
             'help' => 'Coordinates of a nationwide adjustment including 345 NGS "passive" control stations constrained to 24 current Pacific CORS station coordinates at epoch 2010.0.
 Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. ITRF2008 is understood to underlay the latest CORS station coordinates.',
@@ -9504,7 +9671,7 @@ Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. ITRF2008 is un
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2010.0,
             'extent_name' => 'Pacific - US interests Mariana plate',
             'help' => 'Coordinates of a nationwide adjustment including 171 NGS "passive" control stations constrained to 24 current Pacific CORS station coordinates at epoch 2010.0.
 Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. ITRF2008 is understood to underlay the latest CORS station coordinates.',
@@ -9781,7 +9948,7 @@ Used for IGS products from GPS week 1632 through GPS week 1708 (2011-04-17 throu
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Asia - Middle East - Israel and Palestine Territory onshore',
+            'extent_name' => 'Asia - Middle East - Israel and Palestine onshore',
             'help' => 'Defined by transformation from IGD05 at epoch 2004.75.
 ',
         ],
@@ -9793,7 +9960,7 @@ Used for IGS products from GPS week 1632 through GPS week 1708 (2011-04-17 throu
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Asia - Middle East - Israel and Palestine Territory onshore',
+            'extent_name' => 'Asia - Middle East - Israel and Palestine onshore',
             'help' => 'Defined by transformation from IGD05/12 at epoch 2012.00.
 ',
         ],
@@ -10171,23 +10338,24 @@ Defined by SHGEOID15 geoid model (transformation code 7891) applied to SHGD2015 
         ],
         'urn:ogc:def:datum:EPSG::1178' => [
             'name' => 'European Terrestrial Reference Frame 1989',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF89 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
-Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).',
+Defined by transformation from ITRF89 (CT code 7932). Replaced by ETRF90 (datum code 1179).
+',
         ],
         'urn:ogc:def:datum:EPSG::1179' => [
             'name' => 'European Terrestrial Reference Frame 1990',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF90 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
@@ -10195,11 +10363,11 @@ Defined by transformation from ITRF90 (CT code 7933). Replaces ETRF89 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1180' => [
             'name' => 'European Terrestrial Reference Frame 1991',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF91 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the AM02 geophysical model.
@@ -10207,11 +10375,11 @@ Defined by transformation from ITRF91 (CT code 7934). Replaces ETRF90 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1181' => [
             'name' => 'European Terrestrial Reference Frame 1992',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF92 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1 geophysical model.
@@ -10219,11 +10387,11 @@ Defined by transformation from ITRF92 (CT code 7935). Replaces ETRF91 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1182' => [
             'name' => 'European Terrestrial Reference Frame 1993',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF93 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF93 velocity field.
@@ -10231,11 +10399,11 @@ Defined by transformation from ITRF93 (CT code 7936). Replaces ETRF92 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1183' => [
             'name' => 'European Terrestrial Reference Frame 1994',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF94 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
@@ -10243,11 +10411,11 @@ Defined by transformation from ITRF94 (CT code 7937). Replaces ETRF93 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1184' => [
             'name' => 'European Terrestrial Reference Frame 1996',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF96 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
@@ -10255,11 +10423,11 @@ Defined by transformation from ITRF96 (CT code 7938). Replaces ETRF94 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1185' => [
             'name' => 'European Terrestrial Reference Frame 1997',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF97 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the NNR-NUVEL-1A geophysical model.
@@ -10267,11 +10435,11 @@ Defined by transformation from ITRF97 (CT code 7939). Replaces ETRF96 (datum cod
         ],
         'urn:ogc:def:datum:EPSG::1186' => [
             'name' => 'European Terrestrial Reference Frame 2000',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF2000 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2000 velocity field.
@@ -10471,11 +10639,11 @@ Uses Normal heights.',
         ],
         'urn:ogc:def:datum:EPSG::1204' => [
             'name' => 'European Terrestrial Reference Frame 2005',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF2005 in orientation and scale at epoch 1989.0 realigned to ITRF89 at epoch 1989.0 using 3 translations. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2005 velocity field.
@@ -10483,11 +10651,11 @@ Defined by transformation from ITRF2005 (CT 5900). On publication in 2007 of thi
         ],
         'urn:ogc:def:datum:EPSG::1206' => [
             'name' => 'European Terrestrial Reference Frame 2014',
-            'type' => 'geodetic',
+            'type' => 'dynamic geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => 1025,
-            'frame_reference_epoch' => null,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF2014 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2014 velocity field.
@@ -10501,7 +10669,7 @@ Defined by transformation from ITRF2014 (CT code 8366). Replaces ETRF2005 (datum
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Macao',
+            'extent_name' => 'Macao',
             'help' => 'Fundamental point: Avenida Conselheiro Borja base A, later transferred to Monte da Barra, latitude 22°11\'03.139"N, longitude 113°31\'43.625"E (of Greenwich).
 Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unresolvable conflicts and the 1920 adjustment was reinstated.',
         ],
@@ -10513,7 +10681,7 @@ Replaces Macao 1907. In 1955 an adjustment made in 1940 was assessed to have unr
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Macao',
+            'extent_name' => 'Macao',
             'help' => 'ITRF2005 at epoch 2008.38.
 Locally sometimes referred to as ITRF2005, this is not strictly correct as it applies only at epoch 2008.38 and ignores subsequent tectonic plate motion.',
         ],
@@ -10525,7 +10693,7 @@ Locally sometimes referred to as ITRF2005, this is not strictly correct as it ap
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Hong Kong',
+            'extent_name' => 'Hong Kong',
             'help' => 'ITRF96 at epoch 1998.121
 Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct as it applies only at epoch 1998.121 and ignores subsequent tectonic plate motion.',
         ],
@@ -10537,7 +10705,7 @@ Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correc
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Macao',
+            'extent_name' => 'Macao',
             'help' => 'Mean sea level Ma Kau Seak 1925-1964.
 ',
         ],
@@ -11019,7 +11187,7 @@ Orthometric heights. Replaces IGN 1992 LD (datum code 5212).',
             'anchor_epoch' => null,
             'extent_name' => 'Kosovo',
             'help' => 'Densification of ETRF97 in Kosovo at epoch 2001.25.
-First order network of 32 stations connected to 8 EUREF Permanant Network (EPN) stations observed march-April 2001. Densified in 2012.',
+First order network of 32 stations connected to 8 EUREF Permanent Network (EPN) stations observed march-April 2001. Densified in 2012.',
         ],
         'urn:ogc:def:datum:EPSG::1252' => [
             'name' => 'SIRGAS-Chile realization 3 epoch 2013',
@@ -11739,7 +11907,7 @@ Created in 2021 to support intermediate CRS "ECML14_NB-IRF" in the emulation of 
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'UK - Oxford to Bedford',
-            'help' => 'Defined through the application of the EWR2 NTv2 transformation (code 9763) to ETRS89 as realized through OSNet v2009 CORS.
+            'help' => 'Defined through the application of the EWR2 NTv2 transformation (code 9764) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2021 to support intermediate CRS "EWR2-IRF" in the emulation of the EWR2 Snake map projection.',
         ],
         'urn:ogc:def:datum:EPSG::1312' => [
@@ -11871,7 +12039,7 @@ Created in 2022 to support intermediate CRS "FNL22" in the emulation of the FNL2
             'anchor_epoch' => null,
             'extent_name' => 'World',
             'help' => 'Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates between the ITRF2020 and ITRF2014.
-Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022.',
+Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022. Replaced by ITRF2020-u2023 (datum code 1399) from December 2024.',
         ],
         'urn:ogc:def:datum:EPSG::1323' => [
             'name' => 'Svalbard vertical datum 2006',
@@ -12276,10 +12444,10 @@ Internal accuracy of network is 6-8mm.',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
-            'anchor_epoch' => null,
+            'anchor_epoch' => 2020.28,
             'extent_name' => 'Latvia',
-            'help' => 'Aligned with ETRF2014 at epoch 2020.28. Derived at 5 well-distributed base stations of the Latvian GNSS permanent network (LATREF) in IGb14, transformed to ETRF2014 using EUREF parameters (CT code 8366).
-LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661).',
+            'help' => 'Aligned with ETRF2020 at 12th April 2020 (epoch 2020.28). Derived at 5 well-distributed base stations of the Latvian GNSS permanent network (LATREF) in IGS20 (ITRF2020), transformed to ETRF2020 using EUREF parameters (CT code 10572).
+LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661) with effect from 2025-10-01.',
         ],
         'urn:ogc:def:datum:EPSG::1357' => [
             'name' => 'Reseau Geodesique de Nouvelle Caledonie 2015',
@@ -12557,15 +12725,51 @@ LAT as defined through any DKLAT hydroid model without distinction.',
             'anchor_epoch' => null,
             'extent_name' => 'Greenland - onshore',
             'help' => '77 disconnected local levelling nets introduced between 1945 and 1983 each tied to local mean sea level.
-GLLMSL has been introduced to accomodate transformations between older local height systems and the modern nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.',
+GLLMSL has been introduced to accommodate transformations between older local height systems and the modern nation-wide height systems. In effect these datums are now defined by their transformation to GVR2016.',
         ],
-        'urn:ogc:def:datum:EPSG::1382' => [
-            'name' => 'European Terrestrial Reference Frame 2020',
+        'urn:ogc:def:datum:EPSG::1379' => [
+            'name' => 'Saba',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Saba onshore',
+            'help' => 'Defined by the coordinates of the surviving DP points.
+Created in 2020 to support intermediate geographic CRS "Saba" in the emulation of the original triangulation network.',
+        ],
+        'urn:ogc:def:datum:EPSG::1380' => [
+            'name' => 'BES2020 Saba',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
-            'conventional_rs' => 1025,
+            'conventional_rs' => null,
             'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Saba onshore',
+            'help' => 'Coordinates of two GNSS reference stations (SABA00BES and SABY00BES) in ITRF2014 at epoch 2020.0.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1381' => [
+            'name' => 'Saba Vertical Datum',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Saba onshore',
+            'help' => 'Defined by the coordinates of the surviving DP points. Original definition with respect to mean sea level is unknown.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1382' => [
+            'name' => 'European Terrestrial Reference Frame 2020',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => 1025,
+            'frame_reference_epoch' => 1989.0,
             'anchor_epoch' => null,
             'extent_name' => 'Europe - ETRF',
             'help' => 'Coincides with ITRF2020 at epoch 1989.0. Fixed to the stable part of the Eurasian tectonic plate through 3 rotation rates derived from the ITRF2020 velocity field.
@@ -12643,6 +12847,18 @@ Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the W
             'help' => 'Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to GR96 through the gllat_2023 hydroid model.
 ',
         ],
+        'urn:ogc:def:datum:EPSG::1389' => [
+            'name' => 'Mayotte Geodetic Reference Frame 2023',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Mayotte',
+            'help' => 'ITRF2020 at epoch 2023.75.
+Replaces RGM04 (datum code 1036) with effect from 2023-01-01.',
+        ],
         'urn:ogc:def:datum:EPSG::1390' => [
             'name' => 'Baltic Sea Chart Datum 2000',
             'type' => 'vertical',
@@ -12654,6 +12870,162 @@ Created in 2024 to support intermediate CRS "WC05-IRF" in the emulation of the W
             'extent_name' => 'Europe - Baltic Sea',
             'help' => 'Equipotential surface of the Earth’s gravity field based on the definitions for EVRS and ETRS89 with reference epoch 2000.0 for the postglacial land uplift in Fennoscandia. Zero level is Normaal Amsterdams Peil (NAP). Defined by the BSCD2000 model.
 Realized at the national level through coordinates at reference epoch 2000.0 using existing national geodetic infrastructure (see BSCD2000 Specifications document).',
+        ],
+        'urn:ogc:def:datum:EPSG::1391' => [
+            'name' => 'EUREF-FIN',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 1997.0,
+            'extent_name' => 'Finland',
+            'help' => 'ETRF96 at epoch 1997.0.
+EUREF-FIN was realized with a GPS campaign in 1996-1997. Resulting ITRF96 coordinates at epoch 1997.0 were transformed to ETRF96 according to EUREF Technical Note 1. Formulas correct only rigid plate motion, thus epoch for postglacial rebound is 1997.0.',
+        ],
+        'urn:ogc:def:datum:EPSG::1392' => [
+            'name' => 'Uzbekistan Geodetic Datum 2024',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Uzbekistan',
+            'help' => 'Aligned to ITRF2014 at epoch 2010.0.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1393' => [
+            'name' => 'Sint Eustatius',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'help' => 'Defined by the coordinates of the surviving DP points.
+Created in 2020 to support intermediate geographic CRS "Sint Eustatius" in the emulation of the original triangulation network.',
+        ],
+        'urn:ogc:def:datum:EPSG::1394' => [
+            'name' => 'BES2020 Sint Eustatius',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'help' => 'Coordinates of two GNSS reference stations (SEUT00BES and SEUS00BES) in ITRF2014 at epoch 2020.0.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1395' => [
+            'name' => 'Sint Eustatius Vertical Datum',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'help' => 'Defined by the coordinates of the surviving DP points. Original definition with respect to mean sea level is unknown.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1396' => [
+            'name' => 'Bonaire',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Bonaire onshore',
+            'help' => 'Defined by the coordinates of the surviving DP points.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1397' => [
+            'name' => 'Bonaire 2004',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Bonaire onshore',
+            'help' => 'Coordinates of one GNSS reference station (Kadaster office 2004) in an approximation of ITRF2000 at epoch 2001.0.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1398' => [
+            'name' => 'Bonaire Vertical Datum',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'BES Islands - Bonaire onshore',
+            'help' => 'Defined by the coordinates of the surviving KADpeil benchmarks. Original definition with respect to mean sea level is unknown.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1399' => [
+            'name' => 'International Terrestrial Reference Frame 2020-u2023',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => 2015.0,
+            'anchor_epoch' => null,
+            'extent_name' => 'World',
+            'help' => 'Aligned to ITRF2020 in origin, scale and orientation through no-net-translation, no-net-scale and no-net-rotation constraints applied at 815 stations with coordinates and seasonal motions unaffected by the addition of three more years of input data.
+Update of station coordinates and velocities, generated by adding three years of data (2021.0 – 2024.0) after the end of the data used for ITRF2020.',
+        ],
+        'urn:ogc:def:datum:EPSG::1400' => [
+            'name' => 'IGb20',
+            'type' => 'dynamic geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => 2015.0,
+            'anchor_epoch' => null,
+            'extent_name' => 'World',
+            'help' => 'A subset of 343 stable, well-performing IGS stations from ITRF2020.
+Used for IGS products from GPS week 2352 (2025-02-02). Replaces IGS20. Compared to IGS20, IGb20 contains 11 new stations, mostly in previously sparsely covered areas. For all practical purposes coincident with ITRF2020-u2023.',
+        ],
+        'urn:ogc:def:datum:EPSG::1401' => [
+            'name' => 'Uganda Geodetic Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Uganda',
+            'help' => 'A network of 9 zero-order points was aligned to ITRF2005 at epoch 2010.0.
+Replaces Arc 1960 datum (code 6210) in Uganda.',
+        ],
+        'urn:ogc:def:datum:EPSG::1402' => [
+            'name' => 'Liberia Reference Frame 2021',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Liberia',
+            'help' => 'Network of 13 points adjusted in IGS14 at epoch 2022.446, coordinates then transformed to epoch 2021.112 using the ITRF2014 Nubian plate motion model, then translated to the pre-existing coordinates of the LLA CORS station in Monrovia.
+Approximately aligned to ITRF2014 at epoch 2021.112. Offset at LLA in Monrovia is -2.8mm east, -4.9 mm north and 48.6 mm up.',
+        ],
+        'urn:ogc:def:datum:EPSG::1405' => [
+            'name' => 'EWR3 Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'UK - Oxford to Cambridge',
+            'help' => 'Defined through the application of the EWR3 NTv2 transformation (code 10850) to ETRS89 as realized through OSNet v2009 CORS.
+Created in 2024 to support intermediate CRS "EWR3-IRF" in the emulation of the EWR3 Snake map projection.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -12965,7 +13337,7 @@ Replaces Ha Tien in Vietnam.',
             'anchor_epoch' => null,
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
             'help' => 'Origin at Repere Pierre du Niton (RPN) defined as 373.6 metres above msl. This value derived from msl at Marseille in 1897 through the French Lallemand network.
-Levelling observations not corrected for gravity field. For scientific purposes, replaced by LHHN95.',
+Levelling observations not corrected for gravity field. For scientific purposes, replaced by LHN95.',
         ],
         'urn:ogc:def:datum:EPSG::5128' => [
             'name' => 'Landeshohennetz 1995',
@@ -13059,7 +13431,7 @@ Black Sea datum is 0.4m below Baltic datum.',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Hong Kong - onshore',
+            'extent_name' => 'Hong Kong - onshore',
             'help' => '1.23m below the mean of 19 years (1965-83) observations of tide levels at North Point, Victoria Harbour.
 ',
         ],
@@ -13071,7 +13443,7 @@ Black Sea datum is 0.4m below Baltic datum.',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Hong Kong - offshore',
+            'extent_name' => 'Hong Kong - offshore',
             'help' => 'Approximates to Lowest Astronomic Tide level (LAT).
 Chart datum is 0.15 metres below Hong Kong Principal Datum (code 5135) and 1.38m below MSL at Quarry Bay.',
         ],
@@ -13215,7 +13587,7 @@ Orthometric heights.',
             'conventional_rs' => 1026,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Isle of Man - onshore',
+            'extent_name' => 'Isle of Man',
             'help' => 'Mean Sea Level at Douglas 1865. Initially realised through levelling network adjustment, from 2002 redefined to be realised through OSGM geoid model.
 Orthometric heights.',
         ],
@@ -14751,7 +15123,7 @@ Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific i
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Asia - Middle East - Israel and Palestine Territory onshore',
+            'extent_name' => 'Asia - Middle East - Israel and Palestine onshore',
             'help' => 'Fundamental point:  Latitude: 31°44\'03.817"N, longitude: 35°12\'16.261"E (of Greenwich).
 Replaces Palestine 1923 (datum code 6281). Replaced by IGD05 (datum code 1143).',
         ],
@@ -15003,7 +15375,7 @@ Replaced by Campo Inchauspe (code 6221) for topographic mapping, use for oil exp
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_name' => 'South Korea - onshore',
             'help' => 'Fundamental point: Suwon. Latitude 37°16\'31.9034"N, longitude 127°03\'05.1451"E of Greenwich. This is consistent with the Tokyo 1918 datum latitude and longitude.
 Replaces Tokyo 1918 (datum code 6301). Replaced by KGD2002 (datum code 6737).',
         ],
@@ -15051,7 +15423,7 @@ Replaces Tokyo 1918 (datum code 6301). Replaced by KGD2002 (datum code 6737).',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Korea, Republic of (South Korea) - onshore',
+            'extent_name' => 'South Korea - onshore',
             'help' => '
 ',
         ],
@@ -16828,7 +17200,7 @@ NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generall
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Hong Kong',
+            'extent_name' => 'Hong Kong',
             'help' => 'Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude 22°18\'12.82"N, longitude 114°10\'18.75"E (of Greenwich).
 Replaces Hong Kong 1963 and Hong Kong 1963(67).',
         ],
@@ -17370,7 +17742,7 @@ Replaced by ISN2004 (datum code 1060).',
             'anchor_epoch' => null,
             'extent_name' => 'Latvia',
             'help' => 'Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
-Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code 1356).',
+Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code 1356) with effect from 2025-10-01.',
         ],
         'urn:ogc:def:datum:EPSG::6663' => [
             'name' => 'Porto Santo 1995',
@@ -18220,7 +18592,7 @@ Datum covers all the major islands of Vanuatu in two different adjustment blocks
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Korea, Republic of (South Korea)',
+            'extent_name' => 'South Korea',
             'help' => 'ITRF2000 at epoch 2002.0.
 KGD2002 is geocentric.',
         ],
@@ -18232,7 +18604,7 @@ KGD2002 is geocentric.',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Hong Kong',
+            'extent_name' => 'Hong Kong',
             'help' => 'Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude 22°18\'12.82"N, longitude 114°10\'18.75"E (of Greenwich).
 Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by Hong Kong 1980.',
         ],
@@ -18244,7 +18616,7 @@ Replaced by Hong Kong 1963(67) for military purposes only in 1967. Replaced by H
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'China - Hong Kong',
+            'extent_name' => 'Hong Kong',
             'help' => 'Fundamental point: Trig "Zero", 38.4 feet south along the transit circle of the Kowloon Observatory. Latitude 22°18\'12.82"N, longitude 114°10\'18.75"E (of Greenwich).
 Replaces Hong Kong 1963 for military purposes only in 1967. Replaced by Hong Kong 1980.',
         ],

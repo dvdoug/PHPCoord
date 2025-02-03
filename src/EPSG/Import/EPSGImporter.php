@@ -74,6 +74,8 @@ class EPSGImporter
         $sqlite->exec('UPDATE epsg_coordoperation SET deprecated = 1 WHERE coord_op_code IN (1851, 9235, 15933)');
         $sqlite->exec('DELETE FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_code = 9912;'); // erroneous test entry
         $sqlite->exec('DELETE FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_code = 10480;'); // deprecated, but never in a release
+        $sqlite->exec('DELETE FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_code = 10788;'); // deprecated, but never in a release
+        $sqlite->exec("DELETE FROM epsg_usage WHERE object_table_name = 'epsg_coordoperation' AND object_code = 1240 AND extent_code = 4780;"); // Global, but also listed as Vietnam-specific
 
         /*
          * AusGeoidv2 abuses the NTv2 file format to have very large files, and a confusing implementation (latitude shifts are actually height offsets),

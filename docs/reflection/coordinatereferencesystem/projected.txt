@@ -2088,6 +2088,18 @@ Bogota 1975 / UTM zone 18N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::21818')
 
 
+Bonaire DPnet
+-------------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_BONAIRE_DPNET)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10759')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_BONAIRE_DPNET)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10759')
+
+
 CGCS2000 / 3-degree Gauss-Kruger CM 102E
 ----------------------------------------
 | Extent: China - between 100°30'E and 103°30'E
@@ -5617,175 +5629,6 @@ ETRS89 / EPSG Arctic zone 5-47
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6125')
 
 
-ETRS89 / ETRS-GK19FIN
----------------------
-| Extent: Finland - onshore west of 19°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK19FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3126')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK19FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3126')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK19FIN (CRS code 3873).
-
-ETRS89 / ETRS-GK20FIN
----------------------
-| Extent: Finland - onshore between 19°30'E and 20°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK20FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3127')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK20FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3127')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK20FIN (CRS code 3874).
-
-ETRS89 / ETRS-GK21FIN
----------------------
-| Extent: Finland - onshore between 20°30'E and 21°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK21FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3128')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK21FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3128')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK21FIN (CRS code 3875).
-
-ETRS89 / ETRS-GK22FIN
----------------------
-| Extent: Finland - onshore between 21°30'E and 22°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK22FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3129')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK22FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3129')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK22FIN (CRS code 3876).
-
-ETRS89 / ETRS-GK23FIN
----------------------
-| Extent: Finland - onshore between 22°30'E and 23°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK23FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3130')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK23FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3130')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK23FIN (CRS code 3877).
-
-ETRS89 / ETRS-GK24FIN
----------------------
-| Extent: Finland - onshore between 23°30'E and 24°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK24FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3131')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK24FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3131')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK24FIN (CRS code 3878).
-
-ETRS89 / ETRS-GK25FIN
----------------------
-| Extent: Finland - onshore between 24°30'E and 25°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK25FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3132')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK25FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3132')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK25FIN (CRS code 3879).
-
-ETRS89 / ETRS-GK26FIN
----------------------
-| Extent: Finland - onshore between 25°30'E and 26°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK26FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3133')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK26FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3133')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK26FIN (CRS code 3880).
-
-ETRS89 / ETRS-GK27FIN
----------------------
-| Extent: Finland - onshore between 26°30'E and 27°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK27FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3134')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK27FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3134')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK27FIN (CRS code 3881).
-
-ETRS89 / ETRS-GK28FIN
----------------------
-| Extent: Finland - onshore between 27°30'E and 28°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK28FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3135')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK28FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3135')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK28FIN (CRS code 3882).
-
-ETRS89 / ETRS-GK29FIN
----------------------
-| Extent: Finland - between 28°30'E and 29°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK29FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3136')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK29FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3136')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK29FIN (CRS code 3883).
-
-ETRS89 / ETRS-GK30FIN
----------------------
-| Extent: Finland - between 29°30'E and 30°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK30FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3137')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK30FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3137')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK30FIN (CRS code 3884).
-
-ETRS89 / ETRS-GK31FIN
----------------------
-| Extent: Finland - east of 30°30'E
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_ETRS_GK31FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3138')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_ETRS_GK31FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3138')
-
-Withdrawn and replaced in 2009 by ETRS89 / GK31FIN (CRS code 3885).
-
 ETRS89 / Faroe Lambert
 ----------------------
 | Extent: Faroe Islands - onshore
@@ -5811,175 +5654,6 @@ ETRS89 / Faroe TM
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5316')
 
 Introduced in 2010. For topographic mapping see ETRS89 / Faroe Lambert (CRS code 3145). For cadastral survey see fk89 (CRS code 3173). In due course this CRS (5316) is expected to replace these other CRSs.
-
-ETRS89 / GK19FIN
-----------------
-| Extent: Finland - nominally onshore west of 19°30'E but may be used in adjacent areas to east if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK19FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3873')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK19FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3873')
-
-Replaces ETRS89 / ETRS-GK19FIN (CRS code 3126). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK20FIN
-----------------
-| Extent: Finland - nominally onshore between 19°30'E and 20°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK20FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3874')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK20FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3874')
-
-Replaces ETRS89 / ETRS-GK20FIN (CRS code 3127). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK21FIN
-----------------
-| Extent: Finland - nominally onshore between 20°30'E and 21°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK21FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3875')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK21FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3875')
-
-Replaces ETRS89 / ETRS-GK21FIN (CRS code 3128). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK22FIN
-----------------
-| Extent: Finland - nominally onshore between 21°30'E and 22°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK22FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3876')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK22FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3876')
-
-Replaces ETRS89 / ETRS-GK22FIN (CRS code 3129). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK23FIN
-----------------
-| Extent: Finland - nominally onshore between 22°30'E and 23°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK23FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3877')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK23FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3877')
-
-Replaces ETRS89 / ETRS-GK23FIN (CRS code 3130). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK24FIN
-----------------
-| Extent: Finland - nominally onshore between 23°30'E and 24°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK24FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3878')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK24FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3878')
-
-Replaces ETRS89 / ETRS-GK24FIN (CRS code 3131). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK25FIN
-----------------
-| Extent: Finland - nominally onshore between 24°30'E and 25°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK25FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3879')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK25FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3879')
-
-Replaces ETRS89 / ETRS-GK25FIN (CRS code 3132). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK26FIN
-----------------
-| Extent: Finland - nominally onshore between 25°30'E and 26°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK26FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3880')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK26FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3880')
-
-Replaces ETRS89 / ETRS-GK26FIN (CRS code 3133). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK27FIN
-----------------
-| Extent: Finland - nominally onshore between 26°30'E and 27°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK27FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3881')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK27FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3881')
-
-Replaces ETRS89 / ETRS-GK27FIN (CRS code 3134). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK28FIN
-----------------
-| Extent: Finland - nominally onshore between 27°30'E and 28°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK28FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3882')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK28FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3882')
-
-Replaces ETRS89 / ETRS-GK28FIN (CRS code 3135). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK29FIN
-----------------
-| Extent: Finland - nominally between 28°30'E and 29°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK29FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3883')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK29FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3883')
-
-Replaces ETRS89 / ETRS-GK29FIN (CRS code 3136). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK30FIN
-----------------
-| Extent: Finland - nominally between 29°30'E and 30°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK30FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3884')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK30FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3884')
-
-Replaces ETRS89 / ETRS-GK30FIN (CRS code 3137). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
-
-ETRS89 / GK31FIN
-----------------
-| Extent: Finland - nominally east of 30°30'E but may be used in adjacent areas to west if a municipality chooses to use one zone over its whole extent
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_GK31FIN)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3885')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_GK31FIN)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3885')
-
-Replaces ETRS89 / ETRS-GK31FIN (CRS code 3138). (For medium scale mapping and country-wide work use ETRS89 / TM35FIN(N,E), code 5048).
 
 ETRS89 / Gauss-Kruger CM 9E
 ---------------------------
@@ -6458,33 +6132,7 @@ ETRS89 / TM Baltic93
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_TM_BALTIC93)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25884')
 
-Used as a common CRS for the Baltic states and for medium and small scale mapping since 1993. For large scale applications see CRS codes 3300-01 (Estonia), 3059 (Latvia) and 2600 (Lituania).
-
-ETRS89 / TM35FIN(E,N)
----------------------
-| Extent: Finland
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_TM35FIN_E_N)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::3067')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_TM35FIN_E_N)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3067')
-
-Identical to ETRS89 / UTM zone 35N (code 25835) except for area of use. See ETRS89 / TM35FIN(N,E) (code 5048) for more usually used alternative with axis order reversed.
-
-ETRS89 / TM35FIN(N,E)
----------------------
-| Extent: Finland
-
-.. code-block:: php
-
-    Projected::fromSRID(Projected::EPSG_ETRS89_TM35FIN_N_E)
-    Projected::fromSRID('urn:ogc:def:crs:EPSG::5048')
-    CoordinateReferenceSystem::fromSRID(Projected::EPSG_ETRS89_TM35FIN_N_E)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5048')
-
-Identical to ETRS89 / UTM zone 35N (N,E) (code 3047) except for area of use. Used in preference to ETRS89 / TM35FIN(E,N) (CRS code 3067) in which coordinate axes are in order easting-northing.
+Used as a common CRS for the Baltic states and for medium and small scale mapping since 1993. For large scale applications see CRS codes 3300 and 3301 (Estonia), 3059 and 10306 (Latvia), and 2600 (Lituania).
 
 ETRS89 / UTM zone 28N
 ---------------------
@@ -6980,6 +6628,394 @@ ETRS89/DREF91/2016 / UTM zone 33N (zE-N)
 
 Variant of ETRS89/DREF91/2016 / UTM zone 33N (CRS code 10733) in which axis order is E,N and easting has zone prefix. Replaces ETRS89 / UTM zone 33N (zE-N) (code 5650) for cadastre and engineering survey.
 
+EUREF-FIN / ETRS-GK19FIN
+------------------------
+| Extent: Finland - onshore west of 19°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK19FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3126')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK19FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3126')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK19FIN (CRS code 3873).
+
+EUREF-FIN / ETRS-GK20FIN
+------------------------
+| Extent: Finland - onshore between 19°30'E and 20°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK20FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3127')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK20FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3127')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK20FIN (CRS code 3874).
+
+EUREF-FIN / ETRS-GK21FIN
+------------------------
+| Extent: Finland - onshore between 20°30'E and 21°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK21FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3128')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK21FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3128')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK21FIN (CRS code 3875).
+
+EUREF-FIN / ETRS-GK22FIN
+------------------------
+| Extent: Finland - onshore between 21°30'E and 22°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK22FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3129')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK22FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3129')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK22FIN (CRS code 3876).
+
+EUREF-FIN / ETRS-GK23FIN
+------------------------
+| Extent: Finland - onshore between 22°30'E and 23°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK23FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3130')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK23FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3130')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK23FIN (CRS code 3877).
+
+EUREF-FIN / ETRS-GK24FIN
+------------------------
+| Extent: Finland - onshore between 23°30'E and 24°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK24FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3131')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK24FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3131')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK24FIN (CRS code 3878).
+
+EUREF-FIN / ETRS-GK25FIN
+------------------------
+| Extent: Finland - onshore between 24°30'E and 25°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK25FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3132')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK25FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3132')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK25FIN (CRS code 3879).
+
+EUREF-FIN / ETRS-GK26FIN
+------------------------
+| Extent: Finland - onshore between 25°30'E and 26°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK26FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3133')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK26FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3133')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK26FIN (CRS code 3880).
+
+EUREF-FIN / ETRS-GK27FIN
+------------------------
+| Extent: Finland - onshore between 26°30'E and 27°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK27FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3134')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK27FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3134')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK27FIN (CRS code 3881).
+
+EUREF-FIN / ETRS-GK28FIN
+------------------------
+| Extent: Finland - onshore between 27°30'E and 28°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK28FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3135')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK28FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3135')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK28FIN (CRS code 3882).
+
+EUREF-FIN / ETRS-GK29FIN
+------------------------
+| Extent: Finland - between 28°30'E and 29°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK29FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3136')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK29FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3136')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK29FIN (CRS code 3883).
+
+EUREF-FIN / ETRS-GK30FIN
+------------------------
+| Extent: Finland - between 29°30'E and 30°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK30FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3137')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK30FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3137')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK30FIN (CRS code 3884).
+
+EUREF-FIN / ETRS-GK31FIN
+------------------------
+| Extent: Finland - east of 30°30'E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK31FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3138')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_ETRS_GK31FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3138')
+
+Withdrawn and replaced in 2009 by EUREF-FIN / GK31FIN (CRS code 3885).
+
+EUREF-FIN / GK19FIN
+-------------------
+| Extent: Finland - nominally onshore west of 19°30'E but may be used in adjacent areas to east if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK19FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3873')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK19FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3873')
+
+Replaces EUREF-FIN / ETRS-GK19FIN (CRS code 3126). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK20FIN
+-------------------
+| Extent: Finland - nominally onshore between 19°30'E and 20°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK20FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3874')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK20FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3874')
+
+Replaces EUREF-FIN / ETRS-GK20FIN (CRS code 3127). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK21FIN
+-------------------
+| Extent: Finland - nominally onshore between 20°30'E and 21°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK21FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3875')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK21FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3875')
+
+Replaces EUREF-FIN / ETRS-GK21FIN (CRS code 3128). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK22FIN
+-------------------
+| Extent: Finland - nominally onshore between 21°30'E and 22°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK22FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3876')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK22FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3876')
+
+Replaces EUREF-FIN / ETRS-GK22FIN (CRS code 3129). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK23FIN
+-------------------
+| Extent: Finland - nominally onshore between 22°30'E and 23°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK23FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3877')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK23FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3877')
+
+Replaces EUREF-FIN / ETRS-GK23FIN (CRS code 3130). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK24FIN
+-------------------
+| Extent: Finland - nominally onshore between 23°30'E and 24°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK24FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3878')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK24FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3878')
+
+Replaces EUREF-FIN / ETRS-GK24FIN (CRS code 3131). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK25FIN
+-------------------
+| Extent: Finland - nominally onshore between 24°30'E and 25°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK25FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3879')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK25FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3879')
+
+Replaces EUREF-FIN / ETRS-GK25FIN (CRS code 3132). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK26FIN
+-------------------
+| Extent: Finland - nominally onshore between 25°30'E and 26°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK26FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3880')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK26FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3880')
+
+Replaces EUREF-FIN / ETRS-GK26FIN (CRS code 3133). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK27FIN
+-------------------
+| Extent: Finland - nominally onshore between 26°30'E and 27°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK27FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3881')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK27FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3881')
+
+Replaces EUREF-FIN / ETRS-GK27FIN (CRS code 3134). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK28FIN
+-------------------
+| Extent: Finland - nominally onshore between 27°30'E and 28°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK28FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3882')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK28FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3882')
+
+Replaces EUREF-FIN / ETRS-GK28FIN (CRS code 3135). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK29FIN
+-------------------
+| Extent: Finland - nominally between 28°30'E and 29°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK29FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3883')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK29FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3883')
+
+Replaces EUREF-FIN / ETRS-GK29FIN (CRS code 3136). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK30FIN
+-------------------
+| Extent: Finland - nominally between 29°30'E and 30°30'E but may be used in adjacent areas if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK30FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3884')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK30FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3884')
+
+Replaces EUREF-FIN / ETRS-GK30FIN (CRS code 3137). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / GK31FIN
+-------------------
+| Extent: Finland - nominally east of 30°30'E but may be used in adjacent areas to west if a municipality chooses to use one zone over its whole extent
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_GK31FIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3885')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_GK31FIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3885')
+
+Replaces EUREF-FIN / ETRS-GK31FIN (CRS code 3138). (For medium scale mapping and country-wide work use EUREF-FIN / TM35FIN(N,E), code 5048).
+
+EUREF-FIN / TM35FIN(E,N)
+------------------------
+| Extent: Finland, Finland - between 24°E and 30°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_TM35FIN_E_N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::3067')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_TM35FIN_E_N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3067')
+
+EUREF-FIN / TM35FIN(E,N) is identical to ETRS89 / UTM zone 35N (code 25835) in Finland but with area of use extended to cover all country. Now used in preference to EUREF-FIN / TM35FIN(N,E) (code 5048) in which coordinate axes are northing-easting.
+
+EUREF-FIN / TM35FIN(N,E)
+------------------------
+| Extent: Finland
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_TM35FIN_N_E)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::5048')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_TM35FIN_N_E)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5048')
+
+EUREF-FIN / TM35FIN(N,E) is identical to ETRS89 / UTM zone 35N (N,E) (code 3047) in Finland but with use extended to cover all country. Use now generally replaced by EUREF-FIN / TM35FIN(E,N) (CRS code 3067) in which coordinate axes are easting-northing.
+
+EUREF-FIN / UTM zone 34N
+------------------------
+| Extent: Finland - west of 24°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_UTM_ZONE_34N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10699')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_UTM_ZONE_34N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10699')
+
+
+EUREF-FIN / UTM zone 36N
+------------------------
+| Extent: Finland - east of 30°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EUREF_FIN_UTM_ZONE_36N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10702')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EUREF_FIN_UTM_ZONE_36N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10702')
+
+
 EWR2 Grid
 ---------
 | Extent: UK - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford, and from Claydon Junction to Aylesbury and Princes Risborough
@@ -6991,7 +7027,20 @@ EWR2 Grid
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_EWR2_GRID)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9766')
 
-The CRS's definition through transformation ETRS89 to EWR2-IRF (1) (code 9764) and map projection EWR2-TM (code 9765) emulates the EWR2 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
+The CRS's definition through transformation ETRS89 to EWR2-IRF (1) (code 9764) and map projection EWR2-TM (code 9765) emulates the EWR2 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS. In 2024 the EWR2 Grid (ETRS89 / EWR2 SnakeGrid) was extended eastwards as the EWR3 Grid (ETRS89 / EWR3 SnakeGrid) (CRS code 10851). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this extent the EWR3 Grid replaces the EWR2 Grid.
+
+EWR3 Grid
+---------
+| Extent: UK - on or related to the East West Rail (Phases 2 and 3) route from Oxford to Cambridge via Bicester, Bletchley and Bedford, including the route from Claydon Junction to Aylesbury and Princes Risborough
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_EWR3_GRID)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10851')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_EWR3_GRID)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10851')
+
+The CRS's definition through transformation ETRS89 to EWR3-IRF (1) (code 10850 and map projection EWR3-TM (code 9765) emulates the EWR3 Snake projection applied to ETRS89 as realized through OSNet 2009 CORS. The EWR3 Grid (ETRS89 / EWR3 SnakeGrid) is an extension to the EWR2 Grid (ETRS89 / EWR2 SnakeGrid); west of Bedford the two grids are identical.
 
 Egypt 1907 / Blue Belt
 ----------------------
@@ -11618,7 +11667,7 @@ Replaced by ISN93 / Lambert 1993 (CRS code 3057).
 
 Hong Kong 1963 Grid System
 --------------------------
-| Extent: China - Hong Kong
+| Extent: Hong Kong
 
 .. code-block:: php
 
@@ -11631,7 +11680,7 @@ Replaced by Hong Kong 1980 Grid System (CRS code 2326).
 
 Hong Kong 1980 Grid System
 --------------------------
-| Extent: China - Hong Kong
+| Extent: Hong Kong
 
 .. code-block:: php
 
@@ -12453,7 +12502,7 @@ Indian 1975 / UTM zone 48N
 
 Israel 1993 / Israeli TM Grid
 -----------------------------
-| Extent: Israel - onshore; Palestine Territory - onshore
+| Extent: Israel - onshore; Palestine onshore
 
 .. code-block:: php
 
@@ -12466,7 +12515,7 @@ Replaces Israeli CS Grid (EPSG code 28193) from June 1998. Replaced by Israeli G
 
 Israeli Grid 05
 ---------------
-| Extent: Israel - onshore; Palestine Territory - onshore
+| Extent: Israel - onshore; Palestine onshore
 
 .. code-block:: php
 
@@ -12479,7 +12528,7 @@ Replaces Israel 1993 / Israeli TM Grid (CRS code 2039). As an approximation at t
 
 Israeli Grid 05/12
 ------------------
-| Extent: Israel - onshore; Palestine Territory - onshore
+| Extent: Israel - onshore; Palestine onshore
 
 .. code-block:: php
 
@@ -13419,7 +13468,7 @@ KOSOVAREF01 / Balkans zone 7
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_KOSOVAREF01_BALKANS_ZONE_7)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9141')
 
-Replaces MGI 1901 / Balkans zone 7 (CRS code 6316) in Kosovo. To differentiate old from new, coordinates in KOSOVAREF01 / Balkans zone 7 may be abbrevated as EK, NK where K is subscripted.
+Replaces MGI 1901 / Balkans zone 7 (CRS code 6316) in Kosovo. To differentiate old from new, coordinates in KOSOVAREF01 / Balkans zone 7 may be abbreviated as EK, NK where K is subscripted.
 
 KSA-GRF17 / UTM zone 36N
 ------------------------
@@ -14532,7 +14581,7 @@ LKS-2020 / Latvia TM
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_LKS_2020_LATVIA_TM)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10306')
 
-Replaces LKS-92 / Latvia TM (CRS code 3059).
+Replaces LKS-92 / Latvia TM (CRS code 3059) from 2025-10-01.
 
 LKS-92 / Latvia TM
 ------------------
@@ -14545,7 +14594,7 @@ LKS-92 / Latvia TM
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_LKS_92_LATVIA_TM)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3059')
 
-Replaced by LKS-2020 / Latvia TM (CRS code 10306). ETRS89 / TM Baltic (CRS code 25884) used for medium and small scale applications across the Baltic states.
+Replaced by LKS-2020 / Latvia TM (CRS code 10306) from 2025-10-01. ETRS89 / TM Baltic (CRS code 25884) used for medium and small scale applications across the Baltic states.
 
 LKS94 / Lithuania TM
 --------------------
@@ -14712,6 +14761,30 @@ Leigon / Ghana Metre Grid
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::25000')
 
 Replaced Accra / Ghana National Grid (code 2136) in 1978.
+
+LibRef21 / UTM zone 28N
+-----------------------
+| Extent: Liberia - offshore west of 12°W
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_LIBREF21_UTM_ZONE_28N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10801')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LIBREF21_UTM_ZONE_28N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10801')
+
+
+LibRef21 / UTM zone 29N
+-----------------------
+| Extent: Liberia - onshore, and offshore east of 12°W
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_LIBREF21_UTM_ZONE_29N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10802')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_LIBREF21_UTM_ZONE_29N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10802')
+
 
 Lisbon (Lisbon) / Portuguese Grid
 ---------------------------------
@@ -16028,7 +16101,7 @@ Defined through transformation ETRS89 to MWC18-IRF (1) (code 10108) and map proj
 
 Macao 1920 / Macao Grid
 -----------------------
-| Extent: China - Macao
+| Extent: Macao
 
 .. code-block:: php
 
@@ -16643,7 +16716,7 @@ Moznet / UTM zone 38S
 
 NAD27 / Alabama East
 --------------------
-| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
 
 .. code-block:: php
 
@@ -19325,7 +19398,7 @@ Replaces NAD27 / UTM zone 21N (code 26721).
 
 NAD83 / Alabama East
 --------------------
-| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
 
 .. code-block:: php
 
@@ -23702,7 +23775,7 @@ Introduced in 2011 for use with the WISCORS network to emulate NAD83(HARN) / WIS
 
 NAD83(2011) / Alabama East
 --------------------------
-| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
 
 .. code-block:: php
 
@@ -23715,7 +23788,7 @@ Replaces NAD83(NSRS2007) / Alabama East (CRS code 3465).
 
 NAD83(2011) / Alabama East (ftUS)
 ---------------------------------
-| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
 
 .. code-block:: php
 
@@ -35805,7 +35878,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(HARN) / Alabama East
 --------------------------
-| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
 
 .. code-block:: php
 
@@ -40587,7 +40660,7 @@ Guam Public Law 23-131 uses the name "NAD83" for NAD83(MA11). NAD83 is a system 
 
 NAD83(NSRS2007) / Alabama East
 ------------------------------
-| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa
+| Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee; Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston; Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
 
 .. code-block:: php
 
@@ -47512,7 +47585,7 @@ Replaces Porto Santo 1995 / UTM zone 28N (CRS code 3061).
 
 Palestine 1923 / Israeli CS Grid
 --------------------------------
-| Extent: Israel - onshore; Palestine Territory - onshore
+| Extent: Israel - onshore; Palestine onshore
 
 .. code-block:: php
 
@@ -47525,7 +47598,7 @@ See projection remarks. Replaced by Israeli TM Grid (EPSG code 2039).
 
 Palestine 1923 / Palestine Belt
 -------------------------------
-| Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+| Extent: Israel - onshore; Jordan; Palestine - onshore
 
 .. code-block:: php
 
@@ -47538,7 +47611,7 @@ See projection remarks. Also found without 1 million added to FN: see CRS code 7
 
 Palestine 1923 / Palestine Grid
 -------------------------------
-| Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+| Extent: Israel - onshore; Jordan; Palestine - onshore
 
 .. code-block:: php
 
@@ -47551,7 +47624,7 @@ Replaced by CRS 28192 (AMS use) and 28193 (in Israel).
 
 Palestine 1923 / Palestine Grid modified
 ----------------------------------------
-| Extent: Israel - onshore; Jordan; Palestine Territory - onshore
+| Extent: Israel - onshore; Jordan; Palestine - onshore
 
 .. code-block:: php
 
@@ -53901,7 +53974,20 @@ RGM04 / UTM zone 38S
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGM04_UTM_ZONE_38S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4471')
 
-Replaces Combani 1950 / UTM zone 38S (CRS code 2980) except for cadastre which uses Cadastre 1997 / UTM zone 38S (CRS code 5879).
+Replaces Combani 1950 / UTM zone 38S (CRS code 2980) except for cadastre which uses Cadastre 1997 / UTM zone 38S (CRS code 5879). Replaced by RGM23 / UTM zone 38S (CRS code 10674) with effect from 2023-01-01 except for cadastre.
+
+RGM23 / UTM zone 38S
+--------------------
+| Extent: Mayotte
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_RGM23_UTM_ZONE_38S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10674')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_RGM23_UTM_ZONE_38S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10674')
+
+Replaces RGM04 / UTM zone 38S (CRS code 4471) with effect from 2023-01-01 except for cadastre which uses Cadastre 1997 / UTM zone 38S (CRS code 5879).
 
 RGNC15 / Lambert New Caledonia 2015
 -----------------------------------
@@ -55471,6 +55557,18 @@ SIRGAS 1995 / UTM zone 25S
 
 Replaced by SIRGAS 2000 system.
 
+SIRGAS 2000 / Brazil Albers
+---------------------------
+| Extent: Brazil - onshore
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SIRGAS_2000_BRAZIL_ALBERS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10857')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SIRGAS_2000_BRAZIL_ALBERS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10857')
+
+
 SIRGAS 2000 / Brazil Mercator
 -----------------------------
 | Extent: Brazil - offshore - equatorial margin
@@ -55508,6 +55606,18 @@ SIRGAS 2000 / Porto Alegre TM
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10665')
 
 Replaces the Porto Alegre Gauss-Kruger Cartographic Reference System of the Brazilian General Chart Commission (SCR-CCG) from 2013-06-20.
+
+SIRGAS 2000 / Ribeirao Preto Local TM
+-------------------------------------
+| Extent: Brazil - Ribeirao Preto municipality, Sao Paulo state
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SIRGAS_2000_RIBEIRAO_PRETO_LOCAL_TM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10773')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SIRGAS_2000_RIBEIRAO_PRETO_LOCAL_TM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10773')
+
 
 SIRGAS 2000 / UTM zone 11N
 --------------------------
@@ -56539,6 +56649,19 @@ SYC20 Grid
 
 The CRS's definition through transformation ETRS89 to SYC20-IRF (1) (code 10238) and map projection SYC20-TM (code 10239) emulates the SYC20 Snake projection applied to ETRS89 as realized through OSNet 2009.
 
+Saba DPnet
+----------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SABA_DPNET)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10641')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SABA_DPNET)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10641')
+
+Short cadastral map coordinates.
+
 Saint Pierre et Miquelon 1950 / UTM zone 21N
 --------------------------------------------
 | Extent: St Pierre and Miquelon - onshore
@@ -56683,7 +56806,7 @@ Schwarzeck / UTM zone 33S
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_SCHWARZECK_UTM_ZONE_33S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::29333')
 
-CARE! The ellipsoid semi-major axis dimension is defined in German Legal Metres as 6377397.155 GLM but for the CRS needs to9 be converted to CRS units of International metres as 6377483.865 m.
+CARE! The ellipsoid semi-major axis dimension is defined in German Legal Metres as 6377397.155 GLM but the coordinate system axes are in International metres. For use in this projected CRS, the ellipsoid semi-major axis needs to be converted to International metres as 6377483.865 m.
 
 Scoresbysund 1952 / Greenland zone 5 east
 -----------------------------------------
@@ -56836,6 +56959,32 @@ Sierra Leone 1968 / UTM zone 29N
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::2162')
 
 Replaces Sierra Leone 1960 / UTM zone 29N. The 1968 readjustment coordinates are within 3m of the 1960 provisional adjustment.
+
+Sint Eustatius DPnet long
+-------------------------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SINT_EUSTATIUS_DPNET_LONG)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10745')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SINT_EUSTATIUS_DPNET_LONG)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10745')
+
+Cadastral map long coordinates. Replaces DPnet short (CRS code 10744).
+
+Sint Eustatius DPnet short
+--------------------------
+| Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_SINT_EUSTATIUS_DPNET_SHORT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10744')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_SINT_EUSTATIUS_DPNET_SHORT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10744')
+
+Former cadastral map coordinates. Replaced by DPnet long (CRS code 10745).
 
 Sister Islands National Grid 1961
 ---------------------------------
@@ -58243,7 +58392,7 @@ UCS-2000 / LCS-56 Rivne
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_56_RIVNE)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9855')
 
-Order #74 defines seperate LCSs for Rivne and Khmelnytsky oblasts; they have different extents but the same map projection. For Khmelnytsky oblast see CRS code 9855.
+Order #74 defines separate LCSs for Rivne and Khmelnytsky oblasts; they have different extents but the same map projection. For Khmelnytsky oblast see CRS code 9860.
 
 UCS-2000 / LCS-59 Sumy
 ----------------------
@@ -58304,7 +58453,7 @@ UCS-2000 / LCS-68 Khmelnytsky
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_LCS_68_KHMELNYTSKY)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9860')
 
-Order #74 defines seperate LCSs for Khmelnytsky and Rivne oblasts; they have different extents but the same map projection. For Rivne oblast see CRS code 9855.
+Order #74 defines separate LCSs for Khmelnytsky and Rivne oblasts; they have different extents but the same map projection. For Rivne oblast see CRS code 9855.
 
 UCS-2000 / LCS-71 Cherkasy
 --------------------------
@@ -58450,6 +58599,106 @@ UCS-2000 / Ukraine TM zone 9
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_UCS_2000_UKRAINE_TM_ZONE_9)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6383')
 
+
+UGRF / UTM zone 35N
+-------------------
+| Extent: Uganda - north of equator and west of 30°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_35N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10792')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_35N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10792')
+
+
+UGRF / UTM zone 35S
+-------------------
+| Extent: Uganda - south of equator and west of 30°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_35S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10795')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_35S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10795')
+
+
+UGRF / UTM zone 36N
+-------------------
+| Extent: Uganda - north of equator and east of 30°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_36N)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10793')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_36N)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10793')
+
+
+UGRF / UTM zone 36S
+-------------------
+| Extent: Uganda - south of equator and east of 30°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_36S)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10794')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UGRF_UTM_ZONE_36S)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10794')
+
+
+UZGD2024 / UzREF24 zone 40
+--------------------------
+| Extent: Uzbekistan - west of 60°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_40)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10726')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_40)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10726')
+
+In use from 4th July 2024.
+
+UZGD2024 / UzREF24 zone 41
+--------------------------
+| Extent: Uzbekistan - between 60°E and 66°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_41)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10727')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_41)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10727')
+
+In use from 4th July 2024.
+
+UZGD2024 / UzREF24 zone 42
+--------------------------
+| Extent: Uzbekistan - between 66°E and 72°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_42)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10728')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_42)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10728')
+
+In use from 4th July 2024.
+
+UZGD2024 / UzREF24 zone 43
+--------------------------
+| Extent: Uzbekistan - east of 72°E
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_43)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10729')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_UZGD2024_UZREF24_ZONE_43)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10729')
+
+In use from 4th July 2024.
 
 VN-2000 / TM-3 103-00
 ---------------------
@@ -61691,6 +61940,19 @@ WGS 72BE / UTM zone 9S
     CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_72BE_UTM_ZONE_9S)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::32509')
 
+
+WGS 84 / Agriculture Canada Albers
+----------------------------------
+| Extent: Canada - onshore south of 60°N - Alberta, British Columbia (BC), Manitoba, New Brunswick (NB), Newfoundland and Labrador, Nova Scotia (NS), Ontario, Prince Edward Island (PEI), Quebec and Saskatchewan
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_WGS_84_AGRICULTURE_CANADA_ALBERS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::10820')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_WGS_84_AGRICULTURE_CANADA_ALBERS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10820')
+
+Note that the map projection is not suitable for mapping north of 60°N. To cover the entire Canadian landmass a conformal alternative used for the Atlas of Canada and referenced to the Canadian spatial reference system could be used: refer to CRSs codes 3978 and 3979. See also CRS code 10598 for a CRS which is the basis for the equal area continental tiling system for North America used by the GLANCE land cover products.
 
 WGS 84 / Andaman and Nicobar
 ----------------------------
@@ -65162,7 +65424,7 @@ WGS 84 / UTM zone 35S
 
 WGS 84 / UTM zone 36N
 ---------------------
-| Extent: Between 30°E and 36°E, northern hemisphere between equator and 84°N. Belarus. Cyprus. Egypt. Ethiopia. Finland. Israel. Jordan. Kenya. Lebanon. Moldova. Norway. Russia. Saudi Arabia. Sudan. Syria. Turkey. Uganda. Ukraine
+| Extent: Between 30°E and 36°E, northern hemisphere between equator and 84°N. Belarus. Cyprus. Egypt. Ethiopia. Finland. Israel. Jordan. Kenya. Lebanon. Moldova. Norway. Palestine. Russia. Saudi Arabia. Sudan. Syria. Turkey. Uganda. Ukraine
 
 .. code-block:: php
 
@@ -65355,7 +65617,7 @@ WGS 84 / UTM zone 42S
 
 WGS 84 / UTM zone 43N
 ---------------------
-| Extent: Between 72°E and 78°E, northern hemisphere between equator and 84°N. China. India. Kazakhstan. Kyrgyzstan. Maldives. Pakistan. Russia. Tajikistan
+| Extent: Between 72°E and 78°E, northern hemisphere between equator and 84°N. China. India. Kazakhstan. Kyrgyzstan. Maldives. Pakistan. Russia. Tajikistan. Uzbekistan
 
 .. code-block:: php
 
@@ -65571,7 +65833,7 @@ WGS 84 / UTM zone 50S
 
 WGS 84 / UTM zone 51N
 ---------------------
-| Extent: Between 120°E and 126°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan. North Korea. Philippines. Russia. South Korea. Taiwan
+| Extent: Between 120°E and 126°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan. Democratic People's Republic of Korea (North Korea). Republic of Korea (South Korea). Philippines. Russia. Taiwan
 
 .. code-block:: php
 
@@ -65595,7 +65857,7 @@ WGS 84 / UTM zone 51S
 
 WGS 84 / UTM zone 52N
 ---------------------
-| Extent: Between 126°E and 132°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan. North Korea. Russia. South Korea
+| Extent: Between 126°E and 132°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan. Democratic People's Republic of Korea (North Korea). Republic of Korea (South Korea). Russia
 
 .. code-block:: php
 

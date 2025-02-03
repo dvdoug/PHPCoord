@@ -43,6 +43,36 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_BD72_BELGIAN_LAMBERT_72_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::6190';
 
     /**
+     * BES2020 Saba + Saba height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_BES2020_SABA_PLUS_SABA_HEIGHT = 'urn:ogc:def:crs:EPSG::10644';
+
+    /**
+     * BES2020 Sint Eustatius + Sint Eustatius height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_BES2020_SINT_EUSTATIUS_PLUS_SINT_EUSTATIUS_HEIGHT = 'urn:ogc:def:crs:EPSG::10742';
+
+    /**
+     * Bonaire 2004 + Bonaire height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore.
+     */
+    public const EPSG_BONAIRE_2004_PLUS_BONAIRE_HEIGHT = 'urn:ogc:def:crs:EPSG::10765';
+
+    /**
+     * Bonaire DPnet + Bonaire height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore.
+     */
+    public const EPSG_BONAIRE_DPNET_PLUS_BONAIRE_HEIGHT = 'urn:ogc:def:crs:EPSG::10764';
+
+    /**
+     * CGRS93 + Famagusta 1960 height
+     * Extent: Cyprus - onshore.
+     */
+    public const EPSG_CGRS93_PLUS_FAMAGUSTA_1960_HEIGHT = 'urn:ogc:def:crs:EPSG::10865';
+
+    /**
      * CIGD11 + CBVD61 height (ft)
      * Extent: Cayman Islands - Cayman Brac.
      */
@@ -939,20 +969,6 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6149';
 
     /**
-     * ETRS89 / TM35FIN(N,E) + N2000 height
-     * Extent: Finland - onshore
-     * Replaces ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
-     */
-    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
-
-    /**
-     * ETRS89 / TM35FIN(N,E) + N60 height
-     * Extent: Finland - onshore
-     * Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-TM35FIN(N,E)/N2000 (CRS code 3903).
-     */
-    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
-
-    /**
      * ETRS89 / UTM zone 31N + DHHN92 height
      * Extent: Germany - onshore west of 6°E - Nordrhein-Westfalen.
      */
@@ -1067,11 +1083,59 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::10293';
 
     /**
+     * EUREF-FIN + N2000 height
+     * Extent: Finland - onshore.
+     */
+    public const EPSG_EUREF_FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10692';
+
+    /**
+     * EUREF-FIN + N60 height
+     * Extent: Finland - onshore.
+     */
+    public const EPSG_EUREF_FIN_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::10691';
+
+    /**
+     * EUREF-FIN / TM35FIN(E,N) + N2000 height
+     * Extent: Finland - onshore
+     * Now used in preference to EUREF-FIN / TM35FIN(N,E) + N2000 height (CRS code 3903) in which the horizontal axis
+     * order is reversed to northing-easting.
+     */
+    public const EPSG_EUREF_FIN_TM35FIN_E_N_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10774';
+
+    /**
+     * EUREF-FIN / TM35FIN(N,E) + N2000 height
+     * Extent: Finland - onshore
+     * Replaces ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902). Use now generally replaced by EUREF-FIN /
+     * TM35FIN(E,N) + N2000 height (code10774) in which horizontal axis order is reversed to easting-northing.
+     */
+    public const EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
+
+    /**
+     * EUREF-FIN / TM35FIN(N,E) + N60 height
+     * Extent: Finland - onshore
+     * Replaces YKJ/N60 (CRS code 3901). Replaced by EUREF-FIN-TM35FIN(N,E)/N2000 (CRS code 3903).
+     */
+    public const EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
+
+    /**
      * EWR2 Grid + ODN height
      * Extent: UK - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford,
-     * and from Claydon Junction to Aylesbury and Princes Risborough.
+     * and from Claydon Junction to Aylesbury and Princes Risborough
+     * In 2024 the horizontal component of this compound CRS, EWR2 Grid (ETRS89 / EWR2 SnakeGrid), was extended
+     * eastwards as the EWR3 Grid (ETRS89 / EWR3 SnakeGrid) (CRS code 10851). To the west of Bedford the EWR2 Grid is
+     * an exact subset of the EWR3 Grid; over this extent EWR3 Grid + ODN height (CRS code 10852) replaces EWR2 Grid +
+     * ODN height.
      */
     public const EPSG_EWR2_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9767';
+
+    /**
+     * EWR3 Grid + ODN height
+     * Extent: UK - on or related to the East West Rail (Phases 2 and 3) route from Oxford to Cambridge via Bicester,
+     * Bletchley and Bedford, including the route from Claydon Junction to Aylesbury and Princes Risborough
+     * The EWR3 Grid (ETRS89 / EWR3 SnakeGrid) is an extension to the EWR2 Grid (ETRS89 / EWR2 SnakeGrid); west of
+     * Bedford the two grids are identical.
+     */
+    public const EPSG_EWR3_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10852';
 
     /**
      * FEH2010 + FCSVR10 height
@@ -1348,7 +1412,7 @@ class Compound extends CoordinateReferenceSystem
     /**
      * KKJ / Finland Uniform Coordinate System + N60 height
      * Extent: Finland - onshore
-     * Replaced by ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902).
+     * Replaced by EUREF-FIN / TM35FIN(N,E) + N60 height (CRS code 3902).
      */
     public const EPSG_KKJ_FINLAND_UNIFORM_COORDINATE_SYSTEM_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3901';
 
@@ -1357,6 +1421,20 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Saudi Arabia - onshore.
      */
     public const EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT = 'urn:ogc:def:crs:EPSG::9520';
+
+    /**
+     * LKS-2020 + Latvia 2000 height
+     * Extent: Latvia - onshore
+     * Replaces LKS-92 (CRS code 4949) from 2025-10-01.
+     */
+    public const EPSG_LKS_2020_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10839';
+
+    /**
+     * LKS-92 + Latvia 2000 height
+     * Extent: Latvia - onshore
+     * Replaced by LKS-2020 + Latvia 2000 height (CRS code 10839) from 2025-10-01.
+     */
+    public const EPSG_LKS_92_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10826';
 
     /**
      * LUREF / Luxembourg TM + NG95 height
@@ -1437,7 +1515,7 @@ class Compound extends CoordinateReferenceSystem
      * NAD83 / Alabama East + NAVD88 height
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; StClair; Talladega; Tallapoosa.
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa.
      */
     public const EPSG_NAD83_ALABAMA_EAST_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::8801';
 
@@ -3002,16 +3080,58 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_SYC20_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10241';
 
     /**
+     * Saba + Saba height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_SABA_PLUS_SABA_HEIGHT = 'urn:ogc:def:crs:EPSG::10643';
+
+    /**
+     * Saba DPnet + Saba height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore.
+     */
+    public const EPSG_SABA_DPNET_PLUS_SABA_HEIGHT = 'urn:ogc:def:crs:EPSG::10645';
+
+    /**
      * ShAb07 Grid + ODN height
      * Extent: UK - on or related to the rail route from Shrewsbury to Aberystwyth.
      */
     public const EPSG_SHAB07_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10189';
 
     /**
+     * Sint Eustatius + Sint Eustatius height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_SINT_EUSTATIUS_PLUS_SINT_EUSTATIUS_HEIGHT = 'urn:ogc:def:crs:EPSG::10741';
+
+    /**
+     * Sint Eustatius DPnet long + Sint Eustatius height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_SINT_EUSTATIUS_DPNET_LONG_PLUS_SINT_EUSTATIUS_HEIGHT = 'urn:ogc:def:crs:EPSG::10747';
+
+    /**
+     * Sint Eustatius DPnet short + Sint Eustatius height
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
+     */
+    public const EPSG_SINT_EUSTATIUS_DPNET_SHORT_PLUS_SINT_EUSTATIUS_HEIGHT = 'urn:ogc:def:crs:EPSG::10746';
+
+    /**
+     * Slovenia 1996 + SVS2000 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_SLOVENIA_1996_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10686';
+
+    /**
      * Slovenia 1996 + SVS2010 height
      * Extent: Slovenia - onshore.
      */
     public const EPSG_SLOVENIA_1996_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10245';
+
+    /**
+     * Slovenia 1996 / Slovene National Grid + SVS2000 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10687';
 
     /**
      * Slovenia 1996 / Slovene National Grid + SVS2010 height
@@ -3091,6 +3211,16 @@ class Compound extends CoordinateReferenceSystem
      * @deprecated use EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT instead
      */
     public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
+
+    /**
+     * @deprecated use EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT instead
+     */
+    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
+
+    /**
+     * @deprecated use EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT instead
+     */
+    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
     /**
      * @var array<string, self>
      */

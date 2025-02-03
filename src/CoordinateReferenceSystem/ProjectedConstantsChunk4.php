@@ -12,81 +12,6 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk4
 {
     /**
-     * Pulkovo 1942(58) / Stereo70
-     * Extent: Romania.
-     */
-    public const EPSG_PULKOVO_1942_58_STEREO70 = 'urn:ogc:def:crs:EPSG::3844';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3
-     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
-     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3837). In Thuringen replaced by PD/83 / Gauss
-     * Kruger zone 3. See CRS code 5673 for variant with axes order reversed to easting before northing for use in GIS
-     * applications.
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::2397';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (E-N)
-     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (CRS code 2397) but with axis order reversed (and axis
-     * abbreviations changed) for GIS applications.
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5673';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4
-     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
-     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
-     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3838). In Brandenburg replaced by ETRS89 /
-     * UTM zone 33N. In Sachsen replaced by CRS 3398. In Thuringen replaced by CRS 3397. See CRS code 5674 for variant
-     * with axes order reversed.
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::2398';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (E-N)
-     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
-     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (CRS code 2398) but with axis order reversed (and axis
-     * abbreviations changed) for GIS applications.
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::5674';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5
-     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore east of
-     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary - west of 16°30'E
-     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3329). In Brandenburg replaced by ETRS89 /
-     * UTM zone 33N. In Sachsen replaced by RD/83 / Gauss Kruger zone 5. See CRS code 5675 for variant with axes order
-     * reversed.
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::2399';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (E-N)
-     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore east of
-     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary - west of 16°30'E
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (CRS code 2399) but with axis order reversed (and axis
-     * abbreviations changed) for GIS applications.
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N = 'urn:ogc:def:crs:EPSG::5675';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 6
-     * Extent: Czechia - east of 16°30'E. Hungary - between 16°30'E and 19°30'E. Slovakia - west of 19°30'E
-     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 6 (CRS code 3330).
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::3841';
-
-    /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 7
-     * Extent: Hungary and Slovakia - between 19°30'E and 22°30'E
-     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 7 (CRS code 3331).
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::4417';
-
-    /**
      * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 8
      * Extent: Hungary and Slovakia - east of 22°30'E
      * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 8 (CRS code 3332).
@@ -1835,9 +1760,18 @@ trait ProjectedConstantsChunk4
      * RGM04 / UTM zone 38S
      * Extent: Mayotte
      * Replaces Combani 1950 / UTM zone 38S (CRS code 2980) except for cadastre which uses Cadastre 1997 / UTM zone 38S
-     * (CRS code 5879).
+     * (CRS code 5879). Replaced by RGM23 / UTM zone 38S (CRS code 10674) with effect from 2023-01-01 except for
+     * cadastre.
      */
     public const EPSG_RGM04_UTM_ZONE_38S = 'urn:ogc:def:crs:EPSG::4471';
+
+    /**
+     * RGM23 / UTM zone 38S
+     * Extent: Mayotte
+     * Replaces RGM04 / UTM zone 38S (CRS code 4471) with effect from 2023-01-01 except for cadastre which uses
+     * Cadastre 1997 / UTM zone 38S (CRS code 5879).
+     */
+    public const EPSG_RGM23_UTM_ZONE_38S = 'urn:ogc:def:crs:EPSG::10674';
 
     /**
      * RGNC15 / Lambert New Caledonia 2015
@@ -2754,6 +2688,12 @@ trait ProjectedConstantsChunk4
     public const EPSG_SIRGAS_1995_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::32000';
 
     /**
+     * SIRGAS 2000 / Brazil Albers
+     * Extent: Brazil - onshore.
+     */
+    public const EPSG_SIRGAS_2000_BRAZIL_ALBERS = 'urn:ogc:def:crs:EPSG::10857';
+
+    /**
      * SIRGAS 2000 / Brazil Mercator
      * Extent: Brazil - offshore - equatorial margin.
      */
@@ -2774,6 +2714,12 @@ trait ProjectedConstantsChunk4
      * (SCR-CCG) from 2013-06-20.
      */
     public const EPSG_SIRGAS_2000_PORTO_ALEGRE_TM = 'urn:ogc:def:crs:EPSG::10665';
+
+    /**
+     * SIRGAS 2000 / Ribeirao Preto Local TM
+     * Extent: Brazil - Ribeirao Preto municipality, Sao Paulo state.
+     */
+    public const EPSG_SIRGAS_2000_RIBEIRAO_PRETO_LOCAL_TM = 'urn:ogc:def:crs:EPSG::10773';
 
     /**
      * SIRGAS 2000 / UTM zone 11N
@@ -3363,6 +3309,13 @@ trait ProjectedConstantsChunk4
     public const EPSG_SYC20_GRID = 'urn:ogc:def:crs:EPSG::10240';
 
     /**
+     * Saba DPnet
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+     * Short cadastral map coordinates.
+     */
+    public const EPSG_SABA_DPNET = 'urn:ogc:def:crs:EPSG::10641';
+
+    /**
      * Saint Pierre et Miquelon 1950 / UTM zone 21N
      * Extent: St Pierre and Miquelon - onshore
      * Replaced by RGSPM06 / UTM zone 21N (CRS code 4467).
@@ -3432,8 +3385,9 @@ trait ProjectedConstantsChunk4
     /**
      * Schwarzeck / UTM zone 33S
      * Extent: Namibia - offshore
-     * CARE! The ellipsoid semi-major axis dimension is defined in German Legal Metres as 6377397.155 GLM but for the
-     * CRS needs to9 be converted to CRS units of International metres as 6377483.865 m.
+     * CARE! The ellipsoid semi-major axis dimension is defined in German Legal Metres as 6377397.155 GLM but the
+     * coordinate system axes are in International metres. For use in this projected CRS, the ellipsoid semi-major axis
+     * needs to be converted to International metres as 6377483.865 m.
      */
     public const EPSG_SCHWARZECK_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::29333';
 
@@ -3525,6 +3479,20 @@ trait ProjectedConstantsChunk4
      * provisional adjustment.
      */
     public const EPSG_SIERRA_LEONE_1968_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::2162';
+
+    /**
+     * Sint Eustatius DPnet long
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Cadastral map long coordinates. Replaces DPnet short (CRS code 10744).
+     */
+    public const EPSG_SINT_EUSTATIUS_DPNET_LONG = 'urn:ogc:def:crs:EPSG::10745';
+
+    /**
+     * Sint Eustatius DPnet short
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Former cadastral map coordinates. Replaced by DPnet long (CRS code 10745).
+     */
+    public const EPSG_SINT_EUSTATIUS_DPNET_SHORT = 'urn:ogc:def:crs:EPSG::10744';
 
     /**
      * Sister Islands National Grid 1961
@@ -4312,8 +4280,8 @@ trait ProjectedConstantsChunk4
     /**
      * UCS-2000 / LCS-56 Rivne
      * Extent: Ukraine - Rivne region (oblast)
-     * Order #74 defines seperate LCSs for Rivne and Khmelnytsky oblasts; they have different extents but the same map
-     * projection. For Khmelnytsky oblast see CRS code 9855.
+     * Order #74 defines separate LCSs for Rivne and Khmelnytsky oblasts; they have different extents but the same map
+     * projection. For Khmelnytsky oblast see CRS code 9860.
      */
     public const EPSG_UCS_2000_LCS_56_RIVNE = 'urn:ogc:def:crs:EPSG::9855';
 
@@ -4344,7 +4312,7 @@ trait ProjectedConstantsChunk4
     /**
      * UCS-2000 / LCS-68 Khmelnytsky
      * Extent: Ukraine - Khmelnytskyi region (oblast)
-     * Order #74 defines seperate LCSs for Khmelnytsky and Rivne oblasts; they have different extents but the same map
+     * Order #74 defines separate LCSs for Khmelnytsky and Rivne oblasts; they have different extents but the same map
      * projection. For Rivne oblast see CRS code 9855.
      */
     public const EPSG_UCS_2000_LCS_68_KHMELNYTSKY = 'urn:ogc:def:crs:EPSG::9860';
@@ -4422,6 +4390,58 @@ trait ProjectedConstantsChunk4
      * Extent: Ukraine - between 25°30'E and 28°30'E.
      */
     public const EPSG_UCS_2000_UKRAINE_TM_ZONE_9 = 'urn:ogc:def:crs:EPSG::6383';
+
+    /**
+     * UGRF / UTM zone 35N
+     * Extent: Uganda - north of equator and west of 30°E.
+     */
+    public const EPSG_UGRF_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::10792';
+
+    /**
+     * UGRF / UTM zone 35S
+     * Extent: Uganda - south of equator and west of 30°E.
+     */
+    public const EPSG_UGRF_UTM_ZONE_35S = 'urn:ogc:def:crs:EPSG::10795';
+
+    /**
+     * UGRF / UTM zone 36N
+     * Extent: Uganda - north of equator and east of 30°E.
+     */
+    public const EPSG_UGRF_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::10793';
+
+    /**
+     * UGRF / UTM zone 36S
+     * Extent: Uganda - south of equator and east of 30°E.
+     */
+    public const EPSG_UGRF_UTM_ZONE_36S = 'urn:ogc:def:crs:EPSG::10794';
+
+    /**
+     * UZGD2024 / UzREF24 zone 40
+     * Extent: Uzbekistan - west of 60°E
+     * In use from 4th July 2024.
+     */
+    public const EPSG_UZGD2024_UZREF24_ZONE_40 = 'urn:ogc:def:crs:EPSG::10726';
+
+    /**
+     * UZGD2024 / UzREF24 zone 41
+     * Extent: Uzbekistan - between 60°E and 66°E
+     * In use from 4th July 2024.
+     */
+    public const EPSG_UZGD2024_UZREF24_ZONE_41 = 'urn:ogc:def:crs:EPSG::10727';
+
+    /**
+     * UZGD2024 / UzREF24 zone 42
+     * Extent: Uzbekistan - between 66°E and 72°E
+     * In use from 4th July 2024.
+     */
+    public const EPSG_UZGD2024_UZREF24_ZONE_42 = 'urn:ogc:def:crs:EPSG::10728';
+
+    /**
+     * UZGD2024 / UzREF24 zone 43
+     * Extent: Uzbekistan - east of 72°E
+     * In use from 4th July 2024.
+     */
+    public const EPSG_UZGD2024_UZREF24_ZONE_43 = 'urn:ogc:def:crs:EPSG::10729';
 
     /**
      * VN-2000 / TM-3 103-00
@@ -6065,6 +6085,17 @@ trait ProjectedConstantsChunk4
      * Extent: Between 132°W and 126°W, southern hemisphere between 80°S and equator.
      */
     public const EPSG_WGS_72BE_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::32509';
+
+    /**
+     * WGS 84 / Agriculture Canada Albers
+     * Extent: Canada - onshore south of 60°N - Alberta, British Columbia (BC), Manitoba, New Brunswick (NB),
+     * Newfoundland and Labrador, Nova Scotia (NS), Ontario, Prince Edward Island (PEI), Quebec and Saskatchewan
+     * Note that the map projection is not suitable for mapping north of 60°N. To cover the entire Canadian landmass a
+     * conformal alternative used for the Atlas of Canada and referenced to the Canadian spatial reference system could
+     * be used: refer to CRSs codes 3978 and 3979. See also CRS code 10598 for a CRS which is the basis for the equal
+     * area continental tiling system for North America used by the GLANCE land cover products.
+     */
+    public const EPSG_WGS_84_AGRICULTURE_CANADA_ALBERS = 'urn:ogc:def:crs:EPSG::10820';
 
     /**
      * WGS 84 / Andaman and Nicobar
@@ -7953,8 +7984,8 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / UTM zone 36N
      * Extent: Between 30°E and 36°E, northern hemisphere between equator and 84°N. Belarus. Cyprus. Egypt.
-     * Ethiopia. Finland. Israel. Jordan. Kenya. Lebanon. Moldova. Norway. Russia. Saudi Arabia. Sudan. Syria. Turkey.
-     * Uganda. Ukraine
+     * Ethiopia. Finland. Israel. Jordan. Kenya. Lebanon. Moldova. Norway. Palestine. Russia. Saudi Arabia. Sudan.
+     * Syria. Turkey. Uganda. Ukraine
      * In Moldova used with axes reversed - use CRS code 4038.
      */
     public const EPSG_WGS_84_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::32636';
@@ -8061,7 +8092,7 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / UTM zone 43N
      * Extent: Between 72°E and 78°E, northern hemisphere between equator and 84°N. China. India. Kazakhstan.
-     * Kyrgyzstan. Maldives. Pakistan. Russia. Tajikistan.
+     * Kyrgyzstan. Maldives. Pakistan. Russia. Tajikistan. Uzbekistan.
      */
     public const EPSG_WGS_84_UTM_ZONE_43N = 'urn:ogc:def:crs:EPSG::32643';
 
@@ -8176,8 +8207,9 @@ trait ProjectedConstantsChunk4
 
     /**
      * WGS 84 / UTM zone 51N
-     * Extent: Between 120°E and 126°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan. North
-     * Korea. Philippines. Russia. South Korea. Taiwan.
+     * Extent: Between 120°E and 126°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan.
+     * Democratic People's Republic of Korea (North Korea). Republic of Korea (South Korea). Philippines. Russia.
+     * Taiwan.
      */
     public const EPSG_WGS_84_UTM_ZONE_51N = 'urn:ogc:def:crs:EPSG::32651';
 
@@ -8190,8 +8222,8 @@ trait ProjectedConstantsChunk4
 
     /**
      * WGS 84 / UTM zone 52N
-     * Extent: Between 126°E and 132°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan. North
-     * Korea. Russia. South Korea.
+     * Extent: Between 126°E and 132°E, northern hemisphere between equator and 84°N. China. Indonesia. Japan.
+     * Democratic People's Republic of Korea (North Korea). Republic of Korea (South Korea). Russia.
      */
     public const EPSG_WGS_84_UTM_ZONE_52N = 'urn:ogc:def:crs:EPSG::32652';
 
