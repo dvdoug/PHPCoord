@@ -123,8 +123,6 @@ jobs:
       run: |
         if [ "${{ matrix.php-version }}" = "8.2" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --coverage-clover=build/coverage-phpunit/clover.xml --exclude-group=integration --exclude-group=gigs;
-          composer global require scrutinizer/ocular;
-          ~/.composer/vendor/bin/ocular code-coverage:upload --format=php-clover build/coverage-phpunit/clover.xml;
         elif [ "${{ matrix.php-version }}" = "8.1" ] || [ "${{ matrix.dependencies }}" = "lowest" ]; then
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration,gigs --no-coverage;
         else

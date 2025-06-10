@@ -1,7 +1,7 @@
 PHPCoord
 ========
 
-[![Build Status](https://github.com/dvdoug/PHPCoord/workflows/CI/badge.svg?branch=master)](https://github.com/dvdoug/PHPCoord/actions?query=workflow%3ACI+branch%3Amaster)
+[![Build Status](https://github.com/dvdoug/PHPCoord/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/dvdoug/PHPCoord/actions/workflows/ci.yml)
 [![Download count](https://img.shields.io/packagist/dt/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
 [![Current version](https://img.shields.io/packagist/v/php-coord/php-coord.svg)](https://packagist.org/packages/php-coord/php-coord)
 [![Documentation](https://readthedocs.org/projects/phpcoord/badge/?version=master)](https://phpcoord.net/en/stable/)
