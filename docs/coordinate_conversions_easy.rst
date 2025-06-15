@@ -78,12 +78,6 @@ between almost any two CRSs is possible as long as they have a common link.
     the target CRS). If you know a transformation should be possible, but PHPCoord cannot find it you may wish
     to try an explicit 2-stage conversion (e.g. source to WGS84, WGS84 to target).
 
-Accuracy
---------
-After a conversion, you can call ``getAccuracy()`` on the new point to reveal the fidelity of the conversion. PHPCoord
-will always pick the most accurate conversion it knows how to do.
-
-
 Boundaries
 ----------
 Every CRS has a defined area ("extent") over which it operates. Some are worldwide (e.g. WGS84), but most are regional
@@ -164,6 +158,9 @@ operating on the Earth's actual, irregular surface using instruments subject to 
 that conversions between CRSs are not just converting between mathematical ideals but often convert between
 *sets of observations*. When this happens it means that the conversions between the CRSs can only ever be
 an approximation (typically within a few metres) rather than exact.
+
+After a conversion, you can call ``getAccuracy()`` on the new ``Point`` to reveal the fidelity of the conversion. PHPCoord
+will always pick the most accurate conversion it knows how to do.
 
 Extents
 ^^^^^^^

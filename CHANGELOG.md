@@ -4,7 +4,7 @@
 
 ## [5.11.0] - 2025-06-15
 ### Added
-- Added new parameter `accuracy` and new method `getAccuracy()` on `Point` objects to store/reveal accuracy of the point.
+- Added new parameter `$accuracy` and new method `getAccuracy()` on `Point` objects to store/reveal accuracy of the point.
   You can use this either to store the data for your own use (e.g. survey errors) and/or PHPCoord will update this with
   the accuracy of the calculated point after a conversion
 ### Changed
