@@ -336,13 +336,13 @@ class GeographicPoint3DTest extends TestCase
         $epoch = new DateTime();
 
         $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $sourceHeight, $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0));
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($method['reversible']) {
             $delta = isset($operation['method']) && $operation['method'] === CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 ? 0.01 : 0.001;
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0));
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), $delta);

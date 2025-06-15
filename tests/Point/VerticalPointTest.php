@@ -207,12 +207,12 @@ class VerticalPointTest extends TestCase
         $horizontalCentre = $operationExtent->getPointInside();
         $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), $horizontalCentre[0], $horizontalCentre[1], null);
 
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, ['horizontalPoint' => $horizontalPoint]);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0), ['horizontalPoint' => $horizontalPoint]);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($method['reversible']) {
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, ['horizontalPoint' => $horizontalPoint]);
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0), ['horizontalPoint' => $horizontalPoint]);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), 0.0001);

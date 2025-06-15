@@ -1349,7 +1349,7 @@ class GIGSTest extends TestCase
         );
 
         if (!$inReverse) {
-            $convertedGeographicPoint2 = $geographicPoint1->performOperation($operation, $geographicCRS2, false);
+            $convertedGeographicPoint2 = $geographicPoint1->performOperation($operation, $geographicCRS2, false, new Metre(0));
             $this->assertEqualsWithDelta($geographicPoint2->getLatitude()->getValue(), $convertedGeographicPoint2->getLatitude()->getValue(), $geographicTolerance);
             $this->assertEqualsWithDelta($geographicPoint2->getLongitude()->getValue(), $convertedGeographicPoint2->getLongitude()->getValue(), $geographicTolerance);
             if ($height1) {
@@ -1359,8 +1359,8 @@ class GIGSTest extends TestCase
             if ($roundTripPoint) {
                 $originalConvertedGeographicPoint2 = $convertedGeographicPoint2;
                 for ($i = 0; $i < 500; ++$i) {
-                    $convertedGeographicPoint1 = $convertedGeographicPoint2->performOperation($operation, $geographicCRS1, true);
-                    $convertedGeographicPoint2 = $geographicPoint1->performOperation($operation, $geographicCRS2, false);
+                    $convertedGeographicPoint1 = $convertedGeographicPoint2->performOperation($operation, $geographicCRS1, true, new Metre(0));
+                    $convertedGeographicPoint2 = $geographicPoint1->performOperation($operation, $geographicCRS2, false, new Metre(0));
                 }
                 $this->assertEqualsWithDelta($originalConvertedGeographicPoint2->getLatitude()->getValue(), $convertedGeographicPoint2->getLatitude()->getValue(), $roundTripGeographicTolerance);
                 $this->assertEqualsWithDelta($originalConvertedGeographicPoint2->getLongitude()->getValue(), $convertedGeographicPoint2->getLongitude()->getValue(), $roundTripGeographicTolerance);
@@ -1369,7 +1369,7 @@ class GIGSTest extends TestCase
                 }
             }
         } else {
-            $convertedGeographicPoint1 = $geographicPoint2->performOperation($operation, $geographicCRS1, true);
+            $convertedGeographicPoint1 = $geographicPoint2->performOperation($operation, $geographicCRS1, true, new Metre(0));
             $this->assertEqualsWithDelta($geographicPoint1->getLatitude()->getValue(), $convertedGeographicPoint1->getLatitude()->getValue(), $geographicTolerance);
             $this->assertEqualsWithDelta($geographicPoint1->getLongitude()->getValue(), $convertedGeographicPoint1->getLongitude()->getValue(), $geographicTolerance);
             if ($height1) {
@@ -1377,7 +1377,7 @@ class GIGSTest extends TestCase
             }
 
             if ($roundTripPoint) {
-                $convertedGeographicPoint2 = $convertedGeographicPoint1->performOperation($operation, $geographicCRS2, false);
+                $convertedGeographicPoint2 = $convertedGeographicPoint1->performOperation($operation, $geographicCRS2, false, new Metre(0));
                 $this->assertEqualsWithDelta($geographicPoint2->getLatitude()->getValue(), $convertedGeographicPoint2->getLatitude()->getValue(), $roundTripGeographicTolerance);
                 $this->assertEqualsWithDelta($geographicPoint2->getLongitude()->getValue(), $convertedGeographicPoint2->getLongitude()->getValue(), $roundTripGeographicTolerance);
                 if ($height1) {

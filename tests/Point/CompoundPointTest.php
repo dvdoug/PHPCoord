@@ -312,12 +312,12 @@ class CompoundPointTest extends TestCase
         $epoch = new DateTime();
 
         $originalPoint = CompoundPoint::create($sourceCRS, $horizontalPoint, $verticalPoint, $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0));
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($method['reversible']) {
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0));
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getVerticalPoint()->getHeight()->getValue(), $reversedPoint->getVerticalPoint()->getHeight()->getValue(), 0.001);

@@ -101,7 +101,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height, ?DateTimeInterface $epoch)
+    /**
+     * Accuracy.
+     */
+    protected ?Length $accuracy;
+
+    protected function __construct(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height, ?DateTimeInterface $epoch, ?Length $accuracy = null)
     {
         if ($crs instanceof Geographic2D && $height !== null) {
             throw new InvalidCoordinateReferenceSystemException('A 2D geographic point must not include a height');
@@ -129,6 +134,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
         $this->epoch = $epoch;
+        $this->accuracy = $accuracy;
     }
 
     /**
@@ -164,6 +170,11 @@ class GeographicPoint extends Point implements ConvertiblePoint
     public function getCoordinateEpoch(): ?DateTimeImmutable
     {
         return $this->epoch;
+    }
+
+    public function getAccuracy(): ?Length
+    {
+        return $this->accuracy;
     }
 
     protected function normaliseLatitude(Angle $latitude): Angle
@@ -2354,7 +2365,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         );
 
         /** @var ProjectedPoint $asProjected */
-        $asProjected = $this->performOperation($derivingConversion, $projectedCRS, false);
+        $asProjected = $this->performOperation($derivingConversion, $projectedCRS, false, new Metre(0));
 
         return new UTMPoint($this->crs, $asProjected->getEasting(), $asProjected->getNorthing(), $zone, $hemisphere, $this->epoch);
     }

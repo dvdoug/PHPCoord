@@ -65,7 +65,12 @@ class CompoundPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null)
+    /**
+     * Accuracy.
+     */
+    protected ?Length $accuracy;
+
+    protected function __construct(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null, ?Length $accuracy = null)
     {
         $this->horizontalPoint = $horizontalPoint;
         $this->verticalPoint = $verticalPoint;
@@ -75,11 +80,12 @@ class CompoundPoint extends Point implements ConvertiblePoint
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
         $this->epoch = $epoch;
+        $this->accuracy = $accuracy;
     }
 
-    public static function create(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null): self
+    public static function create(Compound $crs, GeographicPoint|ProjectedPoint $horizontalPoint, VerticalPoint $verticalPoint, ?DateTimeInterface $epoch = null, ?Length $accuracy = null): self
     {
-        return new self($crs, $horizontalPoint, $verticalPoint, $epoch);
+        return new self($crs, $horizontalPoint, $verticalPoint, $epoch, $accuracy);
     }
 
     public function getHorizontalPoint(): GeographicPoint|ProjectedPoint
@@ -100,6 +106,11 @@ class CompoundPoint extends Point implements ConvertiblePoint
     public function getCoordinateEpoch(): ?DateTimeImmutable
     {
         return $this->epoch;
+    }
+
+    public function getAccuracy(): ?Length
+    {
+        return $this->accuracy;
     }
 
     /**
@@ -144,7 +155,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
                         foreach ($path as $step) {
                             $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
                             /** @var VerticalPoint $newVerticalPoint */
-                            $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], ['horizontalPoint' => $newHorizontalPoint]);
+                            $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), ['horizontalPoint' => $newHorizontalPoint]);
                         }
 
                         return static::create($to, $newHorizontalPoint, $newVerticalPoint, $this->epoch);

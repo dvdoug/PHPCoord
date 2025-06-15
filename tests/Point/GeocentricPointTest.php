@@ -363,12 +363,12 @@ class GeocentricPointTest extends TestCase
         }
 
         $originalPoint = GeocentricPoint::create($sourceCRS, $centre->getX(), $centre->getY(), $centre->getZ(), $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false);
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0));
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($method['reversible']) {
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true);
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0));
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getX()->getValue(), $reversedPoint->getX()->getValue(), 0.0001);
             self::assertEqualsWithDelta($originalPoint->getY()->getValue(), $reversedPoint->getY()->getValue(), 0.0001);

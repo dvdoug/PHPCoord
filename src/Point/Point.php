@@ -23,6 +23,7 @@ use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
+use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
@@ -77,7 +78,7 @@ abstract class Point implements Stringable
      * @internal
      * @param array{horizontalPoint?: Point} $additionalParams
      */
-    public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, array $additionalParams = []): self
+    public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, Length $accuracy, array $additionalParams = []): self
     {
         $operation = CoordinateOperations::getOperationData($srid);
 
@@ -85,6 +86,8 @@ abstract class Point implements Stringable
             $point = clone $this;
             assert(property_exists($point, 'crs'));
             $point->crs = $to;
+            assert(property_exists($point, 'accuracy'));
+            $point->accuracy ??= new Metre(0);
 
             return $point;
         } else {
@@ -95,7 +98,13 @@ abstract class Point implements Stringable
                 $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
             }
 
-            return $this->$method($to, ...$params);
+            $point = $this->$method($to, ...$params);
+            assert(property_exists($this, 'accuracy'));
+            assert(property_exists($point, 'accuracy'));
+            $existingAccuracy = $this->accuracy ?? new Metre(0);
+            $point->accuracy = $existingAccuracy->add($accuracy);
+
+            return $point;
         }
     }
 
@@ -352,6 +361,8 @@ abstract class Point implements Stringable
     abstract public function getCRS(): CoordinateReferenceSystem;
 
     abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
+
+    abstract public function getAccuracy(): ?Length;
 
     abstract public function calculateDistance(self $to): Length;
 }

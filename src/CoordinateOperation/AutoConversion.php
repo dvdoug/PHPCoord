@@ -26,6 +26,8 @@ use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\Point\Point;
 use PHPCoord\Point\ProjectedPoint;
+use PHPCoord\UnitOfMeasure\Length\Length;
+use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPCoord\Point\VerticalPoint;
@@ -69,7 +71,7 @@ trait AutoConversion
 
         foreach ($path as $step) {
             $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
-            $point = $point->performOperation($step['operation'], $target, $step['in_reverse']);
+            $point = $point->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']));
         }
 
         return $point;
@@ -383,5 +385,5 @@ trait AutoConversion
 
     abstract public function getCoordinateEpoch(): ?DateTimeImmutable;
 
-    abstract protected function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse): Point;
+    abstract protected function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, Length $accuracy): Point;
 }

@@ -102,11 +102,16 @@ class ProjectedPoint extends Point implements ConvertiblePoint
     protected Projected $crs;
 
     /**
+     * Accuracy.
+     */
+    protected ?Length $accuracy;
+
+    /**
      * Coordinate epoch (date for which the specified coordinates represented this point).
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch, ?Length $height)
+    protected function __construct(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch, ?Length $height, ?Length $accuracy)
     {
         if (count($crs->getCoordinateSystem()->getAxes()) === 2 && $height !== null) {
             throw new InvalidCoordinateReferenceSystemException('A 2D projected point must not include a height');
@@ -150,31 +155,32 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         $this->epoch = $epoch;
 
         $this->height = $height;
+        $this->accuracy = $accuracy;
     }
 
-    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
+    public static function create(Projected $crs, ?Length $easting, ?Length $northing, ?Length $westing, ?Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null, ?Length $accuracy = null): self
     {
         return match ($crs->getSRID()) {
-            Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => new BritishNationalGridPoint($easting, $northing, $epoch),
-            Projected::EPSG_TM75_IRISH_GRID => new IrishGridPoint($easting, $northing, $epoch),
-            Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR => new IrishTransverseMercatorPoint($easting, $northing, $epoch),
-            default => new self($crs, $easting, $northing, $westing, $southing, $epoch, $height),
+            Projected::EPSG_OSGB36_BRITISH_NATIONAL_GRID => new BritishNationalGridPoint($easting, $northing, $epoch, $accuracy),
+            Projected::EPSG_TM75_IRISH_GRID => new IrishGridPoint($easting, $northing, $epoch, $accuracy),
+            Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR => new IrishTransverseMercatorPoint($easting, $northing, $epoch, $accuracy),
+            default => new self($crs, $easting, $northing, $westing, $southing, $epoch, $height, $accuracy),
         };
     }
 
-    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
+    public static function createFromEastingNorthing(Projected $crs, Length $easting, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null, ?Length $accuracy = null): self
     {
-        return static::create($crs, $easting, $northing, null, null, $epoch, $height);
+        return static::create($crs, $easting, $northing, null, null, $epoch, $height, $accuracy);
     }
 
-    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
+    public static function createFromWestingNorthing(Projected $crs, Length $westing, Length $northing, ?DateTimeInterface $epoch = null, ?Length $height = null, ?Length $accuracy = null): self
     {
-        return static::create($crs, null, $northing, $westing, null, $epoch, $height);
+        return static::create($crs, null, $northing, $westing, null, $epoch, $height, $accuracy);
     }
 
-    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null): self
+    public static function createFromWestingSouthing(Projected $crs, Length $westing, Length $southing, ?DateTimeInterface $epoch = null, ?Length $height = null, ?Length $accuracy = null): self
     {
-        return static::create($crs, null, null, $westing, $southing, $epoch, $height);
+        return static::create($crs, null, null, $westing, $southing, $epoch, $height, $accuracy);
     }
 
     public function getEasting(): Length
@@ -212,6 +218,11 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         return $this->epoch;
     }
 
+    public function getAccuracy(): ?Length
+    {
+        return $this->accuracy;
+    }
+
     /**
      * Calculate distance between two points.
      * Because this is a simple grid, we can use Pythagoras.
@@ -239,7 +250,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
     public function asGeographicPoint(): GeographicPoint
     {
-        $geographicPoint = $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
+        $geographicPoint = $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true, new Metre(0));
         assert($geographicPoint instanceof GeographicPoint);
 
         return $geographicPoint;
@@ -248,7 +259,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
     public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
     {
         if ($to->getSRID() === $this->crs->getBaseCRS()->getSRID()) {
-            return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true);
+            return $this->performOperation($this->crs->getDerivingConversion(), $this->crs->getBaseCRS(), true, new Metre(0));
         }
 
         return $this->autoConvert($to, $ignoreBoundaryRestrictions);

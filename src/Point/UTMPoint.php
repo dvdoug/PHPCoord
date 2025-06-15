@@ -48,11 +48,12 @@ class UTMPoint extends ProjectedPoint
      */
     protected Geographic2D|Geographic3D $baseCRS;
 
-    public function __construct(Geographic2D|Geographic3D $crs, Length $easting, Length $northing, int $zone, string $hemisphere, ?DateTimeInterface $epoch = null)
+    public function __construct(Geographic2D|Geographic3D $crs, Length $easting, Length $northing, int $zone, string $hemisphere, ?DateTimeInterface $epoch = null, ?Length $accuracy = null)
     {
         $this->zone = $zone;
         $this->hemisphere = $hemisphere;
         $this->baseCRS = $crs;
+        $this->accuracy = $accuracy;
 
         $longitudeOrigin = $zone * 6 - 3;
         if ($hemisphere === self::HEMISPHERE_NORTH) {
@@ -101,7 +102,7 @@ class UTMPoint extends ProjectedPoint
             $derivingConversion
         );
 
-        parent::__construct($projectedCRS, $easting, $northing, null, null, $epoch, null);
+        parent::__construct($projectedCRS, $easting, $northing, null, null, $epoch, null, $accuracy);
     }
 
     public function getZone(): int

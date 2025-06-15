@@ -32,15 +32,15 @@ class IrishGridPoint extends ProjectedPoint
 {
     private const GRID_LETTERS = 'VWXYZQRSTULMNOPFGHJKABCDE';
 
-    public function __construct(Length $easting, Length $northing, ?DateTimeInterface $epoch = null)
+    public function __construct(Length $easting, Length $northing, ?DateTimeInterface $epoch = null, ?Length $accuracy = null)
     {
-        parent::__construct(Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID), $easting, $northing, null, null, $epoch, null);
+        parent::__construct(Projected::fromSRID(Projected::EPSG_TM75_IRISH_GRID), $easting, $northing, null, null, $epoch, null, $accuracy);
     }
 
     /**
      * @param string $reference Irish grid reference (e.g. "T514131")
      */
-    public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null): self
+    public static function fromGridReference(string $reference, ?DateTimeInterface $epoch = null, ?Length $accuracy = null): self
     {
         $reference = str_replace(' ', '', $reference);
 
@@ -60,7 +60,7 @@ class IrishGridPoint extends ProjectedPoint
         $easting = $minorEasting + ((int) substr($numericPortion, 0, (int) $numericPortionSize) * $gridSizeInMetres);
         $northing = $minorNorthing + ((int) substr($numericPortion, -(int) $numericPortionSize, (int) $numericPortionSize) * $gridSizeInMetres);
 
-        return new self(new Metre($easting), new Metre($northing), $epoch);
+        return new self(new Metre($easting), new Metre($northing), $epoch, $accuracy);
     }
 
     /**

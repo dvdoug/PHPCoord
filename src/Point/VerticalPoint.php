@@ -45,10 +45,15 @@ class VerticalPoint extends Point
     protected ?DateTimeImmutable $epoch;
 
     /**
+     * Accuracy.
+     */
+    protected ?Length $accuracy;
+
+    /**
      * Constructor.
      * @param Length $height refer to CRS for preferred unit of measure, but any length unit accepted
      */
-    protected function __construct(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null)
+    protected function __construct(Vertical $crs, Length $height, ?DateTimeInterface $epoch = null, ?Length $accuracy = null)
     {
         $this->height = $height::convert($height, $crs->getCoordinateSystem()->getAxes()[0]->getUnitOfMeasureId());
         $this->crs = $crs;
@@ -57,6 +62,7 @@ class VerticalPoint extends Point
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
         $this->epoch = $epoch;
+        $this->accuracy = $accuracy;
     }
 
     /**
@@ -81,6 +87,11 @@ class VerticalPoint extends Point
     public function getCoordinateEpoch(): ?DateTimeImmutable
     {
         return $this->epoch;
+    }
+
+    public function getAccuracy(): ?Length
+    {
+        return $this->accuracy;
     }
 
     public function calculateDistance(Point $to): Length

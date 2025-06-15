@@ -69,7 +69,12 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      */
     protected ?DateTimeImmutable $epoch;
 
-    protected function __construct(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null)
+    /**
+     * Accuracy.
+     */
+    protected ?Length $accuracy;
+
+    protected function __construct(Geocentric $crs, Length $x, Length $y, Length $z, ?DateTimeInterface $epoch = null, ?Length $accuracy = null)
     {
         $this->crs = $crs;
         $this->x = $x::convert($x, $this->crs->getCoordinateSystem()->getAxisByName(Axis::GEOCENTRIC_X)->getUnitOfMeasureId());
@@ -80,6 +85,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
             $epoch = DateTimeImmutable::createFromMutable($epoch);
         }
         $this->epoch = $epoch;
+        $this->accuracy = $accuracy;
     }
 
     /**
@@ -115,6 +121,11 @@ class GeocentricPoint extends Point implements ConvertiblePoint
     public function getCoordinateEpoch(): ?DateTimeImmutable
     {
         return $this->epoch;
+    }
+
+    public function getAccuracy(): ?Length
+    {
+        return $this->accuracy;
     }
 
     /**
