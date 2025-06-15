@@ -551,6 +551,17 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(234667.6783, $to->getNorthing()->getValue(), 0.001);
     }
 
+    public function testWGS84toTM35FIN(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(60.80073449569994), new Degree(21.40466790832606));
+        $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_TM35FIN_E_N);
+        $to = $from->convert($toCRS);
+
+        self::assertEqualsWithDelta(195731.2099, $to->getEasting()->getValue(), 0.001);
+        self::assertEqualsWithDelta(6753576.3603, $to->getNorthing()->getValue(), 0.001);
+        self::assertEquals(0.11, $to->getAccuracy()->getValue());
+    }
+
     public function testRDNAPToITRF2014(): void
     {
         if (!class_exists(GTXETRS89NAPProvider::class)) {
