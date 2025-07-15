@@ -553,7 +553,7 @@ class AutoConversionTest extends TestCase
 
     public function testWGS84toTM35FIN(): void
     {
-        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(60.80073449569994), new Degree(21.40466790832606));
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(60.80073449569994), new Degree(21.40466790832606), null, new DateTime('2025-06-01'));
         $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_TM35FIN_E_N);
         $to = $from->convert($toCRS);
 

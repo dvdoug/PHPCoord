@@ -215,7 +215,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Scale $scaleDifference,
         Length $ordinate1OfEvaluationPoint,
         Length $ordinate2OfEvaluationPoint,
-        Length $ordinate3OfEvaluationPoint
+        Length $ordinate3OfEvaluationPoint,
     ): self {
         $xs = $this->x->asMetres()->getValue();
         $ys = $this->y->asMetres()->getValue();
