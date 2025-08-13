@@ -329,6 +329,21 @@ Ascension Island 1958
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4712')
 
 
+Asse 2025
+---------
+| Extent: Germany - Lower Saxony - Asse mining area
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ASSE_2025)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10898')
+    Geographic::fromSRID(Geographic2D::EPSG_ASSE_2025)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10898')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ASSE_2025)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10898')
+
+Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinate values are close to but not identical to DHDN.
+
 Astro DOS 71
 ------------
 | Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
@@ -966,6 +981,36 @@ CSG67
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CSG67)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4623')
 
+
+CSRN epoch 2025.0 (ITRF2020)
+----------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10952')
+    Geographic::fromSRID(Geographic2D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10952')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10952')
+
+Californian 'snapshot' of ITRF2020 taking into account local tectonic plate movement and deformation. Supersedes CSRS epoch 2017.5 (ITRF2014) from 2025-06-15.
+
+CSRN epoch 2025.0 (NAD83 2011)
+------------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10910')
+    Geographic::fromSRID(Geographic2D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10910')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10910')
+
+Replaces NAD83(2011) in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.
 
 CWS13-IRF
 ---------
@@ -2203,6 +2248,36 @@ GR96
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GR96)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4747')
 
+Replaces all earlier Greenland geographic CRSs (Ammassalik 1958, Qoornoq 1927 and Scoresbysund 1952).
+
+GR96(1996)
+----------
+| Extent: Greenland
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GR96_1996)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10956')
+    Geographic::fromSRID(Geographic2D::EPSG_GR96_1996)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10956')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GR96_1996)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10956')
+
+Replaces all earlier Greenland geographic CRSs.
+
+GR96(2021)
+----------
+| Extent: Greenland
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GR96_2021)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10959')
+    Geographic::fromSRID(Geographic2D::EPSG_GR96_2021)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10959')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GR96_2021)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10959')
+
 Replaces all earlier Greenland geographic CRSs.
 
 GS-IRF
@@ -2336,6 +2411,20 @@ Garoua
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4197')
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GAROUA)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4197')
+
+
+Georgia Geodetic Datum
+----------------------
+| Extent: Georgia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GEORGIA_GEODETIC_DATUM)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10831')
+    Geographic::fromSRID(Geographic2D::EPSG_GEORGIA_GEODETIC_DATUM)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10831')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GEORGIA_GEODETIC_DATUM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10831')
 
 
 Grand Comoros
@@ -5234,6 +5323,21 @@ NAD83(PACP00)
 
 Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).
 
+NATRF2022
+---------
+| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_NATRF2022)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10968')
+    Geographic::fromSRID(Geographic2D::EPSG_NATRF2022)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10968')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NATRF2022)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10968')
+
+CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event that definitions change, the record will be deprecated and replaced with a new EPSG code.
+
 NEA74 Noumea
 ------------
 | Extent: New Caledonia - Grande Terre - Noumea district
@@ -6205,17 +6309,32 @@ Qatar 1974
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4285')
 
 
-Qornoq 1927
------------
+QazTRF-23
+---------
+| Extent: Kazakhstan, including Caspian Sea
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_QAZTRF_23)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10941')
+    Geographic::fromSRID(Geographic2D::EPSG_QAZTRF_23)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10941')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_QAZTRF_23)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10941')
+
+Replaces usage of Pulkovo 1942 (CRS code 4284) in Kazakhstan from 2025-01-01.
+
+Qoornoq 1927
+------------
 | Extent: Greenland - west coast onshore
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_QORNOQ_1927)
+    Geographic2D::fromSRID(Geographic2D::EPSG_QOORNOQ_1927)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4194')
-    Geographic::fromSRID(Geographic2D::EPSG_QORNOQ_1927)
+    Geographic::fromSRID(Geographic2D::EPSG_QOORNOQ_1927)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4194')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_QORNOQ_1927)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_QOORNOQ_1927)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4194')
 
 
@@ -8679,6 +8798,21 @@ WGS 84 (Transit)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8888')
 
 Replaced by WGS84 (G730) (CRS code 9053) from 1994-06-29.
+
+WSPG-IRF
+--------
+| Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe and Wilton works, Redcar
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_WSPG_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10860')
+    Geographic::fromSRID(Geographic2D::EPSG_WSPG_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10860')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_WSPG_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10860')
+
+Intermediate CRS created in 2025 to assist the emulation of the ETRS89 / WSPG SnakeGrid projected CRS through transformation ETRS89 to WSPG-IRF (1) (code 10861) used in conjunction with the WSPG-TM map projection (code 10862).
 
 Wake Island 1952
 ----------------

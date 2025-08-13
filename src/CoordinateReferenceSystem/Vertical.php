@@ -91,6 +91,14 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_ANTALYA_HEIGHT = 'urn:ogc:def:crs:EPSG::5775';
 
     /**
+     * Asse 2025 height
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinate
+     * values are close to but not identical to DHHN12 height.
+     */
+    public const EPSG_ASSE_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::10900';
+
+    /**
      * Auckland 1946 height
      * Extent: New Zealand - North Island - Auckland vertical CRS area.
      */
@@ -288,6 +296,22 @@ class Vertical extends CoordinateReferenceSystem
      * epochs 1997.0, 2002.0 and 2010.0.
      */
     public const EPSG_CGVD28_HTV2_0_HEIGHT = 'urn:ogc:def:crs:EPSG::10588';
+
+    /**
+     * COH88 2025 (NAVD88) height
+     * Extent: USA - California
+     * Replaces NAVD88 height (CRS code 5703) in California. Supersedes COH88 2017.5 (NAVD88) height from 2025-06-15.
+     * State law defines use of US survey feet: see CRS code 10919.
+     */
+    public const EPSG_COH88_2025_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::10918';
+
+    /**
+     * COH88 2025 (NAVD88) height (ftUS)
+     * Extent: USA - California
+     * Replaces NAVD88 height (ftUS) (CRS code 6360) in California. Supersedes COH88 2017.5 (NAVD88) height (ft US)
+     * from 2025-06-15. State law defines use of US survey feet: see CRS code 10918 for metric equivalent.
+     */
+    public const EPSG_COH88_2025_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::10919';
 
     /**
      * Cagliari 1956 height
@@ -576,8 +600,9 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * EGM2008 height
      * Extent: World
-     * Zero-height surface resulting from the application of the EGM2008 geoid model to the WGS 84 ellipsoid. Replaces
-     * EGM96 height (CRS code 5773).
+     * Zero-height surface approximating mean sea level resulting from the application of the EGM2008 spherical
+     * harmonic coefficients to the WGS 84 ellipsoid. May be approximated by application of the EGM2008 geoid model
+     * grid. Replaces EGM96 height (CRS code 5773).
      */
     public const EPSG_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::3855';
 
@@ -592,7 +617,8 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * EGM96 height
      * Extent: World
-     * Zero-height surface resulting from the application of the EGM96 geoid model to the WGS 84 ellipsoid. Replaces
+     * Zero-height surface approximating mean sea level resulting from the application of the EGM96 spherical harmonic
+     * coefficients to the WGS 84 ellipsoid. May be approximated by application of the EGM96 geoid model grid. Replaces
      * EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).
      */
     public const EPSG_EGM96_HEIGHT = 'urn:ogc:def:crs:EPSG::5773';

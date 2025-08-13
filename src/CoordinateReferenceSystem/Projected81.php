@@ -446,6 +446,14 @@ class Projected81 extends ProjectedBase
     public const EPSG_ARC_1960_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::21037';
 
     /**
+     * Asse 2025 / 3-degree Gauss-Kruger zone 4 (E-N)
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinates are
+     * close to but not identical to DHDN / 3-degree Gauss-Kruger zone 4 (E-N).
+     */
+    public const EPSG_ASSE_2025_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::10899';
+
+    /**
      * Astro DOS 71 / SHLG71
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Replaced by SHMG2015 (CRS code 7887) from 2015.
@@ -1772,6 +1780,116 @@ class Projected81 extends ProjectedBase
      * Replaced by RGFG95 / UTM zone 22N (CRS code 2972).
      */
     public const EPSG_CSG67_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2971';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California Albers
+     * Extent: USA - California
+     * Replaces NAD83(2011) / California Albers (CRS code 6414) in California. Supersedes use of California Albers with
+     * CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ALBERS = 'urn:ogc:def:crs:EPSG::10917';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 1
+     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Trinity
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10911.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_1 = 'urn:ogc:def:crs:EPSG::10921';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 1 (ftUS)
+     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Trinity
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10921 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_1_FTUS = 'urn:ogc:def:crs:EPSG::10911';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 2
+     * Extent: USA - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa;
+     * Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10912.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_2 = 'urn:ogc:def:crs:EPSG::10922';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 2 (ftUS)
+     * Extent: USA - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa;
+     * Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10922 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_2_FTUS = 'urn:ogc:def:crs:EPSG::10912';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 3
+     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
+     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10913.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_3 = 'urn:ogc:def:crs:EPSG::10923';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 3 (ftUS)
+     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
+     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10923 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_3_FTUS = 'urn:ogc:def:crs:EPSG::10913';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 4
+     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10914.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_4 = 'urn:ogc:def:crs:EPSG::10924';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 4 (ftUS)
+     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10924 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_4_FTUS = 'urn:ogc:def:crs:EPSG::10914';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 5
+     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10915.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_5 = 'urn:ogc:def:crs:EPSG::10925';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 5 (ftUS)
+     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10925 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_5_FTUS = 'urn:ogc:def:crs:EPSG::10915';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 6
+     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10916.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_6 = 'urn:ogc:def:crs:EPSG::10926';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 6 (ftUS)
+     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10926 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_6_FTUS = 'urn:ogc:def:crs:EPSG::10916';
 
     /**
      * CWS13 Grid
@@ -6410,6 +6528,26 @@ class Projected81 extends ProjectedBase
     public const EPSG_GAROUA_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::2312';
 
     /**
+     * Georgia Geodetic Datum / Lambert
+     * Extent: Georgia - onshore.
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM_LAMBERT = 'urn:ogc:def:crs:EPSG::10833';
+
+    /**
+     * Georgia Geodetic Datum / UTM zone 37N (N-E)
+     * Extent: Georgia - west of 42°E
+     * For cadastre use Georgia Geodetic Datum / Lambert (CRS code 10833).
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM_UTM_ZONE_37N_N_E = 'urn:ogc:def:crs:EPSG::10836';
+
+    /**
+     * Georgia Geodetic Datum / UTM zone 38N (N-E)
+     * Extent: Georgia - east of 42°E
+     * For cadastre use GGD / Lambert (CRS code 10833).
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM_UTM_ZONE_38N_N_E = 'urn:ogc:def:crs:EPSG::10837';
+
+    /**
      * Grand Cayman National Grid 1959
      * Extent: Cayman Islands - Grand Cayman.
      */
@@ -6456,7 +6594,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh, Bangladesh - onshore
+     * Extent: Bangladesh - onshore, Bangladesh
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -9025,8 +9163,8 @@ class Projected81 extends ProjectedBase
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
-     * Serbia - between 19°30'E and 22°30'E
+     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
+     * 19°30'E and 22°30'E, North Macedonia
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
      * (CRS code 10329).
@@ -9669,8 +9807,8 @@ class Projected81 extends ProjectedBase
     /**
      * NAD27 / BLM 14N (ftUS)
      * Extent: USA - between 102°W and 96°W. Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma; South Dakota;
-     * Texas; Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W - protraction areas Corpus
-     * Christi; Port Isabel.
+     * Texas; Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North Padre
+     * Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port Isabel.
      */
     public const EPSG_NAD27_BLM_14N_FTUS = 'urn:ogc:def:crs:EPSG::32064';
 
@@ -9678,8 +9816,10 @@ class Projected81 extends ProjectedBase
      * NAD27 / BLM 15N (ftUS)
      * Extent: USA - between 96°W and 90°W - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota;
      * Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin; Gulf of Mexico outer continental shelf
-     * (GoM OCS) between approximately 96°W and 90°W - protraction areas East Breaks; Alaminos Canyon; Garden Banks;
-     * Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon; Walker Ridge; Amery Terrace.
+     * (GoM OCS) between approximately 96°W and 90°W - leasing areas Brazos, Galveston, High Island; Sabine Pass;
+     * West Cameron, East Cameron, Vermilion, South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand,
+     * South Timbalier, Grand Isle; protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon,
+     * Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker Ridge, Amery Terrace.
      */
     public const EPSG_NAD27_BLM_15N_FTUS = 'urn:ogc:def:crs:EPSG::32065';
 
@@ -9687,10 +9827,11 @@ class Projected81 extends ProjectedBase
      * NAD27 / BLM 16N (ftUS)
      * Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky;
      * Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of
-     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - protraction areas Mobile;
-     * Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola; Destin Dome; De Soto Canyon;
-     * Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida Middle Ground; The Elbow;
-     * Vernon Basin; Howell Hook; Rankin.
+     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West
+     * Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
+     * Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson,
+     * Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook,
+     * Rankin.
      */
     public const EPSG_NAD27_BLM_16N_FTUS = 'urn:ogc:def:crs:EPSG::32066';
 
@@ -10071,7 +10212,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * NAD27 / Louisiana Offshore
-     * Extent: USA - Louisiana
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
      * This system is NOT used for oil industry purposes. Use NAD27 / Louisiana South (CRS code 26782) in state waters
      * and on LA OCS shelf and NAD27 / BLM (CRS codes 32065-66) in OCS deep water protraction areas.
      */
@@ -11433,8 +11574,8 @@ class Projected81 extends ProjectedBase
     /**
      * NAD83 / BLM 14N (ftUS)
      * Extent: USA - between 102°W and 96°W. Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma; South Dakota;
-     * Texas; Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W - protraction areas Corpus
-     * Christi; Port Isabel
+     * Texas; Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North Padre
+     * Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port Isabel
      * See NAD83 / UTM zone 14N (code 26914) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -11444,8 +11585,10 @@ class Projected81 extends ProjectedBase
      * NAD83 / BLM 15N (ftUS)
      * Extent: USA - between 96°W and 90°W - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota;
      * Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin; Gulf of Mexico outer continental shelf
-     * (GoM OCS) between approximately 96°W and 90°W - protraction areas East Breaks; Alaminos Canyon; Garden Banks;
-     * Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon; Walker Ridge; Amery Terrace
+     * (GoM OCS) between approximately 96°W and 90°W - leasing areas Brazos, Galveston, High Island; Sabine Pass;
+     * West Cameron, East Cameron, Vermilion, South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand,
+     * South Timbalier, Grand Isle; protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon,
+     * Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker Ridge, Amery Terrace
      * See NAD83 / UTM zone 15N (code 26915) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32065) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -11455,10 +11598,11 @@ class Projected81 extends ProjectedBase
      * NAD83 / BLM 16N (ftUS)
      * Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky;
      * Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of
-     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - protraction areas Mobile;
-     * Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola; Destin Dome; De Soto Canyon;
-     * Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida Middle Ground; The Elbow;
-     * Vernon Basin; Howell Hook; Rankin
+     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West
+     * Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
+     * Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson,
+     * Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook,
+     * Rankin
      * See NAD83 / UTM zone 16N (code 26916) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -12309,7 +12453,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * NAD83 / Louisiana Offshore
-     * Extent: USA - Louisiana
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
      * This system is NOT used for oil industry purposes. State law defines system in US survey feet. See code 3453 for
      * equivalent non-metric definition.
      */
@@ -12317,7 +12461,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * NAD83 / Louisiana Offshore (ftUS)
-     * Extent: USA - Louisiana
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
      * This system is NOT used for oil industry purposes. State law defines system in US survey feet. Federal
      * definition is metric - see code 32199.
      */
@@ -21087,7 +21231,7 @@ class Projected81 extends ProjectedBase
 
     /**
      * NAD83(CSRS)v2 / UTM zone 13N
-     * Extent: Canada - Saskatchewan, Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
+     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
      * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
      * zone used throughout all SK for province-wide mapping and spatial referencing.
      */
@@ -28007,6 +28151,113 @@ class Projected81 extends ProjectedBase
     public const EPSG_NAD83_PA11_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::6635';
 
     /**
+     * NATRF2022 / Gulf
+     * Extent: USA - offshore Gulf of Mexico outer continental shelf (GoM OCS) - protraction areas South Padre Island;
+     * North Padre Island; Mustang Island; Matagorda Island; Brazos; Galveston; High Island; Sabine Pass; West Cameron;
+     * East Cameron; Vermilion; South Marsh Island; Eugene Island; Ship Shoal; South Pelto; Bay Marchand; South
+     * Timbalier; Grand Isle; West Delta; South Pass; Main Pass; Breton Sound; Chandeleur; Corpus Christi; Port Isabel;
+     * East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon;
+     * Walker Ridge; Amery Terrace; Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South;
+     * Pensacola; Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment;
+     * Apalachicola; Florida Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin; Gainesville; Tarpon Springs;
+     * St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West
+     * This metric definition is authoritative. See CRS code 10980 for non-metric exact equivalent.
+     */
+    public const EPSG_NATRF2022_GULF = 'urn:ogc:def:crs:EPSG::10979';
+
+    /**
+     * NATRF2022 / Gulf (ft)
+     * Extent: USA - offshore Gulf of Mexico outer continental shelf (GoM OCS) - protraction areas South Padre Island;
+     * North Padre Island; Mustang Island; Matagorda Island; Brazos; Galveston; High Island; Sabine Pass; West Cameron;
+     * East Cameron; Vermilion; South Marsh Island; Eugene Island; Ship Shoal; South Pelto; Bay Marchand; South
+     * Timbalier; Grand Isle; West Delta; South Pass; Main Pass; Breton Sound; Chandeleur; Corpus Christi; Port Isabel;
+     * East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon;
+     * Walker Ridge; Amery Terrace; Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South;
+     * Pensacola; Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment;
+     * Apalachicola; Florida Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin; Gainesville; Tarpon Springs;
+     * St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West
+     * Authoritative definition is metric - see CRS code 10979.
+     */
+    public const EPSG_NATRF2022_GULF_FT = 'urn:ogc:def:crs:EPSG::10980';
+
+    /**
+     * NATRF2022 / Gulf East (ft)
+     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) east of approximately 84°W - protraction areas
+     * Gainesville; Tarpon Springs; St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley;
+     * Miami; Key West
+     * Emulates most of offshore area of NAD27 / BLM zone 17 (ftUS) (CRS code 32067) to better than 6 ft, but in the
+     * extreme southwestern part differences can exceed 15ft. Emulation embeds change of ellipsoid and of unit (ftUS to
+     * ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) -
+     * north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_EAST_FT = 'urn:ogc:def:crs:EPSG::10987';
+
+    /**
+     * NATRF2022 / Gulf East Central (ft)
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water between approxinately 90°W and 84°W -
+     * protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin
+     * Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle
+     * Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
+     * Emulates most of offshore area of NAD27 / BLM zone 16 (ftUS) (CRS code 32066) to better than 6 ft, but south of
+     * 26°N differences can exceed 15ft. Emulation embeds change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022
+     * CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_EAST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10986';
+
+    /**
+     * NATRF2022 / Gulf Louisiana Shelf (ft)
+     * Extent: USA - Gulf OCS - Louisiana shelf - leasing areas Sabine Pass; West Cameron, East Cameron, Vermilion,
+     * South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle, West
+     * Delta, South Pass, Breton Sound, Main Pass, Chandeleur
+     * Emulates offshore area of NAD27 / Louisiana South zone (CRS code 26785) to better than 6 ft. Emulation embeds
+     * change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation
+     * of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_LOUISIANA_SHELF_FT = 'urn:ogc:def:crs:EPSG::10981';
+
+    /**
+     * NATRF2022 / Gulf Texas Shelf North (ft)
+     * Extent: USA - Gulf OCS - Texas shelf north of approximately 27°48'N - leasing areas Matagorda Island, Brazos,
+     * Galveston, High Island; Sabine Pass
+     * Emulates offshore area of NAD27 / Texas South Central zone (CRS code 32040) to better than 6 ft. Emulation
+     * embeds change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this
+     * emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_TEXAS_SHELF_NORTH_FT = 'urn:ogc:def:crs:EPSG::10982';
+
+    /**
+     * NATRF2022 / Gulf Texas Shelf South (ft)
+     * Extent: USA - Gulf OCS - Texas shelf south of approximately 27°50'N - leasing areas Mustang Island, North Padre
+     * Island and South Padre Island
+     * Emulates offshore area of NAD27 / Texas South zone (CRS code 32041) to better than 6 ft. Emulation embeds change
+     * of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation of
+     * SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_TEXAS_SHELF_SOUTH_FT = 'urn:ogc:def:crs:EPSG::10983';
+
+    /**
+     * NATRF2022 / Gulf West (ft)
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W  - protraction areas
+     * Corpus Christi, Port Isabel
+     * Emulates offshore deep water area of NAD27 / BLM zone 14 (ftUS) (CRS code 32064) to better than 6 ft. Emulation
+     * embeds change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this
+     * emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_WEST_FT = 'urn:ogc:def:crs:EPSG::10984';
+
+    /**
+     * NATRF2022 / Gulf West Central (ft)
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water between approxinately 96°W and 90°W -
+     * protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank,
+     * Green Canyon, Walker Ridge, Amery Terrace
+     * Emulates offshore area of NAD27 / BLM zone 15 (ftUS) (CRS code 32065) between approximately 26°N and 28°N to
+     * better than 6 ft, but south of 26°N differences can exceed 5m / 15ft. Emulation embeds change of ellipsoid and
+     * of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27
+     * order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022_GULF_WEST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10985';
+
+    /**
      * NEA74 Noumea / Noumea Lambert
      * Extent: New Caledonia - Grande Terre - Noumea district
      * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163). Gives identical conversion results as NEA74 Noumea /
@@ -32919,72 +33170,128 @@ class Projected81 extends ProjectedBase
     public const EPSG_QATAR_1974_QATAR_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::28600';
 
     /**
-     * Qornoq 1927 / Greenland zone 2 west
+     * QazTRF-23 / Gauss-Kruger zone 10
+     * Extent: Kazakhstan - 54°E to 60°E including Caspian Sea
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 10 (code 28410) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::10944';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 11
+     * Extent: Kazakhstan - 60°E to 66°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 11 (code 28411) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::10945';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 12
+     * Extent: Kazakhstan - 66°E to 72°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 12 (code 28412) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::10946';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 13
+     * Extent: Kazakhstan - 72°E to 78°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 13 (code 28413) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::10947';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 14
+     * Extent: Kazakhstan - 78°E to 84°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 14 (code 28414) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::10948';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 15
+     * Extent: Kazakhstan - east of 84°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 15 (code 28415) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::10949';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 8
+     * Extent: Kazakhstan - west of 48°E including Caspian Sea
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 8 (code 28408) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::10942';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 9
+     * Extent: Kazakhstan - 48°E to 54°E including Caspian Sea
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 9 (code 28409) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::10943';
+
+    /**
+     * Qoornoq 1927 / Greenland zone 2 west
      * Extent: Greenland - west coast onshore - between 78°N and 79°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
 
     /**
-     * Qornoq 1927 / Greenland zone 3 west
+     * Qoornoq 1927 / Greenland zone 3 west
      * Extent: Greenland - west coast - between 75°N and 78°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
 
     /**
-     * Qornoq 1927 / Greenland zone 4 west
+     * Qoornoq 1927 / Greenland zone 4 west
      * Extent: Greenland - west coast onshore - between 72°N and 75°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
 
     /**
-     * Qornoq 1927 / Greenland zone 5 west
+     * Qoornoq 1927 / Greenland zone 5 west
      * Extent: Greenland - west coast onshore - between 69°N and 72°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
 
     /**
-     * Qornoq 1927 / Greenland zone 6 west
+     * Qoornoq 1927 / Greenland zone 6 west
      * Extent: Greenland - west coast onshore - between 66°N and 69°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
 
     /**
-     * Qornoq 1927 / Greenland zone 7 west
+     * Qoornoq 1927 / Greenland zone 7 west
      * Extent: Greenland - west coast onshore - between 63°N and 66°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
 
     /**
-     * Qornoq 1927 / Greenland zone 8 east
+     * Qoornoq 1927 / Greenland zone 8
      * Extent: Greenland - onshore southwest coastal area south of 63°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_8_EAST = 'urn:ogc:def:crs:EPSG::2307';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 = 'urn:ogc:def:crs:EPSG::2307';
 
     /**
-     * Qornoq 1927 / UTM zone 22N
+     * Qoornoq 1927 / UTM zone 22N
      * Extent: Greenland - southwest coast between 54°W and 48°W.
      */
-    public const EPSG_QORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
+    public const EPSG_QOORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
 
     /**
-     * Qornoq 1927 / UTM zone 23N
+     * Qoornoq 1927 / UTM zone 23N
      * Extent: Greenland - southwest coast east of 48°W.
      */
-    public const EPSG_QORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
+    public const EPSG_QOORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
 
     /**
      * RBEPP12 Grid
@@ -37781,8 +38088,9 @@ class Projected81 extends ProjectedBase
 
     /**
      * WGS 84 / BLM 14N (ftUS)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W - protraction areas
-     * Corpus Christi; Port Isabel
+     * Extent: USA - Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North
+     * Padre Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port
+     * Isabel
      * See WGS 84 / UTM zone 14N (code 32614) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -37790,9 +38098,12 @@ class Projected81 extends ProjectedBase
 
     /**
      * WGS 84 / BLM 15N (ftUS)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and 90°W -
-     * protraction areas East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank;
-     * Green Canyon; Walker Ridge; Amery Terrace
+     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and 90°W - leasing
+     * areas Brazos, Galveston, High Island; Sabine Pass; West Cameron, East Cameron, Vermilion, South Marsh Island,
+     * Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle; protraction areas East
+     * Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker
+     * Ridge, Amery Terrace.
+     *
      * See WGS 84 / UTM zone 15N (code 32615) for metric equivalent. See NAD27 / BLM 15N (ftUS) (code 32065) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -37800,10 +38111,11 @@ class Projected81 extends ProjectedBase
 
     /**
      * WGS 84 / BLM 16N (ftUS)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W -
-     * protraction areas Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola; Destin
-     * Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida Middle
-     * Ground; The Elbow; Vernon Basin; Howell Hook; Rankin
+     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing
+     * areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca
+     * Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd
+     * Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon
+     * Basin, Howell Hook, Rankin
      * See WGS 84 / UTM zone 16N (code 32616) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -40053,6 +40365,15 @@ class Projected81 extends ProjectedBase
     public const EPSG_WGS_84_WORLD_MERCATOR = 'urn:ogc:def:crs:EPSG::3395';
 
     /**
+     * WSPG Grid
+     * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
+     * and Wilton works, Redcar
+     * The CRS's definition through transformation ETRS89 to WSPG-IRF (1) (code 10860) and map projection WSPG-TM (code
+     * 10862) emulates the WSPG Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
+     */
+    public const EPSG_WSPG_GRID = 'urn:ogc:def:crs:EPSG::10863';
+
+    /**
      * Xian 1980 / 3-degree Gauss-Kruger CM 102E
      * Extent: China - between 100°30'E and 103°30'E
      * Truncated form of Xian 1980 / 3-degree Gauss-Kruger zone 34 (code 2358).
@@ -40787,4 +41108,49 @@ class Projected81 extends ProjectedBase
      * @deprecated use EPSG_EUREF_FIN_TM35FIN_N_E instead
      */
     public const EPSG_ETRS89_TM35FIN_N_E = 'urn:ogc:def:crs:EPSG::5048';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_8_EAST = 'urn:ogc:def:crs:EPSG::2307';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_22N instead
+     */
+    public const EPSG_QORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_23N instead
+     */
+    public const EPSG_QORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
 }

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4805",
+    "title": "Europe-FSU/Germany - Lower Saxony - Asse",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [10.6, 52.11], [10.7, 52.11], [10.7, 52.16], [10.6, 52.16], [10.6, 52.11]
+        ]
+    ]
+}

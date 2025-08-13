@@ -22,6 +22,31 @@ Amersfoort / RD New + NAP height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7415')
 
 
+Asse 2025 + Asse 2025 height
+----------------------------
+| Extent: Germany - Lower Saxony - Asse mining area
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ASSE_2025_PLUS_ASSE_2025_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10904')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ASSE_2025_PLUS_ASSE_2025_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10904')
+
+Used in 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905) to Asse 2025 horizontal and Asse 2025 height vertical CRSs, Coordinate values are close to but not identical to DHDN + DHHN12 height.
+
+Asse 2025 / Gauss-Kruger zone 4 (E-N) + Asse 2025 height
+--------------------------------------------------------
+| Extent: Germany - Lower Saxony - Asse mining area
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_ASSE_2025_GAUSS_KRUGER_ZONE_4_E_N_PLUS_ASSE_2025_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10906')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_ASSE_2025_GAUSS_KRUGER_ZONE_4_E_N_PLUS_ASSE_2025_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10906')
+
+
 Astro DOS 71 / UTM zone 30S + Jamestown 1971 height
 ---------------------------------------------------
 | Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
@@ -178,6 +203,19 @@ CR-SIRGAS / CRTM05 + DACR52 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8912')
 
 With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
+
+CSRN2025 (NAD83 2011) + COH88 2025 (NAVD88) height
+--------------------------------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_CSRN2025_NAD83_2011_PLUS_COH88_2025_NAVD88_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10920')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_CSRN2025_NAD83_2011_PLUS_COH88_2025_NAVD88_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10920')
+
+Replaces NAD83(2011) + NAVD88 height in California.
 
 CWS13 Grid + ODN height
 -----------------------
@@ -5574,4 +5612,16 @@ WGS 84 / World Mercator + EGM2008 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6893')
 
 Note: for preliminary concept visualisation only. Detailed design will require use of appropriate low-distortion local projected and vertical CRSs.
+
+WSPG Grid + ODN height
+----------------------
+| Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe and Wilton works, Redcar
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_WSPG_GRID_PLUS_ODN_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::10864')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_WSPG_GRID_PLUS_ODN_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10864')
+
 

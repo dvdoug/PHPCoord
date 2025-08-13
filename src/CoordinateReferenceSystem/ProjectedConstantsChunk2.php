@@ -12,6 +12,59 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk2
 {
     /**
+     * Moznet / UTM zone 37S
+     * Extent: Mozambique - between 36°E and 42°E.
+     */
+    public const EPSG_MOZNET_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::3037';
+
+    /**
+     * Moznet / UTM zone 38S
+     * Extent: Mozambique - onshore east of 36°E.
+     */
+    public const EPSG_MOZNET_UTM_ZONE_38S = 'urn:ogc:def:crs:EPSG::5629';
+
+    /**
+     * NAD27 / Alabama East
+     * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
+     * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa.
+     */
+    public const EPSG_NAD27_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::26729';
+
+    /**
+     * NAD27 / Alabama West
+     * Extent: USA - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount; Butler; Chilton;
+     * Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale; Jefferson; Lamar;
+     * Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry; Pickens; Shelby;
+     * Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
+     */
+    public const EPSG_NAD27_ALABAMA_WEST = 'urn:ogc:def:crs:EPSG::26730';
+
+    /**
+     * NAD27 / Alaska Albers
+     * Extent: USA - Alaska.
+     */
+    public const EPSG_NAD27_ALASKA_ALBERS = 'urn:ogc:def:crs:EPSG::2964';
+
+    /**
+     * NAD27 / Alaska zone 1
+     * Extent: USA - Alaska - east of 141°W; i.e. Panhandle.
+     */
+    public const EPSG_NAD27_ALASKA_ZONE_1 = 'urn:ogc:def:crs:EPSG::26731';
+
+    /**
+     * NAD27 / Alaska zone 10
+     * Extent: USA - Alaska - Aleutian Islands onshore.
+     */
+    public const EPSG_NAD27_ALASKA_ZONE_10 = 'urn:ogc:def:crs:EPSG::26740';
+
+    /**
+     * NAD27 / Alaska zone 2
+     * Extent: USA - Alaska - between 144°W and 141°W, onshore.
+     */
+    public const EPSG_NAD27_ALASKA_ZONE_2 = 'urn:ogc:def:crs:EPSG::26732';
+
+    /**
      * NAD27 / Alaska zone 3
      * Extent: USA - Alaska - between 148°W and 144°W.
      */
@@ -149,8 +202,8 @@ trait ProjectedConstantsChunk2
     /**
      * NAD27 / BLM 14N (ftUS)
      * Extent: USA - between 102°W and 96°W. Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma; South Dakota;
-     * Texas; Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W - protraction areas Corpus
-     * Christi; Port Isabel.
+     * Texas; Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North Padre
+     * Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port Isabel.
      */
     public const EPSG_NAD27_BLM_14N_FTUS = 'urn:ogc:def:crs:EPSG::32064';
 
@@ -158,8 +211,10 @@ trait ProjectedConstantsChunk2
      * NAD27 / BLM 15N (ftUS)
      * Extent: USA - between 96°W and 90°W - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota;
      * Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin; Gulf of Mexico outer continental shelf
-     * (GoM OCS) between approximately 96°W and 90°W - protraction areas East Breaks; Alaminos Canyon; Garden Banks;
-     * Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon; Walker Ridge; Amery Terrace.
+     * (GoM OCS) between approximately 96°W and 90°W - leasing areas Brazos, Galveston, High Island; Sabine Pass;
+     * West Cameron, East Cameron, Vermilion, South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand,
+     * South Timbalier, Grand Isle; protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon,
+     * Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker Ridge, Amery Terrace.
      */
     public const EPSG_NAD27_BLM_15N_FTUS = 'urn:ogc:def:crs:EPSG::32065';
 
@@ -167,10 +222,11 @@ trait ProjectedConstantsChunk2
      * NAD27 / BLM 16N (ftUS)
      * Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky;
      * Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of
-     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - protraction areas Mobile;
-     * Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola; Destin Dome; De Soto Canyon;
-     * Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida Middle Ground; The Elbow;
-     * Vernon Basin; Howell Hook; Rankin.
+     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West
+     * Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
+     * Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson,
+     * Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook,
+     * Rankin.
      */
     public const EPSG_NAD27_BLM_16N_FTUS = 'urn:ogc:def:crs:EPSG::32066';
 
@@ -551,7 +607,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / Louisiana Offshore
-     * Extent: USA - Louisiana
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
      * This system is NOT used for oil industry purposes. Use NAD27 / Louisiana South (CRS code 26782) in state waters
      * and on LA OCS shelf and NAD27 / BLM (CRS codes 32065-66) in OCS deep water protraction areas.
      */
@@ -1913,8 +1969,8 @@ trait ProjectedConstantsChunk2
     /**
      * NAD83 / BLM 14N (ftUS)
      * Extent: USA - between 102°W and 96°W. Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma; South Dakota;
-     * Texas; Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W - protraction areas Corpus
-     * Christi; Port Isabel
+     * Texas; Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North Padre
+     * Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port Isabel
      * See NAD83 / UTM zone 14N (code 26914) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -1924,8 +1980,10 @@ trait ProjectedConstantsChunk2
      * NAD83 / BLM 15N (ftUS)
      * Extent: USA - between 96°W and 90°W - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota;
      * Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin; Gulf of Mexico outer continental shelf
-     * (GoM OCS) between approximately 96°W and 90°W - protraction areas East Breaks; Alaminos Canyon; Garden Banks;
-     * Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon; Walker Ridge; Amery Terrace
+     * (GoM OCS) between approximately 96°W and 90°W - leasing areas Brazos, Galveston, High Island; Sabine Pass;
+     * West Cameron, East Cameron, Vermilion, South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand,
+     * South Timbalier, Grand Isle; protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon,
+     * Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker Ridge, Amery Terrace
      * See NAD83 / UTM zone 15N (code 26915) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32065) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -1935,10 +1993,11 @@ trait ProjectedConstantsChunk2
      * NAD83 / BLM 16N (ftUS)
      * Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky;
      * Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of
-     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - protraction areas Mobile;
-     * Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola; Destin Dome; De Soto Canyon;
-     * Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida Middle Ground; The Elbow;
-     * Vernon Basin; Howell Hook; Rankin
+     * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West
+     * Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
+     * Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson,
+     * Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook,
+     * Rankin
      * See NAD83 / UTM zone 16N (code 26916) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -2789,7 +2848,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / Louisiana Offshore
-     * Extent: USA - Louisiana
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
      * This system is NOT used for oil industry purposes. State law defines system in US survey feet. See code 3453 for
      * equivalent non-metric definition.
      */
@@ -2797,7 +2856,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / Louisiana Offshore (ftUS)
-     * Extent: USA - Louisiana
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
      * This system is NOT used for oil industry purposes. State law defines system in US survey feet. Federal
      * definition is metric - see code 32199.
      */
@@ -11304,4 +11363,12 @@ trait ProjectedConstantsChunk2
      * 3347) but at the scales involved the positional difference of under 2 metres may not be significant.
      */
     public const EPSG_NAD83_CSRS_STATISTICS_CANADA_LAMBERT = 'urn:ogc:def:crs:EPSG::3348';
+
+    /**
+     * NAD83(CSRS) / Teranet Ontario Lambert
+     * Extent: Canada - Ontario
+     * This CRS may sometimes be called "NAD83 / Teranet Ontario Lambert". That is the name of a different system (see
+     * CRS code 5320) but at the scales involved the positional difference of under 2 metres may not be significant.
+     */
+    public const EPSG_NAD83_CSRS_TERANET_ONTARIO_LAMBERT = 'urn:ogc:def:crs:EPSG::5321';
 }

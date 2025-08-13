@@ -582,6 +582,11 @@ class CoordinateOperationMethods
     public const EPSG_POINT_MOTION_GEOCENTRIC_CARTESIAN = 'urn:ogc:def:method:EPSG::1064';
 
     /**
+     * Point motion (geocentric domain) using NEU displacement grid (grd).
+     */
+    public const EPSG_POINT_MOTION_GEOCENTRIC_DOMAIN_USING_NEU_DISPLACEMENT_GRID_GRD = 'urn:ogc:def:method:EPSG::1148';
+
+    /**
      * Polar Stereographic (variant A).
      */
     public const EPSG_POLAR_STEREOGRAPHIC_VARIANT_A = 'urn:ogc:def:method:EPSG::9810';
@@ -2428,6 +2433,25 @@ class CoordinateOperationMethods
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
                     'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1148' => [
+            'name' => 'Point motion (geocentric domain) using NEU displacement grid (grd)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionDisplacementNorthGridFile' => [
+                    'reverses' => false,
+                ],
+                'pointMotionDisplacementEastGridFile' => [
+                    'reverses' => false,
+                ],
+                'pointMotionDisplacementUpGridFile' => [
+                    'reverses' => false,
                 ],
                 'EPSGCodeForInterpolationCRS' => [
                     'reverses' => false,

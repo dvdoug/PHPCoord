@@ -910,6 +910,14 @@ Point motion (geocentric Cartesian)
     'urn:ogc:def:method:EPSG::1064'
 
 
+Point motion (geocentric domain) using NEU displacement grid (grd)
+------------------------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCENTRIC_DOMAIN_USING_NEU_DISPLACEMENT_GRID_GRD
+    'urn:ogc:def:method:EPSG::1148'
+
+
 Polar Stereographic (variant A)
 -------------------------------
 .. code-block:: php

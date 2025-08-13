@@ -635,11 +635,39 @@ class CRSTransformationsEurope
             'accuracy' => 0.5,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10834',
+            'name' => 'Georgia Geodetic Datum to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10829',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4978',
+            'accuracy' => 0.03,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10832',
+            'name' => 'Georgia Lambert',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10831',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10833',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9765',
             'name' => 'EWR3-TM',
             'source_crs' => 'urn:ogc:def:crs:EPSG::10849',
             'target_crs' => 'urn:ogc:def:crs:EPSG::10851',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10862',
+            'name' => 'WSPG-TM',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10860',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10863',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10965',
+            'name' => 'QazTRF-23 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10941',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10127',
@@ -2446,6 +2474,13 @@ class CRSTransformationsEurope
             'source_crs' => 'urn:ogc:def:crs:EPSG::4277',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 2.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10835',
+            'name' => 'Pulkovo 1942 to Georgia Geodetic Datum (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4284',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10831',
+            'accuracy' => 0.1,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18441',

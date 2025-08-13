@@ -198,6 +198,36 @@ CR05
 
 Replaced by CR-SIRGAS (CRS code 8906) from April 2018.
 
+CSRN epoch 2025.0 (ITRF2020)
+----------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10951')
+    Geographic::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10951')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10951')
+
+Californian 'snapshot' of ITRF2020 taking into account local tectonic plate movement and deformation. Supersedes CSRS epoch 2017.5 (ITRF2014) from 2025-06-15.
+
+CSRN epoch 2025.0 (NAD83 2011)
+------------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10909')
+    Geographic::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10909')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10909')
+
+Replaces NAD83(2011) in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.
+
 Cadastre 1997
 -------------
 | Extent: Mayotte - onshore
@@ -607,6 +637,34 @@ GR96
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4909')
 
 
+GR96(1996)
+----------
+| Extent: Greenland
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GR96_1996)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10955')
+    Geographic::fromSRID(Geographic3D::EPSG_GR96_1996)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10955')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GR96_1996)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10955')
+
+
+GR96(2021)
+----------
+| Extent: Greenland
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GR96_2021)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10958')
+    Geographic::fromSRID(Geographic3D::EPSG_GR96_2021)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10958')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GR96_2021)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10958')
+
+
 GSK-2011
 --------
 | Extent: Russia
@@ -619,6 +677,20 @@ GSK-2011
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::7682')
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GSK_2011)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7682')
+
+
+Georgia Geodetic Datum
+----------------------
+| Extent: Georgia
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GEORGIA_GEODETIC_DATUM)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10830')
+    Geographic::fromSRID(Geographic3D::EPSG_GEORGIA_GEODETIC_DATUM)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10830')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GEORGIA_GEODETIC_DATUM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10830')
 
 
 HTRS96
@@ -1877,6 +1949,21 @@ NAD83(PACP00)
 
 Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).
 
+NATRF2022
+---------
+| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_NATRF2022)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10967')
+    Geographic::fromSRID(Geographic3D::EPSG_NATRF2022)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10967')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_NATRF2022)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10967')
+
+CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event that definitions change, the record will be deprecated and replaced with a new EPSG code.
+
 NZGD2000
 --------
 | Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell Island, Kermadec Islands, Raoul Island and Snares Islands
@@ -2065,6 +2152,20 @@ Peru96
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::5372')
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_PERU96)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5372')
+
+
+QazTRF-23
+---------
+| Extent: Kazakhstan, including Caspian Sea
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_QAZTRF_23)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10940')
+    Geographic::fromSRID(Geographic3D::EPSG_QAZTRF_23)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10940')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_QAZTRF_23)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10940')
 
 
 RDN2008

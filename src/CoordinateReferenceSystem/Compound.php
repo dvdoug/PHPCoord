@@ -31,6 +31,20 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::7415';
 
     /**
+     * Asse 2025 + Asse 2025 height
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Used in 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905) to Asse 2025 horizontal
+     * and Asse 2025 height vertical CRSs, Coordinate values are close to but not identical to DHDN + DHHN12 height.
+     */
+    public const EPSG_ASSE_2025_PLUS_ASSE_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::10904';
+
+    /**
+     * Asse 2025 / Gauss-Kruger zone 4 (E-N) + Asse 2025 height
+     * Extent: Germany - Lower Saxony - Asse mining area.
+     */
+    public const EPSG_ASSE_2025_GAUSS_KRUGER_ZONE_4_E_N_PLUS_ASSE_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::10906';
+
+    /**
      * Astro DOS 71 / UTM zone 30S + Jamestown 1971 height
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore.
      */
@@ -108,6 +122,13 @@ class Compound extends CoordinateReferenceSystem
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
      */
     public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
+
+    /**
+     * CSRN2025 (NAD83 2011) + COH88 2025 (NAVD88) height
+     * Extent: USA - California
+     * Replaces NAD83(2011) + NAVD88 height in California.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_PLUS_COH88_2025_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::10920';
 
     /**
      * CWS13 Grid + ODN height
@@ -3191,6 +3212,13 @@ class Compound extends CoordinateReferenceSystem
      * local projected and vertical CRSs.
      */
     public const EPSG_WGS_84_WORLD_MERCATOR_PLUS_EGM2008_HEIGHT = 'urn:ogc:def:crs:EPSG::6893';
+
+    /**
+     * WSPG Grid + ODN height
+     * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
+     * and Wilton works, Redcar.
+     */
+    public const EPSG_WSPG_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10864';
 
     /**
      * @deprecated use EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT instead

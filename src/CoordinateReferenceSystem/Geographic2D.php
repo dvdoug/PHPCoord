@@ -177,6 +177,14 @@ class Geographic2D extends Geographic
     public const EPSG_ASCENSION_ISLAND_1958 = 'urn:ogc:def:crs:EPSG::4712';
 
     /**
+     * Asse 2025
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinate
+     * values are close to but not identical to DHDN.
+     */
+    public const EPSG_ASSE_2025 = 'urn:ogc:def:crs:EPSG::10898';
+
+    /**
      * Astro DOS 71
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Used between 1972 and 2015. Replaced by SHGD2015 (CRS code 7886) from 2015.
@@ -469,6 +477,21 @@ class Geographic2D extends Geographic
      * Extent: French Guiana - coastal area.
      */
     public const EPSG_CSG67 = 'urn:ogc:def:crs:EPSG::4623';
+
+    /**
+     * CSRN epoch 2025.0 (ITRF2020)
+     * Extent: USA - California
+     * Californian 'snapshot' of ITRF2020 taking into account local tectonic plate movement and deformation. Supersedes
+     * CSRS epoch 2017.5 (ITRF2014) from 2025-06-15.
+     */
+    public const EPSG_CSRN_EPOCH_2025_0_ITRF2020 = 'urn:ogc:def:crs:EPSG::10952';
+
+    /**
+     * CSRN epoch 2025.0 (NAD83 2011)
+     * Extent: USA - California
+     * Replaces NAD83(2011) in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.
+     */
+    public const EPSG_CSRN_EPOCH_2025_0_NAD83_2011 = 'urn:ogc:def:crs:EPSG::10910';
 
     /**
      * CWS13-IRF
@@ -1105,9 +1128,23 @@ class Geographic2D extends Geographic
     /**
      * GR96
      * Extent: Greenland
-     * Replaces all earlier Greenland geographic CRSs.
+     * Replaces all earlier Greenland geographic CRSs (Ammassalik 1958, Qoornoq 1927 and Scoresbysund 1952).
      */
     public const EPSG_GR96 = 'urn:ogc:def:crs:EPSG::4747';
+
+    /**
+     * GR96(1996)
+     * Extent: Greenland
+     * Replaces all earlier Greenland geographic CRSs.
+     */
+    public const EPSG_GR96_1996 = 'urn:ogc:def:crs:EPSG::10956';
+
+    /**
+     * GR96(2021)
+     * Extent: Greenland
+     * Replaces all earlier Greenland geographic CRSs.
+     */
+    public const EPSG_GR96_2021 = 'urn:ogc:def:crs:EPSG::10959';
 
     /**
      * GS-IRF
@@ -1180,6 +1217,12 @@ class Geographic2D extends Geographic
      * Extent: Cameroon - Garoua area.
      */
     public const EPSG_GAROUA = 'urn:ogc:def:crs:EPSG::4197';
+
+    /**
+     * Georgia Geodetic Datum
+     * Extent: Georgia.
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM = 'urn:ogc:def:crs:EPSG::10831';
 
     /**
      * Grand Comoros
@@ -2636,6 +2679,21 @@ class Geographic2D extends Geographic
     public const EPSG_NAD83_PACP00 = 'urn:ogc:def:crs:EPSG::9075';
 
     /**
+     * NATRF2022
+     * Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador;
+     * Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA -
+     * Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho;
+     * Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota;
+     * Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North
+     * Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
+     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the
+     * EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event
+     * that definitions change, the record will be deprecated and replaced with a new EPSG code.
+     */
+    public const EPSG_NATRF2022 = 'urn:ogc:def:crs:EPSG::10968';
+
+    /**
      * NEA74 Noumea
      * Extent: New Caledonia - Grande Terre - Noumea district
      * Replaced by RGNC91-93 (CRS code 4749).
@@ -3113,10 +3171,17 @@ class Geographic2D extends Geographic
     public const EPSG_QATAR_1974 = 'urn:ogc:def:crs:EPSG::4285';
 
     /**
-     * Qornoq 1927
+     * QazTRF-23
+     * Extent: Kazakhstan, including Caspian Sea
+     * Replaces usage of Pulkovo 1942 (CRS code 4284) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23 = 'urn:ogc:def:crs:EPSG::10941';
+
+    /**
+     * Qoornoq 1927
      * Extent: Greenland - west coast onshore.
      */
-    public const EPSG_QORNOQ_1927 = 'urn:ogc:def:crs:EPSG::4194';
+    public const EPSG_QOORNOQ_1927 = 'urn:ogc:def:crs:EPSG::4194';
 
     /**
      * RBEPP12-IRF
@@ -4358,6 +4423,16 @@ class Geographic2D extends Geographic
     public const EPSG_WGS_84_TRANSIT = 'urn:ogc:def:crs:EPSG::8888';
 
     /**
+     * WSPG-IRF
+     * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
+     * and Wilton works, Redcar
+     * Intermediate CRS created in 2025 to assist the emulation of the ETRS89 / WSPG SnakeGrid projected CRS through
+     * transformation ETRS89 to WSPG-IRF (1) (code 10861) used in conjunction with the WSPG-TM map projection (code
+     * 10862).
+     */
+    public const EPSG_WSPG_IRF = 'urn:ogc:def:crs:EPSG::10860';
+
+    /**
      * Wake Island 1952
      * Extent: Wake atoll - onshore.
      */
@@ -4423,6 +4498,11 @@ class Geographic2D extends Geographic
      * @deprecated use EPSG_CH1903_BERN instead
      */
     public const EPSG_BERN_1898_BERN = 'urn:ogc:def:crs:EPSG::4801';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927 instead
+     */
+    public const EPSG_QORNOQ_1927 = 'urn:ogc:def:crs:EPSG::4194';
     protected Geographic2D|Geographic3D|null $baseCRS;
 
     /**

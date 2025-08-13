@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [5.11.1] - 2025-08-14
+### Changed
+- Updates to data for Georgia, Germany, Greenland, Kazakhstan and USA
+
 ## [5.11.0] - 2025-06-15
 ### Added
 - Added new parameter `$accuracy` and new method `getAccuracy()` on `Point` objects to store/reveal accuracy of the point.

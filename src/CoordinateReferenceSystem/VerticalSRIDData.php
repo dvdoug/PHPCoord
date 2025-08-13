@@ -29,7 +29,7 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1027',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'help' => 'Zero-height surface resulting from the application of the EGM2008 geoid model to the WGS 84 ellipsoid. Replaces EGM96 height (CRS code 5773).',
+            'help' => 'Zero-height surface approximating mean sea level resulting from the application of the EGM2008 spherical harmonic coefficients to the WGS 84 ellipsoid. May be approximated by application of the EGM2008 geoid model grid. Replaces EGM96 height (CRS code 5773).',
         ],
         'urn:ogc:def:crs:EPSG::3886' => [
             'name' => 'Fao 1979 height',
@@ -853,7 +853,7 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5171',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
-            'help' => 'Zero-height surface resulting from the application of the EGM96 geoid model to the WGS 84 ellipsoid. Replaces EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).',
+            'help' => 'Zero-height surface approximating mean sea level resulting from the application of the EGM96 spherical harmonic coefficients to the WGS 84 ellipsoid. May be approximated by application of the EGM96 geoid model grid. Replaces EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).',
         ],
         'urn:ogc:def:crs:EPSG::5774' => [
             'name' => 'NG95 height',
@@ -2318,6 +2318,30 @@ trait VerticalSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::3822'],
             'extent_name' => 'BES Islands - Bonaire onshore',
             'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::10900' => [
+            'name' => 'Asse 2025 height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1415',
+            'extent' => ['urn:ogc:def:area:EPSG::4805'],
+            'extent_name' => 'Germany - Lower Saxony - Asse',
+            'help' => 'Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinate values are close to but not identical to DHHN12 height.',
+        ],
+        'urn:ogc:def:crs:EPSG::10918' => [
+            'name' => 'COH88 2025 (NAVD88) height',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6499',
+            'datum' => 'urn:ogc:def:datum:EPSG::1416',
+            'extent' => ['urn:ogc:def:area:EPSG::1375'],
+            'extent_name' => 'USA - California',
+            'help' => 'Replaces NAVD88 height (CRS code 5703) in California. Supersedes COH88 2017.5 (NAVD88) height from 2025-06-15. State law defines use of US survey feet: see CRS code 10919.',
+        ],
+        'urn:ogc:def:crs:EPSG::10919' => [
+            'name' => 'COH88 2025 (NAVD88) height (ftUS)',
+            'coordinate_system' => 'urn:ogc:def:cs:EPSG::6497',
+            'datum' => 'urn:ogc:def:datum:EPSG::1416',
+            'extent' => ['urn:ogc:def:area:EPSG::1375'],
+            'extent_name' => 'USA - California',
+            'help' => 'Replaces NAVD88 height (ftUS) (CRS code 6360) in California. Supersedes COH88 2017.5 (NAVD88) height (ft US) from 2025-06-15. State law defines use of US survey feet: see CRS code 10918 for metric equivalent.',
         ],
         'urn:ogc:def:crs:EPSG::20000' => [
             'name' => 'SVD2006 height',

@@ -114,6 +114,21 @@ class Geographic3D extends Geographic
     public const EPSG_CR05 = 'urn:ogc:def:crs:EPSG::5364';
 
     /**
+     * CSRN epoch 2025.0 (ITRF2020)
+     * Extent: USA - California
+     * Californian 'snapshot' of ITRF2020 taking into account local tectonic plate movement and deformation. Supersedes
+     * CSRS epoch 2017.5 (ITRF2014) from 2025-06-15.
+     */
+    public const EPSG_CSRN_EPOCH_2025_0_ITRF2020 = 'urn:ogc:def:crs:EPSG::10951';
+
+    /**
+     * CSRN epoch 2025.0 (NAD83 2011)
+     * Extent: USA - California
+     * Replaces NAD83(2011) in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.
+     */
+    public const EPSG_CSRN_EPOCH_2025_0_NAD83_2011 = 'urn:ogc:def:crs:EPSG::10909';
+
+    /**
      * Cadastre 1997
      * Extent: Mayotte - onshore.
      */
@@ -316,10 +331,28 @@ class Geographic3D extends Geographic
     public const EPSG_GR96 = 'urn:ogc:def:crs:EPSG::4909';
 
     /**
+     * GR96(1996)
+     * Extent: Greenland.
+     */
+    public const EPSG_GR96_1996 = 'urn:ogc:def:crs:EPSG::10955';
+
+    /**
+     * GR96(2021)
+     * Extent: Greenland.
+     */
+    public const EPSG_GR96_2021 = 'urn:ogc:def:crs:EPSG::10958';
+
+    /**
      * GSK-2011
      * Extent: Russia.
      */
     public const EPSG_GSK_2011 = 'urn:ogc:def:crs:EPSG::7682';
+
+    /**
+     * Georgia Geodetic Datum
+     * Extent: Georgia.
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM = 'urn:ogc:def:crs:EPSG::10830';
 
     /**
      * HTRS96
@@ -971,6 +1004,21 @@ class Geographic3D extends Geographic
     public const EPSG_NAD83_PACP00 = 'urn:ogc:def:crs:EPSG::9074';
 
     /**
+     * NATRF2022
+     * Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador;
+     * Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA -
+     * Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho;
+     * Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota;
+     * Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North
+     * Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
+     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the
+     * EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event
+     * that definitions change, the record will be deprecated and replaced with a new EPSG code.
+     */
+    public const EPSG_NATRF2022 = 'urn:ogc:def:crs:EPSG::10967';
+
+    /**
      * NZGD2000
      * Extent: New Zealand. Includes Antipodes Islands, Auckland Islands, Bounty Islands, Chatham Islands, Cambell
      * Island, Kermadec Islands, Raoul Island and Snares Islands.
@@ -1061,6 +1109,12 @@ class Geographic3D extends Geographic
      * Extent: Peru.
      */
     public const EPSG_PERU96 = 'urn:ogc:def:crs:EPSG::5372';
+
+    /**
+     * QazTRF-23
+     * Extent: Kazakhstan, including Caspian Sea.
+     */
+    public const EPSG_QAZTRF_23 = 'urn:ogc:def:crs:EPSG::10940';
 
     /**
      * RDN2008

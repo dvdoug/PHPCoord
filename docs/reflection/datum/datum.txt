@@ -295,6 +295,34 @@ Ascension Island 1958
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6712')
 
 
+Asse geodetic datum 2025
+------------------------
+| Type: Geodetic
+| Extent: Germany - Lower Saxony - Asse mining area
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ASSE_GEODETIC_DATUM_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1413')
+
+Defined by 3-dimensional transformation from ETRS89/DREF91/2016.
+
+The defining transformation (see CT 10905) best fits coordinates of control points local to the mine with values which approximate to but are not identical to DHDN.
+
+Asse vertical datum 2025
+------------------------
+| Type: Vertical
+| Extent: Germany - Lower Saxony - Asse mining area
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ASSE_VERTICAL_DATUM_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1415')
+
+Defined by 3-dimensional transformation from ETRS89/DREF91/2016.
+
+The defining transformation (see CT 10905) best fits coordinates of control points local to the mine with values which approximate to but are not identical to DHHN12.
+
 Astro DOS 71
 ------------
 | Type: Geodetic
@@ -1194,6 +1222,34 @@ Mean Sea Level during 1937 at Cais das Velas.
 
 Orthometric heights.
 
+California Spatial Reference Network epoch 2025.0 (ITRF2020)
+------------------------------------------------------------
+| Type: Geodetic
+| Extent: USA - California
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CALIFORNIA_SPATIAL_REFERENCE_NETWORK_EPOCH_2025_0_ITRF2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1418')
+
+Aligned to ITRF2020 at epoch 2025.00. Based on a multi-year solution of 1040 continually-operating GNSS positions and velocities on ITRF2020-u2023.
+
+Californian realization of ITRF2020, taking into account local tectonic plate movement and deformation. Replaces California Spatial Reference System epoch 2017.5 (ITRF2014) from June 2025 in conformance with the California Public Resources Code §8850-8861.
+
+California Spatial Reference Network epoch 2025.0 (NAD83 2011)
+--------------------------------------------------------------
+| Type: Geodetic
+| Extent: USA - California
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CALIFORNIA_SPATIAL_REFERENCE_NETWORK_EPOCH_2025_0_NAD83_2011)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1414')
+
+Defined by NGS relationship between ITRF2020 and NAD83(2011) applied to CSRN2025 (ITRF2020) at epoch 2025.00.
+
+Californian realization of NAD83(2011) at epoch 2025.00, taking into account local tectonic plate movement and deformation. Replaces California Spatial Reference System epoch 2017.5 (NAD83 2011) from June 2025 in conformance with the California Public Resources Code §8850-8861.
+
 Camacupa 1948
 -------------
 | Type: Geodetic
@@ -2007,6 +2063,20 @@ Mean sea level as determined by updated satellite altimetry and coastal tide gau
 
 Replaces DKMSL(2022).
 
+Derived California Orthometric Heights of 1988 epoch 2025
+---------------------------------------------------------
+| Type: Vertical
+| Extent: USA - California
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DERIVED_CALIFORNIA_ORTHOMETRIC_HEIGHTS_OF_1988_EPOCH_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1416')
+
+Defined through the application of the NGS hybrid geoid model Geoid18 to CSRN epoch 2025.0 (NAD83 2011) ellipsoidal heights.
+
+Helmert orthometric heights.
+
 Deutsche Bahn Reference System
 ------------------------------
 | Type: Geodetic
@@ -2273,7 +2343,7 @@ EGM96 geoid
     Datum::fromSRID(Datum::EPSG_EGM96_GEOID)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5171')
 
-Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order 360 applied to the WGS 84 ellipsoid.
+Derived from spherical harmonic coefficients applied to the WGS 84 ellipsoid, consisting of a combination solution to degree and order 70, a block diagonal solution from degree 71 to 359, and the quadrature solution at degree 360.
 
 Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).
 
@@ -3317,6 +3387,20 @@ Geodezicheskaya Sistema Koordinat 2011
 
 Coordinates of the Russian fundamental astronomic-geodetic network (about 50 stations) at epoch 2011.0
 
+Georgia Geodetic Datum
+----------------------
+| Type: Geodetic
+| Extent: Georgia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GEORGIA_GEODETIC_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1404')
+
+Network of 12 CORS stations aligned to ITRF2008 (IGS08) at epoch 2011.353.
+
+Alignment epoch given in European Union ENPI Programme for Georgia "Explanatory Notes to Website for Online Coordinate Conversions and Datum Transformations".
+
 Gisborne 1926
 -------------
 | Type: Vertical
@@ -3473,6 +3557,45 @@ Greenland Mean Sea Level (2023)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1387')
 
 Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to GR96 through the glmsl_2023 hydroid model.
+
+Greenland Reference 1996 (1996)
+-------------------------------
+| Type: Geodetic
+| Extent: Greenland
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_REFERENCE_1996_1996)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1420')
+
+Aligned to ITRF94 at epoch 1996.62.
+
+First realization of GR96. Replaces Ammassalik 1958, Qoornoq 1927 and Scoresbysund 1952. Replaced by GR96(2021).
+
+Greenland Reference 1996 (2021)
+-------------------------------
+| Type: Geodetic
+| Extent: Greenland
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_REFERENCE_1996_2021)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1419')
+
+Aligned to ITRF2020 @ 2021.62, observed at 51 active GNSS stations together with the four passive stations that defined GR96(1996).
+
+Second realization of GR96. Replaces GR96(1996). Frame epoch remains 1996.62.
+
+Greenland Reference 1996 ensemble
+---------------------------------
+| Type: Ensemble
+| Extent: Greenland
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_REFERENCE_1996_ENSEMBLE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1421')
+
 
 Greenland Vertical Reference 2000
 ---------------------------------
@@ -5208,6 +5331,18 @@ Katanga 1955
 Fundamental point: Tshinsenda A. Latitude: 12°30'31.568"S, longitude: 28°01'02.971"E (of Greenwich).
 
 Replaces earlier adjustments.
+
+Kazakhstan Terrestrial Reference Frame 2023
+-------------------------------------------
+| Type: Geodetic
+| Extent: Kazakhstan, including Caspian Sea
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_KAZAKHSTAN_TERRESTRIAL_REFERENCE_FRAME_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1417')
+
+Aligned to ITRF2014 at epoch 2022.328. Realized through the stations of the active GNSS network.
 
 Kertau (RSO)
 ------------
@@ -7645,6 +7780,20 @@ Defined by a time-dependent seven parameter transformation of ITRF2000 3D geocen
 
 Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).
 
+North American Terrestrial Reference Frame of 2022
+--------------------------------------------------
+| Type: Geodetic
+| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_TERRESTRIAL_REFERENCE_FRAME_OF_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1422')
+
+Fixed to the stable part of the North American tectonic plate, aligned to ITRF2020 at epoch 2020.0.
+
+CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event that definitions change, the record will be deprecated and replaced with a new EPSG code.
+
 North American Vertical Datum 1988
 ----------------------------------
 | Type: Vertical
@@ -9022,14 +9171,14 @@ Qatar National Datum 1995
 
 Defined by transformation from WGS 84 - see coordinate operation code 1840.
 
-Qornoq 1927
------------
+Qoornoq 1927
+------------
 | Type: Geodetic
 | Extent: Greenland - west coast onshore
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_QORNOQ_1927)
+    Datum::fromSRID(Datum::EPSG_QOORNOQ_1927)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6194')
 
 Fundamental point: Station 7008. Latitude: 64°31'06.27"N, longitude: 51°12'24.86"W (of Greenwich).
@@ -11398,6 +11547,20 @@ WGS 72 Transit Broadcast Ephemeris
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6324')
 
 Alleged datum for use with Transit broadcast ephemeris prior to 1989. Relationship to WGS 72 has changed over time.
+
+WSPG Intermediate Reference Frame
+---------------------------------
+| Type: Geodetic
+| Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe and Wilton works, Redcar
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_WSPG_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1406')
+
+Defined through the application of the WSPG NTv2 transformation (code 10861) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2025 to support intermediate CRS "WSPG-IRF" in the emulation of the WSPG Snake map projection.
 
 Waitangi (Chatham Island) 1959
 ------------------------------

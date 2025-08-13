@@ -543,6 +543,9 @@ class EPSGCodegenFromDataImport
         // It's just for 1 German state and is almost 400Mb!!
         9338, // NTv2 BWTA2017.gsb
 
+        // Grids are updated weekly, not sustainable to distribute
+        10929, // SOPAC deformation model for California v1
+
         // Very large, only really of scientific use
         3858, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
         3859, // EGM2008 Und_min1x1_egm2008_isw=82_WGS84_TideFree.gz
@@ -674,6 +677,8 @@ class EPSGCodegenFromDataImport
         1265, // Hydrography, drilling, offshore engineering.
         1271, // Engineering survey and mapping for the Trans-Europe Lyon-Turin (TELT) railway project.
         1285, // Engineering survey and mapping for the Brenner base tunnel (BBT) railway project.
+        1286, // Mapping and data analysis for Texas Water Development Board groundwater modeling.
+        1293, // Engineering survey and topographic mapping related to the Woodsmith mine project.
     ];
 
     public function __construct()
@@ -1015,6 +1020,7 @@ class EPSGCodegenFromDataImport
                 Datum::EPSG_CAIS_DA_PONTINHA => ['Cais da Pontinha - Funchal'],
                 Datum::EPSG_CAIS_DA_VILA => ['Cais da Vila - Porto Santo'],
                 Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2000 => ['Dansk Vertikal Reference 1990'],
+                Datum::EPSG_QOORNOQ_1927 => ['Qornoq 1927'],
             ]
         );
         $this->codeGen->updateDocs(Datum::class, $data);
@@ -1368,6 +1374,7 @@ class EPSGCodegenFromDataImport
                 Geographic2D::EPSG_LKS_92 => ['LKS92'],
                 Geographic2D::EPSG_KGD2002 => ['Korea 2000'],
                 Geographic2D::EPSG_CH1903_BERN => ['Bern 1898 (Bern)'],
+                Geographic2D::EPSG_QOORNOQ_1927 => ['Qornoq 1927'],
             ]
         );
         $this->codeGen->updateDocs(Geographic2D::class, $data);
@@ -1512,6 +1519,15 @@ class EPSGCodegenFromDataImport
                         Projected::EPSG_EUREF_FIN_GK31FIN => ['ETRS89 / GK31FIN'],
                         Projected::EPSG_EUREF_FIN_TM35FIN_E_N => ['ETRS89 / TM35FIN(E,N)'],
                         Projected::EPSG_EUREF_FIN_TM35FIN_N_E => ['ETRS89 / TM35FIN(N,E)'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST => ['Qornoq 1927 / Greenland zone 2 west'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST => ['Qornoq 1927 / Greenland zone 3 west'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST => ['Qornoq 1927 / Greenland zone 4 west'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST => ['Qornoq 1927 / Greenland zone 5 west'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST => ['Qornoq 1927 / Greenland zone 6 west'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST => ['Qornoq 1927 / Greenland zone 7 west'],
+                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 => ['Qornoq 1927 / Greenland zone 8 east'],
+                        Projected::EPSG_QOORNOQ_1927_UTM_ZONE_22N => ['Qornoq 1927 / UTM zone 22N'],
+                        Projected::EPSG_QOORNOQ_1927_UTM_ZONE_23N => ['Qornoq 1927 / UTM zone 23N'],
                     ],
                     fn ($urn) => isset($data[$urn]),
                     ARRAY_FILTER_USE_KEY

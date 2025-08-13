@@ -442,6 +442,14 @@ trait ProjectedConstantsChunk1
     public const EPSG_ARC_1960_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::21037';
 
     /**
+     * Asse 2025 / 3-degree Gauss-Kruger zone 4 (E-N)
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinates are
+     * close to but not identical to DHDN / 3-degree Gauss-Kruger zone 4 (E-N).
+     */
+    public const EPSG_ASSE_2025_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::10899';
+
+    /**
      * Astro DOS 71 / SHLG71
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Replaced by SHMG2015 (CRS code 7887) from 2015.
@@ -1768,6 +1776,116 @@ trait ProjectedConstantsChunk1
      * Replaced by RGFG95 / UTM zone 22N (CRS code 2972).
      */
     public const EPSG_CSG67_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2971';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California Albers
+     * Extent: USA - California
+     * Replaces NAD83(2011) / California Albers (CRS code 6414) in California. Supersedes use of California Albers with
+     * CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ALBERS = 'urn:ogc:def:crs:EPSG::10917';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 1
+     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Trinity
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10911.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_1 = 'urn:ogc:def:crs:EPSG::10921';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 1 (ftUS)
+     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Trinity
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10921 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_1_FTUS = 'urn:ogc:def:crs:EPSG::10911';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 2
+     * Extent: USA - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa;
+     * Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10912.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_2 = 'urn:ogc:def:crs:EPSG::10922';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 2 (ftUS)
+     * Extent: USA - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa;
+     * Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10922 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_2_FTUS = 'urn:ogc:def:crs:EPSG::10912';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 3
+     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
+     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10913.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_3 = 'urn:ogc:def:crs:EPSG::10923';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 3 (ftUS)
+     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
+     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10923 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_3_FTUS = 'urn:ogc:def:crs:EPSG::10913';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 4
+     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10914.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_4 = 'urn:ogc:def:crs:EPSG::10924';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 4 (ftUS)
+     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10924 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_4_FTUS = 'urn:ogc:def:crs:EPSG::10914';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 5
+     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10915.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_5 = 'urn:ogc:def:crs:EPSG::10925';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 5 (ftUS)
+     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10925 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_5_FTUS = 'urn:ogc:def:crs:EPSG::10915';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 6
+     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet: see CRS code 10916.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_6 = 'urn:ogc:def:crs:EPSG::10926';
+
+    /**
+     * CSRN2025 (NAD83 2011) / California zone 6 (ftUS)
+     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
+     * law defines use of US survey feet (this CRS): see CRS 10926 for metric definition.
+     */
+    public const EPSG_CSRN2025_NAD83_2011_CALIFORNIA_ZONE_6_FTUS = 'urn:ogc:def:crs:EPSG::10916';
 
     /**
      * CWS13 Grid
@@ -6406,6 +6524,26 @@ trait ProjectedConstantsChunk1
     public const EPSG_GAROUA_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::2312';
 
     /**
+     * Georgia Geodetic Datum / Lambert
+     * Extent: Georgia - onshore.
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM_LAMBERT = 'urn:ogc:def:crs:EPSG::10833';
+
+    /**
+     * Georgia Geodetic Datum / UTM zone 37N (N-E)
+     * Extent: Georgia - west of 42°E
+     * For cadastre use Georgia Geodetic Datum / Lambert (CRS code 10833).
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM_UTM_ZONE_37N_N_E = 'urn:ogc:def:crs:EPSG::10836';
+
+    /**
+     * Georgia Geodetic Datum / UTM zone 38N (N-E)
+     * Extent: Georgia - east of 42°E
+     * For cadastre use GGD / Lambert (CRS code 10833).
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM_UTM_ZONE_38N_N_E = 'urn:ogc:def:crs:EPSG::10837';
+
+    /**
      * Grand Cayman National Grid 1959
      * Extent: Cayman Islands - Grand Cayman.
      */
@@ -6452,7 +6590,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Gulshan 303 / TM 90 NE
-     * Extent: Bangladesh, Bangladesh - onshore
+     * Extent: Bangladesh - onshore, Bangladesh
      * Used by Survey of Bangladesh from 1995 to 2009, after which replaced by WGS 84 / TM 90 NE (CRS code 9680). See
      * Gulshan 303 / BTM (code 9678) for other uses including water resource management.
      */
@@ -9021,8 +9159,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * MGI 1901 / Balkans zone 7
-     * Extent: North Macedonia, Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E;
-     * Serbia - between 19°30'E and 22°30'E
+     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
+     * 19°30'E and 22°30'E, North Macedonia
      * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
      * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
      * (CRS code 10329).
@@ -9473,59 +9611,6 @@ trait ProjectedConstantsChunk1
      * Extent: Mozambique - west of 36°E.
      */
     public const EPSG_MOZNET_UTM_ZONE_36S = 'urn:ogc:def:crs:EPSG::3036';
-
-    /**
-     * Moznet / UTM zone 37S
-     * Extent: Mozambique - between 36°E and 42°E.
-     */
-    public const EPSG_MOZNET_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::3037';
-
-    /**
-     * Moznet / UTM zone 38S
-     * Extent: Mozambique - onshore east of 36°E.
-     */
-    public const EPSG_MOZNET_UTM_ZONE_38S = 'urn:ogc:def:crs:EPSG::5629';
-
-    /**
-     * NAD27 / Alabama East
-     * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
-     * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
-     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa.
-     */
-    public const EPSG_NAD27_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::26729';
-
-    /**
-     * NAD27 / Alabama West
-     * Extent: USA - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount; Butler; Chilton;
-     * Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale; Jefferson; Lamar;
-     * Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry; Pickens; Shelby;
-     * Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston.
-     */
-    public const EPSG_NAD27_ALABAMA_WEST = 'urn:ogc:def:crs:EPSG::26730';
-
-    /**
-     * NAD27 / Alaska Albers
-     * Extent: USA - Alaska.
-     */
-    public const EPSG_NAD27_ALASKA_ALBERS = 'urn:ogc:def:crs:EPSG::2964';
-
-    /**
-     * NAD27 / Alaska zone 1
-     * Extent: USA - Alaska - east of 141°W; i.e. Panhandle.
-     */
-    public const EPSG_NAD27_ALASKA_ZONE_1 = 'urn:ogc:def:crs:EPSG::26731';
-
-    /**
-     * NAD27 / Alaska zone 10
-     * Extent: USA - Alaska - Aleutian Islands onshore.
-     */
-    public const EPSG_NAD27_ALASKA_ZONE_10 = 'urn:ogc:def:crs:EPSG::26740';
-
-    /**
-     * NAD27 / Alaska zone 2
-     * Extent: USA - Alaska - between 144°W and 141°W, onshore.
-     */
-    public const EPSG_NAD27_ALASKA_ZONE_2 = 'urn:ogc:def:crs:EPSG::26732';
 
     /**
      * @deprecated use EPSG_LUREF_LUXEMBOURG_TM instead

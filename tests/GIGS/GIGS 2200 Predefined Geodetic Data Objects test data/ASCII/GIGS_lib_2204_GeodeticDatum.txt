@@ -86,7 +86,7 @@
 6191	Albanian 1987	ALB86	Krassowsky 1940	Greenwich	Albania - onshore
 6192	Douala 1948		International 1924	Greenwich	Cameroon - coastal area
 6193	Manoca 1962		Clarke 1880 (IGN)	Greenwich	Cameroon - coastal area
-6194	Qornoq 1927		International 1924	Greenwich	Greenland - west coast
+6194	Qoornoq 1927		International 1924	Greenwich	Greenland - west coast
 6195	Scoresbysund 1952		International 1924	Greenwich	Greenland - Scoresbysund area
 6196	Ammassalik 1958		International 1924	Greenwich	Greenland - Ammassalik area
 6197	Garoua		Clarke 1880 (RGS)	Greenwich	Cameroon - Garoua area

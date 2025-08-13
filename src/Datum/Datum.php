@@ -222,6 +222,26 @@ class Datum
     public const EPSG_ASCENSION_ISLAND_1958 = 'urn:ogc:def:datum:EPSG::6712';
 
     /**
+     * Asse geodetic datum 2025
+     * Type: Geodetic
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Defined by 3-dimensional transformation from ETRS89/DREF91/2016.
+     * The defining transformation (see CT 10905) best fits coordinates of control points local to the mine with values
+     * which approximate to but are not identical to DHDN.
+     */
+    public const EPSG_ASSE_GEODETIC_DATUM_2025 = 'urn:ogc:def:datum:EPSG::1413';
+
+    /**
+     * Asse vertical datum 2025
+     * Type: Vertical
+     * Extent: Germany - Lower Saxony - Asse mining area
+     * Defined by 3-dimensional transformation from ETRS89/DREF91/2016.
+     * The defining transformation (see CT 10905) best fits coordinates of control points local to the mine with values
+     * which approximate to but are not identical to DHHN12.
+     */
+    public const EPSG_ASSE_VERTICAL_DATUM_2025 = 'urn:ogc:def:datum:EPSG::1415';
+
+    /**
      * Astro DOS 71
      * Type: Geodetic
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
@@ -843,6 +863,29 @@ class Datum
     public const EPSG_CAIS_DAS_VELAS = 'urn:ogc:def:datum:EPSG::1103';
 
     /**
+     * California Spatial Reference Network epoch 2025.0 (ITRF2020)
+     * Type: Geodetic
+     * Extent: USA - California
+     * Aligned to ITRF2020 at epoch 2025.00. Based on a multi-year solution of 1040 continually-operating GNSS
+     * positions and velocities on ITRF2020-u2023.
+     * Californian realization of ITRF2020, taking into account local tectonic plate movement and deformation. Replaces
+     * California Spatial Reference System epoch 2017.5 (ITRF2014) from June 2025 in conformance with the California
+     * Public Resources Code §8850-8861.
+     */
+    public const EPSG_CALIFORNIA_SPATIAL_REFERENCE_NETWORK_EPOCH_2025_0_ITRF2020 = 'urn:ogc:def:datum:EPSG::1418';
+
+    /**
+     * California Spatial Reference Network epoch 2025.0 (NAD83 2011)
+     * Type: Geodetic
+     * Extent: USA - California
+     * Defined by NGS relationship between ITRF2020 and NAD83(2011) applied to CSRN2025 (ITRF2020) at epoch 2025.00.
+     * Californian realization of NAD83(2011) at epoch 2025.00, taking into account local tectonic plate movement and
+     * deformation. Replaces California Spatial Reference System epoch 2017.5 (NAD83 2011) from June 2025 in
+     * conformance with the California Public Resources Code §8850-8861.
+     */
+    public const EPSG_CALIFORNIA_SPATIAL_REFERENCE_NETWORK_EPOCH_2025_0_NAD83_2011 = 'urn:ogc:def:datum:EPSG::1414';
+
+    /**
      * Camacupa 1948
      * Type: Geodetic
      * Extent: Angola - Angola proper
@@ -1420,6 +1463,16 @@ class Datum
     public const EPSG_DENMARK_MEAN_SEA_LEVEL_2023 = 'urn:ogc:def:datum:EPSG::1374';
 
     /**
+     * Derived California Orthometric Heights of 1988 epoch 2025
+     * Type: Vertical
+     * Extent: USA - California
+     * Defined through the application of the NGS hybrid geoid model Geoid18 to CSRN epoch 2025.0 (NAD83 2011)
+     * ellipsoidal heights.
+     * Helmert orthometric heights.
+     */
+    public const EPSG_DERIVED_CALIFORNIA_ORTHOMETRIC_HEIGHTS_OF_1988_EPOCH_2025 = 'urn:ogc:def:datum:EPSG::1416';
+
+    /**
      * Deutsche Bahn Reference System
      * Type: Geodetic
      * Extent: Germany - onshore - states of Baden-Wurtemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen,
@@ -1615,8 +1668,9 @@ class Datum
      * EGM96 geoid
      * Type: Vertical
      * Extent: World
-     * Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order
-     * 360 applied to the WGS 84 ellipsoid.
+     * Derived from spherical harmonic coefficients applied to the WGS 84 ellipsoid, consisting of a combination
+     * solution to degree and order 70, a block diagonal solution from degree 71 to 359, and the quadrature solution at
+     * degree 360.
      * Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).
      */
     public const EPSG_EGM96_GEOID = 'urn:ogc:def:datum:EPSG::5171';
@@ -2417,6 +2471,16 @@ class Datum
     public const EPSG_GEODEZICHESKAYA_SISTEMA_KOORDINAT_2011 = 'urn:ogc:def:datum:EPSG::1159';
 
     /**
+     * Georgia Geodetic Datum
+     * Type: Geodetic
+     * Extent: Georgia
+     * Network of 12 CORS stations aligned to ITRF2008 (IGS08) at epoch 2011.353.
+     * Alignment epoch given in European Union ENPI Programme for Georgia "Explanatory Notes to Website for Online
+     * Coordinate Conversions and Datum Transformations".
+     */
+    public const EPSG_GEORGIA_GEODETIC_DATUM = 'urn:ogc:def:datum:EPSG::1404';
+
+    /**
      * Gisborne 1926
      * Type: Vertical
      * Extent: New Zealand - North Island - Gisborne vertical CRS area
@@ -2521,6 +2585,32 @@ class Datum
      * through the glmsl_2023 hydroid model.
      */
     public const EPSG_GREENLAND_MEAN_SEA_LEVEL_2023 = 'urn:ogc:def:datum:EPSG::1387';
+
+    /**
+     * Greenland Reference 1996 (1996)
+     * Type: Geodetic
+     * Extent: Greenland
+     * Aligned to ITRF94 at epoch 1996.62.
+     * First realization of GR96. Replaces Ammassalik 1958, Qoornoq 1927 and Scoresbysund 1952. Replaced by GR96(2021).
+     */
+    public const EPSG_GREENLAND_REFERENCE_1996_1996 = 'urn:ogc:def:datum:EPSG::1420';
+
+    /**
+     * Greenland Reference 1996 (2021)
+     * Type: Geodetic
+     * Extent: Greenland
+     * Aligned to ITRF2020 @ 2021.62, observed at 51 active GNSS stations together with the four passive stations that
+     * defined GR96(1996).
+     * Second realization of GR96. Replaces GR96(1996). Frame epoch remains 1996.62.
+     */
+    public const EPSG_GREENLAND_REFERENCE_1996_2021 = 'urn:ogc:def:datum:EPSG::1419';
+
+    /**
+     * Greenland Reference 1996 ensemble
+     * Type: Ensemble
+     * Extent: Greenland.
+     */
+    public const EPSG_GREENLAND_REFERENCE_1996_ENSEMBLE = 'urn:ogc:def:datum:EPSG::1421';
 
     /**
      * Greenland Vertical Reference 2000
@@ -3754,6 +3844,14 @@ class Datum
      * Replaces earlier adjustments.
      */
     public const EPSG_KATANGA_1955 = 'urn:ogc:def:datum:EPSG::6695';
+
+    /**
+     * Kazakhstan Terrestrial Reference Frame 2023
+     * Type: Geodetic
+     * Extent: Kazakhstan, including Caspian Sea
+     * Aligned to ITRF2014 at epoch 2022.328. Realized through the stations of the active GNSS network.
+     */
+    public const EPSG_KAZAKHSTAN_TERRESTRIAL_REFERENCE_FRAME_2023 = 'urn:ogc:def:datum:EPSG::1417';
 
     /**
      * Kertau (RSO)
@@ -5528,6 +5626,23 @@ class Datum
     public const EPSG_NORTH_AMERICAN_DATUM_OF_1983_PACP00 = 'urn:ogc:def:datum:EPSG::1249';
 
     /**
+     * North American Terrestrial Reference Frame of 2022
+     * Type: Geodetic
+     * Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador;
+     * Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA -
+     * Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho;
+     * Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota;
+     * Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North
+     * Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
+     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Fixed to the stable part of the North American tectonic plate, aligned to ITRF2020 at epoch 2020.0.
+     * CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the
+     * EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event
+     * that definitions change, the record will be deprecated and replaced with a new EPSG code.
+     */
+    public const EPSG_NORTH_AMERICAN_TERRESTRIAL_REFERENCE_FRAME_OF_2022 = 'urn:ogc:def:datum:EPSG::1422';
+
+    /**
      * North American Vertical Datum 1988
      * Type: Vertical
      * Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California;
@@ -6550,12 +6665,12 @@ class Datum
     public const EPSG_QATAR_NATIONAL_DATUM_1995 = 'urn:ogc:def:datum:EPSG::6614';
 
     /**
-     * Qornoq 1927
+     * Qoornoq 1927
      * Type: Geodetic
      * Extent: Greenland - west coast onshore
      * Fundamental point: Station 7008. Latitude: 64°31'06.27"N, longitude: 51°12'24.86"W (of Greenwich).
      */
-    public const EPSG_QORNOQ_1927 = 'urn:ogc:def:datum:EPSG::6194';
+    public const EPSG_QOORNOQ_1927 = 'urn:ogc:def:datum:EPSG::6194';
 
     /**
      * RBEPP12 Intermediate Reference Frame
@@ -8255,6 +8370,17 @@ class Datum
     public const EPSG_WGS_72_TRANSIT_BROADCAST_EPHEMERIS = 'urn:ogc:def:datum:EPSG::6324';
 
     /**
+     * WSPG Intermediate Reference Frame
+     * Type: Geodetic
+     * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
+     * and Wilton works, Redcar
+     * Defined through the application of the WSPG NTv2 transformation (code 10861) to ETRS89 as realized through OSNet
+     * v2009 CORS.
+     * Created in 2025 to support intermediate CRS "WSPG-IRF" in the emulation of the WSPG Snake map projection.
+     */
+    public const EPSG_WSPG_INTERMEDIATE_REFERENCE_FRAME = 'urn:ogc:def:datum:EPSG::1406';
+
+    /**
      * Waitangi (Chatham Island) 1959
      * Type: Vertical
      * Extent: New Zealand - Chatham Island - onshore
@@ -8531,6 +8657,11 @@ class Datum
      * @deprecated use EPSG_DANSK_VERTIKAL_REFERENCE_1990_2000 instead
      */
     public const EPSG_DANSK_VERTIKAL_REFERENCE_1990 = 'urn:ogc:def:datum:EPSG::5206';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927 instead
+     */
+    public const EPSG_QORNOQ_1927 = 'urn:ogc:def:datum:EPSG::6194';
 
     /**
      * @var array<string, array{name: string, type: string, ellipsoid: ?string, prime_meridian: ?string, frame_reference_epoch: float|DateTimeInterface|null, ensemble?: array<string>, help: string}>
@@ -13015,6 +13146,18 @@ Replaces Arc 1960 datum (code 6210) in Uganda.',
             'help' => 'Network of 13 points adjusted in IGS14 at epoch 2022.446, coordinates then transformed to epoch 2021.112 using the ITRF2014 Nubian plate motion model, then translated to the pre-existing coordinates of the LLA CORS station in Monrovia.
 Approximately aligned to ITRF2014 at epoch 2021.112. Offset at LLA in Monrovia is -2.8mm east, -4.9 mm north and 48.6 mm up.',
         ],
+        'urn:ogc:def:datum:EPSG::1404' => [
+            'name' => 'Georgia Geodetic Datum',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Georgia',
+            'help' => 'Network of 12 CORS stations aligned to ITRF2008 (IGS08) at epoch 2011.353.
+Alignment epoch given in European Union ENPI Programme for Georgia "Explanatory Notes to Website for Online Coordinate Conversions and Datum Transformations".',
+        ],
         'urn:ogc:def:datum:EPSG::1405' => [
             'name' => 'EWR3 Intermediate Reference Frame',
             'type' => 'geodetic',
@@ -13026,6 +13169,142 @@ Approximately aligned to ITRF2014 at epoch 2021.112. Offset at LLA in Monrovia i
             'extent_name' => 'UK - Oxford to Cambridge',
             'help' => 'Defined through the application of the EWR3 NTv2 transformation (code 10850) to ETRS89 as realized through OSNet v2009 CORS.
 Created in 2024 to support intermediate CRS "EWR3-IRF" in the emulation of the EWR3 Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1406' => [
+            'name' => 'WSPG Intermediate Reference Frame',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'UK - Sneatonthorpe to Redcar',
+            'help' => 'Defined through the application of the WSPG NTv2 transformation (code 10861) to ETRS89 as realized through OSNet v2009 CORS.
+Created in 2025 to support intermediate CRS "WSPG-IRF" in the emulation of the WSPG Snake map projection.',
+        ],
+        'urn:ogc:def:datum:EPSG::1413' => [
+            'name' => 'Asse geodetic datum 2025',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7004',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Germany - Lower Saxony - Asse',
+            'help' => 'Defined by 3-dimensional transformation from ETRS89/DREF91/2016.
+The defining transformation (see CT 10905) best fits coordinates of control points local to the mine with values which approximate to but are not identical to DHDN.',
+        ],
+        'urn:ogc:def:datum:EPSG::1414' => [
+            'name' => 'California Spatial Reference Network epoch 2025.0 (NAD83 2011)',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2025.0,
+            'extent_name' => 'USA - California',
+            'help' => 'Defined by NGS relationship between ITRF2020 and NAD83(2011) applied to CSRN2025 (ITRF2020) at epoch 2025.00.
+Californian realization of NAD83(2011) at epoch 2025.00, taking into account local tectonic plate movement and deformation. Replaces California Spatial Reference System epoch 2017.5 (NAD83 2011) from June 2025 in conformance with the California Public Resources Code §8850-8861.',
+        ],
+        'urn:ogc:def:datum:EPSG::1415' => [
+            'name' => 'Asse vertical datum 2025',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Germany - Lower Saxony - Asse',
+            'help' => 'Defined by 3-dimensional transformation from ETRS89/DREF91/2016.
+The defining transformation (see CT 10905) best fits coordinates of control points local to the mine with values which approximate to but are not identical to DHHN12. ',
+        ],
+        'urn:ogc:def:datum:EPSG::1416' => [
+            'name' => 'Derived California Orthometric Heights of 1988 epoch 2025',
+            'type' => 'vertical',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'USA - California',
+            'help' => 'Defined through the application of the NGS hybrid geoid model Geoid18 to CSRN epoch 2025.0 (NAD83 2011) ellipsoidal heights.
+Helmert orthometric heights.',
+        ],
+        'urn:ogc:def:datum:EPSG::1417' => [
+            'name' => 'Kazakhstan Terrestrial Reference Frame 2023',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Kazakhstan',
+            'help' => 'Aligned to ITRF2014 at epoch 2022.328. Realized through the stations of the active GNSS network.
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1418' => [
+            'name' => 'California Spatial Reference Network epoch 2025.0 (ITRF2020) ',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2025.0,
+            'extent_name' => 'USA - California',
+            'help' => 'Aligned to ITRF2020 at epoch 2025.00. Based on a multi-year solution of 1040 continually-operating GNSS positions and velocities on ITRF2020-u2023.
+Californian realization of ITRF2020, taking into account local tectonic plate movement and deformation. Replaces California Spatial Reference System epoch 2017.5 (ITRF2014) from June 2025 in conformance with the California Public Resources Code §8850-8861.',
+        ],
+        'urn:ogc:def:datum:EPSG::1419' => [
+            'name' => 'Greenland Reference 1996 (2021)',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 1996.62,
+            'extent_name' => 'Greenland',
+            'help' => 'Aligned to ITRF2020 @ 2021.62, observed at 51 active GNSS stations together with the four passive stations that defined GR96(1996).
+Second realization of GR96. Replaces GR96(1996). Frame epoch remains 1996.62.',
+        ],
+        'urn:ogc:def:datum:EPSG::1420' => [
+            'name' => 'Greenland Reference 1996 (1996)',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 1996.62,
+            'extent_name' => 'Greenland',
+            'help' => 'Aligned to ITRF94 at epoch 1996.62.
+First realization of GR96. Replaces Ammassalik 1958, Qoornoq 1927 and Scoresbysund 1952. Replaced by GR96(2021).',
+        ],
+        'urn:ogc:def:datum:EPSG::1421' => [
+            'name' => 'Greenland Reference 1996 ensemble',
+            'type' => 'ensemble',
+            'ellipsoid' => null,
+            'prime_meridian' => null,
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Greenland',
+            'ensemble' => [
+                'urn:ogc:def:datum:EPSG::1420',
+                'urn:ogc:def:datum:EPSG::1419',
+            ],
+            'help' => '
+',
+        ],
+        'urn:ogc:def:datum:EPSG::1422' => [
+            'name' => 'North American Terrestrial Reference Frame of 2022',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2020.0,
+            'extent_name' => 'North America - Canada, USA (Conus+AK)',
+            'help' => 'Fixed to the stable part of the North American tectonic plate, aligned to ITRF2020 at epoch 2020.0.
+CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event that definitions change, the record will be deprecated and replaced with a new EPSG code.',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -13864,7 +14143,7 @@ Orthometric heights. Replaces Reunion IGN58. Value of marker AB-100 retains heig
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
             'extent_name' => 'World',
-            'help' => 'Derived through EGM84 geoid undulation model consisting of spherical harmonic coefficients to degree and order 360 applied to the WGS 84 ellipsoid.
+            'help' => 'Derived from spherical harmonic coefficients applied to the WGS 84 ellipsoid, consisting of a combination solution to degree and order 70, a block diagonal solution from degree 71 to 359, and the quadrature solution at degree 360.
 Replaces EGM84 geoid (datum code 5203). Replaced by EGM2008 geoid (datum code 1027).',
         ],
         'urn:ogc:def:datum:EPSG::5172' => [
@@ -15692,7 +15971,7 @@ Replaced by Manoca 1962 datum (code 6193).',
 The intent of the Bukavu 1953 conference was to adopt the Clarke 1880 (RGS) ellipsoid (code 7012) but in practice this datum has used the IGN version. Replaces Douala 1948 (code 6192).',
         ],
         'urn:ogc:def:datum:EPSG::6194' => [
-            'name' => 'Qornoq 1927',
+            'name' => 'Qoornoq 1927',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7022',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',

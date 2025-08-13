@@ -430,6 +430,94 @@ to CR05 (Geographic3D)
 
     "
 
+CSRN epoch 2025.0 (ITRF2020)
+----------------------------
+``Geocentric::fromSRID(Geocentric::EPSG_CSRN_EPOCH_2025_0_ITRF2020)``
+
+to CSRN epoch 2025.0 (ITRF2020) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_ITRF2020)
+        )
+
+    "
+
+
+to CSRN epoch 2025.0 (NAD83 2011) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CSRN2025 (ITRF2020) to CSRN2025 (NAD83 2011) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10953``
+    | Extent: USA - California",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_CSRN_EPOCH_2025_0_NAD83_2011),
+            xAxisTranslation: new Millimetre(1015.75),
+            yAxisTranslation: new Millimetre(-1920.11),
+            zAxisTranslation: new Millimetre(-559.77),
+            xAxisRotation: new ArcSecond(0.02778143),
+            yAxisRotation: new ArcSecond(-0.01178187),
+            zAxisRotation: new ArcSecond(0.01016211),
+            scaleDifference: new PartsPerBillion(-1.13124)
+        )
+
+    "
+
+CSRN epoch 2025.0 (NAD83 2011)
+------------------------------
+``Geocentric::fromSRID(Geocentric::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)``
+
+to CSRN epoch 2025.0 (ITRF2020) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: CSRN2025 (ITRF2020) to CSRN2025 (NAD83 2011) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10953``
+    | Extent: USA - California",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_CSRN_EPOCH_2025_0_ITRF2020),
+            xAxisTranslation: new Millimetre(-1015.75),
+            yAxisTranslation: new Millimetre(1920.11),
+            zAxisTranslation: new Millimetre(559.77),
+            xAxisRotation: new ArcSecond(-0.02778143),
+            yAxisRotation: new ArcSecond(0.01178187),
+            zAxisRotation: new ArcSecond(-0.01016211),
+            scaleDifference: new PartsPerBillion(1.13124)
+        )
+
+    "
+
+
+to CSRN epoch 2025.0 (NAD83 2011) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_CSRN_EPOCH_2025_0_NAD83_2011)
+        )
+
+    "
+
 Cadastre 1997
 -------------
 ``Geocentric::fromSRID(Geocentric::EPSG_CADASTRE_1997)``
@@ -2960,6 +3048,78 @@ to GR96 (Geographic3D)
 
     "
 
+GR96(1996)
+----------
+``Geocentric::fromSRID(Geocentric::EPSG_GR96_1996)``
+
+to GR96(1996) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_GR96_1996)
+        )
+
+    "
+
+GR96(2021)
+----------
+``Geocentric::fromSRID(Geocentric::EPSG_GR96_2021)``
+
+to GR96(2021) (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_GR96_2021)
+        )
+
+    "
+
+
+to ITRF2020 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to GR96(2021) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10960``
+    | Extent: Greenland",".. code-block:: php
+
+        $point->timeDependentCoordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_ITRF2020),
+            xAxisTranslation: new Metre(0.30031),
+            yAxisTranslation: new Metre(1.17512),
+            zAxisTranslation: new Metre(0.30654),
+            xAxisRotation: new ArcSecond(-0.041614),
+            yAxisRotation: new ArcSecond(0.026303),
+            zAxisRotation: new ArcSecond(0.011214),
+            scaleDifference: new PartsPerMillion(0.01626),
+            rateOfChangeOfXAxisTranslation: new Rate(new Metre(-0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Metre(-0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Metre(-0), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(-4.5E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(0.000666), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(9.8E-5), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerMillion(-0), new Year(1)),
+            parameterReferenceEpoch: new Year(2021.6164)
+        )
+
+    "
+
 GSK-2011
 --------
 ``Geocentric::fromSRID(Geocentric::EPSG_GSK_2011)``
@@ -3001,6 +3161,50 @@ to PZ-90.11 (Geocentric)
             zAxisRotation: new ArcSecond(5.3E-5),
             scaleDifference: new PartsPerMillion(-0.0006),
             transformationReferenceEpoch: new Year(2011)
+        )
+
+    "
+
+Georgia Geodetic Datum
+----------------------
+``Geocentric::fromSRID(Geocentric::EPSG_GEORGIA_GEODETIC_DATUM)``
+
+to Georgia Geodetic Datum (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_GEORGIA_GEODETIC_DATUM)
+        )
+
+    "
+
+
+to WGS 84 (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Georgia Geodetic Datum to WGS 84 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10834``
+    | Extent: Georgia",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_WGS_84),
+            xAxisTranslation: new Metre(-2.0796),
+            yAxisTranslation: new Metre(-0.3484),
+            zAxisTranslation: new Metre(1.7009),
+            xAxisRotation: new ArcSecond(0.05465),
+            yAxisRotation: new ArcSecond(-0.06718),
+            zAxisRotation: new ArcSecond(0.06143),
+            scaleDifference: new PartsPerMillion(0.0181)
         )
 
     "
@@ -7027,6 +7231,38 @@ to ETRF2020 (Geocentric)
             rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-0.000753), new Year(1)),
             rateOfChangeOfScaleDifference: new Rate(new PartsPerBillion(0), new Year(1)),
             parameterReferenceEpoch: new Year(2015)
+        )
+
+    "
+
+
+to GR96(2021) (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ITRF2020 to GR96(2021) (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10960``
+    | Extent: Greenland",".. code-block:: php
+
+        $point->timeDependentCoordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_GR96_2021),
+            xAxisTranslation: new Metre(-0.30031),
+            yAxisTranslation: new Metre(-1.17512),
+            zAxisTranslation: new Metre(-0.30654),
+            xAxisRotation: new ArcSecond(0.041614),
+            yAxisRotation: new ArcSecond(-0.026303),
+            zAxisRotation: new ArcSecond(-0.011214),
+            scaleDifference: new PartsPerMillion(-0.01626),
+            rateOfChangeOfXAxisTranslation: new Rate(new Metre(0), new Year(1)),
+            rateOfChangeOfYAxisTranslation: new Rate(new Metre(0), new Year(1)),
+            rateOfChangeOfZAxisTranslation: new Rate(new Metre(0), new Year(1)),
+            rateOfChangeOfXAxisRotation: new Rate(new ArcSecond(4.5E-5), new Year(1)),
+            rateOfChangeOfYAxisRotation: new Rate(new ArcSecond(-0.000666), new Year(1)),
+            rateOfChangeOfZAxisRotation: new Rate(new ArcSecond(-9.8E-5), new Year(1)),
+            rateOfChangeOfScaleDifference: new Rate(new PartsPerMillion(0), new Year(1)),
+            parameterReferenceEpoch: new Year(2021.6164)
         )
 
     "
@@ -12313,6 +12549,26 @@ to NAD83(PACP00) (Geographic3D)
 
     "
 
+NATRF2022
+---------
+``Geocentric::fromSRID(Geocentric::EPSG_NATRF2022)``
+
+to NATRF2022 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_NATRF2022)
+        )
+
+    "
+
 NZGD2000
 --------
 ``Geocentric::fromSRID(Geocentric::EPSG_NZGD2000)``
@@ -12824,6 +13080,26 @@ to Peru96 (Geographic3D)
 
         $point->geographicGeocentric(
             to: Geographic3D::fromSRID(Geographic3D::EPSG_PERU96)
+        )
+
+    "
+
+QazTRF-23
+---------
+``Geocentric::fromSRID(Geocentric::EPSG_QAZTRF_23)``
+
+to QazTRF-23 (Geographic3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geocentric to geographic3D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15592``
+    | Extent: World",".. code-block:: php
+
+        $point->geographicGeocentric(
+            to: Geographic3D::fromSRID(Geographic3D::EPSG_QAZTRF_23)
         )
 
     "
@@ -14767,6 +15043,30 @@ to ETRS89 (Geocentric)
             zAxisRotation: new ArcSecond(-0.0204),
             scaleDifference: new PartsPerMillion(0.0025),
             transformationReferenceEpoch: new Year(2014.81)
+        )
+
+    "
+
+
+to Georgia Geodetic Datum (Geocentric)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: Georgia Geodetic Datum to WGS 84 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::10834``
+    | Extent: Georgia",".. code-block:: php
+
+        $point->coordinateFrameRotation(
+            to: Geocentric::fromSRID(Geocentric::EPSG_GEORGIA_GEODETIC_DATUM),
+            xAxisTranslation: new Metre(2.0796),
+            yAxisTranslation: new Metre(0.3484),
+            zAxisTranslation: new Metre(-1.7009),
+            xAxisRotation: new ArcSecond(-0.05465),
+            yAxisRotation: new ArcSecond(0.06718),
+            zAxisRotation: new ArcSecond(-0.06143),
+            scaleDifference: new PartsPerMillion(-0.0181)
         )
 
     "

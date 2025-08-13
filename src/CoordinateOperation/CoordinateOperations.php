@@ -1605,7 +1605,7 @@ class CoordinateOperations
             'extent_name' => 'Cameroon - coastal area',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::1798' => [
-            'name' => 'Qornoq 1927 to WGS 84 (2)',
+            'name' => 'Qoornoq 1927 to WGS 84 (2)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent' => ['urn:ogc:def:area:EPSG::3362'],
             'extent_name' => 'Greenland - west coast',
@@ -13052,6 +13052,24 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::3268'],
             'extent_name' => 'Latvia - onshore',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10832' => [
+            'name' => 'Georgia Lambert',
+            'method' => 'urn:ogc:def:method:EPSG::9802',
+            'extent' => ['urn:ogc:def:area:EPSG::3251'],
+            'extent_name' => 'Georgia - onshore',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10834' => [
+            'name' => 'Georgia Geodetic Datum to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent' => ['urn:ogc:def:area:EPSG::1102'],
+            'extent_name' => 'Georgia',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10835' => [
+            'name' => 'Pulkovo 1942 to Georgia Geodetic Datum (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent' => ['urn:ogc:def:area:EPSG::3251'],
+            'extent_name' => 'Georgia - onshore',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10838' => [
             'name' => 'LKS-92 to LKS-2020 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9615',
@@ -13088,6 +13106,12 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::3223'],
             'extent_name' => 'Brazil - onshore',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10862' => [
+            'name' => 'WSPG-TM',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['urn:ogc:def:area:EPSG::4801'],
+            'extent_name' => 'UK - Sneatonthorpe to Redcar',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10866' => [
             'name' => 'CGRS93 to Famagusta 1960 height (1)',
             'method' => 'urn:ogc:def:method:EPSG::1082',
@@ -13118,6 +13142,24 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::2187'],
             'extent_name' => 'USA - Florida - SPCS - N',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::10927' => [
+            'name' => 'CSRN2025 (NAD83 2011) to COH88 2025 (NAVD88) height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1134',
+            'extent' => ['urn:ogc:def:area:EPSG::1375'],
+            'extent_name' => 'USA - California',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10928' => [
+            'name' => 'CSRN2025 (NAD83 2011) to CSRN2025 (NAD83 2011) + COH88 2025 (NAVD88) height (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1135',
+            'extent' => ['urn:ogc:def:area:EPSG::1375'],
+            'extent_name' => 'USA - California',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10930' => [
+            'name' => 'CSRN2025.0 (NAD83 2011) to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::1375'],
+            'extent_name' => 'USA - California',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::10931' => [
             'name' => 'SPCS83 Florida East zone (meter)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -13141,6 +13183,102 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9822',
             'extent' => ['urn:ogc:def:area:EPSG::1379'],
             'extent_name' => 'USA - Florida',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10953' => [
+            'name' => 'CSRN2025 (ITRF2020) to CSRN2025 (NAD83 2011) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1032',
+            'extent' => ['urn:ogc:def:area:EPSG::1375'],
+            'extent_name' => 'USA - California',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10960' => [
+            'name' => 'ITRF2020 to GR96(2021) (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1056',
+            'extent' => ['urn:ogc:def:area:EPSG::1107'],
+            'extent_name' => 'Greenland',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10961' => [
+            'name' => 'Ammassalik 1958 to GR96 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent' => ['urn:ogc:def:area:EPSG::2571'],
+            'extent_name' => 'Greenland - Ammassalik area',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10962' => [
+            'name' => 'Qoornoq 1927 to GR96 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent' => ['urn:ogc:def:area:EPSG::3362'],
+            'extent_name' => 'Greenland - west coast',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10963' => [
+            'name' => 'Scoresbysund 1952 to GR96 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::9607',
+            'extent' => ['urn:ogc:def:area:EPSG::2570'],
+            'extent_name' => 'Greenland - Scoresbysund area',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10965' => [
+            'name' => 'QazTRF-23 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::1131'],
+            'extent_name' => 'Kazakhstan',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10969' => [
+            'name' => 'NATRF2022 to WGS 84 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::9603',
+            'extent' => ['urn:ogc:def:area:EPSG::4803'],
+            'extent_name' => 'North America - Canada, USA (Conus+AK)',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10970' => [
+            'name' => 'SPCS2022 Gulf zone',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['urn:ogc:def:area:EPSG::3357'],
+            'extent_name' => 'USA - GoM OCS',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10971' => [
+            'name' => 'SPCS2022 Gulf zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['urn:ogc:def:area:EPSG::3357'],
+            'extent_name' => 'USA - GoM OCS',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10972' => [
+            'name' => 'SPCS2022 Gulf Louisiana Shelf zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['urn:ogc:def:area:EPSG::4809'],
+            'extent_name' => 'USA - Gulf OCS - Louisiana shelf',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10973' => [
+            'name' => 'SPCS2022 Gulf Texas Shelf North zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['urn:ogc:def:area:EPSG::4808'],
+            'extent_name' => 'USA - Gulf OCS - Texas shelf north',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10974' => [
+            'name' => 'SPCS2022 Gulf Texas Shelf South zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9801',
+            'extent' => ['urn:ogc:def:area:EPSG::4807'],
+            'extent_name' => 'USA - Gulf OCS - Texas shelf south',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10975' => [
+            'name' => 'SPCS2022 Gulf West zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['urn:ogc:def:area:EPSG::4810'],
+            'extent_name' => 'USA - GoM OCS - west of 96°W deep water',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10976' => [
+            'name' => 'SPCS2022 Gulf West Central zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['urn:ogc:def:area:EPSG::4811'],
+            'extent_name' => 'USA - GoM OCS - 96°W to 90°W deep water',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10977' => [
+            'name' => 'SPCS2022 Gulf East Central zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['urn:ogc:def:area:EPSG::4812'],
+            'extent_name' => 'USA - GoM OCS - 90°W to 84°W deep water',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::10978' => [
+            'name' => 'SPCS2022 Gulf East zone (ft)',
+            'method' => 'urn:ogc:def:method:EPSG::9807',
+            'extent' => ['urn:ogc:def:area:EPSG::2174'],
+            'extent_name' => 'USA - GoM OCS - east of 84°W',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::11001' => [
             'name' => 'Georgia CS27 East zone',
@@ -13535,8 +13673,8 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::11703' => [
             'name' => 'Louisiana CS27 Offshore zone',
             'method' => 'urn:ogc:def:method:EPSG::9802',
-            'extent' => ['urn:ogc:def:area:EPSG::1387'],
-            'extent_name' => 'USA - Louisiana',
+            'extent' => ['urn:ogc:def:area:EPSG::4821'],
+            'extent_name' => 'USA - Gulf central planning area deep water',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::11731' => [
             'name' => 'SPCS83 Louisiana North zone (meter)',
@@ -13553,8 +13691,8 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::11733' => [
             'name' => 'SPCS83 Louisiana Offshore zone (meter)',
             'method' => 'urn:ogc:def:method:EPSG::9802',
-            'extent' => ['urn:ogc:def:area:EPSG::1387'],
-            'extent_name' => 'USA - Louisiana',
+            'extent' => ['urn:ogc:def:area:EPSG::4821'],
+            'extent_name' => 'USA - Gulf central planning area deep water',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::11801' => [
             'name' => 'Maine CS27 East zone',
@@ -15299,8 +15437,8 @@ class CoordinateOperations
         'urn:ogc:def:coordinateOperation:EPSG::15393' => [
             'name' => 'SPCS83 Louisiana Offshore zone (US survey foot)',
             'method' => 'urn:ogc:def:method:EPSG::9802',
-            'extent' => ['urn:ogc:def:area:EPSG::1387'],
-            'extent_name' => 'USA - Louisiana',
+            'extent' => ['urn:ogc:def:area:EPSG::4821'],
+            'extent_name' => 'USA - Gulf central planning area deep water',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15394' => [
             'name' => 'SPCS83 South Dakota North zone (US survey foot)',
@@ -16689,7 +16827,7 @@ class CoordinateOperations
             'extent_name' => 'UAE - Dubai municipality',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::15957' => [
-            'name' => 'Qornoq 1927 to GR96 (1)',
+            'name' => 'Qoornoq 1927 to GR96 (1)',
             'method' => 'urn:ogc:def:method:EPSG::9606',
             'extent' => ['urn:ogc:def:area:EPSG::3362'],
             'extent_name' => 'Greenland - west coast',
@@ -22161,7 +22299,7 @@ class CoordinateOperations
             'extent_name' => 'Greenland - east - 63°N to 66°N',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::18428' => [
-            'name' => 'Greenland zone 8 east',
+            'name' => 'Greenland zone 8',
             'method' => 'urn:ogc:def:method:EPSG::9826',
             'extent' => ['urn:ogc:def:area:EPSG::2569'],
             'extent_name' => 'Greenland - south of 63°N',

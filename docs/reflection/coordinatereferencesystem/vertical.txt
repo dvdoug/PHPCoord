@@ -111,6 +111,19 @@ Antalya height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5775')
 
 
+Asse 2025 height
+----------------
+| Extent: Germany - Lower Saxony - Asse mining area
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_ASSE_2025_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10900')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_ASSE_2025_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10900')
+
+Defined through 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905). Coordinate values are close to but not identical to DHHN12 height.
+
 Auckland 1946 height
 --------------------
 | Extent: New Zealand - North Island - Auckland vertical CRS area
@@ -436,6 +449,32 @@ CGVD28(HTv2.0) height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10588')
 
 Hybrid geoid realization of CGVD28. Defines CGVD28 where the levelling-based CGVD28 network (CRS 5713) does not exist. Both CGVD28 height and CGVD28(HTv2.0) height replaced by CGVD2013 height then by CGVD2013a height at epochs 1997.0, 2002.0 and 2010.0.
+
+COH88 2025 (NAVD88) height
+--------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_COH88_2025_NAVD88_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10918')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_COH88_2025_NAVD88_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10918')
+
+Replaces NAVD88 height (CRS code 5703) in California. Supersedes COH88 2017.5 (NAVD88) height from 2025-06-15. State law defines use of US survey feet: see CRS code 10919.
+
+COH88 2025 (NAVD88) height (ftUS)
+---------------------------------
+| Extent: USA - California
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_COH88_2025_NAVD88_HEIGHT_FTUS)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10919')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_COH88_2025_NAVD88_HEIGHT_FTUS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10919')
+
+Replaces NAVD88 height (ftUS) (CRS code 6360) in California. Supersedes COH88 2017.5 (NAVD88) height (ft US) from 2025-06-15. State law defines use of US survey feet: see CRS code 10918 for metric equivalent.
 
 Cagliari 1956 height
 --------------------
@@ -982,7 +1021,7 @@ EGM2008 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_EGM2008_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::3855')
 
-Zero-height surface resulting from the application of the EGM2008 geoid model to the WGS 84 ellipsoid. Replaces EGM96 height (CRS code 5773).
+Zero-height surface approximating mean sea level resulting from the application of the EGM2008 spherical harmonic coefficients to the WGS 84 ellipsoid. May be approximated by application of the EGM2008 geoid model grid. Replaces EGM96 height (CRS code 5773).
 
 EGM84 height
 ------------
@@ -1008,7 +1047,7 @@ EGM96 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_EGM96_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5773')
 
-Zero-height surface resulting from the application of the EGM96 geoid model to the WGS 84 ellipsoid. Replaces EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).
+Zero-height surface approximating mean sea level resulting from the application of the EGM96 spherical harmonic coefficients to the WGS 84 ellipsoid. May be approximated by application of the EGM96 geoid model grid. Replaces EGM84 height (CRS code 5798). Replaced by EGM2008 height (CRS code 3855).
 
 EH2000 height
 -------------

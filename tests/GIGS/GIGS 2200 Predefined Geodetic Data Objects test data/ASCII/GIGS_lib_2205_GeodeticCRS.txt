@@ -117,7 +117,7 @@
 4191	Geographic 2D	Albanian 1987	ALB86	6191	Albania - onshore
 4192	Geographic 2D	Douala 1948		6192	Cameroon - coastal area
 4193	Geographic 2D	Manoca 1962		6193	Cameroon - coastal area
-4194	Geographic 2D	Qornoq 1927		6194	Greenland - west coast
+4194	Geographic 2D	Qoornoq 1927		6194	Greenland - west coast
 4195	Geographic 2D	Scoresbysund 1952		6195	Greenland - Scoresbysund area
 4196	Geographic 2D	Ammassalik 1958		6196	Greenland - Ammassalik area
 4197	Geographic 2D	Garoua		6197	Cameroon - Garoua area
@@ -402,9 +402,9 @@
 4744	Geographic 2D	Nahrwan 1934		6744	Asia - Middle East - Iraq and SW Iran
 4745	Geographic 2D	RD/83	DHDN	6745	Germany - Saxony
 4746	Geographic 2D	PD/83	DHDN	6746	Germany - Thuringen
-4747	Geographic 2D	GR96		6747	Greenland
-4909	Geographic 3D	GR96		6747	Greenland
-4908	Geocentric	GR96		6747	Greenland
+4747	Geographic 2D	GR96		1421	Greenland
+4909	Geographic 3D	GR96		1421	Greenland
+4908	Geocentric	GR96		1421	Greenland
 4748	Geographic 2D	Vanua Levu 1915	Vanua Levu 1917	6748	Fiji - Vanua Levu and Taveuni
 4749	Geographic 2D	RGNC91-93		6749	New Caledonia
 4907	Geographic 3D	RGNC91-93		6749	New Caledonia

@@ -12,13 +12,6 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk4
 {
     /**
-     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 8
-     * Extent: Hungary and Slovakia - east of 22°30'E
-     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 8 (CRS code 3332).
-     */
-    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::4434';
-
-    /**
      * Pulkovo 1942(83) / Gauss-Kruger zone 2
      * Extent: Germany - states of former East Germany - west of 12°E
      * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 2 (CRS code 3833). See CRS code 5664 for variant with axes order
@@ -1295,72 +1288,128 @@ trait ProjectedConstantsChunk4
     public const EPSG_QATAR_1974_QATAR_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::28600';
 
     /**
-     * Qornoq 1927 / Greenland zone 2 west
+     * QazTRF-23 / Gauss-Kruger zone 10
+     * Extent: Kazakhstan - 54°E to 60°E including Caspian Sea
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 10 (code 28410) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::10944';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 11
+     * Extent: Kazakhstan - 60°E to 66°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 11 (code 28411) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::10945';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 12
+     * Extent: Kazakhstan - 66°E to 72°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 12 (code 28412) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::10946';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 13
+     * Extent: Kazakhstan - 72°E to 78°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 13 (code 28413) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::10947';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 14
+     * Extent: Kazakhstan - 78°E to 84°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 14 (code 28414) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::10948';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 15
+     * Extent: Kazakhstan - east of 84°E
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 15 (code 28415) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::10949';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 8
+     * Extent: Kazakhstan - west of 48°E including Caspian Sea
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 8 (code 28408) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::10942';
+
+    /**
+     * QazTRF-23 / Gauss-Kruger zone 9
+     * Extent: Kazakhstan - 48°E to 54°E including Caspian Sea
+     * Replaces  Pulkovo 1942 / Gauss-Kruger zone 9 (code 28409) in Kazakhstan from 2025-01-01.
+     */
+    public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::10943';
+
+    /**
+     * Qoornoq 1927 / Greenland zone 2 west
      * Extent: Greenland - west coast onshore - between 78°N and 79°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
 
     /**
-     * Qornoq 1927 / Greenland zone 3 west
+     * Qoornoq 1927 / Greenland zone 3 west
      * Extent: Greenland - west coast - between 75°N and 78°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
 
     /**
-     * Qornoq 1927 / Greenland zone 4 west
+     * Qoornoq 1927 / Greenland zone 4 west
      * Extent: Greenland - west coast onshore - between 72°N and 75°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
 
     /**
-     * Qornoq 1927 / Greenland zone 5 west
+     * Qoornoq 1927 / Greenland zone 5 west
      * Extent: Greenland - west coast onshore - between 69°N and 72°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
 
     /**
-     * Qornoq 1927 / Greenland zone 6 west
+     * Qoornoq 1927 / Greenland zone 6 west
      * Extent: Greenland - west coast onshore - between 66°N and 69°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
 
     /**
-     * Qornoq 1927 / Greenland zone 7 west
+     * Qoornoq 1927 / Greenland zone 7 west
      * Extent: Greenland - west coast onshore - between 63°N and 66°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
 
     /**
-     * Qornoq 1927 / Greenland zone 8 east
+     * Qoornoq 1927 / Greenland zone 8
      * Extent: Greenland - onshore southwest coastal area south of 63°N
      * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
      * abbreviation E but is positive to the west.
      */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_8_EAST = 'urn:ogc:def:crs:EPSG::2307';
+    public const EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 = 'urn:ogc:def:crs:EPSG::2307';
 
     /**
-     * Qornoq 1927 / UTM zone 22N
+     * Qoornoq 1927 / UTM zone 22N
      * Extent: Greenland - southwest coast between 54°W and 48°W.
      */
-    public const EPSG_QORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
+    public const EPSG_QOORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
 
     /**
-     * Qornoq 1927 / UTM zone 23N
+     * Qoornoq 1927 / UTM zone 23N
      * Extent: Greenland - southwest coast east of 48°W.
      */
-    public const EPSG_QORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
+    public const EPSG_QOORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
 
     /**
      * RBEPP12 Grid
@@ -6157,8 +6206,9 @@ trait ProjectedConstantsChunk4
 
     /**
      * WGS 84 / BLM 14N (ftUS)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) west of approximately 96°W - protraction areas
-     * Corpus Christi; Port Isabel
+     * Extent: USA - Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North
+     * Padre Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port
+     * Isabel
      * See WGS 84 / UTM zone 14N (code 32614) for metric equivalent. See NAD27 / BLM 14N (ftUS) (code 32064) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -6166,9 +6216,12 @@ trait ProjectedConstantsChunk4
 
     /**
      * WGS 84 / BLM 15N (ftUS)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and 90°W -
-     * protraction areas East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank;
-     * Green Canyon; Walker Ridge; Amery Terrace
+     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and 90°W - leasing
+     * areas Brazos, Galveston, High Island; Sabine Pass; West Cameron, East Cameron, Vermilion, South Marsh Island,
+     * Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle; protraction areas East
+     * Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker
+     * Ridge, Amery Terrace.
+     *
      * See WGS 84 / UTM zone 15N (code 32615) for metric equivalent. See NAD27 / BLM 15N (ftUS) (code 32065) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -6176,10 +6229,11 @@ trait ProjectedConstantsChunk4
 
     /**
      * WGS 84 / BLM 16N (ftUS)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W -
-     * protraction areas Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South; Pensacola; Destin
-     * Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment; Apalachicola; Florida Middle
-     * Ground; The Elbow; Vernon Basin; Howell Hook; Rankin
+     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing
+     * areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca
+     * Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd
+     * Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon
+     * Basin, Howell Hook, Rankin
      * See WGS 84 / UTM zone 16N (code 32616) for metric equivalent. See NAD27 / BLM 16N (ftUS) (code 32066) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -8429,6 +8483,15 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_WORLD_MERCATOR = 'urn:ogc:def:crs:EPSG::3395';
 
     /**
+     * WSPG Grid
+     * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
+     * and Wilton works, Redcar
+     * The CRS's definition through transformation ETRS89 to WSPG-IRF (1) (code 10860) and map projection WSPG-TM (code
+     * 10862) emulates the WSPG Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
+     */
+    public const EPSG_WSPG_GRID = 'urn:ogc:def:crs:EPSG::10863';
+
+    /**
      * Xian 1980 / 3-degree Gauss-Kruger CM 102E
      * Extent: China - between 100°30'E and 103°30'E
      * Truncated form of Xian 1980 / 3-degree Gauss-Kruger zone 34 (code 2358).
@@ -8938,4 +9001,49 @@ trait ProjectedConstantsChunk4
      * Replaces FD54 / Faroe Lambert (fk54) (CRS code 3144) for cadastral survey.
      */
     public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_8_EAST = 'urn:ogc:def:crs:EPSG::2307';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_22N instead
+     */
+    public const EPSG_QORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_23N instead
+     */
+    public const EPSG_QORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
 }
