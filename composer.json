@@ -15,14 +15,14 @@
         "php": "^8.1",
         "ext-zip": "*",
         "composer-runtime-api": "^2.1",
-        "composer/pcre": "^3.1",
-        "opis/json-schema": "^2.3"
+        "composer/pcre": "^3.3.2",
+        "opis/json-schema": "^2.6.0"
     },
     "require-dev": {
         "ext-json": "*",
         "ext-sqlite3": "*",
-        "friendsofphp/php-cs-fixer": "^3.84",
-        "nikic/php-parser": "^5.0",
+        "friendsofphp/php-cs-fixer": "^3.90",
+        "nikic/php-parser": "^5.6.2",
         "php-coord/datapack-africa": "dev-master",
         "php-coord/datapack-antarctic": "dev-master",
         "php-coord/datapack-arctic": "dev-master",
@@ -32,7 +32,7 @@
         "php-coord/datapack-oceania": "dev-master",
         "php-coord/datapack-southamerica": "dev-master",
         "phpstan/phpstan": "^1.12",
-        "phpunit/phpunit": "^10.5||^11.5"
+        "phpunit/phpunit": "^10.5.58||^11.5.44"
     },
     "suggest": {
         "php-coord/datapack-africa": "High-accuracy addon datapack for Africa",
