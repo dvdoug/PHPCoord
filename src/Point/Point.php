@@ -90,22 +90,21 @@ abstract class Point implements Stringable
             $point->accuracy ??= new Metre(0);
 
             return $point;
-        } else {
-            $method = CoordinateOperationMethods::getFunctionName($operation['method']);
-            $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
-
-            if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']]) && isset($additionalParams['horizontalPoint'])) {
-                $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
-            }
-
-            $point = $this->$method($to, ...$params);
-            assert(property_exists($this, 'accuracy'));
-            assert(property_exists($point, 'accuracy'));
-            $existingAccuracy = $this->accuracy ?? new Metre(0);
-            $point->accuracy = $existingAccuracy->add($accuracy);
-
-            return $point;
         }
+        $method = CoordinateOperationMethods::getFunctionName($operation['method']);
+        $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
+
+        if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']]) && isset($additionalParams['horizontalPoint'])) {
+            $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
+        }
+
+        $point = $this->$method($to, ...$params);
+        assert(property_exists($this, 'accuracy'));
+        assert(property_exists($point, 'accuracy'));
+        $existingAccuracy = $this->accuracy ?? new Metre(0);
+        $point->accuracy = $existingAccuracy->add($accuracy);
+
+        return $point;
     }
 
     /**
@@ -186,21 +185,21 @@ abstract class Point implements Stringable
                 $B0,
                 $powerCoefficients,
             );
-        } else {
-            return $this->generalPolynomialUnitlessReverse(
-                $xs,
-                $ys,
-                $ordinate1OfEvaluationPointInSourceCRS,
-                $ordinate2OfEvaluationPointInSourceCRS,
-                $ordinate1OfEvaluationPointInTargetCRS,
-                $ordinate2OfEvaluationPointInTargetCRS,
-                $scalingFactorForSourceCRSCoordDifferences,
-                $scalingFactorForTargetCRSCoordDifferences,
-                $A0,
-                $B0,
-                $powerCoefficients,
-            );
         }
+
+        return $this->generalPolynomialUnitlessReverse(
+            $xs,
+            $ys,
+            $ordinate1OfEvaluationPointInSourceCRS,
+            $ordinate2OfEvaluationPointInSourceCRS,
+            $ordinate1OfEvaluationPointInTargetCRS,
+            $ordinate2OfEvaluationPointInTargetCRS,
+            $scalingFactorForSourceCRSCoordDifferences,
+            $scalingFactorForTargetCRSCoordDifferences,
+            $A0,
+            $B0,
+            $powerCoefficients,
+        );
     }
 
     protected function generalPolynomialUnitlessForward(

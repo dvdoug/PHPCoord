@@ -1529,7 +1529,7 @@ class EPSGCodegenFromDataImport
                         Projected::EPSG_QOORNOQ_1927_UTM_ZONE_22N => ['Qornoq 1927 / UTM zone 22N'],
                         Projected::EPSG_QOORNOQ_1927_UTM_ZONE_23N => ['Qornoq 1927 / UTM zone 23N'],
                     ],
-                    fn ($urn) => isset($data[$urn]),
+                    static fn ($urn) => isset($data[$urn]),
                     ARRAY_FILTER_USE_KEY
                 )
             );

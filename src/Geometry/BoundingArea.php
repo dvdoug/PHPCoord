@@ -64,7 +64,7 @@ class BoundingArea
     protected function __construct(array $polygons, string $region)
     {
         // put largest polygon (outer ring size) first
-        usort($polygons, fn (Polygon $polygonA, Polygon $polygonB) => count($polygonB->coordinates[0]->coordinates) <=> count($polygonA->coordinates[0]->coordinates));
+        usort($polygons, static fn (Polygon $polygonA, Polygon $polygonB) => count($polygonB->coordinates[0]->coordinates) <=> count($polygonA->coordinates[0]->coordinates));
         $this->polygons = $polygons;
         $this->region = $region;
     }

@@ -101,7 +101,7 @@ class GeoJSON
      */
     private static function createLineString(array $lineString): LineString
     {
-        $positions = array_map(fn (array $point) => new Position(...$point), $lineString);
+        $positions = array_map(static fn (array $point) => new Position(...$point), $lineString);
 
         return new LineString(...$positions);
     }
@@ -112,7 +112,7 @@ class GeoJSON
     private static function createPolygon(array $polygon): Polygon
     {
         $rings = array_map(
-            fn (array $ring) => new LinearRing(...array_map(fn (array $point) => new Position(...$point), $ring)),
+            static fn (array $ring) => new LinearRing(...array_map(static fn (array $point) => new Position(...$point), $ring)),
             $polygon
         );
 
@@ -124,7 +124,7 @@ class GeoJSON
      */
     private static function createMultiPoint(array $multiPoint): MultiPoint
     {
-        $positions = array_map(fn (array $point) => new Position(...$point), $multiPoint);
+        $positions = array_map(static fn (array $point) => new Position(...$point), $multiPoint);
 
         return new MultiPoint(...$positions);
     }
@@ -134,7 +134,7 @@ class GeoJSON
      */
     private static function createMultiLineString(array $multiLineString): MultiLineString
     {
-        $strings = array_map(fn (array $lineString) => self::createLineString($lineString), $multiLineString);
+        $strings = array_map(static fn (array $lineString) => self::createLineString($lineString), $multiLineString);
 
         return new MultiLineString(...$strings);
     }
@@ -144,7 +144,7 @@ class GeoJSON
      */
     private static function createMultiPolygon(array $multiPolygon): MultiPolygon
     {
-        $polygons = array_map(fn (array $polygon) => self::createPolygon($polygon), $multiPolygon);
+        $polygons = array_map(static fn (array $polygon) => self::createPolygon($polygon), $multiPolygon);
 
         return new MultiPolygon(...$polygons);
     }
@@ -154,7 +154,7 @@ class GeoJSON
      */
     private static function createGeometryCollection(array $geometryCollection): GeometryCollection
     {
-        $geometries = array_map(fn (stdClass $geometry) => self::createFromObject($geometry), $geometryCollection);
+        $geometries = array_map(static fn (stdClass $geometry) => self::createFromObject($geometry), $geometryCollection);
 
         return new GeometryCollection(...$geometries);
     }

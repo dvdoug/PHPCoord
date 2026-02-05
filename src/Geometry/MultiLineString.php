@@ -35,7 +35,7 @@ class MultiLineString extends Geometry implements JsonSerializable
     {
         return [
             'type' => 'MultiLineString',
-            'coordinates' => array_map(fn (LineString $lineString) => $lineString->coordinates, $this->coordinates),
+            'coordinates' => array_map(static fn (LineString $lineString) => $lineString->coordinates, $this->coordinates),
         ];
     }
 }

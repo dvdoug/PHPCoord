@@ -51,7 +51,7 @@ class AddNewDataVisitor extends NodeVisitorAbstract
             }
             if (isset($dataRow['extent_name'])) {
                 $dataRow['extent_name'] = array_unique(explode('|', $dataRow['extent_name']));
-                $dataRow['extent_name'] = array_map(fn (string $extentName) => rtrim($extentName, '.'), $dataRow['extent_name']);
+                $dataRow['extent_name'] = array_map(static fn (string $extentName) => rtrim($extentName, '.'), $dataRow['extent_name']);
                 $dataRow['extent_name'] = implode(', ', $dataRow['extent_name']);
             }
         }

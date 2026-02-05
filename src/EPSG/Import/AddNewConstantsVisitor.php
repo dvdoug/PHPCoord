@@ -128,7 +128,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 }
                 if (isset($data['extent_description']) && $data['extent_description']) {
                     $data['extent_description'] = array_unique(explode('|', $data['extent_description']));
-                    $data['extent_description'] = array_map(fn (string $extentDescription) => rtrim($extentDescription, '.'), $data['extent_description']);
+                    $data['extent_description'] = array_map(static fn (string $extentDescription) => rtrim($extentDescription, '.'), $data['extent_description']);
                     $data['extent_description'] = implode(', ', $data['extent_description']);
                     $extentLines = explode("\n", wordwrap('Extent: ' . $data['extent_description'], 112));
                     foreach ($extentLines as $extentLine) {

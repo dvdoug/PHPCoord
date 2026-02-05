@@ -19580,7 +19580,7 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(fn (array $data) => $data['name'], static::$sridData);
+        return array_map(static fn (array $data) => $data['name'], static::$sridData);
     }
 
     /**
@@ -19588,7 +19588,7 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(fn (array $data) => [
+        return array_map(static fn (array $data) => [
             'name' => $data['name'],
             'help' => $data['help'],
         ], static::$sridData);

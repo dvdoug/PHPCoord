@@ -133,14 +133,13 @@ class KMSGrid extends GeographicGeoidHeightGrid
                 $latitude,
                 [$data['shift']]
             );
-        } else {
-            assert($this->textData[$recordId] !== null);
-
-            return new GridValues(
-                $longitude,
-                $latitude,
-                [$this->textData[$recordId]]
-            );
         }
+        assert($this->textData[$recordId] !== null);
+
+        return new GridValues(
+            $longitude,
+            $latitude,
+            [$this->textData[$recordId]]
+        );
     }
 }

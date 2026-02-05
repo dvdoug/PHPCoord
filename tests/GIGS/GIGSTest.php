@@ -539,9 +539,9 @@ class GIGSTest extends TestCase
             ],
         ];
 
-        $params = array_filter($params, fn ($param) => $param['value'] !== null);
+        $params = array_filter($params, static fn ($param) => $param['value'] !== null);
         $params = array_map(
-            fn ($param) => UnitOfMeasureFactory::makeUnit(
+            static fn ($param) => UnitOfMeasureFactory::makeUnit(
                 $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],
                 $param['uom']
             ),
@@ -670,7 +670,7 @@ class GIGSTest extends TestCase
             ],
         ];
 
-        $params = array_filter($params, fn ($param) => $param['value'] !== null);
+        $params = array_filter($params, static fn ($param) => $param['value'] !== null);
         foreach ($params as $paramName => $param) {
             if (str_contains($paramName, 'File')) {
                 $params[$paramName] = match ($param['value']) {
@@ -798,7 +798,7 @@ class GIGSTest extends TestCase
                 ],
             ];
 
-            $params = array_filter($params, fn ($param) => $param['value'] !== null);
+            $params = array_filter($params, static fn ($param) => $param['value'] !== null);
             foreach ($params as $name => $param) {
                 $params[$name] = UnitOfMeasureFactory::makeUnit(
                     $param['uom'] === Angle::EPSG_SEXAGESIMAL_DMS ? $param['value'] : (float) $param['value'],

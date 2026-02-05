@@ -31,6 +31,6 @@ class Position implements JsonSerializable
      */
     public function jsonSerialize(): array
     {
-        return array_filter([$this->x, $this->y, $this->z, $this->m], fn (?float $v) => $v !== null);
+        return array_filter([$this->x, $this->y, $this->z, $this->m], static fn (?float $v) => $v !== null);
     }
 }

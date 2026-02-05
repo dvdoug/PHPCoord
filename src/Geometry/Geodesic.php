@@ -481,9 +481,9 @@ function copySign(float $x, float $y): float
 {
     if ($y >= 0) {
         return abs($x);
-    } else {
-        return -abs($x);
     }
+
+    return -abs($x);
 }
 
 /**

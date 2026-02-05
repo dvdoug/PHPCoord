@@ -35,7 +35,7 @@ class Polygon extends Geometry implements JsonSerializable
     {
         return [
             'type' => 'Polygon',
-            'coordinates' => array_map(fn (LinearRing $linearRing) => $linearRing->coordinates, $this->coordinates),
+            'coordinates' => array_map(static fn (LinearRing $linearRing) => $linearRing->coordinates, $this->coordinates),
         ];
     }
 }

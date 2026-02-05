@@ -186,7 +186,7 @@ class Codegen
         $reflectionClass = new ReflectionClass($class);
         $constants = array_flip(array_reverse($reflectionClass->getConstants(ReflectionClassConstant::IS_PUBLIC))); // make sure aliases are overridden with current
 
-        uasort($data, fn ($a, $b) => $a['name'] <=> $b['name']);
+        uasort($data, static fn ($a, $b) => $a['name'] <=> $b['name']);
 
         foreach ($data as $urn => $row) {
             $name = ucfirst(trim($row['name']));
@@ -249,7 +249,7 @@ class Codegen
             }
             if (isset($row['extent_description']) && $row['extent_description']) {
                 $row['extent_description'] = array_unique(explode('|', $row['extent_description']));
-                $row['extent_description'] = array_map(fn (string $extentDescription) => rtrim($extentDescription, '.'), $row['extent_description']);
+                $row['extent_description'] = array_map(static fn (string $extentDescription) => rtrim($extentDescription, '.'), $row['extent_description']);
                 $row['extent_description'] = implode(', ', $row['extent_description']);
                 $subhead .= '| Extent: ' . trim($row['extent_description']) . "\n";
             }

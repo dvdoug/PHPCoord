@@ -35,7 +35,7 @@ class MultiPolygon extends Geometry implements JsonSerializable
     {
         return [
             'type' => 'MultiPolygon',
-            'coordinates' => array_map(fn (Polygon $polygon) => array_map(fn (LinearRing $linearRing) => $linearRing->coordinates, $polygon->coordinates), $this->coordinates),
+            'coordinates' => array_map(static fn (Polygon $polygon) => array_map(static fn (LinearRing $linearRing) => $linearRing->coordinates, $polygon->coordinates), $this->coordinates),
         ];
     }
 }
