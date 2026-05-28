@@ -58,7 +58,6 @@ use function array_unique;
 use function explode;
 use function array_map;
 use function rtrim;
-use function in_array;
 
 use const PHP_EOL;
 
@@ -261,9 +260,7 @@ class Codegen
             if ($invokeClass->hasMethod('fromSRID') || $invokeClass->hasMethod('makeUnit')) {
                 fwrite($file, ".. code-block:: php\n\n");
                 do {
-                    if (in_array($invokeClass->getShortName(), ['Projected81', 'Projected82', 'ProjectedBase'])) {
-                        continue; // skip over workarounds, don't want to document those
-                    } elseif ($invokeClass->hasMethod('fromSRID')) {
+                    if ($invokeClass->hasMethod('fromSRID')) {
                         fwrite($file, "    {$invokeClass->getShortName()}::fromSRID({$reflectionClass->getShortName()}::{$constants[$urn]})\n");
                         fwrite($file, "    {$invokeClass->getShortName()}::fromSRID('{$urn}')\n");
                     } elseif ($invokeClass->hasMethod('makeUnit')) {
