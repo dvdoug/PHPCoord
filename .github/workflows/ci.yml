@@ -19,7 +19,6 @@ jobs:
           - "8.4"
           - "8.3"
           - "8.2"
-          - "8.1"
 
         dependencies:
           - "highest"
@@ -122,10 +121,8 @@ jobs:
 
     - name: PHPUnit (Unit)
       run: |
-        if [ "${{ matrix.php-version }}" = "8.2" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
+        if [ "${{ matrix.php-version }}" = "8.5" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration --exclude-group=gigs;
-        elif [ "${{ matrix.php-version }}" = "8.1" ] || [ "${{ matrix.dependencies }}" = "lowest" ]; then
-          php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration,gigs --no-coverage;
         else
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration --exclude-group=gigs --no-coverage;
         fi;

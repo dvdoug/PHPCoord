@@ -92,7 +92,7 @@ class OSTNOSGM15Grid extends Grid
 
         $this->gridFile->seek($record);
         /** @var array<int, string> $rawData */
-        $rawData = $this->gridFile->fgetcsv();
+        $rawData = $this->gridFile->fgetcsv(escape: "");
 
         return new GridValues((float) $rawData[1], (float) $rawData[2], [(float) $rawData[3], (float) $rawData[4], (float) $rawData[5]]);
     }

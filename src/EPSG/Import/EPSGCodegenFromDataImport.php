@@ -1534,7 +1534,6 @@ class EPSGCodegenFromDataImport
                 )
             );
         };
-        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/Projected81.php', $data);
         $chunkedData = array_chunk($data, (int) ceil(count($data) / 4), true);
         $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk1.php', $chunkedData[0]);
         $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk2.php', $chunkedData[1]);
