@@ -37,7 +37,7 @@ jobs:
           - "php-coord/datapack-southamerica"
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 2
 
