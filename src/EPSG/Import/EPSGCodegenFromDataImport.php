@@ -33,6 +33,10 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
+use PhpParser\NodeTraverser;
+use PhpParser\NodeVisitor\CloningVisitor;
+use PhpParser\ParserFactory;
+use ReflectionClassConstant;
 use SQLite3;
 
 use function array_map;
@@ -47,23 +51,33 @@ use function file_put_contents;
 use function glob;
 use function implode;
 use function in_array;
+use function is_dir;
 use function lcfirst;
+use function str_contains;
+use function str_ends_with;
 use function str_replace;
+use function strlen;
+use function strtolower;
+use function substr;
 use function ucwords;
 use function unlink;
 use function var_export;
 use function basename;
 use function addcslashes;
 use function preg_replace;
-use function file_exists;
-use function array_chunk;
+use function array_keys;
+use function microtime;
+use function printf;
+use function array_intersect_key;
 use function array_filter;
-use function ceil;
+use function array_intersect;
+use function is_string;
+use function preg_match;
+use function preg_match_all;
 
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
 use const PHP_EOL;
-use const ARRAY_FILTER_USE_KEY;
 
 class EPSGCodegenFromDataImport
 {
@@ -75,425 +89,54 @@ class EPSGCodegenFromDataImport
 
     private Codegen $codeGen;
 
+    private ?array $blacklistedOperationsCache = null;
+
     private const BLACKLISTED_METHODS = [
-        // not implemented yet
-        1070, // Point motion by grid (Canada NTv2_Vel)
-        1085, // Vertical Offset by Grid Interpolation (asc)
-        1113, // Vertical Offset by velocity grid (NRCan byn)
-        1114, // Geographic3D Offset by velocity grid (NRCan byn)
-        1120, // Point motion (geocen) by grid (BGN)
-        1123, // Geographic3D to GravityRelatedHeight (gtg)
-        1124, // Geog3D to Geog2D+GravityRelatedHeight (gtg)
-        1125, // Equi-7
-        1127, // Geographic3D to Depth (gtg)
-        1128, // Geog3D to Geog2D+Depth (gtg)
-        1129, // Vertical Offset by Grid Interpolation (gtg)
-
-        1131, // Geog3D to Geog2D+GravityRelatedHeight
-        1136, // Geographic3D to GravityRelatedHeight
-        1141, // Point motion by grid (NEU domain) (NTv2_Vel)
-        1145, // Geographic2D Offsets by TIN Interpolation (JSON)
-
-        1132, // Coordinate Frame rotation full matrix (geocen)
-        1133, // Coordinate Frame rotation full matrix (geog2d)
-        1140, // Coordinate Frame rotation full matrix (geog3d)
-
         // only distributed as .dll, can't use
         1036, // Cartesian Grid Offsets from Form Function
         1040, // GNTRANS
 
-        // replaced with OSGM15
-        1045, // Geographic3D to GravityRelatedHeight (OSGM02-Ire)
-
-        // replaced by NTv2
-        9614, // NTv1,
-
         // replaced by NADCON5
         9613, // NADCON,
 
-        // replaced by AUSGeoidv2
-        9662, // Geographic3D to GravityRelatedHeight (AUSGeoid98)
-
-        // Replaced by IGN2009
-        1094, // Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
-        9664, // Geographic3D to GravityRelatedHeight (IGN1997)
-
-        // Replaced with a position vector transformation
+        // Exclusively marine
         9620, // Norway Offshore Interpolation
-
-        // Not available for download
         9634, // Maritime Provinces polynomial interpolation
-
-        // exclusively marine
-        1109, // Geographic3D to Depth (Gravsoft)
-        1121, // Geographic3D to Depth (gtx)
-        1116, // Geographic3D to Depth (txt)
-        1110, // Geog3D to Geog2D+Depth (Gravsoft)
-        1122, // Geog3D to Geog2D+Depth (gtx)
-        1115, // Geog3D to Geog2D+Depth (txt)
-
-        // free, but license does not permit redistribution
-        1050, // Geographic3D to GravityRelatedHeight (CI)
-        1091, // Geog3D to Geog2D+GravityRelatedHeight (CI)
-
-        // EGM files are *very* large and not of general use
-        1103, // Geog3D to Geog2D+GravityRelatedHeight (EGM)
-        9661, // Geographic3D to GravityRelatedHeight (EGM)
 
         // Complex, very little accuracy improvement
         1079, // New Zealand Deformation Model
+    ];
 
-        // Complex, only used for converting a couple of ancient Finnish systems
-        1137, // Vertical Offset by TIN Interpolation (JSON)
-        1138, // Cartesian Grid Offsets by TIN Interpolation (JSON)
+    /**
+     * Pipelines that reverse by running their steps backwards. Each step reverses itself, so the
+     * registry's sign-flip must not be applied as well or that step is reversed twice.
+     * A method belongs here when it delegates to a step that reverses by formula while the registry
+     * marks that step's parameters as sign-reversing.
+     */
+    private const METHODS_WHOSE_STEPS_REVERSE_THEMSELVES = [
+        1143 => true, // Position Vector (geocen) & Geocen translations NEU velocities (gtg)
     ];
 
     private const BLACKLISTED_OPERATIONS = [
         // replaced by OSTN15
-        7913, // OSTN97
-        7952, // OSTN02
-        5338, // OSTN02 (NTv2)
-        5339, // OSTN02 (NTv2)
-        7709, // OSTN15 (NTv2)
         7710, // OSTN15 (NTv2)
+        11509, // OSTN15 (NTv2)
 
-        // replaced by OSGM15
-        1039, // OSGM02
-        1040, // OSGM02
-        7952, // OSGM02
-        10021, // OSGM02
-        10022, // OSGM02
-        10023, // OSGM02
-        10024, // OSGM02
-        10025, // OSGM02
-        10026, // OSGM02
-        10027, // OSGM02
-        10028, // OSGM02
-        10029, // OSGM02
-        10030, // OSGM02
-        10031, // OSGM02
-        10032, // OSGM02
-        10033, // OSGM02
-        10034, // OSGM02
-        15956, // OSGM02
+        // Complex, only used for converting a couple of ancient Finland/Norway systems
+        10703, // YKJ to ETRS-TM35FIN TIN
+        10704, // N43 height to N60 height TIN
+        10705, // N60 height to N2000 height TIN
+        10854, // ETRS89 to NGO 1948 TIN
+        11555, // ETRS89-NOR to NGO 1948 TIN
 
-        // Have alternate transforms with better params
-        1046,
-        1050,
-        1055,
-        1056,
-        1061,
-        1067,
-        1073,
-        1075,
-        1081,
-        1083,
-        1084,
-        1085,
-        1088,
-        1089,
-        1090,
-        1091,
-        1092,
-        1093,
-        1094,
-        1109,
-        1113,
-        1124,
-        1125,
-        1127,
-        1128,
-        1131,
-        1148,
-        1150,
-        1156,
-        1163,
-        1169,
-        1189,
-        1192,
-        1195,
-        1196,
-        1197,
-        1198,
-        1199,
-        1226,
-        1242,
-        1247,
-        1248,
-        1279,
-        1227,
-        1228,
-        1230,
-        1253,
-        1255,
-        1277,
-        1315,
-        1318,
-        1319,
-        1323,
-        1326,
-        1327,
-        1333,
-        1438,
-        1446,
-        1536,
-        1537,
-        1538,
-        1556,
-        1561,
-        1562,
-        1569,
-        1586,
-        1592,
-        1597,
-        1615,
-        1622,
-        1652,
-        1682,
-        1684,
-        1685,
-        1686,
-        1687,
-        1764,
-        1776,
-        1797,
-        1801,
-        1813,
-        1814,
-        1815,
-        1816,
-        1817,
-        1818,
-        1820,
-        1821,
-        1822,
-        1823,
-        1824,
-        1825,
-        1832,
-        1833,
-        1852,
-        1859,
-        1861,
-        1863,
-        1887,
-        1903,
-        1904,
-        1909,
-        1910,
-        1913,
-        1914,
-        1916,
-        1956,
-        1968,
-        1969,
-        1970,
-        1971,
-        1972,
-        1973,
-        1974,
-        1975,
-        1976,
-        1977,
-        1978,
-        1979,
-        1980,
-        1981,
-        1982,
-        1983,
-        1984,
-        1986,
-        1990,
-        2575,
-        2780,
-        4064,
-        4065,
-        4066,
-        4068,
-        4290,
-        4477,
-        4560,
-        5024,
-        5027,
-        5033,
-        5036,
-        5078,
-        5191,
-        5194,
-        5249,
-        5376,
-        5470,
-        5485,
-        5590,
-        5622,
-        5630,
-        6142,
-        6143,
-        6192,
-        6195,
-        6196,
-        6281,
-        6283,
-        6284,
-        6285,
-        6286,
-        6287,
-        6288,
-        6289,
-        6291,
-        6292,
-        6293,
-        6294,
-        6295,
-        6296,
-        6297,
-        6298,
-        6299,
-        6300,
-        6302,
-        6304,
-        6306,
-        6389,
-        6872,
-        6889,
-        6891,
-        6898,
-        6901,
-        6902,
-        6914,
-        6938,
-        6940,
-        6942,
-        6998,
-        7002,
-        7003,
-        7004,
-        7442,
-        7443,
-        7704,
-        7814,
-        7893,
-        7898,
-        7940,
-        8366,
-        8695,
-        8696,
-        8822,
-        8828,
-        8830,
-        8832,
-        8834,
-        8842,
-        8844,
-        8846,
-        8850,
-        8852,
-        8853,
-        8883,
-        8884,
-        8887,
-        9020,
-        9021,
-        9022,
-        9023,
-        9024,
-        9025,
-        9026,
-        9027,
-        9079,
-        9080,
-        9081,
-        9082,
-        9083,
-        9263,
-        9686,
-        9688,
-        9689,
-        10086,
-        10099,
-        10085,
-        15484,
-        15493,
-        15495,
-        15705,
-        15706,
-        15714,
-        15716,
-        15718,
-        15720,
-        15722,
-        15724,
-        15726,
-        15728,
-        15741,
-        15750,
-        15751,
-        15755,
-        15798,
-        15811,
-        15814,
-        15829,
-        15830,
-        15881,
-        15848,
-        15874,
-        15877,
-        15882,
-        15883,
-        15884,
-        15885,
-        15886,
-        15901,
-        15902,
-        15903,
-        15904,
-        15927,
-        15937,
-        15938,
-        15952,
-        15970,
-
-        // replaced by RDNAPTRANS2018
-        7000, // NTv2 rdtrans2008.gsb
-
-        // replaced by PENR2009.gsb
-        15932, // NTv2 SPED2ETV2.gsb
-        15933, // NTv2 SPED2ETV2.gsb
+        // replaced by IGN2009
+        10000, // RGF93 v1 to NGF-IGN69 (ggf97a) → 8371 RAF
+        10002, // RGF93 v1 to NGF-IGN78 (ggf97a_corse) → 8372 RAC09
 
         // replaced by all-Australia combination files
         1234, // NTv2 vic_0799.gsb
-        1464, // NTv2 vic_0799.gsb
-        1506, // NTv2 tas_1098.gsb
-        1507, // NTv2 nt_0599.gsb
-        1593, // NTv2 wa_0700.gsb
-        1596, // NTv2 SEAust_21_06_00.gsb
-
-        // replaced by GEOID18
-        6326, // gtx g2012bu0.bin
-        7646, // gtx g2012bp0.bin
-        7647, // gtx g2012bp0.bin
-        9173, // gtx geoid09_conus.bin
-        9168, // gtx geoid03_conus.bin
-        9175, // gtx g2009p01.bin
-        9176, // gtx g2009p01.bin
-        9160, // gtx g1999u01.bin
-        9161, // gtx g1999u02.bin
-        9162, // gtx g1999u03.bin
-        9163, // gtx g1999u04.bin
-        9164, // gtx g1999u05.bin
-        9165, // gtx g1999u06.bin
-        9166, // gtx g1999u07.bin
-        9167, // gtx g1999u08.bin
-
-        // replaced by GEOID12B
-        9170, // gtx g2009s01.bin
-        9171, // gtx g2009g01.bin
-        9172, // gtx g2009g01.bin
-        9174, // gtx geoid09_ak.bin
-        9169, // gtx geoid06_ak.bin
 
         // replaced by RAF20
-        9786, // IGNF RAF18b.mnt
         9787, // IGNF RAF18b.mnt
 
         // replaced by RAF18b
@@ -503,9 +146,6 @@ class EPSGCodegenFromDataImport
         // replaced by RAF18
         8371, // IGNF RAF09.mnt
         9639, // IGNF RAF09.mnt
-
-        // replaced by RASPM2018
-        9137, // IGNF GGSPM06v1.mnt
 
         // approximation/emulation of official transforms
         1295, // NTv2 RGNC1991_NEA74Noumea.gsb
@@ -558,32 +198,51 @@ class EPSGCodegenFromDataImport
         10614, // EGM2008 Und_min2.5x2.5_egm2008_isw=82_WGS84_TideFree.gz
 
         // Not available for public download
-        9305, // GTX INAGEOID20.gtx
+        9305, // GTX INAGEOID2020v1.gtx
         9375, // INADEFORM v3_dm_grd01_xyz.dat
-        9629, // GTX INAGEOID20.gtx
+        11034, // INADEFORM v3_dm_grd01_xyz.dat
+        9629, // GTX INAGEOID2020v1.gtx
         10144, // GTX INAGEOID2020v2.gtx
         10145, // GTX INAGEOID2020v2.gtx
+        11273, // GTX INAGEOID2020v2.gtx
+        11275, // GTX INAGEOID2020v2.gtx
         5626, // KMS fehmarn_geoid10.gri
         9619, // KMS fehmarn_geoid10.gri
-        9598, // KMS gr2000g.gri
         9355, // KMS KSA-GEOID17.gra
         9620, // KMS KSA-GEOID17.gra
-        9940, // NTv2 HeTa2010.gsb
+        10775, // KMS KSA-GEOID21.gra
+        10776, // KMS KSA-GEOID21.gra
         9979, // NTv2 SIRGAS1995-to-SIRGAS2000.gsb
         9980, // NTv2 SIRGAS2000-to-SIRGAS-CONSIR17P01.gsb
-        10106, // BIN arcgp-2006-sk.bin
-        10107, // BIN arcgp-2006-sk.bin
-        10319, // RANC15.tac inside Circe-NC allegedly, but I can't get it out
-        10320, // RANC15.tac inside Circe-NC allegedly, but I can't get it out
-        10322, // gr3dncl08.tac inside Circe-NC allegedly, but I can't get it out
         10368, // KNGeoid18.gri
         10369, // KNGeoid18.gri
-        10663, // hu_sgo_hd72corr.gsb
+        10663, // NTv2 hu_sgo_hd72corr.gsb
+        11538, // NTv2 hu_sgo_hd72corr.gsb
+        10661, // GTG hu_sgo_vitel2014.tif
+        10662, // GTG hu_sgo_vitel2014.tif
+        11534, // GTG hu_sgo_vitel2014.tif
+        11535, // GTG hu_sgo_vitel2014.tif
+        10964, // NTv2 qazgrid_kz.gsb
+        11433, // NTv2 gr3dpf25.gsb
+        10866, // TXT SEPARATION.TXT
+        10867, // TXT SEPARATION.TXT
+        4566, // TXT ggg00_ld.txt
+        5507, // TXT gg10_ld.txt
 
         // Construction/engineering/scientific projects not of general use
+        9304, // OSNet v2009 to HS2-VRF height (HS2GM15W.grd)
         9363, // IGNF ARAMCO_AAA-KSAGRF_6.tac
+        10990, // OSNet v2009 to London Survey Grid height (LSGGM2025.grd)
+        10998, // OSNet v2009 to OSNet v2009 + LSG height (LSGGM2025.grd)
+        11467, // NTv2 TN15-ETRS89-to-SZCTW-IRF.gsb
 
-        // free, but license does not permit redistribution
+        // free to download, no license to permit redistribution
+        6138, // Cayman GCGM0811.TXT
+        6139, // Cayman LCGM0811.TXT
+        6140, // Cayman CBGM0811.TXT
+        9602, // Cayman CBGM0811.TXT compound
+        9603, // Cayman GCGM0811.TXT compound
+        9604, // Cayman LCGM0811.TXT compound
         9112, // NTv2 BC_27_98.GSB
         9114, // NTv2 NVI27_05.GSB
         9116, // NTv2 BC_93_98.GSB
@@ -591,8 +250,6 @@ class EPSGCodegenFromDataImport
         9121, // NTv2 NVI98_05.GSB
         9122, // NTv2 BC_98_05.GSB
         9496, // NTv2 MGI1901_TO_SRBETRS89_NTv2.gsb
-        8269, // KMS ggeoid16.gri
-        9599, // KMS ggeoid16.gri
         9553, // ASC pt_2019z.asc
         9554, // ASC pt_2019m.asc
         9555, // ASC de_2019z.asc
@@ -644,6 +301,13 @@ class EPSGCodegenFromDataImport
         9921, // ASC it_2019m.asc
         7655, // PNG08.DAT
         10615, // NTv2 BC_98_05.GSB
+        10822, // ASC ch_2019z.asc
+        10823, // ASC ch_2019m.asc
+        12207, // dE_2km_V1.0.grd, dN_2km_V1.0.grd
+        11337, // NTv2 d03tod23.gsb
+        11339, // GTX drukgeoid2022.gtx
+        11384, // GTX drukgeoid2022.gtx
+        11203, // NTv2 R16_to_R25.gsb
 
         // license requires money :((
         9732, // NTv2 35160622_47161840_R40_E50.gsb
@@ -656,6 +320,10 @@ class EPSGCodegenFromDataImport
         9728, // GRD geo_igm_mar06.grd
         9729, // GRD geo_igm_mar06.grd
         9730, // GRD geo_igm_mar06.grd
+        12246, // GRD geo_igm_mar06.grd
+        12247, // GRD geo_igm_mar06.grd
+        12249, // GRD geo_igm_mar06.grd
+        12250, // GRD geo_igm_mar06.grd
         10152, // TXT VORF-UK08_ETRF_to_MSL.vrf
         10153, // TXT VORF-UK08_ETRF_to_CD.vrf
         10154, // TXT VORF-UK08_ETRF_to_MSL.vrf
@@ -678,7 +346,9 @@ class EPSGCodegenFromDataImport
         1271, // Engineering survey and mapping for the Trans-Europe Lyon-Turin (TELT) railway project.
         1285, // Engineering survey and mapping for the Brenner base tunnel (BBT) railway project.
         1286, // Mapping and data analysis for Texas Water Development Board groundwater modeling.
+        1291, // Reference surface for depths in BSHC offshore products for the Baltic Sea.
         1293, // Engineering survey and topographic mapping related to the Woodsmith mine project.
+        1297, // Engineering survey and topographic mapping for transport applications.
     ];
 
     public function __construct()
@@ -697,6 +367,11 @@ class EPSGCodegenFromDataImport
             SQLITE3_OPEN_READONLY
         );
         $this->extentDB->enableExceptions(true);
+    }
+
+    public function getCodegen(): Codegen
+    {
+        return $this->codeGen;
     }
 
     public function generateDataUnitsOfMeasure(): void
@@ -728,14 +403,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/UnitOfMeasure/Angle/Angle.php',
-            $data,
-            'public',
-            [
-            ]
-        );
-        $this->codeGen->updateDocs(Angle::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Angle/Angle.php', $data, 'public');
+        $this->codeGen->updateDocs(Angle::class, $data, $constants);
 
         $sql = "
             SELECT
@@ -765,8 +434,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Length::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Length/Length.php', $data, 'public');
+        $this->codeGen->updateDocs(Length::class, $data, $constants);
 
         $sql = "
             SELECT
@@ -796,8 +465,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Scale::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Scale/Scale.php', $data, 'public');
+        $this->codeGen->updateDocs(Scale::class, $data, $constants);
 
         $sql = "
             SELECT
@@ -826,8 +495,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Time::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Time/Time.php', $data, 'public');
+        $this->codeGen->updateDocs(Time::class, $data, $constants);
 
         $sql = "
             SELECT
@@ -856,8 +525,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/UnitOfMeasure/Rate.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Rate::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/Rate.php', $data, 'public');
+        $this->codeGen->updateDocs(Rate::class, $data, $constants);
 
         $sql = "
             SELECT
@@ -885,7 +554,7 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public', []);
+        $this->codeGen->updateFileConstants($this->sourceDir . '/UnitOfMeasure/UnitOfMeasure.php', $data, 'public');
     }
 
     public function generateDataPrimeMeridians(): void
@@ -913,8 +582,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/Datum/PrimeMeridian.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public', []);
-        $this->codeGen->updateDocs(PrimeMeridian::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/Datum/PrimeMeridian.php', $data, 'public');
+        $this->codeGen->updateDocs(PrimeMeridian::class, $data, $constants);
     }
 
     public function generateDataEllipsoids(): void
@@ -949,8 +618,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/Datum/Ellipsoid.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Ellipsoid::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/Datum/Ellipsoid.php', $data, 'public');
+        $this->codeGen->updateDocs(Ellipsoid::class, $data, $constants);
     }
 
     public function generateDataDatums(): void
@@ -969,11 +638,13 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
                 d.origin_description || '\n' || d.remarks AS doc_help,
-                d.deprecated
+                d.deprecated,
+                de.ensemble_accuracy
             FROM epsg_datum d
             JOIN epsg_usage u ON u.object_table_name = 'epsg_datum' AND u.object_code = d.datum_code
             JOIN epsg_extent e ON u.extent_code = e.extent_code
             LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_datum' AND dep.object_code = d.datum_code AND dep.deprecation_date <= '2021-09-10'
+            LEFT JOIN epsg_datumensemble de ON de.datum_ensemble_code = d.datum_code
             WHERE dep.deprecation_id IS NULL AND d.datum_type != 'engineering' AND d.datum_name NOT LIKE '%example%'
             GROUP BY d.datum_code
             ORDER BY name
@@ -998,32 +669,16 @@ class EPSGCodegenFromDataImport
                 while ($ensembleRow = $ensembleResult->fetchArray(SQLITE3_ASSOC)) {
                     $row['ensemble'][] = $ensembleRow['datum'];
                 }
+                $row['datum_accuracy'] = $row['ensemble_accuracy'] ?? null;
+                unset($row['ensemble_accuracy']);
             }
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/Datum/Datum.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/Datum/Datum.php',
-            $data,
-            'public',
-            [
-                Datum::EPSG_LUXEMBOURG_REFERENCE_FRAME => ['Luxembourg 1930'],
-                Datum::EPSG_NIVELLEMENT_GENERAL_DU_LUXEMBOURG_1995 => ['Nivellement General du Luxembourg'],
-                Datum::EPSG_CANADIAN_GEODETIC_VERTICAL_DATUM_OF_2013_CGG2013A_EPOCH_2010 => ['Canadian Geodetic Vertical Datum of 2013 (CGG2013a)'],
-                Datum::EPSG_INDONESIAN_GEOID_2020_VERSION_1 => ['Indonesian Geoid 2020'],
-                Datum::EPSG_LATVIAN_GEODETIC_COORDINATE_SYSTEM_1992 => ['Latvia 1992'],
-                Datum::EPSG_KOREAN_VERTICAL_DATUM_1964 => ['Incheon'],
-                Datum::EPSG_KOREAN_GEODETIC_DATUM_2002 => ['Geocentric datum of Korea'],
-                Datum::EPSG_CAIS_DA_FIGUEIRINHA => ['Cais da Figueirinha - Angra do Heroismo'],
-                Datum::EPSG_CAIS_DA_PONTINHA => ['Cais da Pontinha - Funchal'],
-                Datum::EPSG_CAIS_DA_VILA => ['Cais da Vila - Porto Santo'],
-                Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_2000 => ['Dansk Vertikal Reference 1990'],
-                Datum::EPSG_QOORNOQ_1927 => ['Qornoq 1927'],
-            ]
-        );
-        $this->codeGen->updateDocs(Datum::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/Datum/Datum.php', $data, 'public');
+        $this->codeGen->updateDocs(Datum::class, $data, $constants);
     }
 
     public function generateDataCoordinateSystems(): void
@@ -1074,8 +729,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Cartesian::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/Cartesian.php', $data, 'public');
+        $this->codeGen->updateDocs(Cartesian::class, $data, $constants);
 
         /*
          * ellipsoidal
@@ -1123,8 +778,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public', []);
-        $this->codeGen->updateDocs(Ellipsoidal::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/Ellipsoidal.php', $data, 'public');
+        $this->codeGen->updateDocs(Ellipsoidal::class, $data, $constants);
 
         /*
          * vertical
@@ -1172,8 +827,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateSystem/Vertical.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public', []);
-        $this->codeGen->updateDocs(VerticalCS::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/Vertical.php', $data, 'public');
+        $this->codeGen->updateDocs(VerticalCS::class, $data, $constants);
 
         /*
          * other
@@ -1221,7 +876,7 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data);
-        $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public', []);
+        $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateSystem/CoordinateSystem.php', $data, 'public');
     }
 
     public function generateDataCoordinateReferenceSystems(): void
@@ -1264,20 +919,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CompoundSRIDData.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/Compound.php',
-            $data,
-            'public',
-            [
-                Compound::EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT => ['NAD83(CSRS) + CGVD2013 height'],
-                Compound::EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS) / UTM zone 15N + CGVD2013a height'],
-                Compound::EPSG_NAD83_CSRS_V6_PLUS_CGVD2013A_2010_HEIGHT => ['NAD83(CSRS)v6 + CGVD2013(CGG2013a) height'],
-                Compound::EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT => ['SRGI2013 + INAGeoid2020 height'],
-                Compound::EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT => ['ETRS89 / TM35FIN(N,E) + N60 height'],
-                Compound::EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT => ['ETRS89 / TM35FIN(N,E) + N2000 height'],
-            ]
-        );
-        $this->codeGen->updateDocs(Compound::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Compound.php', $data, 'public');
+        $this->codeGen->updateDocs(Compound::class, $data, $constants);
 
         /*
          * geocentric
@@ -1316,16 +959,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/GeocentricSRIDData.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php',
-            $data,
-            'public',
-            [
-                Geocentric::EPSG_LKS_92 => ['LKS92'],
-                Geocentric::EPSG_KGD2002 => ['Korea 2000'],
-            ]
-        );
-        $this->codeGen->updateDocs(Geocentric::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geocentric.php', $data, 'public');
+        $this->codeGen->updateDocs(Geocentric::class, $data, $constants);
 
         /*
          * geographic 2D
@@ -1365,19 +1000,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic2DSRIDData.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php',
-            $data,
-            'public',
-            [
-                Geographic2D::EPSG_LUREF => ['Luxembourg 1930'],
-                Geographic2D::EPSG_LKS_92 => ['LKS92'],
-                Geographic2D::EPSG_KGD2002 => ['Korea 2000'],
-                Geographic2D::EPSG_CH1903_BERN => ['Bern 1898 (Bern)'],
-                Geographic2D::EPSG_QOORNOQ_1927 => ['Qornoq 1927'],
-            ]
-        );
-        $this->codeGen->updateDocs(Geographic2D::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic2D.php', $data, 'public');
+        $this->codeGen->updateDocs(Geographic2D::class, $data, $constants);
 
         /*
          * geographic 3D
@@ -1417,16 +1041,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/Geographic3DSRIDData.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php',
-            $data,
-            'public',
-            [
-                Geographic3D::EPSG_LKS_92 => ['LKS92'],
-                Geographic3D::EPSG_KGD2002 => ['Korea 2000'],
-            ]
-        );
-        $this->codeGen->updateDocs(Geographic3D::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Geographic3D.php', $data, 'public');
+        $this->codeGen->updateDocs(Geographic3D::class, $data, $constants);
 
         /*
          * projected
@@ -1467,80 +1083,60 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedSRIDData.php', $data);
-        $updateProjectionData = function ($filename, $data): void {
-            $this->codeGen->updateFileConstants(
-                $filename,
-                $data,
-                'public',
-                array_filter(
-                    [
-                        Projected::EPSG_LUREF_LUXEMBOURG_TM => ['Luxembourg 1930 / Gauss'],
-                        Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 4'],
-                        Projected::EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 => ['NAD83(CSRS)v6 / MTM Nova Scotia zone 5'],
-                        Projected::EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS => ['NAD83(CSRS) / Quebec Albers'],
-                        Projected::EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT => ['NAD83(CSRS) / Quebec Lambert'],
-                        Projected::EPSG_LKS_92_LATVIA_TM => ['LKS92 / Latvia TM'],
-                        Projected::EPSG_KGD2002_CENTRAL_BELT => ['Korea 2000 / Central Belt'],
-                        Projected::EPSG_KGD2002_CENTRAL_BELT_2010 => ['Korea 2000 / Central Belt 2010'],
-                        Projected::EPSG_KGD2002_CENTRAL_BELT_JEJU => ['Korea 2000 / Central Belt Jeju'],
-                        Projected::EPSG_KGD2002_EAST_BELT => ['Korea 2000 / East Belt'],
-                        Projected::EPSG_KGD2002_EAST_BELT_2010 => ['Korea 2000 / East Belt 2010'],
-                        Projected::EPSG_KGD2002_EAST_SEA_BELT => ['Korea 2000 / East Sea Belt'],
-                        Projected::EPSG_KGD2002_EAST_SEA_BELT_2010 => ['Korea 2000 / East Sea Belt 2010'],
-                        Projected::EPSG_KGD2002_UNIFIED_CS => ['Korea 2000 / Unified CS'],
-                        Projected::EPSG_KGD2002_WEST_BELT => ['Korea 2000 / West Belt'],
-                        Projected::EPSG_KGD2002_WEST_BELT_2010 => ['Korea 2000 / West Belt 2010'],
-                        Projected::EPSG_CH1903_BERN_LV03C => ['Bern 1898 (Bern) / LV03C'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK19FIN => ['ETRS89 / ETRS-GK19FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK20FIN => ['ETRS89 / ETRS-GK20FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK21FIN => ['ETRS89 / ETRS-GK21FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK22FIN => ['ETRS89 / ETRS-GK22FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK23FIN => ['ETRS89 / ETRS-GK23FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK24FIN => ['ETRS89 / ETRS-GK24FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK25FIN => ['ETRS89 / ETRS-GK25FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK26FIN => ['ETRS89 / ETRS-GK26FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK27FIN => ['ETRS89 / ETRS-GK27FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK28FIN => ['ETRS89 / ETRS-GK28FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK29FIN => ['ETRS89 / ETRS-GK29FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK30FIN => ['ETRS89 / ETRS-GK30FIN'],
-                        Projected::EPSG_EUREF_FIN_ETRS_GK31FIN => ['ETRS89 / ETRS-GK31FIN'],
-                        Projected::EPSG_EUREF_FIN_GK19FIN => ['ETRS89 / GK19FIN'],
-                        Projected::EPSG_EUREF_FIN_GK20FIN => ['ETRS89 / GK20FIN'],
-                        Projected::EPSG_EUREF_FIN_GK21FIN => ['ETRS89 / GK21FIN'],
-                        Projected::EPSG_EUREF_FIN_GK22FIN => ['ETRS89 / GK22FIN'],
-                        Projected::EPSG_EUREF_FIN_GK23FIN => ['ETRS89 / GK23FIN'],
-                        Projected::EPSG_EUREF_FIN_GK24FIN => ['ETRS89 / GK24FIN'],
-                        Projected::EPSG_EUREF_FIN_GK25FIN => ['ETRS89 / GK25FIN'],
-                        Projected::EPSG_EUREF_FIN_GK26FIN => ['ETRS89 / GK26FIN'],
-                        Projected::EPSG_EUREF_FIN_GK27FIN => ['ETRS89 / GK27FIN'],
-                        Projected::EPSG_EUREF_FIN_GK28FIN => ['ETRS89 / GK28FIN'],
-                        Projected::EPSG_EUREF_FIN_GK29FIN => ['ETRS89 / GK29FIN'],
-                        Projected::EPSG_EUREF_FIN_GK30FIN => ['ETRS89 / GK30FIN'],
-                        Projected::EPSG_EUREF_FIN_GK31FIN => ['ETRS89 / GK31FIN'],
-                        Projected::EPSG_EUREF_FIN_TM35FIN_E_N => ['ETRS89 / TM35FIN(E,N)'],
-                        Projected::EPSG_EUREF_FIN_TM35FIN_N_E => ['ETRS89 / TM35FIN(N,E)'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST => ['Qornoq 1927 / Greenland zone 2 west'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST => ['Qornoq 1927 / Greenland zone 3 west'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST => ['Qornoq 1927 / Greenland zone 4 west'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST => ['Qornoq 1927 / Greenland zone 5 west'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST => ['Qornoq 1927 / Greenland zone 6 west'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST => ['Qornoq 1927 / Greenland zone 7 west'],
-                        Projected::EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 => ['Qornoq 1927 / Greenland zone 8 east'],
-                        Projected::EPSG_QOORNOQ_1927_UTM_ZONE_22N => ['Qornoq 1927 / UTM zone 22N'],
-                        Projected::EPSG_QOORNOQ_1927_UTM_ZONE_23N => ['Qornoq 1927 / UTM zone 23N'],
-                    ],
-                    static fn ($urn) => isset($data[$urn]),
-                    ARRAY_FILTER_USE_KEY
-                )
-            );
-        };
-        $chunkedData = array_chunk($data, (int) ceil(count($data) / 4), true);
-        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk1.php', $chunkedData[0]);
-        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk2.php', $chunkedData[1]);
-        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk3.php', $chunkedData[2]);
-        $updateProjectionData($this->sourceDir . '/CoordinateReferenceSystem/ProjectedConstantsChunk4.php', $chunkedData[3]);
 
-        $this->codeGen->updateDocs(Projected::class, $data);
+        $projectedPath = $this->sourceDir . '/CoordinateReferenceSystem/Projected.php';
+
+        /*
+         * Because Projected constants are artificially split across multiple trait files
+         * (for PHPStorm autocompletion performance), we use a three-phase approach that
+         * keeps all the special chunking knowledge isolated here:
+         *
+         * 1. Pre-step: Inline all EPSG_* constants from the chunk traits into Projected.php
+         *    so it looks like a normal single-file class to the core logic.
+         * 2. Core: Run the normal updateFileConstants (with full alias harvesting) against
+         *    Projected.php exactly like we do for any other class (Datum, etc.).
+         * 3. Post-step: Extract the (new + aliased) constants back out of Projected.php,
+         *    repartition them, write the 4 chunk trait files, and restore Projected.php
+         *    to its clean state containing only `use` statements.
+         *
+         * This means the core aliasing / constant generation logic never needs to know
+         * that Projected is chunked.
+         */
+
+        // Phase 1: Inline constants from the current chunk files into Projected.php
+        $parser = (new ParserFactory())->createForNewestSupportedVersion();
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new CloningVisitor());
+        $stmts = $traverser->traverse($parser->parse(file_get_contents($projectedPath)));
+
+        $inlineVisitor = new InlineProjectedConstantsVisitor($this->sourceDir);
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor($inlineVisitor);
+        $stmts = $traverser->traverse($stmts);
+
+        // Write the temporarily expanded version so updateFileConstants can work on it
+        $prettyPrinter = new ASTPrettyPrinter();
+        file_put_contents($projectedPath, $prettyPrinter->prettyPrintFile($stmts));
+
+        // Phase 2: Normal single-file processing (all alias logic works as usual)
+        $constants = $this->codeGen->updateFileConstants($projectedPath, $data, 'public');
+
+        // Phase 3: Extract constants back out, chunk them, write the trait files,
+        // and clean up Projected.php to contain only the trait uses again.
+        $stmts = $parser->parse(file_get_contents($projectedPath));
+
+        $extractVisitor = new ExtractAndChunkProjectedConstantsVisitor(
+            $this->sourceDir,
+            4
+        );
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor($extractVisitor);
+        $stmts = $traverser->traverse($stmts);
+
+        // Write the cleaned Projected.php (should now only have the use statements)
+        file_put_contents($projectedPath, $prettyPrinter->prettyPrintFile($stmts));
+
+        $this->codeGen->updateDocs(Projected::class, $data, $constants);
 
         /*
          * vertical
@@ -1580,21 +1176,8 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/VerticalSRIDData.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/Vertical.php',
-            $data,
-            'public',
-            [
-                Vertical::EPSG_NG95_HEIGHT => ['NG-L height'],
-                Vertical::EPSG_CGVD2013A_2010_HEIGHT => ['CGVD2013(CGG2013a) height'],
-                Vertical::EPSG_INAGEOID2020_V1_HEIGHT => ['INAGeoid2020 height'],
-                Vertical::EPSG_KVD1964_HEIGHT => ['Incheon height'],
-                Vertical::EPSG_CAIS_DA_FIGUEIRINHA_HEIGHT => ['Cais da Figueirinha - Angra do Heroismo height'],
-                Vertical::EPSG_CAIS_DA_PONTINHA_HEIGHT => ['Cais da Pontinha - Funchal height'],
-                Vertical::EPSG_CAIS_DA_VILA_HEIGHT => ['Cais da Vila - Porto Santo height'],
-            ]
-        );
-        $this->codeGen->updateDocs(Vertical::class, $data);
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/Vertical.php', $data, 'public');
+        $this->codeGen->updateDocs(Vertical::class, $data, $constants);
 
         /*
          * other
@@ -1631,12 +1214,7 @@ class EPSGCodegenFromDataImport
         }
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data);
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php',
-            $data,
-            'public',
-            []
-        );
+        $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateReferenceSystem/CoordinateReferenceSystem.php', $data, 'public');
 
         $crsCount = count(CoordinateReferenceSystem::getSupportedSRIDs());
         file_put_contents($this->sourceDir . '/../docs/reflection/numOfCRS.txt', implode("\n", ['.. |numOfCRS| replace:: ' . $crsCount]));
@@ -1686,20 +1264,19 @@ class EPSGCodegenFromDataImport
             $paramResult = $this->dataDB->query($sql);
             while ($paramRow = $paramResult->fetchArray(SQLITE3_ASSOC)) {
                 $paramName = self::makeParamName($paramRow['parameter_name']);
+                $reverses = isset(self::METHODS_WHOSE_STEPS_REVERSE_THEMSELVES[(int) $row['method_code']])
+                    ? false
+                    : (bool) $paramRow['reverses'];
                 $data[$row['urn']]['paramData'][$paramName] = [
-                    'reverses' => (bool) $paramRow['reverses'],
+                    'reverses' => $reverses,
                 ];
             }
         }
 
-        $this->codeGen->updateFileConstants(
-            $this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php',
-            $data,
-            'public',
-            []
-        );
+        $constants = $this->codeGen->updateFileConstants($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data, 'public');
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CoordinateOperationMethods.php', $data);
-        $this->codeGen->updateDocs(CoordinateOperationMethods::class, $data);
+        $implemented = (new ReflectionClassConstant(CoordinateOperationMethods::class, 'METHOD_CODE_TO_IMPLEMENTATION_LOOKUP'))->getValue();
+        $this->codeGen->updateDocs(CoordinateOperationMethods::class, array_intersect_key($data, $implemented), $constants);
     }
 
     public function generateDataCoordinateOperations(): void
@@ -1765,6 +1342,8 @@ class EPSGCodegenFromDataImport
             unset($row['extent']);
             $byRegion[$regions[0]][] = $row;
         }
+
+        $byRegion[RegionMap::REGION_EUROPE] = [...($byRegion[RegionMap::REGION_EUROPE] ?? []), ...$this->etrs89EnsembleMemberAliasTransformations()];
 
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsGlobal.php', $byRegion[RegionMap::REGION_GLOBAL]);
         $this->codeGen->updateFileData($this->sourceDir . '/CoordinateOperation/CRSTransformationsAfrica.php', $byRegion[RegionMap::REGION_AFRICA]);
@@ -1842,6 +1421,8 @@ class EPSGCodegenFromDataImport
         $paramsSeen = [];
         foreach ($data as $operation => $operationData) {
             $params = [];
+            // The point methods do not take these, so they are left out of the generated parameter files.
+            // They name an interpolation CRS, or an operation a grid reverse could call instead of iterating.
             $paramsSql = "
                     SELECT
                         'urn:ogc:def:coordinateOperation:EPSG::' || pv.coord_op_code AS operation_code,
@@ -1852,7 +1433,7 @@ class EPSGCodegenFromDataImport
                         CASE WHEN pu.param_sign_reversal = 'Yes' THEN 1 ELSE 0 END AS reverses
                     FROM epsg_coordoperationparamvalue pv
                     JOIN epsg_coordoperationparamusage pu ON pv.coord_op_method_code = pu.coord_op_method_code AND pv.parameter_code = pu.parameter_code
-                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code AND p.parameter_code NOT IN (1048, 1062)
+                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code AND p.parameter_code NOT IN (1048, 1062, 1070, 1071)
                     WHERE operation_code = '{$operation}'
                     GROUP BY pv.coord_op_code, p.parameter_code
                     ORDER BY pu.sort_order
@@ -1868,23 +1449,36 @@ class EPSGCodegenFromDataImport
                 } elseif (in_array($paramsRow['parameter_code'], [1062], true)) {
                     $paramsRow['value'] = 'urn:ogc:def:coordinateOperation:EPSG::' . $paramsRow['value'];
                 }
+                // A grid file parameter must name a provider. An unsourced file is blacklisted instead of exported as a filename.
                 if (
-                    isset($filenameToProviderMap[(string) $paramsRow['value']])
-                    && in_array(
+                    in_array(
                         $paramsRow['name'],
                         [
                             'eastingAndNorthingDifferenceFile',
+                            'eastingDifferenceFile',
                             'geoidHeightCorrectionModelFile',
                             'geoidModelDifferenceFile',
                             'latitudeDifferenceFile',
                             'longitudeDifferenceFile',
                             'ellipsoidalHeightDifferenceFile',
+                            'maritimeProvinceResidualFile',
+                            'northingDifferenceFile',
                             'offsetsFile',
+                            'pointMotionDisplacementEastGridFile',
+                            'pointMotionDisplacementNorthGridFile',
+                            'pointMotionDisplacementUpGridFile',
+                            'pointMotionVelocityGridFile',
+                            'tINOffsetFile',
                         ],
                         true
                     )
+                    && $paramsRow['value']
                 ) {
-                    $paramsRow['value'] = $filenameToProviderMap[$paramsRow['value']];
+                    $filename = (string) $paramsRow['value'];
+                    if (!isset($filenameToProviderMap[$filename])) {
+                        throw new Exception($filename . ' has no entry in FilenameToProviderMap (' . $operation . ')');
+                    }
+                    $paramsRow['value'] = $filenameToProviderMap[$filename];
                     unset($paramsRow['uom']);
                 }
                 unset($paramsRow['parameter_code']);
@@ -1895,20 +1489,33 @@ class EPSGCodegenFromDataImport
                 $params['ellipsoidalHeightDifferenceFile'] = ['value' => null];
             }
 
-            $output = "<?php use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;\n/** @internal */ return [\n";
-            foreach ($params as $paramName => $paramData) {
-                $output .= "  '{$paramName}' => ";
-                if (isset($paramData['uom']) && $paramData['uom']) {
-                    $output .= 'UnitOfMeasureFactory::makeUnit(' . var_export($paramData['value'], true) . ', ' . var_export($paramData['uom'], true) . "),\n";
-                } else {
-                    $output .= var_export($paramData['value'], true) . ",\n";
+            $needsUnitOfMeasureFactory = false;
+            foreach ($params as $paramData) {
+                if (!empty($paramData['uom'])) {
+                    $needsUnitOfMeasureFactory = true;
+                    break;
                 }
             }
-            $output .= '];';
+
+            $output = "<?php\n\n/**\n * PHPCoord.\n *\n * @author Doug Wright\n */\ndeclare(strict_types=1);\n";
+            if ($needsUnitOfMeasureFactory) {
+                $output .= "use PHPCoord\\UnitOfMeasure\\UnitOfMeasureFactory;\n\n";
+            } else {
+                $output .= "\n";
+            }
+            $output .= "/** @internal */ return [\n";
+            foreach ($params as $paramName => $paramData) {
+                $output .= "    '{$paramName}' => ";
+                if (isset($paramData['uom']) && $paramData['uom']) {
+                    $output .= 'UnitOfMeasureFactory::makeUnit(' . self::exportParamValue($paramData['value']) . ', ' . var_export($paramData['uom'], true) . "),\n";
+                } else {
+                    $output .= self::exportParamValue($paramData['value']) . ",\n";
+                }
+            }
+            $output .= "];\n";
 
             $paramFilename = $this->sourceDir . '/CoordinateOperation/Params/' . str_replace(':', '', str_replace('urn:ogc:def:coordinateOperation:', '', $operation)) . '.php';
             file_put_contents($paramFilename, $output);
-            $this->codeGen->csFixFile($paramFilename);
             $paramsSeen[$paramFilename] = $paramFilename;
         }
 
@@ -1919,6 +1526,143 @@ class EPSGCodegenFromDataImport
             }
         }
         $this->codeGen->generateSupportedOperations();
+        $this->removeUnusedDatapackFiles();
+    }
+
+    /**
+     * A datapack resource stays when a provider class named by a generated operation,
+     * by other library code, or by a test loads that file.
+     */
+    private function removeUnusedDatapackFiles(): void
+    {
+        echo 'Removing unused datapack files...';
+
+        $usedProviders = $this->providerNamesInUse();
+        $keptResources = [];
+        $removedProviders = [];
+
+        foreach (RegionMap::PACKAGES as $package) {
+            if ($package === 'php-coord/php-coord') {
+                continue;
+            }
+            $installPath = InstalledVersions::getInstallPath($package);
+            if (!$installPath) {
+                continue;
+            }
+
+            foreach (glob($installPath . '/src/CoordinateOperation/*Provider.php') ?: [] as $providerFile) {
+                $class = basename($providerFile, '.php');
+                $source = file_get_contents($providerFile);
+                preg_match_all("/resources\\/([^'\"]+)/", $source, $matches);
+                if (isset($usedProviders[$class])) {
+                    foreach ($matches[1] as $resource) {
+                        $keptResources[strtolower(str_replace('\\', '/', $resource))] = true;
+                    }
+                    continue;
+                }
+                unlink($providerFile);
+                $removedProviders[$class] = true;
+                echo PHP_EOL . '  ' . $package . ' ' . $class;
+            }
+
+            $resourceRoot = str_replace('\\', '/', $installPath . '/resources/');
+            foreach ($this->filesUnder($installPath . '/resources') as $resourceFile) {
+                $relative = substr(str_replace('\\', '/', $resourceFile), strlen($resourceRoot));
+                if (isset($keptResources[strtolower($relative)])) {
+                    continue;
+                }
+                unlink($resourceFile);
+                echo PHP_EOL . '  ' . $package . ' ' . $relative;
+            }
+        }
+
+        if ($removedProviders) {
+            $this->removeProviderMapEntries(array_keys($removedProviders));
+        }
+
+        echo PHP_EOL . 'done' . PHP_EOL;
+    }
+
+    /**
+     * @return array<string, true>
+     */
+    private function providerNamesInUse(): array
+    {
+        $names = [];
+        $directories = [
+            $this->sourceDir,
+            dirname($this->sourceDir) . '/tests',
+        ];
+        foreach (RegionMap::PACKAGES as $package) {
+            if ($package === 'php-coord/php-coord') {
+                continue;
+            }
+            $tests = InstalledVersions::getInstallPath($package) . '/tests';
+            if (is_dir($tests)) {
+                $directories[] = $tests;
+            }
+        }
+
+        foreach ($directories as $directory) {
+            foreach ($this->filesUnder($directory) as $path) {
+                if (!str_ends_with($path, '.php')) {
+                    continue;
+                }
+                $normalised = str_replace('\\', '/', $path);
+                if (str_contains($normalised, '/EPSG/Import/')) {
+                    continue;
+                }
+                $source = file_get_contents($path);
+                if (!preg_match_all('/([A-Za-z0-9]+Provider)/', $source, $matches)) {
+                    continue;
+                }
+                foreach ($matches[1] as $name) {
+                    $names[$name] = true;
+                }
+            }
+        }
+
+        return $names;
+    }
+
+    /**
+     * @param list<string> $classNames
+     */
+    private function removeProviderMapEntries(array $classNames): void
+    {
+        $path = $this->sourceDir . '/EPSG/Import/FilenameToProviderMap.php';
+        $contents = file_get_contents($path);
+        foreach ($classNames as $className) {
+            $contents = preg_replace(
+                '/^.*CoordinateOperation\\\\' . $className . '::class.*\R/m',
+                '',
+                $contents
+            );
+        }
+        file_put_contents($path, $contents);
+    }
+
+    /**
+     * @return list<string>
+     */
+    private function filesUnder(string $directory): array
+    {
+        if (!is_dir($directory)) {
+            return [];
+        }
+
+        $files = [];
+        foreach (glob($directory . '/*') ?: [] as $path) {
+            if (is_dir($path)) {
+                foreach ($this->filesUnder($path) as $nested) {
+                    $files[] = $nested;
+                }
+                continue;
+            }
+            $files[] = $path;
+        }
+
+        return $files;
     }
 
     public function generateExtents(): void
@@ -1977,31 +1721,36 @@ class EPSGCodegenFromDataImport
             }
         }
 
-        foreach ($extents as $extentCode => $extent) {
+        $sql = '
+            SELECT extent_code, bbox, buffered
+            FROM extent
+            WHERE extent_code IN (' . implode(',', array_keys($extents)) . ')
+        ';
+        $result = $this->extentDB->query($sql);
+
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $extentCode = (int) $row['extent_code'];
+            $extent = $extents[$extentCode];
+
             $region = RegionMap::EXTENTS[$extent['extent_urn']];
 
-            $bboxGeoJSON = $this->extentDB->querySingle("SELECT bbox FROM extent WHERE extent_code = {$extentCode}");
+            $bboxGeoJSON = $row['bbox'];
             $bboxGeoJSON = $this->addMetaDataToGeoJSON($bboxGeoJSON, $extent['extent_urn'], "{$region}/{$extent['extent_name']}");
             $bboxGeoJSON = GeoJSON::format($bboxGeoJSON);
 
-            $bufferedGeoJSON = $this->extentDB->querySingle("SELECT buffered FROM extent WHERE extent_code = {$extentCode}");
+            $bufferedGeoJSON = $row['buffered'];
             $bufferedGeoJSON = $this->addMetaDataToGeoJSON($bufferedGeoJSON, $extent['extent_urn'], "{$region}/{$extent['extent_name']}");
             $bufferedGeoJSON = GeoJSON::format($bufferedGeoJSON);
+
             $baseDir = InstalledVersions::getInstallPath(RegionMap::PACKAGES[$region]) . '/src/Geometry/Extents/';
 
             $bufferedFilename = $baseDir . "{$extentCode}.json";
             $bboxFilename = $boundingBoxOnly . "{$extentCode}.json";
-            if (!file_exists($bufferedFilename) || file_get_contents($bufferedFilename) !== $bufferedGeoJSON) {
-                file_put_contents($bufferedFilename, $bufferedGeoJSON);
-            }
-            switch ($region) {
-                case RegionMap::REGION_GLOBAL:
-                    break;
-                default:
-                    if (!file_exists($bboxFilename) || file_get_contents($bboxFilename) !== $bboxGeoJSON) {
-                        file_put_contents($boundingBoxOnly . "{$extentCode}.json", $bboxGeoJSON);
-                    }
-                    break;
+
+            file_put_contents($bufferedFilename, $bufferedGeoJSON);
+
+            if ($region !== RegionMap::REGION_GLOBAL) {
+                file_put_contents($bboxFilename, $bboxGeoJSON);
             }
         }
 
@@ -2025,6 +1774,11 @@ class EPSGCodegenFromDataImport
         echo 'done' . PHP_EOL;
     }
 
+    protected static function exportParamValue(mixed $value): string
+    {
+        return $value === null ? 'null' : var_export($value, true);
+    }
+
     protected static function makeParamName(string $string): string
     {
         $string = str_replace([' ', '-', '(', ')', '"'], '', ucwords($string, ' -()"'));
@@ -2039,26 +1793,113 @@ class EPSGCodegenFromDataImport
         return $string;
     }
 
+    /**
+     * One-way aliases from each ETRS89 ensemble-member CRS onto the equivalent ensemble CRS.
+     *
+     * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}>
+     */
+    private function etrs89EnsembleMemberAliasTransformations(): array
+    {
+        $accuracy = $this->dataDB->querySingle('SELECT ensemble_accuracy FROM epsg_datumensemble WHERE datum_ensemble_code = 6258');
+        if ($accuracy === false || $accuracy === null) {
+            return [];
+        }
+        $accuracy = (float) $accuracy;
+
+        $memberCodes = [];
+        $result = $this->dataDB->query('SELECT datum_code FROM epsg_datumensemblemember WHERE datum_ensemble_code = 6258');
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $memberCodes[] = (int) $row['datum_code'];
+        }
+        if ($memberCodes === []) {
+            return [];
+        }
+
+        $in = implode(',', $memberCodes);
+        $operation = 'urn:ogc:def:coordinateOperation:EPSG::32781';
+        $name = 'ETRS89 ensemble member to ETRS89';
+        $kindToEnsemble = [
+            'geographic 2D' => 4258,
+            'geographic 3D' => 4937,
+            'geocentric' => 4936,
+        ];
+        $aliases = [];
+
+        $sql = "
+            SELECT coord_ref_sys_code, coord_ref_sys_kind
+            FROM epsg_coordinatereferencesystem
+            WHERE deprecated = 0
+              AND datum_code IN ({$in})
+              AND coord_ref_sys_kind IN ('geographic 2D', 'geographic 3D', 'geocentric')
+              AND coord_ref_sys_code NOT IN (4258, 4937, 4936)
+        ";
+        $result = $this->dataDB->query($sql);
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $aliases[] = [
+                'operation' => $operation,
+                'name' => $name,
+                'source_crs' => 'urn:ogc:def:crs:EPSG::' . $row['coord_ref_sys_code'],
+                'target_crs' => 'urn:ogc:def:crs:EPSG::' . $kindToEnsemble[$row['coord_ref_sys_kind']],
+                'accuracy' => $accuracy,
+            ];
+        }
+
+        $sql = "
+            SELECT c.coord_ref_sys_code AS member_compound, c.cmpd_vertcrs_code AS vertical
+            FROM epsg_coordinatereferencesystem c
+            JOIN epsg_coordinatereferencesystem h ON h.coord_ref_sys_code = c.cmpd_horizcrs_code
+            WHERE c.deprecated = 0 AND c.coord_ref_sys_kind = 'compound'
+              AND h.deprecated = 0 AND h.datum_code IN ({$in})
+        ";
+        $result = $this->dataDB->query($sql);
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $ensembleCompound = $this->dataDB->querySingle(
+                'SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem
+                 WHERE deprecated = 0 AND coord_ref_sys_kind = \'compound\'
+                   AND cmpd_horizcrs_code = 4258 AND cmpd_vertcrs_code = ' . (int) $row['vertical']
+            );
+            if (!$ensembleCompound) {
+                continue;
+            }
+            $aliases[] = [
+                'operation' => $operation,
+                'name' => $name,
+                'source_crs' => 'urn:ogc:def:crs:EPSG::' . $row['member_compound'],
+                'target_crs' => 'urn:ogc:def:crs:EPSG::' . $ensembleCompound,
+                'accuracy' => $accuracy,
+            ];
+        }
+
+        return $aliases;
+    }
+
     public function getBlacklistedOperations(): array
     {
-        $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
-        $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
-        $wgs84CopiesFromGDA94 = $this->determineOperationsToWGS84CopiedFromGDA94();
-        $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
-        $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
-        $projectedToProjected = $this->determineOperationsProjectedToProjected();
-        $blacklistedByScope = $this->determineOperationsInBlacklistedScopes();
+        if ($this->blacklistedOperationsCache === null) {
+            $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
+            $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
+            $wgs84CopiesFromGDA94 = $this->determineOperationsToWGS84CopiedFromGDA94();
+            $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
+            $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
+            $projectedToProjected = $this->determineOperationsProjectedToProjected();
+            $blacklistedByScope = $this->determineOperationsInBlacklistedScopes();
 
-        return [
-            ...self::BLACKLISTED_OPERATIONS,
-            ...$blacklistedByScope,
-            ...$wgs84CopiesFromETRS89,
-            ...$etrs89CopiesFromWGS84,
-            ...$wgs84CopiesFromGDA94,
-            ...$wgs84CopiesFromSIRGAS,
-            ...$wgs84CopiesFromNZGD,
-            ...$projectedToProjected,
-        ];
+            $this->blacklistedOperationsCache = [
+                ...self::BLACKLISTED_OPERATIONS,
+                ...$this->determineGridDepthOperations(),
+                ...$this->determineNonGridOperationsWithBetterSameExtentAlternative(),
+                ...$blacklistedByScope,
+                ...$wgs84CopiesFromETRS89,
+                ...$etrs89CopiesFromWGS84,
+                ...$wgs84CopiesFromGDA94,
+                ...$this->determineOperationsToWGS84FromReplacedRealization(),
+                ...$wgs84CopiesFromSIRGAS,
+                ...$wgs84CopiesFromNZGD,
+                ...$projectedToProjected,
+            ];
+        }
+
+        return $this->blacklistedOperationsCache;
     }
 
     private function determineOperationsToWGS84CopiedFromETRS89(): array
@@ -2066,9 +1907,9 @@ class EPSGCodegenFromDataImport
         $sql = "
             SELECT DISTINCT wgs84.coord_op_code
             FROM epsg_coordoperation wgs84
-            JOIN epsg_coordoperation etrs89 ON etrs89.source_crs_code = wgs84.source_crs_code AND etrs89.target_crs_code IN (4936, 4258, 4937)
+            JOIN epsg_coordoperation etrs89 ON etrs89.source_crs_code = wgs84.source_crs_code AND etrs89.target_crs_code IN (4936, 4258, 4937) AND etrs89.data_source != 'PHPCoord' AND etrs89.deprecated = 0
             JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
-            WHERE wgs84.target_crs_code IN (4978,4326,4979)
+            WHERE wgs84.target_crs_code IN (4978,4326,4979) AND wgs84.data_source != 'PHPCoord'
             ";
 
         $result = $this->dataDB->query($sql);
@@ -2085,9 +1926,9 @@ class EPSGCodegenFromDataImport
         $sql = "
             SELECT DISTINCT etrs89.coord_op_code
             FROM epsg_coordoperation etrs89
-            JOIN epsg_coordoperation wgs84 ON wgs84.source_crs_code = etrs89.source_crs_code AND wgs84.target_crs_code IN (4978,4326,4979)
+            JOIN epsg_coordoperation wgs84 ON wgs84.source_crs_code = etrs89.source_crs_code AND wgs84.target_crs_code IN (4978,4326,4979) AND wgs84.data_source != 'PHPCoord' AND wgs84.deprecated = 0
             JOIN epsg_usage u ON etrs89.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
-            WHERE etrs89.target_crs_code IN (4936, 4258, 4937)
+            WHERE etrs89.target_crs_code IN (4936, 4258, 4937) AND etrs89.data_source != 'PHPCoord'
             ";
 
         $result = $this->dataDB->query($sql);
@@ -2104,9 +1945,17 @@ class EPSGCodegenFromDataImport
         $sql = "
             SELECT DISTINCT wgs84.coord_op_code
             FROM epsg_coordoperation wgs84
-            JOIN epsg_coordoperation gda94 ON gda94.source_crs_code = wgs84.source_crs_code AND gda94.target_crs_code IN (4283, 4938, 4939)
+            JOIN epsg_coordoperation gda94 ON gda94.source_crs_code = wgs84.source_crs_code AND gda94.target_crs_code IN (4283, 4938, 4939) AND gda94.deprecated = 0
             JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
             WHERE wgs84.target_crs_code IN (4978,4326,4979)
+            UNION
+            SELECT DISTINCT wgs84.coord_op_code
+            FROM epsg_coordoperation wgs84
+            JOIN epsg_coordoperation gda2020 ON gda2020.source_crs_code = wgs84.source_crs_code
+              AND gda2020.target_crs_code IN (7844, 7843, 7842) AND gda2020.deprecated = 0
+            WHERE wgs84.target_crs_code IN (4978,4326,4979)
+              AND wgs84.source_crs_code IN (4283, 4938, 4939)
+              AND wgs84.deprecated = 0
             ";
 
         $result = $this->dataDB->query($sql);
@@ -2118,12 +1967,141 @@ class EPSGCodegenFromDataImport
         return $data;
     }
 
+    /**
+     * Drop A→WGS 84 when datum B replaces datum A, A→B and B→WGS 84 exist, and A→WGS 84 is no more accurate than B→WGS 84 on a shared extent.
+     *
+     * @return list<int>
+     */
+    private function determineOperationsToWGS84FromReplacedRealization(): array
+    {
+        $pairs = [];
+        $result = $this->dataDB->query("SELECT datum_code, datum_name, remarks FROM epsg_datum WHERE remarks LIKE '%Replaces%'");
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if (!preg_match_all('/\bReplaces\b[^.]*\(datum code (\d+)\)/i', $row['remarks'], $matches)) {
+                continue;
+            }
+            if (preg_match('/International Terrestrial Reference Frame|European Terrestrial Reference Frame|World Geodetic System|SIRGAS Continuously Operating Network/i', $row['datum_name'])) {
+                continue;
+            }
+            foreach ($matches[1] as $oldDatum) {
+                $oldName = $this->dataDB->querySingle('SELECT datum_name FROM epsg_datum WHERE datum_code = ' . (int) $oldDatum);
+                if (is_string($oldName) && preg_match('/International Terrestrial Reference Frame|European Terrestrial Reference Frame|World Geodetic System/i', $oldName)) {
+                    continue;
+                }
+                $pairs[] = [(int) $oldDatum, (int) $row['datum_code']];
+            }
+        }
+
+        $crsByDatum = [];
+        $loadCrs = function (int $datum) use (&$crsByDatum): array {
+            if (!isset($crsByDatum[$datum])) {
+                $crsByDatum[$datum] = [];
+                $result = $this->dataDB->query("
+                    SELECT coord_ref_sys_code FROM epsg_coordinatereferencesystem
+                    WHERE datum_code = {$datum} AND deprecated = 0
+                      AND coord_ref_sys_kind IN ('geographic 2D', 'geographic 3D', 'geocentric')
+                ");
+                while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                    $crsByDatum[$datum][] = (int) $row['coord_ref_sys_code'];
+                }
+            }
+
+            return $crsByDatum[$datum];
+        };
+
+        $accuracy = static function (float|int|string|null $value): ?float {
+            if ($value === null || $value === '') {
+                return null;
+            }
+            $value = (float) $value;
+
+            return $value >= 900 ? null : $value;
+        };
+
+        $worse = [];
+        foreach ($pairs as [$oldDatum, $newDatum]) {
+            $oldCrs = $loadCrs($oldDatum);
+            $newCrs = $loadCrs($newDatum);
+            if ($oldCrs === [] || $newCrs === []) {
+                continue;
+            }
+            $oldList = implode(',', $oldCrs);
+            $newList = implode(',', $newCrs);
+
+            $bridge = (int) $this->dataDB->querySingle("
+                SELECT COUNT(*) FROM epsg_coordoperation o
+                LEFT JOIN epsg_supersession sup ON sup.object_table_name = 'epsg_coordoperation' AND sup.object_code = o.coord_op_code
+                LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
+                WHERE o.source_crs_code IN ({$oldList}) AND o.target_crs_code IN ({$newList})
+                  AND o.deprecated = 0 AND sup.supersession_id IS NULL AND dep.deprecation_id IS NULL
+                  AND o.coord_op_type != 'concatenated operation'
+            ");
+            if ($bridge === 0) {
+                continue;
+            }
+
+            $newToWgs = [];
+            $result = $this->dataDB->query("
+                SELECT o.coord_op_accuracy, GROUP_CONCAT(u.extent_code) AS extents
+                FROM epsg_coordoperation o
+                LEFT JOIN epsg_supersession sup ON sup.object_table_name = 'epsg_coordoperation' AND sup.object_code = o.coord_op_code
+                LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
+                LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+                WHERE o.source_crs_code IN ({$newList}) AND o.target_crs_code IN (4326, 4978, 4979)
+                  AND o.deprecated = 0 AND sup.supersession_id IS NULL AND dep.deprecation_id IS NULL
+                  AND o.coord_op_type != 'concatenated operation'
+                GROUP BY o.coord_op_code
+            ");
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                $newAccuracy = $accuracy($row['coord_op_accuracy']);
+                if ($newAccuracy === null) {
+                    continue;
+                }
+                $newToWgs[] = ['accuracy' => $newAccuracy, 'extents' => array_filter(explode(',', (string) $row['extents']))];
+            }
+            if ($newToWgs === []) {
+                continue;
+            }
+
+            $result = $this->dataDB->query("
+                SELECT o.coord_op_code, o.coord_op_accuracy, GROUP_CONCAT(u.extent_code) AS extents
+                FROM epsg_coordoperation o
+                LEFT JOIN epsg_supersession sup ON sup.object_table_name = 'epsg_coordoperation' AND sup.object_code = o.coord_op_code
+                LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
+                LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+                WHERE o.source_crs_code IN ({$oldList}) AND o.target_crs_code IN (4326, 4978, 4979)
+                  AND o.deprecated = 0 AND sup.supersession_id IS NULL AND dep.deprecation_id IS NULL
+                  AND o.coord_op_type != 'concatenated operation'
+                GROUP BY o.coord_op_code
+            ");
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                $oldAccuracy = $accuracy($row['coord_op_accuracy']);
+                if ($oldAccuracy === null) {
+                    continue;
+                }
+                $oldExtents = array_filter(explode(',', (string) $row['extents']));
+                foreach ($newToWgs as $newOp) {
+                    if ($oldAccuracy < $newOp['accuracy']) {
+                        continue;
+                    }
+                    if (array_intersect($oldExtents, $newOp['extents']) === []) {
+                        continue;
+                    }
+                    $worse[] = (int) $row['coord_op_code'];
+                    break;
+                }
+            }
+        }
+
+        return array_values(array_unique($worse));
+    }
+
     private function determineOperationsToWGS84CopiedFromSIRGAS(): array
     {
         $sql = "
             SELECT DISTINCT wgs84.coord_op_code
             FROM epsg_coordoperation wgs84
-            JOIN epsg_coordoperation sirgas ON sirgas.source_crs_code = wgs84.source_crs_code AND sirgas.target_crs_code IN (4674, 4988, 4989, 4686, 4996, 4997)
+            JOIN epsg_coordoperation sirgas ON sirgas.source_crs_code = wgs84.source_crs_code AND sirgas.target_crs_code IN (4674, 4988, 4989, 4686, 4996, 4997) AND sirgas.deprecated = 0
             JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
             WHERE wgs84.target_crs_code IN (4978,4326,4979)
             ";
@@ -2142,7 +2120,7 @@ class EPSGCodegenFromDataImport
         $sql = "
             SELECT DISTINCT wgs84.coord_op_code
             FROM epsg_coordoperation wgs84
-            JOIN epsg_coordoperation nzgd ON nzgd.source_crs_code = wgs84.source_crs_code AND nzgd.target_crs_code IN (4167, 4958, 4959)
+            JOIN epsg_coordoperation nzgd ON nzgd.source_crs_code = wgs84.source_crs_code AND nzgd.target_crs_code IN (4167, 4958, 4959) AND nzgd.deprecated = 0
             JOIN epsg_usage u ON wgs84.coord_op_code = u.object_code AND u.object_table_name = 'epsg_coordoperation' AND u.scope_code = 1252
             WHERE wgs84.target_crs_code IN (4978,4326,4979)
             ";
@@ -2174,6 +2152,112 @@ class EPSGCodegenFromDataImport
         return $data;
     }
 
+    /**
+     * Non-grid ops that share source, target and extent with another non-grid op of strictly better accuracy.
+     * Grid methods are ignored so a Helmert remains as a datapack-free fallback.
+     *
+     * @return list<int>
+     */
+    private function determineNonGridOperationsWithBetterSameExtentAlternative(): array
+    {
+        $fileParamMethods = [];
+        $result = $this->dataDB->query("
+            SELECT DISTINCT u.coord_op_method_code
+            FROM epsg_coordoperationparamusage u
+            JOIN epsg_coordoperationparam p ON p.parameter_code = u.parameter_code
+            WHERE lower(p.parameter_name) LIKE '%file%' OR lower(p.parameter_name) LIKE '%grid%'
+        ");
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $fileParamMethods[(int) $row['coord_op_method_code']] = true;
+        }
+
+        $result = $this->dataDB->query("
+            SELECT o.coord_op_code, o.coord_op_method_code, o.source_crs_code, o.target_crs_code,
+                   o.coord_op_accuracy, GROUP_CONCAT(u.extent_code) AS extents
+            FROM epsg_coordoperation o
+            LEFT JOIN epsg_supersession sup ON sup.object_table_name = 'epsg_coordoperation' AND sup.object_code = o.coord_op_code
+            LEFT JOIN epsg_deprecation dep ON dep.object_table_name = 'epsg_coordoperation' AND dep.object_code = o.coord_op_code AND dep.deprecation_date <= '2021-09-10'
+            LEFT JOIN epsg_usage u ON u.object_table_name = 'epsg_coordoperation' AND u.object_code = o.coord_op_code
+            WHERE o.deprecated = 0 AND sup.supersession_id IS NULL AND dep.deprecation_id IS NULL
+              AND o.coord_op_type != 'concatenated operation'
+            GROUP BY o.coord_op_code
+        ");
+
+        $ops = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            if (isset($fileParamMethods[(int) $row['coord_op_method_code']])) {
+                continue;
+            }
+            $accuracy = $row['coord_op_accuracy'];
+            if ($accuracy === null || $accuracy === '' || (float) $accuracy >= 900) {
+                $accuracy = null;
+            } else {
+                $accuracy = (float) $accuracy;
+            }
+            $ops[] = [
+                'code' => (int) $row['coord_op_code'],
+                'source' => (int) $row['source_crs_code'],
+                'target' => (int) $row['target_crs_code'],
+                'accuracy' => $accuracy,
+                'extents' => array_filter(explode(',', (string) $row['extents'])),
+            ];
+        }
+
+        $byPair = [];
+        foreach ($ops as $op) {
+            $byPair[$op['source'] . '->' . $op['target']][] = $op;
+        }
+
+        $worse = [];
+        foreach ($byPair as $group) {
+            if (count($group) < 2) {
+                continue;
+            }
+            foreach ($group as $op) {
+                if ($op['accuracy'] === null) {
+                    continue;
+                }
+                foreach ($group as $other) {
+                    if ($other['code'] === $op['code'] || $other['accuracy'] === null || $other['accuracy'] >= $op['accuracy']) {
+                        continue;
+                    }
+                    if (array_intersect($op['extents'], $other['extents']) !== []) {
+                        $worse[] = $op['code'];
+                        break;
+                    }
+                }
+            }
+        }
+
+        return $worse;
+    }
+
+    /**
+     * Grid operations whose method or operation name includes "depth". Algorithms are implemented; marine-only files are not shipped.
+     *
+     * @return list<int>
+     */
+    private function determineGridDepthOperations(): array
+    {
+        $sql = "
+            SELECT DISTINCT o.coord_op_code
+            FROM epsg_coordoperation o
+            JOIN epsg_coordoperationmethod m ON m.coord_op_method_code = o.coord_op_method_code
+            JOIN epsg_coordoperationparamusage u ON u.coord_op_method_code = m.coord_op_method_code
+            JOIN epsg_coordoperationparam p ON p.parameter_code = u.parameter_code
+            WHERE (lower(m.coord_op_method_name) LIKE '%depth%' OR lower(o.coord_op_name) LIKE '%depth%')
+              AND (lower(p.parameter_name) LIKE '%file%' OR lower(p.parameter_name) LIKE '%grid%')
+            ";
+
+        $result = $this->dataDB->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[] = (int) $row['coord_op_code'];
+        }
+
+        return $data;
+    }
+
     private function determineOperationsInBlacklistedScopes(): array
     {
         $sql = "
@@ -2200,5 +2284,14 @@ class EPSGCodegenFromDataImport
 
         // hack it in to get the sort ordering (up front), file will be pretty-printed later
         return preg_replace('/^{/', "{\"id\": \"{$urn}\", \"title\": \"{$title}\",", $geoJSONString);
+    }
+
+    public function time(string $label, callable $fn): mixed
+    {
+        $start = microtime(true);
+        $result = $fn();
+        printf("  %s: %.2fs\n", $label, microtime(true) - $start);
+
+        return $result;
     }
 }

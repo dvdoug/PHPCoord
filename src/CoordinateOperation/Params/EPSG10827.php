@@ -8,5 +8,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-    'geoidHeightCorrectionModelFile' => 'LV\'14.gri',
+    'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\GeoTiffLV14LatviaProvider',
 ];

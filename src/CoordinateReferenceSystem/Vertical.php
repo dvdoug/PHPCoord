@@ -163,8 +163,8 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * Baltic 1986 height
      * Extent: Poland - onshore
-     * Initially valid until 2019-12-31, but that extended to 2023-12-31. Will be replaced by EVRF2007-PL height (CRS
-     * 9651) after 2023-12-31.
+     * Initially valid until 2019-12-31, but that extended to 2023-12-31. Replaced by PL-EVRF2007 height (CRS 9651)
+     * from 2024-01-01.
      */
     public const EPSG_BALTIC_1986_HEIGHT = 'urn:ogc:def:crs:EPSG::9650';
 
@@ -182,6 +182,14 @@ class Vertical extends CoordinateReferenceSystem
      * Malin Head height (CRS code 5731) used for medium and small scale topographic mapping.
      */
     public const EPSG_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::5732';
+
+    /**
+     * Bhutan Vertical Datum 2022 height
+     * Extent: Bhutan
+     * Heights are derived through application of the DrukGeoid22 geoid separation model (transformation code 11339) to
+     * DrukRef23 ellipsoid heights.
+     */
+    public const EPSG_BHUTAN_VERTICAL_DATUM_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::11338';
 
     /**
      * Black Sea depth
@@ -312,6 +320,14 @@ class Vertical extends CoordinateReferenceSystem
      * from 2025-06-15. State law defines use of US survey feet: see CRS code 10918 for metric equivalent.
      */
     public const EPSG_COH88_2025_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::10919';
+
+    /**
+     * COLGVD2023 height
+     * Extent: Colombia - mainland onshore
+     * Colombia’s gravity-based vertical datum, in accordance with the conventions of the International Height
+     * Reference System (IHRS) (Normal Heights).
+     */
+    public const EPSG_COLGVD2023_HEIGHT = 'urn:ogc:def:crs:EPSG::11513';
 
     /**
      * Cagliari 1956 height
@@ -667,13 +683,6 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::5621';
 
     /**
-     * EVRF2007-PL height
-     * Extent: Poland - onshore
-     * Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
-     */
-    public const EPSG_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9651';
-
-    /**
      * EVRF2019 height
      * Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia;
      * Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily;
@@ -794,10 +803,23 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_GHA_HEIGHT = 'urn:ogc:def:crs:EPSG::5778';
 
     /**
+     * GLLAT depth
+     * Extent: Greenland - offshore
+     * Reference for all realizations of GLLAT depth without distinction.
+     */
+    public const EPSG_GLLAT_DEPTH = 'urn:ogc:def:crs:EPSG::11454';
+
+    /**
      * GLLAT(2023) depth
      * Extent: Greenland - offshore.
      */
     public const EPSG_GLLAT_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10650';
+
+    /**
+     * GLLAT(2025) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GLLAT_2025_DEPTH = 'urn:ogc:def:crs:EPSG::11450';
 
     /**
      * GLLMSL(2022) height
@@ -807,10 +829,23 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_GLLMSL_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::10565';
 
     /**
+     * GLMSL depth
+     * Extent: Greenland - offshore
+     * Reference for all realizations of GLMSL without distinction.
+     */
+    public const EPSG_GLMSL_DEPTH = 'urn:ogc:def:crs:EPSG::11455';
+
+    /**
      * GLMSL(2023) depth
      * Extent: Greenland - offshore.
      */
     public const EPSG_GLMSL_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10649';
+
+    /**
+     * GLMSL(2025) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GLMSL_2025_DEPTH = 'urn:ogc:def:crs:EPSG::11451';
 
     /**
      * GNTRANS height
@@ -1050,6 +1085,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_IGN_2008_LD_HEIGHT = 'urn:ogc:def:crs:EPSG::9130';
 
     /**
+     * IGN 2023 Mayotte height
+     * Extent: Mayotte - onshore
+     * Replaces Mayotte 1950 height (CRS code 5793).
+     */
+    public const EPSG_IGN_2023_MAYOTTE_HEIGHT = 'urn:ogc:def:crs:EPSG::11157';
+
+    /**
      * INAGeoid2020 v1 height
      * Extent: Indonesia
      * Physical height component of national vertical control network (JKVN). Orthometric heights. Replaced by
@@ -1112,9 +1154,17 @@ class Vertical extends CoordinateReferenceSystem
     /**
      * JGD2011 (vertical) height
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu
-     * Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011.
+     * Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011. Replaced by JGD2024 (vertical)
+     * (CRS code 11317) with effect from 1st April 2025.
      */
     public const EPSG_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6695';
+
+    /**
+     * JGD2024 (vertical) height
+     * Extent: Japan
+     * Replaced JGD2011 (vertical) (CRS code 6695) with effect from 1st April 2025.
+     */
+    public const EPSG_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11317';
 
     /**
      * JSLD69 height
@@ -1208,12 +1258,6 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_LAS07_HEIGHT = 'urn:ogc:def:crs:EPSG::9666';
 
     /**
-     * LAT NL depth
-     * Extent: Netherlands - offshore North Sea and nearshore.
-     */
-    public const EPSG_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9287';
-
-    /**
      * LAT depth
      * Extent: World
      * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
@@ -1221,6 +1265,12 @@ class Vertical extends CoordinateReferenceSystem
      * geoid/hydroid model.
      */
     public const EPSG_LAT_DEPTH = 'urn:ogc:def:crs:EPSG::5861';
+
+    /**
+     * LAT-NLD depth
+     * Extent: Netherlands - offshore North Sea and nearshore.
+     */
+    public const EPSG_LAT_NLD_DEPTH = 'urn:ogc:def:crs:EPSG::9287';
 
     /**
      * LCVD61 height (ft)
@@ -1292,6 +1342,17 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_LERWICK_HEIGHT = 'urn:ogc:def:crs:EPSG::5742';
 
     /**
+     * London Survey Grid height
+     * Extent: UK - Greater London and surrounding area
+     * Vertical component of  the London Survey Grid 2025 (LSG2025) (CRS code 11006). Prior to 2016, Ordnance Survey
+     * Geoid Model 2002 (OSGM02) plus a 100m shift could be used to produce acceptable LSGH values. In 2016, the
+     * updated Ordnance Survey Geoid Model 2015 (OSGM15) was released with an approximately 25mm height shift from
+     * OSGM02 in the London region. When using GNSS observations to derive LSGH values, OSGM15 plus a 100m shift shall
+     * not be used; instead the LSGGM2025 (code 10990) applied to OSNet v2009 (CRS code 11008) must be used.
+     */
+    public const EPSG_LONDON_SURVEY_GRID_HEIGHT = 'urn:ogc:def:crs:EPSG::10989';
+
+    /**
      * Low Water depth
      * Extent: World
      * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
@@ -1347,7 +1408,7 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: World
      * Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but
      * instead use one with a specific datum origin (e.g. "MLLWS at xxx during yyyy-yyyy") or defined through a
-     * specified geoid/hydroid model..
+     * specified geoid/hydroid model.
      */
     public const EPSG_MLLWS_DEPTH = 'urn:ogc:def:crs:EPSG::5864';
 
@@ -1368,12 +1429,6 @@ class Vertical extends CoordinateReferenceSystem
      * specified geoid/hydroid model.
      */
     public const EPSG_MLWS_DEPTH = 'urn:ogc:def:crs:EPSG::5865';
-
-    /**
-     * MSL NL depth
-     * Extent: Netherlands - offshore North Sea and nearshore.
-     */
-    public const EPSG_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9288';
 
     /**
      * MSL UK & Ireland VORF08 depth
@@ -1437,6 +1492,12 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_MSL_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8052';
 
     /**
+     * MSL-NLD depth
+     * Extent: Netherlands - offshore North Sea and nearshore.
+     */
+    public const EPSG_MSL_NLD_DEPTH = 'urn:ogc:def:crs:EPSG::9288';
+
+    /**
      * MVGC height
      * Extent: Saudi Arabia - onshore.
      */
@@ -1493,6 +1554,7 @@ class Vertical extends CoordinateReferenceSystem
      * Mayotte 1950 height
      * Extent: Mayotte - onshore
      * Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system.
+     * Replaced by IGN 2023 Mayotte height (CRS code 11157).
      */
     public const EPSG_MAYOTTE_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::5793';
 
@@ -1552,35 +1614,20 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAVD88 depth
-     * Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California;
-     * Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana;
-     * Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New
-     * Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania;
-     * Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West
-     * Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. USA - onshore - USA - Alaska, conterminous (contiguous) lower 48 states (CONUS).
      */
     public const EPSG_NAVD88_DEPTH = 'urn:ogc:def:crs:EPSG::6357';
 
     /**
      * NAVD88 depth (ftUS)
-     * Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado;
-     * Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine;
-     * Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire;
-     * New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode
-     * Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia;
-     * Wisconsin; Wyoming
+     * Extent: USA - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaces NGVD29 depth (ftUS) (CRS code 6359).
      */
     public const EPSG_NAVD88_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::6358';
 
     /**
      * NAVD88 height
-     * Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California;
-     * Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana;
-     * Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New
-     * Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania;
-     * Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West
-     * Virginia; Wisconsin; Wyoming.
+     * Extent: Mexico - onshore. USA - onshore - USA - Alaska, conterminous (contiguous) lower 48 states (CONUS).
      */
     public const EPSG_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5703';
 
@@ -1594,12 +1641,7 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NAVD88 height (ftUS)
-     * Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado;
-     * Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine;
-     * Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire;
-     * New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode
-     * Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia;
-     * Wisconsin; Wyoming
+     * Extent: USA - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaces NGVD29 height (ftUS) (CRS code 5702).
      */
     public const EPSG_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::6360';
@@ -1647,6 +1689,13 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5721';
 
     /**
+     * NGFA 2022 height
+     * Extent: Wallis and Futuna - Futuna and Alofi - onshore
+     * Replaces NGWF Futuna (MOP 1996) height.
+     */
+    public const EPSG_NGFA_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::11446';
+
+    /**
      * NGG1977 height
      * Extent: French Guiana - onshore.
      */
@@ -1676,33 +1725,21 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * NGVD29 depth (ftUS)
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaced by NAVD88 depth (ftUS) (CRS code 6358).
      */
     public const EPSG_NGVD29_DEPTH_FTUS = 'urn:ogc:def:crs:EPSG::6359';
 
     /**
      * NGVD29 height (ftUS)
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaced by NAVD88 height (ftUS) (CRS code 6360).
      */
     public const EPSG_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::5702';
 
     /**
      * NGVD29 height (m)
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
      * System defined by IOGP to allow transformation of heights to and from NGVD29. See CRS code 5702 for system in US
      * survey feet in actual use.
      */
@@ -1716,11 +1753,19 @@ class Vertical extends CoordinateReferenceSystem
     public const EPSG_NMVD03_HEIGHT = 'urn:ogc:def:crs:EPSG::6640';
 
     /**
-     * NN2000 height
+     * NN2000:2018 height
      * Extent: Norway - onshore
-     * Replaces NN54 height (CRS code 5776).
+     * Renamed from NN2000 height with effect from 2026-03-01. Replaces NN54 height (CRS code 5776). Replaced by
+     * NN2000:2025 height (code 11394).
      */
-    public const EPSG_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5941';
+    public const EPSG_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5941';
+
+    /**
+     * NN2000:2025 height
+     * Extent: Norway - onshore
+     * Replaces NN2000:2018 height (CRS code 5941).
+     */
+    public const EPSG_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11394';
 
     /**
      * NN54 height
@@ -1811,6 +1856,13 @@ class Vertical extends CoordinateReferenceSystem
      * Replaces Fahud Height Datum height (CRS code 5725) from 1993.
      */
     public const EPSG_PHD93_HEIGHT = 'urn:ogc:def:crs:EPSG::5724';
+
+    /**
+     * PL-EVRF2007 height
+     * Extent: Poland - onshore
+     * Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
+     */
+    public const EPSG_PL_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::9651';
 
     /**
      * PNG08 height
@@ -1975,10 +2027,17 @@ class Vertical extends CoordinateReferenceSystem
 
     /**
      * SVD2006 height
-     * Extent: Arctic (Norway (Svalbard)) - between 81°10'N and 76°10'N
-     * Defined through the arcgp-2006-sk geoid model.
+     * Extent: 4860 - Svalbard - west of 37.91° between 76.21° and 81.12°
+     * Defined through the arcgp-2006-sk geoid model. Replaced by SVD2024 height (CRS code 10999).
      */
     public const EPSG_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::20000';
+
+    /**
+     * SVD2024 height
+     * Extent: Svalbard including Bear Island
+     * Replaces SVD2006 height (CRS code 20000).
+     */
+    public const EPSG_SVD2024_HEIGHT = 'urn:ogc:def:crs:EPSG::10999';
 
     /**
      * SVS2000 height
@@ -2156,6 +2215,26 @@ class Vertical extends CoordinateReferenceSystem
      * Extent: Portugal - offshore.
      */
     public const EPSG_ZH_PORTUGAL_DEPTH = 'urn:ogc:def:crs:EPSG::10349';
+
+    /**
+     * @deprecated use EPSG_PL_EVRF2007_HEIGHT instead
+     */
+    public const EPSG_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9651';
+
+    /**
+     * @deprecated use EPSG_LAT_NLD_DEPTH instead
+     */
+    public const EPSG_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9287';
+
+    /**
+     * @deprecated use EPSG_MSL_NLD_DEPTH instead
+     */
+    public const EPSG_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9288';
+
+    /**
+     * @deprecated use EPSG_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5941';
 
     /**
      * @deprecated use EPSG_NG95_HEIGHT instead

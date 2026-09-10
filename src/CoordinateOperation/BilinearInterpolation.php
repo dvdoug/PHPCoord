@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
-use function assert;
 use function count;
+use function max;
 use function min;
 
 trait BilinearInterpolation
@@ -55,7 +55,7 @@ trait BilinearInterpolation
      */
     private function interpolateLinear(float $p, float $valueAt0, float $valueAt1): float
     {
-        assert($p >= 0 && $p <= 1);
+        $p = min(1.0, max(0.0, $p));
 
         return $valueAt0 * (1 - $p) + $valueAt1 * $p;
     }

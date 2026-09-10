@@ -37,9 +37,11 @@ use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
-use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\ExtentInteriorPoints;
+use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
@@ -287,18 +289,63 @@ class CompoundPointTest extends TestCase
         self::assertEqualsWithDelta(0.000, $to->getHeight()->getValue(), 0.01);
     }
 
+    public function testGeographic3DTo2DPlusGravityHeight(): void
+    {
+        $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_NAP_HEIGHT),
+            GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89),
+                new Degree(51.986333425),
+                new Degree(4.630200875),
+                null
+            ),
+            VerticalPoint::create(
+                Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
+                new Metre(-6.7800)
+            )
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89);
+        $to = $from->geographic3DTo2DPlusGravityHeight($toCRS, new Metre(43.5395));
+
+        self::assertEqualsWithDelta(51.986333425, $to->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(4.630200875, $to->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(36.7595, $to->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testCoordinateFrameRotation(): void
+    {
+        $from = CompoundPoint::create(
+            Compound::fromSRID(Compound::EPSG_WGS_84_PLUS_EGM96_HEIGHT),
+            GeographicPoint::create(
+                Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84),
+                new Degree(55.000025),
+                new Degree(44.000154),
+                null
+            ),
+            VerticalPoint::create(
+                Vertical::fromSRID(Vertical::EPSG_EGM96_HEIGHT),
+                new Metre(3.22)
+            )
+        );
+        $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72);
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219), true);
+
+        self::assertEqualsWithDelta(55.0, $to->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(44.0, $to->getLongitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(0.0, $to->getHeight()->getValue(), 0.01);
+    }
+
     #[DataProvider('supportedOperations')]
     #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
         $method = CoordinateOperationMethods::getMethodData($operation['method']);
-        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
 
         $sourceCRS = Compound::fromSRID($sourceCrsSrid);
         $sourceHorizontalCRS = $sourceCRS->getHorizontal();
         if ($sourceHorizontalCRS instanceof Geographic2D) {
-            $centre = $operationExtent->getPointInside();
+            $centre = ExtentInteriorPoints::get($operation['extent']);
             $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
 
             $horizontalPoint = GeographicPoint::create($sourceHorizontalCRS, $centre[0], $centre[1], null);
@@ -338,7 +385,7 @@ class CompoundPointTest extends TestCase
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
-                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
+                    if (str_ends_with($paramName, 'File') && $paramValue && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

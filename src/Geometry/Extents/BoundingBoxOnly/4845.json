@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4845",
+    "title": "North America/USA - Montana - Mission",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-115.29, 47.03], [-113.46, 47.03], [-113.46, 48.14], [-115.29, 48.14], [-115.29, 47.03]
+        ]
+    ]
+}

@@ -61,19 +61,6 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_BES2020_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10737';
 
     /**
-     * BGS2005
-     * Extent: Bulgaria
-     * Adopted 2010-07-29.
-     */
-    public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7796';
-
-    /**
-     * BH_ETRS89
-     * Extent: Bosnia and Herzegovina.
-     */
-    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10326';
-
-    /**
      * Bonaire 2004
      * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Bonaire - onshore.
      */
@@ -86,30 +73,28 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_CGRS93 = 'urn:ogc:def:crs:EPSG::6309';
 
     /**
-     * CHTRS95
-     * Extent: Liechtenstein; Switzerland
-     * Referenced to ETRS89 at epoch 1993.0. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code
-     * 4150).
-     */
-    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4932';
-
-    /**
      * CIGD11
      * Extent: Cayman Islands. Includes Grand Cayman, Little Cayman and Cayman Brac.
      */
     public const EPSG_CIGD11 = 'urn:ogc:def:crs:EPSG::6133';
 
     /**
-     * CR-SIRGAS
+     * CR-SIRGAS epoch 2014.59
      * Extent: Costa Rica
      * Replaces CR05 (CRS code 5363) from April 2018.
      */
-    public const EPSG_CR_SIRGAS = 'urn:ogc:def:crs:EPSG::8905';
+    public const EPSG_CR_SIRGAS_EPOCH_2014_59 = 'urn:ogc:def:crs:EPSG::8905';
+
+    /**
+     * CR-SIRGAS epoch 2019.24
+     * Extent: Costa Rica.
+     */
+    public const EPSG_CR_SIRGAS_EPOCH_2019_24 = 'urn:ogc:def:crs:EPSG::11041';
 
     /**
      * CR05
      * Extent: Costa Rica
-     * Replaced by CR-SIRGAS (CRS code 8905) from April 2018.
+     * Replaced by CR-SIRGAS epoch 2014.59 (CRS code 8905) from April 2018.
      */
     public const EPSG_CR05 = 'urn:ogc:def:crs:EPSG::5363';
 
@@ -158,15 +143,17 @@ class Geocentric extends CoordinateReferenceSystem
 
     /**
      * DRUKREF 03
-     * Extent: Bhutan.
+     * Extent: Bhutan
+     * Replaced by DrukRef23 (CRS code 11224).
      */
     public const EPSG_DRUKREF_03 = 'urn:ogc:def:crs:EPSG::5262';
 
     /**
-     * EST97
-     * Extent: Estonia.
+     * DrukRef23
+     * Extent: Bhutan
+     * Replaces DRUKREF 03 (CRS code 5262).
      */
-    public const EPSG_EST97 = 'urn:ogc:def:crs:EPSG::4934';
+    public const EPSG_DRUKREF23 = 'urn:ogc:def:crs:EPSG::11224';
 
     /**
      * ETRF2000
@@ -181,13 +168,6 @@ class Geocentric extends CoordinateReferenceSystem
      * all earlier realizations of ETRS89.
      */
     public const EPSG_ETRF2000 = 'urn:ogc:def:crs:EPSG::7930';
-
-    /**
-     * ETRF2000-PL
-     * Extent: Poland
-     * Adopted from 2012-12-01.
-     */
-    public const EPSG_ETRF2000_PL = 'urn:ogc:def:crs:EPSG::9700';
 
     /**
      * ETRF2005
@@ -290,18 +270,347 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_ETRS89 = 'urn:ogc:def:crs:EPSG::4936';
 
     /**
-     * ETRS89/DREF91/2016
-     * Extent: Germany
-     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+     * ETRS89-ALB [2008]
+     * Extent: Albania
+     * National realization of ETRS89 in Albania. The active GNSS network uses ETRS89-ALB [KRGJSH 2014] (CRS code
+     * 11051).
      */
-    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10282';
+    public const EPSG_ETRS89_ALB_2008 = 'urn:ogc:def:crs:EPSG::11045';
 
     /**
-     * EUREF-FIN
+     * ETRS89-ALB [KRGJSH 2014]
+     * Extent: Albania
+     * Used for the coordinates of the 27 reference stations of the active ALBCORS network in Albania. Differences with
+     * the 2008 realization (CRS code 11045) used for other spatial referencing are negligible (5-7 mm for all
+     * components).
+     */
+    public const EPSG_ETRS89_ALB_KRGJSH_2014 = 'urn:ogc:def:crs:EPSG::11051';
+
+    /**
+     * ETRS89-AUT [2002]
+     * Extent: Austria
+     * National realization of ETRS89 in Austria.
+     */
+    public const EPSG_ETRS89_AUT_2002 = 'urn:ogc:def:crs:EPSG::11055';
+
+    /**
+     * ETRS89-BEL [BEREF2002]
+     * Extent: Belgium
+     * National realization of ETRS89 in Belgium. Replaced by BEREF2011 (CRS code 11213).
+     */
+    public const EPSG_ETRS89_BEL_BEREF2002 = 'urn:ogc:def:crs:EPSG::11061';
+
+    /**
+     * ETRS89-BEL [BEREF2011]
+     * Extent: Belgium
+     * Second national realization of ETRS89 in Belgium. Replaces BEREF2002 (CRS code 11061). Used by the Belgian
+     * Active GNSS Network consisting of the Flemish positioning system (FLEPOS), the Wallonia continuously operating
+     * reference system (WALCORS) and GPSBru in the Brussels region.
+     */
+    public const EPSG_ETRS89_BEL_BEREF2011 = 'urn:ogc:def:crs:EPSG::11213';
+
+    /**
+     * ETRS89-BGR [BGS2005]
+     * Extent: Bulgaria
+     * Adopted 2010-07-29.
+     */
+    public const EPSG_ETRS89_BGR_BGS2005 = 'urn:ogc:def:crs:EPSG::7796';
+
+    /**
+     * ETRS89-BIH [BH_ETRS89]
+     * Extent: Bosnia and Herzegovina.
+     */
+    public const EPSG_ETRS89_BIH_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10326';
+
+    /**
+     * ETRS89-CHE [CHTRF95]
+     * Extent: Liechtenstein; Switzerland
+     * First realization of CHTRS95. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).
+     */
+    public const EPSG_ETRS89_CHE_CHTRF95 = 'urn:ogc:def:crs:EPSG::11222';
+
+    /**
+     * ETRS89-CHE [CHTRS95]
+     * Extent: Liechtenstein; Switzerland
+     * Referenced to ETRF93 at epoch 1993.0. First realized through CHTRF95 and subsequently CHTRF98, with an aim to
+     * re-measure every 6 years. CHTRF98, CHTRF2004, CHTRF2010 and CHTRF2016 are all within 2cm of CHTRF95 and used for
+     * scientific applications, but for most practical purposes differences are considered insignificant. For CRS used
+     * for topographic and cadastral purposes see CH1903+ (CRS code 4150).
+     */
+    public const EPSG_ETRS89_CHE_CHTRS95 = 'urn:ogc:def:crs:EPSG::4932';
+
+    /**
+     * ETRS89-CZE [2007]
+     * Extent: Czechia
+     * National realization of ETRS89 in Czechia.
+     */
+    public const EPSG_ETRS89_CZE_2007 = 'urn:ogc:def:crs:EPSG::11068';
+
+    /**
+     * ETRS89-DEU [ETRS89/DREF91/2016]
+     * Extent: Germany
+     * German national realization of ETRS89.  Replaces ETRS89-DEU [ETRS89/DREF91/2002] from 2016-12-01. Replaced by
+     * ETRS89-DEU [ETRS89/DREF91/2025] from 2025-07-01.
+     */
+    public const EPSG_ETRS89_DEU_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10282';
+
+    /**
+     * ETRS89-DEU [ETRS89/DREF91/2025]
+     * Extent: Germany
+     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2016 from 2025-07-01.
+     */
+    public const EPSG_ETRS89_DEU_ETRS89_DREF91_2025 = 'urn:ogc:def:crs:EPSG::11197';
+
+    /**
+     * ETRS89-DNK
+     * Extent: Denmark
+     * ETRS89-DNK is the national realization of ETRS89 in Denmark.
+     */
+    public const EPSG_ETRS89_DNK = 'urn:ogc:def:crs:EPSG::10890';
+
+    /**
+     * ETRS89-ESP [ERGNSS]
+     * Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+     * National realization of ETRS89 in peninsula Spain. Replaces ETRS89-ESP [REGENTE] for CORS services from
+     * 2018-03-15.
+     */
+    public const EPSG_ETRS89_ESP_ERGNSS = 'urn:ogc:def:crs:EPSG::11126';
+
+    /**
+     * ETRS89-ESP [REGENTE]
+     * Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+     * National realization of ETRS89 in Spain. For GNSS CORS services, replaced by ETRS89-ESP [ERGNSS] (code 11126)
+     * from 2018-03-25. For most purposes the offset of approximately 2cm is considered insignificant.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE = 'urn:ogc:def:crs:EPSG::11129';
+
+    /**
+     * ETRS89-EST [EST97]
+     * Extent: Estonia.
+     */
+    public const EPSG_ETRS89_EST_EST97 = 'urn:ogc:def:crs:EPSG::4934';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN]
      * Extent: Finland
      * EUREF-FIN is the national realization of ETRS89 in Finland.
      */
-    public const EPSG_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10688';
+    public const EPSG_ETRS89_FIN_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10688';
+
+    /**
+     * ETRS89-FRA [RGF93 v1]
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaced by ETRS89-FRA [RGF93 v2] (CRS code 9775) from 2010-06-18.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4964';
+
+    /**
+     * ETRS89-FRA [RGF93 v2]
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaces ETRS89-FRA [RGF93 v1] (CRS code 4964) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] (CRS code
+     * 9780) from 2021-01-05.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9775';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b]
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaces ETRS89-FRA [RGF93 v2] (CRS code 9775) from 2021-01-05.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9780';
+
+    /**
+     * ETRS89-FRO [2008]
+     * Extent: Faroe Islands
+     * National realization of ETRS89 in the Faroe Islands.
+     */
+    public const EPSG_ETRS89_FRO_2008 = 'urn:ogc:def:crs:EPSG::11085';
+
+    /**
+     * ETRS89-GBR [OSNet v2009]
+     * Extent: UK - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including
+     * Sea of the Hebrides and The Minch; Isle of Man onshore
+     * Second national realization of ETRS89 in Great Britain. Replaces ETRS89-GBR [OSNet v2001] from 2016.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009 = 'urn:ogc:def:crs:EPSG::11007';
+
+    /**
+     * ETRS89-GRC [HTRS07]
+     * Extent: Greece. Includes Aegean Islands, Ionian Islands, Dodecanese Islands, Crete, and Mount Athos
+     * National realization of ETRS89 in Greece.
+     */
+    public const EPSG_ETRS89_GRC_HTRS07 = 'urn:ogc:def:crs:EPSG::11091';
+
+    /**
+     * ETRS89-HRV [CROPOS]
+     * Extent: Croatia
+     * ETRS89-HRV [HTRS96] (CRS code 4888) used for national spatial referencing.
+     */
+    public const EPSG_ETRS89_HRV_CROPOS = 'urn:ogc:def:crs:EPSG::11187';
+
+    /**
+     * ETRS89-HRV [HTRS96]
+     * Extent: Croatia.
+     */
+    public const EPSG_ETRS89_HRV_HTRS96 = 'urn:ogc:def:crs:EPSG::4888';
+
+    /**
+     * ETRS89-HUN [ETRF2000]
+     * Extent: Hungary
+     * National realization of ETRS89 in Hungary.
+     */
+    public const EPSG_ETRS89_HUN_ETRF2000 = 'urn:ogc:def:crs:EPSG::11161';
+
+    /**
+     * ETRS89-IRE [ETRF2000]
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore.
+     */
+    public const EPSG_ETRS89_IRE_ETRF2000 = 'urn:ogc:def:crs:EPSG::4942';
+
+    /**
+     * ETRS89-ITA [IGM95]
+     * Extent: Italy; San Marino, Vatican City State
+     * Replaced by ETRS89-ITA [RDN2008] (CRS code 6704) from 2011-11-10.
+     */
+    public const EPSG_ETRS89_ITA_IGM95 = 'urn:ogc:def:crs:EPSG::4982';
+
+    /**
+     * ETRS89-ITA [RDN2008]
+     * Extent: Italy; San Marino, Vatican City State
+     * Replaces ETRS89-ITA [IGM95] (CRS code 4982) from 2011-11-10.
+     */
+    public const EPSG_ETRS89_ITA_RDN2008 = 'urn:ogc:def:crs:EPSG::6704';
+
+    /**
+     * ETRS89-LTU [LKS94]
+     * Extent: Lithuania.
+     */
+    public const EPSG_ETRS89_LTU_LKS94 = 'urn:ogc:def:crs:EPSG::4950';
+
+    /**
+     * ETRS89-LUX [2020]
+     * Extent: Luxembourg
+     * National realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2013] from 2021-10-31. Replaced by ETRS89-LUX
+     * [2025] from 2026-10-31.
+     */
+    public const EPSG_ETRS89_LUX_2020 = 'urn:ogc:def:crs:EPSG::11391';
+
+    /**
+     * ETRS89-LUX [2025]
+     * Extent: Luxembourg
+     * National realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2020] from 2026-10-31.
+     */
+    public const EPSG_ETRS89_LUX_2025 = 'urn:ogc:def:crs:EPSG::11545';
+
+    /**
+     * ETRS89-LVA [LKS-2020]
+     * Extent: Latvia
+     * Replaces ETRS89-LVA [LKS-92] (CRS code 4948) from 2026-10-01.
+     */
+    public const EPSG_ETRS89_LVA_LKS_2020 = 'urn:ogc:def:crs:EPSG::10303';
+
+    /**
+     * ETRS89-LVA [LKS-92]
+     * Extent: Latvia
+     * Replaced by ETRS89-LVA [LKS-2020] (CRS code 10303) from 2026-10-01.
+     */
+    public const EPSG_ETRS89_LVA_LKS_92 = 'urn:ogc:def:crs:EPSG::4948';
+
+    /**
+     * ETRS89-MDA [MOLDREF99]
+     * Extent: Moldova.
+     */
+    public const EPSG_ETRS89_MDA_MOLDREF99 = 'urn:ogc:def:crs:EPSG::4000';
+
+    /**
+     * ETRS89-MKD [EUREF-MAK2010]
+     * Extent: North Macedonia
+     * National realization of ETRS89 in North Macedonia.
+     */
+    public const EPSG_ETRS89_MKD_EUREF_MAK2010 = 'urn:ogc:def:crs:EPSG::11097';
+
+    /**
+     * ETRS89-NLD [AGRS2010]
+     * Extent: Netherlands
+     * National realization of ETRS89 in the Netherlands, aligned to ETRF2000.
+     */
+    public const EPSG_ETRS89_NLD_AGRS2010 = 'urn:ogc:def:crs:EPSG::11035';
+
+    /**
+     * ETRS89-NOR [EUREF89]
+     * Extent: Norway including Svalbard
+     * EUREF89 is the national realization of ETRS89 in Norway.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89 = 'urn:ogc:def:crs:EPSG::10873';
+
+    /**
+     * ETRS89-POL [PL-ETRF2000]
+     * Extent: Poland
+     * Adopted from 2012-12-01.
+     */
+    public const EPSG_ETRS89_POL_PL_ETRF2000 = 'urn:ogc:def:crs:EPSG::9700';
+
+    /**
+     * ETRS89-PRT [1995]
+     * Extent: Portugal - mainland ("continental")
+     * National realization of ETRS89 in continental Portugal.
+     */
+    public const EPSG_ETRS89_PRT_1995 = 'urn:ogc:def:crs:EPSG::11106';
+
+    /**
+     * ETRS89-ROU [ETRF2000]
+     * Extent: Romania
+     * National realization of ETRS89 in Romania.
+     */
+    public const EPSG_ETRS89_ROU_ETRF2000 = 'urn:ogc:def:crs:EPSG::11112';
+
+    /**
+     * ETRS89-SRB [SREF98]
+     * Extent: Serbia including Vojvodina
+     * Replaced by ETRS89-SRB [STRS00] (CRS code 8683).
+     */
+    public const EPSG_ETRS89_SRB_SREF98 = 'urn:ogc:def:crs:EPSG::4073';
+
+    /**
+     * ETRS89-SRB [STRS00]
+     * Extent: Serbia including Vojvodina
+     * Replaces SREF98 (CRS code 4073).
+     */
+    public const EPSG_ETRS89_SRB_STRS00 = 'urn:ogc:def:crs:EPSG::8683';
+
+    /**
+     * ETRS89-SVK [SKTRF09]
+     * Extent: Slovakia
+     * National realization of ETRS89 in Slovakia. From 2024-04-01 replaced by ETRS89-SVK [SKTRF2022] (CRS code 11077).
+     */
+    public const EPSG_ETRS89_SVK_SKTRF09 = 'urn:ogc:def:crs:EPSG::11074';
+
+    /**
+     * ETRS89-SVK [SKTRF2022]
+     * Extent: Slovakia
+     * National realization of ETRS89 in Slovakia. Replaces ETRS89-SVK [SKTRF09] (CRS code 11074) from 2024-04-01.
+     */
+    public const EPSG_ETRS89_SVK_SKTRF2022 = 'urn:ogc:def:crs:EPSG::11077';
+
+    /**
+     * ETRS89-SVN [D96]
+     * Extent: Slovenia
+     * The CORS station coordinates in the D96 SIGNAL network have been referenced to D96-17 since 2020-01-01. For
+     * practical purposes D96-17 is considered to be consistent with D96.
+     */
+    public const EPSG_ETRS89_SVN_D96 = 'urn:ogc:def:crs:EPSG::4882';
+
+    /**
+     * ETRS89-SWE [SWEREF 99]
+     * Extent: Sweden.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99 = 'urn:ogc:def:crs:EPSG::4976';
+
+    /**
+     * ETRS89-XKX [KOSOVAREF01]
+     * Extent: Kosovo.
+     */
+    public const EPSG_ETRS89_XKX_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9138';
 
     /**
      * FEH2010
@@ -368,12 +677,6 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_GEORGIA_GEODETIC_DATUM = 'urn:ogc:def:crs:EPSG::10829';
 
     /**
-     * HTRS96
-     * Extent: Croatia.
-     */
-    public const EPSG_HTRS96 = 'urn:ogc:def:crs:EPSG::4888';
-
-    /**
      * Hartebeesthoek94
      * Extent: Eswatini (Swaziland); Lesotho; South Africa.
      */
@@ -413,13 +716,6 @@ class Geocentric extends CoordinateReferenceSystem
      * Replaces IGD05 (CRS code 7134).
      */
     public const EPSG_IGD05_12 = 'urn:ogc:def:crs:EPSG::7137';
-
-    /**
-     * IGM95
-     * Extent: Italy; San Marino, Vatican City State
-     * Replaced by RDN2008 (CRS code 6704) from 2011-11-10.
-     */
-    public const EPSG_IGM95 = 'urn:ogc:def:crs:EPSG::4982';
 
     /**
      * IGRS
@@ -463,8 +759,11 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * IGS20
      * Extent: World
-     * Used for products from the International GNSS Service (IGS) from 2022-11-27 to 2025-02-01. Replaces IGb14 (code
-     * 9378). Replaced by IGb20 (code 10783). For most practical purposes IGS20 is equivalent to ITRF2020.
+     * For most practical purposes IGS20 is equivalent to ITRF2020. Replaces IGb14 (code 9378). Used for products from
+     * the International GNSS Service (IGS) from 2022-11-27: IGS20 used from 2022-11-27 to 2025-02-01 (GPS weeks 2238
+     * through 2351); IGb20 (extract from ITRF2020-u2023) used from 2025-02-02 to 2026-01-10 (GPS weeks 2352 through
+     * 2400); IGc20 used from 2026-01-11 (GPS week 2401). Users referencing updates should include this information in
+     * their metadata.
      */
     public const EPSG_IGS20 = 'urn:ogc:def:crs:EPSG::10176';
 
@@ -505,14 +804,9 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: World
      * Used for products from the International GNSS Service (IGS) from 2025-02-02. Replaces IGS20 (code 10176). For
      * most practical purposes IGb20 is equivalent to ITRF2020-u2023.
+     * @deprecated
      */
     public const EPSG_IGB20 = 'urn:ogc:def:crs:EPSG::10783';
-
-    /**
-     * IRENET95
-     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore.
-     */
-    public const EPSG_IRENET95 = 'urn:ogc:def:crs:EPSG::4942';
 
     /**
      * ISN2004
@@ -566,7 +860,8 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * ITRF2020
      * Extent: World
-     * Replaces ITRF2014 (CRS code 7789). Replaced by ITRF2020-u2023 (CRS code 10779).
+     * Replaces ITRF2014 (CRS code 7789). Updated through ITRF2020-u2023 from December 2024 and through ITRF2020-u2024
+     * from October 2025. Users referencing updates should include this information in their metadata.
      */
     public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9988';
 
@@ -574,6 +869,7 @@ class Geocentric extends CoordinateReferenceSystem
      * ITRF2020-u2023
      * Extent: World
      * Replaces ITRF2020 (CRS code 9988).
+     * @deprecated
      */
     public const EPSG_ITRF2020_U2023 = 'urn:ogc:def:crs:EPSG::10779';
 
@@ -654,23 +950,19 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_JGD2000 = 'urn:ogc:def:crs:EPSG::4946';
 
     /**
-     * JGD2011
+     * JGD2024
      * Extent: Japan
-     * Replaces JGD2000 (CRS code 4946) with effect from 21st October 2011.
+     * Replaces JGD2000 (CRS code 4946) with effect from 21st October 2011. On adoption of JGD2024 (vertical) with
+     * effect from 1st April 2025, the name of this geodetic CRS was changed from JGD2011 to JGD2024; there is no
+     * change of definition or of coordinate values.
      */
-    public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6666';
+    public const EPSG_JGD2024 = 'urn:ogc:def:crs:EPSG::6666';
 
     /**
      * KGD2002
      * Extent: Republic of Korea (South Korea).
      */
     public const EPSG_KGD2002 = 'urn:ogc:def:crs:EPSG::4926';
-
-    /**
-     * KOSOVAREF01
-     * Extent: Kosovo.
-     */
-    public const EPSG_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9138';
 
     /**
      * KSA-GRF17
@@ -689,26 +981,6 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Libya.
      */
     public const EPSG_LGD2006 = 'urn:ogc:def:crs:EPSG::4899';
-
-    /**
-     * LKS-2020
-     * Extent: Latvia
-     * Replaces LKS-92 (CRS code 4948) from 2025-10-01.
-     */
-    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10303';
-
-    /**
-     * LKS-92
-     * Extent: Latvia
-     * Replaced by LKS-2020 (CRS code 10303) from 2025-10-01.
-     */
-    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4948';
-
-    /**
-     * LKS94
-     * Extent: Lithuania.
-     */
-    public const EPSG_LKS94 = 'urn:ogc:def:crs:EPSG::4950';
 
     /**
      * LTF2004(G)
@@ -777,12 +1049,6 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_MGI = 'urn:ogc:def:crs:EPSG::9266';
 
     /**
-     * MOLDREF99
-     * Extent: Moldova.
-     */
-    public const EPSG_MOLDREF99 = 'urn:ogc:def:crs:EPSG::4000';
-
-    /**
      * MTRF-2000
      * Extent: Saudi Arabia.
      */
@@ -823,24 +1089,14 @@ class Geocentric extends CoordinateReferenceSystem
 
     /**
      * NAD83(2011)
-     * Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware;
-     * Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts;
-     * Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico;
-     * New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina;
-     * South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US
-     * Virgin Islands
+     * Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
      * Replaces NAD83(CORS96) and NAD83(NSRS2007) (CRS codes 6781 and 4892).
      */
     public const EPSG_NAD83_2011 = 'urn:ogc:def:crs:EPSG::6317';
 
     /**
      * NAD83(CORS96)
-     * Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware;
-     * Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts;
-     * Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico;
-     * New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina;
-     * South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US
-     * Virgin Islands
+     * Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
      * Replaced by NAD83(2011) (CRS code 6317) from 2011-09-06.
      */
     public const EPSG_NAD83_CORS96 = 'urn:ogc:def:crs:EPSG::6781';
@@ -930,13 +1186,8 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * NAD83(FBN)
      * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore.
-     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - CONUS - Alabama; Arizona; Arkansas; California;
-     * Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana;
-     * Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New
-     * Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania;
-     * Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West
-     * Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin
-     * Islands - onshore
+     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - conterminous (contiguous) lower 48 states
+     * (CONUS) onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
      * In Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Continental US, Puerto Rico and
      * US Virgin Islands replaced by NAD83(NSRS2007). In American Samoa and Hawaii replaced by NAD83(PA11). In Guam/NMI
      * replaced by NAD83(MA11).
@@ -953,13 +1204,8 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * NAD83(HARN)
      * Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore.
-     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore Alabama, Alaska, Arizona, Arkansas,
-     * California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas,
-     * Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,
-     * Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma,
-     * Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia,
-     * Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin
-     * Islands - onshore
+     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore plus offshore Gulf of Mexico
+     * continental shelf (GoM OCS). US Virgin Islands - onshore
      * In CONUS and Hawaii replaces NAD83 for applications with an accuracy of better than 1m. Replaced by NAD83(FBN)
      * in CONUS, American Samoa and Guam/NMI, by NAD83(NSRS2007) in Alaska, by NAD83(PA11) in Hawaii and by NAD83(HARN
      * Corrected) in PRVI.
@@ -982,12 +1228,7 @@ class Geocentric extends CoordinateReferenceSystem
 
     /**
      * NAD83(NSRS2007)
-     * Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware;
-     * Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts;
-     * Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico;
-     * New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina;
-     * South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US
-     * Virgin Islands
+     * Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
      * Replaces NAD83(HARN) and NAD83(FBN). Replaced by NAD83(2011).
      */
     public const EPSG_NAD83_NSRS2007 = 'urn:ogc:def:crs:EPSG::4892';
@@ -1007,19 +1248,18 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_NAD83_PACP00 = 'urn:ogc:def:crs:EPSG::9073';
 
     /**
-     * NATRF2022
-     * Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador;
-     * Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA -
-     * Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho;
-     * Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota;
-     * Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North
-     * Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
-     * CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the
-     * EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event
-     * that definitions change, the record will be deprecated and replaced with a new EPSG code.
+     * NATRF2022e2020
+     * Extent: North America: Canada; USA - Alaska, conterminous (contiguous) lower 48 states (CONUS).
      */
-    public const EPSG_NATRF2022 = 'urn:ogc:def:crs:EPSG::10966';
+    public const EPSG_NATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10966';
+
+    /**
+     * NKG_ETRF14
+     * Extent: Denmark, Estonia, Finland, Latvia, Lithuania, and Sweden; Norway - onshore, nearshore, and offshore
+     * southeast of a line joining Haugesund and the western limit of the Norway-Denmark maritime boundary
+     * Used as hub for NKG2020 transformations. Replaces NKG_ETRF00 (ETRF2000 at epoch 2000.0).
+     */
+    public const EPSG_NKG_ETRF14 = 'urn:ogc:def:crs:EPSG::10805';
 
     /**
      * NZGD2000
@@ -1121,15 +1361,12 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_QAZTRF_23 = 'urn:ogc:def:crs:EPSG::10939';
 
     /**
-     * RDN2008
-     * Extent: Italy; San Marino, Vatican City State
-     * Replaces IGM95 (CRS code 4982) from 2011-11-10.
-     */
-    public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6704';
-
-    /**
      * REDGEOMIN
-     * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+     * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+     * REDGEOMIN coordinates are updated on a biannual basis identified using syntax "REDGEOMIN([frame]@[epoch]", e.g.
+     * REDGEOMIN(IGS20@2024.0), REDGEOMIN(IGS20@2024.5), etc. This EPSG record references any of these updates without
+     * distinction. Users should include the update used in the metadata of  their spatial data metadata. Data should
+     * be reduced to this epoch using the ADELA deformation model.
      */
     public const EPSG_REDGEOMIN = 'urn:ogc:def:crs:EPSG::9694';
 
@@ -1153,27 +1390,6 @@ class Geocentric extends CoordinateReferenceSystem
      * Replaces RRAF 1991 (CRS code 4556).
      */
     public const EPSG_RGAF09 = 'urn:ogc:def:crs:EPSG::5487';
-
-    /**
-     * RGF93 v1
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaced by RGF93 v2 (CRS code 9775) from 2010-06-18.
-     */
-    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4964';
-
-    /**
-     * RGF93 v2
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaces RGF93 v1 (CRS code 4964) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9780) from 2021-01-05.
-     */
-    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9775';
-
-    /**
-     * RGF93 v2b
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaces RGF93 v2 (CRS code 9775) from 2021-01-05.
-     */
-    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9780';
 
     /**
      * RGFG95
@@ -1413,7 +1629,7 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * SIRGAS-Chile 2002
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-     * Densification of SIRGAS 2000 within Chile. Replaced by SIRGAS-Chile 2010 (CRS code 8947).
+     * Densification of SIRGAS 2000 within Chile. Replaced by SIRGAS-Chile 2013 (CRS code 9146).
      */
     public const EPSG_SIRGAS_CHILE_2002 = 'urn:ogc:def:crs:EPSG::5358';
 
@@ -1422,13 +1638,14 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
      * Densification of SIRGAS-CON within Chile at epoch 2010.00. Replaces SIRGAS-Chile 2002 (CRS code 5358), replaced
      * by SIRGAS-Chile 2013 (CRS code 9146) due to significant tectonic deformation.
+     * @deprecated
      */
     public const EPSG_SIRGAS_CHILE_2010 = 'urn:ogc:def:crs:EPSG::8947';
 
     /**
      * SIRGAS-Chile 2013
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-     * Densification of SIRGAS-CON within Chile at epoch 2013.00. Replaces SIRGAS-Chile 2010 (CRS code 8947), replaced
+     * Densification of SIRGAS-CON within Chile at epoch 2013.00. Replaces SIRGAS-Chile 2002 (CRS code 5358), replaced
      * by SIRGAS-Chile 2016 (CRS code 9151) due to significant tectonic deformation.
      */
     public const EPSG_SIRGAS_CHILE_2013 = 'urn:ogc:def:crs:EPSG::9146';
@@ -1444,10 +1661,18 @@ class Geocentric extends CoordinateReferenceSystem
     /**
      * SIRGAS-Chile 2021
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-     * Densification of SIRGAS-CON within Chile at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9151) due to
-     * significant tectonic deformation.
+     * Densification of SIRGAS-CON within Chile at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9151) and
+     * replaced by SIRGAS-Chile 2025 (CRS code 11471) due to significant tectonic deformation.
      */
     public const EPSG_SIRGAS_CHILE_2021 = 'urn:ogc:def:crs:EPSG::20039';
+
+    /**
+     * SIRGAS-Chile 2025
+     * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+     * Densification of SIRGAS-CON within Chile at epoch 2025.00. Replaces SIRGAS-Chile 2021 (CRS code 20039) due to
+     * significant tectonic deformation.
+     */
+    public const EPSG_SIRGAS_CHILE_2025 = 'urn:ogc:def:crs:EPSG::11471';
 
     /**
      * SIRGAS-ROU98
@@ -1463,32 +1688,21 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_SIRGAS_ES2007_8 = 'urn:ogc:def:crs:EPSG::5391';
 
     /**
-     * SRB_ETRS89
-     * Extent: Serbia including Vojvodina
-     * Replaces SREF98 (CRS code 4073).
-     */
-    public const EPSG_SRB_ETRS89 = 'urn:ogc:def:crs:EPSG::8683';
-
-    /**
-     * SREF98
-     * Extent: Serbia including Vojvodina
-     * Replaced by SRB_ETRS89 (STRS00) (CRS code 8683).
-     */
-    public const EPSG_SREF98 = 'urn:ogc:def:crs:EPSG::4073';
-
-    /**
      * SRGI2013
      * Extent: Indonesia
-     * Supports horizontal component of national horizontal control network (JKHN). Adopted 2013-10-11. Replaces DGN95
-     * and all older systems.
+     * Geometric component of national geodetic control network (JKG). Adopted 2013-10-11. Replaces DGN95 and all older
+     * systems.
      */
     public const EPSG_SRGI2013 = 'urn:ogc:def:crs:EPSG::9468';
 
     /**
-     * SWEREF99
-     * Extent: Sweden.
+     * SRGI2013 epoch 2021.0
+     * Extent: Indonesia
+     * Static snapshot at epoch 2021.0 of SRGI2013 dynamic CRS (CRS code 9468). Geometric component of national control
+     * network (JKG). Replaces SRGI2013 epoch 2012.0 coordinates of INACORS GNSS reference stations from
+     * 2025-02-25T14:10Z.
      */
-    public const EPSG_SWEREF99 = 'urn:ogc:def:crs:EPSG::4976';
+    public const EPSG_SRGI2013_EPOCH_2021_0 = 'urn:ogc:def:crs:EPSG::11029';
 
     /**
      * Saba
@@ -1501,12 +1715,6 @@ class Geocentric extends CoordinateReferenceSystem
      * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
      */
     public const EPSG_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10734';
-
-    /**
-     * Slovenia 1996
-     * Extent: Slovenia.
-     */
-    public const EPSG_SLOVENIA_1996 = 'urn:ogc:def:crs:EPSG::4882';
 
     /**
      * St. Helena Tritan
@@ -1642,15 +1850,151 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_WGS_84_TRANSIT = 'urn:ogc:def:crs:EPSG::7815';
 
     /**
+     * Xrail84
+     * Extent: UK - Greater London and surrounding area.
+     */
+    public const EPSG_XRAIL84 = 'urn:ogc:def:crs:EPSG::10991';
+
+    /**
      * Yemen NGN96
      * Extent: Yemen.
      */
     public const EPSG_YEMEN_NGN96 = 'urn:ogc:def:crs:EPSG::4980';
 
     /**
-     * @deprecated use EPSG_LKS_92 instead
+     * @deprecated use EPSG_ETRS89_BGR_BGS2005 instead
+     */
+    public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7796';
+
+    /**
+     * @deprecated use EPSG_ETRS89_BIH_BH_ETRS89 instead
+     */
+    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10326';
+
+    /**
+     * @deprecated use EPSG_ETRS89_CHE_CHTRS95 instead
+     */
+    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4932';
+
+    /**
+     * @deprecated use EPSG_CR_SIRGAS_EPOCH_2014_59 instead
+     */
+    public const EPSG_CR_SIRGAS = 'urn:ogc:def:crs:EPSG::8905';
+
+    /**
+     * @deprecated use EPSG_ETRS89_EST_EST97 instead
+     */
+    public const EPSG_EST97 = 'urn:ogc:def:crs:EPSG::4934';
+
+    /**
+     * @deprecated use EPSG_ETRS89_POL_PL_ETRF2000 instead
+     */
+    public const EPSG_ETRF2000_PL = 'urn:ogc:def:crs:EPSG::9700';
+
+    /**
+     * @deprecated use EPSG_ETRS89_DEU_ETRS89_DREF91_2016 instead
+     */
+    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10282';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN instead
+     */
+    public const EPSG_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10688';
+
+    /**
+     * @deprecated use EPSG_ETRS89_HRV_HTRS96 instead
+     */
+    public const EPSG_HTRS96 = 'urn:ogc:def:crs:EPSG::4888';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_IGM95 instead
+     */
+    public const EPSG_IGM95 = 'urn:ogc:def:crs:EPSG::4982';
+
+    /**
+     * @deprecated use EPSG_ETRS89_IRE_ETRF2000 instead
+     */
+    public const EPSG_IRENET95 = 'urn:ogc:def:crs:EPSG::4942';
+
+    /**
+     * @deprecated use EPSG_JGD2024 instead
+     */
+    public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6666';
+
+    /**
+     * @deprecated use EPSG_ETRS89_XKX_KOSOVAREF01 instead
+     */
+    public const EPSG_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9138';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_2020 instead
+     */
+    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10303';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92 instead
+     */
+    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4948';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92 instead
      */
     public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4948';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LTU_LKS94 instead
+     */
+    public const EPSG_LKS94 = 'urn:ogc:def:crs:EPSG::4950';
+
+    /**
+     * @deprecated use EPSG_ETRS89_MDA_MOLDREF99 instead
+     */
+    public const EPSG_MOLDREF99 = 'urn:ogc:def:crs:EPSG::4000';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020 instead
+     */
+    public const EPSG_NATRF2022 = 'urn:ogc:def:crs:EPSG::10966';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008 instead
+     */
+    public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6704';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1 instead
+     */
+    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4964';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2 instead
+     */
+    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9775';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B instead
+     */
+    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9780';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SRB_STRS00 instead
+     */
+    public const EPSG_SRB_ETRS89 = 'urn:ogc:def:crs:EPSG::8683';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SRB_SREF98 instead
+     */
+    public const EPSG_SREF98 = 'urn:ogc:def:crs:EPSG::4073';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99 instead
+     */
+    public const EPSG_SWEREF99 = 'urn:ogc:def:crs:EPSG::4976';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96 instead
+     */
+    public const EPSG_SLOVENIA_1996 = 'urn:ogc:def:crs:EPSG::4882';
 
     /**
      * @deprecated use EPSG_KGD2002 instead
@@ -1716,5 +2060,14 @@ class Geocentric extends CoordinateReferenceSystem
             'extent_description' => '',
             'help' => $help,
         ];
+    }
+
+    /**
+     * @internal CRS table row without constructing the object (avoids loading bounding polygons)
+     * @return array<string, mixed>|null
+     */
+    public static function getSRIDData(string $srid): ?array
+    {
+        return static::$sridData[$srid] ?? null;
     }
 }

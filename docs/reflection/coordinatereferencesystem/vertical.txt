@@ -245,7 +245,7 @@ Baltic 1986 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_BALTIC_1986_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9650')
 
-Initially valid until 2019-12-31, but that extended to 2023-12-31. Will be replaced by EVRF2007-PL height (CRS 9651) after 2023-12-31.
+Initially valid until 2019-12-31, but that extended to 2023-12-31. Replaced by PL-EVRF2007 height (CRS 9651) from 2024-01-01.
 
 Bandar Abbas height
 -------------------
@@ -272,6 +272,19 @@ Belfast height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5732')
 
 Malin Head height (CRS code 5731) used for medium and small scale topographic mapping.
+
+Bhutan Vertical Datum 2022 height
+---------------------------------
+| Extent: Bhutan
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_BHUTAN_VERTICAL_DATUM_2022_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11338')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_BHUTAN_VERTICAL_DATUM_2022_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11338')
+
+Heights are derived through application of the DrukGeoid22 geoid separation model (transformation code 11339) to DrukRef23 ellipsoid heights.
 
 Black Sea depth
 ---------------
@@ -475,6 +488,19 @@ COH88 2025 (NAVD88) height (ftUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10919')
 
 Replaces NAVD88 height (ftUS) (CRS code 6360) in California. Supersedes COH88 2017.5 (NAVD88) height (ft US) from 2025-06-15. State law defines use of US survey feet: see CRS code 10918 for metric equivalent.
+
+COLGVD2023 height
+-----------------
+| Extent: Colombia - mainland onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_COLGVD2023_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11513')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_COLGVD2023_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11513')
+
+Colombia’s gravity-based vertical datum, in accordance with the conventions of the International Height Reference System (IHRS) (Normal Heights).
 
 Cagliari 1956 height
 --------------------
@@ -1113,19 +1139,6 @@ EVRF2007 height
 
 Uses Normal heights. Replaces EVRF2000 height (CRS code 5730). Replaced by EVRF2019 height (CRS code 9389).
 
-EVRF2007-PL height
-------------------
-| Extent: Poland - onshore
-
-.. code-block:: php
-
-    Vertical::fromSRID(Vertical::EPSG_EVRF2007_PL_HEIGHT)
-    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9651')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_EVRF2007_PL_HEIGHT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9651')
-
-Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
-
 EVRF2019 height
 ---------------
 | Extent: Europe - onshore - Andorra; Austria; Belarus; Belgium; Bosnia and Herzegovina; Bulgaria; Croatia; Czechia; Denmark; Estonia; Finland; France - mainland; Germany; Gibraltar, Hungary; Italy - mainland and Sicily; Latvia; Liechtenstein; Lithuania; Luxembourg; Netherlands; North Macedonia; Norway; Poland; Portugal - mainland; Romania; Russia – west of approximately 60°E; San Marino; Slovakia; Slovenia; Spain - mainland; Sweden; Switzerland; UK - Great Britain mainland; Ukraine; Vatican City State
@@ -1328,6 +1341,19 @@ GHA height
 
 For scientific purposes see EVRF2000 Austria height (CRS code 9274).
 
+GLLAT depth
+-----------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GLLAT_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11454')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLLAT_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11454')
+
+Reference for all realizations of GLLAT depth without distinction.
+
 GLLAT(2023) depth
 -----------------
 | Extent: Greenland - offshore
@@ -1338,6 +1364,18 @@ GLLAT(2023) depth
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::10650')
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLLAT_2023_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10650')
+
+
+GLLAT(2025) depth
+-----------------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GLLAT_2025_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11450')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLLAT_2025_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11450')
 
 
 GLLMSL(2022) height
@@ -1353,6 +1391,19 @@ GLLMSL(2022) height
 
 Collection of 77 disconnected local levelling nets each tied to local mean sea level.
 
+GLMSL depth
+-----------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GLMSL_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11455')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLMSL_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11455')
+
+Reference for all realizations of GLMSL without distinction.
+
 GLMSL(2023) depth
 -----------------
 | Extent: Greenland - offshore
@@ -1363,6 +1414,18 @@ GLMSL(2023) depth
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::10649')
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLMSL_2023_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10649')
+
+
+GLMSL(2025) depth
+-----------------
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_GLMSL_2025_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11451')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_GLMSL_2025_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11451')
 
 
 GNTRANS height
@@ -1783,6 +1846,19 @@ IGN 2008 LD height
 
 Replaces IGN 1992 LD height (CRS code 5618).
 
+IGN 2023 Mayotte height
+-----------------------
+| Extent: Mayotte - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_IGN_2023_MAYOTTE_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11157')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_IGN_2023_MAYOTTE_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11157')
+
+Replaces Mayotte 1950 height (CRS code 5793).
+
 INAGeoid2020 v1 height
 ----------------------
 | Extent: Indonesia
@@ -1897,7 +1973,20 @@ JGD2011 (vertical) height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6695')
 
-Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011.
+Replaces JGD2000 (vertical) (CRS code 6694) with effect from 21st October 2011. Replaced by JGD2024 (vertical) (CRS code 11317) with effect from 1st April 2025.
+
+JGD2024 (vertical) height
+-------------------------
+| Extent: Japan
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_JGD2024_VERTICAL_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11317')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_JGD2024_VERTICAL_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11317')
+
+Replaced JGD2011 (vertical) (CRS code 6695) with effect from 1st April 2025.
 
 JSLD69 height
 -------------
@@ -2066,18 +2155,6 @@ LAS07 height
 
 In Lithuania replaces Baltic 1977 system (CRS code 5705) from January 2016.
 
-LAT NL depth
-------------
-| Extent: Netherlands - offshore North Sea and nearshore
-
-.. code-block:: php
-
-    Vertical::fromSRID(Vertical::EPSG_LAT_NL_DEPTH)
-    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9287')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LAT_NL_DEPTH)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9287')
-
-
 LAT depth
 ---------
 | Extent: World
@@ -2090,6 +2167,18 @@ LAT depth
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5861')
 
 Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "LAT at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
+
+LAT-NLD depth
+-------------
+| Extent: Netherlands - offshore North Sea and nearshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_LAT_NLD_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9287')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LAT_NLD_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9287')
+
 
 LCVD61 height (ft)
 ------------------
@@ -2215,6 +2304,19 @@ Lerwick height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5742')
 
 
+London Survey Grid height
+-------------------------
+| Extent: UK - Greater London and surrounding area
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_LONDON_SURVEY_GRID_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10989')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_LONDON_SURVEY_GRID_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10989')
+
+Vertical component of  the London Survey Grid 2025 (LSG2025) (CRS code 11006). Prior to 2016, Ordnance Survey Geoid Model 2002 (OSGM02) plus a 100m shift could be used to produce acceptable LSGH values. In 2016, the updated Ordnance Survey Geoid Model 2015 (OSGM15) was released with an approximately 25mm height shift from OSGM02 in the London region. When using GNSS observations to derive LSGH values, OSGM15 plus a 100m shift shall not be used; instead the LSGGM2025 (code 10990) applied to OSNet v2009 (CRS code 11008) must be used.
+
 Low Water depth
 ---------------
 | Extent: World
@@ -2303,7 +2405,7 @@ MLLWS depth
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MLLWS_DEPTH)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5864')
 
-Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model..
+Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
 
 MLW depth
 ---------
@@ -2330,18 +2432,6 @@ MLWS depth
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5865')
 
 Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "MLWS at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
-
-MSL NL depth
-------------
-| Extent: Netherlands - offshore North Sea and nearshore
-
-.. code-block:: php
-
-    Vertical::fromSRID(Vertical::EPSG_MSL_NL_DEPTH)
-    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9288')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_NL_DEPTH)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9288')
-
 
 MSL UK & Ireland VORF08 depth
 -----------------------------
@@ -2433,6 +2523,18 @@ MSL height (ftUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8052')
 
 Approximate because not specific to any location or epoch. Users are advised to not use this generic CRS but instead use one with a specific datum origin (e.g. "Mean Sea Level at xxx during yyyy-yyyy") or defined through a specified geoid/hydroid model.
+
+MSL-NLD depth
+-------------
+| Extent: Netherlands - offshore North Sea and nearshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_MSL_NLD_DEPTH)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9288')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MSL_NLD_DEPTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9288')
+
 
 MVGC height
 -----------
@@ -2545,7 +2647,7 @@ Mayotte 1950 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_MAYOTTE_1950_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5793')
 
-Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system.
+Referred to as 'SHOM 1953' in government regulations but confirmed by IGN as being the Mayotte 1950 system. Replaced by IGN 2023 Mayotte height (CRS code 11157).
 
 Melilla height
 --------------
@@ -2650,7 +2752,7 @@ Use has been extended from Netherlands onshore to Netherlands onshore and offsho
 
 NAVD88 depth
 ------------
-| Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: Mexico - onshore. USA - onshore - USA - Alaska, conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -2662,7 +2764,7 @@ NAVD88 depth
 
 NAVD88 depth (ftUS)
 -------------------
-| Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore
 
 .. code-block:: php
 
@@ -2675,7 +2777,7 @@ Replaces NGVD29 depth (ftUS) (CRS code 6359).
 
 NAVD88 height
 -------------
-| Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: Mexico - onshore. USA - onshore - USA - Alaska, conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -2700,7 +2802,7 @@ Care: only for use as part of a compound CRS in conjunction with State Plane CS 
 
 NAVD88 height (ftUS)
 --------------------
-| Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore
 
 .. code-block:: php
 
@@ -2788,6 +2890,19 @@ NGF-IGN78 height
 
 Replaces NGC 1948 height (CRS code 5791).
 
+NGFA 2022 height
+----------------
+| Extent: Wallis and Futuna - Futuna and Alofi - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_NGFA_2022_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11446')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NGFA_2022_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11446')
+
+Replaces NGWF Futuna (MOP 1996) height.
+
 NGG1977 height
 --------------
 | Extent: French Guiana - onshore
@@ -2841,7 +2956,7 @@ The collection of heterogeneous vertical coordinate reference systems throughout
 
 NGVD29 depth (ftUS)
 -------------------
-| Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
 
 .. code-block:: php
 
@@ -2854,7 +2969,7 @@ Replaced by NAVD88 depth (ftUS) (CRS code 6358).
 
 NGVD29 height (ftUS)
 --------------------
-| Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
 
 .. code-block:: php
 
@@ -2867,7 +2982,7 @@ Replaced by NAVD88 height (ftUS) (CRS code 6360).
 
 NGVD29 height (m)
 -----------------
-| Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
 
 .. code-block:: php
 
@@ -2891,18 +3006,31 @@ NMVD03 height
 
 Replaces all earlier vertical CRSs on these islands.
 
-NN2000 height
--------------
+NN2000:2018 height
+------------------
 | Extent: Norway - onshore
 
 .. code-block:: php
 
-    Vertical::fromSRID(Vertical::EPSG_NN2000_HEIGHT)
+    Vertical::fromSRID(Vertical::EPSG_NN2000_2018_HEIGHT)
     Vertical::fromSRID('urn:ogc:def:crs:EPSG::5941')
-    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NN2000_HEIGHT)
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NN2000_2018_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5941')
 
-Replaces NN54 height (CRS code 5776).
+Renamed from NN2000 height with effect from 2026-03-01. Replaces NN54 height (CRS code 5776). Replaced by NN2000:2025 height (code 11394).
+
+NN2000:2025 height
+------------------
+| Extent: Norway - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_NN2000_2025_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::11394')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NN2000_2025_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11394')
+
+Replaces NN2000:2018 height (CRS code 5941).
 
 NN54 height
 -----------
@@ -3067,6 +3195,19 @@ PHD93 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5724')
 
 Replaces Fahud Height Datum height (CRS code 5725) from 1993.
+
+PL-EVRF2007 height
+------------------
+| Extent: Poland - onshore
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_PL_EVRF2007_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::9651')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_PL_EVRF2007_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9651')
+
+Replaces Baltic 1986 height (CRS 9650) after 2023-12-31.
 
 PNG08 height
 ------------
@@ -3361,7 +3502,7 @@ Orthometric heights. Replaces SRVN71.
 
 SVD2006 height
 --------------
-| Extent: Arctic (Norway (Svalbard)) - between 81°10'N and 76°10'N
+| Extent: 4860 - Svalbard - west of 37.91° between 76.21° and 81.12°
 
 .. code-block:: php
 
@@ -3370,7 +3511,20 @@ SVD2006 height
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SVD2006_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20000')
 
-Defined through the arcgp-2006-sk geoid model.
+Defined through the arcgp-2006-sk geoid model. Replaced by SVD2024 height (CRS code 10999).
+
+SVD2024 height
+--------------
+| Extent: Svalbard including Bear Island
+
+.. code-block:: php
+
+    Vertical::fromSRID(Vertical::EPSG_SVD2024_HEIGHT)
+    Vertical::fromSRID('urn:ogc:def:crs:EPSG::10999')
+    CoordinateReferenceSystem::fromSRID(Vertical::EPSG_SVD2024_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10999')
+
+Replaces SVD2006 height (CRS code 20000).
 
 SVS2000 height
 --------------

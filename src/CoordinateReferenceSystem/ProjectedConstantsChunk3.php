@@ -12,963 +12,6 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk3
 {
     /**
-     * NAD83(CSRS) / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::3157';
-
-    /**
-     * NAD83(CSRS) / UTM zone 11N
-     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
-     * In use from 2000.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::2955';
-
-    /**
-     * NAD83(CSRS) / UTM zone 12N
-     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
-     * In use from 2000.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::2956';
-
-    /**
-     * NAD83(CSRS) / UTM zone 13N
-     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
-     * In use from 2000.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::2957';
-
-    /**
-     * NAD83(CSRS) / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::3158';
-
-    /**
-     * NAD83(CSRS) / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::3159';
-
-    /**
-     * NAD83(CSRS) / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::3160';
-
-    /**
-     * NAD83(CSRS) / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * In use from 2000.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::2958';
-
-    /**
-     * NAD83(CSRS) / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * In use from 2000.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::2959';
-
-    /**
-     * NAD83(CSRS) / UTM zone 19N
-     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
-     * In use from 1999.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::2960';
-
-    /**
-     * NAD83(CSRS) / UTM zone 20N
-     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
-     * Quebec
-     * In use from 1999.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::2961';
-
-    /**
-     * NAD83(CSRS) / UTM zone 21N
-     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
-     * In use from 2000.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::2962';
-
-    /**
-     * NAD83(CSRS) / UTM zone 22N
-     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::3761';
-
-    /**
-     * NAD83(CSRS) / UTM zone 23N
-     * Extent: Canada offshore Atlantic - 48°W to 42°W.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::9709';
-
-    /**
-     * NAD83(CSRS) / UTM zone 24N
-     * Extent: Canada offshore Atlantic - east of 42°W.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::9713';
-
-    /**
-     * NAD83(CSRS) / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::3154';
-
-    /**
-     * NAD83(CSRS) / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::3155';
-
-    /**
-     * NAD83(CSRS) / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
-     */
-    public const EPSG_NAD83_CSRS_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::3156';
-
-    /**
-     * NAD83(CSRS) / Yukon Albers
-     * Extent: Canada - Yukon
-     * This CRS may sometimes be called "NAD83 / Yukon Albers". That is the name of a different system (see CRS code
-     * 3578) but at the scales involved the positional difference of under 2 metres may not be significant.
-     */
-    public const EPSG_NAD83_CSRS_YUKON_ALBERS = 'urn:ogc:def:crs:EPSG::3579';
-
-    /**
-     * NAD83(CSRS)v2 / Alberta 3TM ref merid 111 W
-     * Extent: Canada - Alberta - east of 112°30'W
-     * If used for rural area control markers, area of use is amended to east of 112°W; however use of NAD83(CSRS)v2 /
-     * UTM zone 12N (CRS code 22212) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_111_W = 'urn:ogc:def:crs:EPSG::22262';
-
-    /**
-     * NAD83(CSRS)v2 / Alberta 3TM ref merid 114 W
-     * Extent: Canada - Alberta - between 115°30'W and 112°30'W
-     * If used for rural area control markers, area of use is amended to between 116°W and 112°W; however use of
-     * NAD83(CSRS)v2 / UTM zones 11N and 12N (CRS codes 22211 and 22212) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_114_W = 'urn:ogc:def:crs:EPSG::22263';
-
-    /**
-     * NAD83(CSRS)v2 / Alberta 3TM ref merid 117 W
-     * Extent: Canada - Alberta - between 118°30'W and 115°30' W
-     * If used for rural area control markers, area of use is amended to between 118°W and 116°W; however use of
-     * NAD83(CSRS)v2 / UTM zone 11N (CRS code 22211) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_117_W = 'urn:ogc:def:crs:EPSG::22264';
-
-    /**
-     * NAD83(CSRS)v2 / Alberta 3TM ref merid 120 W
-     * Extent: Canada - Alberta - west of 118°30' W
-     * If used for rural area control markers, area of use is amended to west of 118°W; however use of NAD83(CSRS)v2 /
-     * UTM zone 11N (CRS code 22211) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V2_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22265';
-
-    /**
-     * NAD83(CSRS)v2 / NB Stereographic
-     * Extent: Canada - New Brunswick
-     * In use from 1999.
-     */
-    public const EPSG_NAD83_CSRS_V2_NB_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22240';
-
-    /**
-     * NAD83(CSRS)v2 / PEI Stereographic
-     * Extent: Canada - Prince Edward Island.
-     */
-    public const EPSG_NAD83_CSRS_V2_PEI_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22239';
-
-    /**
-     * NAD83(CSRS)v2 / Quebec Albers
-     * Extent: Canada - Quebec.
-     */
-    public const EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS = 'urn:ogc:def:crs:EPSG::6624';
-
-    /**
-     * NAD83(CSRS)v2 / Quebec Lambert
-     * Extent: Canada - Quebec.
-     */
-    public const EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT = 'urn:ogc:def:crs:EPSG::6622';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 10
-     * Extent: Canada - Quebec - west of 78°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_10 = 'urn:ogc:def:crs:EPSG::22250';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 3
-     * Extent: Canada - Quebec - east of 60°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_3 = 'urn:ogc:def:crs:EPSG::22243';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 4
-     * Extent: Canada - Quebec - between 63°W and 60°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_4 = 'urn:ogc:def:crs:EPSG::22244';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 5
-     * Extent: Canada - Quebec - between 66°W and 63°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_5 = 'urn:ogc:def:crs:EPSG::22245';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 6
-     * Extent: Canada - Quebec - between 69°W and 66°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_6 = 'urn:ogc:def:crs:EPSG::22246';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 7
-     * Extent: Canada - Quebec - between 72°W and 69°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_7 = 'urn:ogc:def:crs:EPSG::22247';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 8
-     * Extent: Canada - Quebec - between 75°W and 72°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_8 = 'urn:ogc:def:crs:EPSG::22248';
-
-    /**
-     * NAD83(CSRS)v2 / SCoPQ zone 9
-     * Extent: Canada - Quebec - between 78°W and 75°W.
-     */
-    public const EPSG_NAD83_CSRS_V2_SCOPQ_ZONE_9 = 'urn:ogc:def:crs:EPSG::22249';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 1998.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22210';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 11N
-     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Alberta in 1999.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22211';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 12N
-     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 1998 and the provincial governments of Alberta in 1999 and
-     * Saskatchewan in 2000. Note: SK uses zone 13 (CRS code 22213) for province-wide mapping and spatial referencing.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22212';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 13N
-     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan, Canada - Saskatchewan
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Saskatchewan in 2000. This
-     * zone used throughout all SK for province-wide mapping and spatial referencing.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22213';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 1998 and the provincial governments of Saskatchewan in 2000 and
-     * Manitoba in 2001. Note: SK uses zone 13 (CRS code 22213) for province-wide mapping and spatial referencing.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22214';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Manitoba in 2001.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22215';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Manitoba in 2001.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22216';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22217';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22218';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 19N
-     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
-     * Adopted by the Canadian federal government in 1998 and the provincial governments of Quebec in 2004 and New
-     * Brunswick in 1999.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22219';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 20N
-     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
-     * Quebec
-     * Adopted by the Canadian federal government in 1998 and the provincial governments of Quebec in 2004, New
-     * Brunswick in 1999 and Prince Edward Island in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22220';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 21N
-     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22221';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 22N
-     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
-     * Adopted by the Canadian federal government in 1998.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22222';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
-     * Adopted by the Canadian federal government in 1998.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22207';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 1998.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22208';
-
-    /**
-     * NAD83(CSRS)v2 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 1998.
-     */
-    public const EPSG_NAD83_CSRS_V2_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22209';
-
-    /**
-     * NAD83(CSRS)v3 / MTM NS 1997 zone 4
-     * Extent: Canada - Nova Scotia - east of 63°W
-     * Replaced by NAD83(CSRS)v6 / MTM NS 2010 zone 4 (code 8082) from 2015.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_NS_1997_ZONE_4 = 'urn:ogc:def:crs:EPSG::22338';
-
-    /**
-     * NAD83(CSRS)v3 / MTM NS 1997 zone 5
-     * Extent: Canada - Nova Scotia - west of 63°W
-     * Replaced by NAD83(CSRS)v6 / MTM NS 2010 zone 5 (code 8083) from 2015.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_NS_1997_ZONE_5 = 'urn:ogc:def:crs:EPSG::22337';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 10
-     * Extent: Canada - Ontario - between 81°W and 78°W: south of 46°N in area to west of 80°15'W, south of 47°N
-     * in area between 80°15'W and 79°30'W, entire province between 79°30'W and 78°W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_10 = 'urn:ogc:def:crs:EPSG::22350';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 11
-     * Extent: Canada - Ontario - south of 46°N and west of 81°W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_11 = 'urn:ogc:def:crs:EPSG::22351';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 12
-     * Extent: Canada - Ontario - between 82°30'W and 79°30'W: north of 46°N in area between 82°30'W and 80°15'W,
-     * north of 47°N in area between 80°15'W and 79°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_12 = 'urn:ogc:def:crs:EPSG::22352';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 13
-     * Extent: Canada - Ontario - between 85°30'W and 82°30'W and north of 46°N.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_13 = 'urn:ogc:def:crs:EPSG::22353';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 14
-     * Extent: Canada - Ontario - between 88°30'W and 85°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_14 = 'urn:ogc:def:crs:EPSG::22354';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 15
-     * Extent: Canada - Ontario - between 91°30'W and 88°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_15 = 'urn:ogc:def:crs:EPSG::22355';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 16
-     * Extent: Canada - Ontario - between 94°30'W and 91°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_16 = 'urn:ogc:def:crs:EPSG::22356';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 17
-     * Extent: Canada - Ontario - west of 94°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_17 = 'urn:ogc:def:crs:EPSG::22357';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 8
-     * Extent: Canada - Ontario - east of 75°W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_8 = 'urn:ogc:def:crs:EPSG::22348';
-
-    /**
-     * NAD83(CSRS)v3 / MTM zone 9
-     * Extent: Canada - Ontario - between 78°W and 75°W.
-     */
-    public const EPSG_NAD83_CSRS_V3_MTM_ZONE_9 = 'urn:ogc:def:crs:EPSG::22349';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2000 and the provincial government of British Columbia for CRD
-     * only in 2000 and all Victoria Island in 2005.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22310';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 11N
-     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22311';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 12N
-     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22312';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 13N
-     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22313';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22314';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22315';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22316';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22317';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22318';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 19N
-     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
-     * Adopted by the Canadian federal government in 2000 and the provincial government of Nova Scotia in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22319';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 20N
-     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
-     * Quebec
-     * Adopted by the Canadian federal government in 1998 and the provincial government of Nova Scotia in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22320';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 21N
-     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
-     * Adopted by the Canadian federal government in 2000 and the provincial government of Nova Scotia in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22321';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 22N
-     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22322';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22307';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2000.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22308';
-
-    /**
-     * NAD83(CSRS)v3 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2000 and the provincial government of British Columbia for
-     * Victoria Island (but not mainland) in 2005.
-     */
-    public const EPSG_NAD83_CSRS_V3_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22309';
-
-    /**
-     * NAD83(CSRS)v4 / Alberta 3TM ref merid 111 W
-     * Extent: Canada - Alberta - east of 112°30'W
-     * If used for rural area control markers, area of use is amended to east of 112°W; however use of NAD83(CSRS)v4 /
-     * UTM zone 12N (CRS code 22412) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_111_W = 'urn:ogc:def:crs:EPSG::22462';
-
-    /**
-     * NAD83(CSRS)v4 / Alberta 3TM ref merid 114 W
-     * Extent: Canada - Alberta - between 115°30'W and 112°30'W
-     * If used for rural area control markers, area of use is amended to between 116°W and 112°W; however use of
-     * NAD83(CSRS)v4 / UTM zones 11N and 12N (CRS codes 22411 and 22412) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_114_W = 'urn:ogc:def:crs:EPSG::22463';
-
-    /**
-     * NAD83(CSRS)v4 / Alberta 3TM ref merid 117 W
-     * Extent: Canada - Alberta - between 118°30'W and 115°30' W
-     * If used for rural area control markers, area of use is amended to between 118°W and 116°W; however use of
-     * NAD83(CSRS)v4 / UTM zone 11N (CRS code 22411) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_117_W = 'urn:ogc:def:crs:EPSG::22464';
-
-    /**
-     * NAD83(CSRS)v4 / Alberta 3TM ref merid 120 W
-     * Extent: Canada - Alberta - west of 118°30' W
-     * If used for rural area control markers, area of use is amended to west of 118°W; however use of NAD83(CSRS)v4 /
-     * UTM zone 11N (CRS code 22411) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V4_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22465';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
-     * mainland only (not Victoria Island) in 2005.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22410';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 11N
-     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
-     * Adopted by the Canadian federal government in 2002 and the provincial governments of British Columbia (for
-     * mainland only, not Victoria Island) in 2005 and Alberta in 2004.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22411';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 12N
-     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2002 and the provincial government of Alberta in 2004.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22412';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 13N
-     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22413';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22414';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22415';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22416';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22417';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22418';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 19N
-     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22419';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 20N
-     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
-     * Quebec
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22420';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 21N
-     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22421';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 22N
-     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
-     * Adopted by the Canadian federal government in 2002.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22422';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
-     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
-     * mainland only (not Victoria Island) in 2005.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22407';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
-     * mainland only (not Victoria Island) in 2005.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22408';
-
-    /**
-     * NAD83(CSRS)v4 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
-     * mainland only (not Victoria Island) in 2005.
-     */
-    public const EPSG_NAD83_CSRS_V4_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22409';
-
-    /**
-     * NAD83(CSRS)v6 / MTM NS 2010 zone 4
-     * Extent: Canada - Nova Scotia - east of 63°W
-     * In use from 2015.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 = 'urn:ogc:def:crs:EPSG::8082';
-
-    /**
-     * NAD83(CSRS)v6 / MTM NS 2010 zone 5
-     * Extent: Canada - Nova Scotia - west of 63°W
-     * In use from 2015.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 = 'urn:ogc:def:crs:EPSG::8083';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 1
-     * Extent: Canada - Newfoundland - onshore east of 54°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_1 = 'urn:ogc:def:crs:EPSG::22641';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 10
-     * Extent: Canada - Ontario - between 81°W and 78°W: south of 46°N in area to west of 80°15'W, south of 47°N
-     * in area between 80°15'W and 79°30'W, entire province between 79°30'W and 78°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_10 = 'urn:ogc:def:crs:EPSG::22650';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 11
-     * Extent: Canada - Ontario - south of 46°N and west of 81°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_11 = 'urn:ogc:def:crs:EPSG::22651';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 12
-     * Extent: Canada - Ontario - between 82°30'W and 79°30'W: north of 46°N in area between 82°30'W and 80°15'W,
-     * north of 47°N in area between 80°15'W and 79°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_12 = 'urn:ogc:def:crs:EPSG::22652';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 13
-     * Extent: Canada - Ontario - between 85°30'W and 82°30'W and north of 46°N.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_13 = 'urn:ogc:def:crs:EPSG::22653';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 14
-     * Extent: Canada - Ontario - between 88°30'W and 85°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_14 = 'urn:ogc:def:crs:EPSG::22654';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 15
-     * Extent: Canada - Ontario - between 91°30'W and 88°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_15 = 'urn:ogc:def:crs:EPSG::22655';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 16
-     * Extent: Canada - Ontario - between 94°30'W and 91°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_16 = 'urn:ogc:def:crs:EPSG::22656';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 17
-     * Extent: Canada - Ontario - west of 94°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_17 = 'urn:ogc:def:crs:EPSG::22657';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 2
-     * Extent: Canada - Newfoundland and Labrador between 57°30'W and 54°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_2 = 'urn:ogc:def:crs:EPSG::22642';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 3
-     * Extent: Canada - Newfoundland west of 57°30'W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_3 = 'urn:ogc:def:crs:EPSG::22643';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 4
-     * Extent: Canada - Labrador between 63°W and 60°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_4 = 'urn:ogc:def:crs:EPSG::22644';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 5
-     * Extent: Canada - Labrador - 66°W to 63°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_5 = 'urn:ogc:def:crs:EPSG::22645';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 6
-     * Extent: Canada - Labrador - west of 66°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_6 = 'urn:ogc:def:crs:EPSG::22646';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 8
-     * Extent: Canada - Ontario - east of 75°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_8 = 'urn:ogc:def:crs:EPSG::22648';
-
-    /**
-     * NAD83(CSRS)v6 / MTM zone 9
-     * Extent: Canada - Ontario - between 78°W and 75°W.
-     */
-    public const EPSG_NAD83_CSRS_V6_MTM_ZONE_9 = 'urn:ogc:def:crs:EPSG::22649';
-
-    /**
-     * NAD83(CSRS)v6 / PEI Stereographic
-     * Extent: Canada - Prince Edward Island.
-     */
-    public const EPSG_NAD83_CSRS_V6_PEI_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22639';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22610';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 11N
-     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22611';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 12N
-     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22612';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 13N
-     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22613';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
-     * Adopted by the Canadian federal government in 2012 and the provincial government of Manitoba in 2014.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22614';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 2012 and the provincial governments of Manitoba in 2014 and
-     * Ontario in 2013.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22615';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
-     * Adopted by the Canadian federal government in 2012 and the provincial governments of Manitoba in 2014 and
-     * Ontario in 2013.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22616';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 2012 and the provincial government of Ontario in 2013.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22617';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
-     * Adopted by the Canadian federal government in 2012 and the provincial government of Ontario in 2013.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22618';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 19N
-     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
-     * Adopted by the Canadian federal government in 2012 and the provincial governments of Nova Scotia in 2014 and
-     * Newfoundland in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22619';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 20N
-     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
-     * Quebec
-     * Adopted by the Canadian federal government in 2012 and the provincial governments of Prince Edward Island in
-     * 2014, Nova Scotia in 2014 and Newfoundland in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22620';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 21N
-     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
-     * Adopted by the Canadian federal government in 2012 and the provincial governments of Nova Scotia in 2014 and
-     * Newfoundland in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22621';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 22N
-     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
-     * Adopted by the Canadian federal government in 2012 and the provincial government of Newfoundland in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22622';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22607';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22608';
-
-    /**
-     * NAD83(CSRS)v6 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
-     * Adopted by the Canadian federal government in 2012.
-     */
-    public const EPSG_NAD83_CSRS_V6_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22609';
-
-    /**
-     * NAD83(CSRS)v7 / Alberta 3TM ref merid 111 W
-     * Extent: Canada - Alberta - east of 112°30'W
-     * If used for rural area control markers, area of use is amended to east of 112°W; however use of NAD83(CSRS)v7 /
-     * UTM zone 12N (CRS code 22712) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_111_W = 'urn:ogc:def:crs:EPSG::22762';
-
-    /**
-     * NAD83(CSRS)v7 / Alberta 3TM ref merid 114 W
-     * Extent: Canada - Alberta - between 115°30'W and 112°30'W
-     * If used for rural area control markers, area of use is amended to between 116°W and 112°W; however use of
-     * NAD83(CSRS)v7 / UTM zones 11N and 12N (CRS codes 22711 and 22712) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_114_W = 'urn:ogc:def:crs:EPSG::22763';
-
-    /**
-     * NAD83(CSRS)v7 / Alberta 3TM ref merid 117 W
-     * Extent: Canada - Alberta - between 118°30'W and 115°30' W
-     * If used for rural area control markers, area of use is amended to between 118°W and 116°W; however use of
-     * NAD83(CSRS)v7 / UTM zone 11N (CRS code 22711) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_117_W = 'urn:ogc:def:crs:EPSG::22764';
-
-    /**
-     * NAD83(CSRS)v7 / Alberta 3TM ref merid 120 W
-     * Extent: Canada - Alberta - west of 118°30' W
-     * If used for rural area control markers, area of use is amended to west of 118°W; however use of NAD83(CSRS)v7 /
-     * UTM zone 11N (CRS code 22711) is encouraged in these rural areas.
-     */
-    public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22765';
-
-    /**
      * NAD83(CSRS)v7 / PEI Stereographic
      * Extent: Canada - Prince Edward Island.
      */
@@ -1202,6 +245,163 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22809';
 
     /**
+     * NAD83(CSRS) / Yukon Albers
+     * Extent: Canada - Yukon
+     * This CRS may sometimes be called "NAD83 / Yukon Albers". That is the name of a different system (see CRS code
+     * 3578) but at the scales involved the positional difference of under 2 metres may not be significant.
+     */
+    public const EPSG_NAD83_CSRS_YUKON_ALBERS = 'urn:ogc:def:crs:EPSG::3579';
+
+    /**
+     * NAD83 / Delaware
+     * Extent: USA - Delaware - counties of Kent; New Castle; Sussex
+     * State law defines system in US survey feet. See code 2235 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_DELAWARE = 'urn:ogc:def:crs:EPSG::26957';
+
+    /**
+     * NAD83 / Delaware (ftUS)
+     * Extent: USA - Delaware - counties of Kent; New Castle; Sussex
+     * State law defines system in US survey feet. Federal definition is metric - see code 26957. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_DELAWARE_FTUS = 'urn:ogc:def:crs:EPSG::2235';
+
+    /**
+     * NAD83 / Florida East
+     * Extent: USA - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry;
+     * Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam;
+     * Seminole; St Johns; St Lucie; Volusia
+     * State law defines system in US survey feet. See code 2236 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_EAST = 'urn:ogc:def:crs:EPSG::26958';
+
+    /**
+     * NAD83 / Florida East (ftUS)
+     * Extent: USA - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry;
+     * Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam;
+     * Seminole; St Johns; St Lucie; Volusia
+     * State law defines system in US survey feet. Federal definition is metric - see code 26958. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2236';
+
+    /**
+     * NAD83 / Florida GDL Albers
+     * Extent: USA - Florida
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Florida GDL Albers.
+     */
+    public const EPSG_NAD83_FLORIDA_GDL_ALBERS = 'urn:ogc:def:crs:EPSG::3086';
+
+    /**
+     * NAD83 / Florida North
+     * Extent: USA - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin;
+     * Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa;
+     * Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington
+     * State law defines system in US survey feet. See code 2238 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_NORTH = 'urn:ogc:def:crs:EPSG::26960';
+
+    /**
+     * NAD83 / Florida North (ftUS)
+     * Extent: USA - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin;
+     * Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa;
+     * Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 26960. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2238';
+
+    /**
+     * NAD83 / Florida West
+     * Extent: USA - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy;
+     * Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter
+     * State law defines system in US survey feet. See code 2237 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_WEST = 'urn:ogc:def:crs:EPSG::26959';
+
+    /**
+     * NAD83 / Florida West (ftUS)
+     * Extent: USA - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy;
+     * Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter
+     * State law defines system in US survey feet. Federal definition is metric - see code 26959. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2237';
+
+    /**
+     * NAD83 / Georgia East
+     * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
+     * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
+     * State law defines system in US survey feet. See code 2239 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_EAST = 'urn:ogc:def:crs:EPSG::26966';
+
+    /**
+     * NAD83 / Georgia East (ftUS)
+     * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
+     * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
+     * State law defines system in US survey feet. Federal definition is metric - see code 26966. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2239';
+
+    /**
+     * NAD83 / Georgia West
+     * Extent: USA - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks;
+     * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
+     * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
+     * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
+     * State law defines system in US survey feet. See code 2240 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_WEST = 'urn:ogc:def:crs:EPSG::26967';
+
+    /**
+     * NAD83 / Georgia West (ftUS)
+     * Extent: USA - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks;
+     * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
+     * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
+     * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
+     * State law defines system in US survey feet. Federal definition is metric - see code 26967. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2240';
+
+    /**
+     * NAD83 / Great Lakes Albers
+     * Extent: Canada and USA - Great Lakes basin.
+     */
+    public const EPSG_NAD83_GREAT_LAKES_ALBERS = 'urn:ogc:def:crs:EPSG::3174';
+
+    /**
+     * NAD83 / Great Lakes and St Lawrence Albers
+     * Extent: Canada and USA - Great Lakes basin and St Lawrence Seaway.
+     */
+    public const EPSG_NAD83_GREAT_LAKES_AND_ST_LAWRENCE_ALBERS = 'urn:ogc:def:crs:EPSG::3175';
+
+    /**
      * NAD83(HARN) / Alabama East
      * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
      * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
@@ -1278,7 +478,7 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Arkansas North
      * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
      * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
-     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
      * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell
      * State law defines system in US survey feet. See code 3441 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
@@ -1289,7 +489,7 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Arkansas North (ftUS)
      * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
      * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
-     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
      * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell
      * State law defines system in US survey feet. Federal definition is metric - see code 2764. Replaces NAD83 / SPCS
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
@@ -1300,8 +500,8 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Arkansas South
      * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
      * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
-     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline;
-     * Sevier; Union
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union
      * State law defines system in US survey feet. See code 3442 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -1311,8 +511,8 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Arkansas South (ftUS)
      * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
      * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
-     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline;
-     * Sevier; Union
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union
      * State law defines system in US survey feet. Federal definition is metric - see code 2765. Replaces NAD83 / SPCS
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -1506,11 +706,7 @@ trait ProjectedConstantsChunk3
 
     /**
      * NAD83(HARN) / Conus Albers
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaces NAD83 / Conus Albers (CRS code 5070) for applications with an accuracy of better than 1m. Replaced by
      * NAD83(NSRS2007) / Conus Albers (CRS code 5072).
      */
@@ -1602,10 +798,9 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Georgia East
      * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
      * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
-     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens;
-     * Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven;
-     * Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes;
-     * Wilkinson
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
      * State law defines system in US survey feet. See code 2884 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -1615,10 +810,9 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Georgia East (ftUS)
      * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
      * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
-     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens;
-     * Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven;
-     * Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes;
-     * Wilkinson
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
      * State law defines system in US survey feet. Federal definition is metric - see code 2780. Replaces NAD83 / SPCS
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -1630,11 +824,11 @@ trait ProjectedConstantsChunk3
      * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
      * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
      * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
-     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller;
-     * Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski;
-     * Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor;
-     * Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield;
-     * Wilcox; Worth
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
      * State law defines system in US survey feet. See code 2885 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -1646,11 +840,11 @@ trait ProjectedConstantsChunk3
      * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
      * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
      * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
-     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller;
-     * Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski;
-     * Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor;
-     * Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield;
-     * Wilcox; Worth
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
      * State law defines system in US survey feet. Federal definition is metric - see code 2781. Replaces NAD83 / SPCS
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -2154,7 +1348,7 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Maryland
      * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
      * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
-     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
      * State law defines system in US survey feet. See code 2893 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -2164,7 +1358,7 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / Maryland (ftUS)
      * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
      * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
-     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
      * State law defines system in US survey feet. Federal definition is metric - see code 2804. Replaces NAD83 / SPCS
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
      */
@@ -3138,16 +2332,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_TEXAS_NORTH = 'urn:ogc:def:crs:EPSG::2844';
 
     /**
-     * NAD83(HARN) / Texas North (ftUS)
-     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
-     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
-     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
-     * State law defines system in US survey feet. Federal definition is metric - see code 2844. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_TEXAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2916';
-
-    /**
      * NAD83(HARN) / Texas North Central
      * Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay;
      * Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin;
@@ -3176,6 +2360,16 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_TEXAS_NORTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2917';
 
     /**
+     * NAD83(HARN) / Texas North (ftUS)
+     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
+     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
+     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+     * State law defines system in US survey feet. Federal definition is metric - see code 2844. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2916';
+
+    /**
      * NAD83(HARN) / Texas South
      * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
      * San Patricio; Starr; Webb; Willacy; Zapata
@@ -3184,16 +2378,6 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / SPCS.
      */
     public const EPSG_NAD83_HARN_TEXAS_SOUTH = 'urn:ogc:def:crs:EPSG::2848';
-
-    /**
-     * NAD83(HARN) / Texas South (ftUS)
-     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
-     * San Patricio; Starr; Webb; Willacy; Zapata
-     * State law defines system in US survey feet. Federal definition is metric - see code 2848. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Not applicable to offshore areas. Replaced by
-     * NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_TEXAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2920';
 
     /**
      * NAD83(HARN) / Texas South Central
@@ -3222,111 +2406,14 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_TEXAS_SOUTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2919';
 
     /**
-     * NAD83(HARN) / UTM zone 10N
-     * Extent: USA - between 126°W and 120°W - onshore - California; Oregon; Washington
-     * Replaces NAD83 / UTM zone 10N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 10N.
+     * NAD83(HARN) / Texas South (ftUS)
+     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
+     * San Patricio; Starr; Webb; Willacy; Zapata
+     * State law defines system in US survey feet. Federal definition is metric - see code 2848. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Not applicable to offshore areas. Replaced by
+     * NAD83(NSRS2007) / SPCS.
      */
-    public const EPSG_NAD83_HARN_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::3740';
-
-    /**
-     * NAD83(HARN) / UTM zone 11N
-     * Extent: USA - between 120°W and 114°W - onshore - Arizona; California; Idaho; Montana; Nevada; Oregon; Utah;
-     * Washington
-     * Replaces NAD83 / UTM zone 11N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 11N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::3741';
-
-    /**
-     * NAD83(HARN) / UTM zone 12N
-     * Extent: USA - between 114°W and 108°W - Arizona; Colorado; Idaho; Montana; New Mexico; Utah; Wyoming
-     * Replaces NAD83 / UTM zone 12N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 12N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::3742';
-
-    /**
-     * NAD83(HARN) / UTM zone 13N
-     * Extent: USA - between 108°W and 102°W - Colorado; Montana; Nebraska; New Mexico; North Dakota; Oklahoma; South
-     * Dakota; Texas; Wyoming
-     * Replaces NAD83 / UTM zone 13N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 13N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::3743';
-
-    /**
-     * NAD83(HARN) / UTM zone 14N
-     * Extent: USA - between 102°W and 96°W - onshore - Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma;
-     * South Dakota; Texas
-     * Replaces NAD83 / UTM zone 14N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 14N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::3744';
-
-    /**
-     * NAD83(HARN) / UTM zone 15N
-     * Extent: USA - between 96°W and 90°W - onshore - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan;
-     * Minnesota; Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin
-     * Replaces NAD83 / UTM zone 15N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 15N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::3745';
-
-    /**
-     * NAD83(HARN) / UTM zone 16N
-     * Extent: USA - between 90°W and 84°W - onshore - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois;
-     * Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin
-     * Replaces NAD83 / UTM zone 16N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 16N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::3746';
-
-    /**
-     * NAD83(HARN) / UTM zone 17N
-     * Extent: USA - between 84°W and 78°W - onshore - Florida; Georgia; Maryland; Michigan; New York; North
-     * Carolina; Ohio; Pennsylvania; South Carolina; Tennessee; Virginia; West Virginia
-     * Replaces NAD83 / UTM zone 17N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 17N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::3747';
-
-    /**
-     * NAD83(HARN) / UTM zone 18N
-     * Extent: USA - between 78°W and 72°W - onshore - Connecticut; Delaware; Maryland; Massachusetts; New Hampshire;
-     * New Jersey; New York; North Carolina; Pennsylvania; Virginia; Vermont
-     * Replaces NAD83 / UTM zone 18N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 18N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::3748';
-
-    /**
-     * NAD83(HARN) / UTM zone 19N
-     * Extent: USA - between 72°W and 66°W - onshore - Connecticut; Maine; Massachusetts; New Hampshire; New York
-     * (Long Island); Rhode Island; Vermont
-     * Replaces NAD83 / UTM zone 19N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
-     * UTM zone 19N.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::3749';
-
-    /**
-     * NAD83(HARN) / UTM zone 2S
-     * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands
-     * Replaces American Samoa 1962 / American Samoa Lambert (projCRS 3102) effective from 2000.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_2S = 'urn:ogc:def:crs:EPSG::2195';
-
-    /**
-     * NAD83(HARN) / UTM zone 4N
-     * Extent: USA - between 162°W and 156°W onshore - Hawaii.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_4N = 'urn:ogc:def:crs:EPSG::3750';
-
-    /**
-     * NAD83(HARN) / UTM zone 5N
-     * Extent: USA - between 156°W and 150°W onshore - Hawaii.
-     */
-    public const EPSG_NAD83_HARN_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::3751';
+    public const EPSG_NAD83_HARN_TEXAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2920';
 
     /**
      * NAD83(HARN) / Utah Central
@@ -3413,6 +2500,113 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_UTAH_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3570';
 
     /**
+     * NAD83(HARN) / UTM zone 10N
+     * Extent: USA - between 126°W and 120°W - onshore - California; Oregon; Washington
+     * Replaces NAD83 / UTM zone 10N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 10N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::3740';
+
+    /**
+     * NAD83(HARN) / UTM zone 11N
+     * Extent: USA - between 120°W and 114°W - onshore - Arizona; California; Idaho; Montana; Nevada; Oregon; Utah;
+     * Washington
+     * Replaces NAD83 / UTM zone 11N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 11N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::3741';
+
+    /**
+     * NAD83(HARN) / UTM zone 12N
+     * Extent: USA - between 114°W and 108°W - Arizona; Colorado; Idaho; Montana; New Mexico; Utah; Wyoming
+     * Replaces NAD83 / UTM zone 12N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 12N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::3742';
+
+    /**
+     * NAD83(HARN) / UTM zone 13N
+     * Extent: USA - between 108°W and 102°W - Colorado; Montana; Nebraska; New Mexico; North Dakota; Oklahoma; South
+     * Dakota; Texas; Wyoming
+     * Replaces NAD83 / UTM zone 13N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 13N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::3743';
+
+    /**
+     * NAD83(HARN) / UTM zone 14N
+     * Extent: USA - between 102°W and 96°W - onshore - Iowa; Kansas; Minnesota; Nebraska; North Dakota; Oklahoma;
+     * South Dakota; Texas
+     * Replaces NAD83 / UTM zone 14N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 14N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::3744';
+
+    /**
+     * NAD83(HARN) / UTM zone 15N
+     * Extent: USA - between 96°W and 90°W - onshore - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan;
+     * Minnesota; Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin
+     * Replaces NAD83 / UTM zone 15N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 15N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::3745';
+
+    /**
+     * NAD83(HARN) / UTM zone 16N
+     * Extent: USA - between 90°W and 84°W - onshore - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois;
+     * Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin
+     * Replaces NAD83 / UTM zone 16N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 16N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::3746';
+
+    /**
+     * NAD83(HARN) / UTM zone 17N
+     * Extent: USA - between 84°W and 78°W - onshore - Florida; Georgia; Maryland; Michigan; New York; North
+     * Carolina; Ohio; Pennsylvania; South Carolina; Tennessee; Virginia; West Virginia
+     * Replaces NAD83 / UTM zone 17N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 17N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::3747';
+
+    /**
+     * NAD83(HARN) / UTM zone 18N
+     * Extent: USA - between 78°W and 72°W - onshore - Connecticut; Delaware; District of Columbia (DC); Maryland;
+     * Massachusetts; New Hampshire; New Jersey; New York; North Carolina; Pennsylvania; Virginia; Vermont
+     * Replaces NAD83 / UTM zone 18N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 18N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::3748';
+
+    /**
+     * NAD83(HARN) / UTM zone 19N
+     * Extent: USA - between 72°W and 66°W - onshore - Connecticut; Maine; Massachusetts; New Hampshire; New York
+     * (Long Island); Rhode Island; Vermont
+     * Replaces NAD83 / UTM zone 19N for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) /
+     * UTM zone 19N.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::3749';
+
+    /**
+     * NAD83(HARN) / UTM zone 2S
+     * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands
+     * Replaces American Samoa 1962 / American Samoa Lambert (projCRS 3102) effective from 2000.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_2S = 'urn:ogc:def:crs:EPSG::2195';
+
+    /**
+     * NAD83(HARN) / UTM zone 4N
+     * Extent: USA - between 162°W and 156°W onshore - Hawaii.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_4N = 'urn:ogc:def:crs:EPSG::3750';
+
+    /**
+     * NAD83(HARN) / UTM zone 5N
+     * Extent: USA - between 156°W and 150°W onshore - Hawaii.
+     */
+    public const EPSG_NAD83_HARN_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::3751';
+
+    /**
      * NAD83(HARN) / Vermont
      * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
      * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor
@@ -3489,6 +2683,154 @@ trait ProjectedConstantsChunk3
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
      */
     public const EPSG_NAD83_HARN_VIRGINIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2925';
+
+    /**
+     * NAD83(HARN) / Washington North
+     * Extent: USA - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N;
+     * Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens;
+     * Whatcom
+     * State law defines system in US survey feet. See code 2926 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WASHINGTON_NORTH = 'urn:ogc:def:crs:EPSG::2855';
+
+    /**
+     * NAD83(HARN) / Washington North (ftUS)
+     * Extent: USA - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N;
+     * Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens;
+     * Whatcom
+     * State law defines system in US survey feet. Federal definition is metric - see code 2855. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WASHINGTON_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2926';
+
+    /**
+     * NAD83(HARN) / Washington South
+     * Extent: USA - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield;
+     * Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce;
+     * Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima
+     * State law defines system in US survey feet. See code 2927 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WASHINGTON_SOUTH = 'urn:ogc:def:crs:EPSG::2856';
+
+    /**
+     * NAD83(HARN) / Washington South (ftUS)
+     * Extent: USA - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield;
+     * Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce;
+     * Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima
+     * State law defines system in US survey feet. Federal definition is metric - see code 2856. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WASHINGTON_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2927';
+
+    /**
+     * NAD83(HARN) / West Virginia North
+     * Extent: USA - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock;
+     * Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie;
+     * Taylor; Tucker; Tyler; Wetzel; Wirt; Wood
+     * State law defines system in US survey feet. See CRS code 26861 for equivalent non-metric definition. Replaces
+     * NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WEST_VIRGINIA_NORTH = 'urn:ogc:def:crs:EPSG::2857';
+
+    /**
+     * NAD83(HARN) / West Virginia North (ftUS)
+     * Extent: USA - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock;
+     * Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie;
+     * Taylor; Tucker; Tyler; Wetzel; Wirt; Wood
+     * State law defines use of US survey feet. Federal definition is metric - see code 2857. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WEST_VIRGINIA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::26861';
+
+    /**
+     * NAD83(HARN) / West Virginia South
+     * Extent: USA - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier;
+     * Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton;
+     * Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming
+     * State law defines system in US survey feet. See CRS code 26862 for equivalent non-metric definition. Replaces
+     * NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WEST_VIRGINIA_SOUTH = 'urn:ogc:def:crs:EPSG::2858';
+
+    /**
+     * NAD83(HARN) / West Virginia South (ftUS)
+     * Extent: USA - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier;
+     * Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton;
+     * Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming
+     * State law defines use of US survey feet. Federal definition is metric - see code 2858. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WEST_VIRGINIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::26862';
+
+    /**
+     * NAD83(HARN) / Wisconsin Central
+     * Extent: USA - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson;
+     * Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage;
+     * Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood
+     * State law defines system in US survey feet. See code 2929 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_CENTRAL = 'urn:ogc:def:crs:EPSG::2860';
+
+    /**
+     * NAD83(HARN) / Wisconsin Central (ftUS)
+     * Extent: USA - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson;
+     * Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage;
+     * Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood
+     * State law defines system in US survey feet. Federal definition is metric - see code 2860. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2929';
+
+    /**
+     * NAD83(HARN) / Wisconsin North
+     * Extent: USA - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida;
+     * Price; Sawyer; Vilas; Washburn
+     * State law defines system in US survey feet. See code 2928 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_NORTH = 'urn:ogc:def:crs:EPSG::2859';
+
+    /**
+     * NAD83(HARN) / Wisconsin North (ftUS)
+     * Extent: USA - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida;
+     * Price; Sawyer; Vilas; Washburn
+     * State law defines system in US survey feet. Federal definition is metric - see code 2859. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2928';
+
+    /**
+     * NAD83(HARN) / Wisconsin South
+     * Extent: USA - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant;
+     * Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee;
+     * Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara;
+     * Winnebago
+     * State law defines system in US survey feet. See code 2930 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_SOUTH = 'urn:ogc:def:crs:EPSG::2861';
+
+    /**
+     * NAD83(HARN) / Wisconsin South (ftUS)
+     * Extent: USA - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant;
+     * Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee;
+     * Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara;
+     * Winnebago
+     * State law defines system in US survey feet. Federal definition is metric - see code 2861. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2930';
+
+    /**
+     * NAD83(HARN) / Wisconsin Transverse Mercator
+     * Extent: USA - Wisconsin
+     * Designed as a single zone for the whole state. Replaces NAD83 / Wisconsin Transverse Mercator for applications
+     * with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Wisconsin Transverse Mercator.
+     */
+    public const EPSG_NAD83_HARN_WISCONSIN_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::3071';
 
     /**
      * NAD83(HARN) / WISCRS Adams and Juneau (ftUS)
@@ -3791,22 +3133,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_WISCRS_GRANT_M = 'urn:ogc:def:crs:EPSG::8171';
 
     /**
-     * NAD83(HARN) / WISCRS Green Lake and Marquette (ftUS)
-     * Extent: USA - Wisconsin - counties of Green Lake and Marquette
-     * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined as separate zones for each county these
-     * having identical parameter values: see info source. Defined in meters - see CRS code 8167.
-     */
-    public const EPSG_NAD83_HARN_WISCRS_GREEN_LAKE_AND_MARQUETTE_FTUS = 'urn:ogc:def:crs:EPSG::8168';
-
-    /**
-     * NAD83(HARN) / WISCRS Green Lake and Marquette (m)
-     * Extent: USA - Wisconsin - counties of Green Lake and Marquette
-     * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined as separate zones for each county these
-     * having identical parameter values: see info source. Working units are feet - see CRS code 8168.
-     */
-    public const EPSG_NAD83_HARN_WISCRS_GREEN_LAKE_AND_MARQUETTE_M = 'urn:ogc:def:crs:EPSG::8167';
-
-    /**
      * NAD83(HARN) / WISCRS Green and Lafayette (ftUS)
      * Extent: USA - Wisconsin - counties of Green and Lafayette
      * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined as separate zones for each county these
@@ -3821,6 +3147,22 @@ trait ProjectedConstantsChunk3
      * having identical parameter values: see info source. Working units are feet - see CRS code 8170.
      */
     public const EPSG_NAD83_HARN_WISCRS_GREEN_AND_LAFAYETTE_M = 'urn:ogc:def:crs:EPSG::8169';
+
+    /**
+     * NAD83(HARN) / WISCRS Green Lake and Marquette (ftUS)
+     * Extent: USA - Wisconsin - counties of Green Lake and Marquette
+     * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined as separate zones for each county these
+     * having identical parameter values: see info source. Defined in meters - see CRS code 8167.
+     */
+    public const EPSG_NAD83_HARN_WISCRS_GREEN_LAKE_AND_MARQUETTE_FTUS = 'urn:ogc:def:crs:EPSG::8168';
+
+    /**
+     * NAD83(HARN) / WISCRS Green Lake and Marquette (m)
+     * Extent: USA - Wisconsin - counties of Green Lake and Marquette
+     * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined as separate zones for each county these
+     * having identical parameter values: see info source. Working units are feet - see CRS code 8168.
+     */
+    public const EPSG_NAD83_HARN_WISCRS_GREEN_LAKE_AND_MARQUETTE_M = 'urn:ogc:def:crs:EPSG::8167';
 
     /**
      * NAD83(HARN) / WISCRS Iowa (ftUS)
@@ -3899,20 +3241,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_WISCRS_KEWAUNEE_MANITOWOC_AND_SHEBOYGAN_M = 'urn:ogc:def:crs:EPSG::8157';
 
     /**
-     * NAD83(HARN) / WISCRS La Crosse (ftUS)
-     * Extent: USA - Wisconsin - La Crosse county
-     * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined in meters - see CRS code 8155.
-     */
-    public const EPSG_NAD83_HARN_WISCRS_LA_CROSSE_FTUS = 'urn:ogc:def:crs:EPSG::8156';
-
-    /**
-     * NAD83(HARN) / WISCRS La Crosse (m)
-     * Extent: USA - Wisconsin - La Crosse county
-     * Part of the Wisconsin Coordinate Reference System (WISCRS). Working units are feet - see CRS code 8156.
-     */
-    public const EPSG_NAD83_HARN_WISCRS_LA_CROSSE_M = 'urn:ogc:def:crs:EPSG::8155';
-
-    /**
      * NAD83(HARN) / WISCRS Langlade (ftUS)
      * Extent: USA - Wisconsin - Langlade county
      * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined in meters - see CRS code 8153.
@@ -3925,6 +3253,20 @@ trait ProjectedConstantsChunk3
      * Part of the Wisconsin Coordinate Reference System (WISCRS). Working units are feet - see CRS code 8154.
      */
     public const EPSG_NAD83_HARN_WISCRS_LANGLADE_M = 'urn:ogc:def:crs:EPSG::8153';
+
+    /**
+     * NAD83(HARN) / WISCRS La Crosse (ftUS)
+     * Extent: USA - Wisconsin - La Crosse county
+     * Part of the Wisconsin Coordinate Reference System (WISCRS). Defined in meters - see CRS code 8155.
+     */
+    public const EPSG_NAD83_HARN_WISCRS_LA_CROSSE_FTUS = 'urn:ogc:def:crs:EPSG::8156';
+
+    /**
+     * NAD83(HARN) / WISCRS La Crosse (m)
+     * Extent: USA - Wisconsin - La Crosse county
+     * Part of the Wisconsin Coordinate Reference System (WISCRS). Working units are feet - see CRS code 8156.
+     */
+    public const EPSG_NAD83_HARN_WISCRS_LA_CROSSE_M = 'urn:ogc:def:crs:EPSG::8155';
 
     /**
      * NAD83(HARN) / WISCRS Lincoln (ftUS)
@@ -4335,168 +3677,12 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_WISCRS_WOOD_M = 'urn:ogc:def:crs:EPSG::8095';
 
     /**
-     * NAD83(HARN) / Washington North
-     * Extent: USA - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N;
-     * Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens;
-     * Whatcom
-     * State law defines system in US survey feet. See code 2926 for equivalent non-metric definition. Replaces NAD83 /
-     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WASHINGTON_NORTH = 'urn:ogc:def:crs:EPSG::2855';
-
-    /**
-     * NAD83(HARN) / Washington North (ftUS)
-     * Extent: USA - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N;
-     * Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens;
-     * Whatcom
-     * State law defines system in US survey feet. Federal definition is metric - see code 2855. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WASHINGTON_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2926';
-
-    /**
-     * NAD83(HARN) / Washington South
-     * Extent: USA - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield;
-     * Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce;
-     * Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima
-     * State law defines system in US survey feet. See code 2927 for equivalent non-metric definition. Replaces NAD83 /
-     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WASHINGTON_SOUTH = 'urn:ogc:def:crs:EPSG::2856';
-
-    /**
-     * NAD83(HARN) / Washington South (ftUS)
-     * Extent: USA - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield;
-     * Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce;
-     * Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima
-     * State law defines system in US survey feet. Federal definition is metric - see code 2856. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WASHINGTON_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2927';
-
-    /**
-     * NAD83(HARN) / West Virginia North
-     * Extent: USA - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock;
-     * Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie;
-     * Taylor; Tucker; Tyler; Wetzel; Wirt; Wood
-     * State law defines system in US survey feet. See CRS code 26861 for equivalent non-metric definition. Replaces
-     * NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WEST_VIRGINIA_NORTH = 'urn:ogc:def:crs:EPSG::2857';
-
-    /**
-     * NAD83(HARN) / West Virginia North (ftUS)
-     * Extent: USA - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock;
-     * Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie;
-     * Taylor; Tucker; Tyler; Wetzel; Wirt; Wood
-     * State law defines use of US survey feet. Federal definition is metric - see code 2857. Replaces NAD83 / SPCS for
-     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WEST_VIRGINIA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::26861';
-
-    /**
-     * NAD83(HARN) / West Virginia South
-     * Extent: USA - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier;
-     * Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton;
-     * Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming
-     * State law defines system in US survey feet. See CRS code 26862 for equivalent non-metric definition. Replaces
-     * NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WEST_VIRGINIA_SOUTH = 'urn:ogc:def:crs:EPSG::2858';
-
-    /**
-     * NAD83(HARN) / West Virginia South (ftUS)
-     * Extent: USA - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier;
-     * Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton;
-     * Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming
-     * State law defines use of US survey feet. Federal definition is metric - see code 2858. Replaces NAD83 / SPCS for
-     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WEST_VIRGINIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::26862';
-
-    /**
-     * NAD83(HARN) / Wisconsin Central
-     * Extent: USA - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson;
-     * Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage;
-     * Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood
-     * State law defines system in US survey feet. See code 2929 for equivalent non-metric definition. Replaces NAD83 /
-     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_CENTRAL = 'urn:ogc:def:crs:EPSG::2860';
-
-    /**
-     * NAD83(HARN) / Wisconsin Central (ftUS)
-     * Extent: USA - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson;
-     * Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage;
-     * Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood
-     * State law defines system in US survey feet. Federal definition is metric - see code 2860. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2929';
-
-    /**
-     * NAD83(HARN) / Wisconsin North
-     * Extent: USA - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida;
-     * Price; Sawyer; Vilas; Washburn
-     * State law defines system in US survey feet. See code 2928 for equivalent non-metric definition. Replaces NAD83 /
-     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_NORTH = 'urn:ogc:def:crs:EPSG::2859';
-
-    /**
-     * NAD83(HARN) / Wisconsin North (ftUS)
-     * Extent: USA - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida;
-     * Price; Sawyer; Vilas; Washburn
-     * State law defines system in US survey feet. Federal definition is metric - see code 2859. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2928';
-
-    /**
-     * NAD83(HARN) / Wisconsin South
-     * Extent: USA - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant;
-     * Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee;
-     * Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara;
-     * Winnebago
-     * State law defines system in US survey feet. See code 2930 for equivalent non-metric definition. Replaces NAD83 /
-     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_SOUTH = 'urn:ogc:def:crs:EPSG::2861';
-
-    /**
-     * NAD83(HARN) / Wisconsin South (ftUS)
-     * Extent: USA - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant;
-     * Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee;
-     * Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara;
-     * Winnebago
-     * State law defines system in US survey feet. Federal definition is metric - see code 2861. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2930';
-
-    /**
-     * NAD83(HARN) / Wisconsin Transverse Mercator
-     * Extent: USA - Wisconsin
-     * Designed as a single zone for the whole state. Replaces NAD83 / Wisconsin Transverse Mercator for applications
-     * with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Wisconsin Transverse Mercator.
-     */
-    public const EPSG_NAD83_HARN_WISCONSIN_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::3071';
-
-    /**
      * NAD83(HARN) / Wyoming East
      * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
      * State law defines system in US survey feet. See code 3755 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
     public const EPSG_NAD83_HARN_WYOMING_EAST = 'urn:ogc:def:crs:EPSG::2862';
-
-    /**
-     * NAD83(HARN) / Wyoming East (ftUS)
-     * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
-     * State law defines system in US survey feet. Federal definition is metric - see code 2862. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WYOMING_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3755';
 
     /**
      * NAD83(HARN) / Wyoming East Central
@@ -4515,20 +3701,20 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_HARN_WYOMING_EAST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3756';
 
     /**
+     * NAD83(HARN) / Wyoming East (ftUS)
+     * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
+     * State law defines system in US survey feet. Federal definition is metric - see code 2862. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WYOMING_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3755';
+
+    /**
      * NAD83(HARN) / Wyoming West
      * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
      * State law defines system in US survey feet. See code 3758 for equivalent non-metric definition. Replaces NAD83 /
      * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
      */
     public const EPSG_NAD83_HARN_WYOMING_WEST = 'urn:ogc:def:crs:EPSG::2865';
-
-    /**
-     * NAD83(HARN) / Wyoming West (ftUS)
-     * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
-     * State law defines system in US survey feet. Federal definition is metric - see code 2865. Replaces NAD83 / SPCS
-     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
-     */
-    public const EPSG_NAD83_HARN_WYOMING_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3758';
 
     /**
      * NAD83(HARN) / Wyoming West Central
@@ -4545,6 +3731,448 @@ trait ProjectedConstantsChunk3
      * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
      */
     public const EPSG_NAD83_HARN_WYOMING_WEST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3757';
+
+    /**
+     * NAD83(HARN) / Wyoming West (ftUS)
+     * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
+     * State law defines system in US survey feet. Federal definition is metric - see code 2865. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_WYOMING_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3758';
+
+    /**
+     * NAD83 / Hawaii zone 1
+     * Extent: USA - Hawaii - island of Hawaii - onshore
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_HAWAII_ZONE_1 = 'urn:ogc:def:crs:EPSG::26961';
+
+    /**
+     * NAD83 / Hawaii zone 2
+     * Extent: USA - Hawaii - Maui; Kahoolawe; Lanai; Molokai - onshore
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_HAWAII_ZONE_2 = 'urn:ogc:def:crs:EPSG::26962';
+
+    /**
+     * NAD83 / Hawaii zone 3
+     * Extent: USA - Hawaii - Oahu - onshore
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_HAWAII_ZONE_3 = 'urn:ogc:def:crs:EPSG::26963';
+
+    /**
+     * NAD83 / Hawaii zone 3 (ftUS)
+     * Extent: USA - Hawaii - Oahu - onshore
+     * State has no law defining grid unit; system therefore not recognised by Federal authorities. For applications
+     * with an accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_HAWAII_ZONE_3_FTUS = 'urn:ogc:def:crs:EPSG::3759';
+
+    /**
+     * NAD83 / Hawaii zone 4
+     * Extent: USA - Hawaii - Kauai - onshore
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_HAWAII_ZONE_4 = 'urn:ogc:def:crs:EPSG::26964';
+
+    /**
+     * NAD83 / Hawaii zone 5
+     * Extent: USA - Hawaii - Niihau - onshore
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_HAWAII_ZONE_5 = 'urn:ogc:def:crs:EPSG::26965';
+
+    /**
+     * NAD83 / Idaho Central
+     * Extent: USA - Idaho - counties of Blaine; Butte; Camas; Cassia; Custer; Gooding; Jerome; Lemhi; Lincoln;
+     * Minidoka; Twin Falls
+     * State law defines system in US survey feet. See code 2242 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IDAHO_CENTRAL = 'urn:ogc:def:crs:EPSG::26969';
+
+    /**
+     * NAD83 / Idaho Central (ftUS)
+     * Extent: USA - Idaho - counties of Blaine; Butte; Camas; Cassia; Custer; Gooding; Jerome; Lemhi; Lincoln;
+     * Minidoka; Twin Falls
+     * State law defines system in US survey feet. Federal definition is metric - see code 26969. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IDAHO_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2242';
+
+    /**
+     * NAD83 / Idaho East
+     * Extent: USA - Idaho - counties of Bannock; Bear Lake; Bingham; Bonneville; Caribou; Clark; Franklin; Fremont;
+     * Jefferson; Madison; Oneida; Power; Teton
+     * State law defines system in US survey feet. See code 2241 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IDAHO_EAST = 'urn:ogc:def:crs:EPSG::26968';
+
+    /**
+     * NAD83 / Idaho East (ftUS)
+     * Extent: USA - Idaho - counties of Bannock; Bear Lake; Bingham; Bonneville; Caribou; Clark; Franklin; Fremont;
+     * Jefferson; Madison; Oneida; Power; Teton
+     * State law defines system in US survey feet. Federal definition is metric - see code 26968. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IDAHO_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2241';
+
+    /**
+     * NAD83 / Idaho Transverse Mercator
+     * Extent: USA - Idaho
+     * Replaces IDTM27.
+     */
+    public const EPSG_NAD83_IDAHO_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::8826';
+
+    /**
+     * NAD83 / Idaho West
+     * Extent: USA - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon; Clearwater; Elmore; Gem;
+     * Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington
+     * State law defines system in US survey feet. See code 2243 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IDAHO_WEST = 'urn:ogc:def:crs:EPSG::26970';
+
+    /**
+     * NAD83 / Idaho West (ftUS)
+     * Extent: USA - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon; Clearwater; Elmore; Gem;
+     * Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 26970. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IDAHO_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2243';
+
+    /**
+     * NAD83 / Illinois East
+     * Extent: USA - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb;
+     * De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton;
+     * Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston;
+     * Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash;
+     * Wayne; White; Will; Williamson
+     * State law defines system in US survey feet. See code 3435 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_ILLINOIS_EAST = 'urn:ogc:def:crs:EPSG::26971';
+
+    /**
+     * NAD83 / Illinois East (ftUS)
+     * Extent: USA - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb;
+     * De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton;
+     * Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston;
+     * Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash;
+     * Wayne; White; Will; Williamson
+     * State law defines system in US survey feet. Federal definition is metric - see code 26971. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_ILLINOIS_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3435';
+
+    /**
+     * NAD83 / Illinois West
+     * Extent: USA - Illinois - counties of Adams; Alexander; Bond; Brown; Bureau; Calhoun; Carroll; Cass; Christian;
+     * Clinton; Fulton; Greene; Hancock; Henderson; Henry; Jackson; Jersey; Jo Daviess; Knox; Lee; Logan; Macoupin;
+     * Madison; Marshall; Mason; McDonough; Menard; Mercer; Monroe; Montgomery; Morgan; Ogle; Peoria; Perry; Pike;
+     * Pulaski; Putnam; Randolph; Rock Island; Sangamon; Schuyler; Scott; St Clair; Stark; Stephenson; Tazewell; Union;
+     * Warren; Washington; Whiteside; Winnebago; Woodford
+     * State law defines system in US survey feet. See code 3436 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_ILLINOIS_WEST = 'urn:ogc:def:crs:EPSG::26972';
+
+    /**
+     * NAD83 / Illinois West (ftUS)
+     * Extent: USA - Illinois - counties of Adams; Alexander; Bond; Brown; Bureau; Calhoun; Carroll; Cass; Christian;
+     * Clinton; Fulton; Greene; Hancock; Henderson; Henry; Jackson; Jersey; Jo Daviess; Knox; Lee; Logan; Macoupin;
+     * Madison; Marshall; Mason; McDonough; Menard; Mercer; Monroe; Montgomery; Morgan; Ogle; Peoria; Perry; Pike;
+     * Pulaski; Putnam; Randolph; Rock Island; Sangamon; Schuyler; Scott; St Clair; Stark; Stephenson; Tazewell; Union;
+     * Warren; Washington; Whiteside; Winnebago; Woodford
+     * State law defines system in US survey feet. Federal definition is metric - see code 26972. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_ILLINOIS_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3436';
+
+    /**
+     * NAD83 / Indiana East
+     * Extent: USA - Indiana - counties of Adams; Allen; Bartholomew; Blackford; Brown; Cass; Clark; De Kalb; Dearborn;
+     * Decatur; Delaware; Elkhart; Fayette; Floyd; Franklin; Fulton; Grant; Hamilton; Hancock; Harrison; Henry; Howard;
+     * Huntington; Jackson; Jay; Jefferson; Jennings; Johnson; Kosciusko; Lagrange; Madison; Marion; Marshall; Miami;
+     * Noble; Ohio; Randolph; Ripley; Rush; Scott; Shelby; St Joseph; Steuben; Switzerland; Tipton; Union; Wabash;
+     * Washington; Wayne; Wells; Whitley
+     * State law defines system in US survey feet. See code 2965 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_INDIANA_EAST = 'urn:ogc:def:crs:EPSG::26973';
+
+    /**
+     * NAD83 / Indiana East (ftUS)
+     * Extent: USA - Indiana - counties of Adams; Allen; Bartholomew; Blackford; Brown; Cass; Clark; De Kalb; Dearborn;
+     * Decatur; Delaware; Elkhart; Fayette; Floyd; Franklin; Fulton; Grant; Hamilton; Hancock; Harrison; Henry; Howard;
+     * Huntington; Jackson; Jay; Jefferson; Jennings; Johnson; Kosciusko; Lagrange; Madison; Marion; Marshall; Miami;
+     * Noble; Ohio; Randolph; Ripley; Rush; Scott; Shelby; St Joseph; Steuben; Switzerland; Tipton; Union; Wabash;
+     * Washington; Wayne; Wells; Whitley
+     * State law defines system in US survey feet. Federal definition is metric - see code 26973. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_INDIANA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2965';
+
+    /**
+     * NAD83 / Indiana West
+     * Extent: USA - Indiana - counties of Benton; Boone; Carroll; Clay; Clinton; Crawford; Daviess; Dubois; Fountain;
+     * Gibson; Greene; Hendricks; Jasper; Knox; La Porte; Lake; Lawrence; Martin; Monroe; Montgomery; Morgan; Newton;
+     * Orange; Owen; Parke; Perry; Pike; Porter; Posey; Pulaski; Putnam; Spencer; Starke; Sullivan; Tippecanoe;
+     * Vanderburgh; Vermillion; Vigo; Warren; Warrick; White
+     * State law defines system in US survey feet. See code 2966 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_INDIANA_WEST = 'urn:ogc:def:crs:EPSG::26974';
+
+    /**
+     * NAD83 / Indiana West (ftUS)
+     * Extent: USA - Indiana - counties of Benton; Boone; Carroll; Clay; Clinton; Crawford; Daviess; Dubois; Fountain;
+     * Gibson; Greene; Hendricks; Jasper; Knox; La Porte; Lake; Lawrence; Martin; Monroe; Montgomery; Morgan; Newton;
+     * Orange; Owen; Parke; Perry; Pike; Porter; Posey; Pulaski; Putnam; Spencer; Starke; Sullivan; Tippecanoe;
+     * Vanderburgh; Vermillion; Vigo; Warren; Warrick; White
+     * State law defines system in US survey feet. Federal definition is metric - see code 26974. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_INDIANA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2966';
+
+    /**
+     * NAD83 / Iowa North
+     * Extent: USA - Iowa - counties of Allamakee; Benton; Black Hawk; Boone; Bremer; Buchanan; Buena Vista; Butler;
+     * Calhoun; Carroll; Cerro Gordo; Cherokee; Chickasaw; Clay; Clayton; Crawford; Delaware; Dickinson; Dubuque;
+     * Emmet; Fayette; Floyd; Franklin; Greene; Grundy; Hamilton; Hancock; Hardin; Howard; Humboldt; Ida; Jackson;
+     * Jones; Kossuth; Linn; Lyon; Marshall; Mitchell; Monona; O'Brien; Osceola; Palo Alto; Plymouth; Pocahontas; Sac;
+     * Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright
+     * State law defines system in US survey feet. See code 3417 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IOWA_NORTH = 'urn:ogc:def:crs:EPSG::26975';
+
+    /**
+     * NAD83 / Iowa North (ftUS)
+     * Extent: USA - Iowa - counties of Allamakee; Benton; Black Hawk; Boone; Bremer; Buchanan; Buena Vista; Butler;
+     * Calhoun; Carroll; Cerro Gordo; Cherokee; Chickasaw; Clay; Clayton; Crawford; Delaware; Dickinson; Dubuque;
+     * Emmet; Fayette; Floyd; Franklin; Greene; Grundy; Hamilton; Hancock; Hardin; Howard; Humboldt; Ida; Jackson;
+     * Jones; Kossuth; Linn; Lyon; Marshall; Mitchell; Monona; O'Brien; Osceola; Palo Alto; Plymouth; Pocahontas; Sac;
+     * Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright
+     * State law defines system in US survey feet. Federal definition is metric - see code 26975. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IOWA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3417';
+
+    /**
+     * NAD83 / Iowa South
+     * Extent: USA - Iowa - counties of Adair; Adams; Appanoose; Audubon; Cass; Cedar; Clarke; Clinton; Dallas; Davis;
+     * Decatur; Des Moines; Fremont; Guthrie; Harrison; Henry; Iowa; Jasper; Jefferson; Johnson; Keokuk; Lee; Louisa;
+     * Lucas; Madison; Mahaska; Marion; Mills; Monroe; Montgomery; Muscatine; Page; Polk; Pottawattamie; Poweshiek;
+     * Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne
+     * State law defines system in US survey feet. See code 3418 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IOWA_SOUTH = 'urn:ogc:def:crs:EPSG::26976';
+
+    /**
+     * NAD83 / Iowa South (ftUS)
+     * Extent: USA - Iowa - counties of Adair; Adams; Appanoose; Audubon; Cass; Cedar; Clarke; Clinton; Dallas; Davis;
+     * Decatur; Des Moines; Fremont; Guthrie; Harrison; Henry; Iowa; Jasper; Jefferson; Johnson; Keokuk; Lee; Louisa;
+     * Lucas; Madison; Mahaska; Marion; Mills; Monroe; Montgomery; Muscatine; Page; Polk; Pottawattamie; Poweshiek;
+     * Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne
+     * State law defines system in US survey feet. Federal definition is metric - see code 26976. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_IOWA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3418';
+
+    /**
+     * NAD83 / Kansas LCC
+     * Extent: USA - Kansas
+     * KS DOT defines system in US survey feet. See code 6923 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 2m, use NAD83(2011) / LCC (m) (CRS code 6924).
+     */
+    public const EPSG_NAD83_KANSAS_LCC = 'urn:ogc:def:crs:EPSG::6922';
+
+    /**
+     * NAD83 / Kansas LCC (ftUS)
+     * Extent: USA - Kansas
+     * KS DOT defines system in US survey feet. See code 6922 for equivalent metric definition. For applications with
+     * an accuracy of better than 5ft, use NAD83(2011) / LCC (ftUS) (CRS code 6924).
+     */
+    public const EPSG_NAD83_KANSAS_LCC_FTUS = 'urn:ogc:def:crs:EPSG::6923';
+
+    /**
+     * NAD83 / Kansas North
+     * Extent: USA - Kansas - counties of Atchison; Brown; Cheyenne; Clay; Cloud; Decatur; Dickinson; Doniphan;
+     * Douglas; Ellis; Ellsworth; Geary; Gove; Graham; Jackson; Jefferson; Jewell; Johnson; Leavenworth; Lincoln;
+     * Logan; Marshall; Mitchell; Morris; Nemaha; Norton; Osborne; Ottawa; Phillips; Pottawatomie; Rawlins; Republic;
+     * Riley; Rooks; Russell; Saline; Shawnee; Sheridan; Sherman; Smith; Thomas; Trego; Wabaunsee; Wallace; Washington;
+     * Wyandotte
+     * State law defines system in US survey feet. See code 3419 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KANSAS_NORTH = 'urn:ogc:def:crs:EPSG::26977';
+
+    /**
+     * NAD83 / Kansas North (ftUS)
+     * Extent: USA - Kansas - counties of Atchison; Brown; Cheyenne; Clay; Cloud; Decatur; Dickinson; Doniphan;
+     * Douglas; Ellis; Ellsworth; Geary; Gove; Graham; Jackson; Jefferson; Jewell; Johnson; Leavenworth; Lincoln;
+     * Logan; Marshall; Mitchell; Morris; Nemaha; Norton; Osborne; Ottawa; Phillips; Pottawatomie; Rawlins; Republic;
+     * Riley; Rooks; Russell; Saline; Shawnee; Sheridan; Sherman; Smith; Thomas; Trego; Wabaunsee; Wallace; Washington;
+     * Wyandotte
+     * State law defines system in US survey feet. Federal definition is metric - see code 26977. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KANSAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3419';
+
+    /**
+     * NAD83 / Kansas South
+     * Extent: USA - Kansas - counties of Allen; Anderson; Barber; Barton; Bourbon; Butler; Chase; Chautauqua;
+     * Cherokee; Clark; Coffey; Comanche; Cowley; Crawford; Edwards; Elk; Finney; Ford; Franklin; Grant; Gray; Greeley;
+     * Greenwood; Hamilton; Harper; Harvey; Haskell; Hodgeman; Kearny; Kingman; Kiowa; Labette; Lane; Linn; Lyon;
+     * Marion; McPherson; Meade; Miami; Montgomery; Morton; Neosho; Ness; Osage; Pawnee; Pratt; Reno; Rice; Rush;
+     * Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson
+     * State law defines system in US survey feet. See code 3420 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KANSAS_SOUTH = 'urn:ogc:def:crs:EPSG::26978';
+
+    /**
+     * NAD83 / Kansas South (ftUS)
+     * Extent: USA - Kansas - counties of Allen; Anderson; Barber; Barton; Bourbon; Butler; Chase; Chautauqua;
+     * Cherokee; Clark; Coffey; Comanche; Cowley; Crawford; Edwards; Elk; Finney; Ford; Franklin; Grant; Gray; Greeley;
+     * Greenwood; Hamilton; Harper; Harvey; Haskell; Hodgeman; Kearny; Kingman; Kiowa; Labette; Lane; Linn; Lyon;
+     * Marion; McPherson; Meade; Miami; Montgomery; Morton; Neosho; Ness; Osage; Pawnee; Pratt; Reno; Rice; Rush;
+     * Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson
+     * State law defines system in US survey feet. Federal definition is metric - see code 26978. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KANSAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3420';
+
+    /**
+     * NAD83 / Kentucky North
+     * Extent: USA - Kentucky - counties of Anderson; Bath; Boone; Bourbon; Boyd; Bracken; Bullitt; Campbell; Carroll;
+     * Carter; Clark; Elliott; Fayette; Fleming; Franklin; Gallatin; Grant; Greenup; Harrison; Henry; Jefferson;
+     * Jessamine; Kenton; Lawrence; Lewis; Mason; Menifee; Montgomery; Morgan; Nicholas; Oldham; Owen; Pendleton;
+     * Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford
+     * State law defines system in US survey feet. See code 2246 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KENTUCKY_NORTH = 'urn:ogc:def:crs:EPSG::2205';
+
+    /**
+     * NAD83 / Kentucky North (ftUS)
+     * Extent: USA - Kentucky - counties of Anderson; Bath; Boone; Bourbon; Boyd; Bracken; Bullitt; Campbell; Carroll;
+     * Carter; Clark; Elliott; Fayette; Fleming; Franklin; Gallatin; Grant; Greenup; Harrison; Henry; Jefferson;
+     * Jessamine; Kenton; Lawrence; Lewis; Mason; Menifee; Montgomery; Morgan; Nicholas; Oldham; Owen; Pendleton;
+     * Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford
+     * State law defines system in US survey feet. Federal definition is metric - see code 2205. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KENTUCKY_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2246';
+
+    /**
+     * NAD83 / Kentucky Single Zone
+     * Extent: USA - Kentucky
+     * State law defines system in US survey feet. See code 3089 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / Kentucky (m) (code 3090).
+     */
+    public const EPSG_NAD83_KENTUCKY_SINGLE_ZONE = 'urn:ogc:def:crs:EPSG::3088';
+
+    /**
+     * NAD83 / Kentucky Single Zone (ftUS)
+     * Extent: USA - Kentucky
+     * State law defines system in US survey feet. See code 3088 for equivalent metric definition. For applications
+     * with an accuracy of better than 3 feet, replaced by NAD83(HARN) / Kentucky (ftUS) (code 3091).
+     */
+    public const EPSG_NAD83_KENTUCKY_SINGLE_ZONE_FTUS = 'urn:ogc:def:crs:EPSG::3089';
+
+    /**
+     * NAD83 / Kentucky South
+     * Extent: USA - Kentucky - counties of Adair; Allen; Ballard; Barren; Bell; Boyle; Breathitt; Breckinridge;
+     * Butler; Caldwell; Calloway; Carlisle; Casey; Christian; Clay; Clinton; Crittenden; Cumberland; Daviess;
+     * Edmonson; Estill; Floyd; Fulton; Garrard; Graves; Grayson; Green; Hancock; Hardin; Harlan; Hart; Henderson;
+     * Hickman; Hopkins; Jackson; Johnson; Knott; Knox; Larue; Laurel; Lee; Leslie; Letcher; Lincoln; Livingston;
+     * Logan; Lyon; Madison; Magoffin; Marion; Marshall; Martin; McCracken; McCreary; McLean; Meade; Mercer; Metcalfe;
+     * Monroe; Muhlenberg; Nelson; Ohio; Owsley; Perry; Pike; Powell; Pulaski; Rockcastle; Russell; Simpson; Taylor;
+     * Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe
+     * State law defines system in US survey feet. See code 2247 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KENTUCKY_SOUTH = 'urn:ogc:def:crs:EPSG::26980';
+
+    /**
+     * NAD83 / Kentucky South (ftUS)
+     * Extent: USA - Kentucky - counties of Adair; Allen; Ballard; Barren; Bell; Boyle; Breathitt; Breckinridge;
+     * Butler; Caldwell; Calloway; Carlisle; Casey; Christian; Clay; Clinton; Crittenden; Cumberland; Daviess;
+     * Edmonson; Estill; Floyd; Fulton; Garrard; Graves; Grayson; Green; Hancock; Hardin; Harlan; Hart; Henderson;
+     * Hickman; Hopkins; Jackson; Johnson; Knott; Knox; Larue; Laurel; Lee; Leslie; Letcher; Lincoln; Livingston;
+     * Logan; Lyon; Madison; Magoffin; Marion; Marshall; Martin; McCracken; McCreary; McLean; Meade; Mercer; Metcalfe;
+     * Monroe; Muhlenberg; Nelson; Ohio; Owsley; Perry; Pike; Powell; Pulaski; Rockcastle; Russell; Simpson; Taylor;
+     * Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe
+     * State law defines system in US survey feet. Federal definition is metric - see code 26980. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_KENTUCKY_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2247';
+
+    /**
+     * NAD83 / Louisiana North
+     * Extent: USA - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne;
+     * Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches;
+     * Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn
+     * State law defines system in US survey feet. See code 3451 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_LOUISIANA_NORTH = 'urn:ogc:def:crs:EPSG::26981';
+
+    /**
+     * NAD83 / Louisiana North (ftUS)
+     * Extent: USA - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne;
+     * Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches;
+     * Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn
+     * State law defines system in US survey feet. Federal definition is metric - see code 26981. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_LOUISIANA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3451';
+
+    /**
+     * NAD83 / Louisiana Offshore
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
+     * This system is NOT used for oil industry purposes. State law defines system in US survey feet. See code 3453 for
+     * equivalent non-metric definition.
+     */
+    public const EPSG_NAD83_LOUISIANA_OFFSHORE = 'urn:ogc:def:crs:EPSG::32199';
+
+    /**
+     * NAD83 / Louisiana Offshore (ftUS)
+     * Extent: USA - central Gulf of Mexico outer continental shelf (GoM OCS) planning area, deep water portion
+     * This system is NOT used for oil industry purposes. State law defines system in US survey feet. Federal
+     * definition is metric - see code 32199.
+     */
+    public const EPSG_NAD83_LOUISIANA_OFFSHORE_FTUS = 'urn:ogc:def:crs:EPSG::3453';
+
+    /**
+     * NAD83 / Louisiana South
+     * Extent: USA - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East
+     * Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche;
+     * Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the
+     * Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton
+     * Rouge; West Feliciana
+     * State law defines system in US survey feet. See code 3452 for equivalent non-metric definition. For onshore
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_LOUISIANA_SOUTH = 'urn:ogc:def:crs:EPSG::26982';
+
+    /**
+     * NAD83 / Louisiana South (ftUS)
+     * Extent: USA - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East
+     * Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche;
+     * Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the
+     * Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton
+     * Rouge; West Feliciana
+     * State law defines system in US survey feet. Federal definition is metric - see code 26982. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_LOUISIANA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3452';
 
     /**
      * NAD83(MA11) / Guam Map Grid
@@ -4568,6 +4196,853 @@ trait ProjectedConstantsChunk3
      * and different to NAD83(MA11).
      */
     public const EPSG_NAD83_MA11_UTM_ZONE_55N = 'urn:ogc:def:crs:EPSG::8693';
+
+    /**
+     * NAD83 / Maine CS2000 Central
+     * Extent: USA - Maine between approximately 69°40'W and 68°25'W. The area is bounded by the following: Beginning
+     * at the point determined by the intersection of the Maine State line and the County Line between Aroostook and
+     * Somerset Counties, thence northeasterly along the state line to the intersection of the Fort Kent - Frenchville
+     * town line, thence southerly along this town line to the intersection with the New Canada Plantation - T17 R5
+     * WELS town line, thence continuing southerly along town lines to the northeast corner of Penobscot County, thence
+     * continuing southerly along the Penobscot County line to the intersection of the Woodville - Mattawamkeag town
+     * line (being determined by the Penobscot River), thence along the Penobscot River to the Enfield - Lincoln town
+     * line, thence southeasterly along the Enfield - Lincoln town line and the Enfield - Lowell town line to the
+     * Passadumkeag - Edinburg town line, thence south-southeasterly along town lines to the intersection of the
+     * Hancock County line, thence southerly along the county line to the intersection of the Otis - Mariaville town
+     * line, thence southerly along the Otis - Mariaville town line to the Ellsworth city line, thence southerly along
+     * the Ellsworth city line to the intersection of the Surry - Trenton town line, thence southerly along the
+     * easterly town lines of Surry, Blue Hill, Brooklin, Deer Isle, and Stonington to the Knox County line, thence
+     * following the Knox County line to the boundary of the State of Maine as determined by Maritime law, thence
+     * following the State boundary westerly to the intersection of the Sagadahoc - Lincoln county line, thence
+     * northerly along the easterly boundary of the Maine 2000 West Zone, as defined, to the point of beginning
+     * In Maine Department of Transportation and other State agencies replaces CS27 and SPCS83 from 1/1/2001. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / CS2000.
+     */
+    public const EPSG_NAD83_MAINE_CS2000_CENTRAL = 'urn:ogc:def:crs:EPSG::3463';
+
+    /**
+     * NAD83 / Maine CS2000 East
+     * Extent: USA - Maine east of approximately 68°25'W. The area is bounded by the following: Beginning at the point
+     * determined by the intersection of the Maine State line and the Fort Kent - Frenchville town line, thence
+     * continuing easterly and then southerly along the state line to the boundary of the State of Maine as determined
+     * by Maritime law, thence following the State boundary westerly to the intersection of the Knox and Hancock County
+     * line, thence northerly along the easterly boundary of the Maine 2000 Central Zone, as defined, to the point of
+     * beginning
+     * In Maine Department of Transportation and other State agencies replaces CS27 and SPCS83 from 1/1/2001. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / CS2000.
+     */
+    public const EPSG_NAD83_MAINE_CS2000_EAST = 'urn:ogc:def:crs:EPSG::3072';
+
+    /**
+     * NAD83 / Maine CS2000 West
+     * Extent: USA - Maine west of approximately 69°40'W. The area is bounded by the following: Beginning at the point
+     * determined by the intersection of the Maine State line and the County Line between Aroostook and Somerset
+     * Counties, thence following the Somerset County line Easterly to the Northwest corner of the Somerset and
+     * Piscataquis county line, thence Southerly along this county line to the northeast corner of the Athens town
+     * line, thence westerly along the town line between Brighton Plantation and Athens to the westerly corner of
+     * Athens, and continuing southerly to the southwest corner of the town of Athens where it meets the Cornville town
+     * line, thence westerly along the Cornville - Solon town line to the intersection of the Cornville - Madison town
+     * line, thence southerly and westerly following the Madison town line to the intersection of the Norridgewock -
+     * Skowhegan town line, thence southerly along the Skowhegan town line to the Fairfield town line, thence easterly
+     * along the Fairfield town line to the Clinton town line (being determined by the Kennebec River), thence
+     * southerly along the Kennebec River to the Augusta city line, thence easterly along the city line to the Windsor
+     * town line, thence southerly along the Augusta - Windsor town line to the northwest corner of the Lincoln County
+     * line, thence southerly along the westerly Lincoln county line to the boundary of the State of Maine as
+     * determined by Maritime law, thence following the State boundary on the westerly side of the state to the point
+     * of beginning
+     * In Maine Department of Transportation and other State agencies replaces CS27 and SPCS83 from 1/1/2001. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / CS2000.
+     */
+    public const EPSG_NAD83_MAINE_CS2000_WEST = 'urn:ogc:def:crs:EPSG::3074';
+
+    /**
+     * NAD83 / Maine East
+     * Extent: USA - Maine - counties of Aroostook; Hancock; Knox; Penobscot; Piscataquis; Waldo; Washington
+     * State law defines system in US survey feet. See code 26847 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MAINE_EAST = 'urn:ogc:def:crs:EPSG::26983';
+
+    /**
+     * NAD83 / Maine East (ftUS)
+     * Extent: USA - Maine - counties of Aroostook; Hancock; Knox; Penobscot; Piscataquis; Waldo; Washington
+     * State law defines use of US survey feet. Federal definition is metric - see code 26983. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MAINE_EAST_FTUS = 'urn:ogc:def:crs:EPSG::26847';
+
+    /**
+     * NAD83 / Maine West
+     * Extent: USA - Maine - counties of Androscoggin; Cumberland; Franklin; Kennebec; Lincoln; Oxford; Sagadahoc;
+     * Somerset; York
+     * State law defines system in US survey feet. See code 26848 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MAINE_WEST = 'urn:ogc:def:crs:EPSG::26984';
+
+    /**
+     * NAD83 / Maine West (ftUS)
+     * Extent: USA - Maine - counties of Androscoggin; Cumberland; Franklin; Kennebec; Lincoln; Oxford; Sagadahoc;
+     * Somerset; York
+     * State law defines use of US survey feet. Federal definition is metric - see code 26984. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MAINE_WEST_FTUS = 'urn:ogc:def:crs:EPSG::26848';
+
+    /**
+     * NAD83 / Maryland
+     * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
+     * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
+     * State law defines system in US survey feet. See code 2248 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MARYLAND = 'urn:ogc:def:crs:EPSG::26985';
+
+    /**
+     * NAD83 / Maryland (ftUS)
+     * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
+     * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
+     * State law defines system in US survey feet. Federal definition is metric - see code 26985. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MARYLAND_FTUS = 'urn:ogc:def:crs:EPSG::2248';
+
+    /**
+     * NAD83 / Massachusetts Island
+     * Extent: USA - Massachusetts offshore - counties of Dukes; Nantucket
+     * State law defines system in US survey feet. See code 2250 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MASSACHUSETTS_ISLAND = 'urn:ogc:def:crs:EPSG::26987';
+
+    /**
+     * NAD83 / Massachusetts Island (ftUS)
+     * Extent: USA - Massachusetts offshore - counties of Dukes; Nantucket
+     * State law defines system in US survey feet. Federal definition is metric - see code 26987. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MASSACHUSETTS_ISLAND_FTUS = 'urn:ogc:def:crs:EPSG::2250';
+
+    /**
+     * NAD83 / Massachusetts Mainland
+     * Extent: USA - Massachusetts onshore - counties of Barnstable; Berkshire; Bristol; Essex; Franklin; Hampden;
+     * Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester
+     * State law defines system in US survey feet. See code 2249 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MASSACHUSETTS_MAINLAND = 'urn:ogc:def:crs:EPSG::26986';
+
+    /**
+     * NAD83 / Massachusetts Mainland (ftUS)
+     * Extent: USA - Massachusetts onshore - counties of Barnstable; Berkshire; Bristol; Essex; Franklin; Hampden;
+     * Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester
+     * State law defines system in US survey feet. Federal definition is metric - see code 26986. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MASSACHUSETTS_MAINLAND_FTUS = 'urn:ogc:def:crs:EPSG::2249';
+
+    /**
+     * NAD83 / Michigan Central
+     * Extent: USA - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix; Cheboygan; Clare;
+     * Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason; Missaukee;
+     * Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford
+     * State law defines system in International feet (note: not US survey feet). See code 2252 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MICHIGAN_CENTRAL = 'urn:ogc:def:crs:EPSG::26989';
+
+    /**
+     * NAD83 / Michigan Central (ft)
+     * Extent: USA - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix; Cheboygan; Clare;
+     * Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason; Missaukee;
+     * Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 26989. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MICHIGAN_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::2252';
+
+    /**
+     * NAD83 / Michigan North
+     * Extent: USA - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa; Delta; Dickinson;
+     * Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon; Schoolcraft
+     * State law defines system in International feet (note: not US survey feet). See code 2251 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MICHIGAN_NORTH = 'urn:ogc:def:crs:EPSG::26988';
+
+    /**
+     * NAD83 / Michigan North (ft)
+     * Extent: USA - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa; Delta; Dickinson;
+     * Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon; Schoolcraft
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 26988. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MICHIGAN_NORTH_FT = 'urn:ogc:def:crs:EPSG::2251';
+
+    /**
+     * NAD83 / Michigan Oblique Mercator
+     * Extent: USA - Michigan
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Michigan Oblique Mercator.
+     */
+    public const EPSG_NAD83_MICHIGAN_OBLIQUE_MERCATOR = 'urn:ogc:def:crs:EPSG::3078';
+
+    /**
+     * NAD83 / Michigan South
+     * Extent: USA - Michigan - counties of Allegan; Barry; Bay; Berrien; Branch; Calhoun; Cass; Clinton; Eaton;
+     * Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer; Lenawee;
+     * Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa; Saginaw;
+     * Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne
+     * State law defines system in International feet (note: not US survey feet). See code 2253 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MICHIGAN_SOUTH = 'urn:ogc:def:crs:EPSG::26990';
+
+    /**
+     * NAD83 / Michigan South (ft)
+     * Extent: USA - Michigan - counties of Allegan; Barry; Bay; Berrien; Branch; Calhoun; Cass; Clinton; Eaton;
+     * Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer; Lenawee;
+     * Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa; Saginaw;
+     * Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 26990. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MICHIGAN_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2253';
+
+    /**
+     * NAD83 / Minnesota Central
+     * Extent: USA - Minnesota - counties of Aitkin; Becker; Benton; Carlton; Cass; Chisago; Clay; Crow Wing; Douglas;
+     * Grant; Hubbard; Isanti; Kanabec; Mille Lacs; Morrison; Otter Tail; Pine; Pope; Stearns; Stevens; Todd; Traverse;
+     * Wadena; Wilkin
+     * State law defines system in US survey feet. See code 26850 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MINNESOTA_CENTRAL = 'urn:ogc:def:crs:EPSG::26992';
+
+    /**
+     * NAD83 / Minnesota Central (ftUS)
+     * Extent: USA - Minnesota - counties of Aitkin; Becker; Benton; Carlton; Cass; Chisago; Clay; Crow Wing; Douglas;
+     * Grant; Hubbard; Isanti; Kanabec; Mille Lacs; Morrison; Otter Tail; Pine; Pope; Stearns; Stevens; Todd; Traverse;
+     * Wadena; Wilkin
+     * State law defines use of US survey feet. Federal definition is metric - see code 26992. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MINNESOTA_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::26850';
+
+    /**
+     * NAD83 / Minnesota North
+     * Extent: USA - Minnesota - counties of Beltrami; Clearwater; Cook; Itasca; Kittson; Koochiching; Lake; Lake of
+     * the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis
+     * State law defines system in US survey feet. See code 26849 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MINNESOTA_NORTH = 'urn:ogc:def:crs:EPSG::26991';
+
+    /**
+     * NAD83 / Minnesota North (ftUS)
+     * Extent: USA - Minnesota - counties of Beltrami; Clearwater; Cook; Itasca; Kittson; Koochiching; Lake; Lake of
+     * the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis
+     * State law defines use of US survey feet. Federal definition is metric - see code 26991. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MINNESOTA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::26849';
+
+    /**
+     * NAD83 / Minnesota South
+     * Extent: USA - Minnesota - counties of Anoka; Big Stone; Blue Earth; Brown; Carver; Chippewa; Cottonwood; Dakota;
+     * Dodge; Faribault; Fillmore; Freeborn; Goodhue; Hennepin; Houston; Jackson; Kandiyohi; Lac Qui Parle; Le Sueur;
+     * Lincoln; Lyon; Martin; McLeod; Meeker; Mower; Murray; Nicollet; Nobles; Olmsted; Pipestone; Ramsey; Redwood;
+     * Renville; Rice; Rock; Scott; Sherburne; Sibley; Steele; Swift; Wabasha; Waseca; Washington; Watonwan; Winona;
+     * Wright; Yellow Medicine
+     * State law defines system in US survey feet. See code 26851 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MINNESOTA_SOUTH = 'urn:ogc:def:crs:EPSG::26993';
+
+    /**
+     * NAD83 / Minnesota South (ftUS)
+     * Extent: USA - Minnesota - counties of Anoka; Big Stone; Blue Earth; Brown; Carver; Chippewa; Cottonwood; Dakota;
+     * Dodge; Faribault; Fillmore; Freeborn; Goodhue; Hennepin; Houston; Jackson; Kandiyohi; Lac Qui Parle; Le Sueur;
+     * Lincoln; Lyon; Martin; McLeod; Meeker; Mower; Murray; Nicollet; Nobles; Olmsted; Pipestone; Ramsey; Redwood;
+     * Renville; Rice; Rock; Scott; Sherburne; Sibley; Steele; Swift; Wabasha; Waseca; Washington; Watonwan; Winona;
+     * Wright; Yellow Medicine
+     * State law defines use of US survey feet. Federal definition is metric - see code 26993. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MINNESOTA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::26851';
+
+    /**
+     * NAD83 / Mississippi East
+     * Extent: USA - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay;
+     * Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette;
+     * Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River;
+     * Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston
+     * State law defines system in US survey feet. See code 2254 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSISSIPPI_EAST = 'urn:ogc:def:crs:EPSG::26994';
+
+    /**
+     * NAD83 / Mississippi East (ftUS)
+     * Extent: USA - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay;
+     * Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette;
+     * Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River;
+     * Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston
+     * State law defines system in US survey feet. Federal definition is metric - see code 26994. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSISSIPPI_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2254';
+
+    /**
+     * NAD83 / Mississippi TM
+     * Extent: USA - Mississippi
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Mississippi TM (code 3815).
+     */
+    public const EPSG_NAD83_MISSISSIPPI_TM = 'urn:ogc:def:crs:EPSG::3814';
+
+    /**
+     * NAD83 / Mississippi West
+     * Extent: USA - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto;
+     * Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln;
+     * Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate;
+     * Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo
+     * State law defines system in US survey feet. See code 2255 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSISSIPPI_WEST = 'urn:ogc:def:crs:EPSG::26995';
+
+    /**
+     * NAD83 / Mississippi West (ftUS)
+     * Extent: USA - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto;
+     * Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln;
+     * Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate;
+     * Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo
+     * State law defines system in US survey feet. Federal definition is metric - see code 26995. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSISSIPPI_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2255';
+
+    /**
+     * NAD83 / Missouri Central
+     * Extent: USA - Missouri - counties of Adair; Audrain; Benton; Boone; Callaway; Camden; Carroll; Chariton;
+     * Christian; Cole; Cooper; Dallas; Douglas; Greene; Grundy; Hickory; Howard; Howell; Knox; Laclede; Linn;
+     * Livingston; Macon; Maries; Mercer; Miller; Moniteau; Monroe; Morgan; Osage; Ozark; Pettis; Phelps; Polk;
+     * Pulaski; Putnam; Randolph; Saline; Schuyler; Scotland; Shelby; Stone; Sullivan; Taney; Texas; Webster; Wright
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSOURI_CENTRAL = 'urn:ogc:def:crs:EPSG::26997';
+
+    /**
+     * NAD83 / Missouri East
+     * Extent: USA - Missouri - counties of Bollinger; Butler; Cape Girardeau; Carter; Clark; Crawford; Dent; Dunklin;
+     * Franklin; Gasconade; Iron; Jefferson; Lewis; Lincoln; Madison; Marion; Mississippi; Montgomery; New Madrid;
+     * Oregon; Pemiscot; Perry; Pike; Ralls; Reynolds; Ripley; Scott; Shannon; St Charles; St Francois; St Louis; Ste.
+     * Genevieve; Stoddard; Warren; Washington; Wayne
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSOURI_EAST = 'urn:ogc:def:crs:EPSG::26996';
+
+    /**
+     * NAD83 / Missouri West
+     * Extent: USA - Missouri - counties of Andrew; Atchison; Barry; Barton; Bates; Buchanan; Caldwell; Cass; Cedar;
+     * Clay; Clinton; Dade; Daviess; De Kalb; Gentry; Harrison; Henry; Holt; Jackson; Jasper; Johnson; Lafayette;
+     * Lawrence; McDonald; Newton; Nodaway; Platte; Ray; St Clair; Vernon; Worth
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MISSOURI_WEST = 'urn:ogc:def:crs:EPSG::26998';
+
+    /**
+     * NAD83 / Montana
+     * Extent: USA - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau;
+     * Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley;
+     * Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher;
+     * Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli;
+     * Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure;
+     * Valley; Wheatland; Wibaux; Yellowstone
+     * State law defines system in International feet (note: not US survey feet). See code 2256 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MONTANA = 'urn:ogc:def:crs:EPSG::32100';
+
+    /**
+     * NAD83 / Montana (ft)
+     * Extent: USA - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau;
+     * Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley;
+     * Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher;
+     * Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli;
+     * Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure;
+     * Valley; Wheatland; Wibaux; Yellowstone
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 32100. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_MONTANA_FT = 'urn:ogc:def:crs:EPSG::2256';
+
+    /**
+     * NAD83 / MTM zone 1
+     * Extent: Canada - Newfoundland - onshore east of 54°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_1 = 'urn:ogc:def:crs:EPSG::32181';
+
+    /**
+     * NAD83 / MTM zone 10
+     * Extent: Canada - Quebec west of 78°W; Canada - Ontario - between 79°30'W and 78°W in area to north of 47°N;
+     * between 80°15'W and 78°W in area between 46°N and 47°N; between 81°W and 78°W in area south of 46°N
+     * Known in Quebec as "NAD83 / SCoPQ zone 10" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_10 = 'urn:ogc:def:crs:EPSG::32190';
+
+    /**
+     * NAD83 / MTM zone 11
+     * Extent: Canada - Ontario - south of 46°N and west of 81°W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_11 = 'urn:ogc:def:crs:EPSG::32191';
+
+    /**
+     * NAD83 / MTM zone 12
+     * Extent: Canada - Ontario - between 82°30'W and 79°30'W: north of 46°N in area between 82°30'W and 80°15'W,
+     * north of 47°N in area between 80°15'W and 79°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_12 = 'urn:ogc:def:crs:EPSG::32192';
+
+    /**
+     * NAD83 / MTM zone 13
+     * Extent: Canada - Ontario - between 85°30'W and 82°30'W and north of 46°N.
+     */
+    public const EPSG_NAD83_MTM_ZONE_13 = 'urn:ogc:def:crs:EPSG::32193';
+
+    /**
+     * NAD83 / MTM zone 14
+     * Extent: Canada - Ontario - between 88°30'W and 85°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_14 = 'urn:ogc:def:crs:EPSG::32194';
+
+    /**
+     * NAD83 / MTM zone 15
+     * Extent: Canada - Ontario - between 91°30'W and 88°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_15 = 'urn:ogc:def:crs:EPSG::32195';
+
+    /**
+     * NAD83 / MTM zone 16
+     * Extent: Canada - Ontario - between 94°30'W and 91°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_16 = 'urn:ogc:def:crs:EPSG::32196';
+
+    /**
+     * NAD83 / MTM zone 17
+     * Extent: Canada - Ontario - west of 94°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_17 = 'urn:ogc:def:crs:EPSG::32197';
+
+    /**
+     * NAD83 / MTM zone 2
+     * Extent: Canada - Newfoundland and Labrador between 57°30'W and 54°30'W.
+     */
+    public const EPSG_NAD83_MTM_ZONE_2 = 'urn:ogc:def:crs:EPSG::32182';
+
+    /**
+     * NAD83 / MTM zone 3
+     * Extent: Canada - Newfoundland and Labrador between 60°W and 57°30'W; Canada - Quebec east of 60°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 3" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_3 = 'urn:ogc:def:crs:EPSG::32183';
+
+    /**
+     * NAD83 / MTM zone 4
+     * Extent: Canada - Quebec and Labrador between 63°W and 60°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 4" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_4 = 'urn:ogc:def:crs:EPSG::32184';
+
+    /**
+     * NAD83 / MTM zone 5
+     * Extent: Canada - Quebec and Labrador between 66°W and 63°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 5" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_5 = 'urn:ogc:def:crs:EPSG::32185';
+
+    /**
+     * NAD83 / MTM zone 6
+     * Extent: Canada - Quebec and Labrador between 69°W and 66°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 6" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_6 = 'urn:ogc:def:crs:EPSG::32186';
+
+    /**
+     * NAD83 / MTM zone 7
+     * Extent: Canada - Quebec - between 72°W and 69°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 7" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_7 = 'urn:ogc:def:crs:EPSG::32187';
+
+    /**
+     * NAD83 / MTM zone 8
+     * Extent: Canada - Quebec between 75°W and 72°W.; Canada - Ontario - east of 75°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 8" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_8 = 'urn:ogc:def:crs:EPSG::32188';
+
+    /**
+     * NAD83 / MTM zone 9
+     * Extent: Canada - Quebec and Ontario - between 78°W and 75°W
+     * Known in Quebec as "NAD83 / SCoPQ zone 9" with axis 1 and 2 abbreviations of "X" and "Y" respectively.
+     */
+    public const EPSG_NAD83_MTM_ZONE_9 = 'urn:ogc:def:crs:EPSG::32189';
+
+    /**
+     * NAD83 / MTQ Lambert
+     * Extent: Canada - Quebec
+     * Replaces NAD27 / MTQ Lambert (CRS code 3797). For accuracies better than 1m replaced by NAD83(CSRS) / MTQ
+     * Lambert (CRS code 3799).
+     */
+    public const EPSG_NAD83_MTQ_LAMBERT = 'urn:ogc:def:crs:EPSG::3798';
+
+    /**
+     * NAD83 / NCRS Las Vegas (ftUS)
+     * Extent: USA - Nevada - Las Vegas area below approximately 3000 feet
+     * Part of the Nevada Coordinate Reference System (NCRS). Defined in meters, usage is in feet. See CRS code 8379
+     * for equivalent metric definition. Replaced by NAD83(2011) / NCRS Las Vegas (ftUS) (CRS code 8384).
+     */
+    public const EPSG_NAD83_NCRS_LAS_VEGAS_FTUS = 'urn:ogc:def:crs:EPSG::8380';
+
+    /**
+     * NAD83 / NCRS Las Vegas high (ftUS)
+     * Extent: USA - Nevada - Las Vegas area above approximately 2850 feet
+     * Part of the Nevada Coordinate Reference System (NCRS). Defined in meters, usage is in feet. See CRS code 8381
+     * for equivalent metric definition. Replaced by NAD83(2011) / NCRS Las Vegas (ftUS) (CRS code 8387).
+     */
+    public const EPSG_NAD83_NCRS_LAS_VEGAS_HIGH_FTUS = 'urn:ogc:def:crs:EPSG::8382';
+
+    /**
+     * NAD83 / NCRS Las Vegas high (m)
+     * Extent: USA - Nevada - Las Vegas area above approximately 2850 feet
+     * Part of the Nevada Coordinate Reference System (NCRS). Defined in meters, usage is in feet - see CRS code 8382.
+     * Replaced by NAD83(2011) / NCRS Las Vegas high (m) (CRS code 8385).
+     */
+    public const EPSG_NAD83_NCRS_LAS_VEGAS_HIGH_M = 'urn:ogc:def:crs:EPSG::8381';
+
+    /**
+     * NAD83 / NCRS Las Vegas (m)
+     * Extent: USA - Nevada - Las Vegas area below approximately 3000 feet
+     * Part of the Nevada Coordinate Reference System (NCRS). Defined in meters, usage is in feet - see CRS code 8380.
+     * Replaced by NAD83(2011) / NCRS Las Vegas (m) (CRS code 8383).
+     */
+    public const EPSG_NAD83_NCRS_LAS_VEGAS_M = 'urn:ogc:def:crs:EPSG::8379';
+
+    /**
+     * NAD83 / Nebraska
+     * Extent: USA - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown;
+     * Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes;
+     * Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield;
+     * Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson;
+     * Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill;
+     * Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock;
+     * Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston;
+     * Valley; Washington; Wayne; Webster; Wheeler; York
+     * State law defines system in US survey feet. See CRS code 26852 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEBRASKA = 'urn:ogc:def:crs:EPSG::32104';
+
+    /**
+     * NAD83 / Nebraska (ftUS)
+     * Extent: USA - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown;
+     * Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes;
+     * Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield;
+     * Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson;
+     * Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill;
+     * Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock;
+     * Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston;
+     * Valley; Washington; Wayne; Webster; Wheeler; York
+     * State law defines use of US survey feet. Federal definition is metric - see code 32104. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEBRASKA_FTUS = 'urn:ogc:def:crs:EPSG::26852';
+
+    /**
+     * NAD83 / Nevada Central
+     * Extent: USA - Nevada - counties of Lander; Nye
+     * State law defines system in US survey feet. See code 3422 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEVADA_CENTRAL = 'urn:ogc:def:crs:EPSG::32108';
+
+    /**
+     * NAD83 / Nevada Central (ftUS)
+     * Extent: USA - Nevada - counties of Lander; Nye
+     * State law defines system in US survey feet. Federal definition is metric - see code 32108. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEVADA_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3422';
+
+    /**
+     * NAD83 / Nevada East
+     * Extent: USA - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine
+     * State law defines system in US survey feet. See code 3421 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEVADA_EAST = 'urn:ogc:def:crs:EPSG::32107';
+
+    /**
+     * NAD83 / Nevada East (ftUS)
+     * Extent: USA - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine
+     * State law defines system in US survey feet. Federal definition is metric - see code 32107. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEVADA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3421';
+
+    /**
+     * NAD83 / Nevada West
+     * Extent: USA - Nevada - counties of Churchill; Douglas; Esmeralda; Humboldt; Lyon; Mineral; Pershing; Storey;
+     * Washoe
+     * State law defines system in US survey feet. See code 3423 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEVADA_WEST = 'urn:ogc:def:crs:EPSG::32109';
+
+    /**
+     * NAD83 / Nevada West (ftUS)
+     * Extent: USA - Nevada - counties of Churchill; Douglas; Esmeralda; Humboldt; Lyon; Mineral; Pershing; Storey;
+     * Washoe
+     * State law defines system in US survey feet. Federal definition is metric - see code 32109. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEVADA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3423';
+
+    /**
+     * NAD83 / New Hampshire
+     * Extent: USA - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack;
+     * Rockingham; Strafford; Sullivan
+     * State law defines system in US survey feet. See code 3437 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_HAMPSHIRE = 'urn:ogc:def:crs:EPSG::32110';
+
+    /**
+     * NAD83 / New Hampshire (ftUS)
+     * Extent: USA - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack;
+     * Rockingham; Strafford; Sullivan
+     * State law defines system in US survey feet. Federal definition is metric - see code 32110. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_HAMPSHIRE_FTUS = 'urn:ogc:def:crs:EPSG::3437';
+
+    /**
+     * NAD83 / New Jersey
+     * Extent: USA - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex;
+     * Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex;
+     * Union; Warren
+     * State law defines system in US survey feet. See code 3424 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_JERSEY = 'urn:ogc:def:crs:EPSG::32111';
+
+    /**
+     * NAD83 / New Jersey (ftUS)
+     * Extent: USA - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex;
+     * Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex;
+     * Union; Warren
+     * State law defines system in US survey feet. Federal definition is metric - see code 32111. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_JERSEY_FTUS = 'urn:ogc:def:crs:EPSG::3424';
+
+    /**
+     * NAD83 / New Mexico Central
+     * Extent: USA - New Mexico - counties of Bernalillo; Dona Ana; Lincoln; Los Alamos; Otero; Rio Arriba; Sandoval;
+     * Santa Fe; Socorro; Taos; Torrance; Valencia
+     * State law defines system in US survey feet. See code 2258 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_MEXICO_CENTRAL = 'urn:ogc:def:crs:EPSG::32113';
+
+    /**
+     * NAD83 / New Mexico Central (ftUS)
+     * Extent: USA - New Mexico - counties of Bernalillo; Dona Ana; Lincoln; Los Alamos; Otero; Rio Arriba; Sandoval;
+     * Santa Fe; Socorro; Taos; Torrance; Valencia
+     * State law defines system in US survey feet. Federal definition is metric - see code 32113. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_MEXICO_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2258';
+
+    /**
+     * NAD83 / New Mexico East
+     * Extent: USA - New Mexico - counties of Chaves; Colfax; Curry; De Baca; Eddy; Guadalupe; Harding; Lea; Mora;
+     * Quay; Roosevelt; San Miguel; Union
+     * State law defines system in US survey feet. See code 2257 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_MEXICO_EAST = 'urn:ogc:def:crs:EPSG::32112';
+
+    /**
+     * NAD83 / New Mexico East (ftUS)
+     * Extent: USA - New Mexico - counties of Chaves; Colfax; Curry; De Baca; Eddy; Guadalupe; Harding; Lea; Mora;
+     * Quay; Roosevelt; San Miguel; Union
+     * State law defines system in US survey feet. Federal definition is metric - see code 32112. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_MEXICO_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2257';
+
+    /**
+     * NAD83 / New Mexico West
+     * Extent: USA - New Mexico - counties of Catron; Cibola; Grant; Hidalgo; Luna; McKinley; San Juan; Sierra
+     * State law defines system in US survey feet. See code 2259 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_MEXICO_WEST = 'urn:ogc:def:crs:EPSG::32114';
+
+    /**
+     * NAD83 / New Mexico West (ftUS)
+     * Extent: USA - New Mexico - counties of Catron; Cibola; Grant; Hidalgo; Luna; McKinley; San Juan; Sierra
+     * State law defines system in US survey feet. Federal definition is metric - see code 32114. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_MEXICO_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2259';
+
+    /**
+     * NAD83 / New York Central
+     * Extent: USA - New York - counties of Broome; Cayuga; Chemung; Chenango; Cortland; Jefferson; Lewis; Madison;
+     * Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates
+     * State law defines system in US survey feet. See code 2261 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_CENTRAL = 'urn:ogc:def:crs:EPSG::32116';
+
+    /**
+     * NAD83 / New York Central (ftUS)
+     * Extent: USA - New York - counties of Broome; Cayuga; Chemung; Chenango; Cortland; Jefferson; Lewis; Madison;
+     * Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates
+     * State law defines system in US survey feet. Federal definition is metric - see code 32116. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2261';
+
+    /**
+     * NAD83 / New York East
+     * Extent: USA - New York mainland - counties of Albany; Clinton; Columbia; Delaware; Dutchess; Essex; Franklin;
+     * Fulton; Greene; Hamilton; Herkimer; Montgomery; Orange; Otsego; Putnam; Rensselaer; Rockland; Saratoga;
+     * Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester
+     * State law defines system in US survey feet. See code 2260 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_EAST = 'urn:ogc:def:crs:EPSG::32115';
+
+    /**
+     * NAD83 / New York East (ftUS)
+     * Extent: USA - New York mainland - counties of Albany; Clinton; Columbia; Delaware; Dutchess; Essex; Franklin;
+     * Fulton; Greene; Hamilton; Herkimer; Montgomery; Orange; Otsego; Putnam; Rensselaer; Rockland; Saratoga;
+     * Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester
+     * State law defines system in US survey feet. Federal definition is metric - see code 32115. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2260';
+
+    /**
+     * NAD83 / New York Long Island
+     * Extent: USA - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk
+     * State law defines system in US survey feet. See code 2264 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_LONG_ISLAND = 'urn:ogc:def:crs:EPSG::32118';
+
+    /**
+     * NAD83 / New York Long Island (ftUS)
+     * Extent: USA - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk
+     * State law defines system in US survey feet. Federal definition is metric - see code 32118. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_LONG_ISLAND_FTUS = 'urn:ogc:def:crs:EPSG::2263';
+
+    /**
+     * NAD83 / New York West
+     * Extent: USA - New York - counties of Allegany; Cattaraugus; Chautauqua; Erie; Genesee; Livingston; Monroe;
+     * Niagara; Orleans; Wyoming
+     * State law defines system in US survey feet. See code 2263 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_WEST = 'urn:ogc:def:crs:EPSG::32117';
+
+    /**
+     * NAD83 / New York West (ftUS)
+     * Extent: USA - New York - counties of Allegany; Cattaraugus; Chautauqua; Erie; Genesee; Livingston; Monroe;
+     * Niagara; Orleans; Wyoming
+     * State law defines system in US survey feet. Federal definition is metric - see code 32117. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NEW_YORK_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2262';
+
+    /**
+     * NAD83 / North Carolina
+     * Extent: USA - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie;
+     * Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee;
+     * Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham;
+     * Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood;
+     * Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison;
+     * Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange;
+     * Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan;
+     * Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren;
+     * Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey
+     * State law defines system in US survey feet. See code 2264 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NORTH_CAROLINA = 'urn:ogc:def:crs:EPSG::32119';
+
+    /**
+     * NAD83 / North Carolina (ftUS)
+     * Extent: USA - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie;
+     * Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee;
+     * Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham;
+     * Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood;
+     * Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison;
+     * Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange;
+     * Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan;
+     * Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren;
+     * Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey
+     * State law defines system in US survey feet. Federal definition is metric - see code 32119. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NORTH_CAROLINA_FTUS = 'urn:ogc:def:crs:EPSG::2264';
+
+    /**
+     * NAD83 / North Dakota North
+     * Extent: USA - North Dakota - counties of Benson; Bottineau; Burke; Cavalier; Divide; Eddy; Foster; Grand Forks;
+     * Griggs; McHenry; McKenzie; McLean; Mountrial; Nelson; Pembina; Pierce; Ramsey; Renville; Rolette; Sheridan;
+     * Steele; Towner; Traill; Walsh; Ward; Wells; Williams
+     * State law defines system in International feet (note: not US survey feet). See code 2265 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NORTH_DAKOTA_NORTH = 'urn:ogc:def:crs:EPSG::32120';
+
+    /**
+     * NAD83 / North Dakota North (ft)
+     * Extent: USA - North Dakota - counties of Benson; Bottineau; Burke; Cavalier; Divide; Eddy; Foster; Grand Forks;
+     * Griggs; McHenry; McKenzie; McLean; Mountrial; Nelson; Pembina; Pierce; Ramsey; Renville; Rolette; Sheridan;
+     * Steele; Towner; Traill; Walsh; Ward; Wells; Williams
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 32120. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NORTH_DAKOTA_NORTH_FT = 'urn:ogc:def:crs:EPSG::2265';
+
+    /**
+     * NAD83 / North Dakota South
+     * Extent: USA - North Dakota - counties of Adams; Barnes; Billings; Bowman; Burleigh; Cass; Dickey; Dunn; Emmons;
+     * Golden Valley; Grant; Hettinger; Kidder; La Moure; Logan; McIntosh; Mercer; Morton; Oliver; Ransom; Richland;
+     * Sargent; Sioux; Slope; Stark; Stutsman
+     * State law defines system in International feet (note: not US survey feet). See code 2266 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NORTH_DAKOTA_SOUTH = 'urn:ogc:def:crs:EPSG::32121';
+
+    /**
+     * NAD83 / North Dakota South (ft)
+     * Extent: USA - North Dakota - counties of Adams; Barnes; Billings; Bowman; Burleigh; Cass; Dickey; Dunn; Emmons;
+     * Golden Valley; Grant; Hettinger; Kidder; La Moure; Logan; McIntosh; Mercer; Morton; Oliver; Ransom; Richland;
+     * Sargent; Sioux; Slope; Stark; Stutsman
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 32121. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NORTH_DAKOTA_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2266';
 
     /**
      * NAD83(NSRS2007) / Alabama East
@@ -4717,7 +5192,7 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Arkansas North
      * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
      * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
-     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
      * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell
      * State law defines use of US survey feet. See code 3485 for equivalent non-metric definition. Replaces
      * NAD83(HARN) / SPCS.
@@ -4728,7 +5203,7 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Arkansas North (ftUS)
      * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
      * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
-     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
      * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell
      * State law defines use of US survey feet. Federal definition is metric - see code 3484. Replaces NAD83(HARN) /
      * SPCS.
@@ -4739,8 +5214,8 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Arkansas South
      * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
      * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
-     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline;
-     * Sevier; Union
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union
      * State law defines use of US survey feet. See code 3487 for equivalent non-metric definition. Replaces
      * NAD83(HARN) / SPCS.
      */
@@ -4750,8 +5225,8 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Arkansas South (ftUS)
      * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
      * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
-     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline;
-     * Sevier; Union
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union
      * State law defines use of US survey feet. Federal definition is metric - see code 3486. Replaces NAD83(HARN) /
      * SPCS.
      */
@@ -4944,11 +5419,7 @@ trait ProjectedConstantsChunk3
 
     /**
      * NAD83(NSRS2007) / Conus Albers
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaces NAD83(HARN) / Conus Albers (CRS code 5071).
      */
     public const EPSG_NAD83_NSRS2007_CONUS_ALBERS = 'urn:ogc:def:crs:EPSG::5072';
@@ -5066,10 +5537,9 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Georgia East
      * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
      * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
-     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens;
-     * Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven;
-     * Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes;
-     * Wilkinson
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
      * State law defines use of US survey feet. See code 3519 for equivalent non-metric definition. Replaces
      * NAD83(HARN) / SPCS.
      */
@@ -5079,10 +5549,9 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Georgia East (ftUS)
      * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
      * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
-     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens;
-     * Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven;
-     * Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes;
-     * Wilkinson
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
      * State law defines use of US survey feet. Federal definition is metric - see code 3518. Replaces NAD83(HARN) /
      * SPCS.
      */
@@ -5094,11 +5563,11 @@ trait ProjectedConstantsChunk3
      * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
      * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
      * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
-     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller;
-     * Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski;
-     * Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor;
-     * Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield;
-     * Wilcox; Worth
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
      * State law defines use of US survey feet. See code 3521 for equivalent non-metric definition. Replaces
      * NAD83(HARN) / SPCS.
      */
@@ -5110,11 +5579,11 @@ trait ProjectedConstantsChunk3
      * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
      * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
      * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
-     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller;
-     * Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski;
-     * Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor;
-     * Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield;
-     * Wilcox; Worth
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
      * State law defines use of US survey feet. Federal definition is metric - see code 3520. Replaces NAD83(HARN) /
      * SPCS.
      */
@@ -5565,7 +6034,7 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Maryland
      * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
      * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
-     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
      * State law defines use of US survey feet. See code 3582 for equivalent non-metric definition. Replaces
      * NAD83(HARN) / SPCS.
      */
@@ -5575,7 +6044,7 @@ trait ProjectedConstantsChunk3
      * NAD83(NSRS2007) / Maryland (ftUS)
      * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
      * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
-     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
      * State law defines use of US survey feet. Federal definition is metric - see code 3559. Replaces NAD83(HARN) /
      * SPCS.
      */
@@ -6524,16 +6993,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_NSRS2007_TEXAS_NORTH = 'urn:ogc:def:crs:EPSG::3667';
 
     /**
-     * NAD83(NSRS2007) / Texas North (ftUS)
-     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
-     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
-     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
-     * State law defines use of US survey feet. Federal definition is metric - see code 3667. Replaces NAD83(HARN) /
-     * SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_TEXAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3668';
-
-    /**
      * NAD83(NSRS2007) / Texas North Central
      * Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay;
      * Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin;
@@ -6562,6 +7021,16 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_NSRS2007_TEXAS_NORTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3670';
 
     /**
+     * NAD83(NSRS2007) / Texas North (ftUS)
+     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
+     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
+     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+     * State law defines use of US survey feet. Federal definition is metric - see code 3667. Replaces NAD83(HARN) /
+     * SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_TEXAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3668';
+
+    /**
      * NAD83(NSRS2007) / Texas South
      * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
      * San Patricio; Starr; Webb; Willacy; Zapata
@@ -6569,15 +7038,6 @@ trait ProjectedConstantsChunk3
      * NAD83(HARN) / SPCS.
      */
     public const EPSG_NAD83_NSRS2007_TEXAS_SOUTH = 'urn:ogc:def:crs:EPSG::3671';
-
-    /**
-     * NAD83(NSRS2007) / Texas South (ftUS)
-     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
-     * San Patricio; Starr; Webb; Willacy; Zapata
-     * State law defines use of US survey feet. Federal definition is metric - see code 3671. Replaces NAD83(HARN) /
-     * SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_TEXAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3672';
 
     /**
      * NAD83(NSRS2007) / Texas South Central
@@ -6602,6 +7062,90 @@ trait ProjectedConstantsChunk3
      * SPCS.
      */
     public const EPSG_NAD83_NSRS2007_TEXAS_SOUTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3674';
+
+    /**
+     * NAD83(NSRS2007) / Texas South (ftUS)
+     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
+     * San Patricio; Starr; Webb; Willacy; Zapata
+     * State law defines use of US survey feet. Federal definition is metric - see code 3671. Replaces NAD83(HARN) /
+     * SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_TEXAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3672';
+
+    /**
+     * NAD83(NSRS2007) / Utah Central
+     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
+     * Tooele; Uintah; Utah; Wasatch
+     * State law of 2009 defines use of US survey feet: see CRS code 3677 for equivalent non-metric definition. An
+     * earlier law of 1988 defining use of International foot was withdrawn in 2001. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_CENTRAL = 'urn:ogc:def:crs:EPSG::3675';
+
+    /**
+     * NAD83(NSRS2007) / Utah Central (ft)
+     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
+     * Tooele; Uintah; Utah; Wasatch
+     * State law of 1988 defining use of International feet was withdrawn in 2001. State law of 2009 defines use of US
+     * survey feet: see CRS code 3677. Federal definition is metric - see code 3675. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::3676';
+
+    /**
+     * NAD83(NSRS2007) / Utah Central (ftUS)
+     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
+     * Tooele; Uintah; Utah; Wasatch
+     * State law defining use of International feet (note: not US survey feet) has been withdrawn. Federal definition
+     * is metric - see code 3675. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3677';
+
+    /**
+     * NAD83(NSRS2007) / Utah North
+     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
+     * State law of 2009 defines use of US survey feet: see CRS code 3680 for equivalent non-metric definition. An
+     * earlier law of 1988 defining use of International foot was withdrawn in 2001. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_NORTH = 'urn:ogc:def:crs:EPSG::3678';
+
+    /**
+     * NAD83(NSRS2007) / Utah North (ft)
+     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
+     * State law of 1988 defining use of International feet was withdrawn in 2001. State law of 2009 defines use of US
+     * survey feet: see CRS code 3680. Federal definition is metric - see code 3678. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_NORTH_FT = 'urn:ogc:def:crs:EPSG::3679';
+
+    /**
+     * NAD83(NSRS2007) / Utah North (ftUS)
+     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
+     * State law defining use of International feet (note: not US survey feet) has been withdrawn. Federal definition
+     * is metric - see code 3678. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3680';
+
+    /**
+     * NAD83(NSRS2007) / Utah South
+     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
+     * State law of 2009 defines use of US survey feet: see CRS code 3683 for equivalent non-metric definition. An
+     * earlier law of 1988 defining use of International foot was withdrawn in 2001. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_SOUTH = 'urn:ogc:def:crs:EPSG::3681';
+
+    /**
+     * NAD83(NSRS2007) / Utah South (ft)
+     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
+     * State law of 1988 defining use of International feet was withdrawn in 2001. State law of 2009 defines use of US
+     * survey feet: see CRS code 3683. Federal definition is metric - see code 3681. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_SOUTH_FT = 'urn:ogc:def:crs:EPSG::3682';
+
+    /**
+     * NAD83(NSRS2007) / Utah South (ftUS)
+     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
+     * State law defining use of International feet (note: not US survey feet) has been withdrawn. Federal definition
+     * is metric - see code 3681. Replaces NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_UTAH_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3683';
 
     /**
      * NAD83(NSRS2007) / UTM zone 10N
@@ -6666,8 +7210,8 @@ trait ProjectedConstantsChunk3
 
     /**
      * NAD83(NSRS2007) / UTM zone 18N
-     * Extent: USA - between 78°W and 72°W - Connecticut; Delaware; Maryland; Massachusetts; New Hampshire; New
-     * Jersey; New York; North Carolina; Pennsylvania; Virginia; Vermont
+     * Extent: USA - between 78°W and 72°W - Connecticut; Delaware; District of Columbia (DC); Maryland;
+     * Massachusetts; New Hampshire; New Jersey; New York; North Carolina; Pennsylvania; Virginia; Vermont
      * Replaces NAD83(HARN) / UTM zone 18N.
      */
     public const EPSG_NAD83_NSRS2007_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::3725';
@@ -6756,81 +7300,6 @@ trait ProjectedConstantsChunk3
      * For applications with an accuracy of better than 1m, replaces NAD83 / UTM zone 9N.
      */
     public const EPSG_NAD83_NSRS2007_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::3716';
-
-    /**
-     * NAD83(NSRS2007) / Utah Central
-     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
-     * Tooele; Uintah; Utah; Wasatch
-     * State law of 2009 defines use of US survey feet: see CRS code 3677 for equivalent non-metric definition. An
-     * earlier law of 1988 defining use of International foot was withdrawn in 2001. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_CENTRAL = 'urn:ogc:def:crs:EPSG::3675';
-
-    /**
-     * NAD83(NSRS2007) / Utah Central (ft)
-     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
-     * Tooele; Uintah; Utah; Wasatch
-     * State law of 1988 defining use of International feet was withdrawn in 2001. State law of 2009 defines use of US
-     * survey feet: see CRS code 3677. Federal definition is metric - see code 3675. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::3676';
-
-    /**
-     * NAD83(NSRS2007) / Utah Central (ftUS)
-     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
-     * Tooele; Uintah; Utah; Wasatch
-     * State law defining use of International feet (note: not US survey feet) has been withdrawn. Federal definition
-     * is metric - see code 3675. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3677';
-
-    /**
-     * NAD83(NSRS2007) / Utah North
-     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
-     * State law of 2009 defines use of US survey feet: see CRS code 3680 for equivalent non-metric definition. An
-     * earlier law of 1988 defining use of International foot was withdrawn in 2001. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_NORTH = 'urn:ogc:def:crs:EPSG::3678';
-
-    /**
-     * NAD83(NSRS2007) / Utah North (ft)
-     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
-     * State law of 1988 defining use of International feet was withdrawn in 2001. State law of 2009 defines use of US
-     * survey feet: see CRS code 3680. Federal definition is metric - see code 3678. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_NORTH_FT = 'urn:ogc:def:crs:EPSG::3679';
-
-    /**
-     * NAD83(NSRS2007) / Utah North (ftUS)
-     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
-     * State law defining use of International feet (note: not US survey feet) has been withdrawn. Federal definition
-     * is metric - see code 3678. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3680';
-
-    /**
-     * NAD83(NSRS2007) / Utah South
-     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
-     * State law of 2009 defines use of US survey feet: see CRS code 3683 for equivalent non-metric definition. An
-     * earlier law of 1988 defining use of International foot was withdrawn in 2001. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_SOUTH = 'urn:ogc:def:crs:EPSG::3681';
-
-    /**
-     * NAD83(NSRS2007) / Utah South (ft)
-     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
-     * State law of 1988 defining use of International feet was withdrawn in 2001. State law of 2009 defines use of US
-     * survey feet: see CRS code 3683. Federal definition is metric - see code 3681. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_SOUTH_FT = 'urn:ogc:def:crs:EPSG::3682';
-
-    /**
-     * NAD83(NSRS2007) / Utah South (ftUS)
-     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
-     * State law defining use of International feet (note: not US survey feet) has been withdrawn. Federal definition
-     * is metric - see code 3681. Replaces NAD83(HARN) / SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_UTAH_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3683';
 
     /**
      * NAD83(NSRS2007) / Vermont
@@ -7065,14 +7534,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_NSRS2007_WYOMING_EAST = 'urn:ogc:def:crs:EPSG::3702';
 
     /**
-     * NAD83(NSRS2007) / Wyoming East (ftUS)
-     * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
-     * State law defines use of US survey feet. Federal definition is metric - see code 3702. Replaces NAD83(HARN) /
-     * SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_WYOMING_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3730';
-
-    /**
      * NAD83(NSRS2007) / Wyoming East Central
      * Extent: USA - Wyoming - counties of Big Horn; Carbon; Johnson; Natrona; Sheridan; Washakie
      * State law defines use of US survey feet. See code 3731 for equivalent non-metric definition. Replaces
@@ -7089,20 +7550,20 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_NSRS2007_WYOMING_EAST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3731';
 
     /**
+     * NAD83(NSRS2007) / Wyoming East (ftUS)
+     * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
+     * State law defines use of US survey feet. Federal definition is metric - see code 3702. Replaces NAD83(HARN) /
+     * SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_WYOMING_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3730';
+
+    /**
      * NAD83(NSRS2007) / Wyoming West
      * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
      * State law defines use of US survey feet. See code 3733 for equivalent non-metric definition. Replaces
      * NAD83(HARN) / SPCS.
      */
     public const EPSG_NAD83_NSRS2007_WYOMING_WEST = 'urn:ogc:def:crs:EPSG::3705';
-
-    /**
-     * NAD83(NSRS2007) / Wyoming West (ftUS)
-     * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
-     * State law defines use of US survey feet. Federal definition is metric - see code 3705. Replaces NAD83(HARN) /
-     * SPCS.
-     */
-    public const EPSG_NAD83_NSRS2007_WYOMING_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3733';
 
     /**
      * NAD83(NSRS2007) / Wyoming West Central
@@ -7119,6 +7580,172 @@ trait ProjectedConstantsChunk3
      * SPCS.
      */
     public const EPSG_NAD83_NSRS2007_WYOMING_WEST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3732';
+
+    /**
+     * NAD83(NSRS2007) / Wyoming West (ftUS)
+     * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
+     * State law defines use of US survey feet. Federal definition is metric - see code 3705. Replaces NAD83(HARN) /
+     * SPCS.
+     */
+    public const EPSG_NAD83_NSRS2007_WYOMING_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3733';
+
+    /**
+     * NAD83 / NWT Lambert
+     * Extent: Canada - Northwest Territories onshore
+     * This CRS name may sometimes be used as an alias for NAD83(CSRS) / NWT Lambert. See CRS code 3581.
+     */
+    public const EPSG_NAD83_NWT_LAMBERT = 'urn:ogc:def:crs:EPSG::3580';
+
+    /**
+     * NAD83 / Ohio North
+     * Extent: USA - Ohio - counties of Allen;Ashland; Ashtabula; Auglaize; Carroll; Columbiana; Coshocton; Crawford;
+     * Cuyahoga; Defiance; Delaware; Erie; Fulton; Geauga; Hancock; Hardin; Harrison; Henry; Holmes; Huron; Jefferson;
+     * Knox; Lake; Logan; Lorain; Lucas; Mahoning; Marion; Medina; Mercer; Morrow; Ottawa; Paulding; Portage; Putnam;
+     * Richland; Sandusky; Seneca; Shelby; Stark; Summit; Trumbull; Tuscarawas; Union; Van Wert; Wayne; Williams; Wood;
+     * Wyandot
+     * State law defines system in US survey feet. See code 3734 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OHIO_NORTH = 'urn:ogc:def:crs:EPSG::32122';
+
+    /**
+     * NAD83 / Ohio North (ftUS)
+     * Extent: USA - Ohio - counties of Allen;Ashland; Ashtabula; Auglaize; Carroll; Columbiana; Coshocton; Crawford;
+     * Cuyahoga; Defiance; Delaware; Erie; Fulton; Geauga; Hancock; Hardin; Harrison; Henry; Holmes; Huron; Jefferson;
+     * Knox; Lake; Logan; Lorain; Lucas; Mahoning; Marion; Medina; Mercer; Morrow; Ottawa; Paulding; Portage; Putnam;
+     * Richland; Sandusky; Seneca; Shelby; Stark; Summit; Trumbull; Tuscarawas; Union; Van Wert; Wayne; Williams; Wood;
+     * Wyandot
+     * State law defines system in US survey feet. Federal definition is metric - see code 32122. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OHIO_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3734';
+
+    /**
+     * NAD83 / Ohio South
+     * Extent: USA - Ohio - counties of Adams; Athens; Belmont; Brown; Butler; Champaign; Clark; Clermont; Clinton;
+     * Darke; Fairfield; Fayette; Franklin; Gallia; Greene; Guernsey; Hamilton; Highland; Hocking; Jackson; Lawrence;
+     * Licking; Madison; Meigs; Miami; Monroe; Montgomery; Morgan; Muskingum; Noble; Perry; Pickaway; Pike; Preble;
+     * Ross; Scioto; Vinton; Warren; Washington
+     * State law defines system in US survey feet. See code 3735 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OHIO_SOUTH = 'urn:ogc:def:crs:EPSG::32123';
+
+    /**
+     * NAD83 / Ohio South (ftUS)
+     * Extent: USA - Ohio - counties of Adams; Athens; Belmont; Brown; Butler; Champaign; Clark; Clermont; Clinton;
+     * Darke; Fairfield; Fayette; Franklin; Gallia; Greene; Guernsey; Hamilton; Highland; Hocking; Jackson; Lawrence;
+     * Licking; Madison; Meigs; Miami; Monroe; Montgomery; Morgan; Muskingum; Noble; Perry; Pickaway; Pike; Preble;
+     * Ross; Scioto; Vinton; Warren; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 32123. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OHIO_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3735';
+
+    /**
+     * NAD83 / Oklahoma North
+     * Extent: USA - Oklahoma - counties of Adair; Alfalfa; Beaver; Blaine; Canadian; Cherokee; Cimarron; Craig; Creek;
+     * Custer; Delaware; Dewey; Ellis; Garfield; Grant; Harper; Kay; Kingfisher; Lincoln; Logan; Major; Mayes;
+     * Muskogee; Noble; Nowata; Okfuskee; Oklahoma; Okmulgee; Osage; Ottawa; Pawnee; Payne; Roger Mills; Rogers;
+     * Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward
+     * State law defines system in US survey feet. See code 2267 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OKLAHOMA_NORTH = 'urn:ogc:def:crs:EPSG::32124';
+
+    /**
+     * NAD83 / Oklahoma North (ftUS)
+     * Extent: USA - Oklahoma - counties of Adair; Alfalfa; Beaver; Blaine; Canadian; Cherokee; Cimarron; Craig; Creek;
+     * Custer; Delaware; Dewey; Ellis; Garfield; Grant; Harper; Kay; Kingfisher; Lincoln; Logan; Major; Mayes;
+     * Muskogee; Noble; Nowata; Okfuskee; Oklahoma; Okmulgee; Osage; Ottawa; Pawnee; Payne; Roger Mills; Rogers;
+     * Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward
+     * State law defines system in US survey feet. Federal definition is metric - see code 32124. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OKLAHOMA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2267';
+
+    /**
+     * NAD83 / Oklahoma South
+     * Extent: USA - Oklahoma - counties of Atoka; Beckham; Bryan; Caddo; Carter; Choctaw; Cleveland; Coal; Comanche;
+     * Cotton; Garvin; Grady; Greer; Harmon; Haskell; Hughes; Jackson; Jefferson; Johnston; Kiowa; Latimer; Le Flore;
+     * Love; Marshall; McClain; McCurtain; McIntosh; Murray; Pittsburg; Pontotoc; Pottawatomie; Pushmataha; Seminole;
+     * Stephens; Tillman; Washita
+     * State law defines system in US survey feet. See code 2268 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OKLAHOMA_SOUTH = 'urn:ogc:def:crs:EPSG::32125';
+
+    /**
+     * NAD83 / Oklahoma South (ftUS)
+     * Extent: USA - Oklahoma - counties of Atoka; Beckham; Bryan; Caddo; Carter; Choctaw; Cleveland; Coal; Comanche;
+     * Cotton; Garvin; Grady; Greer; Harmon; Haskell; Hughes; Jackson; Jefferson; Johnston; Kiowa; Latimer; Le Flore;
+     * Love; Marshall; McClain; McCurtain; McIntosh; Murray; Pittsburg; Pontotoc; Pottawatomie; Pushmataha; Seminole;
+     * Stephens; Tillman; Washita
+     * State law defines system in US survey feet. Federal definition is metric - see code 32125. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OKLAHOMA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2268';
+
+    /**
+     * NAD83 / Ontario MNR Lambert
+     * Extent: Canada - Ontario
+     * Replaces NAD27 / Ontario MNR Lambert. One of a number of similar projected CRSs used by Ontario MNR.
+     */
+    public const EPSG_NAD83_ONTARIO_MNR_LAMBERT = 'urn:ogc:def:crs:EPSG::3161';
+
+    /**
+     * NAD83 / Oregon GIC Lambert (ft)
+     * Extent: USA - Oregon
+     * State law defines use of International feet (note: not US survey feet). For applications with an accuracy of
+     * better than 3 feet, replaced by NAD83(HARN) / Oregon GIC Lambert (ft) (CRS code 2994).
+     */
+    public const EPSG_NAD83_OREGON_GIC_LAMBERT_FT = 'urn:ogc:def:crs:EPSG::2992';
+
+    /**
+     * NAD83 / Oregon LCC (m)
+     * Extent: USA - Oregon
+     * See CRS code 2992 for non-metric definition used by state agencies. For applications with an accuracy of better
+     * than 1m, replaced by NAD83(HARN) / Oregon LCC (m) (code 2993).
+     */
+    public const EPSG_NAD83_OREGON_LCC_M = 'urn:ogc:def:crs:EPSG::2991';
+
+    /**
+     * NAD83 / Oregon North
+     * Extent: USA - Oregon - counties of Baker; Benton; Clackamas; Clatsop; Columbia; Gilliam; Grant; Hood River;
+     * Jefferson; Lincoln; Linn; Marion; Morrow; Multnomah; Polk; Sherman; Tillamook; Umatilla; Union; Wallowa; Wasco;
+     * Washington; Wheeler; Yamhill
+     * State law defines system in International feet (note: not US survey feet). See code 2269 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OREGON_NORTH = 'urn:ogc:def:crs:EPSG::32126';
+
+    /**
+     * NAD83 / Oregon North (ft)
+     * Extent: USA - Oregon - counties of Baker; Benton; Clackamas; Clatsop; Columbia; Gilliam; Grant; Hood River;
+     * Jefferson; Lincoln; Linn; Marion; Morrow; Multnomah; Polk; Sherman; Tillamook; Umatilla; Union; Wallowa; Wasco;
+     * Washington; Wheeler; Yamhill
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 32126. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OREGON_NORTH_FT = 'urn:ogc:def:crs:EPSG::2269';
+
+    /**
+     * NAD83 / Oregon South
+     * Extent: USA - Oregon - counties of Coos; Crook; Curry; Deschutes; Douglas; Harney; Jackson; Josephine; Klamath;
+     * Lake; Lane; Malheur
+     * State law defines system in International feet (note: not US survey feet). See code 2270 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OREGON_SOUTH = 'urn:ogc:def:crs:EPSG::32127';
+
+    /**
+     * NAD83 / Oregon South (ft)
+     * Extent: USA - Oregon - counties of Coos; Crook; Curry; Deschutes; Douglas; Harney; Jackson; Josephine; Klamath;
+     * Lake; Lane; Malheur
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 32127. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_OREGON_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2270';
 
     /**
      * NAD83(PA11) / Hawaii zone 1
@@ -7185,827 +7812,965 @@ trait ProjectedConstantsChunk3
     public const EPSG_NAD83_PA11_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::6635';
 
     /**
-     * NATRF2022 / Gulf
-     * Extent: USA - offshore Gulf of Mexico outer continental shelf (GoM OCS) - protraction areas South Padre Island;
-     * North Padre Island; Mustang Island; Matagorda Island; Brazos; Galveston; High Island; Sabine Pass; West Cameron;
-     * East Cameron; Vermilion; South Marsh Island; Eugene Island; Ship Shoal; South Pelto; Bay Marchand; South
-     * Timbalier; Grand Isle; West Delta; South Pass; Main Pass; Breton Sound; Chandeleur; Corpus Christi; Port Isabel;
-     * East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon;
-     * Walker Ridge; Amery Terrace; Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South;
-     * Pensacola; Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment;
-     * Apalachicola; Florida Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin; Gainesville; Tarpon Springs;
-     * St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West
-     * This metric definition is authoritative. See CRS code 10980 for non-metric exact equivalent.
-     */
-    public const EPSG_NATRF2022_GULF = 'urn:ogc:def:crs:EPSG::10979';
-
-    /**
-     * NATRF2022 / Gulf (ft)
-     * Extent: USA - offshore Gulf of Mexico outer continental shelf (GoM OCS) - protraction areas South Padre Island;
-     * North Padre Island; Mustang Island; Matagorda Island; Brazos; Galveston; High Island; Sabine Pass; West Cameron;
-     * East Cameron; Vermilion; South Marsh Island; Eugene Island; Ship Shoal; South Pelto; Bay Marchand; South
-     * Timbalier; Grand Isle; West Delta; South Pass; Main Pass; Breton Sound; Chandeleur; Corpus Christi; Port Isabel;
-     * East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon;
-     * Walker Ridge; Amery Terrace; Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South;
-     * Pensacola; Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment;
-     * Apalachicola; Florida Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin; Gainesville; Tarpon Springs;
-     * St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West
-     * Authoritative definition is metric - see CRS code 10979.
-     */
-    public const EPSG_NATRF2022_GULF_FT = 'urn:ogc:def:crs:EPSG::10980';
-
-    /**
-     * NATRF2022 / Gulf East (ft)
-     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) east of approximately 84°W - protraction areas
-     * Gainesville; Tarpon Springs; St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley;
-     * Miami; Key West
-     * Emulates most of offshore area of NAD27 / BLM zone 17 (ftUS) (CRS code 32067) to better than 6 ft, but in the
-     * extreme southwestern part differences can exceed 15ft. Emulation embeds change of ellipsoid and of unit (ftUS to
-     * ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) -
-     * north (Y).
-     */
-    public const EPSG_NATRF2022_GULF_EAST_FT = 'urn:ogc:def:crs:EPSG::10987';
-
-    /**
-     * NATRF2022 / Gulf East Central (ft)
-     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water between approxinately 90°W and 84°W -
-     * protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin
-     * Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle
-     * Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
-     * Emulates most of offshore area of NAD27 / BLM zone 16 (ftUS) (CRS code 32066) to better than 6 ft, but south of
-     * 26°N differences can exceed 15ft. Emulation embeds change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022
-     * CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
-     */
-    public const EPSG_NATRF2022_GULF_EAST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10986';
-
-    /**
-     * NATRF2022 / Gulf Louisiana Shelf (ft)
-     * Extent: USA - Gulf OCS - Louisiana shelf - leasing areas Sabine Pass; West Cameron, East Cameron, Vermilion,
-     * South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle, West
-     * Delta, South Pass, Breton Sound, Main Pass, Chandeleur
-     * Emulates offshore area of NAD27 / Louisiana South zone (CRS code 26785) to better than 6 ft. Emulation embeds
-     * change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation
-     * of SPCS27 uses SPCS27 order east (X) - north (Y).
-     */
-    public const EPSG_NATRF2022_GULF_LOUISIANA_SHELF_FT = 'urn:ogc:def:crs:EPSG::10981';
-
-    /**
-     * NATRF2022 / Gulf Texas Shelf North (ft)
-     * Extent: USA - Gulf OCS - Texas shelf north of approximately 27°48'N - leasing areas Matagorda Island, Brazos,
-     * Galveston, High Island; Sabine Pass
-     * Emulates offshore area of NAD27 / Texas South Central zone (CRS code 32040) to better than 6 ft. Emulation
-     * embeds change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this
-     * emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
-     */
-    public const EPSG_NATRF2022_GULF_TEXAS_SHELF_NORTH_FT = 'urn:ogc:def:crs:EPSG::10982';
-
-    /**
-     * NATRF2022 / Gulf Texas Shelf South (ft)
-     * Extent: USA - Gulf OCS - Texas shelf south of approximately 27°50'N - leasing areas Mustang Island, North Padre
-     * Island and South Padre Island
-     * Emulates offshore area of NAD27 / Texas South zone (CRS code 32041) to better than 6 ft. Emulation embeds change
-     * of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation of
-     * SPCS27 uses SPCS27 order east (X) - north (Y).
-     */
-    public const EPSG_NATRF2022_GULF_TEXAS_SHELF_SOUTH_FT = 'urn:ogc:def:crs:EPSG::10983';
-
-    /**
-     * NATRF2022 / Gulf West (ft)
-     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W  - protraction areas
-     * Corpus Christi, Port Isabel
-     * Emulates offshore deep water area of NAD27 / BLM zone 14 (ftUS) (CRS code 32064) to better than 6 ft. Emulation
-     * embeds change of ellipsoid and of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this
-     * emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     * NAD83 / Pennsylvania North
+     * Extent: USA - Pennsylvania - counties of Bradford; Cameron; Carbon; Centre; Clarion; Clearfield; Clinton;
+     * Columbia; Crawford; Elk; Erie; Forest; Jefferson; Lackawanna; Luzerne; Lycoming; McKean; Mercer; Monroe;
+     * Montour; Northumberland; Pike; Potter; Sullivan; Susquehanna; Tioga; Union; Venango; Warren; Wayne; Wyoming
+     * State law defines system in US survey feet. See code 2271 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NATRF2022_GULF_WEST_FT = 'urn:ogc:def:crs:EPSG::10984';
+    public const EPSG_NAD83_PENNSYLVANIA_NORTH = 'urn:ogc:def:crs:EPSG::32128';
 
     /**
-     * NATRF2022 / Gulf West Central (ft)
-     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water between approxinately 96°W and 90°W -
-     * protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank,
-     * Green Canyon, Walker Ridge, Amery Terrace
-     * Emulates offshore area of NAD27 / BLM zone 15 (ftUS) (CRS code 32065) between approximately 26°N and 28°N to
-     * better than 6 ft, but south of 26°N differences can exceed 5m / 15ft. Emulation embeds change of ellipsoid and
-     * of unit (ftUS to ft). Note: SPCS2022 CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27
-     * order east (X) - north (Y).
+     * NAD83 / Pennsylvania North (ftUS)
+     * Extent: USA - Pennsylvania - counties of Bradford; Cameron; Carbon; Centre; Clarion; Clearfield; Clinton;
+     * Columbia; Crawford; Elk; Erie; Forest; Jefferson; Lackawanna; Luzerne; Lycoming; McKean; Mercer; Monroe;
+     * Montour; Northumberland; Pike; Potter; Sullivan; Susquehanna; Tioga; Union; Venango; Warren; Wayne; Wyoming
+     * State law defines system in US survey feet. Federal definition is metric - see code 32128. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NATRF2022_GULF_WEST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10985';
+    public const EPSG_NAD83_PENNSYLVANIA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2271';
 
     /**
-     * NEA74 Noumea / Noumea Lambert
-     * Extent: New Caledonia - Grande Terre - Noumea district
-     * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163). Gives identical conversion results as NEA74 Noumea /
-     * Noumea Lambert 2 (CRS code 3166).
+     * NAD83 / Pennsylvania South
+     * Extent: USA - Pennsylvania - counties of Adams; Allegheny; Armstrong; Beaver; Bedford; Berks; Blair; Bucks;
+     * Butler; Cambria; Chester; Cumberland; Dauphin; Delaware; Fayette; Franklin; Fulton; Greene; Huntingdon; Indiana;
+     * Juniata; Lancaster; Lawrence; Lebanon; Lehigh; Mifflin; Montgomery; Northampton; Perry; Philadelphia;
+     * Schuylkill; Snyder; Somerset; Washington; Westmoreland; York
+     * State law defines system in US survey feet. See code 2272 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NEA74_NOUMEA_NOUMEA_LAMBERT = 'urn:ogc:def:crs:EPSG::3165';
+    public const EPSG_NAD83_PENNSYLVANIA_SOUTH = 'urn:ogc:def:crs:EPSG::32129';
 
     /**
-     * NEA74 Noumea / Noumea Lambert 2
-     * Extent: New Caledonia - Grande Terre - Noumea district
-     * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163). Variant of NEA74 Noumea / Noumea Lambert (CRS code
-     * 3166) with defining parameters at integer seconds: gives identical conversion results.
+     * NAD83 / Pennsylvania South (ftUS)
+     * Extent: USA - Pennsylvania - counties of Adams; Allegheny; Armstrong; Beaver; Bedford; Berks; Blair; Bucks;
+     * Butler; Cambria; Chester; Cumberland; Dauphin; Delaware; Fayette; Franklin; Fulton; Greene; Huntingdon; Indiana;
+     * Juniata; Lancaster; Lawrence; Lebanon; Lehigh; Mifflin; Montgomery; Northampton; Perry; Philadelphia;
+     * Schuylkill; Snyder; Somerset; Washington; Westmoreland; York
+     * State law defines system in US survey feet. Federal definition is metric - see code 32129. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NEA74_NOUMEA_NOUMEA_LAMBERT_2 = 'urn:ogc:def:crs:EPSG::3166';
+    public const EPSG_NAD83_PENNSYLVANIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2272';
 
     /**
-     * NEA74 Noumea / UTM zone 58S
-     * Extent: New Caledonia - Grande Terre - Noumea district
-     * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163).
+     * NAD83 / Puerto Rico & Virgin Is.
+     * Extent: Puerto Rico and US Virgin Islands
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NEA74_NOUMEA_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::2998';
+    public const EPSG_NAD83_PUERTO_RICO_AND_VIRGIN_IS = 'urn:ogc:def:crs:EPSG::32161';
 
     /**
-     * NGN / UTM zone 38N
-     * Extent: Kuwait - onshore west of 48°E.
+     * NAD83 / Quebec Albers
+     * Extent: Canada - Quebec
+     * For applications with an accuracy of better than 2 metres, replaced by NAD83(CSRS) / Quebec Albers (CRS code
+     * 6624).
      */
-    public const EPSG_NGN_UTM_ZONE_38N = 'urn:ogc:def:crs:EPSG::31838';
+    public const EPSG_NAD83_QUEBEC_ALBERS = 'urn:ogc:def:crs:EPSG::6623';
 
     /**
-     * NGN / UTM zone 39N
-     * Extent: Kuwait - onshore east of 48°E.
+     * NAD83 / Quebec Lambert
+     * Extent: Canada - Quebec
+     * For applications with an accuracy of better than 2 metres, replaced by NAD83(CSRS) / Quebec Lambert (CRS code
+     * 6622).
      */
-    public const EPSG_NGN_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::31839';
+    public const EPSG_NAD83_QUEBEC_LAMBERT = 'urn:ogc:def:crs:EPSG::32198';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone I
-     * Extent: Norway - west of 3°30'W of Oslo (7°13'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 32N.
+     * NAD83 / Rhode Island
+     * Extent: USA - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington
+     * State law defines system in US survey feet. See code 3438 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_I = 'urn:ogc:def:crs:EPSG::27391';
+    public const EPSG_NAD83_RHODE_ISLAND = 'urn:ogc:def:crs:EPSG::32130';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone II
-     * Extent: Norway - between 3°30'W and 1°10' W of Oslo (7°13'22.5"E and 9°33'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 32N.
+     * NAD83 / Rhode Island (ftUS)
+     * Extent: USA - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 32130. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_II = 'urn:ogc:def:crs:EPSG::27392';
+    public const EPSG_NAD83_RHODE_ISLAND_FTUS = 'urn:ogc:def:crs:EPSG::3438';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone III
-     * Extent: Norway - between 1°10'W and 1°15'E of Oslo (9°33'22.5"E and 11°58'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 32N.
+     * NAD83 / South Carolina
+     * Extent: USA - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort;
+     * Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon;
+     * Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw;
+     * Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens;
+     * Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York
+     * State law defines system in International feet (note: not US survey feet). See code 2273 for equivalent
+     * non-metric definition. For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_III = 'urn:ogc:def:crs:EPSG::27393';
+    public const EPSG_NAD83_SOUTH_CAROLINA = 'urn:ogc:def:crs:EPSG::32133';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone IV
-     * Extent: Norway - between 1°15'E and 4°20'E of Oslo (11°58'22.5"E and 15°03'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 32N and ETRF89 / UTM zone 33N.
+     * NAD83 / South Carolina (ft)
+     * Extent: USA - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort;
+     * Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon;
+     * Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw;
+     * Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens;
+     * Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * CRS code 32133. For applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_IV = 'urn:ogc:def:crs:EPSG::27394';
+    public const EPSG_NAD83_SOUTH_CAROLINA_FT = 'urn:ogc:def:crs:EPSG::2273';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone V
-     * Extent: Norway - between 4°20'E and 8°10'E of Oslo (15°03'22.5"E and 18°53'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 33N and ETRF89 / UTM zone 34N.
+     * NAD83 / South Dakota North
+     * Extent: USA - South Dakota - counties of Beadle; Brookings; Brown; Butte; Campbell; Clark; Codington; Corson;
+     * Day; Deuel; Dewey; Edmunds; Faulk; Grant; Hamlin; Hand; Harding; Hyde; Kingsbury; Lawrence; Marshall; McPherson;
+     * Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach
+     * State law defines system in US survey feet. See code 4457 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_V = 'urn:ogc:def:crs:EPSG::27395';
+    public const EPSG_NAD83_SOUTH_DAKOTA_NORTH = 'urn:ogc:def:crs:EPSG::32134';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone VI
-     * Extent: Norway - between 8°10'E and 12°10'E of Oslo (18°53'22.5"E and 22°53'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 34N.
+     * NAD83 / South Dakota North (ftUS)
+     * Extent: USA - South Dakota - counties of Beadle; Brookings; Brown; Butte; Campbell; Clark; Codington; Corson;
+     * Day; Deuel; Dewey; Edmunds; Faulk; Grant; Hamlin; Hand; Harding; Hyde; Kingsbury; Lawrence; Marshall; McPherson;
+     * Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach
+     * State law defines system in US survey feet. Federal definition is metric - see code 32134. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_VI = 'urn:ogc:def:crs:EPSG::27396';
+    public const EPSG_NAD83_SOUTH_DAKOTA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::4457';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone VII
-     * Extent: Norway - between 12°10'E and 16°15'E of Oslo (22°53'22.5"E and 26°58'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 34N and ETRF89 / UTM zone 35N.
+     * NAD83 / South Dakota South
+     * Extent: USA - South Dakota - counties of Aurora; Bennett; Bon Homme; Brule; Buffalo; Charles Mix; Clay; Custer;
+     * Davison; Douglas; Fall River; Gregory; Haakon; Hanson; Hughes; Hutchinson; Jackson; Jerauld; Jones; Lake;
+     * Lincoln; Lyman; McCook; Mellette; Miner; Minnehaha; Moody; Pennington; Sanborn; Shannon; Stanley; Todd; Tripp;
+     * Turner; Union; Yankton
+     * State law defines system in US survey feet. See code 3455 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_VII = 'urn:ogc:def:crs:EPSG::27397';
+    public const EPSG_NAD83_SOUTH_DAKOTA_SOUTH = 'urn:ogc:def:crs:EPSG::32135';
 
     /**
-     * NGO 1948 (Oslo) / NGO zone VIII
-     * Extent: Norway - east of 16°15'E of Oslo (26°58'22.5"E of Greenwich)
-     * To be phased out and replaced by ETRF89 / UTM zone 35N.
+     * NAD83 / South Dakota South (ftUS)
+     * Extent: USA - South Dakota - counties of Aurora; Bennett; Bon Homme; Brule; Buffalo; Charles Mix; Clay; Custer;
+     * Davison; Douglas; Fall River; Gregory; Haakon; Hanson; Hughes; Hutchinson; Jackson; Jerauld; Jones; Lake;
+     * Lincoln; Lyman; McCook; Mellette; Miner; Minnehaha; Moody; Pennington; Sanborn; Shannon; Stanley; Todd; Tripp;
+     * Turner; Union; Yankton
+     * State law defines system in US survey feet. Federal definition is metric - see code 32135. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NGO_1948_OSLO_NGO_ZONE_VIII = 'urn:ogc:def:crs:EPSG::27398';
+    public const EPSG_NAD83_SOUTH_DAKOTA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3455';
 
     /**
-     * NSIDC EASE-Grid Global
-     * Extent: World between 86°S and 86°N
-     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
-     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 Global (CRS code 6933), which should be preferred
-     * for new data.
+     * NAD83 / Statistics Canada Lambert
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+     * Data may sometimes be referenced to NAD83(CSRS) / STC Lambert (see CRS code 3348) which is then called "NAD83 /
+     * STC Lambert". At the scales involved the difference of under 2 metres between the two CRSs may not be
+     * significant.
      */
-    public const EPSG_NSIDC_EASE_GRID_GLOBAL = 'urn:ogc:def:crs:EPSG::3410';
+    public const EPSG_NAD83_STATISTICS_CANADA_LAMBERT = 'urn:ogc:def:crs:EPSG::3347';
 
     /**
-     * NSIDC EASE-Grid North
-     * Extent: Northern hemisphere
-     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
-     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 North (CRS code 6931), which should be preferred
-     * for new data.
+     * NAD83 / Statistics Canada Statistical Ecosystem Register Albers
+     * Extent: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest
+     * Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon
+     * Basis for the Statistical Ecosystem Register grid system. See
+     * https://www150.statcan.gc.ca/n1/pub/16-510-x/16-510-x2025004-eng.htm section 5.1.
      */
-    public const EPSG_NSIDC_EASE_GRID_NORTH = 'urn:ogc:def:crs:EPSG::3408';
+    public const EPSG_NAD83_STATISTICS_CANADA_STATISTICAL_ECOSYSTEM_REGISTER_ALBERS = 'urn:ogc:def:crs:EPSG::11899';
 
     /**
-     * NSIDC EASE-Grid South
-     * Extent: Southern hemisphere
-     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
-     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 South (CRS code 6932), which should be preferred
-     * for new data.
+     * NAD83 / Tennessee
+     * Extent: USA - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon;
+     * Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb;
+     * Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton;
+     * Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson;
+     * Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury;
+     * McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea;
+     * Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton;
+     * Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson
+     * State law defines system in US survey feet. See code 2274 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NSIDC_EASE_GRID_SOUTH = 'urn:ogc:def:crs:EPSG::3409';
+    public const EPSG_NAD83_TENNESSEE = 'urn:ogc:def:crs:EPSG::32136';
 
     /**
-     * NSIDC Sea Ice Polar Stereographic North
-     * Extent: Northern hemisphere - north of 60°N, including Arctic
-     * The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very
-     * small scales for which this system should be used this uncertainty may be insignificant. See CRS 3413 for
-     * geodetically preferred alternative.
+     * NAD83 / Tennessee (ftUS)
+     * Extent: USA - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon;
+     * Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb;
+     * Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton;
+     * Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson;
+     * Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury;
+     * McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea;
+     * Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton;
+     * Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson
+     * State law defines system in US survey feet. Federal definition is metric - see code 32136. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH = 'urn:ogc:def:crs:EPSG::3411';
+    public const EPSG_NAD83_TENNESSEE_FTUS = 'urn:ogc:def:crs:EPSG::2274';
 
     /**
-     * NSIDC Sea Ice Polar Stereographic South
-     * Extent: Southern hemisphere - south of 60°S - Antarctica
-     * The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very
-     * small scales for which this system should be used this uncertainty may be insignificant. See CRS 3976 for
-     * geodetically preferred alternative.
+     * NAD83 / Teranet Ontario Lambert
+     * Extent: Canada - Ontario
+     * Data may sometimes be referenced to NAD83(CSRS) / Teranet Ontario Lambert (see CRS code 5321) which is then
+     * called "NAD83 / Teranet Ontario Lambert". At the scales involved the difference of under 2 metres between the
+     * two CRSs may not be significant.
      */
-    public const EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH = 'urn:ogc:def:crs:EPSG::3412';
+    public const EPSG_NAD83_TERANET_ONTARIO_LAMBERT = 'urn:ogc:def:crs:EPSG::5320';
 
     /**
-     * NTF (Paris) / Lambert Centre France
-     * Extent: France mainland onshore between 50.5 grads and 53.5 grads North (45°27'N to 48°09'N)
-     * Replaced by NTF (Paris) / France zone II (code 27572) from 1972.
+     * NAD83 / Texas Central
+     * Extent: USA - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson;
+     * Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls;
+     * Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble;
+     * Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland;
+     * Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine;
+     * San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler;
+     * Upton; Walker; Ward; Washington; Williamson; Winkler
+     * State law defines system in US survey feet. See code 2277 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_CENTRE_FRANCE = 'urn:ogc:def:crs:EPSG::27562';
+    public const EPSG_NAD83_TEXAS_CENTRAL = 'urn:ogc:def:crs:EPSG::32139';
 
     /**
-     * NTF (Paris) / Lambert Corse
-     * Extent: France - Corsica onshore
-     * Replaced by NTF (Paris) / France zone IV (code 27574) from 1972.
+     * NAD83 / Texas Central (ftUS)
+     * Extent: USA - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson;
+     * Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls;
+     * Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble;
+     * Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland;
+     * Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine;
+     * San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler;
+     * Upton; Walker; Ward; Washington; Williamson; Winkler
+     * State law defines system in US survey feet. Federal definition is metric - see code 32139. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_CORSE = 'urn:ogc:def:crs:EPSG::27564';
+    public const EPSG_NAD83_TEXAS_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2277';
 
     /**
-     * NTF (Paris) / Lambert Nord France
-     * Extent: France mainland onshore north of 53.5 grads North (48°09'N)
-     * Replaced by NTF (Paris) / France zone I (code 27571) from 1972.
+     * NAD83 / Texas Centric Albers Equal Area
+     * Extent: USA - Texas
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / TX Albers (CRS code 3085). See
+     * also NAD83 / TWDB GM (CRS code 10481). For state-wide spatial data presentation requiring shape preservation use
+     * NAD83 / TX LC (CRS code 3082).
      */
-    public const EPSG_NTF_PARIS_LAMBERT_NORD_FRANCE = 'urn:ogc:def:crs:EPSG::27561';
+    public const EPSG_NAD83_TEXAS_CENTRIC_ALBERS_EQUAL_AREA = 'urn:ogc:def:crs:EPSG::3083';
 
     /**
-     * NTF (Paris) / Lambert Sud France
-     * Extent: France - mainland onshore south of 50.5 grads North (45°27'N)
-     * Replaced by NTF (Paris) / France zone III (code 27573) from 1972.
+     * NAD83 / Texas Centric Lambert Conformal
+     * Extent: USA - Texas
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / TX LC (CRS code 3084). For
+     * state-wide spatial data presentation requiring true area measurements use NAD83 / TX Albers (CRS code 3083).
      */
-    public const EPSG_NTF_PARIS_LAMBERT_SUD_FRANCE = 'urn:ogc:def:crs:EPSG::27563';
+    public const EPSG_NAD83_TEXAS_CENTRIC_LAMBERT_CONFORMAL = 'urn:ogc:def:crs:EPSG::3082';
 
     /**
-     * NTF (Paris) / Lambert zone I
-     * Extent: France mainland onshore north of 53.5 grads North (48°09'N)
-     * Introduced 1972. Replaces NTF (Paris) / Lambert Nord France (code 27561).
+     * NAD83 / Texas North
+     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
+     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
+     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+     * State law defines system in US survey feet. See code 2275 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_I = 'urn:ogc:def:crs:EPSG::27571';
+    public const EPSG_NAD83_TEXAS_NORTH = 'urn:ogc:def:crs:EPSG::32137';
 
     /**
-     * NTF (Paris) / Lambert zone II
-     * Extent: France mainland onshore between 50.5 grads and 53.5 grads North (45°27'N to 48°09'N). Also used over
-     * all onshore mainland France
-     * Introduced 1972. Replaces NTF (Paris) / Lambert Centre France (code 27562).
+     * NAD83 / Texas North Central
+     * Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay;
+     * Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin;
+     * Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson;
+     * Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb;
+     * Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker;
+     * Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor;
+     * Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young
+     * State law defines system in US survey feet. See code 2276 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_II = 'urn:ogc:def:crs:EPSG::27572';
+    public const EPSG_NAD83_TEXAS_NORTH_CENTRAL = 'urn:ogc:def:crs:EPSG::32138';
 
     /**
-     * NTF (Paris) / Lambert zone III
-     * Extent: France - mainland onshore south of 50.5 grads North (45°27'N)
-     * Introduced 1972. Replaces NTF (Paris) / Lambert Sud France (code 27563).
+     * NAD83 / Texas North Central (ftUS)
+     * Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay;
+     * Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin;
+     * Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson;
+     * Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb;
+     * Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker;
+     * Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor;
+     * Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young
+     * State law defines system in US survey feet. Federal definition is metric - see code 32138. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_III = 'urn:ogc:def:crs:EPSG::27573';
+    public const EPSG_NAD83_TEXAS_NORTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2276';
 
     /**
-     * NTF (Paris) / Lambert zone IV
-     * Extent: France - Corsica onshore
-     * Introduced 1972. Replaces NTF (Paris) / Lambert Corse (code 27564).
+     * NAD83 / Texas North (ftUS)
+     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
+     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
+     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+     * State law defines system in US survey feet. Federal definition is metric - see code 32137. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NTF_PARIS_LAMBERT_ZONE_IV = 'urn:ogc:def:crs:EPSG::27574';
+    public const EPSG_NAD83_TEXAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2275';
 
     /**
-     * NZGD2000 / Amuri 2000
-     * Extent: New Zealand - South Island - Amuri meridional circuit area
-     * Replaced NZGD49 / Amuri Circuit (code 27219) from March 2000.
+     * NAD83 / Texas South
+     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
+     * San Patricio; Starr; Webb; Willacy; Zapata
+     * State law defines system in US survey feet. See code 2279 for equivalent non-metric definition. For onshore
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_AMURI_2000 = 'urn:ogc:def:crs:EPSG::2119';
+    public const EPSG_NAD83_TEXAS_SOUTH = 'urn:ogc:def:crs:EPSG::32141';
 
     /**
-     * NZGD2000 / Antipodes Islands TM 2000
-     * Extent: New Zealand - Antipodes Island, Bounty Islands.
+     * NAD83 / Texas South Central
+     * Extent: USA - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell;
+     * Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad;
+     * Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live
+     * Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria;
+     * Waller; Wharton; Wilson; Zavala
+     * State law defines system in US survey feet. See code 2278 for equivalent non-metric definition. For onshore
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_ANTIPODES_ISLANDS_TM_2000 = 'urn:ogc:def:crs:EPSG::3790';
+    public const EPSG_NAD83_TEXAS_SOUTH_CENTRAL = 'urn:ogc:def:crs:EPSG::32140';
 
     /**
-     * NZGD2000 / Auckland Islands TM 2000
-     * Extent: New Zealand - Snares Island, Auckland Island - onshore.
+     * NAD83 / Texas South Central (ftUS)
+     * Extent: USA - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell;
+     * Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad;
+     * Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live
+     * Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria;
+     * Waller; Wharton; Wilson; Zavala
+     * State law defines system in US survey feet. Federal definition is metric - see code 32140. For onshore
+     * applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_AUCKLAND_ISLANDS_TM_2000 = 'urn:ogc:def:crs:EPSG::3788';
+    public const EPSG_NAD83_TEXAS_SOUTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2278';
 
     /**
-     * NZGD2000 / Bay of Plenty 2000
-     * Extent: New Zealand - North Island - Bay of Plenty meridional circuit area
-     * Replaced NZGD49 / Bay of Plenty Circuit (code 27206) from March 2000.
+     * NAD83 / Texas South (ftUS)
+     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
+     * San Patricio; Starr; Webb; Willacy; Zapata
+     * State law defines system in US survey feet. Federal definition is metric - see code 32141. For onshore
+     * applications with an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_BAY_OF_PLENTY_2000 = 'urn:ogc:def:crs:EPSG::2106';
+    public const EPSG_NAD83_TEXAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2279';
 
     /**
-     * NZGD2000 / Bluff 2000
-     * Extent: New Zealand - Stewart Island; South Island - Bluff meridional circuit area
-     * Replaced NZGD49 / Bluff Circuit (code 27232) from March 2000.
+     * NAD83 / Texas State Mapping System
+     * Extent: USA - Texas
+     * Replaces NAD27 / Shackleford. From 2001 replaced by NAD83 / Texas Centric Mapping System (TCMS/LC and TCMS/AEA).
      */
-    public const EPSG_NZGD2000_BLUFF_2000 = 'urn:ogc:def:crs:EPSG::2132';
+    public const EPSG_NAD83_TEXAS_STATE_MAPPING_SYSTEM = 'urn:ogc:def:crs:EPSG::3081';
 
     /**
-     * NZGD2000 / Buller 2000
-     * Extent: New Zealand - South Island - Buller meridional circuit area
-     * Replaced NZGD49 / Buller Circuit (code 27217) from March 2000.
+     * NAD83 / TWDB GM
+     * Extent: USA - Texas
+     * Not to be confused with the similar but different TxGIO (TNRIS) CRS, NAD83 / Texas Centric Albers Equal Area
+     * (CRS code 3083).
      */
-    public const EPSG_NZGD2000_BULLER_2000 = 'urn:ogc:def:crs:EPSG::2117';
+    public const EPSG_NAD83_TWDB_GM = 'urn:ogc:def:crs:EPSG::10481';
 
     /**
-     * NZGD2000 / Campbell Island TM 2000
-     * Extent: New Zealand - Campbell Island.
+     * NAD83 / USFS R6 Albers
+     * Extent: USA - Oregon and Washington.
      */
-    public const EPSG_NZGD2000_CAMPBELL_ISLAND_TM_2000 = 'urn:ogc:def:crs:EPSG::3789';
+    public const EPSG_NAD83_USFS_R6_ALBERS = 'urn:ogc:def:crs:EPSG::9674';
 
     /**
-     * NZGD2000 / Chatham Island Circuit 2000
-     * Extent: New Zealand - Chatham Islands group - onshore
-     * Officially withdrawn on 6 June 2006. Should not be used for new datasets. Replaced by NZGD2000 / Chatham Island
-     * TM 2000 (CRS code 3793).
+     * NAD83 / Utah Central
+     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
+     * Tooele; Uintah; Utah; Wasatch
+     * State law of 2009 defines system in US survey feet: see CRS code 3566. An earlier state law of 1988 defining
+     * system in International feet was withdrawn in 2001. For onshore applications with an accuracy of better than 1m,
+     * replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_CHATHAM_ISLAND_CIRCUIT_2000 = 'urn:ogc:def:crs:EPSG::3764';
+    public const EPSG_NAD83_UTAH_CENTRAL = 'urn:ogc:def:crs:EPSG::32143';
 
     /**
-     * NZGD2000 / Chatham Islands TM 2000
-     * Extent: New Zealand - Chatham Islands group - onshore
-     * Replaces CI1979 / Chatham Islands Map Grid (CRS code 5519) and NZGD2000 / Chatham Islands Circuit 2000 (CRS code
-     * 3764).
+     * NAD83 / Utah Central (ft)
+     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
+     * Tooele; Uintah; Utah; Wasatch
+     * State law defining system in International feet withdrawn 2001. Replaced 2009 by US Survey feet - see CRS code
+     * 3566. Federal definition is metric - see code 32143. For applications with an accuracy of better than 3 feet,
+     * replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_CHATHAM_ISLANDS_TM_2000 = 'urn:ogc:def:crs:EPSG::3793';
+    public const EPSG_NAD83_UTAH_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::2281';
 
     /**
-     * NZGD2000 / Collingwood 2000
-     * Extent: New Zealand - South Island - Collingwood meridional circuit area
-     * Replaced NZGD49 / Collingwood Circuit (code 27214) from March 2000.
+     * NAD83 / Utah Central (ftUS)
+     * Extent: USA - Utah - counties of Carbon; Duchesne; Emery; Grand; Juab; Millard; Salt Lake; Sanpete; Sevier;
+     * Tooele; Uintah; Utah; Wasatch
+     * State law defining system in International feet (note: not US survey feet) has been withdrawn. Federal
+     * definition is metric - see code 32143. For applications with an accuracy of better than 3 feet, replaced by
+     * NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_COLLINGWOOD_2000 = 'urn:ogc:def:crs:EPSG::2114';
+    public const EPSG_NAD83_UTAH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3566';
 
     /**
-     * NZGD2000 / Gawler 2000
-     * Extent: New Zealand - South Island - Gawler meridional circuit area
-     * Replaced NZGD49 / Gawler Circuit (code 27225) from March 2000.
+     * NAD83 / Utah North
+     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
+     * State law of 2009 defines system in US survey feet: see CRS code 3560. An earlier state law of 1988 defining
+     * system in International feet was withdrawn in 2001. For onshore applications with an accuracy of better than 1m,
+     * replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_GAWLER_2000 = 'urn:ogc:def:crs:EPSG::2125';
+    public const EPSG_NAD83_UTAH_NORTH = 'urn:ogc:def:crs:EPSG::32142';
 
     /**
-     * NZGD2000 / Grey 2000
-     * Extent: New Zealand - South Island - Grey meridional circuit area
-     * Replaced NZGD49 / Grey Circuit (code 27218) from March 2000.
+     * NAD83 / Utah North (ft)
+     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
+     * State law defining system in International feet withdrawn 2001. Replaced 2009 by US Survey feet - see CRS code
+     * 3560. Federal definition is metric - see code 32142. For applications with an accuracy of better than 3 feet,
+     * replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_GREY_2000 = 'urn:ogc:def:crs:EPSG::2118';
+    public const EPSG_NAD83_UTAH_NORTH_FT = 'urn:ogc:def:crs:EPSG::2280';
 
     /**
-     * NZGD2000 / Hawkes Bay 2000
-     * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area
-     * Replaced NZGD49 / Hawkes Bay Circuit (code 27208) from March 2000.
+     * NAD83 / Utah North (ftUS)
+     * Extent: USA - Utah - counties of Box Elder; Cache; Daggett; Davis; Morgan; Rich; Summit; Weber
+     * State law defining system in International feet (note: not US survey feet) has been withdrawn. Federal
+     * definition is metric - see code 32142. For applications with an accuracy of better than 3 feet, replaced by
+     * NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_HAWKES_BAY_2000 = 'urn:ogc:def:crs:EPSG::2108';
+    public const EPSG_NAD83_UTAH_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3560';
 
     /**
-     * NZGD2000 / Hokitika 2000
-     * Extent: New Zealand - South Island - Hokitika meridional circuit area
-     * Replaced NZGD49 / Hokitika Circuit (code 27221) from March 2000.
+     * NAD83 / Utah South
+     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
+     * State law of 2009 defines system in US survey feet: see CRS code 3567. An earlier state law of 1988 defining
+     * system in International feet was withdrawn in 2001. For onshore applications with an accuracy of better than 1m,
+     * replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_HOKITIKA_2000 = 'urn:ogc:def:crs:EPSG::2121';
+    public const EPSG_NAD83_UTAH_SOUTH = 'urn:ogc:def:crs:EPSG::32144';
 
     /**
-     * NZGD2000 / Jacksons Bay 2000
-     * Extent: New Zealand - South Island - Jacksons Bay meridional circuit area
-     * Replaced NZGD49 / Jacksons Bay Circuit (code 27223) from March 2000.
+     * NAD83 / Utah South (ft)
+     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
+     * State law defining system in International feet withdrawn 2001. Replaced 2009 by US Survey feet - see CRS code
+     * 3567. Federal definition is metric - see code 32144. For applications with an accuracy of better than 3 feet,
+     * replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_JACKSONS_BAY_2000 = 'urn:ogc:def:crs:EPSG::2123';
+    public const EPSG_NAD83_UTAH_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2282';
 
     /**
-     * NZGD2000 / Karamea 2000
-     * Extent: New Zealand - South Island - Karamea meridional circuit area
-     * Replaced NZGD49 / Karamea Circuit (code 27216) from March 2000.
+     * NAD83 / Utah South (ftUS)
+     * Extent: USA - Utah - counties of Beaver; Garfield; Iron; Kane; Piute; San Juan; Washington; Wayne
+     * State law defining system in International feet (note: not US survey feet) has been withdrawn. Federal
+     * definition is metric - see code 32144. For applications with an accuracy of better than 3 feet, replaced by
+     * NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD2000_KARAMEA_2000 = 'urn:ogc:def:crs:EPSG::2116';
+    public const EPSG_NAD83_UTAH_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3567';
 
     /**
-     * NZGD2000 / Lindis Peak 2000
-     * Extent: New Zealand - South Island - Lindis Peak meridional circuit area
-     * Replaced NZGD49 / Lindis Peak Circuit (code 27227) from March 2000.
+     * NAD83 / UTM zone 10N
+     * Extent: North America - between 126°W and 120°W. Canada - British Columbia; Northwest Territories; Yukon. USA
+     * - California; Oregon; Washington
+     * Replaces NAD27 / UTM zone 10N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 10N in Canada
+     * and NAD83(HARN) / UTM zone 10N in US.
      */
-    public const EPSG_NZGD2000_LINDIS_PEAK_2000 = 'urn:ogc:def:crs:EPSG::2127';
+    public const EPSG_NAD83_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::26910';
 
     /**
-     * NZGD2000 / Marlborough 2000
-     * Extent: New Zealand - South Island - Marlborough meridional circuit area
-     * Replaced NZGD49 / Marlborough Circuit (code 27220) from March 2000.
+     * NAD83 / UTM zone 11N
+     * Extent: North America - between 120°W and 114°W. Canada - Alberta; British Columbia; Northwest Territories;
+     * Nunavut. USA - California; Idaho; Nevada, Oregon; Washington
+     * Replaces NAD27 / UTM zone 11N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 11N in Canada
+     * and NAD83(HARN) / UTM zone 11N in US.
      */
-    public const EPSG_NZGD2000_MARLBOROUGH_2000 = 'urn:ogc:def:crs:EPSG::2120';
+    public const EPSG_NAD83_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::26911';
 
     /**
-     * NZGD2000 / Mount Eden 2000
-     * Extent: New Zealand - North Island - Mount Eden meridional circuit area
-     * Replaced NZGD49 / Mount Eden Circuit (code 27205) from March 2000.
+     * NAD83 / UTM zone 12N
+     * Extent: North America - between 114°W and 108°W. Canada - Alberta; Northwest Territories; Nunavut;
+     * Saskatchewan. USA - Arizona; Colorado; Idaho; Montana; New Mexico; Utah; Wyoming
+     * Replaces NAD27 / UTM zone 12N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 12N in Canada
+     * and NAD83(HARN) / UTM zone 12N in US.
      */
-    public const EPSG_NZGD2000_MOUNT_EDEN_2000 = 'urn:ogc:def:crs:EPSG::2105';
+    public const EPSG_NAD83_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::26912';
 
     /**
-     * NZGD2000 / Mount Nicholas 2000
-     * Extent: New Zealand - South Island - Mount Nicholas meridional circuit area
-     * Replaced NZGD49 / Mount Nicholas Circuit (code 27228) from March 2000.
+     * NAD83 / UTM zone 13N
+     * Extent: North America - between 108°W and 102°W. Canada - Northwest Territories; Nunavut; Saskatchewan. USA -
+     * Colorado; Montana; Nebraska; New Mexico; North Dakota; Oklahoma; South Dakota; Texas; Wyoming
+     * Replaces NAD27 / UTM zone 13N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 13N in Canada
+     * and NAD83(HARN) / UTM zone 13N in US.
      */
-    public const EPSG_NZGD2000_MOUNT_NICHOLAS_2000 = 'urn:ogc:def:crs:EPSG::2128';
+    public const EPSG_NAD83_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::26913';
 
     /**
-     * NZGD2000 / Mount Pleasant 2000
-     * Extent: New Zealand - South Island - Mount Pleasant meridional circuit area
-     * Replaced NZGD49 / Mount Pleasant Circuit (code 27224) from March 2000.
+     * NAD83 / UTM zone 14N
+     * Extent: North America - between 102°W and 96°W. Canada - Manitoba; Nunavut; Saskatchewan. USA - Iowa; Kansas;
+     * Minnesota; Nebraska; North Dakota; Oklahoma; South Dakota; Texas
+     * Replaces NAD27 / UTM zone 14N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 14N in Canada
+     * and NAD83(HARN) / UTM zone 14N in US.
      */
-    public const EPSG_NZGD2000_MOUNT_PLEASANT_2000 = 'urn:ogc:def:crs:EPSG::2124';
+    public const EPSG_NAD83_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::26914';
 
     /**
-     * NZGD2000 / Mount York 2000
-     * Extent: New Zealand - South Island - Mount York meridional circuit area
-     * Replaced NZGD49 / Mount York Circuit (code 27229) from March 2000.
+     * NAD83 / UTM zone 15N
+     * Extent: North America - between 96°W and 90°W. Canada - Manitoba; Nunavut; Ontario. USA - Arkansas; Illinois;
+     * Iowa; Kansas; Louisiana; Michigan; Minnesota; Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas;
+     * Wisconsin
+     * Replaces NAD27 / UTM zone 15N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 15N in Canada
+     * and NAD83(HARN) / UTM zone 15N in US.
      */
-    public const EPSG_NZGD2000_MOUNT_YORK_2000 = 'urn:ogc:def:crs:EPSG::2129';
+    public const EPSG_NAD83_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::26915';
 
     /**
-     * NZGD2000 / NZCS2000
-     * Extent: New Zealand - offshore
-     * See WGS 84 / NIWA Albers (CRS code 9191) for oceanic data statistical analysis.
+     * NAD83 / UTM zone 16N
+     * Extent: North America - between 90°W and 84°W. Canada - Manitoba; Nunavut; Ontario. USA - Alabama; Arkansas;
+     * Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North
+     * Carolina; Ohio; Tennessee; Wisconsin
+     * Replaces NAD27 / UTM zone 15N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 16N in Canada
+     * and NAD83(HARN) / UTM zone 16N in US.
      */
-    public const EPSG_NZGD2000_NZCS2000 = 'urn:ogc:def:crs:EPSG::3851';
+    public const EPSG_NAD83_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::26916';
 
     /**
-     * NZGD2000 / Nelson 2000
-     * Extent: New Zealand - South Island - Nelson meridional circuit area
-     * Replaced NZGD49 / Nelson Circuit (code 27215) from March 2000.
+     * NAD83 / UTM zone 17N
+     * Extent: North America - between 84°W and 78°W. Canada - Nunavut; Ontario; Quebec. USA - Florida; Georgia;
+     * Kentucky; Maryland; Michigan; New York; North Carolina; Ohio; Pennsylvania; South Carolina; Tennessee; Virginia;
+     * West Virginia
+     * Replaces NAD27 / UTM zone 17N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 17N in Canada
+     * and NAD83(HARN) / UTM zone 17N in US.
      */
-    public const EPSG_NZGD2000_NELSON_2000 = 'urn:ogc:def:crs:EPSG::2115';
+    public const EPSG_NAD83_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::26917';
 
     /**
-     * NZGD2000 / New Zealand Transverse Mercator 2000
-     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore
-     * Replaces NZGD49 / New Zealand Map Grid (code 27200) from July 2001.
+     * NAD83 / UTM zone 18N
+     * Extent: North America - between 78°W and 72°W. Canada - Nunavut; Ontario; Quebec. USA - Connecticut; Delaware;
+     * District of Columbia (DC); Maryland; Massachusetts; New Hampshire; New Jersey; New York; North Carolina;
+     * Pennsylvania; Virginia; Vermont
+     * Replaces NAD27 / UTM zone 18N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 18N in Canada
+     * and NAD83(HARN) / UTM zone 18N in US.
      */
-    public const EPSG_NZGD2000_NEW_ZEALAND_TRANSVERSE_MERCATOR_2000 = 'urn:ogc:def:crs:EPSG::2193';
+    public const EPSG_NAD83_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::26918';
 
     /**
-     * NZGD2000 / North Taieri 2000
-     * Extent: New Zealand - South Island - North Taieri meridional circuit area
-     * Replaced NZGD49 / North Taieri Circuit (code 27231) from March 2000.
+     * NAD83 / UTM zone 19N
+     * Extent: North America - between 72°W and 66°W. Canada - Labrador; New Brunswick; Nova Scotia; Nunavut; Quebec.
+     * Puerto Rico. USA - Connecticut; Maine; Massachusetts; New Hampshire; New York (Long Island); Rhode Island;
+     * Vermont
+     * Replaces NAD27 / UTM zone 19N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 19N in Canada
+     * and NAD83(HARN) / UTM zone 19N in US.
      */
-    public const EPSG_NZGD2000_NORTH_TAIERI_2000 = 'urn:ogc:def:crs:EPSG::2131';
+    public const EPSG_NAD83_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::26919';
 
     /**
-     * NZGD2000 / Observation Point 2000
-     * Extent: New Zealand - South Island - Observation Point meridional circuit area
-     * Replaced NZGD49 / Observation Point Circuit (code 27230) from March 2000.
+     * NAD83 / UTM zone 1N
+     * Extent: USA - between 180°W and 174°W - Alaska and offshore continental shelf (OCS)
+     * Replaces NAD27 / UTM zone 1N. For accuracies better than 1m replaced by NAD83(NSRS) / UTM zone 1N.
      */
-    public const EPSG_NZGD2000_OBSERVATION_POINT_2000 = 'urn:ogc:def:crs:EPSG::2130';
+    public const EPSG_NAD83_UTM_ZONE_1N = 'urn:ogc:def:crs:EPSG::26901';
 
     /**
-     * NZGD2000 / Okarito 2000
-     * Extent: New Zealand - South Island - Okarito meridional circuit area
-     * Replaced NZGD49 / Okarito Circuit (code 27222) from March 2000.
+     * NAD83 / UTM zone 20N
+     * Extent: North America - between 66°W and 60°W. British Virgin Islands. Canada - New Brunswick; Labrador;
+     * Nunavut; Prince Edward Island; Quebec. Puerto Rico. US Virgin Islands. USA offshore Atlantic
+     * In Canada, replaces NAD27 / UTM zone 20N (CRS code 26720); for accuracies better than 1m replaced by NAD83(CSRS)
+     * / UTM zone 20N(CRS code 2961). In BVI, replaces Puerto Rico / UTM zone 20N (CRS code 3920).
      */
-    public const EPSG_NZGD2000_OKARITO_2000 = 'urn:ogc:def:crs:EPSG::2122';
+    public const EPSG_NAD83_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::26920';
 
     /**
-     * NZGD2000 / Poverty Bay 2000
-     * Extent: New Zealand - North Island - Poverty Bay meridional circuit area
-     * Replaced NZGD49 / Poverty Bay Circuit (code 27207) from March 2000.
+     * NAD83 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
+     * Replaces NAD27 / UTM zone 21N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 21N.
      */
-    public const EPSG_NZGD2000_POVERTY_BAY_2000 = 'urn:ogc:def:crs:EPSG::2107';
+    public const EPSG_NAD83_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::26921';
 
     /**
-     * NZGD2000 / Raoul Island TM 2000
-     * Extent: New Zealand - Raoul Island, Kermadec Islands.
+     * NAD83 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
+     * Replaces NAD27 / UTM zone 22N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 22N.
      */
-    public const EPSG_NZGD2000_RAOUL_ISLAND_TM_2000 = 'urn:ogc:def:crs:EPSG::3791';
+    public const EPSG_NAD83_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::26922';
 
     /**
-     * NZGD2000 / Taranaki 2000
-     * Extent: New Zealand - North Island - Taranaki meridional circuit area
-     * Replaced NZGD49 / Taranaki Circuit (code 27209) from March 2000.
+     * NAD83 / UTM zone 23N
+     * Extent: Canada offshore Atlantic - 48°W to 42°W.
      */
-    public const EPSG_NZGD2000_TARANAKI_2000 = 'urn:ogc:def:crs:EPSG::2109';
+    public const EPSG_NAD83_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::26923';
 
     /**
-     * NZGD2000 / Timaru 2000
-     * Extent: New Zealand - South Island - Timaru meridional circuit area
-     * Replaced NZGD49 / Timaru Circuit (code 27226) from March 2000.
+     * NAD83 / UTM zone 24N
+     * Extent: Canada offshore Atlantic - east of 42°W.
      */
-    public const EPSG_NZGD2000_TIMARU_2000 = 'urn:ogc:def:crs:EPSG::2126';
+    public const EPSG_NAD83_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::9712';
 
     /**
-     * NZGD2000 / Tuhirangi 2000
-     * Extent: New Zealand - North Island - Tuhirangi meridional circuit area
-     * Replaced NZGD49 / Tuhirangi Circuit (code 27210) from March 2000.
+     * NAD83 / UTM zone 2N
+     * Extent: USA - between 174°W and 168°W - Alaska and offshore continental shelf (OCS)
+     * Replaces NAD27 / UTM zone 2N. For accuracies better than 1m replaced by NAD83(NSRS) / UTM zone 2N.
      */
-    public const EPSG_NZGD2000_TUHIRANGI_2000 = 'urn:ogc:def:crs:EPSG::2110';
+    public const EPSG_NAD83_UTM_ZONE_2N = 'urn:ogc:def:crs:EPSG::26902';
 
     /**
-     * NZGD2000 / UTM zone 1S
-     * Extent: New Zealand - offshore between 180°W and 174°W.
+     * NAD83 / UTM zone 3N
+     * Extent: USA - between 168°W and 162°W - Alaska and offshore continental shelf (OCS)
+     * Replaces NAD27 / UTM zone 3N. For accuracies better than 1m replaced by NAD83(NSRS) / UTM zone 3N.
      */
-    public const EPSG_NZGD2000_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::5700';
+    public const EPSG_NAD83_UTM_ZONE_3N = 'urn:ogc:def:crs:EPSG::26903';
 
     /**
-     * NZGD2000 / UTM zone 58S
-     * Extent: New Zealand - offshore between 162°E and 168°E
-     * Replaces NZGD49 / UTM zone 58S (code 27258) from March 2000.
+     * NAD83 / UTM zone 4N
+     * Extent: USA - between 162°W and 156°W - Alaska, Hawaii
+     * Replaces NAD27 / UTM zone 4N in Alaska and Old Hawaii / UTM zone 4N in Hawaii. For accuracies better than 1m
+     * replaced by NAD83(NSRS) / UTM zone 4N in Alaska and NAD83(HARN) UTM zone 4N in Hawaii.
      */
-    public const EPSG_NZGD2000_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::2133';
+    public const EPSG_NAD83_UTM_ZONE_4N = 'urn:ogc:def:crs:EPSG::26904';
 
     /**
-     * NZGD2000 / UTM zone 59S
-     * Extent: New Zealand - offshore between 168°E and 174°E
-     * Replaces NZGD49 / UTM zone 59S (code 27259) from March 2000.
+     * NAD83 / UTM zone 59N
+     * Extent: USA - west of 174°E. Alaska and offshore continental shelf (OCS)
+     * Replaces NAD27 / UTM zone 59N. For accuracies better than 1m replaced by NAD83(NSRS) / UTM zone 59N.
      */
-    public const EPSG_NZGD2000_UTM_ZONE_59S = 'urn:ogc:def:crs:EPSG::2134';
+    public const EPSG_NAD83_UTM_ZONE_59N = 'urn:ogc:def:crs:EPSG::3372';
 
     /**
-     * NZGD2000 / UTM zone 60S
-     * Extent: New Zealand - offshore between 174°E and 180°E
-     * Replaces NZGD49 / UTM zone 60S (code 27260) from March 2000.
+     * NAD83 / UTM zone 5N
+     * Extent: USA - between 156°W and 150°W - Alaska, Hawaii
+     * Replaces NAD27 / UTM zone 5N in Alaska and Old Hawaii / UTM zone 5N in Hawaii. For accuracies better than 1m
+     * replaced by NAD83(NSRS) / UTM zone 5N in Alaska and NAD83(HARN) UTM zone 5N in Hawaii.
      */
-    public const EPSG_NZGD2000_UTM_ZONE_60S = 'urn:ogc:def:crs:EPSG::2135';
+    public const EPSG_NAD83_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::26905';
 
     /**
-     * NZGD2000 / Wairarapa 2000
-     * Extent: New Zealand - North Island - Wairarapa meridional circuit area
-     * Replaced NZGD49 / Wairarapa Circuit (code 27212) from March 2000.
+     * NAD83 / UTM zone 60N
+     * Extent: USA - between 174°E and 180°E - Alaska and offshore continental shelf (OCS)
+     * Replaces NAD27 / UTM zone 60N. For accuracies better than 1m replaced by NAD83(NSRS) / UTM zone 60N.
      */
-    public const EPSG_NZGD2000_WAIRARAPA_2000 = 'urn:ogc:def:crs:EPSG::2112';
+    public const EPSG_NAD83_UTM_ZONE_60N = 'urn:ogc:def:crs:EPSG::3373';
 
     /**
-     * NZGD2000 / Wanganui 2000
-     * Extent: New Zealand - North Island - Wanganui meridional circuit area
-     * Replaced NZGD49 / Wanganui Circuit (code 27211) from March 2000.
+     * NAD83 / UTM zone 6N
+     * Extent: USA - between 150°W and 144°W - Alaska and offshore continental shelf (OCS)
+     * Replaces NAD27 / UTM zone 6N. For accuracies better than 1m replaced by NAD83(NSRS) / UTM zone 6N.
      */
-    public const EPSG_NZGD2000_WANGANUI_2000 = 'urn:ogc:def:crs:EPSG::2111';
+    public const EPSG_NAD83_UTM_ZONE_6N = 'urn:ogc:def:crs:EPSG::26906';
 
     /**
-     * NZGD2000 / Wellington 2000
-     * Extent: New Zealand - North Island - Wellington meridional circuit area
-     * Replaced NZGD49 / Wellington Circuit (code 27213) from March 2000.
+     * NAD83 / UTM zone 7N
+     * Extent: North America - between 144°W and 138°W. Canada - British Columbia; Yukon. USA - Alaska
+     * Replaces NAD27 / UTM zone 7N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 7N in Canada and
+     * NAD83(NSRS2007) / UTM zone 7N in US.
      */
-    public const EPSG_NZGD2000_WELLINGTON_2000 = 'urn:ogc:def:crs:EPSG::2113';
+    public const EPSG_NAD83_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::26907';
 
     /**
-     * NZGD49 / Amuri Circuit
-     * Extent: New Zealand - South Island - Amuri meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Amuri 2000 (code 2119) from March 2000.
+     * NAD83 / UTM zone 8N
+     * Extent: North America - between 138°W and 132°W. Canada - British Columbia; Northwest Territiories; Yukon. USA
+     * - Alaska
+     * Replaces NAD27 / UTM zone 8N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 8N in Canada and
+     * NAD83(NSRS2007) / UTM zone 8N in US.
      */
-    public const EPSG_NZGD49_AMURI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27219';
+    public const EPSG_NAD83_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::26908';
 
     /**
-     * NZGD49 / Bay of Plenty Circuit
-     * Extent: New Zealand - North Island - Bay of Plenty meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Bay of Plenty 2000 (code 2106) from March
-     * 2000.
+     * NAD83 / UTM zone 9N
+     * Extent: North America - between 132°W and 126°W. Canada - British Columbia; Northwest Territories; Yukon. USA
+     * - Alaska
+     * Replaces NAD27 / UTM zone 9N. For accuracies better than 1m replaced by NAD83(CSRS) / UTM zone 9N in Canada and
+     * NAD83(NSRS2007) / UTM zone 9N in US.
      */
-    public const EPSG_NZGD49_BAY_OF_PLENTY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27206';
+    public const EPSG_NAD83_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::26909';
 
     /**
-     * NZGD49 / Bluff Circuit
-     * Extent: New Zealand - Stewart Island; South Island - Bluff meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Bluff 2000 (code 2132) from March 2000.
+     * NAD83 / Vermont
+     * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
+     * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor
+     * State law defines system in US survey feet. See code 5646 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_BLUFF_CIRCUIT = 'urn:ogc:def:crs:EPSG::27232';
+    public const EPSG_NAD83_VERMONT = 'urn:ogc:def:crs:EPSG::32145';
 
     /**
-     * NZGD49 / Buller Circuit
-     * Extent: New Zealand - South Island - Buller meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Buller 2000 (code 2117) from March 2000.
+     * NAD83 / Vermont (ftUS)
+     * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
+     * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor
+     * State law defines system in US survey feet. Federal definition is metric - see code 32145. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_BULLER_CIRCUIT = 'urn:ogc:def:crs:EPSG::27217';
+    public const EPSG_NAD83_VERMONT_FTUS = 'urn:ogc:def:crs:EPSG::5646';
 
     /**
-     * NZGD49 / Collingwood Circuit
-     * Extent: New Zealand - South Island - Collingwood meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Collingwood 2000 (code 2114) from March 2000.
+     * NAD83 / Virginia Lambert
+     * Extent: USA - Virginia
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Virginia Lambert (CRS code 3969).
      */
-    public const EPSG_NZGD49_COLLINGWOOD_CIRCUIT = 'urn:ogc:def:crs:EPSG::27214';
+    public const EPSG_NAD83_VIRGINIA_LAMBERT = 'urn:ogc:def:crs:EPSG::3968';
 
     /**
-     * NZGD49 / Gawler Circuit
-     * Extent: New Zealand - South Island - Gawler meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Gawler 2000 (code 2125) from March 2000.
+     * NAD83 / Virginia North
+     * Extent: USA - Virginia - counties of Arlington; Augusta; Bath; Caroline; Clarke; Culpeper; Fairfax; Fauquier;
+     * Frederick; Greene; Highland; King George; Loudoun; Madison; Orange; Page; Prince William; Rappahannock;
+     * Rockingham; Shenandoah; Spotsylvania; Stafford; Warren; Westmoreland
+     * State law defines system in US survey feet. See code 2283 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_GAWLER_CIRCUIT = 'urn:ogc:def:crs:EPSG::27225';
+    public const EPSG_NAD83_VIRGINIA_NORTH = 'urn:ogc:def:crs:EPSG::32146';
 
     /**
-     * NZGD49 / Grey Circuit
-     * Extent: New Zealand - South Island - Grey meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Grey 2000 (code 2118) from March 2000.
+     * NAD83 / Virginia North (ftUS)
+     * Extent: USA - Virginia - counties of Arlington; Augusta; Bath; Caroline; Clarke; Culpeper; Fairfax; Fauquier;
+     * Frederick; Greene; Highland; King George; Loudoun; Madison; Orange; Page; Prince William; Rappahannock;
+     * Rockingham; Shenandoah; Spotsylvania; Stafford; Warren; Westmoreland
+     * State law defines system in US survey feet. Federal definition is metric - see code 32146. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_GREY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27218';
+    public const EPSG_NAD83_VIRGINIA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2283';
 
     /**
-     * NZGD49 / Hawkes Bay Circuit
-     * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area
-     * Replaced Hawkes Bay 1931 datum with Imperial measure version of projection in 1972. Replaced by NZGD2000 /
-     * Hawkes Bay 2000 (code 2108) from March 2000.
+     * NAD83 / Virginia South
+     * Extent: USA - Virginia - counties of Accomack; Albemarle; Alleghany; Amelia; Amherst; Appomattox; Bedford;
+     * Bland; Botetourt; Bristol; Brunswick; Buchanan; Buckingham; Campbell; Carroll; Charles City; Charlotte;
+     * Chesapeake; Chesterfield; Colonial Heights; Craig; Cumberland; Dickenson; Dinwiddie; Essex; Floyd; Fluvanna;
+     * Franklin; Giles; Gloucester; Goochland; Grayson; Greensville; Halifax; Hampton; Hanover; Henrico; Henry; Isle of
+     * Wight; James City; King and Queen; King William; Lancaster; Lee; Louisa; Lunenburg; Lynchburg; Mathews;
+     * Mecklenburg; Middlesex; Montgomery; Nelson; New Kent; Newport News; Norfolk; Northampton; Northumberland;
+     * Norton; Nottoway; Patrick; Petersburg; Pittsylvania; Portsmouth; Powhatan; Prince Edward; Prince George;
+     * Pulaski; Richmond; Roanoke; Rockbridge; Russell; Scott; Smyth; Southampton; Suffolk; Surry; Sussex; Tazewell;
+     * Washington; Wise; Wythe; York
+     * State law defines system in US survey feet. See code 2284 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_HAWKES_BAY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27208';
+    public const EPSG_NAD83_VIRGINIA_SOUTH = 'urn:ogc:def:crs:EPSG::32147';
 
     /**
-     * NZGD49 / Hokitika Circuit
-     * Extent: New Zealand - South Island - Hokitika meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Hokitika 2000 (code 2121) from March 2000.
+     * NAD83 / Virginia South (ftUS)
+     * Extent: USA - Virginia - counties of Accomack; Albemarle; Alleghany; Amelia; Amherst; Appomattox; Bedford;
+     * Bland; Botetourt; Bristol; Brunswick; Buchanan; Buckingham; Campbell; Carroll; Charles City; Charlotte;
+     * Chesapeake; Chesterfield; Colonial Heights; Craig; Cumberland; Dickenson; Dinwiddie; Essex; Floyd; Fluvanna;
+     * Franklin; Giles; Gloucester; Goochland; Grayson; Greensville; Halifax; Hampton; Hanover; Henrico; Henry; Isle of
+     * Wight; James City; King and Queen; King William; Lancaster; Lee; Louisa; Lunenburg; Lynchburg; Mathews;
+     * Mecklenburg; Middlesex; Montgomery; Nelson; New Kent; Newport News; Norfolk; Northampton; Northumberland;
+     * Norton; Nottoway; Patrick; Petersburg; Pittsylvania; Portsmouth; Powhatan; Prince Edward; Prince George;
+     * Pulaski; Richmond; Roanoke; Rockbridge; Russell; Scott; Smyth; Southampton; Suffolk; Surry; Sussex; Tazewell;
+     * Washington; Wise; Wythe; York
+     * State law defines system in US survey feet. Federal definition is metric - see code 32147. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_HOKITIKA_CIRCUIT = 'urn:ogc:def:crs:EPSG::27221';
+    public const EPSG_NAD83_VIRGINIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2284';
 
     /**
-     * NZGD49 / Jacksons Bay Circuit
-     * Extent: New Zealand - South Island - Jacksons Bay meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Jacksons Bay 2000 (code 2123) from March 2000.
+     * NAD83 / Washington North
+     * Extent: USA - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N;
+     * Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens;
+     * Whatcom
+     * State law defines system in US survey feet. See code 2285 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_JACKSONS_BAY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27223';
+    public const EPSG_NAD83_WASHINGTON_NORTH = 'urn:ogc:def:crs:EPSG::32148';
 
     /**
-     * NZGD49 / Karamea Circuit
-     * Extent: New Zealand - South Island - Karamea meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Karamea 2000 (code 2116) from March 2000.
+     * NAD83 / Washington North (ftUS)
+     * Extent: USA - Washington - counties of Chelan; Clallam; Douglas; Ferry; Grant north of approximately 47°30'N;
+     * Island; Jefferson; King; Kitsap; Lincoln; Okanogan; Pend Oreille; San Juan; Skagit; Snohomish; Spokane; Stevens;
+     * Whatcom
+     * State law defines system in US survey feet. Federal definition is metric - see code 32148. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_KARAMEA_CIRCUIT = 'urn:ogc:def:crs:EPSG::27216';
+    public const EPSG_NAD83_WASHINGTON_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2285';
 
     /**
-     * NZGD49 / Lindis Peak Circuit
-     * Extent: New Zealand - South Island - Lindis Peak meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Lindis Peak 2000 (code 2127) from March 2000.
+     * NAD83 / Washington South
+     * Extent: USA - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield;
+     * Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce;
+     * Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima
+     * State law defines system in US survey feet. See code 2286 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_LINDIS_PEAK_CIRCUIT = 'urn:ogc:def:crs:EPSG::27227';
+    public const EPSG_NAD83_WASHINGTON_SOUTH = 'urn:ogc:def:crs:EPSG::32149';
 
     /**
-     * NZGD49 / Marlborough Circuit
-     * Extent: New Zealand - South Island - Marlborough meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Marlborough 2000 (code 2120) from March 2000.
+     * NAD83 / Washington South (ftUS)
+     * Extent: USA - Washington - counties of Adams; Asotin; Benton; Clark; Columbia; Cowlitz; Franklin; Garfield;
+     * Grant south of approximately 47°30'N; Grays Harbor; Kittitas; Klickitat; Lewis; Mason; Pacific; Pierce;
+     * Skamania; Thurston; Wahkiakum; Walla Walla; Whitman; Yakima
+     * State law defines system in US survey feet. Federal definition is metric - see code 32149. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_MARLBOROUGH_CIRCUIT = 'urn:ogc:def:crs:EPSG::27220';
+    public const EPSG_NAD83_WASHINGTON_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2286';
 
     /**
-     * NZGD49 / Mount Eden Circuit
-     * Extent: New Zealand - North Island - Mount Eden meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount Eden 2000 (code 2105) from March 2000.
+     * NAD83 / West Virginia North
+     * Extent: USA - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock;
+     * Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie;
+     * Taylor; Tucker; Tyler; Wetzel; Wirt; Wood
+     * State law defines system in US survey feet. See CRS code 26853 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_MOUNT_EDEN_CIRCUIT = 'urn:ogc:def:crs:EPSG::27205';
+    public const EPSG_NAD83_WEST_VIRGINIA_NORTH = 'urn:ogc:def:crs:EPSG::32150';
 
     /**
-     * NZGD49 / Mount Nicholas Circuit
-     * Extent: New Zealand - South Island - Mount Nicholas meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount Nicholas 2000 (code 2128) from March
-     * 2000.
+     * NAD83 / West Virginia North (ftUS)
+     * Extent: USA - West Virginia - counties of Barbour; Berkeley; Brooke; Doddridge; Grant; Hampshire; Hancock;
+     * Hardy; Harrison; Jefferson; Marion; Marshall; Mineral; Monongalia; Morgan; Ohio; Pleasants; Preston; Ritchie;
+     * Taylor; Tucker; Tyler; Wetzel; Wirt; Wood
+     * State law defines use of US survey feet. Federal definition is metric - see code 32150. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_MOUNT_NICHOLAS_CIRCUIT = 'urn:ogc:def:crs:EPSG::27228';
+    public const EPSG_NAD83_WEST_VIRGINIA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::26853';
 
     /**
-     * NZGD49 / Mount Pleasant Circuit
-     * Extent: New Zealand - South Island - Mount Pleasant meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount Pleasant 2000 (code 2124) from March
-     * 2000.
+     * NAD83 / West Virginia South
+     * Extent: USA - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier;
+     * Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton;
+     * Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming
+     * State law defines system in US survey feet. See CRS code 26854 for equivalent non-metric definition. For
+     * applications with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_MOUNT_PLEASANT_CIRCUIT = 'urn:ogc:def:crs:EPSG::27224';
+    public const EPSG_NAD83_WEST_VIRGINIA_SOUTH = 'urn:ogc:def:crs:EPSG::32151';
 
     /**
-     * NZGD49 / Mount York Circuit
-     * Extent: New Zealand - South Island - Mount York meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount York 2000 (code 2129) from March 2000.
+     * NAD83 / West Virginia South (ftUS)
+     * Extent: USA - West Virginia - counties of Boone; Braxton; Cabell; Calhoun; Clay; Fayette; Gilmer; Greenbrier;
+     * Jackson; Kanawha; Lewis; Lincoln; Logan; Mason; McDowell; Mercer; Mingo; Monroe; Nicholas; Pendleton;
+     * Pocahontas; Putnam; Raleigh; Randolph; Roane; Summers; Upshur; Wayne; Webster; Wyoming
+     * State law defines use of US survey feet. Federal definition is metric - see code 32151. For applications with an
+     * accuracy of better than 3ft, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_MOUNT_YORK_CIRCUIT = 'urn:ogc:def:crs:EPSG::27229';
+    public const EPSG_NAD83_WEST_VIRGINIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::26854';
 
     /**
-     * NZGD49 / Nelson Circuit
-     * Extent: New Zealand - South Island - Nelson meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Nelson 2000 (code 2115) from March 2000.
+     * NAD83 / Wisconsin Central
+     * Extent: USA - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson;
+     * Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage;
+     * Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood
+     * State law defines system in US survey feet. See code 2288 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_NELSON_CIRCUIT = 'urn:ogc:def:crs:EPSG::27215';
+    public const EPSG_NAD83_WISCONSIN_CENTRAL = 'urn:ogc:def:crs:EPSG::32153';
 
     /**
-     * NZGD49 / New Zealand Map Grid
-     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore
-     * Replaces 27291 (NZGD49 / North Island Grid) and 27292 (NZGD49 / South Island Grid) from 1972. Replaced by
-     * NZGD2000 / New Zealand Transverse Mercator 2000 from July 2001.
+     * NAD83 / Wisconsin Central (ftUS)
+     * Extent: USA - Wisconsin - counties of Barron; Brown; Buffalo; Chippewa; Clark; Door; Dunn; Eau Claire; Jackson;
+     * Kewaunee; Langlade; Lincoln; Marathon; Marinette; Menominee; Oconto; Outagamie; Pepin; Pierce; Polk; Portage;
+     * Rusk; Shawano; St Croix; Taylor; Trempealeau; Waupaca; Wood
+     * State law defines system in US survey feet. Federal definition is metric - see code 32153. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_NEW_ZEALAND_MAP_GRID = 'urn:ogc:def:crs:EPSG::27200';
+    public const EPSG_NAD83_WISCONSIN_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2288';
 
     /**
-     * NZGD49 / North Island Grid
-     * Extent: New Zealand - North Island
-     * Sears 1922 British foot-metre conversion factor applied to ellipsoid. Replaced by 27200 (GD49 / New Zealand Map
-     * Grid) in 1972.
+     * NAD83 / Wisconsin North
+     * Extent: USA - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida;
+     * Price; Sawyer; Vilas; Washburn
+     * State law defines system in US survey feet. See code 2287 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_NORTH_ISLAND_GRID = 'urn:ogc:def:crs:EPSG::27291';
+    public const EPSG_NAD83_WISCONSIN_NORTH = 'urn:ogc:def:crs:EPSG::32152';
 
     /**
-     * NZGD49 / North Taieri Circuit
-     * Extent: New Zealand - South Island - North Taieri meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / North Taieri 2000 (code 2131) from March 2000.
+     * NAD83 / Wisconsin North (ftUS)
+     * Extent: USA - Wisconsin - counties of Ashland; Bayfield; Burnett; Douglas; Florence; Forest; Iron; Oneida;
+     * Price; Sawyer; Vilas; Washburn
+     * State law defines system in US survey feet. Federal definition is metric - see code 32152. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_NORTH_TAIERI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27231';
+    public const EPSG_NAD83_WISCONSIN_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2287';
 
     /**
-     * NZGD49 / Observation Point Circuit
-     * Extent: New Zealand - South Island - Observation Point meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Observation Point 2000 (code 2130) from March
-     * 2000.
+     * NAD83 / Wisconsin South
+     * Extent: USA - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant;
+     * Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee;
+     * Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara;
+     * Winnebago
+     * State law defines system in US survey feet. See code 2289 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_OBSERVATION_POINT_CIRCUIT = 'urn:ogc:def:crs:EPSG::27230';
+    public const EPSG_NAD83_WISCONSIN_SOUTH = 'urn:ogc:def:crs:EPSG::32154';
 
     /**
-     * NZGD49 / Okarito Circuit
-     * Extent: New Zealand - South Island - Okarito meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Okarito 2000 (code 2122) from March 2000.
+     * NAD83 / Wisconsin South (ftUS)
+     * Extent: USA - Wisconsin - counties of Adams; Calumet; Columbia; Crawford; Dane; Dodge; Fond Du Lac; Grant;
+     * Green; Green Lake; Iowa; Jefferson; Juneau; Kenosha; La Crosse; Lafayette; Manitowoc; Marquette; Milwaukee;
+     * Monroe; Ozaukee; Racine; Richland; Rock; Sauk; Sheboygan; Vernon; Walworth; Washington; Waukesha; Waushara;
+     * Winnebago
+     * State law defines system in US survey feet. Federal definition is metric - see code 32154. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_OKARITO_CIRCUIT = 'urn:ogc:def:crs:EPSG::27222';
+    public const EPSG_NAD83_WISCONSIN_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2289';
 
     /**
-     * NZGD49 / Poverty Bay Circuit
-     * Extent: New Zealand - North Island - Poverty Bay meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Poverty Bay 2000 (code 2107) from March 2000.
+     * NAD83 / Wisconsin Transverse Mercator
+     * Extent: USA - Wisconsin
+     * Designed as a single zone for the whole state. Replaces NAD27 / Wisconsin Transverse Mercator (CRS code 3069).
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Wisconsin Transverse Mercator.
      */
-    public const EPSG_NZGD49_POVERTY_BAY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27207';
+    public const EPSG_NAD83_WISCONSIN_TRANSVERSE_MERCATOR = 'urn:ogc:def:crs:EPSG::3070';
 
     /**
-     * NZGD49 / South Island Grid
-     * Extent: New Zealand - South Island, Stewart Island
-     * Sears 1922 British foot-metre conversion factor applied to ellipsoid. Replaced by 27200 (GD49 / New Zealand Map
-     * Grid) in 1972.
+     * NAD83 / Wyoming East
+     * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
+     * State law defines system in US survey feet. See code 3736 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_SOUTH_ISLAND_GRID = 'urn:ogc:def:crs:EPSG::27292';
+    public const EPSG_NAD83_WYOMING_EAST = 'urn:ogc:def:crs:EPSG::32155';
 
     /**
-     * NZGD49 / Taranaki Circuit
-     * Extent: New Zealand - North Island - Taranaki meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Taranaki 2000 (code 2109) from March 2000.
+     * NAD83 / Wyoming East Central
+     * Extent: USA - Wyoming - counties of Big Horn; Carbon; Johnson; Natrona; Sheridan; Washakie
+     * State law defines system in US survey feet. See code 3737 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_TARANAKI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27209';
+    public const EPSG_NAD83_WYOMING_EAST_CENTRAL = 'urn:ogc:def:crs:EPSG::32156';
 
     /**
-     * NZGD49 / Timaru Circuit
-     * Extent: New Zealand - South Island - Timaru meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Timaru 2000 (code 2126) from March 2000.
+     * NAD83 / Wyoming East Central (ftUS)
+     * Extent: USA - Wyoming - counties of Big Horn; Carbon; Johnson; Natrona; Sheridan; Washakie
+     * State law defines use of US survey feet. Federal definition is metric - see code 32156. Replaced by NAD83(HARN)
+     * / SPCS for applications with an accuracy of better than 3 feet.
      */
-    public const EPSG_NZGD49_TIMARU_CIRCUIT = 'urn:ogc:def:crs:EPSG::27226';
+    public const EPSG_NAD83_WYOMING_EAST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3737';
 
     /**
-     * NZGD49 / Tuhirangi Circuit
-     * Extent: New Zealand - North Island - Tuhirangi meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Tuhirangi 2000 (code 2110) from March 2000.
+     * NAD83 / Wyoming East (ftUS)
+     * Extent: USA - Wyoming - counties of Albany; Campbell; Converse; Crook; Goshen; Laramie; Niobrara; Platte; Weston
+     * State law defines use of US survey feet. Federal definition is metric - see code 32155. Replaced by NAD83(HARN)
+     * / SPCS for applications with an accuracy of better than 3 feet.
      */
-    public const EPSG_NZGD49_TUHIRANGI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27210';
+    public const EPSG_NAD83_WYOMING_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3736';
 
     /**
-     * NZGD49 / UTM zone 58S
-     * Extent: New Zealand - nearshore west of 168°E
-     * Replaced by NZGD2000 / UTM zone 58S (code 2133) from March 2000.
+     * NAD83 / Wyoming Lambert
+     * Extent: USA - Wyoming.
      */
-    public const EPSG_NZGD49_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::27258';
+    public const EPSG_NAD83_WYOMING_LAMBERT = 'urn:ogc:def:crs:EPSG::32159';
 
     /**
-     * NZGD49 / UTM zone 59S
-     * Extent: New Zealand - nearshore between 168°E and 174°E
-     * Replaced by NZGD2000 / UTM zone 59S (code 2134) from March 2000.
+     * NAD83 / Wyoming West
+     * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
+     * State law defines system in US survey feet. See code 3739 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_UTM_ZONE_59S = 'urn:ogc:def:crs:EPSG::27259';
+    public const EPSG_NAD83_WYOMING_WEST = 'urn:ogc:def:crs:EPSG::32158';
 
     /**
-     * NZGD49 / UTM zone 60S
-     * Extent: New Zealand - nearshore east of 174°E
-     * Replaced by NZGD2000 / UTM zone 60S (code 2135) from March 2000.
+     * NAD83 / Wyoming West Central
+     * Extent: USA - Wyoming - counties of Fremont; Hot Springs; Park; Sweetwater
+     * State law defines system in US survey feet. See code 3738 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
-    public const EPSG_NZGD49_UTM_ZONE_60S = 'urn:ogc:def:crs:EPSG::27260';
+    public const EPSG_NAD83_WYOMING_WEST_CENTRAL = 'urn:ogc:def:crs:EPSG::32157';
 
     /**
-     * NZGD49 / Wairarapa Circuit
-     * Extent: New Zealand - North Island - Wairarapa meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Wairarapa 2000 (code 2112) from March 2000.
+     * NAD83 / Wyoming West Central (ftUS)
+     * Extent: USA - Wyoming - counties of Fremont; Hot Springs; Park; Sweetwater
+     * State law defines use of US survey feet. Federal definition is metric - see code 32157. Replaced by NAD83(HARN)
+     * / SPCS for applications with an accuracy of better than 3 feet.
      */
-    public const EPSG_NZGD49_WAIRARAPA_CIRCUIT = 'urn:ogc:def:crs:EPSG::27212';
+    public const EPSG_NAD83_WYOMING_WEST_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3738';
 
     /**
-     * NZGD49 / Wanganui Circuit
-     * Extent: New Zealand - North Island - Wanganui meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Wanganui 2000 (code 2111) from March 2000.
+     * NAD83 / Wyoming West (ftUS)
+     * Extent: USA - Wyoming - counties of Lincoln; Sublette; Teton; Uinta
+     * State law defines use of US survey feet. Federal definition is metric - see code 32158. Replaced by NAD83(HARN)
+     * / SPCS for applications with an accuracy of better than 3 feet.
      */
-    public const EPSG_NZGD49_WANGANUI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27211';
+    public const EPSG_NAD83_WYOMING_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3739';
 
     /**
-     * NZGD49 / Wellington Circuit
-     * Extent: New Zealand - North Island - Wellington meridional circuit area
-     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Wellington 2000 (code 2113) from March 2000.
+     * NAD83 / Yukon Albers
+     * Extent: Canada - Yukon
+     * This CRS name may sometimes be used as an alias for NAD83(CSRS) / Yukon Albers. See CRS code 3579.
      */
-    public const EPSG_NZGD49_WELLINGTON_CIRCUIT = 'urn:ogc:def:crs:EPSG::27213';
+    public const EPSG_NAD83_YUKON_ALBERS = 'urn:ogc:def:crs:EPSG::3578';
 
     /**
      * Nahrwan 1934 / Iraq zone
@@ -8065,6 +8830,190 @@ trait ProjectedConstantsChunk3
      * Extent: Trinidad and Tobago - Tobago - onshore.
      */
     public const EPSG_NAPARIMA_1972_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::27120';
+
+    /**
+     * NATRF2022e2020 / Gulf
+     * Extent: USA - offshore Gulf of Mexico outer continental shelf (GoM OCS) - protraction areas South Padre Island;
+     * North Padre Island; Mustang Island; Matagorda Island; Brazos; Galveston; High Island; Sabine Pass; West Cameron;
+     * East Cameron; Vermilion; South Marsh Island; Eugene Island; Ship Shoal; South Pelto; Bay Marchand; South
+     * Timbalier; Grand Isle; West Delta; South Pass; Main Pass; Breton Sound; Chandeleur; Corpus Christi; Port Isabel;
+     * East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon;
+     * Walker Ridge; Amery Terrace; Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South;
+     * Pensacola; Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment;
+     * Apalachicola; Florida Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin; Gainesville; Tarpon Springs;
+     * St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West
+     * See code 10980 for equivalent CRS in (international) feet.
+     */
+    public const EPSG_NATRF2022E2020_GULF = 'urn:ogc:def:crs:EPSG::10979';
+
+    /**
+     * NATRF2022e2020 / Gulf East Central (ft)
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water between approxinately 90°W and 84°W -
+     * protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin
+     * Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle
+     * Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
+     * Emulates most of offshore area of NAD27 / BLM 16N (ftUS) (CRS code 32066) to better than 6 ft, but south of
+     * 26°N differences can exceed 15ft. Emulation embeds change of ellipsoid and of unit (ftUS to ft). Notes: (i) NGS
+     * gives an equivalent definition in meters which is not included in the EPSG Dataset as this zone emulates SPCS27
+     * for which there is no metric definition. (ii) SPCS2022 CRSs normally have axis order N-E; this emulation of
+     * SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_EAST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10986';
+
+    /**
+     * NATRF2022e2020 / Gulf East (ft)
+     * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) east of approximately 84°W - protraction areas
+     * Gainesville; Tarpon Springs; St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley;
+     * Miami; Key West
+     * Emulates most of offshore area of NAD27 / BLM 17N (ftUS) (CRS code 32067) to better than 6 ft, but in the
+     * extreme southwestern part differences can exceed 15ft. Emulation embeds change of ellipsoid and of unit (ftUS to
+     * ft). Notes: (i) NGS gives an equivalent definition in meters which is not included in the EPSG Dataset as this
+     * zone emulates SPCS27 for which there is no metric definition. (ii) SPCS2022 CRSs normally have axis order N-E;
+     * this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_EAST_FT = 'urn:ogc:def:crs:EPSG::10987';
+
+    /**
+     * NATRF2022e2020 / Gulf (ft)
+     * Extent: USA - offshore Gulf of Mexico outer continental shelf (GoM OCS) - protraction areas South Padre Island;
+     * North Padre Island; Mustang Island; Matagorda Island; Brazos; Galveston; High Island; Sabine Pass; West Cameron;
+     * East Cameron; Vermilion; South Marsh Island; Eugene Island; Ship Shoal; South Pelto; Bay Marchand; South
+     * Timbalier; Grand Isle; West Delta; South Pass; Main Pass; Breton Sound; Chandeleur; Corpus Christi; Port Isabel;
+     * East Breaks; Alaminos Canyon; Garden Banks; Keathley Canyon; Sigsbee Escarpment; Ewing Bank; Green Canyon;
+     * Walker Ridge; Amery Terrace; Mobile; Viosca Knoll; Mississippi Canyon; Atwater Valley; Lund; Lund South;
+     * Pensacola; Destin Dome; De Soto Canyon; Lloyd Ridge; Henderson; Florida Plain; Campeche Escarpment;
+     * Apalachicola; Florida Middle Ground; The Elbow; Vernon Basin; Howell Hook; Rankin; Gainesville; Tarpon Springs;
+     * St Petersburg; Charlotte Harbor; Pulley Ridge; Dry Tortugas; Tortugas Valley; Miami; Key West
+     * See code 10979 for equivalent CRS in meters.
+     */
+    public const EPSG_NATRF2022E2020_GULF_FT = 'urn:ogc:def:crs:EPSG::10980';
+
+    /**
+     * NATRF2022e2020 / Gulf Louisiana Shelf (ft)
+     * Extent: USA - Gulf OCS - Louisiana shelf - leasing areas Sabine Pass; West Cameron, East Cameron, Vermilion,
+     * South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle, West
+     * Delta, South Pass, Breton Sound, Main Pass, Chandeleur
+     * Emulates offshore area of NAD27 / Louisiana South (CRS code 26785) to better than 6 ft. Emulation embeds change
+     * of ellipsoid and of unit (ftUS to ft). Notes: (i) NGS gives an equivalent definition in meters which is not
+     * included in the EPSG Dataset as this zone emulates SPCS27 for which there is no metric definition. (ii) SPCS2022
+     * CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_LOUISIANA_SHELF_FT = 'urn:ogc:def:crs:EPSG::10981';
+
+    /**
+     * NATRF2022e2020 / Gulf Texas Shelf North (ft)
+     * Extent: USA - Gulf OCS - Texas shelf north of approximately 27°48'N - leasing areas Matagorda Island, Brazos,
+     * Galveston, High Island; Sabine Pass
+     * Emulates offshore area of NAD27 / Texas South Central (CRS code 32040) to better than 6 ft. Emulation embeds
+     * change of ellipsoid and of unit (ftUS to ft). Notes: (i) NGS gives an equivalent definition in meters which is
+     * not included in the EPSG Dataset as this zone emulates SPCS27 for which there is no metric definition. (ii)
+     * SPCS2022 CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_TEXAS_SHELF_NORTH_FT = 'urn:ogc:def:crs:EPSG::10982';
+
+    /**
+     * NATRF2022e2020 / Gulf Texas Shelf South (ft)
+     * Extent: USA - Gulf OCS - Texas shelf south of approximately 27°50'N - leasing areas Mustang Island, North Padre
+     * Island and South Padre Island
+     * Emulates offshore area of NAD27 / Texas South (CRS code 32041) to better than 6 ft. Emulation embeds change of
+     * ellipsoid and of unit (ftUS to ft). Notes: (i) NGS gives an equivalent definition in meters which is not
+     * included in the EPSG Dataset as this zone emulates SPCS27 for which there is no metric definition. (ii) SPCS2022
+     * CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_TEXAS_SHELF_SOUTH_FT = 'urn:ogc:def:crs:EPSG::10983';
+
+    /**
+     * NATRF2022e2020 / Gulf West Central (ft)
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water between approxinately 96°W and 90°W -
+     * protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank,
+     * Green Canyon, Walker Ridge, Amery Terrace
+     * Emulates offshore area of NAD27 / BLM 15N (ftUS) (CRS code 32065) between approximately 26°N and 28°N to
+     * better than 6 ft, but south of 26°N differences can exceed 5m / 15ft. Emulation embeds change of ellipsoid and
+     * of unit (ftUS to ft). Notes: (i) NGS gives an equivalent definition in meters which is not included in the EPSG
+     * Dataset as this zone emulates SPCS27 for which there is no metric definition. (ii) SPCS2022 CRSs normally have
+     * axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_WEST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10985';
+
+    /**
+     * NATRF2022e2020 / Gulf West (ft)
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W  - protraction areas
+     * Corpus Christi, Port Isabel
+     * Emulates offshore deep water area of NAD27 / BLM 14N (ftUS) (CRS code 32064) to better than 6 ft. Emulation
+     * embeds change of ellipsoid and of unit (ftUS to ft). Notes: (i) NGS gives an equivalent definition in meters
+     * which is not included in the EPSG Dataset as this zone emulates SPCS27 for which there is no metric definition.
+     * (ii) SPCS2022 CRSs normally have axis order N-E; this emulation of SPCS27 uses SPCS27 order east (X) - north
+     * (Y).
+     */
+    public const EPSG_NATRF2022E2020_GULF_WEST_FT = 'urn:ogc:def:crs:EPSG::10984';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF instead
+     */
+    public const EPSG_NATRF2022_GULF = 'urn:ogc:def:crs:EPSG::10979';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_EAST_CENTRAL_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_EAST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10986';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_EAST_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_EAST_FT = 'urn:ogc:def:crs:EPSG::10987';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_FT = 'urn:ogc:def:crs:EPSG::10980';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_LOUISIANA_SHELF_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_LOUISIANA_SHELF_FT = 'urn:ogc:def:crs:EPSG::10981';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_TEXAS_SHELF_NORTH_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_TEXAS_SHELF_NORTH_FT = 'urn:ogc:def:crs:EPSG::10982';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_TEXAS_SHELF_SOUTH_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_TEXAS_SHELF_SOUTH_FT = 'urn:ogc:def:crs:EPSG::10983';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_WEST_CENTRAL_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_WEST_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::10985';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020_GULF_WEST_FT instead
+     */
+    public const EPSG_NATRF2022_GULF_WEST_FT = 'urn:ogc:def:crs:EPSG::10984';
+
+    /**
+     * NEA74 Noumea / Noumea Lambert
+     * Extent: New Caledonia - Grande Terre - Noumea district
+     * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163). Gives identical conversion results as NEA74 Noumea /
+     * Noumea Lambert 2 (CRS code 3166).
+     */
+    public const EPSG_NEA74_NOUMEA_NOUMEA_LAMBERT = 'urn:ogc:def:crs:EPSG::3165';
+
+    /**
+     * NEA74 Noumea / Noumea Lambert 2
+     * Extent: New Caledonia - Grande Terre - Noumea district
+     * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163). Variant of NEA74 Noumea / Noumea Lambert (CRS code
+     * 3166) with defining parameters at integer seconds: gives identical conversion results.
+     */
+    public const EPSG_NEA74_NOUMEA_NOUMEA_LAMBERT_2 = 'urn:ogc:def:crs:EPSG::3166';
+
+    /**
+     * NEA74 Noumea / UTM zone 58S
+     * Extent: New Caledonia - Grande Terre - Noumea district
+     * Replaced by RGNC91-93 / Lambert Caledonie (CRS code 3163).
+     */
+    public const EPSG_NEA74_NOUMEA_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::2998';
 
     /**
      * New Beijing / 3-degree Gauss-Kruger CM 102E
@@ -8516,6 +9465,74 @@ trait ProjectedConstantsChunk3
     public const EPSG_NEW_BEIJING_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::4578';
 
     /**
+     * NGN / UTM zone 38N
+     * Extent: Kuwait - onshore west of 48°E.
+     */
+    public const EPSG_NGN_UTM_ZONE_38N = 'urn:ogc:def:crs:EPSG::31838';
+
+    /**
+     * NGN / UTM zone 39N
+     * Extent: Kuwait - onshore east of 48°E.
+     */
+    public const EPSG_NGN_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::31839';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone I
+     * Extent: Norway - west of 3°30'W of Oslo (7°13'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 32N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_I = 'urn:ogc:def:crs:EPSG::27391';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone II
+     * Extent: Norway - between 3°30'W and 1°10' W of Oslo (7°13'22.5"E and 9°33'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 32N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_II = 'urn:ogc:def:crs:EPSG::27392';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone III
+     * Extent: Norway - between 1°10'W and 1°15'E of Oslo (9°33'22.5"E and 11°58'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 32N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_III = 'urn:ogc:def:crs:EPSG::27393';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone IV
+     * Extent: Norway - between 1°15'E and 4°20'E of Oslo (11°58'22.5"E and 15°03'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 32N and ETRF89 / UTM zone 33N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_IV = 'urn:ogc:def:crs:EPSG::27394';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone V
+     * Extent: Norway - between 4°20'E and 8°10'E of Oslo (15°03'22.5"E and 18°53'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 33N and ETRF89 / UTM zone 34N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_V = 'urn:ogc:def:crs:EPSG::27395';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone VI
+     * Extent: Norway - between 8°10'E and 12°10'E of Oslo (18°53'22.5"E and 22°53'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 34N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_VI = 'urn:ogc:def:crs:EPSG::27396';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone VII
+     * Extent: Norway - between 12°10'E and 16°15'E of Oslo (22°53'22.5"E and 26°58'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 34N and ETRF89 / UTM zone 35N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_VII = 'urn:ogc:def:crs:EPSG::27397';
+
+    /**
+     * NGO 1948 (Oslo) / NGO zone VIII
+     * Extent: Norway - east of 16°15'E of Oslo (26°58'22.5"E of Greenwich)
+     * To be phased out and replaced by ETRF89 / UTM zone 35N.
+     */
+    public const EPSG_NGO_1948_OSLO_NGO_ZONE_VIII = 'urn:ogc:def:crs:EPSG::27398';
+
+    /**
      * Nord Sahara 1959 / Nord Algerie
      * Extent: Algeria - onshore north of 38.5 grads North (34°39'N)
      * Replaces Voirol 1879 / Nord Algerie ancienne (code 30493). Grid coordinates on average across Algeria are
@@ -8557,62 +9574,629 @@ trait ProjectedConstantsChunk3
     public const EPSG_NORD_SAHARA_1959_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::30732';
 
     /**
-     * ONGD14 / UTM zone 39N
-     * Extent: Oman west of 54°E
-     * In Oman replaced usage of WGS 84 / UTM zone 39N projCRS (code 32639) in 2014. Replaced by ONGD17 / UTM zone 39N
-     * (code 9295) in 2019.
+     * NSIDC EASE-Grid Global
+     * Extent: World between 86°S and 86°N
+     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
+     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 Global (CRS code 6933), which should be preferred
+     * for new data.
      */
-    public const EPSG_ONGD14_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::7374';
+    public const EPSG_NSIDC_EASE_GRID_GLOBAL = 'urn:ogc:def:crs:EPSG::3410';
 
     /**
-     * ONGD14 / UTM zone 40N
-     * Extent: Oman between 54°E and 60°E
-     * In Oman replaced usage of WGS 84 / UTM zone 40N projCRS (code 32640) in 2014. Replaced by ONGD17 / UTM zone 40N
-     * (code 9296) in 2019.
+     * NSIDC EASE-Grid North
+     * Extent: Northern hemisphere
+     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
+     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 North (CRS code 6931), which should be preferred
+     * for new data.
      */
-    public const EPSG_ONGD14_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::7375';
+    public const EPSG_NSIDC_EASE_GRID_NORTH = 'urn:ogc:def:crs:EPSG::3408';
 
     /**
-     * ONGD14 / UTM zone 41N
-     * Extent: Oman - offshore east of 60°E
-     * Replaced by ONGD17 / UTM zone 41N (code 9296) in 2019.
+     * NSIDC EASE-Grid South
+     * Extent: Southern hemisphere
+     * Used as basis for Equal-Area Scalable Earth Grid (EASE-Grid). See information source for equations to define
+     * EASE-Grid overlay. Superseded by WGS 84 / NSIDC EASE-Grid 2.0 South (CRS code 6932), which should be preferred
+     * for new data.
      */
-    public const EPSG_ONGD14_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::7376';
+    public const EPSG_NSIDC_EASE_GRID_SOUTH = 'urn:ogc:def:crs:EPSG::3409';
 
     /**
-     * ONGD17 / UTM zone 39N
-     * Extent: Oman west of 54°E
-     * Replaces ONGD14 / UTM zone 39N projCRS (code 7374) from March 2019.
+     * NSIDC Sea Ice Polar Stereographic North
+     * Extent: Northern hemisphere - north of 60°N, including Arctic
+     * The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very
+     * small scales for which this system should be used this uncertainty may be insignificant. See CRS 3413 for
+     * geodetically preferred alternative.
      */
-    public const EPSG_ONGD17_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::9295';
+    public const EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH = 'urn:ogc:def:crs:EPSG::3411';
 
     /**
-     * ONGD17 / UTM zone 40N
-     * Extent: Oman between 54°E and 60°E
-     * Replaced ONGD14 / UTM zone 40N projCRS (code 7375) from March 2019.
+     * NSIDC Sea Ice Polar Stereographic South
+     * Extent: Southern hemisphere - south of 60°S - Antarctica
+     * The datum is unspecified. Uncertainty in location of over 1 km may result; at the coarse resolution and very
+     * small scales for which this system should be used this uncertainty may be insignificant. See CRS 3976 for
+     * geodetically preferred alternative.
      */
-    public const EPSG_ONGD17_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::9296';
+    public const EPSG_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH = 'urn:ogc:def:crs:EPSG::3412';
 
     /**
-     * ONGD17 / UTM zone 41N
-     * Extent: Oman - offshore east of 60°E
-     * Replaced ONGD14 / UTM zone 41N projCRS (code 7376) from March 2019.
+     * NTF (Paris) / Lambert Centre France
+     * Extent: France mainland onshore between 50.5 grads and 53.5 grads North (45°27'N to 48°09'N)
+     * Replaced by NTF (Paris) / France zone II (code 27572) from 1972.
      */
-    public const EPSG_ONGD17_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::9297';
+    public const EPSG_NTF_PARIS_LAMBERT_CENTRE_FRANCE = 'urn:ogc:def:crs:EPSG::27562';
 
     /**
-     * OSGB36 / British National Grid
-     * Extent: UK - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain
-     * (England, Wales and Scotland). Isle of Man onshore.
+     * NTF (Paris) / Lambert Corse
+     * Extent: France - Corsica onshore
+     * Replaced by NTF (Paris) / France zone IV (code 27574) from 1972.
      */
-    public const EPSG_OSGB36_BRITISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::27700';
+    public const EPSG_NTF_PARIS_LAMBERT_CORSE = 'urn:ogc:def:crs:EPSG::27564';
 
     /**
-     * OSNI 1952 / Irish National Grid
-     * Extent: UK - Northern Ireland (Ulster) - onshore
-     * Not used in Republic of Ireland. Replaced in 1975 by TM75 / Irish Grid (CRS code 29903).
+     * NTF (Paris) / Lambert Nord France
+     * Extent: France mainland onshore north of 53.5 grads North (48°09'N)
+     * Replaced by NTF (Paris) / France zone I (code 27571) from 1972.
      */
-    public const EPSG_OSNI_1952_IRISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::29901';
+    public const EPSG_NTF_PARIS_LAMBERT_NORD_FRANCE = 'urn:ogc:def:crs:EPSG::27561';
+
+    /**
+     * NTF (Paris) / Lambert Sud France
+     * Extent: France - mainland onshore south of 50.5 grads North (45°27'N)
+     * Replaced by NTF (Paris) / France zone III (code 27573) from 1972.
+     */
+    public const EPSG_NTF_PARIS_LAMBERT_SUD_FRANCE = 'urn:ogc:def:crs:EPSG::27563';
+
+    /**
+     * NTF (Paris) / Lambert zone I
+     * Extent: France mainland onshore north of 53.5 grads North (48°09'N)
+     * Introduced 1972. Replaces NTF (Paris) / Lambert Nord France (code 27561).
+     */
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_I = 'urn:ogc:def:crs:EPSG::27571';
+
+    /**
+     * NTF (Paris) / Lambert zone II
+     * Extent: France mainland onshore between 50.5 grads and 53.5 grads North (45°27'N to 48°09'N). Also used over
+     * all onshore mainland France
+     * Introduced 1972. Replaces NTF (Paris) / Lambert Centre France (code 27562).
+     */
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_II = 'urn:ogc:def:crs:EPSG::27572';
+
+    /**
+     * NTF (Paris) / Lambert zone III
+     * Extent: France - mainland onshore south of 50.5 grads North (45°27'N)
+     * Introduced 1972. Replaces NTF (Paris) / Lambert Sud France (code 27563).
+     */
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_III = 'urn:ogc:def:crs:EPSG::27573';
+
+    /**
+     * NTF (Paris) / Lambert zone IV
+     * Extent: France - Corsica onshore
+     * Introduced 1972. Replaces NTF (Paris) / Lambert Corse (code 27564).
+     */
+    public const EPSG_NTF_PARIS_LAMBERT_ZONE_IV = 'urn:ogc:def:crs:EPSG::27574';
+
+    /**
+     * NZGD2000 / Amuri 2000
+     * Extent: New Zealand - South Island - Amuri meridional circuit area
+     * Replaced NZGD49 / Amuri Circuit (code 27219) from March 2000.
+     */
+    public const EPSG_NZGD2000_AMURI_2000 = 'urn:ogc:def:crs:EPSG::2119';
+
+    /**
+     * NZGD2000 / Antipodes Islands TM 2000
+     * Extent: New Zealand - Antipodes Island, Bounty Islands.
+     */
+    public const EPSG_NZGD2000_ANTIPODES_ISLANDS_TM_2000 = 'urn:ogc:def:crs:EPSG::3790';
+
+    /**
+     * NZGD2000 / Auckland Islands TM 2000
+     * Extent: New Zealand - Snares Island, Auckland Island - onshore.
+     */
+    public const EPSG_NZGD2000_AUCKLAND_ISLANDS_TM_2000 = 'urn:ogc:def:crs:EPSG::3788';
+
+    /**
+     * NZGD2000 / Bay of Plenty 2000
+     * Extent: New Zealand - North Island - Bay of Plenty meridional circuit area
+     * Replaced NZGD49 / Bay of Plenty Circuit (code 27206) from March 2000.
+     */
+    public const EPSG_NZGD2000_BAY_OF_PLENTY_2000 = 'urn:ogc:def:crs:EPSG::2106';
+
+    /**
+     * NZGD2000 / Bluff 2000
+     * Extent: New Zealand - Stewart Island; South Island - Bluff meridional circuit area
+     * Replaced NZGD49 / Bluff Circuit (code 27232) from March 2000.
+     */
+    public const EPSG_NZGD2000_BLUFF_2000 = 'urn:ogc:def:crs:EPSG::2132';
+
+    /**
+     * NZGD2000 / Buller 2000
+     * Extent: New Zealand - South Island - Buller meridional circuit area
+     * Replaced NZGD49 / Buller Circuit (code 27217) from March 2000.
+     */
+    public const EPSG_NZGD2000_BULLER_2000 = 'urn:ogc:def:crs:EPSG::2117';
+
+    /**
+     * NZGD2000 / Campbell Island TM 2000
+     * Extent: New Zealand - Campbell Island.
+     */
+    public const EPSG_NZGD2000_CAMPBELL_ISLAND_TM_2000 = 'urn:ogc:def:crs:EPSG::3789';
+
+    /**
+     * NZGD2000 / Chatham Islands TM 2000
+     * Extent: New Zealand - Chatham Islands group - onshore
+     * Replaces CI1979 / Chatham Islands Map Grid (CRS code 5519) and NZGD2000 / Chatham Islands Circuit 2000 (CRS code
+     * 3764).
+     */
+    public const EPSG_NZGD2000_CHATHAM_ISLANDS_TM_2000 = 'urn:ogc:def:crs:EPSG::3793';
+
+    /**
+     * NZGD2000 / Chatham Island Circuit 2000
+     * Extent: New Zealand - Chatham Islands group - onshore
+     * Officially withdrawn on 6 June 2006. Should not be used for new datasets. Replaced by NZGD2000 / Chatham Island
+     * TM 2000 (CRS code 3793).
+     */
+    public const EPSG_NZGD2000_CHATHAM_ISLAND_CIRCUIT_2000 = 'urn:ogc:def:crs:EPSG::3764';
+
+    /**
+     * NZGD2000 / Collingwood 2000
+     * Extent: New Zealand - South Island - Collingwood meridional circuit area
+     * Replaced NZGD49 / Collingwood Circuit (code 27214) from March 2000.
+     */
+    public const EPSG_NZGD2000_COLLINGWOOD_2000 = 'urn:ogc:def:crs:EPSG::2114';
+
+    /**
+     * NZGD2000 / Gawler 2000
+     * Extent: New Zealand - South Island - Gawler meridional circuit area
+     * Replaced NZGD49 / Gawler Circuit (code 27225) from March 2000.
+     */
+    public const EPSG_NZGD2000_GAWLER_2000 = 'urn:ogc:def:crs:EPSG::2125';
+
+    /**
+     * NZGD2000 / Grey 2000
+     * Extent: New Zealand - South Island - Grey meridional circuit area
+     * Replaced NZGD49 / Grey Circuit (code 27218) from March 2000.
+     */
+    public const EPSG_NZGD2000_GREY_2000 = 'urn:ogc:def:crs:EPSG::2118';
+
+    /**
+     * NZGD2000 / Hawkes Bay 2000
+     * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area
+     * Replaced NZGD49 / Hawkes Bay Circuit (code 27208) from March 2000.
+     */
+    public const EPSG_NZGD2000_HAWKES_BAY_2000 = 'urn:ogc:def:crs:EPSG::2108';
+
+    /**
+     * NZGD2000 / Hokitika 2000
+     * Extent: New Zealand - South Island - Hokitika meridional circuit area
+     * Replaced NZGD49 / Hokitika Circuit (code 27221) from March 2000.
+     */
+    public const EPSG_NZGD2000_HOKITIKA_2000 = 'urn:ogc:def:crs:EPSG::2121';
+
+    /**
+     * NZGD2000 / Jacksons Bay 2000
+     * Extent: New Zealand - South Island - Jacksons Bay meridional circuit area
+     * Replaced NZGD49 / Jacksons Bay Circuit (code 27223) from March 2000.
+     */
+    public const EPSG_NZGD2000_JACKSONS_BAY_2000 = 'urn:ogc:def:crs:EPSG::2123';
+
+    /**
+     * NZGD2000 / Karamea 2000
+     * Extent: New Zealand - South Island - Karamea meridional circuit area
+     * Replaced NZGD49 / Karamea Circuit (code 27216) from March 2000.
+     */
+    public const EPSG_NZGD2000_KARAMEA_2000 = 'urn:ogc:def:crs:EPSG::2116';
+
+    /**
+     * NZGD2000 / Lindis Peak 2000
+     * Extent: New Zealand - South Island - Lindis Peak meridional circuit area
+     * Replaced NZGD49 / Lindis Peak Circuit (code 27227) from March 2000.
+     */
+    public const EPSG_NZGD2000_LINDIS_PEAK_2000 = 'urn:ogc:def:crs:EPSG::2127';
+
+    /**
+     * NZGD2000 / Marlborough 2000
+     * Extent: New Zealand - South Island - Marlborough meridional circuit area
+     * Replaced NZGD49 / Marlborough Circuit (code 27220) from March 2000.
+     */
+    public const EPSG_NZGD2000_MARLBOROUGH_2000 = 'urn:ogc:def:crs:EPSG::2120';
+
+    /**
+     * NZGD2000 / Mount Eden 2000
+     * Extent: New Zealand - North Island - Mount Eden meridional circuit area
+     * Replaced NZGD49 / Mount Eden Circuit (code 27205) from March 2000.
+     */
+    public const EPSG_NZGD2000_MOUNT_EDEN_2000 = 'urn:ogc:def:crs:EPSG::2105';
+
+    /**
+     * NZGD2000 / Mount Nicholas 2000
+     * Extent: New Zealand - South Island - Mount Nicholas meridional circuit area
+     * Replaced NZGD49 / Mount Nicholas Circuit (code 27228) from March 2000.
+     */
+    public const EPSG_NZGD2000_MOUNT_NICHOLAS_2000 = 'urn:ogc:def:crs:EPSG::2128';
+
+    /**
+     * NZGD2000 / Mount Pleasant 2000
+     * Extent: New Zealand - South Island - Mount Pleasant meridional circuit area
+     * Replaced NZGD49 / Mount Pleasant Circuit (code 27224) from March 2000.
+     */
+    public const EPSG_NZGD2000_MOUNT_PLEASANT_2000 = 'urn:ogc:def:crs:EPSG::2124';
+
+    /**
+     * NZGD2000 / Mount York 2000
+     * Extent: New Zealand - South Island - Mount York meridional circuit area
+     * Replaced NZGD49 / Mount York Circuit (code 27229) from March 2000.
+     */
+    public const EPSG_NZGD2000_MOUNT_YORK_2000 = 'urn:ogc:def:crs:EPSG::2129';
+
+    /**
+     * NZGD2000 / Nelson 2000
+     * Extent: New Zealand - South Island - Nelson meridional circuit area
+     * Replaced NZGD49 / Nelson Circuit (code 27215) from March 2000.
+     */
+    public const EPSG_NZGD2000_NELSON_2000 = 'urn:ogc:def:crs:EPSG::2115';
+
+    /**
+     * NZGD2000 / New Zealand Transverse Mercator 2000
+     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore
+     * Replaces NZGD49 / New Zealand Map Grid (code 27200) from July 2001.
+     */
+    public const EPSG_NZGD2000_NEW_ZEALAND_TRANSVERSE_MERCATOR_2000 = 'urn:ogc:def:crs:EPSG::2193';
+
+    /**
+     * NZGD2000 / North Taieri 2000
+     * Extent: New Zealand - South Island - North Taieri meridional circuit area
+     * Replaced NZGD49 / North Taieri Circuit (code 27231) from March 2000.
+     */
+    public const EPSG_NZGD2000_NORTH_TAIERI_2000 = 'urn:ogc:def:crs:EPSG::2131';
+
+    /**
+     * NZGD2000 / NZCS2000
+     * Extent: New Zealand - offshore
+     * See WGS 84 / NIWA Albers (CRS code 9191) for oceanic data statistical analysis.
+     */
+    public const EPSG_NZGD2000_NZCS2000 = 'urn:ogc:def:crs:EPSG::3851';
+
+    /**
+     * NZGD2000 / Observation Point 2000
+     * Extent: New Zealand - South Island - Observation Point meridional circuit area
+     * Replaced NZGD49 / Observation Point Circuit (code 27230) from March 2000.
+     */
+    public const EPSG_NZGD2000_OBSERVATION_POINT_2000 = 'urn:ogc:def:crs:EPSG::2130';
+
+    /**
+     * NZGD2000 / Okarito 2000
+     * Extent: New Zealand - South Island - Okarito meridional circuit area
+     * Replaced NZGD49 / Okarito Circuit (code 27222) from March 2000.
+     */
+    public const EPSG_NZGD2000_OKARITO_2000 = 'urn:ogc:def:crs:EPSG::2122';
+
+    /**
+     * NZGD2000 / Poverty Bay 2000
+     * Extent: New Zealand - North Island - Poverty Bay meridional circuit area
+     * Replaced NZGD49 / Poverty Bay Circuit (code 27207) from March 2000.
+     */
+    public const EPSG_NZGD2000_POVERTY_BAY_2000 = 'urn:ogc:def:crs:EPSG::2107';
+
+    /**
+     * NZGD2000 / Raoul Island TM 2000
+     * Extent: New Zealand - Raoul Island, Kermadec Islands.
+     */
+    public const EPSG_NZGD2000_RAOUL_ISLAND_TM_2000 = 'urn:ogc:def:crs:EPSG::3791';
+
+    /**
+     * NZGD2000 / Taranaki 2000
+     * Extent: New Zealand - North Island - Taranaki meridional circuit area
+     * Replaced NZGD49 / Taranaki Circuit (code 27209) from March 2000.
+     */
+    public const EPSG_NZGD2000_TARANAKI_2000 = 'urn:ogc:def:crs:EPSG::2109';
+
+    /**
+     * NZGD2000 / Timaru 2000
+     * Extent: New Zealand - South Island - Timaru meridional circuit area
+     * Replaced NZGD49 / Timaru Circuit (code 27226) from March 2000.
+     */
+    public const EPSG_NZGD2000_TIMARU_2000 = 'urn:ogc:def:crs:EPSG::2126';
+
+    /**
+     * NZGD2000 / Tuhirangi 2000
+     * Extent: New Zealand - North Island - Tuhirangi meridional circuit area
+     * Replaced NZGD49 / Tuhirangi Circuit (code 27210) from March 2000.
+     */
+    public const EPSG_NZGD2000_TUHIRANGI_2000 = 'urn:ogc:def:crs:EPSG::2110';
+
+    /**
+     * NZGD2000 / UTM zone 1S
+     * Extent: New Zealand - offshore between 180°W and 174°W.
+     */
+    public const EPSG_NZGD2000_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::5700';
+
+    /**
+     * NZGD2000 / UTM zone 58S
+     * Extent: New Zealand - offshore between 162°E and 168°E
+     * Replaces NZGD49 / UTM zone 58S (code 27258) from March 2000.
+     */
+    public const EPSG_NZGD2000_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::2133';
+
+    /**
+     * NZGD2000 / UTM zone 59S
+     * Extent: New Zealand - offshore between 168°E and 174°E
+     * Replaces NZGD49 / UTM zone 59S (code 27259) from March 2000.
+     */
+    public const EPSG_NZGD2000_UTM_ZONE_59S = 'urn:ogc:def:crs:EPSG::2134';
+
+    /**
+     * NZGD2000 / UTM zone 60S
+     * Extent: New Zealand - offshore between 174°E and 180°E
+     * Replaces NZGD49 / UTM zone 60S (code 27260) from March 2000.
+     */
+    public const EPSG_NZGD2000_UTM_ZONE_60S = 'urn:ogc:def:crs:EPSG::2135';
+
+    /**
+     * NZGD2000 / Wairarapa 2000
+     * Extent: New Zealand - North Island - Wairarapa meridional circuit area
+     * Replaced NZGD49 / Wairarapa Circuit (code 27212) from March 2000.
+     */
+    public const EPSG_NZGD2000_WAIRARAPA_2000 = 'urn:ogc:def:crs:EPSG::2112';
+
+    /**
+     * NZGD2000 / Wanganui 2000
+     * Extent: New Zealand - North Island - Wanganui meridional circuit area
+     * Replaced NZGD49 / Wanganui Circuit (code 27211) from March 2000.
+     */
+    public const EPSG_NZGD2000_WANGANUI_2000 = 'urn:ogc:def:crs:EPSG::2111';
+
+    /**
+     * NZGD2000 / Wellington 2000
+     * Extent: New Zealand - North Island - Wellington meridional circuit area
+     * Replaced NZGD49 / Wellington Circuit (code 27213) from March 2000.
+     */
+    public const EPSG_NZGD2000_WELLINGTON_2000 = 'urn:ogc:def:crs:EPSG::2113';
+
+    /**
+     * NZGD49 / Amuri Circuit
+     * Extent: New Zealand - South Island - Amuri meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Amuri 2000 (code 2119) from March 2000.
+     */
+    public const EPSG_NZGD49_AMURI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27219';
+
+    /**
+     * NZGD49 / Bay of Plenty Circuit
+     * Extent: New Zealand - North Island - Bay of Plenty meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Bay of Plenty 2000 (code 2106) from March
+     * 2000.
+     */
+    public const EPSG_NZGD49_BAY_OF_PLENTY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27206';
+
+    /**
+     * NZGD49 / Bluff Circuit
+     * Extent: New Zealand - Stewart Island; South Island - Bluff meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Bluff 2000 (code 2132) from March 2000.
+     */
+    public const EPSG_NZGD49_BLUFF_CIRCUIT = 'urn:ogc:def:crs:EPSG::27232';
+
+    /**
+     * NZGD49 / Buller Circuit
+     * Extent: New Zealand - South Island - Buller meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Buller 2000 (code 2117) from March 2000.
+     */
+    public const EPSG_NZGD49_BULLER_CIRCUIT = 'urn:ogc:def:crs:EPSG::27217';
+
+    /**
+     * NZGD49 / Collingwood Circuit
+     * Extent: New Zealand - South Island - Collingwood meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Collingwood 2000 (code 2114) from March 2000.
+     */
+    public const EPSG_NZGD49_COLLINGWOOD_CIRCUIT = 'urn:ogc:def:crs:EPSG::27214';
+
+    /**
+     * NZGD49 / Gawler Circuit
+     * Extent: New Zealand - South Island - Gawler meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Gawler 2000 (code 2125) from March 2000.
+     */
+    public const EPSG_NZGD49_GAWLER_CIRCUIT = 'urn:ogc:def:crs:EPSG::27225';
+
+    /**
+     * NZGD49 / Grey Circuit
+     * Extent: New Zealand - South Island - Grey meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Grey 2000 (code 2118) from March 2000.
+     */
+    public const EPSG_NZGD49_GREY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27218';
+
+    /**
+     * NZGD49 / Hawkes Bay Circuit
+     * Extent: New Zealand - North Island - Hawkes Bay meridional circuit and Napier vertical crs area
+     * Replaced Hawkes Bay 1931 datum with Imperial measure version of projection in 1972. Replaced by NZGD2000 /
+     * Hawkes Bay 2000 (code 2108) from March 2000.
+     */
+    public const EPSG_NZGD49_HAWKES_BAY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27208';
+
+    /**
+     * NZGD49 / Hokitika Circuit
+     * Extent: New Zealand - South Island - Hokitika meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Hokitika 2000 (code 2121) from March 2000.
+     */
+    public const EPSG_NZGD49_HOKITIKA_CIRCUIT = 'urn:ogc:def:crs:EPSG::27221';
+
+    /**
+     * NZGD49 / Jacksons Bay Circuit
+     * Extent: New Zealand - South Island - Jacksons Bay meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Jacksons Bay 2000 (code 2123) from March 2000.
+     */
+    public const EPSG_NZGD49_JACKSONS_BAY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27223';
+
+    /**
+     * NZGD49 / Karamea Circuit
+     * Extent: New Zealand - South Island - Karamea meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Karamea 2000 (code 2116) from March 2000.
+     */
+    public const EPSG_NZGD49_KARAMEA_CIRCUIT = 'urn:ogc:def:crs:EPSG::27216';
+
+    /**
+     * NZGD49 / Lindis Peak Circuit
+     * Extent: New Zealand - South Island - Lindis Peak meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Lindis Peak 2000 (code 2127) from March 2000.
+     */
+    public const EPSG_NZGD49_LINDIS_PEAK_CIRCUIT = 'urn:ogc:def:crs:EPSG::27227';
+
+    /**
+     * NZGD49 / Marlborough Circuit
+     * Extent: New Zealand - South Island - Marlborough meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Marlborough 2000 (code 2120) from March 2000.
+     */
+    public const EPSG_NZGD49_MARLBOROUGH_CIRCUIT = 'urn:ogc:def:crs:EPSG::27220';
+
+    /**
+     * NZGD49 / Mount Eden Circuit
+     * Extent: New Zealand - North Island - Mount Eden meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount Eden 2000 (code 2105) from March 2000.
+     */
+    public const EPSG_NZGD49_MOUNT_EDEN_CIRCUIT = 'urn:ogc:def:crs:EPSG::27205';
+
+    /**
+     * NZGD49 / Mount Nicholas Circuit
+     * Extent: New Zealand - South Island - Mount Nicholas meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount Nicholas 2000 (code 2128) from March
+     * 2000.
+     */
+    public const EPSG_NZGD49_MOUNT_NICHOLAS_CIRCUIT = 'urn:ogc:def:crs:EPSG::27228';
+
+    /**
+     * NZGD49 / Mount Pleasant Circuit
+     * Extent: New Zealand - South Island - Mount Pleasant meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount Pleasant 2000 (code 2124) from March
+     * 2000.
+     */
+    public const EPSG_NZGD49_MOUNT_PLEASANT_CIRCUIT = 'urn:ogc:def:crs:EPSG::27224';
+
+    /**
+     * NZGD49 / Mount York Circuit
+     * Extent: New Zealand - South Island - Mount York meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Mount York 2000 (code 2129) from March 2000.
+     */
+    public const EPSG_NZGD49_MOUNT_YORK_CIRCUIT = 'urn:ogc:def:crs:EPSG::27229';
+
+    /**
+     * NZGD49 / Nelson Circuit
+     * Extent: New Zealand - South Island - Nelson meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Nelson 2000 (code 2115) from March 2000.
+     */
+    public const EPSG_NZGD49_NELSON_CIRCUIT = 'urn:ogc:def:crs:EPSG::27215';
+
+    /**
+     * NZGD49 / New Zealand Map Grid
+     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore
+     * Replaces 27291 (NZGD49 / North Island Grid) and 27292 (NZGD49 / South Island Grid) from 1972. Replaced by
+     * NZGD2000 / New Zealand Transverse Mercator 2000 from July 2001.
+     */
+    public const EPSG_NZGD49_NEW_ZEALAND_MAP_GRID = 'urn:ogc:def:crs:EPSG::27200';
+
+    /**
+     * NZGD49 / North Island Grid
+     * Extent: New Zealand - North Island
+     * Sears 1922 British foot-metre conversion factor applied to ellipsoid. Replaced by 27200 (GD49 / New Zealand Map
+     * Grid) in 1972.
+     */
+    public const EPSG_NZGD49_NORTH_ISLAND_GRID = 'urn:ogc:def:crs:EPSG::27291';
+
+    /**
+     * NZGD49 / North Taieri Circuit
+     * Extent: New Zealand - South Island - North Taieri meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / North Taieri 2000 (code 2131) from March 2000.
+     */
+    public const EPSG_NZGD49_NORTH_TAIERI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27231';
+
+    /**
+     * NZGD49 / Observation Point Circuit
+     * Extent: New Zealand - South Island - Observation Point meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Observation Point 2000 (code 2130) from March
+     * 2000.
+     */
+    public const EPSG_NZGD49_OBSERVATION_POINT_CIRCUIT = 'urn:ogc:def:crs:EPSG::27230';
+
+    /**
+     * NZGD49 / Okarito Circuit
+     * Extent: New Zealand - South Island - Okarito meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Okarito 2000 (code 2122) from March 2000.
+     */
+    public const EPSG_NZGD49_OKARITO_CIRCUIT = 'urn:ogc:def:crs:EPSG::27222';
+
+    /**
+     * NZGD49 / Poverty Bay Circuit
+     * Extent: New Zealand - North Island - Poverty Bay meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Poverty Bay 2000 (code 2107) from March 2000.
+     */
+    public const EPSG_NZGD49_POVERTY_BAY_CIRCUIT = 'urn:ogc:def:crs:EPSG::27207';
+
+    /**
+     * NZGD49 / South Island Grid
+     * Extent: New Zealand - South Island, Stewart Island
+     * Sears 1922 British foot-metre conversion factor applied to ellipsoid. Replaced by 27200 (GD49 / New Zealand Map
+     * Grid) in 1972.
+     */
+    public const EPSG_NZGD49_SOUTH_ISLAND_GRID = 'urn:ogc:def:crs:EPSG::27292';
+
+    /**
+     * NZGD49 / Taranaki Circuit
+     * Extent: New Zealand - North Island - Taranaki meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Taranaki 2000 (code 2109) from March 2000.
+     */
+    public const EPSG_NZGD49_TARANAKI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27209';
+
+    /**
+     * NZGD49 / Timaru Circuit
+     * Extent: New Zealand - South Island - Timaru meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Timaru 2000 (code 2126) from March 2000.
+     */
+    public const EPSG_NZGD49_TIMARU_CIRCUIT = 'urn:ogc:def:crs:EPSG::27226';
+
+    /**
+     * NZGD49 / Tuhirangi Circuit
+     * Extent: New Zealand - North Island - Tuhirangi meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Tuhirangi 2000 (code 2110) from March 2000.
+     */
+    public const EPSG_NZGD49_TUHIRANGI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27210';
+
+    /**
+     * NZGD49 / UTM zone 58S
+     * Extent: New Zealand - nearshore west of 168°E
+     * Replaced by NZGD2000 / UTM zone 58S (code 2133) from March 2000.
+     */
+    public const EPSG_NZGD49_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::27258';
+
+    /**
+     * NZGD49 / UTM zone 59S
+     * Extent: New Zealand - nearshore between 168°E and 174°E
+     * Replaced by NZGD2000 / UTM zone 59S (code 2134) from March 2000.
+     */
+    public const EPSG_NZGD49_UTM_ZONE_59S = 'urn:ogc:def:crs:EPSG::27259';
+
+    /**
+     * NZGD49 / UTM zone 60S
+     * Extent: New Zealand - nearshore east of 174°E
+     * Replaced by NZGD2000 / UTM zone 60S (code 2135) from March 2000.
+     */
+    public const EPSG_NZGD49_UTM_ZONE_60S = 'urn:ogc:def:crs:EPSG::27260';
+
+    /**
+     * NZGD49 / Wairarapa Circuit
+     * Extent: New Zealand - North Island - Wairarapa meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Wairarapa 2000 (code 2112) from March 2000.
+     */
+    public const EPSG_NZGD49_WAIRARAPA_CIRCUIT = 'urn:ogc:def:crs:EPSG::27212';
+
+    /**
+     * NZGD49 / Wanganui Circuit
+     * Extent: New Zealand - North Island - Wanganui meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Wanganui 2000 (code 2111) from March 2000.
+     */
+    public const EPSG_NZGD49_WANGANUI_CIRCUIT = 'urn:ogc:def:crs:EPSG::27211';
+
+    /**
+     * NZGD49 / Wellington Circuit
+     * Extent: New Zealand - North Island - Wellington meridional circuit area
+     * Replaced Imperial measure version in 1972. Replaced by NZGD2000 / Wellington 2000 (code 2113) from March 2000.
+     */
+    public const EPSG_NZGD49_WELLINGTON_CIRCUIT = 'urn:ogc:def:crs:EPSG::27213';
 
     /**
      * Ocotepeque 1935 / Costa Rica Norte
@@ -8695,6 +10279,76 @@ trait ProjectedConstantsChunk3
     public const EPSG_OLD_HAWAIIAN_HAWAII_ZONE_5 = 'urn:ogc:def:crs:EPSG::3565';
 
     /**
+     * ONGD14 / UTM zone 39N
+     * Extent: Oman west of 54°E
+     * In Oman replaced usage of WGS 84 / UTM zone 39N projCRS (code 32639) in 2014. Replaced by ONGD17 / UTM zone 39N
+     * (code 9295) in 2019.
+     */
+    public const EPSG_ONGD14_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::7374';
+
+    /**
+     * ONGD14 / UTM zone 40N
+     * Extent: Oman between 54°E and 60°E
+     * In Oman replaced usage of WGS 84 / UTM zone 40N projCRS (code 32640) in 2014. Replaced by ONGD17 / UTM zone 40N
+     * (code 9296) in 2019.
+     */
+    public const EPSG_ONGD14_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::7375';
+
+    /**
+     * ONGD14 / UTM zone 41N
+     * Extent: Oman - offshore east of 60°E
+     * Replaced by ONGD17 / UTM zone 41N (code 9296) in 2019.
+     */
+    public const EPSG_ONGD14_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::7376';
+
+    /**
+     * ONGD17 / UTM zone 39N
+     * Extent: Oman west of 54°E
+     * Replaces ONGD14 / UTM zone 39N projCRS (code 7374) from March 2019.
+     */
+    public const EPSG_ONGD17_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::9295';
+
+    /**
+     * ONGD17 / UTM zone 40N
+     * Extent: Oman between 54°E and 60°E
+     * Replaced ONGD14 / UTM zone 40N projCRS (code 7375) from March 2019.
+     */
+    public const EPSG_ONGD17_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::9296';
+
+    /**
+     * ONGD17 / UTM zone 41N
+     * Extent: Oman - offshore east of 60°E
+     * Replaced ONGD14 / UTM zone 41N projCRS (code 7376) from March 2019.
+     */
+    public const EPSG_ONGD17_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::9297';
+
+    /**
+     * OSGB36 / British National Grid
+     * Extent: UK - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain
+     * (England, Wales and Scotland). Isle of Man onshore.
+     */
+    public const EPSG_OSGB36_BRITISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::27700';
+
+    /**
+     * OSGB36 / Heathrow Airport GIS Grid 2026
+     * Extent: UK - Heathrow airport and surrounding area
+     * Heathrow Airport GIS Grid 2026 approximates Heathrow Airport Grid (HAG) (CRS code 11378) to an accuracy of
+     * better than 12mm within airport area and 89 mm across full area of use (2D RMS 0.007 and 0.039 m respectively
+     * derived through comparison of coordinates at 100m spacing throughout the airport area). Created for use in GIS
+     * applications that do not support the true HAG definition through engineering CRS (code 11378) and similarity
+     * transformation to British National Grid (code 11388). Accuracy of approximation deteriorates beyond airport
+     * extent - do not use this CRS beyond that area.
+     */
+    public const EPSG_OSGB36_HEATHROW_AIRPORT_GIS_GRID_2026 = 'urn:ogc:def:crs:EPSG::11390';
+
+    /**
+     * OSNI 1952 / Irish National Grid
+     * Extent: UK - Northern Ireland (Ulster) - onshore
+     * Not used in Republic of Ireland. Replaced in 1975 by TM75 / Irish Grid (CRS code 29903).
+     */
+    public const EPSG_OSNI_1952_IRISH_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::29901';
+
+    /**
      * Ostenfeld reconstruction
      * Extent: Denmark - onshore northern Schleswig and surrounding islands (i.e. Jutland south of the pre-1920 border
      * near the Kongea river)
@@ -8707,10 +10361,79 @@ trait ProjectedConstantsChunk3
     /**
      * OxWo08 Grid
      * Extent: UK - on or related to the rail route from Oxford to Worcester
-     * Defined through transformation ETRS89 to OxWo08-IRF (1) (code 10230) and map projection OxWo08-TM (code 10234).
-     * Emulates the OxWo08 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to OxWo08-IRF (1) (code 10230) and map projection
+     * OxWo08-TM (code 10234). Emulates the OxWo08 Snake projection applied to ETRS89 as realized through OSNet v2009.
      */
     public const EPSG_OXWO08_GRID = 'urn:ogc:def:crs:EPSG::10235';
+
+    /**
+     * Palestine 1923 / Israeli CS Grid
+     * Extent: Israel - onshore; Palestine onshore
+     * See projection remarks. Replaced by Israeli TM Grid (EPSG code 2039).
+     */
+    public const EPSG_PALESTINE_1923_ISRAELI_CS_GRID = 'urn:ogc:def:crs:EPSG::28193';
+
+    /**
+     * Palestine 1923 / Palestine Belt
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
+     * See projection remarks. Also found without 1 million added to FN: see CRS code 7142.
+     */
+    public const EPSG_PALESTINE_1923_PALESTINE_BELT = 'urn:ogc:def:crs:EPSG::28192';
+
+    /**
+     * Palestine 1923 / Palestine Grid
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
+     * Replaced by CRS 28192 (AMS use) and 28193 (in Israel).
+     */
+    public const EPSG_PALESTINE_1923_PALESTINE_GRID = 'urn:ogc:def:crs:EPSG::28191';
+
+    /**
+     * Palestine 1923 / Palestine Grid modified
+     * Extent: Israel - onshore; Jordan; Palestine - onshore
+     * See projection remarks. Also found with 1 million added to FN: see CRS code 28192.
+     */
+    public const EPSG_PALESTINE_1923_PALESTINE_GRID_MODIFIED = 'urn:ogc:def:crs:EPSG::7142';
+
+    /**
+     * Pampa del Castillo / Argentina 1
+     * Extent: Argentina - Chibut province west of 70°30'W and south of approximately 44°55'S and Santa Cruz province
+     * west of 70°30'W and north of approximately 50°20'S
+     * Replaced by Campo Inchauspe / Argentina 1 (CRS code 22191) for topographic mapping, but use continues for oil
+     * exploration and production in Golfo San Jorge basin (44°S to 47.5°S).
+     */
+    public const EPSG_PAMPA_DEL_CASTILLO_ARGENTINA_1 = 'urn:ogc:def:crs:EPSG::9284';
+
+    /**
+     * Pampa del Castillo / Argentina 2
+     * Extent: Argentina - Chibut province between 70°30'W and 67°30'W and south of approximately 42°30'S and Santa
+     * Cruz province between 70°30'W and 67°30'W and north of approximately 50°20'S
+     * Replaced by Campo Inchauspe / Argentina 2 (CRS code 22192) for topographic mapping, but use continues for oil
+     * exploration and production in Golfo San Jorge basin (44°S to 47.5°S).
+     */
+    public const EPSG_PAMPA_DEL_CASTILLO_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::2082';
+
+    /**
+     * Pampa del Castillo / Argentina 3
+     * Extent: Argentina - Chibut province east of 67°30'W and south of approximately 43°35'S, Santa Cruz province
+     * east of 67°30'W and north of approximately 49°23'S, and offshore Golfo san Jorge
+     * Replaced by Campo Inchauspe / Argentina 3 (CRS code 22193) for topographic mapping, but use continues for oil
+     * exploration and production in Golfo San Jorge basin (44°S to 47.5°S).
+     */
+    public const EPSG_PAMPA_DEL_CASTILLO_ARGENTINA_3 = 'urn:ogc:def:crs:EPSG::9285';
+
+    /**
+     * Panama-Colon 1911 / Panama Lambert
+     * Extent: Panama - onshore
+     * Replaces Panama-Colon / Panama Polyconic from 1940s.
+     */
+    public const EPSG_PANAMA_COLON_1911_PANAMA_LAMBERT = 'urn:ogc:def:crs:EPSG::5469';
+
+    /**
+     * Panama-Colon 1911 / Panama Polyconic
+     * Extent: Panama - onshore
+     * Replaced by Panama-Colon / Panama Lambert from 1940s.
+     */
+    public const EPSG_PANAMA_COLON_1911_PANAMA_POLYCONIC = 'urn:ogc:def:crs:EPSG::5472';
 
     /**
      * PD/83 / 3-degree Gauss-Kruger zone 3
@@ -8745,6 +10468,53 @@ trait ProjectedConstantsChunk3
      * changed) for GIS applications.
      */
     public const EPSG_PD_83_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::5667';
+
+    /**
+     * Perroud 1950 / Terre Adelie Polar Stereographic
+     * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E
+     * Replaced by RGTAAF07 / Terre Adelie Polar Stereographic (CRS code 7082).
+     */
+    public const EPSG_PERROUD_1950_TERRE_ADELIE_POLAR_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::2986';
+
+    /**
+     * Peru96 / UTM zone 17S
+     * Extent: Peru - between 84°W and 78°W.
+     */
+    public const EPSG_PERU96_UTM_ZONE_17S = 'urn:ogc:def:crs:EPSG::5839';
+
+    /**
+     * Peru96 / UTM zone 18S
+     * Extent: Peru - between 78°W and 72°W.
+     */
+    public const EPSG_PERU96_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::5387';
+
+    /**
+     * Peru96 / UTM zone 19S
+     * Extent: Peru - east of 72°W.
+     */
+    public const EPSG_PERU96_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5389';
+
+    /**
+     * Petrels 1972 / Terre Adelie Polar Stereographic
+     * Extent: Antarctica - Adelie Land - Petrels island
+     * Replaced by RGTAAF07 / Terre Adelie Polar Stereographic (CRS code 7082).
+     */
+    public const EPSG_PETRELS_1972_TERRE_ADELIE_POLAR_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::2985';
+
+    /**
+     * Pitcairn 1967 / UTM zone 9S
+     * Extent: Pitcairn - Pitcairn Island
+     * Replaced by Pitcairn 2006 / Pitcairn TM 2006 (CRS code 3783).
+     */
+    public const EPSG_PITCAIRN_1967_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::3784';
+
+    /**
+     * Pitcairn 2006 / Pitcairn TM 2006
+     * Extent: Pitcairn - Pitcairn Island
+     * Replaces Pitcairn 1967 / UTM zone 9S (CRS code 3784). For practical purposes may be considered to be WGS 84 /
+     * Pitcairn TM 2006.
+     */
+    public const EPSG_PITCAIRN_2006_PITCAIRN_TM_2006 = 'urn:ogc:def:crs:EPSG::3783';
 
     /**
      * PN68 / UTM zone 27N
@@ -8806,6 +10576,25 @@ trait ProjectedConstantsChunk3
      * Extent: Papua New Guinea - east of 162°E to EEZ limit.
      */
     public const EPSG_PNG94_PNGMG94_ZONE_58 = 'urn:ogc:def:crs:EPSG::9875';
+
+    /**
+     * Pointe Noire / UTM zone 32S
+     * Extent: Congo.
+     */
+    public const EPSG_POINTE_NOIRE_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::28232';
+
+    /**
+     * Porto Santo 1995 / UTM zone 28N
+     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
+     * Replaced by PTRA08 / UTM zone 28N (CRS code 5016).
+     */
+    public const EPSG_PORTO_SANTO_1995_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::3061';
+
+    /**
+     * Porto Santo / UTM zone 28N
+     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
+     */
+    public const EPSG_PORTO_SANTO_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::2942';
 
     /**
      * POSGAR 2007 / Argentina 1
@@ -9176,139 +10965,11 @@ trait ProjectedConstantsChunk3
     public const EPSG_PTRA08_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::5016';
 
     /**
-     * Palestine 1923 / Israeli CS Grid
-     * Extent: Israel - onshore; Palestine onshore
-     * See projection remarks. Replaced by Israeli TM Grid (EPSG code 2039).
+     * Puerto Rico State Plane CS of 1927
+     * Extent: Puerto Rico - onshore
+     * Sometimes erroneously referred to as NAD27 / Puerto Rico State Plane CS.
      */
-    public const EPSG_PALESTINE_1923_ISRAELI_CS_GRID = 'urn:ogc:def:crs:EPSG::28193';
-
-    /**
-     * Palestine 1923 / Palestine Belt
-     * Extent: Israel - onshore; Jordan; Palestine - onshore
-     * See projection remarks. Also found without 1 million added to FN: see CRS code 7142.
-     */
-    public const EPSG_PALESTINE_1923_PALESTINE_BELT = 'urn:ogc:def:crs:EPSG::28192';
-
-    /**
-     * Palestine 1923 / Palestine Grid
-     * Extent: Israel - onshore; Jordan; Palestine - onshore
-     * Replaced by CRS 28192 (AMS use) and 28193 (in Israel).
-     */
-    public const EPSG_PALESTINE_1923_PALESTINE_GRID = 'urn:ogc:def:crs:EPSG::28191';
-
-    /**
-     * Palestine 1923 / Palestine Grid modified
-     * Extent: Israel - onshore; Jordan; Palestine - onshore
-     * See projection remarks. Also found with 1 million added to FN: see CRS code 28192.
-     */
-    public const EPSG_PALESTINE_1923_PALESTINE_GRID_MODIFIED = 'urn:ogc:def:crs:EPSG::7142';
-
-    /**
-     * Pampa del Castillo / Argentina 1
-     * Extent: Argentina - Chibut province west of 70°30'W and south of approximately 44°55'S and Santa Cruz province
-     * west of 70°30'W and north of approximately 50°20'S
-     * Replaced by Campo Inchauspe / Argentina 1 (CRS code 22191) for topographic mapping, but use continues for oil
-     * exploration and production in Golfo San Jorge basin (44°S to 47.5°S).
-     */
-    public const EPSG_PAMPA_DEL_CASTILLO_ARGENTINA_1 = 'urn:ogc:def:crs:EPSG::9284';
-
-    /**
-     * Pampa del Castillo / Argentina 2
-     * Extent: Argentina - Chibut province between 70°30'W and 67°30'W and south of approximately 42°30'S and Santa
-     * Cruz province between 70°30'W and 67°30'W and north of approximately 50°20'S
-     * Replaced by Campo Inchauspe / Argentina 2 (CRS code 22192) for topographic mapping, but use continues for oil
-     * exploration and production in Golfo San Jorge basin (44°S to 47.5°S).
-     */
-    public const EPSG_PAMPA_DEL_CASTILLO_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::2082';
-
-    /**
-     * Pampa del Castillo / Argentina 3
-     * Extent: Argentina - Chibut province east of 67°30'W and south of approximately 43°35'S and Santa Cruz province
-     * east of 67°30'W and north of approximately 49°23'S
-     * Replaced by Campo Inchauspe / Argentina 3 (CRS code 22193) for topographic mapping, but use continues for oil
-     * exploration and production in Golfo San Jorge basin (44°S to 47.5°S).
-     */
-    public const EPSG_PAMPA_DEL_CASTILLO_ARGENTINA_3 = 'urn:ogc:def:crs:EPSG::9285';
-
-    /**
-     * Panama-Colon 1911 / Panama Lambert
-     * Extent: Panama - onshore
-     * Replaces Panama-Colon / Panama Polyconic from 1940s.
-     */
-    public const EPSG_PANAMA_COLON_1911_PANAMA_LAMBERT = 'urn:ogc:def:crs:EPSG::5469';
-
-    /**
-     * Panama-Colon 1911 / Panama Polyconic
-     * Extent: Panama - onshore
-     * Replaced by Panama-Colon / Panama Lambert from 1940s.
-     */
-    public const EPSG_PANAMA_COLON_1911_PANAMA_POLYCONIC = 'urn:ogc:def:crs:EPSG::5472';
-
-    /**
-     * Perroud 1950 / Terre Adelie Polar Stereographic
-     * Extent: Antarctica - Adelie Land - coastal area between 136°E and 142°E
-     * Replaced by RGTAAF07 / Terre Adelie Polar Stereographic (CRS code 7082).
-     */
-    public const EPSG_PERROUD_1950_TERRE_ADELIE_POLAR_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::2986';
-
-    /**
-     * Peru96 / UTM zone 17S
-     * Extent: Peru - between 84°W and 78°W.
-     */
-    public const EPSG_PERU96_UTM_ZONE_17S = 'urn:ogc:def:crs:EPSG::5839';
-
-    /**
-     * Peru96 / UTM zone 18S
-     * Extent: Peru - between 78°W and 72°W.
-     */
-    public const EPSG_PERU96_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::5387';
-
-    /**
-     * Peru96 / UTM zone 19S
-     * Extent: Peru - east of 72°W.
-     */
-    public const EPSG_PERU96_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5389';
-
-    /**
-     * Petrels 1972 / Terre Adelie Polar Stereographic
-     * Extent: Antarctica - Adelie Land - Petrels island
-     * Replaced by RGTAAF07 / Terre Adelie Polar Stereographic (CRS code 7082).
-     */
-    public const EPSG_PETRELS_1972_TERRE_ADELIE_POLAR_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::2985';
-
-    /**
-     * Pitcairn 1967 / UTM zone 9S
-     * Extent: Pitcairn - Pitcairn Island
-     * Replaced by Pitcairn 2006 / Pitcairn TM 2006 (CRS code 3783).
-     */
-    public const EPSG_PITCAIRN_1967_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::3784';
-
-    /**
-     * Pitcairn 2006 / Pitcairn TM 2006
-     * Extent: Pitcairn - Pitcairn Island
-     * Replaces Pitcairn 1967 / UTM zone 9S (CRS code 3784). For practical purposes may be considered to be WGS 84 /
-     * Pitcairn TM 2006.
-     */
-    public const EPSG_PITCAIRN_2006_PITCAIRN_TM_2006 = 'urn:ogc:def:crs:EPSG::3783';
-
-    /**
-     * Pointe Noire / UTM zone 32S
-     * Extent: Congo.
-     */
-    public const EPSG_POINTE_NOIRE_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::28232';
-
-    /**
-     * Porto Santo / UTM zone 28N
-     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore.
-     */
-    public const EPSG_PORTO_SANTO_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::2942';
-
-    /**
-     * Porto Santo 1995 / UTM zone 28N
-     * Extent: Portugal - Madeira, Porto Santo and Desertas islands - onshore
-     * Replaced by PTRA08 / UTM zone 28N (CRS code 5016).
-     */
-    public const EPSG_PORTO_SANTO_1995_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::3061';
+    public const EPSG_PUERTO_RICO_STATE_PLANE_CS_OF_1927 = 'urn:ogc:def:crs:EPSG::3991';
 
     /**
      * Puerto Rico / St. Croix
@@ -9324,13 +10985,6 @@ trait ProjectedConstantsChunk3
      * 26920).
      */
     public const EPSG_PUERTO_RICO_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::3920';
-
-    /**
-     * Puerto Rico State Plane CS of 1927
-     * Extent: Puerto Rico - onshore
-     * Sometimes erroneously referred to as NAD27 / Puerto Rico State Plane CS.
-     */
-    public const EPSG_PUERTO_RICO_STATE_PLANE_CS_OF_1927 = 'urn:ogc:def:crs:EPSG::3991';
 
     /**
      * Pulkovo 1942 / 3-degree Gauss-Kruger CM 102E
@@ -10147,526 +11801,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::2525';
 
     /**
-     * Pulkovo 1942 / CS63 zone A1
-     * Extent: Armenia and Georgia onshore west of 43°02'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_A1 = 'urn:ogc:def:crs:EPSG::2935';
-
-    /**
-     * Pulkovo 1942 / CS63 zone A2
-     * Extent: Armenia and Georgia between 43°02'E and 46°02'E; Azerbaijan west of 46°02'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_A2 = 'urn:ogc:def:crs:EPSG::2936';
-
-    /**
-     * Pulkovo 1942 / CS63 zone A3
-     * Extent: Armenia and Georgia east of 46°02'E; Azerbaijan between 46°02' and 49°02'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_A3 = 'urn:ogc:def:crs:EPSG::2937';
-
-    /**
-     * Pulkovo 1942 / CS63 zone A4
-     * Extent: Azerbaijan east of 49°02'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_A4 = 'urn:ogc:def:crs:EPSG::2938';
-
-    /**
-     * Pulkovo 1942 / CS63 zone C0
-     * Extent: Estonia, Latvia and Lithuania - onshore west of 23°27'E. Russia - Kaliningrad onshore.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_C0 = 'urn:ogc:def:crs:EPSG::3350';
-
-    /**
-     * Pulkovo 1942 / CS63 zone C1
-     * Extent: Estonia, Latvia and Lithuania - onshore between 23°27'E and 26°27'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_C1 = 'urn:ogc:def:crs:EPSG::3351';
-
-    /**
-     * Pulkovo 1942 / CS63 zone C2
-     * Extent: Estonia, Latvia and Lithuania - onshore east of 26°27'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_C2 = 'urn:ogc:def:crs:EPSG::3352';
-
-    /**
-     * Pulkovo 1942 / CS63 zone K2
-     * Extent: Kazakhstan between 49°16'E and 52°16'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_K2 = 'urn:ogc:def:crs:EPSG::2939';
-
-    /**
-     * Pulkovo 1942 / CS63 zone K3
-     * Extent: Kazakhstan between 52°16'E and 55°16'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_K3 = 'urn:ogc:def:crs:EPSG::2940';
-
-    /**
-     * Pulkovo 1942 / CS63 zone K4
-     * Extent: Kazakhstan between 55°16'E and 58°16'E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_K4 = 'urn:ogc:def:crs:EPSG::2941';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X1
-     * Extent: Ukraine - west of 25°E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X1 = 'urn:ogc:def:crs:EPSG::7825';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X2
-     * Extent: Ukraine - between 25°E and 28°E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X2 = 'urn:ogc:def:crs:EPSG::7826';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X3
-     * Extent: Ukraine - between 28°E and 31°E, onshore.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X3 = 'urn:ogc:def:crs:EPSG::7827';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X4
-     * Extent: Ukraine - between 31°E and 34°E, onshore.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X4 = 'urn:ogc:def:crs:EPSG::7828';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X5
-     * Extent: Ukraine - between 34°E and 37°E, onshore.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X5 = 'urn:ogc:def:crs:EPSG::7829';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X6
-     * Extent: Ukraine - between 37°E and 40°E, onshore.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X6 = 'urn:ogc:def:crs:EPSG::7830';
-
-    /**
-     * Pulkovo 1942 / CS63 zone X7
-     * Extent: Ukraine - east of 40°E.
-     */
-    public const EPSG_PULKOVO_1942_CS63_ZONE_X7 = 'urn:ogc:def:crs:EPSG::7831';
-
-    /**
-     * Pulkovo 1942 / Caspian Sea Mercator
-     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russia - Caspian Sea; Turkmenistan - offshore.
-     */
-    public const EPSG_PULKOVO_1942_CASPIAN_SEA_MERCATOR = 'urn:ogc:def:crs:EPSG::3388';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 105E
-     * Extent: Russia - onshore between 102°E and 108°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 18 (code 28418).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_105E = 'urn:ogc:def:crs:EPSG::2508';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 111E
-     * Extent: Russia - onshore between 108°E and 114°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 19 (code 28419).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_111E = 'urn:ogc:def:crs:EPSG::2509';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 117E
-     * Extent: Russia - onshore between 114°E and 120°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 20 (code 28420).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_117E = 'urn:ogc:def:crs:EPSG::2510';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 123E
-     * Extent: Russia - onshore between 120°E and 126°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 21 (code 28421).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_123E = 'urn:ogc:def:crs:EPSG::2511';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 129E
-     * Extent: Russia - onshore between 126°E and 132°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 22 (code 28422).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_129E = 'urn:ogc:def:crs:EPSG::2512';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 135E
-     * Extent: Russia - onshore between 132°E and 138°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 23 (code 28423).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_135E = 'urn:ogc:def:crs:EPSG::2513';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 141E
-     * Extent: Russia - onshore between 138°E and 144°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 24 (code 28424).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_141E = 'urn:ogc:def:crs:EPSG::2514';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 147E
-     * Extent: Russia - onshore between 144°E and 150°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 25 (code 28425).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_147E = 'urn:ogc:def:crs:EPSG::2515';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 153E
-     * Extent: Russia - onshore between 150°E and 156°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 26 (code 28426).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_153E = 'urn:ogc:def:crs:EPSG::2516';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 159E
-     * Extent: Russia - onshore between 156°E and 162°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 27 (code 28427).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_159E = 'urn:ogc:def:crs:EPSG::2517';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 165E
-     * Extent: Russia - onshore between 162°E and 168°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 28 (code 28428).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_165E = 'urn:ogc:def:crs:EPSG::2518';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 171E
-     * Extent: Russia - onshore between 168°E and 174°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 29 (code 28429).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_171E = 'urn:ogc:def:crs:EPSG::2519';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 171W
-     * Extent: Russia - onshore east of 174°W
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 32 (code 28432).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_171W = 'urn:ogc:def:crs:EPSG::2522';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 177E
-     * Extent: Russia - onshore between 174°E and 180°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 30 (code 28430).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_177E = 'urn:ogc:def:crs:EPSG::2520';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 177W
-     * Extent: Russia - onshore between 180°E and 174°W
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 31 (code 28431).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_177W = 'urn:ogc:def:crs:EPSG::2521';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 21E
-     * Extent: Belarus, Estonia, Latvia, Lithuania and Ukraine - onshore west of 24°E. Russia - Kaliningrad onshore
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 4 (code 28404).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_21E = 'urn:ogc:def:crs:EPSG::2494';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 27E
-     * Extent: Estonia; Latvia and Lithuania - onshore east of 24°E; Belarus, Moldova, Russia and Ukraine - onshore
-     * 24°E to 30°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 5 (code 28405).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_27E = 'urn:ogc:def:crs:EPSG::2495';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 33E
-     * Extent: Belarus and Moldova - east of 30°E; Russia and Ukraine - onshore 30°E to 36°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 6 (code 28406).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_33E = 'urn:ogc:def:crs:EPSG::2496';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 39E
-     * Extent: Georgia - onshore west of 36°E; Russia - onshore 36°E to 42°E; Ukraine - onshore east of 36°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 7 (code 28407).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_39E = 'urn:ogc:def:crs:EPSG::2497';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 45E
-     * Extent: Armenia - west of 48°E; Azerbaijan - west of 48°E; Georgia - east of 42°E; Kazakhstan - west of
-     * 48°E; Russia - onshore 42°E to 48°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 8 (code 28408).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_45E = 'urn:ogc:def:crs:EPSG::2498';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 51E
-     * Extent: Azerbaijan - east of 48°E; Kazakhstan - 48°E to 54°E; Russia - 48°E to 54°E; Turkmenistan - west of
-     * 54°E. Includes Caspian Sea (considered a lake rather than offshore)
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 9 (code 28409).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_51E = 'urn:ogc:def:crs:EPSG::2499';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 57E
-     * Extent: Kazakhstan; Russia - onshore; Turkmenistan - 54°E to 60°E; Uzbekistan - west of 60°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 10 (code 28410).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_57E = 'urn:ogc:def:crs:EPSG::2500';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 63E
-     * Extent: Kazakhstan; Russia - onshore; Uzbekistan - 60°E to 66°E; Turkmenistan - east of 60°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 11 (code 28411).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_63E = 'urn:ogc:def:crs:EPSG::2501';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 69E
-     * Extent: Kazakhstan, Russia onshore and Uzbekistan - 66°E to 72°E; Kyrgyzstan and Tajikistan - west of 72°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 12 (code 28412).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_69E = 'urn:ogc:def:crs:EPSG::2502';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 75E
-     * Extent: Kazakhstan; Kyrgyzstan; Russia onshore - 72°E to 78°E; Tajikistan and Uzbekistan - east of 72°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 13 (code 28413).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_75E = 'urn:ogc:def:crs:EPSG::2503';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 81E
-     * Extent: Kazakhstan and Russia onshore - 78°E to 84°E; Kyrgyzstan - east of 78°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 14 (code 28414).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_81E = 'urn:ogc:def:crs:EPSG::2504';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 87E
-     * Extent: Kazakhstan - east of 84°E; Russia - onshore 84°E to 90°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 15 (code 28415).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_87E = 'urn:ogc:def:crs:EPSG::2505';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 93E
-     * Extent: Russia - onshore between 90°E and 96°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 16 (code 28416).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_93E = 'urn:ogc:def:crs:EPSG::2506';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger CM 99E
-     * Extent: Russia - onshore between 96°E and 102°E
-     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 17 (code 28417).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_99E = 'urn:ogc:def:crs:EPSG::2507';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 10
-     * Extent: Kazakhstan; Russia - onshore; Turkmenistan - 54°E to 60°E; Uzbekistan - west of 60°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 57E (code 2500).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::28410';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 11
-     * Extent: Kazakhstan; Russia - onshore; Uzbekistan - 60°E to 66°E; Turkmenistan - east of 60°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 63E (code 2501).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::28411';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 12
-     * Extent: Kazakhstan, Russia onshore and Uzbekistan - 66°E to 72°E; Kyrgyzstan and Tajikistan - west of 72°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 69E (code 2502).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::28412';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 13
-     * Extent: Kazakhstan; Kyrgyzstan; Russia onshore - 72°E to 78°E; Tajikistan and Uzbekistan - east of 72°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 75E (code 2503).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::28413';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 14
-     * Extent: Kazakhstan and Russia onshore - 78°E to 84°E; Kyrgyzstan - east of 78°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 81E (code 2504).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::28414';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 15
-     * Extent: Kazakhstan - east of 84°E; Russia - onshore 84°E to 90°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 87E (code 2505).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::28415';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 16
-     * Extent: Russia - onshore between 90°E and 96°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 93E (code 2506).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_16 = 'urn:ogc:def:crs:EPSG::28416';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 17
-     * Extent: Russia - onshore between 96°E and 102°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 99E (code 2507).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_17 = 'urn:ogc:def:crs:EPSG::28417';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 18
-     * Extent: Russia - onshore between 102°E and 108°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 105E (code 2508).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_18 = 'urn:ogc:def:crs:EPSG::28418';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 19
-     * Extent: Russia - onshore between 108°E and 114°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 111E (code 2509).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_19 = 'urn:ogc:def:crs:EPSG::28419';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 20
-     * Extent: Russia - onshore between 114°E and 120°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 117E (code 2510).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_20 = 'urn:ogc:def:crs:EPSG::28420';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 21
-     * Extent: Russia - onshore between 120°E and 126°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 123E (code 2511).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_21 = 'urn:ogc:def:crs:EPSG::28421';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 22
-     * Extent: Russia - onshore between 126°E and 132°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 129E (code 2512).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_22 = 'urn:ogc:def:crs:EPSG::28422';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 23
-     * Extent: Russia - onshore between 132°E and 138°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 135E (code 2513).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::28423';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 24
-     * Extent: Russia - onshore between 138°E and 144°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 141E (code 2514).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_24 = 'urn:ogc:def:crs:EPSG::28424';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 25
-     * Extent: Russia - onshore between 144°E and 150°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 147E (code 2515).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_25 = 'urn:ogc:def:crs:EPSG::28425';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 26
-     * Extent: Russia - onshore between 150°E and 156°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 153E (code 2516).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_26 = 'urn:ogc:def:crs:EPSG::28426';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 27
-     * Extent: Russia - onshore between 156°E and 162°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 159E (code 2517).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_27 = 'urn:ogc:def:crs:EPSG::28427';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 28
-     * Extent: Russia - onshore between 162°E and 168°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 165E (code 2518).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_28 = 'urn:ogc:def:crs:EPSG::28428';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 29
-     * Extent: Russia - onshore between 168°E and 174°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 171E (code 2519).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_29 = 'urn:ogc:def:crs:EPSG::28429';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 30
-     * Extent: Russia - onshore between 174°E and 180°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 177E (code 2520).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_30 = 'urn:ogc:def:crs:EPSG::28430';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 31
-     * Extent: Russia - onshore between 180°E and 174°W
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 177W (code 2521).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_31 = 'urn:ogc:def:crs:EPSG::28431';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 32
-     * Extent: Russia - onshore east of 174°W
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 171W (code 2522).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_32 = 'urn:ogc:def:crs:EPSG::28432';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 4
-     * Extent: Belarus, Estonia, Latvia, Lithuania and Ukraine - onshore west of 24°E. Russia - Kaliningrad onshore
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 21E (code 2494).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::28404';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 5
-     * Extent: Estonia; Latvia and Lithuania - onshore east of 24°E; Belarus, Moldova, Russia and Ukraine - onshore
-     * 24°E to 30°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 27E (code 2495).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::28405';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 6
-     * Extent: Belarus and Moldova - east of 30°E; Russia and Ukraine - onshore 30°E to 36°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 33E (code 2496).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::28406';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 7
-     * Extent: Georgia - onshore west of 36°E; Russia - onshore 36°E to 42°E; Ukraine - onshore east of 36°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 39E (code 2497).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::28407';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 8
-     * Extent: Armenia - west of 48°E; Azerbaijan - west of 48°E; Georgia - east of 42°E; Kazakhstan - west of
-     * 48°E; Russia - onshore 42°E to 48°E
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 45E (code 2498).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::28408';
-
-    /**
-     * Pulkovo 1942 / Gauss-Kruger zone 9
-     * Extent: Azerbaijan - east of 48°E; Kazakhstan - 48°E to 54°E; Russia - 48°E to 54°E; Turkmenistan - west of
-     * 54°E. Includes Caspian Sea (considered a lake rather than offshore)
-     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 51E (code 2499).
-     */
-    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::28409';
-
-    /**
      * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 10
      * Extent: Bulgaria and Romania - onshore east of 28°30'E.
      */
@@ -10756,12 +11890,6 @@ trait ProjectedConstantsChunk3
     public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::3839';
 
     /**
-     * Pulkovo 1942(58) / GUGiK-80
-     * Extent: Poland - onshore.
-     */
-    public const EPSG_PULKOVO_1942_58_GUGIK_80 = 'urn:ogc:def:crs:EPSG::3328';
-
-    /**
      * Pulkovo 1942(58) / Gauss-Kruger zone 2
      * Extent: Germany - states of former East Germany - west of 12°E
      * Replaced by Pulkovo 1942(83) / Gauss-Kruger zone 2 (CRS code 3834). See CRS code 5631 for variant with axes
@@ -10809,6 +11937,12 @@ trait ProjectedConstantsChunk3
      * Extent: Bulgaria, Poland and Romania - onshore east of 24°E.
      */
     public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::3335';
+
+    /**
+     * Pulkovo 1942(58) / GUGiK-80
+     * Extent: Poland - onshore.
+     */
+    public const EPSG_PULKOVO_1942_58_GUGIK_80 = 'urn:ogc:def:crs:EPSG::3328';
 
     /**
      * Pulkovo 1942(58) / Poland zone I
@@ -10928,22 +12062,163 @@ trait ProjectedConstantsChunk3
     public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::4434';
 
     /**
-     * @deprecated use EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_4 instead
+     * Pulkovo 1942(83) / Gauss-Kruger zone 2
+     * Extent: Germany - states of former East Germany - west of 12°E
+     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 2 (CRS code 3833). See CRS code 5664 for variant with axes order
+     * reversed to easting before northing for use in GIS applications.
      */
-    public const EPSG_NAD83_CSRS_V6_MTM_NOVA_SCOTIA_ZONE_4 = 'urn:ogc:def:crs:EPSG::8082';
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_2 = 'urn:ogc:def:crs:EPSG::3834';
 
     /**
-     * @deprecated use EPSG_NAD83_CSRS_V6_MTM_NS_2010_ZONE_5 instead
+     * Pulkovo 1942(83) / Gauss-Kruger zone 2 (E-N)
+     * Extent: Germany - states of former East Germany - west of 12°E
+     * Pulkovo 1942(83) / Gauss-Kruger zone 2 (CRS code 3834) but with axis order reversed (and axis abbreviations
+     * changed) for GIS applications.
      */
-    public const EPSG_NAD83_CSRS_V6_MTM_NOVA_SCOTIA_ZONE_5 = 'urn:ogc:def:crs:EPSG::8083';
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_2_E_N = 'urn:ogc:def:crs:EPSG::5664';
 
     /**
-     * @deprecated use EPSG_NAD83_CSRS_V2_QUEBEC_ALBERS instead
+     * Pulkovo 1942(83) / Gauss-Kruger zone 3
+     * Extent: Germany (former DDR) - onshore east of 12°E. Czechia, Hungary and Slovakia - west of 18°E
+     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 3 (CRS code 3333). See CRS code 5665 for variant with axes order
+     * reversed to easting before northing for use in GIS applications.
      */
-    public const EPSG_NAD83_CSRS_QUEBEC_ALBERS = 'urn:ogc:def:crs:EPSG::6624';
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::3835';
 
     /**
-     * @deprecated use EPSG_NAD83_CSRS_V2_QUEBEC_LAMBERT instead
+     * Pulkovo 1942(83) / Gauss-Kruger zone 3 (E-N)
+     * Extent: Germany (former DDR) - onshore east of 12°E. Czechia, Hungary and Slovakia - west of 18°E
+     * Pulkovo 1942(83) / Gauss-Kruger zone 3 (CRS code 3835) but with axis order reversed (and axis abbreviations
+     * changed) for GIS applications.
      */
-    public const EPSG_NAD83_CSRS_QUEBEC_LAMBERT = 'urn:ogc:def:crs:EPSG::6622';
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5665';
+
+    /**
+     * Pulkovo 1942(83) / Gauss-Kruger zone 4
+     * Extent: Czechia, Hungary and Slovakia - east of 18°E
+     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 4 (CRS code 3334).
+     */
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::3836';
+
+    /**
+     * Pulkovo 1942 / Caspian Sea Mercator
+     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russia - Caspian Sea; Turkmenistan - offshore.
+     */
+    public const EPSG_PULKOVO_1942_CASPIAN_SEA_MERCATOR = 'urn:ogc:def:crs:EPSG::3388';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A1
+     * Extent: Armenia and Georgia onshore west of 43°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A1 = 'urn:ogc:def:crs:EPSG::2935';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A2
+     * Extent: Armenia and Georgia between 43°02'E and 46°02'E; Azerbaijan west of 46°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A2 = 'urn:ogc:def:crs:EPSG::2936';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A3
+     * Extent: Armenia and Georgia east of 46°02'E; Azerbaijan between 46°02' and 49°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A3 = 'urn:ogc:def:crs:EPSG::2937';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A4
+     * Extent: Azerbaijan east of 49°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A4 = 'urn:ogc:def:crs:EPSG::2938';
+
+    /**
+     * Pulkovo 1942 / CS63 zone C0
+     * Extent: Estonia, Latvia and Lithuania - onshore west of 23°27'E. Russia - Kaliningrad onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_C0 = 'urn:ogc:def:crs:EPSG::3350';
+
+    /**
+     * Pulkovo 1942 / CS63 zone C1
+     * Extent: Estonia, Latvia and Lithuania - onshore between 23°27'E and 26°27'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_C1 = 'urn:ogc:def:crs:EPSG::3351';
+
+    /**
+     * Pulkovo 1942 / CS63 zone C2
+     * Extent: Estonia, Latvia and Lithuania - onshore east of 26°27'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_C2 = 'urn:ogc:def:crs:EPSG::3352';
+
+    /**
+     * Pulkovo 1942 / CS63 zone K2
+     * Extent: Kazakhstan between 49°16'E and 52°16'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_K2 = 'urn:ogc:def:crs:EPSG::2939';
+
+    /**
+     * Pulkovo 1942 / CS63 zone K3
+     * Extent: Kazakhstan between 52°16'E and 55°16'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_K3 = 'urn:ogc:def:crs:EPSG::2940';
+
+    /**
+     * Pulkovo 1942 / CS63 zone K4
+     * Extent: Kazakhstan between 55°16'E and 58°16'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_K4 = 'urn:ogc:def:crs:EPSG::2941';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X1
+     * Extent: Ukraine - west of 25°E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X1 = 'urn:ogc:def:crs:EPSG::7825';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X2
+     * Extent: Ukraine - between 25°E and 28°E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X2 = 'urn:ogc:def:crs:EPSG::7826';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X3
+     * Extent: Ukraine - between 28°E and 31°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X3 = 'urn:ogc:def:crs:EPSG::7827';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X4
+     * Extent: Ukraine - between 31°E and 34°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X4 = 'urn:ogc:def:crs:EPSG::7828';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X5
+     * Extent: Ukraine - between 34°E and 37°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X5 = 'urn:ogc:def:crs:EPSG::7829';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X6
+     * Extent: Ukraine - between 37°E and 40°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X6 = 'urn:ogc:def:crs:EPSG::7830';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X7
+     * Extent: Ukraine - east of 40°E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X7 = 'urn:ogc:def:crs:EPSG::7831';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 105E
+     * Extent: Russia - onshore between 102°E and 108°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 18 (code 28418).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_105E = 'urn:ogc:def:crs:EPSG::2508';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 111E
+     * Extent: Russia - onshore between 108°E and 114°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 19 (code 28419).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_111E = 'urn:ogc:def:crs:EPSG::2509';
 }

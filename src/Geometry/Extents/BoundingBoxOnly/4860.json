@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4860",
+    "title": "Europe-FSU/Svalbard - onshore and offshore - west of 37.91° between 76.21° and 81.12°",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-3.343713743756666, 76.22], [37.91, 76.22], [37.91, 81.11], [-3.343713743756666, 81.11], [-3.343713743756666, 76.22]
+        ]
+    ]
+}

@@ -41,7 +41,8 @@ class BYNHeightGrid extends GeographicGeoidHeightGrid
             $this->floatFormatChar = 'G';
         }
 
-        $data = $this->unpack("{$this->longFormatChar}SOUTH/{$this->longFormatChar}NORTH/{$this->longFormatChar}WEST/{$this->longFormatChar}EAST/{$this->shortFormatChar}DLAT/{$this->shortFormatChar}DLON/{$this->shortFormatChar}GLOBAL/{$this->shortFormatChar}TYPE/{$this->doubleFormatChar}FACTOR/{$this->shortFormatChar}SIZEOF/x4/{$this->shortFormatChar}DATA/{$this->shortFormatChar}SUBTYPE/{$this->shortFormatChar}DATUM/{$this->shortFormatChar}ELLIPSOID/{$this->shortFormatChar}BYTEORDER/{$this->shortFormatChar}SCALE/{$this->doubleFormatChar}WO/{$this->doubleFormatChar}GM/{$this->shortFormatChar}TIDESYSTEM/{$this->shortFormatChar}REFREALISATION/{$this->floatFormatChar}EPOCH/{$this->shortFormatChar}PTTYPE/x2", $rawData);
+        // Six bytes sit between the value size and the values-versus-errors flag.
+        $data = $this->unpack("{$this->longFormatChar}SOUTH/{$this->longFormatChar}NORTH/{$this->longFormatChar}WEST/{$this->longFormatChar}EAST/{$this->shortFormatChar}DLAT/{$this->shortFormatChar}DLON/{$this->shortFormatChar}GLOBAL/{$this->shortFormatChar}TYPE/{$this->doubleFormatChar}FACTOR/{$this->shortFormatChar}SIZEOF/x6/{$this->shortFormatChar}DATA/{$this->shortFormatChar}SUBTYPE/{$this->shortFormatChar}DATUM/{$this->shortFormatChar}ELLIPSOID/{$this->shortFormatChar}BYTEORDER/{$this->shortFormatChar}SCALE/{$this->doubleFormatChar}WO/{$this->doubleFormatChar}GM/{$this->shortFormatChar}TIDESYSTEM/{$this->shortFormatChar}REFREALISATION/{$this->floatFormatChar}EPOCH/{$this->shortFormatChar}PTTYPE/x2", $rawData);
 
         foreach ($data as $key => $value) {
             if (in_array($key, ['SOUTH', 'EAST', 'NORTH', 'WEST']) && $value > 2147483647) {

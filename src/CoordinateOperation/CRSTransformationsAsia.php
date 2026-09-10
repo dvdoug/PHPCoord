@@ -19,6 +19,20 @@ class CRSTransformationsAsia
      */
     protected static array $sridData = [
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11340',
+            'name' => 'Bhutan National Grid 2023',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::11226',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::11341',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11227',
+            'name' => 'DrukRef23 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::11226',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::3818',
             'name' => 'Taiwan 2-degree TM zone 119',
             'source_crs' => 'urn:ogc:def:crs:EPSG::3821',
@@ -187,6 +201,13 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1247',
+            'name' => 'Kalianpur 1962 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 999.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15494',
             'name' => 'Kalianpur 1962 to WGS 84 (6)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4145',
@@ -257,6 +278,13 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1156',
+            'name' => 'Kalianpur 1975 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4146',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 22.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::16586',
             'name' => 'GK 106 NE',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4147',
@@ -283,13 +311,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4153',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.5,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1141',
-            'name' => 'ED50(ED77) to WGS 84 (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4154',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'accuracy' => 19.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1514',
@@ -346,6 +367,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2098',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5191',
+            'name' => 'Korean 1985 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4162',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5189',
@@ -425,6 +453,13 @@ class CRSTransformationsAsia
             'accuracy' => 5.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1682',
+            'name' => 'South Yemen to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4164',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 5.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1558',
             'name' => 'Korean 1995 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4166',
@@ -444,6 +479,20 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2318',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1055',
+            'name' => 'Ain el Abd to WGS 84 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1056',
+            'name' => 'Ain el Abd to WGS 84 (4)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4204',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1057',
@@ -500,6 +549,20 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3001',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1813',
+            'name' => 'Batavia to WGS 84 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 5.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1814',
+            'name' => 'Batavia to WGS 84 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4211',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 5.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8452',
@@ -600,6 +663,13 @@ class CRSTransformationsAsia
             'accuracy' => 0.5,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1586',
+            'name' => 'Deir ez Zor to WGS 84 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 999.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1587',
             'name' => 'Deir ez Zor to WGS 84 (4)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4227',
@@ -619,6 +689,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
             'target_crs' => 'urn:ogc:def:crs:EPSG::3893',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1075',
+            'name' => 'ED50 to WGS 84 (38)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4230',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 10.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1087',
@@ -649,6 +726,13 @@ class CRSTransformationsAsia
             'accuracy' => 26.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1833',
+            'name' => 'ID74 to WGS 84 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 3.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15911',
             'name' => 'ID74 to DGN95 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4238',
@@ -668,6 +752,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4240',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1537',
+            'name' => 'Indian 1975 to WGS 84 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4240',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1812',
@@ -894,6 +985,13 @@ class CRSTransformationsAsia
             'accuracy' => 999.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1189',
+            'name' => 'Nahrwan 1967 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 44.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1190',
             'name' => 'Nahrwan 1967 to WGS 84 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
@@ -915,8 +1013,36 @@ class CRSTransformationsAsia
             'accuracy' => 0.5,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1536',
+            'name' => 'Nahrwan 1967 to WGS 84 (5)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15937',
+            'name' => 'Nahrwan 1967 to WGS 84 (7)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 2.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15952',
+            'name' => 'Nahrwan 1967 to WGS 84 (9)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 5.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15953',
             'name' => 'Nahrwan 1967 to WGS 84 (10)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 5.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6998',
+            'name' => 'Nahrwan 1967 to WGS 84 (11)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 5.0,
@@ -927,6 +1053,27 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 0.15,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7002',
+            'name' => 'Nahrwan 1967 to WGS 84 (13)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7003',
+            'name' => 'Nahrwan 1967 to WGS 84 (14)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7004',
+            'name' => 'Nahrwan 1967 to WGS 84 (15)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4270',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::18201',
@@ -957,13 +1104,6 @@ class CRSTransformationsAsia
             'accuracy' => 1.5,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1074',
-            'name' => 'Palestine 1923 to WGS 84 (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'accuracy' => 2.0,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7141',
             'name' => 'Palestine Grid modified',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4281',
@@ -976,6 +1116,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4285',
             'target_crs' => 'urn:ogc:def:crs:EPSG::28600',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1562',
+            'name' => 'Qatar 1974 to WGS 84 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4285',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1563',
@@ -1018,6 +1165,34 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
             'target_crs' => 'urn:ogc:def:crs:EPSG::29874',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1228',
+            'name' => 'Timbalai 1948 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 19.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1852',
+            'name' => 'Timbalai 1948 to WGS 84 (4)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 5.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5249',
+            'name' => 'Timbalai 1948 to WGS 84 (5)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6902',
+            'name' => 'Timbalai 1948 to WGS 84 (6)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4298',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 6.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5878',
@@ -1160,6 +1335,13 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1230',
+            'name' => 'Tokyo to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 29.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1231',
             'name' => 'Tokyo to WGS 84 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
@@ -1181,6 +1363,13 @@ class CRSTransformationsAsia
             'accuracy' => 4.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15484',
+            'name' => 'Tokyo to WGS 84 (108)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 9.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15483',
             'name' => 'Tokyo to JGD2000 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
@@ -1196,7 +1385,7 @@ class CRSTransformationsAsia
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6740',
-            'name' => 'Tokyo to JGD2011 (2)',
+            'name' => 'Tokyo to JGD2024 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4301',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 0.2,
@@ -1214,6 +1403,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::31901',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1061',
+            'name' => 'Kudams to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4319',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1062',
@@ -1255,6 +1451,13 @@ class CRSTransformationsAsia
             'name' => 'TM 132 SE',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'target_crs' => 'urn:ogc:def:crs:EPSG::2310',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17773',
+            'name' => 'Equi7 projection - Asia',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::27703',
             'accuracy' => 0,
         ],
         [
@@ -1517,6 +1720,13 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::1825',
+            'name' => 'Hong Kong 1980 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4611',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9913',
             'name' => 'Hong Kong 1980 to Hong Kong Geodetic CS (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4611',
@@ -1672,14 +1882,14 @@ class CRSTransformationsAsia
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6698',
-            'name' => 'JGD2000 to JGD2011 (2)',
+            'name' => 'JGD2000 to JGD2024 (2)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6713',
-            'name' => 'JGD2000 to JGD2011 (1)',
+            'name' => 'JGD2000 to JGD2024 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4612',
             'target_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'accuracy' => 0.2,
@@ -2035,6 +2245,13 @@ class CRSTransformationsAsia
             'accuracy' => 0.3,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5078',
+            'name' => 'Karbala 1979 to WGS 84 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19907',
             'name' => 'Iraq National Grid',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4743',
@@ -2201,6 +2418,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::4755',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9470',
             'accuracy' => 0.2,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5194',
+            'name' => 'VN-2000 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4756',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6960',
@@ -2462,13 +2686,6 @@ class CRSTransformationsAsia
             'accuracy' => 0,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5267',
-            'name' => 'DRUKREF 03 to WGS 84 (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'accuracy' => 1.0,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5265',
             'name' => 'Bhutan National Grid',
             'source_crs' => 'urn:ogc:def:crs:EPSG::5264',
@@ -2644,8 +2861,36 @@ class CRSTransformationsAsia
             'accuracy' => 0.3,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11334',
+            'name' => 'JGD2024 to JGD2024 (vertical) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6667',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::11317',
+            'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11335',
+            'name' => 'JGD2024 to JGD2024 + JGD2024 (vertical) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6667',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::11318',
+            'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11438',
+            'name' => 'JGD2024 to JGD2011 (vertical) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6667',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6695',
+            'accuracy' => 0.03,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11439',
+            'name' => 'JGD2024 to JGD2024 + JGD2011 (vertical) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6667',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6697',
+            'accuracy' => 0.03,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9936',
-            'name' => 'JGD2011 to WGS 84 (1)',
+            'name' => 'JGD2024 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::6668',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
             'accuracy' => 1.0,
@@ -2791,6 +3036,13 @@ class CRSTransformationsAsia
             'accuracy' => 0.01,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11440',
+            'name' => 'JGD2011 (vertical) height to JGD2024 (vertical) height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6695',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::11317',
+            'accuracy' => 0.03,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::6910',
             'name' => 'Aden 1925 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::6881',
@@ -2859,6 +3111,13 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::7371',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'accuracy' => 0.1,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7443',
+            'name' => 'ONGD14 to WGS 84 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7373',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 2.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15596',
@@ -3624,6 +3883,13 @@ class CRSTransformationsAsia
             'accuracy' => 999.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8822',
+            'name' => 'MTRF-2000 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 1.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9361',
             'name' => 'MTRF-2000 to KSA-GRF17 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::8818',
@@ -3650,20 +3916,6 @@ class CRSTransformationsAsia
             'source_crs' => 'urn:ogc:def:crs:EPSG::9292',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4978',
             'accuracy' => 0.1,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10775',
-            'name' => 'KSA-GRF17 to KSA-VRF14 height (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::9332',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9335',
-            'accuracy' => 0.02,
-        ],
-        [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10776',
-            'name' => 'KSA-GRF17 to KSA-GRF17 + KSA-VRF14 height (2)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::9332',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::9520',
-            'accuracy' => 0.02,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9383',

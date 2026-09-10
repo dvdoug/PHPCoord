@@ -1,6 +1,19 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- `Point::atEpoch()` to change coordinate epoch inside a CRS using an EPSG point-motion velocity grid
+- Optional `epoch:` argument on `Point::convert()` to change CRS and epoch together when a velocity model exists
+- Optional `maxChainDepth` argument on `Point::convert()` to raise (or lower) the automatic chain search limit
+- Support for GeoTIFF (GTG) grids
+### Changed
+- Updates to data for Albania, Argentina, Austria, Belgium, Bhutan, Bosnia and Herzegovina,
+  Bulgaria, Canada, Chile, Colombia, Costa Rica, Croatia, Czechia, Denmark,
+  Estonia, Faroe Islands, Finland, France, Germany, Greece, Greenland, Hungary, Indonesia,
+  Ireland, Italy, Japan, Kosovo, Latvia, Lithuania, Luxembourg, Mayotte, Mexico, Moldova,
+  Mozambique, Netherlands, New Zealand, North Macedonia, Norway, Poland, Portugal, Romania, 
+  Serbia, Slovakia, Slovenia, South Africa, Spain, Switzerland, Svalbard, Sweden, UK, USA
+  and Wallis and Futuna.
 
 ## [5.11.1] - 2025-08-14
 ### Changed

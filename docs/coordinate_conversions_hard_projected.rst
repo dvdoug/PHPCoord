@@ -48,6 +48,20 @@ American Polyconic
         Length $falseNorthing
     ); // returns a new GeographicPoint
 
+Azimuthal Equidistant
+---------------------
+
+.. code-block:: php
+
+    $point = ProjectedPoint::createFromEastingNorthing(...);
+    $newPoint = $point->azimuthalEquidistant(
+        Geographic $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ); // returns a new GeographicPoint
+
 Bonne
 -----
 

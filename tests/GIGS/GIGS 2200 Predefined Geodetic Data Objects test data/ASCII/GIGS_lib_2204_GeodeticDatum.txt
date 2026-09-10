@@ -69,7 +69,7 @@
 6169	American Samoa 1962		Clarke 1866	Greenwich	American Samoa - 2 main island groups
 6170	Sistema de Referencia Geocentrico para America del Sur 1995	SIRGAS 1995	GRS 1980	Greenwich	South America - SIRGAS 1995 by country
 6171	Reseau Geodesique Francais 1993 v1	RGF93; Réseau Géodésique Français 1993	GRS 1980	Greenwich	France
-6173	IRENET95	ETRS89	GRS 1980	Greenwich	Europe - Ireland (Republic and Ulster) - onshore
+6173	ETRS89-IRE [ETRF2000]	ETRS89	GRS 1980	Greenwich	Europe - Ireland (Republic and Ulster) - onshore
 6174	Sierra Leone Colony 1924	Sierra Leone Peninsular 1924	War Office	Greenwich	Sierra Leone - Freetown Peninsula
 6175	Sierra Leone 1968		Clarke 1880 (RGS)	Greenwich	Sierra Leone - onshore
 6176	Australian Antarctic Datum 1998	AAD98	GRS 1980	Greenwich	Antarctica - Australian sector
@@ -216,7 +216,7 @@
 6615	Porto Santo 1936	Madeira SE Base; Base SE; Porto Santo	International 1924	Greenwich	Portugal - Madeira archipelago onshore
 6616	Selvagem Grande	Selvagem Grande 1938; Marco Astro	International 1924	Greenwich	Portugal - Selvagens onshore
 6618	South American Datum 1969		GRS 1967 Modified	Greenwich	South America - SAD69 by country
-6619	SWEREF99		GRS 1980	Greenwich	Sweden
+6619	SWEREF 99		GRS 1980	Greenwich	Sweden
 6620	Point 58	12th Parallel traverse	Clarke 1880 (RGS)	Greenwich	Africa - 12th parallel N
 6621	Fort Marigot		International 1924	Greenwich	Guadeloupe - St Martin and St Barthelemy - onshore
 6622	Guadeloupe 1948	Sainte Anne	International 1924	Greenwich	Guadeloupe - Grande-Terre and surrounding islands - onshore
@@ -251,7 +251,7 @@
 6666	Lisbon 1890		Bessel 1841	Greenwich	Portugal - mainland - onshore
 6667	Iraq-Kuwait Boundary Datum 1992	IKBD-92	WGS 84	Greenwich	Asia - Middle East - Iraq-Kuwait boundary
 6668	European Datum 1979	ED79	International 1924	Greenwich	Europe - west
-6670	Istituto Geografico Militaire 1995	IGM95	GRS 1980	Greenwich	Italy - including San Marino and Vatican
+6670	Istituto Geografico Militare 1995	IGM95	GRS 1980	Greenwich	Italy - including San Marino and Vatican
 6671	Voirol 1879		Clarke 1880 (IGN)	Greenwich	Algeria - north of 32°N
 6672	Chatham Islands Datum 1971		International 1924	Greenwich	New Zealand - Chatham Islands group
 6673	Chatham Islands Datum 1979	CI1979	International 1924	Greenwich	New Zealand - Chatham Islands group
@@ -339,7 +339,7 @@
 6758	Jamaica 2001	JAD2001	WGS 84	Greenwich	Jamaica
 6759	NAD83 (National Spatial Reference System 2007)		GRS 1980	Greenwich	USA - CONUS and Alaska; PRVI
 6760	World Geodetic System 1966	WGS 66	NWL 9D	Greenwich	World
-6761	Croatian Terrestrial Reference System	HTRS96	GRS 1980	Greenwich	Croatia
+6761	Croatian Terrestrial Reference System 1996	HTRS96	GRS 1980	Greenwich	Croatia
 6762	Bermuda 2000	BDA2000	WGS 84	Greenwich	Bermuda
 6763	Pitcairn 2006		WGS 84	Greenwich	Pitcairn - Pitcairn Island
 6764	Ross Sea Region Geodetic Datum 2000	RSRGD2000	GRS 1980	Greenwich	Antarctica - Ross Sea Region

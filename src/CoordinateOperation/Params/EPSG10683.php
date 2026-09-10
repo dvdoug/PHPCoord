@@ -8,5 +8,5 @@
 declare(strict_types=1);
 
 /** @internal */ return [
-    'offsetsFile' => 'RGM04versRGM23.txt',
+    'offsetsFile' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationRGM04RGM23Provider',
 ];

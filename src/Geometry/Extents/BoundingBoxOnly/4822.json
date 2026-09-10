@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4822",
+    "title": "Europe-FSU/UK - Greater London",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-1.5, 50.75], [1, 50.75], [1, 52.25], [-1.5, 52.25], [-1.5, 50.75]
+        ]
+    ]
+}

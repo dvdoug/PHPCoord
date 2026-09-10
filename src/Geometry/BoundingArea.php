@@ -11,22 +11,17 @@ namespace PHPCoord\Geometry;
 
 use Composer\InstalledVersions;
 use PHPCoord\CoordinateOperation\GeographicValue;
-use PHPCoord\Datum\Datum;
 use PHPCoord\Geometry\GeoJSON\GeoJSON;
-use PHPCoord\UnitOfMeasure\Angle\Angle;
-use PHPCoord\UnitOfMeasure\Angle\Degree;
 use UnhandledMatchError;
 
-use function assert;
-use function count;
-use function implode;
-use function usort;
-use function in_array;
-use function array_keys;
-use function str_replace;
 use function array_push;
 use function array_unique;
+use function assert;
+use function count;
 use function file_exists;
+use function implode;
+use function str_replace;
+use function usort;
 
 class BoundingArea
 {
@@ -47,16 +42,6 @@ class BoundingArea
      * @var array<string, self>
      */
     private static array $cachedObjects = [];
-
-    /**
-     * @var array{0: Angle, 1: Angle}
-     */
-    private array $pointInside;
-
-    /**
-     * @var array<int, array{0: Angle, 1: Angle}>
-     */
-    private array $centre = [];
 
     /**
      * @param Polygon[] $polygons
@@ -141,10 +126,6 @@ class BoundingArea
             $region = $regions[0];
             $extentData = self::createFromPolygons($extents, $region);
 
-            if (in_array('urn:ogc:def:area:EPSG::1352', $extentCodes)) {
-                $extentData->pointInside = [new Degree(60.202778), new Degree(11.083889)];
-            }
-
             self::$cachedObjects[$cacheKey] = $extentData;
         }
 
@@ -183,25 +164,29 @@ class BoundingArea
         }
 
         /*
+         * Even-odd ray cast over every ring of a polygon. Interior rings (holes)
+         * toggle the result back to outside.
+         *
          * @see https://observablehq.com/@tmcw/understanding-point-in-polygon
          */
         foreach ($pointsToCheck as $pointToCheck) {
             [$x, $y] = $pointToCheck;
             foreach ($this->polygons as $polygon) {
-                $vertices = $polygon->coordinates[0]->coordinates; // this algo works on simple polygons (no holes)
-
-                $n = count($vertices);
                 $inside = false;
-                for ($i = 0, $j = $n - 1; $i < $n; $j = $i++) {
-                    $xi = $vertices[$i]->x;
-                    $yi = $vertices[$i]->y;
-                    $xj = $vertices[$j]->x;
-                    $yj = $vertices[$j]->y;
+                foreach ($polygon->coordinates as $ring) {
+                    $vertices = $ring->coordinates;
+                    $n = count($vertices);
+                    for ($i = 0, $j = $n - 1; $i < $n; $j = $i++) {
+                        $xi = $vertices[$i]->x;
+                        $yi = $vertices[$i]->y;
+                        $xj = $vertices[$j]->x;
+                        $yj = $vertices[$j]->y;
 
-                    $intersect = (($yi > $y) !== ($yj > $y)) // horizontal ray from $y, intersects if vertices are on opposite sides of it
-                        && ($x < ($xj - $xi) * ($y - $yi) / ($yj - $yi) + $xi);
-                    if ($intersect) {
-                        $inside = !$inside;
+                        $intersect = (($yi > $y) !== ($yj > $y)) // horizontal ray from $y, intersects if vertices are on opposite sides of it
+                            && ($x < ($xj - $xi) * ($y - $yi) / ($yj - $yi) + $xi);
+                        if ($intersect) {
+                            $inside = !$inside;
+                        }
                     }
                 }
 
@@ -212,65 +197,6 @@ class BoundingArea
         }
 
         return false;
-    }
-
-    /**
-     * @internal used for testing
-     * @return array{0: Angle, 1: Angle}
-     */
-    public function getPointInside(): array
-    {
-        if (!isset($this->pointInside)) {
-            foreach (array_keys($this->polygons) as $polygonId) {
-                $point = $this->getCentre($polygonId);
-                $this->pointInside = $point;
-                if ($this->containsPoint(new GeographicValue($point[0], $point[1], null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE)))) {
-                    $this->pointInside = $point;
-                    break;
-                }
-            }
-        }
-
-        return $this->pointInside;
-    }
-
-    /**
-     * @internal used for testing
-     * @return array{0: Angle, 1: Angle}
-     */
-    protected function getCentre(int $polygonId): array
-    {
-        if (!isset($this->centre[$polygonId])) {
-            // Calculates the "centre" (centroid) of a polygon.
-            $vertices = $this->polygons[$polygonId]->coordinates[0]->coordinates; // only consider outer ring
-            $n = count($vertices) - 1;
-            $area = 0;
-
-            for ($i = 0; $i < $n; ++$i) {
-                $area += $vertices[$i]->x * $vertices[$i + 1]->y;
-            }
-            $area += $vertices[$n]->x * $vertices[0]->y;
-
-            for ($i = 0; $i < $n; ++$i) {
-                $area -= $vertices[$i + 1]->x * $vertices[$i]->y;
-            }
-            $area -= $vertices[0]->x * $vertices[$n]->y;
-            $area /= 2;
-
-            $latitude = 0;
-            $longitude = 0;
-
-            for ($i = 0; $i < $n; ++$i) {
-                $latitude += ($vertices[$i]->y + $vertices[$i + 1]->y) * ($vertices[$i]->x * $vertices[$i + 1]->y - $vertices[$i + 1]->x * $vertices[$i]->y);
-                $longitude += ($vertices[$i]->x + $vertices[$i + 1]->x) * ($vertices[$i]->x * $vertices[$i + 1]->y - $vertices[$i + 1]->x * $vertices[$i]->y);
-            }
-            $latitude = new Degree($latitude / 6 / $area);
-            $longitude = new Degree($longitude / 6 / $area);
-
-            $this->centre[$polygonId] = [$latitude, $longitude];
-        }
-
-        return $this->centre[$polygonId];
     }
 
     private function checkLongitudeWrapAround(): void

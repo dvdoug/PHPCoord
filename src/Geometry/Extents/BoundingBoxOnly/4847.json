@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4847",
+    "title": "North America/USA - Montana - NECI",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-110.22, 48.04], [-109.36, 48.04], [-109.36, 48.53], [-110.22, 48.53], [-110.22, 48.04]
+        ]
+    ]
+}

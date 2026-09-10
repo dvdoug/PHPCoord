@@ -1,6 +1,6 @@
 {
     "id": "urn:ogc:def:area:EPSG::3176",
-    "title": "South America/Brazil - 54°W to 48°W and south of 15°S",
+    "title": "South America/Brazil - 54°W to 48°W and 15°S to 32°45'S",
     "type": "Polygon",
     "coordinates": [
         [

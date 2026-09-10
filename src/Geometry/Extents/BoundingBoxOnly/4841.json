@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4841",
+    "title": "North America/USA - Montana - Butte",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-113.65, 45.06], [-112.16, 45.06], [-112.16, 46.36], [-113.65, 46.36], [-113.65, 45.06]
+        ]
+    ]
+}

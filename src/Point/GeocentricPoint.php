@@ -16,6 +16,8 @@ use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\GeoTiffGrid;
+use PHPCoord\CoordinateOperation\IGNFXyzVelocityGrid;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -35,6 +37,8 @@ use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
 use function abs;
+use function cos;
+use function sin;
 use function sprintf;
 
 /**
@@ -168,6 +172,13 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         return GeographicPoint::create($to, $asGeographic->getLatitude(), $asGeographic->getLongitude(), $to instanceof Geographic3D ? $asGeographic->getHeight() : null, $this->epoch);
     }
 
+    protected function geographic3DForPointMotion(): GeographicPoint
+    {
+        $geog3D = $this->geographic3DCRSForDatum($this->crs->getDatum());
+
+        return $this->geographicGeocentric($geog3D);
+    }
+
     /**
      * Coordinate Frame rotation (geocentric domain)
      * This method is a specific case of the Molodensky-Badekas (CF) method (code 1034) in which the evaluation point
@@ -182,7 +193,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Angle $xAxisRotation,
         Angle $yAxisRotation,
         Angle $zAxisRotation,
-        Scale $scaleDifference
+        Scale $scaleDifference,
+        bool $inReverse = false
     ): self {
         return $this->coordinateFrameMolodenskyBadekas(
             $to,
@@ -195,7 +207,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
             $scaleDifference,
             new Metre(0),
             new Metre(0),
-            new Metre(0)
+            new Metre(0),
+            $inReverse
         );
     }
 
@@ -216,6 +229,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Length $ordinate1OfEvaluationPoint,
         Length $ordinate2OfEvaluationPoint,
         Length $ordinate3OfEvaluationPoint,
+        bool $inReverse = false
     ): self {
         $xs = $this->x->asMetres()->getValue();
         $ys = $this->y->asMetres()->getValue();
@@ -231,9 +245,15 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
         $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
 
-        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * $rz) + (($zs - $zp) * -$ry)) + $tx + $xp;
-        $yt = $M * ((($xs - $xp) * -$rz) + (($ys - $yp) * 1) + (($zs - $zp) * $rx)) + $ty + $yp;
-        $zt = $M * ((($xs - $xp) * $ry) + (($ys - $yp) * -$rx) + (($zs - $zp) * 1)) + $tz + $zp;
+        if ($inReverse) {
+            $xt = (1 / $M) * ((($xs - $tx - $xp) * (cos($ry) * cos($rz))) + (($ys - $ty - $yp) * (-cos($ry) * sin($rz))) + (($zs - $tz - $zp) * sin($ry))) + $xp;
+            $yt = (1 / $M) * ((($xs - $tx - $xp) * (cos($rx) * sin($rz) + sin($rx) * sin($ry) * cos($rz))) + (($ys - $ty - $yp) * (cos($rx) * cos($rz) - sin($rx) * sin($ry) * sin($rz))) + (($zs - $tz - $zp) * (-sin($rx) * cos($ry)))) + $yp;
+            $zt = (1 / $M) * ((($xs - $tx - $xp) * (sin($rx) * sin($rz) - cos($rx) * sin($ry) * cos($rz))) + (($ys - $ty - $yp) * (sin($rx) * cos($rz) + cos($rx) * sin($ry) * sin($rz))) + (($zs - $tz - $zp) * (cos($rx) * cos($ry)))) + $zp;
+        } else {
+            $xt = $M * ((($xs - $xp) * (cos($ry) * cos($rz))) + (($ys - $yp) * (cos($rx) * sin($rz) + sin($rx) * sin($ry) * cos($rz))) + (($zs - $zp) * (sin($rx) * sin($rz) - cos($rx) * sin($ry) * cos($rz)))) + $tx + $xp;
+            $yt = $M * ((($xs - $xp) * (-cos($ry) * sin($rz))) + (($ys - $yp) * (cos($rx) * cos($rz) - sin($rx) * sin($ry) * sin($rz))) + (($zs - $zp) * (sin($rx) * cos($rz) + cos($rx) * sin($ry) * sin($rz)))) + $ty + $yp;
+            $zt = $M * ((($xs - $xp) * sin($ry)) + (($ys - $yp) * (-sin($rx) * cos($ry))) + (($zs - $zp) * (cos($rx) * cos($ry)))) + $tz + $zp;
+        }
 
         return static::create($to, new Metre($xt), new Metre($yt), new Metre($zt), $this->epoch);
     }
@@ -252,7 +272,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Angle $xAxisRotation,
         Angle $yAxisRotation,
         Angle $zAxisRotation,
-        Scale $scaleDifference
+        Scale $scaleDifference,
+        bool $inReverse = false
     ): self {
         return $this->positionVectorMolodenskyBadekas(
             $to,
@@ -265,7 +286,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
             $scaleDifference,
             new Metre(0),
             new Metre(0),
-            new Metre(0)
+            new Metre(0),
+            $inReverse
         );
     }
 
@@ -285,7 +307,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Scale $scaleDifference,
         Length $ordinate1OfEvaluationPoint,
         Length $ordinate2OfEvaluationPoint,
-        Length $ordinate3OfEvaluationPoint
+        Length $ordinate3OfEvaluationPoint,
+        bool $inReverse = false
     ): self {
         $xs = $this->x->asMetres()->getValue();
         $ys = $this->y->asMetres()->getValue();
@@ -301,9 +324,15 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
         $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
 
-        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * -$rz) + (($zs - $zp) * $ry)) + $tx + $xp;
-        $yt = $M * ((($xs - $xp) * $rz) + (($ys - $yp) * 1) + (($zs - $zp) * -$rx)) + $ty + $yp;
-        $zt = $M * ((($xs - $xp) * -$ry) + (($ys - $yp) * $rx) + (($zs - $zp) * 1)) + $tz + $zp;
+        if ($inReverse) {
+            $xt = (1 / $M) * ((($xs - $tx - $xp) * (cos(-$ry) * cos(-$rz))) + (($ys - $ty - $yp) * (-cos(-$ry) * sin(-$rz))) + (($zs - $tz - $zp) * sin(-$ry))) + $xp;
+            $yt = (1 / $M) * ((($xs - $tx - $xp) * (cos(-$rx) * sin(-$rz) + sin(-$rx) * sin(-$ry) * cos(-$rz))) + (($ys - $ty - $yp) * (cos(-$rx) * cos(-$rz) - sin(-$rx) * sin(-$ry) * sin(-$rz))) + (($zs - $tz - $zp) * (-sin(-$rx) * cos(-$ry)))) + $yp;
+            $zt = (1 / $M) * ((($xs - $tx - $xp) * (sin(-$rx) * sin(-$rz) - cos(-$rx) * sin(-$ry) * cos(-$rz))) + (($ys - $ty - $yp) * (sin(-$rx) * cos(-$rz) + cos(-$rx) * sin(-$ry) * sin(-$rz))) + (($zs - $tz - $zp) * (cos(-$rx) * cos(-$ry)))) + $zp;
+        } else {
+            $xt = $M * ((($xs - $xp) * (cos(-$ry) * cos(-$rz))) + (($ys - $yp) * (cos(-$rx) * sin(-$rz) + sin(-$rx) * sin(-$ry) * cos(-$rz))) + (($zs - $zp) * (sin(-$rx) * sin(-$rz) - cos(-$rx) * sin(-$ry) * cos(-$rz)))) + $tx + $xp;
+            $yt = $M * ((($xs - $xp) * (-cos(-$ry) * sin(-$rz))) + (($ys - $yp) * (cos(-$rx) * cos(-$rz) - sin(-$rx) * sin(-$ry) * sin(-$rz))) + (($zs - $zp) * (sin(-$rx) * cos(-$rz) + cos(-$rx) * sin(-$ry) * sin(-$rz)))) + $ty + $yp;
+            $zt = $M * ((($xs - $xp) * sin(-$ry)) + (($ys - $yp) * (-sin(-$rx) * cos(-$ry))) + (($zs - $zp) * (cos(-$rx) * cos(-$ry)))) + $tz + $zp;
+        }
 
         return static::create($to, new Metre($xt), new Metre($yt), new Metre($zt), $this->epoch);
     }
@@ -318,7 +347,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Geocentric $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
-        Length $zAxisTranslation
+        Length $zAxisTranslation,
+        bool $inReverse = false
     ): self {
         return $this->positionVectorTransformation(
             $to,
@@ -328,7 +358,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
             new Radian(0),
             new Radian(0),
             new Radian(0),
-            new Unity(0)
+            new Unity(0),
+            $inReverse
         );
     }
 
@@ -354,7 +385,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Rate $rateOfChangeOfYAxisRotation,
         Rate $rateOfChangeOfZAxisRotation,
         Rate $rateOfChangeOfScaleDifference,
-        Time $parameterReferenceEpoch
+        Time $parameterReferenceEpoch,
+        bool $inReverse = false
     ): self {
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
         $pointEpoch = Year::fromDateTime($this->epoch ?? new DateTime());
@@ -367,7 +399,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         $zAxisRotation = $zAxisRotation->add($rateOfChangeOfZAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
         $scaleDifference = $scaleDifference->add($rateOfChangeOfScaleDifference->getChangePerYear()->multiply($yearsToAdjust));
 
-        return $this->coordinateFrameRotation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+        return $this->coordinateFrameRotation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference, $inReverse);
     }
 
     /**
@@ -392,7 +424,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Rate $rateOfChangeOfYAxisRotation,
         Rate $rateOfChangeOfZAxisRotation,
         Rate $rateOfChangeOfScaleDifference,
-        Time $parameterReferenceEpoch
+        Time $parameterReferenceEpoch,
+        bool $inReverse = false
     ): self {
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
         $pointEpoch = Year::fromDateTime($this->epoch ?? new DateTime());
@@ -405,7 +438,7 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         $zAxisRotation = $zAxisRotation->add($rateOfChangeOfZAxisRotation->getChangePerYear()->multiply($yearsToAdjust));
         $scaleDifference = $scaleDifference->add($rateOfChangeOfScaleDifference->getChangePerYear()->multiply($yearsToAdjust));
 
-        return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+        return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference, $inReverse);
     }
 
     /**
@@ -421,20 +454,21 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Angle $yAxisRotation,
         Angle $zAxisRotation,
         Scale $scaleDifference,
-        Time $transformationReferenceEpoch
+        Time $transformationReferenceEpoch,
+        bool $inReverse = false
     ): self {
-        if ($this->epoch === null) {
+        if (!$this->epoch) {
             throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, none given', $transformationReferenceEpoch->getValue()));
         }
 
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
         $pointEpoch = Year::fromDateTime($this->epoch ?? new DateTime());
 
-        if (abs($pointEpoch->getValue() - $transformationReferenceEpoch->getValue()) > 0.001) {
+        if ($pointEpoch->getValue() !== $transformationReferenceEpoch->asYears()->getValue()) {
             throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, got %s', $transformationReferenceEpoch, $pointEpoch));
         }
 
-        return $this->coordinateFrameRotation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+        return $this->coordinateFrameRotation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference, $inReverse);
     }
 
     /**
@@ -450,20 +484,360 @@ class GeocentricPoint extends Point implements ConvertiblePoint
         Angle $yAxisRotation,
         Angle $zAxisRotation,
         Scale $scaleDifference,
-        Time $transformationReferenceEpoch
+        Time $transformationReferenceEpoch,
+        bool $inReverse = false
     ): self {
-        if ($this->epoch === null) {
+        if (!$this->epoch) {
             throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, none given', $transformationReferenceEpoch->getValue()));
         }
 
         // Points use PHP DateTimes for ease of use, but transformations use decimal years...
         $pointEpoch = Year::fromDateTime($this->epoch);
 
-        if (abs($pointEpoch->getValue() - $transformationReferenceEpoch->getValue()) > 0.001) {
+        if ($pointEpoch->getValue() !== $transformationReferenceEpoch->asYears()->getValue()) {
             throw new InvalidCoordinateException(sprintf('This transformation is only valid for epoch %s, got %s', $transformationReferenceEpoch, $pointEpoch));
         }
 
-        return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference);
+        return $this->positionVectorTransformation($to, $xAxisTranslation, $yAxisTranslation, $zAxisTranslation, $xAxisRotation, $yAxisRotation, $zAxisRotation, $scaleDifference, $inReverse);
+    }
+
+    /**
+     * Point motion (geocentric domain) using XYZ velocities
+     * GN 7-2 §4.2.2 / EPSG 1064.
+     * @param Rate<Length> $pointMotionVelocityX
+     * @param Rate<Length> $pointMotionVelocityY
+     * @param Rate<Length> $pointMotionVelocityZ
+     */
+    public function pointMotionXyzVelocities(
+        Geocentric $to,
+        Rate $pointMotionVelocityX,
+        Rate $pointMotionVelocityY,
+        Rate $pointMotionVelocityZ,
+        Time $targetEpoch
+    ): self {
+        if (!$this->epoch) {
+            throw new InvalidCoordinateException('Point motion requires a coordinate epoch, none given');
+        }
+
+        // Points use PHP DateTimes for ease of use, but transformations use decimal years...
+        $pointEpoch = Year::fromDateTime($this->epoch);
+        $dt = $targetEpoch->subtract($pointEpoch)->getValue();
+
+        $vx = $pointMotionVelocityX->getChangePerYear();
+        $vy = $pointMotionVelocityY->getChangePerYear();
+        $vz = $pointMotionVelocityZ->getChangePerYear();
+
+        $xt = $this->x->asMetres()->getValue() + $vx->asMetres()->getValue() * $dt;
+        $yt = $this->y->asMetres()->getValue() + $vy->asMetres()->getValue() * $dt;
+        $zt = $this->z->asMetres()->getValue() + $vz->asMetres()->getValue() * $dt;
+
+        return static::create($to, new Metre($xt), new Metre($yt), new Metre($zt), $targetEpoch->asYears()->asDateTime());
+    }
+
+    /**
+     * Point motion (geocentric domain) using NEU velocities
+     * GN 7-2 §4.2.4 / EPSG 1146.
+     * @param Rate<Length> $pointMotionVelocityNorth
+     * @param Rate<Length> $pointMotionVelocityEast
+     * @param Rate<Length> $pointMotionVelocityUp
+     */
+    public function pointMotionNeuVelocities(
+        Geocentric $to,
+        Rate $pointMotionVelocityNorth,
+        Rate $pointMotionVelocityEast,
+        Rate $pointMotionVelocityUp,
+        Time $targetEpoch
+    ): self {
+        if (!$this->epoch) {
+            throw new InvalidCoordinateException('Point motion requires a coordinate epoch, none given');
+        }
+
+        $geo = $this->asGeographicValue();
+        $latitude = $geo->getLatitude()->asRadians()->getValue();
+        $longitude = $geo->getLongitude()->asRadians()->getValue();
+
+        $vn = $pointMotionVelocityNorth->getChangePerYear()->asMetres()->getValue();
+        $ve = $pointMotionVelocityEast->getChangePerYear()->asMetres()->getValue();
+        $vu = $pointMotionVelocityUp->getChangePerYear()->asMetres()->getValue();
+
+        $sinPhi = sin($latitude);
+        $cosPhi = cos($latitude);
+        $sinLambda = sin($longitude);
+        $cosLambda = cos($longitude);
+
+        $vx = -$sinPhi * $cosLambda * $vn - $sinLambda * $ve + $cosPhi * $cosLambda * $vu;
+        $vy = -$sinPhi * $sinLambda * $vn + $cosLambda * $ve + $cosPhi * $sinLambda * $vu;
+        $vz = $cosPhi * $vn + $sinPhi * $vu;
+
+        $vxRate = new Rate(new Metre($vx), new Year(1));
+        $vyRate = new Rate(new Metre($vy), new Year(1));
+        $vzRate = new Rate(new Metre($vz), new Year(1));
+
+        return $this->pointMotionXyzVelocities($to, $vxRate, $vyRate, $vzRate, $targetEpoch);
+    }
+
+    /**
+     * Point motion (geocentric domain) using an XYZ velocity grid.
+     * Velocities are sampled in latitude and longitude and applied to the original coordinates.
+     * Reverse resamples at the estimated position.
+     */
+    public function pointMotionXyzVelocityGrid(
+        Geocentric $to,
+        IGNFXyzVelocityGrid $pointMotionVelocityGridFile,
+        Time $targetEpoch,
+        bool $inReverse = false
+    ): self {
+        if (!$this->epoch) {
+            throw new InvalidCoordinateException('Point motion requires a coordinate epoch, none given');
+        }
+
+        $pointEpoch = Year::fromDateTime($this->epoch);
+        $dt = $targetEpoch->subtract($pointEpoch)->getValue();
+        $x0 = $this->x->asMetres()->getValue();
+        $y0 = $this->y->asMetres()->getValue();
+        $z0 = $this->z->asMetres()->getValue();
+
+        $geo = $this->asGeographicValue();
+        $longitude = $geo->getLongitude()->asDegrees()->getValue();
+        $latitude = $geo->getLatitude()->asDegrees()->getValue();
+        $vx = new Metre(0);
+        $vy = new Metre(0);
+        $vz = new Metre(0);
+
+        do {
+            $previousX = $vx;
+            $previousY = $vy;
+            $previousZ = $vz;
+            /** @var array{0: Length, 1: Length, 2: Length} $velocities */
+            $velocities = $pointMotionVelocityGridFile->getValues($longitude, $latitude);
+            $vx = $velocities[0]->asMetres();
+            $vy = $velocities[1]->asMetres();
+            $vz = $velocities[2]->asMetres();
+            $candidate = static::create(
+                $to,
+                new Metre($x0 + $vx->getValue() * $dt),
+                new Metre($y0 + $vy->getValue() * $dt),
+                new Metre($z0 + $vz->getValue() * $dt),
+                $targetEpoch->asYears()->asDateTime()
+            );
+            if ($inReverse) {
+                $estimated = $candidate->asGeographicValue();
+                $longitude = $estimated->getLongitude()->asDegrees()->getValue();
+                $latitude = $estimated->getLatitude()->asDegrees()->getValue();
+            } else {
+                return $candidate;
+            }
+        } while (
+            abs($vx->subtract($previousX)->getValue()) > self::ITERATION_CONVERGENCE_GRID
+            || abs($vy->subtract($previousY)->getValue()) > self::ITERATION_CONVERGENCE_GRID
+            || abs($vz->subtract($previousZ)->getValue()) > self::ITERATION_CONVERGENCE_GRID
+        );
+
+        return $candidate;
+    }
+
+    /**
+     * Geocentric translations using NEU velocity grid (gtg)
+     * EPSG 1144. Interpolate ENU velocity, convert to XYZ, apply V×(t2−t1).
+     * Source/target epoch −999 is the EPSG sentinel for “user-defined input” (the point epoch), not year −999.
+     */
+    public function geocentricTranslationsUsingNeuVelocityGrid(
+        Geocentric $to,
+        GeoTiffGrid $pointMotionVelocityGridFile,
+        Time $sourceEpoch,
+        Time $targetEpoch,
+        bool $inReverse = false
+    ): self {
+        $t1 = $this->resolveUserDefinedEpoch($sourceEpoch);
+        $t2 = $this->resolveUserDefinedEpoch($targetEpoch);
+        if ($inReverse) {
+            [$t1, $t2] = [$t2, $t1];
+        }
+
+        $geo = $this->asGeographicValue();
+        /** @var array{0: Length, 1: Length, 2: Length} $velocities */
+        $velocities = $pointMotionVelocityGridFile->getValues(
+            $geo->getLongitude()->asDegrees()->getValue(),
+            $geo->getLatitude()->asDegrees()->getValue()
+        );
+
+        $latitude = $geo->getLatitude()->asRadians()->getValue();
+        $longitude = $geo->getLongitude()->asRadians()->getValue();
+
+        $ve = $velocities[0]->asMetres()->getValue();
+        $vn = $velocities[1]->asMetres()->getValue();
+        $vu = $velocities[2]->asMetres()->getValue();
+
+        $sinPhi = sin($latitude);
+        $cosPhi = cos($latitude);
+        $sinLambda = sin($longitude);
+        $cosLambda = cos($longitude);
+
+        $vx = -$sinPhi * $cosLambda * $vn - $sinLambda * $ve + $cosPhi * $cosLambda * $vu;
+        $vy = -$sinPhi * $sinLambda * $vn + $cosLambda * $ve + $cosPhi * $sinLambda * $vu;
+        $vz = $cosPhi * $vn + $sinPhi * $vu;
+
+        $dt = $t2->subtract($t1)->getValue();
+        $xt = $this->x->asMetres()->getValue() + $vx * $dt;
+        $yt = $this->y->asMetres()->getValue() + $vy * $dt;
+        $zt = $this->z->asMetres()->getValue() + $vz * $dt;
+
+        return static::create($to, new Metre($xt), new Metre($yt), new Metre($zt), $t2->asYears()->asDateTime());
+    }
+
+    /**
+     * Geocentric translations (geocen domain) by XYZ grid (gtg)
+     * EPSG 1147. Interpolate TX,TY,TZ at the point’s geographic position and add them.
+     */
+    public function geocentricTranslationsByXyzGrid(
+        Geocentric $to,
+        GeoTiffGrid $offsetsFile,
+        bool $inReverse = false
+    ): self {
+        if (!$inReverse) {
+            $geo = $this->asGeographicValue();
+            /** @var array{0: Length, 1: Length, 2: Length} $offsets */
+            $offsets = $offsetsFile->getValues(
+                $geo->getLongitude()->asDegrees()->getValue(),
+                $geo->getLatitude()->asDegrees()->getValue()
+            );
+
+            return static::create(
+                $to,
+                $this->x->add($offsets[0]),
+                $this->y->add($offsets[1]),
+                $this->z->add($offsets[2]),
+                $this->epoch
+            );
+        }
+
+        $tx = new Metre(0);
+        $ty = new Metre(0);
+        $tz = new Metre(0);
+        $geo = $this->asGeographicValue();
+        $longitude = $geo->getLongitude();
+        $latitude = $geo->getLatitude();
+        $candidate = $this;
+
+        do {
+            $prevTx = $tx;
+            $prevTy = $ty;
+            $prevTz = $tz;
+            /** @var array{0: Length, 1: Length, 2: Length} $offsets */
+            $offsets = $offsetsFile->getValues(
+                $longitude->asDegrees()->getValue(),
+                $latitude->asDegrees()->getValue()
+            );
+            $tx = $offsets[0];
+            $ty = $offsets[1];
+            $tz = $offsets[2];
+            $candidate = static::create(
+                $to,
+                $this->x->subtract($tx),
+                $this->y->subtract($ty),
+                $this->z->subtract($tz),
+                $this->epoch
+            );
+            $geo = $candidate->asGeographicValue();
+            $longitude = $geo->getLongitude();
+            $latitude = $geo->getLatitude();
+        } while (
+            abs($tx->subtract($prevTx)->asMetres()->getValue()) > self::ITERATION_CONVERGENCE_GRID
+            || abs($ty->subtract($prevTy)->asMetres()->getValue()) > self::ITERATION_CONVERGENCE_GRID
+            || abs($tz->subtract($prevTz)->asMetres()->getValue()) > self::ITERATION_CONVERGENCE_GRID
+        );
+
+        return $candidate;
+    }
+
+    /**
+     * Geocentric translation grid, then an NEU velocity grid.
+     * One operation, so there is no coordinate reference system between the two steps.
+     * Reverse runs the velocity grid first.
+     */
+    public function geocentricTranslationsByXyzGridUsingNeuVelocityGrid(
+        Geocentric $to,
+        GeoTiffGrid $offsetsFile,
+        GeoTiffGrid $pointMotionVelocityGridFile,
+        Time $sourceEpoch,
+        Time $targetEpoch,
+        bool $inReverse = false
+    ): self {
+        if (!$inReverse) {
+            $translated = $this->geocentricTranslationsByXyzGrid($to, $offsetsFile, false);
+
+            return $translated->geocentricTranslationsUsingNeuVelocityGrid($to, $pointMotionVelocityGridFile, $sourceEpoch, $targetEpoch, false);
+        }
+
+        $moved = $this->geocentricTranslationsUsingNeuVelocityGrid($to, $pointMotionVelocityGridFile, $sourceEpoch, $targetEpoch, true);
+
+        return $moved->geocentricTranslationsByXyzGrid($to, $offsetsFile, true);
+    }
+
+    /**
+     * Position vector, then an NEU velocity grid.
+     * One operation, so there is no coordinate reference system between the two steps.
+     * Reverse runs the velocity grid first.
+     */
+    public function positionVectorTransformationUsingNeuVelocityGrid(
+        Geocentric $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        GeoTiffGrid $pointMotionVelocityGridFile,
+        Time $sourceEpoch,
+        Time $targetEpoch,
+        bool $inReverse = false
+    ): self {
+        if (!$inReverse) {
+            $shifted = $this->positionVectorTransformation(
+                $to,
+                $xAxisTranslation,
+                $yAxisTranslation,
+                $zAxisTranslation,
+                $xAxisRotation,
+                $yAxisRotation,
+                $zAxisRotation,
+                $scaleDifference,
+                false
+            );
+
+            return $shifted->geocentricTranslationsUsingNeuVelocityGrid($to, $pointMotionVelocityGridFile, $sourceEpoch, $targetEpoch, false);
+        }
+
+        $moved = $this->geocentricTranslationsUsingNeuVelocityGrid($to, $pointMotionVelocityGridFile, $sourceEpoch, $targetEpoch, true);
+
+        return $moved->positionVectorTransformation(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            $xAxisRotation,
+            $yAxisRotation,
+            $zAxisRotation,
+            $scaleDifference,
+            true
+        );
+    }
+
+    /**
+     * EPSG epoch −999 means “use the point’s coordinate epoch”.
+     */
+    private function resolveUserDefinedEpoch(Time $epoch): Time
+    {
+        if ($epoch->asYears()->getValue() === -999.0) {
+            if (!$this->epoch) {
+                throw new InvalidCoordinateException('Geocentric translations using a NEU velocity grid require a coordinate epoch when the operation epoch is user-defined');
+            }
+
+            return Year::fromDateTime($this->epoch);
+        }
+
+        return $epoch;
     }
 
     public function asGeographicValue(): GeographicValue

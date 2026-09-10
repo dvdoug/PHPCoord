@@ -448,7 +448,7 @@
 19905	Netherlands East Indies Equatorial Zone	NEIEZ	Mercator (variant A)	Indonesia - onshore
 19906	Iraq zone	IOEPC Lambert	Lambert Conic Conformal (1SP)	Asia - Middle East - Iraq zone
 19911	Laborde Grid approximation	Laborde Grid	Hotine Oblique Mercator (variant B)	Madagascar - onshore and nearshore
-19914	RD New		Oblique Stereographic	Netherlands - onshore
+19914	RD		Oblique Stereographic	Netherlands - onshore
 19916	British National Grid		Transverse Mercator	UK - Britain and UKCS 49°45'N to 61°N; 9°W to 2°E
 19917	New Zealand Map Grid	NZMG	New Zealand Map Grid	New Zealand - onshore
 19919	Qatar National Grid		Transverse Mercator	Qatar

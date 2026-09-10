@@ -24,17 +24,22 @@ use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
 use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\GeoTiffNKGRF17velEuropeProvider;
+use PHPCoord\CoordinateOperation\IGNFXyzVelocityRGNC15Provider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\GeocentricSRIDData;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\Exception\InvalidCoordinateException;
-use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\ExtentInteriorPoints;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Length\Millimetre;
 use PHPCoord\UnitOfMeasure\Rate;
+use PHPCoord\UnitOfMeasure\Scale\PartsPerBillion;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use PHPCoord\UnitOfMeasure\Time\Year;
@@ -219,6 +224,42 @@ class GeocentricPointTest extends TestCase
         self::assertEqualsWithDelta(5201387.75, $to->getZ()->getValue(), 0.01);
     }
 
+    public function testCoordinateFrameRotationFullMatrixSaba(): void
+    {
+        $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_SABA), new Metre(2738467.761), new Metre(-5429579.811), new Metre(1919164.067));
+        $toCRS = Geocentric::fromSRID(Geocentric::EPSG_BES2020_SABA);
+        $to = $from->coordinateFrameRotation(
+            $toCRS,
+            new Metre(1138.7432),
+            new Metre(-2064.4761),
+            new Metre(110.7016),
+            new ArcSecond(-214.615206),
+            new ArcSecond(479.360036),
+            new ArcSecond(-164.703951),
+            new PartsPerMillion(-402.32073)
+        );
+
+        self::assertEqualsWithDelta(2738386.686, $to->getX()->getValue(), 0.001);
+        self::assertEqualsWithDelta(-5429268.990, $to->getY()->getValue(), 0.001);
+        self::assertEqualsWithDelta(1919210.970, $to->getZ()->getValue(), 0.001);
+
+        $back = $to->coordinateFrameRotation(
+            Geocentric::fromSRID(Geocentric::EPSG_SABA),
+            new Metre(1138.7432),
+            new Metre(-2064.4761),
+            new Metre(110.7016),
+            new ArcSecond(-214.615206),
+            new ArcSecond(479.360036),
+            new ArcSecond(-164.703951),
+            new PartsPerMillion(-402.32073),
+            true
+        );
+
+        self::assertEqualsWithDelta(2738467.761, $back->getX()->getValue(), 0.001);
+        self::assertEqualsWithDelta(-5429579.811, $back->getY()->getValue(), 0.001);
+        self::assertEqualsWithDelta(1919164.067, $back->getZ()->getValue(), 0.001);
+    }
+
     public function testPositionVectorTransformation(): void
     {
         $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_WGS_72), new Metre(3657660.66), new Metre(255768.55), new Metre(5201382.11));
@@ -343,14 +384,216 @@ class GeocentricPointTest extends TestCase
         self::assertEqualsWithDelta(-1690895.108, $to->getZ()->getValue(), 0.001);
     }
 
+    public function testPointMotionGeocentricXyzVelocities(): void
+    {
+        $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_ITRF2008), new Metre(2845456.0813), new Metre(2160954.2453), new Metre(5265993.2296), (new Year(2005.0))->asDateTime());
+        $toCRS = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
+        $to = $from->pointMotionXyzVelocities($toCRS, new Rate(new Metre(-0.0212), new Year(1)), new Rate(new Metre(0.0124), new Year(1)), new Rate(new Metre(0.0072), new Year(1)), new Year(2010.0));
+
+        self::assertEqualsWithDelta(2845455.9753, $to->getX()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(2160954.3073, $to->getY()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5265993.2656, $to->getZ()->getValue(), 0.0001);
+        self::assertEquals(2010.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testPointMotionGeocentricXyzVelocitiesEpochMissing(): void
+    {
+        $this->expectException(InvalidCoordinateException::class);
+        $from = GeocentricPoint::create(Geocentric::fromSRID(Geocentric::EPSG_ITRF2008), new Metre(2845456.0813), new Metre(2160954.2453), new Metre(5265993.2296));
+        $toCRS = Geocentric::fromSRID(Geocentric::EPSG_ITRF2008);
+        $from->pointMotionXyzVelocities($toCRS, new Rate(new Metre(-0.0212), new Year(1)), new Rate(new Metre(0.0124), new Year(1)), new Rate(new Metre(0.0072), new Year(1)), new Year(2010.0));
+    }
+
+    public function testPointMotionXyzVelocityGrid(): void
+    {
+        if (!class_exists(IGNFXyzVelocityRGNC15Provider::class)) {
+            self::markTestSkipped('Oceania datapack not installed');
+        }
+
+        $crs = Geocentric::fromSRID(Geocentric::EPSG_RGNC15);
+        // Grid node at 166.45°E, 22.25°S: −0.0225, −0.0170, +0.0435 m/yr.
+        $geographic = new GeographicValue(new Degree(-22.25), new Degree(166.45), new Metre(0), $crs->getDatum());
+        $xyz = $geographic->asGeocentricValue();
+        $from = GeocentricPoint::create($crs, $xyz->getX(), $xyz->getY(), $xyz->getZ(), (new Year(2015.0))->asDateTime());
+        $grid = (new IGNFXyzVelocityRGNC15Provider())->provideGrid();
+        $to = $from->pointMotionXyzVelocityGrid($crs, $grid, new Year(2025.0));
+
+        self::assertEqualsWithDelta($from->getX()->asMetres()->getValue() - 0.225, $to->getX()->asMetres()->getValue(), 1e-9);
+        self::assertEqualsWithDelta($from->getY()->asMetres()->getValue() - 0.170, $to->getY()->asMetres()->getValue(), 1e-9);
+        self::assertEqualsWithDelta($from->getZ()->asMetres()->getValue() + 0.435, $to->getZ()->asMetres()->getValue(), 1e-9);
+        self::assertEquals(2025.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+
+        $back = $to->pointMotionXyzVelocityGrid($crs, $grid, new Year(2015.0), true);
+        self::assertEqualsWithDelta($from->getX()->asMetres()->getValue(), $back->getX()->asMetres()->getValue(), 1e-6);
+        self::assertEqualsWithDelta($from->getY()->asMetres()->getValue(), $back->getY()->asMetres()->getValue(), 1e-6);
+        self::assertEqualsWithDelta($from->getZ()->asMetres()->getValue(), $back->getZ()->asMetres()->getValue(), 1e-6);
+        self::assertEquals(2015.0, Year::fromDateTime($back->getCoordinateEpoch())->getValue());
+    }
+
+    public function testPointMotionXyzVelocityGridEpochMissing(): void
+    {
+        if (!class_exists(IGNFXyzVelocityRGNC15Provider::class)) {
+            self::markTestSkipped('Oceania datapack not installed');
+        }
+
+        $this->expectException(InvalidCoordinateException::class);
+        $crs = Geocentric::fromSRID(Geocentric::EPSG_RGNC15);
+        $from = GeocentricPoint::create($crs, new Metre(0), new Metre(0), new Metre(0));
+        $from->pointMotionXyzVelocityGrid($crs, (new IGNFXyzVelocityRGNC15Provider())->provideGrid(), new Year(2025.0));
+    }
+
+    public function testAtEpochRgnc15VelocityGrid(): void
+    {
+        if (!class_exists(IGNFXyzVelocityRGNC15Provider::class)) {
+            self::markTestSkipped('Oceania datapack not installed');
+        }
+
+        $crs = Geocentric::fromSRID(Geocentric::EPSG_RGNC15);
+        $geographic = new GeographicValue(new Degree(-22.25), new Degree(166.45), new Metre(0), $crs->getDatum());
+        $xyz = $geographic->asGeocentricValue();
+        $from = GeocentricPoint::create($crs, $xyz->getX(), $xyz->getY(), $xyz->getZ(), (new Year(2015.0))->asDateTime());
+        $to = $from->atEpoch((new Year(2025.0))->asDateTime());
+
+        self::assertEquals($crs->getSRID(), $to->getCRS()->getSRID());
+        self::assertEqualsWithDelta($from->getX()->asMetres()->getValue() - 0.225, $to->getX()->asMetres()->getValue(), 1e-6);
+        self::assertEqualsWithDelta($from->getY()->asMetres()->getValue() - 0.170, $to->getY()->asMetres()->getValue(), 1e-6);
+        self::assertEqualsWithDelta($from->getZ()->asMetres()->getValue() + 0.435, $to->getZ()->asMetres()->getValue(), 1e-6);
+        self::assertEquals(2025.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+
+        $back = $to->atEpoch((new Year(2015.0))->asDateTime());
+        self::assertEqualsWithDelta($from->getX()->asMetres()->getValue(), $back->getX()->asMetres()->getValue(), 1e-4);
+        self::assertEqualsWithDelta($from->getY()->asMetres()->getValue(), $back->getY()->asMetres()->getValue(), 1e-4);
+        self::assertEqualsWithDelta($from->getZ()->asMetres()->getValue(), $back->getZ()->asMetres()->getValue(), 1e-4);
+        self::assertEquals(2015.0, Year::fromDateTime($back->getCoordinateEpoch())->getValue());
+    }
+
+    public function testPointMotionGeocentricNeuVelocities(): void
+    {
+        $crs = Geocentric::fromSRID(Geocentric::EPSG_ITRF2014);
+        $from = GeocentricPoint::create($crs, new Metre(2885900.5477), new Metre(827499.5911), new Metre(5608599.7785), (new Year(2020.25))->asDateTime());
+        $to = $from->pointMotionNeuVelocities($crs, new Rate(new Millimetre(-0.3879), new Year(1)), new Rate(new Millimetre(-0.7701), new Year(1)), new Rate(new Millimetre(8.8991), new Year(1)), new Year(2000.0));
+
+        self::assertEqualsWithDelta(2885900.4554, $to->getX()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(827499.5809, $to->getY()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5608599.6231, $to->getZ()->getValue(), 0.0001);
+        self::assertEquals(2000.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testPointMotionGeocentricNeuVelocitiesEpochMissing(): void
+    {
+        $this->expectException(InvalidCoordinateException::class);
+        $crs = Geocentric::fromSRID(Geocentric::EPSG_ITRF2014);
+        $from = GeocentricPoint::create($crs, new Metre(2885900.5477), new Metre(827499.5911), new Metre(5608599.7785));
+        $from->pointMotionNeuVelocities($crs, new Rate(new Millimetre(-0.3879), new Year(1)), new Rate(new Millimetre(-0.7701), new Year(1)), new Rate(new Millimetre(8.8991), new Year(1)), new Year(2000.0));
+    }
+
+    public function testGeocentricTranslationsUsingNeuVelocityGrid(): void
+    {
+        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
+            self::markTestSkipped('Europe datapack not installed');
+        }
+
+        // GN 7-2 §4.3.6.3 / EPSG 10809 ETRF2014@2020.25 → NKG_ETRF14@2000.0
+        $from = GeocentricPoint::create(
+            Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
+            new Metre(2885900.000),
+            new Metre(827500.000),
+            new Metre(5608600.000),
+            (new Year(2020.25))->asDateTime()
+        );
+        $to = $from->geocentricTranslationsUsingNeuVelocityGrid(
+            Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14),
+            (new GeoTiffNKGRF17velEuropeProvider())->provideGrid(),
+            new Year(-999),
+            new Year(2000.0)
+        );
+
+        self::assertEqualsWithDelta(2885899.9077, $to->getX()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(827499.9898, $to->getY()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5608599.8446, $to->getZ()->asMetres()->getValue(), 0.0001);
+        self::assertEquals(2000.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testPositionVectorUsingNeuVelocityGrid(): void
+    {
+        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
+            self::markTestSkipped('Europe datapack not installed');
+        }
+
+        // GN 7-2 §5.2.1 NKG_ETRF14 to SWEREF99
+        $grid = (new GeoTiffNKGRF17velEuropeProvider())->provideGrid();
+        $from = GeocentricPoint::create(
+            Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14),
+            new Metre(2885900.000),
+            new Metre(827500.000),
+            new Metre(5608600.000),
+            (new Year(2000.0))->asDateTime()
+        );
+        $to = $from->positionVectorTransformationUsingNeuVelocityGrid(
+            Geocentric::fromSRID(Geocentric::EPSG_ETRS89_SWE_SWEREF_99),
+            new Metre(0.03054),
+            new Metre(0.04606),
+            new Metre(-0.07944),
+            new ArcSecond(1.41958 / 1000),
+            new ArcSecond(0.15132 / 1000),
+            new ArcSecond(1.50337 / 1000),
+            new PartsPerBillion(3.002),
+            $grid,
+            new Year(2000.0),
+            new Year(1999.5)
+        );
+
+        // The note rounds the Helmert step, then the velocities, each to 0.0001 m.
+        self::assertEqualsWithDelta(2885900.0349, $to->getX()->asMetres()->getValue(), 0.0002);
+        self::assertEqualsWithDelta(827500.0306, $to->getY()->asMetres()->getValue(), 0.0002);
+        self::assertEqualsWithDelta(5608599.9371, $to->getZ()->asMetres()->getValue(), 0.0002);
+        self::assertEquals(1999.5, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+
+        $back = $to->positionVectorTransformationUsingNeuVelocityGrid(
+            Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14),
+            new Metre(0.03054),
+            new Metre(0.04606),
+            new Metre(-0.07944),
+            new ArcSecond(1.41958 / 1000),
+            new ArcSecond(0.15132 / 1000),
+            new ArcSecond(1.50337 / 1000),
+            new PartsPerBillion(3.002),
+            $grid,
+            new Year(2000.0),
+            new Year(1999.5),
+            true
+        );
+
+        self::assertEqualsWithDelta(2885900.000, $back->getX()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(827500.000, $back->getY()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(5608600.000, $back->getZ()->asMetres()->getValue(), 0.0001);
+        self::assertEquals(2000.0, Year::fromDateTime($back->getCoordinateEpoch())->getValue());
+    }
+
+    public function testGeocentricTranslationsUsingNeuVelocityGridEpochMissing(): void
+    {
+        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
+            self::markTestSkipped('Europe datapack not installed');
+        }
+
+        $this->expectException(InvalidCoordinateException::class);
+        $crs = Geocentric::fromSRID(Geocentric::EPSG_ETRF2014);
+        $from = GeocentricPoint::create($crs, new Metre(3086390.994), new Metre(1002829.224), new Metre(5472414.994));
+        $from->geocentricTranslationsUsingNeuVelocityGrid(
+            Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14),
+            (new GeoTiffNKGRF17velEuropeProvider())->provideGrid(),
+            new Year(-999),
+            new Year(2000.0)
+        );
+    }
+
     #[DataProvider('supportedOperations')]
     #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
         $method = CoordinateOperationMethods::getMethodData($operation['method']);
-        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
-        $centre = $operationExtent->getPointInside();
+        $centre = ExtentInteriorPoints::get($operation['extent']);
 
         $sourceCRS = Geocentric::fromSRID($sourceCrsSrid);
         $centre = (new GeographicValue($centre[0], $centre[1], new Metre(0), $sourceCRS->getDatum()))->asGeocentricValue();
@@ -361,14 +604,22 @@ class GeocentricPointTest extends TestCase
             $params = CoordinateOperations::getParamData($operationSrid);
             $epoch = $params['transformationReferenceEpoch']->asDateTime();
         }
+        if ($operation['method'] === CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG) {
+            $params = CoordinateOperations::getParamData($operationSrid);
+            $epoch = $params['targetEpoch']->asDateTime();
+        }
+        $additionalParams = [];
+        if ($operation['method'] === CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN) {
+            $additionalParams['targetEpoch'] = Year::fromDateTime($epoch);
+        }
 
         $originalPoint = GeocentricPoint::create($sourceCRS, $centre->getX(), $centre->getY(), $centre->getZ(), $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0));
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0), $additionalParams);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($method['reversible']) {
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0));
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0), $additionalParams);
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getX()->getValue(), $reversedPoint->getX()->getValue(), 0.0001);
             self::assertEqualsWithDelta($originalPoint->getY()->getValue(), $reversedPoint->getY()->getValue(), 0.0001);
@@ -384,7 +635,7 @@ class GeocentricPointTest extends TestCase
                 // filter out operations that require a grid file that we don't have
                 $needsNonExistentFile = false;
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
-                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
+                    if (str_ends_with($paramName, 'File') && $paramValue && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

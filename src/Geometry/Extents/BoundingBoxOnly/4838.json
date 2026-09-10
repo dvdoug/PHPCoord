@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4838",
+    "title": "North America/USA - Montana - Big Timber",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-111.17, 44.9], [-109.29, 44.9], [-109.29, 46.31], [-111.17, 46.31], [-111.17, 44.9]
+        ]
+    ]
+}

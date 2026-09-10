@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4846",
+    "title": "North America/USA - Montana - Missoula",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-114.93, 45.93], [-113.17, 45.93], [-113.17, 47.69], [-114.93, 47.69], [-114.93, 45.93]
+        ]
+    ]
+}

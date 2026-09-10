@@ -6,14 +6,6 @@ Abridged Molodensky
     'urn:ogc:def:method:EPSG::9605'
 
 
-Affine geometric transformation
--------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_AFFINE_GEOMETRIC_TRANSFORMATION
-    'urn:ogc:def:method:EPSG::9623'
-
-
 Affine parametric transformation
 --------------------------------
 .. code-block:: php
@@ -28,14 +20,6 @@ Albers Equal Area
 
     CoordinateOperationMethods::EPSG_ALBERS_EQUAL_AREA
     'urn:ogc:def:method:EPSG::9822'
-
-
-Alias
------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_ALIAS
-    'urn:ogc:def:method:EPSG::32768'
 
 
 American Polyconic
@@ -60,6 +44,14 @@ Axis Order Reversal (Geographic3D horizontal)
 
     CoordinateOperationMethods::EPSG_AXIS_ORDER_REVERSAL_GEOGRAPHIC3D_HORIZONTAL
     'urn:ogc:def:method:EPSG::9844'
+
+
+Azimuthal Equidistant
+---------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_AZIMUTHAL_EQUIDISTANT
+    'urn:ogc:def:method:EPSG::1125'
 
 
 Bonne
@@ -150,20 +142,44 @@ Coordinate Frame rotation (geog3D domain)
     'urn:ogc:def:method:EPSG::1038'
 
 
+Coordinate Frame rotation (geog3D to compound)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_TO_COMPOUND
+    'urn:ogc:def:method:EPSG::1149'
+
+
+Coordinate Frame rotation full matrix (geocen)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOCEN
+    'urn:ogc:def:method:EPSG::1132'
+
+
+Coordinate Frame rotation full matrix (geog2D)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG2D
+    'urn:ogc:def:method:EPSG::1133'
+
+
+Coordinate Frame rotation full matrix (geog3D)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG3D
+    'urn:ogc:def:method:EPSG::1140'
+
+
 Equal Earth
 -----------
 .. code-block:: php
 
     CoordinateOperationMethods::EPSG_EQUAL_EARTH
     'urn:ogc:def:method:EPSG::1078'
-
-
-Equidistant Conic
------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_EQUIDISTANT_CONIC
-    'urn:ogc:def:method:EPSG::1119'
 
 
 Equidistant Cylindrical
@@ -214,12 +230,20 @@ General polynomial of degree 6
     'urn:ogc:def:method:EPSG::9648'
 
 
-Geocentric translation by Grid Interpolation (IGN)
---------------------------------------------------
+Geocen translations by grid (gtg) & Geocen translations NEU velocities (gtg)
+----------------------------------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN
-    'urn:ogc:def:method:EPSG::1087'
+    CoordinateOperationMethods::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG
+    'urn:ogc:def:method:EPSG::1142'
+
+
+Geocentric translations (geocen domain) by XYZ grid (gtg)
+---------------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCEN_DOMAIN_BY_XYZ_GRID_GTG
+    'urn:ogc:def:method:EPSG::1147'
 
 
 Geocentric translations (geocentric domain)
@@ -238,6 +262,14 @@ Geocentric translations (geog2D domain)
     'urn:ogc:def:method:EPSG::9603'
 
 
+Geocentric translations (geog2D domain) by grid (IGN)
+-----------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN_BY_GRID_IGN
+    'urn:ogc:def:method:EPSG::1087'
+
+
 Geocentric translations (geog3D domain)
 ---------------------------------------
 .. code-block:: php
@@ -246,12 +278,60 @@ Geocentric translations (geog3D domain)
     'urn:ogc:def:method:EPSG::1035'
 
 
-Geocentric/topocentric conversions
-----------------------------------
+Geocentric translations using NEU velocity grid (gtg)
+-----------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS
-    'urn:ogc:def:method:EPSG::9836'
+    CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG
+    'urn:ogc:def:method:EPSG::1144'
+
+
+Geog3D to Geog2D+Depth (GGXF)
+-----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GGXF
+    'urn:ogc:def:method:EPSG::1157'
+
+
+Geog3D to Geog2D+Depth (Gravsoft)
+---------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT
+    'urn:ogc:def:method:EPSG::1110'
+
+
+Geog3D to Geog2D+Depth (gtg)
+----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GTG
+    'urn:ogc:def:method:EPSG::1128'
+
+
+Geog3D to Geog2D+Depth (gtx)
+----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GTX
+    'urn:ogc:def:method:EPSG::1122'
+
+
+Geog3D to Geog2D+Depth (txt)
+----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_TXT
+    'urn:ogc:def:method:EPSG::1115'
+
+
+Geog3D to Geog2D+GravityRelatedHeight
+-------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT
+    'urn:ogc:def:method:EPSG::1131'
 
 
 Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2)
@@ -270,6 +350,22 @@ Geog3D to Geog2D+GravityRelatedHeight (BEV AT)
     'urn:ogc:def:method:EPSG::1089'
 
 
+Geog3D to Geog2D+GravityRelatedHeight (CI)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CI
+    'urn:ogc:def:method:EPSG::1091'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (EGM)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM
+    'urn:ogc:def:method:EPSG::1103'
+
+
 Geog3D to Geog2D+GravityRelatedHeight (EGM2008)
 -----------------------------------------------
 .. code-block:: php
@@ -278,12 +374,28 @@ Geog3D to Geog2D+GravityRelatedHeight (EGM2008)
     'urn:ogc:def:method:EPSG::1092'
 
 
+Geog3D to Geog2D+GravityRelatedHeight (GGXF)
+--------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GGXF
+    'urn:ogc:def:method:EPSG::1158'
+
+
 Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)
 ------------------------------------------------
 .. code-block:: php
 
     CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT
     'urn:ogc:def:method:EPSG::1093'
+
+
+Geog3D to Geog2D+GravityRelatedHeight (IGN1997)
+-----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN1997
+    'urn:ogc:def:method:EPSG::1094'
 
 
 Geog3D to Geog2D+GravityRelatedHeight (IGN2009)
@@ -350,6 +462,14 @@ Geog3D to Geog2D+GravityRelatedHeight (PL txt)
     'urn:ogc:def:method:EPSG::1100'
 
 
+Geog3D to Geog2D+GravityRelatedHeight (gtg)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTG
+    'urn:ogc:def:method:EPSG::1124'
+
+
 Geog3D to Geog2D+GravityRelatedHeight (gtx)
 -------------------------------------------
 .. code-block:: php
@@ -374,14 +494,6 @@ Geographic/geocentric conversions
     'urn:ogc:def:method:EPSG::9602'
 
 
-Geographic/topocentric conversions
-----------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_GEOGRAPHIC_TOPOCENTRIC_CONVERSIONS
-    'urn:ogc:def:method:EPSG::9837'
-
-
 Geographic2D offsets
 --------------------
 .. code-block:: php
@@ -398,12 +510,12 @@ Geographic2D with Height Offsets
     'urn:ogc:def:method:EPSG::9618'
 
 
-Geographic3D offsets
---------------------
+Geographic3D Offset using NEU velocity grid (NTv2_Vel)
+------------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSETS
-    'urn:ogc:def:method:EPSG::9660'
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL
+    'urn:ogc:def:method:EPSG::1114'
 
 
 Geographic3D to 2D conversion
@@ -414,12 +526,68 @@ Geographic3D to 2D conversion
     'urn:ogc:def:method:EPSG::9659'
 
 
+Geographic3D to Depth (GGXF)
+----------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_GGXF
+    'urn:ogc:def:method:EPSG::1156'
+
+
+Geographic3D to Depth (Gravsoft)
+--------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT
+    'urn:ogc:def:method:EPSG::1109'
+
+
+Geographic3D to Depth (gtg)
+---------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_GTG
+    'urn:ogc:def:method:EPSG::1127'
+
+
+Geographic3D to Depth (gtx)
+---------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_GTX
+    'urn:ogc:def:method:EPSG::1121'
+
+
+Geographic3D to Depth (txt)
+---------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_DEPTH_TXT
+    'urn:ogc:def:method:EPSG::1116'
+
+
+Geographic3D to GravityRelatedHeight
+------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT
+    'urn:ogc:def:method:EPSG::1136'
+
+
 Geographic3D to GravityRelatedHeight (AUSGeoid v2)
 --------------------------------------------------
 .. code-block:: php
 
     CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2
     'urn:ogc:def:method:EPSG::1048'
+
+
+Geographic3D to GravityRelatedHeight (AUSGeoid98)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID98
+    'urn:ogc:def:method:EPSG::9662'
 
 
 Geographic3D to GravityRelatedHeight (BEV AT)
@@ -430,6 +598,22 @@ Geographic3D to GravityRelatedHeight (BEV AT)
     'urn:ogc:def:method:EPSG::1081'
 
 
+Geographic3D to GravityRelatedHeight (CI)
+-----------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CI
+    'urn:ogc:def:method:EPSG::1050'
+
+
+Geographic3D to GravityRelatedHeight (EGM)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM
+    'urn:ogc:def:method:EPSG::9661'
+
+
 Geographic3D to GravityRelatedHeight (EGM2008)
 ----------------------------------------------
 .. code-block:: php
@@ -438,12 +622,28 @@ Geographic3D to GravityRelatedHeight (EGM2008)
     'urn:ogc:def:method:EPSG::1025'
 
 
+Geographic3D to GravityRelatedHeight (GGXF)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GGXF
+    'urn:ogc:def:method:EPSG::1155'
+
+
 Geographic3D to GravityRelatedHeight (Gravsoft)
 -----------------------------------------------
 .. code-block:: php
 
     CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT
     'urn:ogc:def:method:EPSG::1047'
+
+
+Geographic3D to GravityRelatedHeight (IGN1997)
+----------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN1997
+    'urn:ogc:def:method:EPSG::9664'
 
 
 Geographic3D to GravityRelatedHeight (IGN2009)
@@ -502,6 +702,14 @@ Geographic3D to GravityRelatedHeight (OSGM-GB)
     'urn:ogc:def:method:EPSG::9663'
 
 
+Geographic3D to GravityRelatedHeight (OSGM02-Ire)
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM02_IRE
+    'urn:ogc:def:method:EPSG::1045'
+
+
 Geographic3D to GravityRelatedHeight (OSGM15-Ire)
 -------------------------------------------------
 .. code-block:: php
@@ -524,6 +732,14 @@ Geographic3D to GravityRelatedHeight (PNG)
 
     CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PNG
     'urn:ogc:def:method:EPSG::1059'
+
+
+Geographic3D to GravityRelatedHeight (gtg)
+------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTG
+    'urn:ogc:def:method:EPSG::1123'
 
 
 Geographic3D to GravityRelatedHeight (gtx)
@@ -734,14 +950,6 @@ Madrid to ED50 polynomial
     'urn:ogc:def:method:EPSG::9617'
 
 
-Mercator (Spherical)
---------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_MERCATOR_SPHERICAL
-    'urn:ogc:def:method:EPSG::1026'
-
-
 Mercator (variant A)
 --------------------
 .. code-block:: php
@@ -756,14 +964,6 @@ Mercator (variant B)
 
     CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_B
     'urn:ogc:def:method:EPSG::9805'
-
-
-Mercator (variant C)
---------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_MERCATOR_VARIANT_C
-    'urn:ogc:def:method:EPSG::1108'
 
 
 Modified Azimuthal Equidistant
@@ -846,6 +1046,14 @@ NADCON5 (3D)
     'urn:ogc:def:method:EPSG::1075'
 
 
+NTv1
+----
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_NTV1
+    'urn:ogc:def:method:EPSG::9614'
+
+
 NTv2
 ----
 .. code-block:: php
@@ -878,44 +1086,52 @@ Ordnance Survey National Transformation
     'urn:ogc:def:method:EPSG::9633'
 
 
-Orthographic
-------------
+Point motion (geocen domain) using NEU velocities
+-------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_ORTHOGRAPHIC
-    'urn:ogc:def:method:EPSG::9840'
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_NEU_VELOCITIES
+    'urn:ogc:def:method:EPSG::1146'
 
 
-Point motion (ellipsoidal)
---------------------------
+Point motion (geocen domain) using XYZ velocities
+-------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_POINT_MOTION_ELLIPSOIDAL
-    'urn:ogc:def:method:EPSG::1067'
-
-
-Point motion (geocen) by grid (INADEFORM)
------------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_BY_GRID_INADEFORM
-    'urn:ogc:def:method:EPSG::1086'
-
-
-Point motion (geocentric Cartesian)
------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCENTRIC_CARTESIAN
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITIES
     'urn:ogc:def:method:EPSG::1064'
 
 
-Point motion (geocentric domain) using NEU displacement grid (grd)
-------------------------------------------------------------------
+Point motion (geocen domain) using XYZ velocity grid (BGN)
+----------------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCENTRIC_DOMAIN_USING_NEU_DISPLACEMENT_GRID_GRD
-    'urn:ogc:def:method:EPSG::1148'
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN
+    'urn:ogc:def:method:EPSG::1120'
+
+
+Point motion (geog3D domain) using NEU velocities
+-------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITIES
+    'urn:ogc:def:method:EPSG::1067'
+
+
+Point motion (geog3D domain) using NEU velocity grid (NTv2_Vel)
+---------------------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_NTV2_VEL
+    'urn:ogc:def:method:EPSG::1141'
+
+
+Point motion (geog3D domain) using NEU velocity grid (gtg)
+----------------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_GTG
+    'urn:ogc:def:method:EPSG::32769'
 
 
 Polar Stereographic (variant A)
@@ -950,6 +1166,14 @@ Popular Visualisation Pseudo Mercator
     'urn:ogc:def:method:EPSG::1024'
 
 
+Position Vector (geocen) & Geocen translations NEU velocities (gtg)
+-------------------------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG
+    'urn:ogc:def:method:EPSG::1143'
+
+
 Position Vector transformation (geocentric domain)
 --------------------------------------------------
 .. code-block:: php
@@ -972,14 +1196,6 @@ Position Vector transformation (geog3D domain)
 
     CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG3D_DOMAIN
     'urn:ogc:def:method:EPSG::1037'
-
-
-Pseudo Plate Carree
--------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_PSEUDO_PLATE_CARREE
-    'urn:ogc:def:method:EPSG::9825'
 
 
 Reversible polynomial of degree 13
@@ -1022,14 +1238,6 @@ Similarity transformation
     'urn:ogc:def:method:EPSG::9621'
 
 
-Swiss Oblique Cylindrical
--------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_SWISS_OBLIQUE_CYLINDRICAL
-    'urn:ogc:def:method:EPSG::9814'
-
-
 Time-dependent Coordinate Frame rotation (geocen)
 -------------------------------------------------
 .. code-block:: php
@@ -1038,44 +1246,12 @@ Time-dependent Coordinate Frame rotation (geocen)
     'urn:ogc:def:method:EPSG::1056'
 
 
-Time-dependent Coordinate Frame rotation (geog2D)
--------------------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG2D
-    'urn:ogc:def:method:EPSG::1057'
-
-
-Time-dependent Coordinate Frame rotation (geog3D)
--------------------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOG3D
-    'urn:ogc:def:method:EPSG::1058'
-
-
 Time-dependent Position Vector tfm (geocentric)
 -----------------------------------------------
 .. code-block:: php
 
     CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC
     'urn:ogc:def:method:EPSG::1053'
-
-
-Time-dependent Position Vector tfm (geog2D)
--------------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG2D
-    'urn:ogc:def:method:EPSG::1054'
-
-
-Time-dependent Position Vector tfm (geog3D)
--------------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOG3D
-    'urn:ogc:def:method:EPSG::1055'
 
 
 Time-specific Coordinate Frame rotation (geocen)
@@ -1150,6 +1326,14 @@ Vertical Offset by Grid Interpolation (BEV AT)
     'urn:ogc:def:method:EPSG::1080'
 
 
+Vertical Offset by Grid Interpolation (GGXF)
+--------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF
+    'urn:ogc:def:method:EPSG::1154'
+
+
 Vertical Offset by Grid Interpolation (NZLVD)
 ---------------------------------------------
 .. code-block:: php
@@ -1166,12 +1350,36 @@ Vertical Offset by Grid Interpolation (PL txt)
     'urn:ogc:def:method:EPSG::1101'
 
 
+Vertical Offset by Grid Interpolation (PatchJGD)
+------------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD
+    'urn:ogc:def:method:EPSG::1162'
+
+
 Vertical Offset by Grid Interpolation (VERTCON)
 -----------------------------------------------
 .. code-block:: php
 
     CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON
     'urn:ogc:def:method:EPSG::9658'
+
+
+Vertical Offset by Grid Interpolation (asc)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC
+    'urn:ogc:def:method:EPSG::1085'
+
+
+Vertical Offset by Grid Interpolation (gtg)
+-------------------------------------------
+.. code-block:: php
+
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG
+    'urn:ogc:def:method:EPSG::1129'
 
 
 Vertical Offset by Grid Interpolation (gtx)
@@ -1182,20 +1390,12 @@ Vertical Offset by Grid Interpolation (gtx)
     'urn:ogc:def:method:EPSG::1084'
 
 
-Vertical Perspective
---------------------
+Vertical Offset using NEU velocity grid (NTv2_Vel)
+--------------------------------------------------
 .. code-block:: php
 
-    CoordinateOperationMethods::EPSG_VERTICAL_PERSPECTIVE
-    'urn:ogc:def:method:EPSG::9838'
-
-
-Vertical Perspective (Orthographic case)
-----------------------------------------
-.. code-block:: php
-
-    CoordinateOperationMethods::EPSG_VERTICAL_PERSPECTIVE_ORTHOGRAPHIC_CASE
-    'urn:ogc:def:method:EPSG::9839'
+    CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL
+    'urn:ogc:def:method:EPSG::1113'
 
 
 Vertical change by geoid grid difference (NRCan)

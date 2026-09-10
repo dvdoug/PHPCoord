@@ -26,6 +26,13 @@ class CRSTransformationsAntarctic
             'accuracy' => 1.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::17772',
+            'name' => 'Equi7 projection - Antarctica',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::27702',
+            'accuracy' => 0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19992',
             'name' => 'Antarctic Polar Stereographic',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4326',

@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
+use Composer\Pcre\Preg;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
@@ -24,15 +25,10 @@ use PHPCoord\CoordinateOperation\GridProvider;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-use PhpCsFixer\AbstractFixer;
-use PhpCsFixer\Console\ConfigurationResolver;
-use PhpCsFixer\Tokenizer\Tokens;
-use PhpCsFixer\ToolInfo;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\ParserFactory;
 use ReflectionClass;
-use SplFileInfo;
 use ReflectionClassConstant;
 
 use function array_flip;
@@ -58,6 +54,8 @@ use function array_unique;
 use function explode;
 use function array_map;
 use function rtrim;
+use function array_values;
+use function strtoupper;
 
 use const PHP_EOL;
 
@@ -65,20 +63,12 @@ class Codegen
 {
     private string $sourceDir;
 
-    private ConfigurationResolver $resolver;
-
     public function __construct()
     {
         $this->sourceDir = dirname(__DIR__, 2);
-        $this->resolver = new ConfigurationResolver(
-            require __DIR__ . '/../../../.php-cs-fixer.dist.php',
-            [],
-            dirname($this->sourceDir),
-            new ToolInfo()
-        );
     }
 
-    public function updateFileConstants(string $fileName, array $data, string $visibility, array $aliases): void
+    public function updateFileConstants(string $fileName, array $data, string $visibility): array
     {
         echo "Updating constants in {$fileName}...";
 
@@ -92,23 +82,63 @@ class Codegen
         $newStmts = $traverser->traverse($oldStmts);
 
         /*
-         * First remove all existing EPSG consts
+         * First collect and remove all existing EPSG consts
          */
+        $removeVisitor = new RemoveExistingConstantsVisitor();
         $traverser = new NodeTraverser();
-        $traverser->addVisitor(new RemoveExistingConstantsVisitor());
+        $traverser->addVisitor($removeVisitor);
         $newStmts = $traverser->traverse($newStmts);
 
+        $oldConstants = $removeVisitor->getCollectedConstants();
+
         /*
-         * Then add the ones wanted
+         * Pre-compute the canonical constant names (e.g. "EPSG_LUREF_LUXEMBOURG_TM")
+         * for every URN in the new data.
+         */
+        $newCanonicalNames = [];
+        foreach ($data as $urn => $row) {
+            if (isset($row['name'])) {
+                $name = $row['name'];
+                $suffix = str_replace(
+                    [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
+                    ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
+                    $name
+                );
+                $suffix = Preg::replace('/_+/', '_', $suffix);
+                $suffix = trim($suffix, '_');
+                $newCanonicalNames[$urn] = 'EPSG_' . strtoupper($suffix);
+            }
+        }
+
+        /*
+         * Compute auto-detected aliases by comparing old collected constant names against
+         * the new canonical names
+         */
+        $autoAliases = [];
+        foreach ($oldConstants as $oldConstName => $urn) {
+            $newCanonical = $newCanonicalNames[$urn] ?? null;
+            if ($newCanonical && $oldConstName !== $newCanonical) {
+                $autoAliases[$urn][] = $oldConstName;
+            }
+        }
+
+        // Dedupe
+        foreach ($autoAliases as $urn => $names) {
+            $autoAliases[$urn] = array_values(array_unique($names));
+        }
+
+        /*
+         * Then add the ones wanted (canonical + auto-detected aliases)
          */
         $traverser = new NodeTraverser();
-        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility, $aliases));
+        $traverser->addVisitor(new AddNewConstantsVisitor($data, $visibility, $newCanonicalNames, $autoAliases));
         $newStmts = $traverser->traverse($newStmts);
 
         $prettyPrinter = new ASTPrettyPrinter();
         file_put_contents($fileName, $prettyPrinter->prettyPrintFile($newStmts));
-        $this->csFixFile($fileName);
         echo 'done' . PHP_EOL;
+
+        return $newCanonicalNames;
     }
 
     public function updateFileData(string $fileName, array $data): void
@@ -144,46 +174,15 @@ class Codegen
 
         $prettyPrinter = new ASTPrettyPrinter();
         file_put_contents($fileName, $prettyPrinter->prettyPrintFile($newStmts));
-        $this->csFixFile($fileName);
         echo 'done' . PHP_EOL;
     }
 
-    public function csFixFile(string $fileName): void
-    {
-        $file = new SplFileInfo($fileName);
-        $old = file_get_contents($fileName);
-        $tokens = Tokens::fromCode($old);
-
-        foreach ($this->resolver->getFixers() as $fixer) {
-            if (
-                !$fixer instanceof AbstractFixer
-                && (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
-            ) {
-                continue;
-            }
-
-            $fixer->fix($file, $tokens);
-
-            if ($tokens->isChanged()) {
-                $tokens->clearEmptyTokens();
-                $tokens->clearChanged();
-            }
-        }
-
-        $new = $tokens->generateCode();
-
-        if ($old !== $new) {
-            file_put_contents($fileName, $new);
-        }
-    }
-
-    public function updateDocs(string $class, array $data): void
+    public function updateDocs(string $class, array $data, array $constants): void
     {
         echo "Updating docs for {$class}...";
 
         $file = fopen($this->sourceDir . '/../docs/reflection/' . str_replace('phpcoord/', '', str_replace('\\', '/', strtolower($class))) . '.txt', 'wb');
         $reflectionClass = new ReflectionClass($class);
-        $constants = array_flip(array_reverse($reflectionClass->getConstants(ReflectionClassConstant::IS_PUBLIC))); // make sure aliases are overridden with current
 
         uasort($data, static fn ($a, $b) => $a['name'] <=> $b['name']);
 
@@ -364,7 +363,7 @@ class Codegen
                             "to: {$targetCRSReflection->getShortName()}::fromSRID({$targetCRSReflection->getShortName()}::{$targetCRSConstants[$targetCRSSrid]})",
                         ];
                         foreach ($params as $name => $value) {
-                            if (str_ends_with($name, 'File') && $value !== null && class_exists($value) && new $value() instanceof GridProvider) {
+                            if (str_ends_with($name, 'File') && $value && class_exists($value) && new $value() instanceof GridProvider) {
                                 $provider = new ReflectionClass($value);
                                 $docParams[] = "{$name}: {$provider->getShortName()}->provideGrid()";
                             } else {

@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
@@ -19,5 +20,7 @@ use PHPCoord\Point\Point;
 
 interface ConvertiblePoint
 {
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point;
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point;
+
+    public function atEpoch(DateTimeInterface $targetEpoch): Point;
 }

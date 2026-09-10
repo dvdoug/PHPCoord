@@ -52,6 +52,11 @@ class CoordinateOperationMethods
     public const EPSG_AXIS_ORDER_REVERSAL_GEOGRAPHIC3D_HORIZONTAL = 'urn:ogc:def:method:EPSG::9844';
 
     /**
+     * Azimuthal Equidistant.
+     */
+    public const EPSG_AZIMUTHAL_EQUIDISTANT = 'urn:ogc:def:method:EPSG::1125';
+
+    /**
      * Bonne.
      */
     public const EPSG_BONNE = 'urn:ogc:def:method:EPSG::9827';
@@ -65,6 +70,11 @@ class CoordinateOperationMethods
      * Cartesian Grid Offsets.
      */
     public const EPSG_CARTESIAN_GRID_OFFSETS = 'urn:ogc:def:method:EPSG::9656';
+
+    /**
+     * Cartesian Grid Offsets by TIN Interpolation (JSON).
+     */
+    public const EPSG_CARTESIAN_GRID_OFFSETS_BY_TIN_INTERPOLATION_JSON = 'urn:ogc:def:method:EPSG::1138';
 
     /**
      * Cassini-Soldner.
@@ -92,6 +102,11 @@ class CoordinateOperationMethods
     public const EPSG_COMPLEX_POLYNOMIAL_OF_DEGREE_4 = 'urn:ogc:def:method:EPSG::9653';
 
     /**
+     * Coordinate Frame rotation & Cartesian Grid Offsets by Grid Interpolation (HEPOS).
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_AND_CARTESIAN_GRID_OFFSETS_BY_GRID_INTERPOLATION_HEPOS = 'urn:ogc:def:method:EPSG::1163';
+
+    /**
      * Coordinate Frame rotation (geocentric domain).
      */
     public const EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1032';
@@ -102,9 +117,34 @@ class CoordinateOperationMethods
     public const EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9607';
 
     /**
+     * Coordinate Frame rotation (geog2D domain) & Transverse Mercator.
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN_AND_TRANSVERSE_MERCATOR = 'urn:ogc:def:method:EPSG::1153';
+
+    /**
      * Coordinate Frame rotation (geog3D domain).
      */
     public const EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1038';
+
+    /**
+     * Coordinate Frame rotation (geog3D to compound).
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_TO_COMPOUND = 'urn:ogc:def:method:EPSG::1149';
+
+    /**
+     * Coordinate Frame rotation full matrix (geocen).
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOCEN = 'urn:ogc:def:method:EPSG::1132';
+
+    /**
+     * Coordinate Frame rotation full matrix (geog2D).
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG2D = 'urn:ogc:def:method:EPSG::1133';
+
+    /**
+     * Coordinate Frame rotation full matrix (geog3D).
+     */
+    public const EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG3D = 'urn:ogc:def:method:EPSG::1140';
 
     /**
      * Equal Earth.
@@ -147,9 +187,14 @@ class CoordinateOperationMethods
     public const EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 = 'urn:ogc:def:method:EPSG::9648';
 
     /**
-     * Geocentric translation by Grid Interpolation (IGN).
+     * Geocen translations by grid (gtg) & Geocen translations NEU velocities (gtg).
      */
-    public const EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN = 'urn:ogc:def:method:EPSG::1087';
+    public const EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG = 'urn:ogc:def:method:EPSG::1142';
+
+    /**
+     * Geocentric translations (geocen domain) by XYZ grid (gtg).
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOCEN_DOMAIN_BY_XYZ_GRID_GTG = 'urn:ogc:def:method:EPSG::1147';
 
     /**
      * Geocentric translations (geocentric domain).
@@ -162,14 +207,59 @@ class CoordinateOperationMethods
     public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN = 'urn:ogc:def:method:EPSG::9603';
 
     /**
+     * Geocentric translations (geog2D domain) by grid (IGN).
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN_BY_GRID_IGN = 'urn:ogc:def:method:EPSG::1087';
+
+    /**
      * Geocentric translations (geog3D domain).
      */
     public const EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN = 'urn:ogc:def:method:EPSG::1035';
 
     /**
+     * Geocentric translations using NEU velocity grid (gtg).
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG = 'urn:ogc:def:method:EPSG::1144';
+
+    /**
+     * Geocentric translations using XYZ velocity grid (INADEFORM).
+     */
+    public const EPSG_GEOCENTRIC_TRANSLATIONS_USING_XYZ_VELOCITY_GRID_INADEFORM = 'urn:ogc:def:method:EPSG::1159';
+
+    /**
      * Geocentric/topocentric conversions.
      */
     public const EPSG_GEOCENTRIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9836';
+
+    /**
+     * Geog3D to Geog2D+Depth (GGXF).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GGXF = 'urn:ogc:def:method:EPSG::1157';
+
+    /**
+     * Geog3D to Geog2D+Depth (Gravsoft).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1110';
+
+    /**
+     * Geog3D to Geog2D+Depth (gtg).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GTG = 'urn:ogc:def:method:EPSG::1128';
+
+    /**
+     * Geog3D to Geog2D+Depth (gtx).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GTX = 'urn:ogc:def:method:EPSG::1122';
+
+    /**
+     * Geog3D to Geog2D+Depth (txt).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_TXT = 'urn:ogc:def:method:EPSG::1115';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight.
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT = 'urn:ogc:def:method:EPSG::1131';
 
     /**
      * Geog3D to Geog2D+GravityRelatedHeight (AUSGeoidv2).
@@ -182,14 +272,34 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1089';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (CI).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CI = 'urn:ogc:def:method:EPSG::1091';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (EGM).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM = 'urn:ogc:def:method:EPSG::1103';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (EGM2008).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1092';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (GGXF).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GGXF = 'urn:ogc:def:method:EPSG::1158';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (Gravsoft).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT = 'urn:ogc:def:method:EPSG::1093';
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight (IGN1997).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN1997 = 'urn:ogc:def:method:EPSG::1094';
 
     /**
      * Geog3D to Geog2D+GravityRelatedHeight (IGN2009).
@@ -232,6 +342,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT = 'urn:ogc:def:method:EPSG::1100';
 
     /**
+     * Geog3D to Geog2D+GravityRelatedHeight (gtg).
+     */
+    public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTG = 'urn:ogc:def:method:EPSG::1124';
+
+    /**
      * Geog3D to Geog2D+GravityRelatedHeight (gtx).
      */
     public const EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX = 'urn:ogc:def:method:EPSG::1088';
@@ -252,6 +367,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC_TOPOCENTRIC_CONVERSIONS = 'urn:ogc:def:method:EPSG::9837';
 
     /**
+     * Geographic2D Offsets by TIN Interpolation (JSON).
+     */
+    public const EPSG_GEOGRAPHIC2D_OFFSETS_BY_TIN_INTERPOLATION_JSON = 'urn:ogc:def:method:EPSG::1145';
+
+    /**
      * Geographic2D offsets.
      */
     public const EPSG_GEOGRAPHIC2D_OFFSETS = 'urn:ogc:def:method:EPSG::9619';
@@ -260,6 +380,11 @@ class CoordinateOperationMethods
      * Geographic2D with Height Offsets.
      */
     public const EPSG_GEOGRAPHIC2D_WITH_HEIGHT_OFFSETS = 'urn:ogc:def:method:EPSG::9618';
+
+    /**
+     * Geographic3D Offset using NEU velocity grid (NTv2_Vel).
+     */
+    public const EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL = 'urn:ogc:def:method:EPSG::1114';
 
     /**
      * Geographic3D offsets.
@@ -272,9 +397,44 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION = 'urn:ogc:def:method:EPSG::9659';
 
     /**
+     * Geographic3D to Depth (GGXF).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GGXF = 'urn:ogc:def:method:EPSG::1156';
+
+    /**
+     * Geographic3D to Depth (Gravsoft).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT = 'urn:ogc:def:method:EPSG::1109';
+
+    /**
+     * Geographic3D to Depth (gtg).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GTG = 'urn:ogc:def:method:EPSG::1127';
+
+    /**
+     * Geographic3D to Depth (gtx).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_GTX = 'urn:ogc:def:method:EPSG::1121';
+
+    /**
+     * Geographic3D to Depth (txt).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_DEPTH_TXT = 'urn:ogc:def:method:EPSG::1116';
+
+    /**
+     * Geographic3D to GravityRelatedHeight.
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT = 'urn:ogc:def:method:EPSG::1136';
+
+    /**
      * Geographic3D to GravityRelatedHeight (AUSGeoid v2).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2 = 'urn:ogc:def:method:EPSG::1048';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (AUSGeoid98).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID98 = 'urn:ogc:def:method:EPSG::9662';
 
     /**
      * Geographic3D to GravityRelatedHeight (BEV AT).
@@ -282,14 +442,34 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT = 'urn:ogc:def:method:EPSG::1081';
 
     /**
+     * Geographic3D to GravityRelatedHeight (CI).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CI = 'urn:ogc:def:method:EPSG::1050';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (EGM).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM = 'urn:ogc:def:method:EPSG::9661';
+
+    /**
      * Geographic3D to GravityRelatedHeight (EGM2008).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008 = 'urn:ogc:def:method:EPSG::1025';
 
     /**
+     * Geographic3D to GravityRelatedHeight (GGXF).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GGXF = 'urn:ogc:def:method:EPSG::1155';
+
+    /**
      * Geographic3D to GravityRelatedHeight (Gravsoft).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT = 'urn:ogc:def:method:EPSG::1047';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (IGN1997).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN1997 = 'urn:ogc:def:method:EPSG::9664';
 
     /**
      * Geographic3D to GravityRelatedHeight (IGN2009).
@@ -327,6 +507,11 @@ class CoordinateOperationMethods
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM_GB = 'urn:ogc:def:method:EPSG::9663';
 
     /**
+     * Geographic3D to GravityRelatedHeight (OSGM02-Ire).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM02_IRE = 'urn:ogc:def:method:EPSG::1045';
+
+    /**
      * Geographic3D to GravityRelatedHeight (OSGM15-Ire).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE = 'urn:ogc:def:method:EPSG::1072';
@@ -340,6 +525,11 @@ class CoordinateOperationMethods
      * Geographic3D to GravityRelatedHeight (PNG).
      */
     public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PNG = 'urn:ogc:def:method:EPSG::1059';
+
+    /**
+     * Geographic3D to GravityRelatedHeight (gtg).
+     */
+    public const EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTG = 'urn:ogc:def:method:EPSG::1123';
 
     /**
      * Geographic3D to GravityRelatedHeight (gtx).
@@ -542,9 +732,34 @@ class CoordinateOperationMethods
     public const EPSG_NADCON5_3D = 'urn:ogc:def:method:EPSG::1075';
 
     /**
+     * NTv1.
+     */
+    public const EPSG_NTV1 = 'urn:ogc:def:method:EPSG::9614';
+
+    /**
      * NTv2.
      */
     public const EPSG_NTV2 = 'urn:ogc:def:method:EPSG::9615';
+
+    /**
+     * NTv2 & Coordinate Frame rotation (geocentric domain).
+     */
+    public const EPSG_NTV2_AND_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN = 'urn:ogc:def:method:EPSG::1160';
+
+    /**
+     * NTv2 & Lambert Conic Conformal (1SP variant B).
+     */
+    public const EPSG_NTV2_AND_LAMBERT_CONIC_CONFORMAL_1SP_VARIANT_B = 'urn:ogc:def:method:EPSG::1152';
+
+    /**
+     * NTv2 & Lambert Conic Conformal (2SP).
+     */
+    public const EPSG_NTV2_AND_LAMBERT_CONIC_CONFORMAL_2SP = 'urn:ogc:def:method:EPSG::1151';
+
+    /**
+     * NTv2 & Transverse Mercator.
+     */
+    public const EPSG_NTV2_AND_TRANSVERSE_MERCATOR = 'urn:ogc:def:method:EPSG::1150';
 
     /**
      * New Zealand Map Grid.
@@ -567,24 +782,49 @@ class CoordinateOperationMethods
     public const EPSG_ORTHOGRAPHIC = 'urn:ogc:def:method:EPSG::9840';
 
     /**
-     * Point motion (ellipsoidal).
+     * Point motion (geocen domain) using NEU velocities.
      */
-    public const EPSG_POINT_MOTION_ELLIPSOIDAL = 'urn:ogc:def:method:EPSG::1067';
+    public const EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_NEU_VELOCITIES = 'urn:ogc:def:method:EPSG::1146';
 
     /**
-     * Point motion (geocen) by grid (INADEFORM).
+     * Point motion (geocen domain) using NEU velocity grid (Gravsoft).
      */
-    public const EPSG_POINT_MOTION_GEOCEN_BY_GRID_INADEFORM = 'urn:ogc:def:method:EPSG::1086';
+    public const EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_NEU_VELOCITY_GRID_GRAVSOFT = 'urn:ogc:def:method:EPSG::1139';
 
     /**
-     * Point motion (geocentric Cartesian).
+     * Point motion (geocen domain) using XYZ velocities.
      */
-    public const EPSG_POINT_MOTION_GEOCENTRIC_CARTESIAN = 'urn:ogc:def:method:EPSG::1064';
+    public const EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITIES = 'urn:ogc:def:method:EPSG::1064';
 
     /**
-     * Point motion (geocentric domain) using NEU displacement grid (grd).
+     * Point motion (geocen domain) using XYZ velocity grid (BGN).
      */
-    public const EPSG_POINT_MOTION_GEOCENTRIC_DOMAIN_USING_NEU_DISPLACEMENT_GRID_GRD = 'urn:ogc:def:method:EPSG::1148';
+    public const EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN = 'urn:ogc:def:method:EPSG::1120';
+
+    /**
+     * Point motion (geocen domain) using XYZ velocity grid (INADEFORM).
+     */
+    public const EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_INADEFORM = 'urn:ogc:def:method:EPSG::1086';
+
+    /**
+     * Point motion (geog3D domain) using NEU displacement grid (grd).
+     */
+    public const EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_DISPLACEMENT_GRID_GRD = 'urn:ogc:def:method:EPSG::1148';
+
+    /**
+     * Point motion (geog3D domain) using NEU velocities.
+     */
+    public const EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITIES = 'urn:ogc:def:method:EPSG::1067';
+
+    /**
+     * Point motion (geog3D domain) using NEU velocity grid (NTv2_Vel).
+     */
+    public const EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_NTV2_VEL = 'urn:ogc:def:method:EPSG::1141';
+
+    /**
+     * Point motion (geog3D domain) using NEU velocity grid (gtg).
+     */
+    public const EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_GTG = 'urn:ogc:def:method:EPSG::32769';
 
     /**
      * Polar Stereographic (variant A).
@@ -605,6 +845,11 @@ class CoordinateOperationMethods
      * Popular Visualisation Pseudo Mercator.
      */
     public const EPSG_POPULAR_VISUALISATION_PSEUDO_MERCATOR = 'urn:ogc:def:method:EPSG::1024';
+
+    /**
+     * Position Vector (geocen) & Geocen translations NEU velocities (gtg).
+     */
+    public const EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG = 'urn:ogc:def:method:EPSG::1143';
 
     /**
      * Position Vector transformation (geocentric domain).
@@ -655,6 +900,11 @@ class CoordinateOperationMethods
      * Swiss Oblique Cylindrical.
      */
     public const EPSG_SWISS_OBLIQUE_CYLINDRICAL = 'urn:ogc:def:method:EPSG::9814';
+
+    /**
+     * Time-dep Coordinate Frame (geocen) & Geocen translations by XYZ vel (INADEFORM).
+     */
+    public const EPSG_TIME_DEP_COORDINATE_FRAME_GEOCEN_AND_GEOCEN_TRANSLATIONS_BY_XYZ_VEL_INADEFORM = 'urn:ogc:def:method:EPSG::1161';
 
     /**
      * Time-dependent Coordinate Frame rotation (geocen).
@@ -732,6 +982,11 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT = 'urn:ogc:def:method:EPSG::1080';
 
     /**
+     * Vertical Offset by Grid Interpolation (GGXF).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF = 'urn:ogc:def:method:EPSG::1154';
+
+    /**
      * Vertical Offset by Grid Interpolation (NZLVD).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD = 'urn:ogc:def:method:EPSG::1071';
@@ -742,14 +997,39 @@ class CoordinateOperationMethods
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT = 'urn:ogc:def:method:EPSG::1101';
 
     /**
+     * Vertical Offset by Grid Interpolation (PatchJGD).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD = 'urn:ogc:def:method:EPSG::1162';
+
+    /**
      * Vertical Offset by Grid Interpolation (VERTCON).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON = 'urn:ogc:def:method:EPSG::9658';
 
     /**
+     * Vertical Offset by Grid Interpolation (asc).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC = 'urn:ogc:def:method:EPSG::1085';
+
+    /**
+     * Vertical Offset by Grid Interpolation (gtg).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG = 'urn:ogc:def:method:EPSG::1129';
+
+    /**
      * Vertical Offset by Grid Interpolation (gtx).
      */
     public const EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX = 'urn:ogc:def:method:EPSG::1084';
+
+    /**
+     * Vertical Offset by TIN Interpolation (JSON).
+     */
+    public const EPSG_VERTICAL_OFFSET_BY_TIN_INTERPOLATION_JSON = 'urn:ogc:def:method:EPSG::1137';
+
+    /**
+     * Vertical Offset using NEU velocity grid (NTv2_Vel).
+     */
+    public const EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL = 'urn:ogc:def:method:EPSG::1113';
 
     /**
      * Vertical Perspective.
@@ -895,13 +1175,13 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -911,25 +1191,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -939,25 +1219,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -967,25 +1247,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -1004,13 +1284,13 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -1020,25 +1300,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -1048,25 +1328,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -1076,25 +1356,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -1264,6 +1544,16 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1045' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (OSGM02-Ire)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1046' => [
             'name' => 'Vertical Offset and Slope',
             'reversible' => true,
@@ -1301,6 +1591,16 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1048' => [
             'name' => 'Geographic3D to GravityRelatedHeight (AUSGeoid v2)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1050' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (CI)',
             'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
@@ -1364,46 +1664,46 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfScaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'parameterReferenceEpoch' => [
                     'reverses' => false,
@@ -1416,46 +1716,46 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfScaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'parameterReferenceEpoch' => [
                     'reverses' => false,
@@ -1468,46 +1768,46 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfScaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'parameterReferenceEpoch' => [
                     'reverses' => false,
@@ -1520,46 +1820,46 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfScaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'parameterReferenceEpoch' => [
                     'reverses' => false,
@@ -1572,46 +1872,46 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfScaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'parameterReferenceEpoch' => [
                     'reverses' => false,
@@ -1624,46 +1924,46 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfXAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfYAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfZAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'rateOfChangeOfScaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'parameterReferenceEpoch' => [
                     'reverses' => false,
@@ -1696,25 +1996,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -1733,25 +2033,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -1770,25 +2070,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -1803,7 +2103,7 @@ class CoordinateOperationMethods
             'help' => '',
         ],
         'urn:ogc:def:method:EPSG::1064' => [
-            'name' => 'Point motion (geocentric Cartesian)',
+            'name' => 'Point motion (geocen domain) using XYZ velocities',
             'reversible' => false,
             'paramData' => [
                 'pointMotionVelocityX' => [
@@ -1823,25 +2123,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'transformationReferenceEpoch' => [
                     'reverses' => false,
@@ -1854,25 +2154,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'transformationReferenceEpoch' => [
                     'reverses' => false,
@@ -1881,7 +2181,7 @@ class CoordinateOperationMethods
             'help' => '',
         ],
         'urn:ogc:def:method:EPSG::1067' => [
-            'name' => 'Point motion (ellipsoidal)',
+            'name' => 'Point motion (geog3D domain) using NEU velocities',
             'reversible' => false,
             'paramData' => [
                 'pointMotionVelocityNorth' => [
@@ -2043,8 +2343,21 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1085' => [
+            'name' => 'Vertical Offset by Grid Interpolation (asc)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1086' => [
-            'name' => 'Point motion (geocen) by grid (INADEFORM)',
+            'name' => 'Point motion (geocen domain) using XYZ velocity grid (INADEFORM)',
             'reversible' => true,
             'paramData' => [
                 'pointMotionVelocityGridFile' => [
@@ -2057,7 +2370,7 @@ class CoordinateOperationMethods
             'help' => '',
         ],
         'urn:ogc:def:method:EPSG::1087' => [
-            'name' => 'Geocentric translation by Grid Interpolation (IGN)',
+            'name' => 'Geocentric translations (geog2D domain) by grid (IGN)',
             'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
@@ -2111,6 +2424,19 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1091' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (CI)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1092' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (EGM2008)',
             'reversible' => true,
@@ -2126,6 +2452,19 @@ class CoordinateOperationMethods
         ],
         'urn:ogc:def:method:EPSG::1093' => [
             'name' => 'Geog3D to Geog2D+GravityRelatedHeight (Gravsoft)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1094' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (IGN1997)',
             'reversible' => true,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
@@ -2250,6 +2589,19 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1103' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (EGM)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1104' => [
             'name' => 'Change of Vertical Unit',
             'reversible' => true,
@@ -2309,6 +2661,29 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1109' => [
+            'name' => 'Geographic3D to Depth (Gravsoft)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1110' => [
+            'name' => 'Geog3D to Geog2D+Depth (Gravsoft)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1111' => [
             'name' => 'Transverse Mercator 3D',
             'reversible' => true,
@@ -2326,6 +2701,55 @@ class CoordinateOperationMethods
                     'reverses' => false,
                 ],
                 'falseNorthing' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1113' => [
+            'name' => 'Vertical Offset using NEU velocity grid (NTv2_Vel)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1114' => [
+            'name' => 'Geographic3D Offset using NEU velocity grid (NTv2_Vel)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1115' => [
+            'name' => 'Geog3D to Geog2D+Depth (txt)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1116' => [
+            'name' => 'Geographic3D to Depth (txt)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
                     'reverses' => false,
                 ],
             ],
@@ -2379,12 +2803,126 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1120' => [
+            'name' => 'Point motion (geocen domain) using XYZ velocity grid (BGN)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1121' => [
+            'name' => 'Geographic3D to Depth (gtx)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1122' => [
+            'name' => 'Geog3D to Geog2D+Depth (gtx)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1123' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (gtg)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1124' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1125' => [
+            'name' => 'Azimuthal Equidistant',
+            'reversible' => true,
+            'paramData' => [
+                'latitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'falseEasting' => [
+                    'reverses' => false,
+                ],
+                'falseNorthing' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1126' => [
             'name' => 'Vertical change by geoid grid difference (NRCan)',
             'reversible' => true,
             'paramData' => [
                 'offsetsFile' => [
                     'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1127' => [
+            'name' => 'Geographic3D to Depth (gtg)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1128' => [
+            'name' => 'Geog3D to Geog2D+Depth (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1129' => [
+            'name' => 'Vertical Offset by Grid Interpolation (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
                 ],
                 'EPSGCodeForInterpolationCRS' => [
                     'reverses' => false,
@@ -2417,6 +2955,72 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1131' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeight' => [
+                    'reverses' => true,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1132' => [
+            'name' => 'Coordinate Frame rotation full matrix (geocen)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'scaleDifference' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1133' => [
+            'name' => 'Coordinate Frame rotation full matrix (geog2D)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'scaleDifference' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1134' => [
             'name' => 'Geographic3D to GravityRelatedHeight (NGS bin)',
             'reversible' => false,
@@ -2440,8 +3044,215 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::1136' => [
+            'name' => 'Geographic3D to GravityRelatedHeight',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeight' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1137' => [
+            'name' => 'Vertical Offset by TIN Interpolation (JSON)',
+            'reversible' => true,
+            'paramData' => [
+                'tINOffsetFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1138' => [
+            'name' => 'Cartesian Grid Offsets by TIN Interpolation (JSON)',
+            'reversible' => true,
+            'paramData' => [
+                'tINOffsetFile' => [
+                    'reverses' => true,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1139' => [
+            'name' => 'Point motion (geocen domain) using NEU velocity grid (Gravsoft)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityNorthGridFile' => [
+                    'reverses' => false,
+                ],
+                'pointMotionVelocityEastGridFile' => [
+                    'reverses' => false,
+                ],
+                'pointMotionVelocityUpGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1140' => [
+            'name' => 'Coordinate Frame rotation full matrix (geog3D)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'scaleDifference' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1141' => [
+            'name' => 'Point motion (geog3D domain) using NEU velocity grid (NTv2_Vel)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1142' => [
+            'name' => 'Geocen translations by grid (gtg) & Geocen translations NEU velocities (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRSForGeocentricTranslationGridFile' => [
+                    'reverses' => false,
+                ],
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRSForPointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'sourceEpoch' => [
+                    'reverses' => false,
+                ],
+                'targetEpoch' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1143' => [
+            'name' => 'Position Vector (geocen) & Geocen translations NEU velocities (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'scaleDifference' => [
+                    'reverses' => false,
+                ],
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+                'sourceEpoch' => [
+                    'reverses' => false,
+                ],
+                'targetEpoch' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1144' => [
+            'name' => 'Geocentric translations using NEU velocity grid (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+                'sourceEpoch' => [
+                    'reverses' => false,
+                ],
+                'targetEpoch' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1145' => [
+            'name' => 'Geographic2D Offsets by TIN Interpolation (JSON)',
+            'reversible' => true,
+            'paramData' => [
+                'tINOffsetFile' => [
+                    'reverses' => true,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1146' => [
+            'name' => 'Point motion (geocen domain) using NEU velocities',
+            'reversible' => false,
+            'paramData' => [
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1147' => [
+            'name' => 'Geocentric translations (geocen domain) by XYZ grid (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::1148' => [
-            'name' => 'Point motion (geocentric domain) using NEU displacement grid (grd)',
+            'name' => 'Point motion (geog3D domain) using NEU displacement grid (grd)',
             'reversible' => true,
             'paramData' => [
                 'pointMotionDisplacementNorthGridFile' => [
@@ -2451,6 +3262,381 @@ class CoordinateOperationMethods
                     'reverses' => false,
                 ],
                 'pointMotionDisplacementUpGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1149' => [
+            'name' => 'Coordinate Frame rotation (geog3D to compound)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => false,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => false,
+                ],
+                'scaleDifference' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1150' => [
+            'name' => 'NTv2 & Transverse Mercator',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'latitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'scaleFactorAtNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'falseEasting' => [
+                    'reverses' => false,
+                ],
+                'falseNorthing' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1151' => [
+            'name' => 'NTv2 & Lambert Conic Conformal (2SP) ',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'latitudeOfFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'latitudeOf1stStandardParallel' => [
+                    'reverses' => false,
+                ],
+                'latitudeOf2ndStandardParallel' => [
+                    'reverses' => false,
+                ],
+                'eastingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'northingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1152' => [
+            'name' => 'NTv2 & Lambert Conic Conformal (1SP variant B)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'latitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'scaleFactorAtNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'latitudeOfFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'eastingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+                'northingAtFalseOrigin' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1153' => [
+            'name' => 'Coordinate Frame rotation (geog2D domain) & Transverse Mercator',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'scaleDifference' => [
+                    'reverses' => true,
+                ],
+                'latitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'longitudeOfNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'scaleFactorAtNaturalOrigin' => [
+                    'reverses' => false,
+                ],
+                'falseEasting' => [
+                    'reverses' => false,
+                ],
+                'falseNorthing' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1154' => [
+            'name' => 'Vertical Offset by Grid Interpolation (GGXF)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1155' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (GGXF)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1156' => [
+            'name' => 'Geographic3D to Depth (GGXF)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1157' => [
+            'name' => 'Geog3D to Geog2D+Depth (GGXF)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1158' => [
+            'name' => 'Geog3D to Geog2D+GravityRelatedHeight (GGXF)',
+            'reversible' => true,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1159' => [
+            'name' => 'Geocentric translations using XYZ velocity grid (INADEFORM)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+                'sourceEpoch' => [
+                    'reverses' => false,
+                ],
+                'targetEpoch' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1160' => [
+            'name' => 'NTv2 & Coordinate Frame rotation (geocentric domain)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'xAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'scaleDifference' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1161' => [
+            'name' => 'Time-dep Coordinate Frame (geocen) & Geocen translations by XYZ vel (INADEFORM)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'scaleDifference' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfXAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfYAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfZAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfXAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfYAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfZAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'rateOfChangeOfScaleDifference' => [
+                    'reverses' => true,
+                ],
+                'parameterReferenceEpoch' => [
+                    'reverses' => false,
+                ],
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+                'sourceEpoch' => [
+                    'reverses' => false,
+                ],
+                'targetEpoch' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1162' => [
+            'name' => 'Vertical Offset by Grid Interpolation (PatchJGD)',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
+                    'reverses' => true,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::1163' => [
+            'name' => 'Coordinate Frame rotation & Cartesian Grid Offsets by Grid Interpolation (HEPOS)',
+            'reversible' => true,
+            'paramData' => [
+                'xAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'yAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'zAxisTranslation' => [
+                    'reverses' => true,
+                ],
+                'xAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'yAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'zAxisRotation' => [
+                    'reverses' => true,
+                ],
+                'scaleDifference' => [
+                    'reverses' => true,
+                ],
+                'eastingDifferenceFile' => [
+                    'reverses' => false,
+                ],
+                'northingDifferenceFile' => [
                     'reverses' => false,
                 ],
                 'EPSGCodeForInterpolationCRS' => [
@@ -2481,13 +3667,13 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -2541,25 +3727,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
             ],
             'help' => '',
@@ -2569,24 +3755,34 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::9614' => [
+            'name' => 'NTv1',
+            'reversible' => true,
+            'paramData' => [
+                'offsetsFile' => [
                     'reverses' => true,
                 ],
             ],
@@ -2762,25 +3958,25 @@ class CoordinateOperationMethods
             'reversible' => true,
             'paramData' => [
                 'xAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisTranslation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'xAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'yAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'zAxisRotation' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'scaleDifference' => [
-                    'reverses' => true,
+                    'reverses' => false,
                 ],
                 'ordinate1OfEvaluationPoint' => [
                     'reverses' => false,
@@ -3726,8 +4922,38 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::9661' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (EGM)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::9662' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (AUSGeoid98)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
         'urn:ogc:def:method:EPSG::9663' => [
             'name' => 'Geographic3D to GravityRelatedHeight (OSGM-GB)',
+            'reversible' => false,
+            'paramData' => [
+                'geoidHeightCorrectionModelFile' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
+        'urn:ogc:def:method:EPSG::9664' => [
+            'name' => 'Geographic3D to GravityRelatedHeight (IGN1997)',
             'reversible' => false,
             'paramData' => [
                 'geoidHeightCorrectionModelFile' => [
@@ -4527,26 +5753,65 @@ class CoordinateOperationMethods
             ],
             'help' => '',
         ],
+        'urn:ogc:def:method:EPSG::32769' => [
+            'name' => 'Point motion (geog3D domain) using NEU velocity grid (gtg)',
+            'reversible' => true,
+            'paramData' => [
+                'pointMotionVelocityGridFile' => [
+                    'reverses' => false,
+                ],
+                'EPSGCodeForInterpolationCRS' => [
+                    'reverses' => false,
+                ],
+            ],
+            'help' => '',
+        ],
     ];
 
     private const METHOD_CODE_TO_IMPLEMENTATION_LOOKUP = [
         self::EPSG_GEOGRAPHIC_GEOCENTRIC_CONVERSIONS => 'geographicGeocentric',
         self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN => 'geocentricTranslation',
         self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN => 'geocentricTranslation',
+        self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN => 'geocentricTranslation',
+        self::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG => 'geocentricTranslationsUsingNeuVelocityGrid',
+        self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCEN_DOMAIN_BY_XYZ_GRID_GTG => 'geocentricTranslationsByXyzGrid',
+        self::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => 'geocentricTranslationsByXyzGridUsingNeuVelocityGrid',
+        self::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => 'positionVectorTransformationUsingNeuVelocityGrid',
         self::EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN => 'coordinateFrameRotation',
         self::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN => 'coordinateFrameRotation',
+        self::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_DOMAIN => 'coordinateFrameRotation',
+        self::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_TO_COMPOUND => 'coordinateFrameRotation',
+        self::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOCEN => 'coordinateFrameRotation',
+        self::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG2D => 'coordinateFrameRotation',
+        self::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG3D => 'coordinateFrameRotation',
         self::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN => 'timeDependentCoordinateFrameRotation',
         self::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN => 'timeSpecificCoordinateFrameRotation',
         self::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOCENTRIC_DOMAIN => 'positionVectorTransformation',
         self::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN => 'positionVectorTransformation',
+        self::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG3D_DOMAIN => 'positionVectorTransformation',
         self::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC => 'timeDependentPositionVectorTransformation',
         self::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN => 'timeSpecificPositionVectorTransformation',
+        self::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITIES => 'pointMotionXyzVelocities',
+        self::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN => 'pointMotionXyzVelocityGrid',
+        self::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITIES => 'pointMotionNeuVelocities',
+        self::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_NEU_VELOCITIES => 'pointMotionNeuVelocities',
+        self::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_NTV2_VEL => 'pointMotionNeuVelocityGrid',
+        self::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => 'geographic3DOffsetUsingNeuVelocityGrid',
+        self::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => 'verticalOffsetUsingNeuVelocityGrid',
+        self::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_GTG => 'pointMotionNeuVelocityGrid',
+        self::EPSG_MOLODENSKY => 'molodensky',
+        self::EPSG_ABRIDGED_MOLODENSKY => 'abridgedMolodensky',
+        self::EPSG_MOLODENSKY_BADEKAS_CF_GEOCENTRIC_DOMAIN => 'coordinateFrameMolodenskyBadekas',
         self::EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN => 'coordinateFrameMolodenskyBadekas',
+        self::EPSG_MOLODENSKY_BADEKAS_CF_GEOG3D_DOMAIN => 'coordinateFrameMolodenskyBadekas',
         self::EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN => 'positionVectorMolodenskyBadekas',
         self::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN => 'positionVectorMolodenskyBadekas',
+        self::EPSG_MOLODENSKY_BADEKAS_PV_GEOG3D_DOMAIN => 'positionVectorMolodenskyBadekas',
         self::EPSG_AFFINE_PARAMETRIC_TRANSFORMATION => 'affineParametricTransform',
         self::EPSG_ALBERS_EQUAL_AREA => 'albersEqualArea',
         self::EPSG_AMERICAN_POLYCONIC => 'americanPolyconic',
+        self::EPSG_AZIMUTHAL_EQUIDISTANT => 'azimuthalEquidistant',
+        self::EPSG_BONNE => 'bonne',
         self::EPSG_BONNE_SOUTH_ORIENTATED => 'bonneSouthOrientated',
         self::EPSG_CARTESIAN_GRID_OFFSETS => 'offsets',
         self::EPSG_CASSINI_SOLDNER => 'cassiniSoldner',
@@ -4554,6 +5819,7 @@ class CoordinateOperationMethods
         self::EPSG_COLOMBIA_URBAN => 'columbiaUrban',
         self::EPSG_EQUAL_EARTH => 'equalEarth',
         self::EPSG_EQUIDISTANT_CYLINDRICAL => 'equidistantCylindrical',
+        self::EPSG_EQUIDISTANT_CYLINDRICAL_SPHERICAL => 'equidistantCylindrical',
         self::EPSG_GEOGRAPHIC3D_TO_2D_CONVERSION => 'threeDToTwoD',
         self::EPSG_GUAM_PROJECTION => 'guamProjection',
         self::EPSG_KROVAK => 'krovak',
@@ -4592,7 +5858,11 @@ class CoordinateOperationMethods
         self::EPSG_VERTICAL_OFFSET => 'offset',
         self::EPSG_VERTICAL_OFFSET_AND_SLOPE => 'offsetAndSlope',
         self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 => 'generalPolynomial',
+        self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_3 => 'generalPolynomial',
+        self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_4 => 'generalPolynomial',
         self::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => 'generalPolynomial',
+        self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_2 => 'reversiblePolynomial',
+        self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_3 => 'reversiblePolynomial',
         self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_4 => 'reversiblePolynomial',
         self::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 => 'reversiblePolynomial',
         self::EPSG_NEW_ZEALAND_MAP_GRID => 'newZealandMapGrid',
@@ -4610,34 +5880,71 @@ class CoordinateOperationMethods
         self::EPSG_NADCON5_2D => 'offsetsFromGridNADCON5',
         self::EPSG_NADCON5_3D => 'offsetsFromGridNADCON5',
         self::EPSG_NTV2 => 'offsetsFromGrid',
+        self::EPSG_NTV1 => 'offsetsFromGrid',
         self::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => 'zeroTideHeightToMeanTideHeightEVRF2019',
-        self::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN => 'offsetsFromGrid',
+        self::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN_BY_GRID_IGN => 'offsetsFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTX => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GTX => 'geographic3DTo2DPlusDepthFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_DEPTH_GTX => 'geographic3DToDepthFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => 'offsetFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GTG => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GTG => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GTG => 'geographic3DTo2DPlusDepthFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_DEPTH_GTG => 'geographic3DToDepthFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GGXF => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GGXF => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GGXF => 'geographic3DTo2DPlusDepthFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_DEPTH_GGXF => 'geographic3DToDepthFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG => 'offsetFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF => 'offsetFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD => 'offsetFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON => 'offsetFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NGS_BIN => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NGS_BIN => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN2009 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_IGN1997 => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_IGN1997 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_CI => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_CI => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM2008 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_EGM => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_EGM => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_PL_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PL_TXT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_BEV_AT => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => 'offsetFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC => 'offsetFromGrid',
+        self::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_NRCAN_BYN => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NRCAN_BYN => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => 'offsetFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_GRAVSOFT => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_GRAVSOFT => 'geographic3DTo2DPlusDepthFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_DEPTH_GRAVSOFT => 'geographic3DToDepthFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_TXT => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_DEPTH_TXT => 'geographic3DTo2DPlusDepthFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_DEPTH_TXT => 'geographic3DToDepthFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM15_IRE => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_OSGM02_IRE => 'geographic3DToGravityHeightFromGrid',
         self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ISG => 'geographic3DTo2DPlusGravityHeightFromGrid',
         self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ISG => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_AUSGEOIDV2 => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID_V2 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_AUSGEOID98 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT_ITAL2005 => 'geographic3DTo2DPlusGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_ITAL2005 => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_NZGEOID => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT_PNG => 'geographic3DToGravityHeightFromGrid',
+        self::EPSG_GEOG3D_TO_GEOG2D_PLUS_GRAVITYRELATEDHEIGHT => 'geographic3DTo2DPlusGravityHeight',
+        self::EPSG_GEOGRAPHIC3D_TO_GRAVITYRELATEDHEIGHT => 'geographic3DToGravityHeight',
         self::EPSG_LOCAL_ORTHOGRAPHIC => 'localOrthographic',
     ];
 

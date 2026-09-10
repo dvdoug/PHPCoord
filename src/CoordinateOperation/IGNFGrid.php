@@ -22,7 +22,9 @@ use function max;
 use function min;
 use function str_repeat;
 use function str_replace;
+use function str_starts_with;
 use function strlen;
+use function substr;
 use function trim;
 
 trait IGNFGrid
@@ -52,6 +54,7 @@ trait IGNFGrid
         $recordId = match ($this->storageOrder) {
             self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE => ($longitudeIndex * $this->numberOfRows + $latitudeIndex),
             self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE => ($this->numberOfRows - $latitudeIndex - 1) * $this->numberOfColumns + $longitudeIndex,
+            self::STORAGE_ORDER_INCREASING_LONGITUDE_INCREASING_LATIITUDE => $latitudeIndex * $this->numberOfColumns + $longitudeIndex,
             default => throw new UnknownConversionException('Unknown storage order for file: ' . $this->gridFile->getFilename())
         };
 
@@ -90,7 +93,10 @@ trait IGNFGrid
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
         for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
             $rowData = explode(' ', trim(Preg::replace('/ +/', ' ', $this->gridFile->fgets())));
-            $wantedData = array_slice($rowData, 3, 3); // ignore weird first fixed value, coordinates, precision and map sheet
+            // Records are sheet code, longitude, latitude, three translations, precision, map sheet.
+            // The RGM04 publication has no sheet code, so the translations start one field earlier.
+            $translationOffset = count($rowData) > 6 ? 3 : 2;
+            $wantedData = array_slice($rowData, $translationOffset, 3);
             $wantedData = array_map(static fn (string $value) => (float) $value, $wantedData);
             $this->data[$i] = $wantedData;
         }
@@ -103,6 +109,10 @@ trait IGNFGrid
     {
         $fixedHeaderRegexp = '^(-?[\d.]+) (-?[\d.]+) (-?[\d.]+) (-?[\d.]+) ([\d.]+) ([\d.]+) ([1-4]) ([01]) (\d) ([01]) ';
         $header = $this->gridFile->fgets();
+        $headerLength = strlen($header);
+        if (str_starts_with($header, "\xEF\xBB\xBF")) {
+            $header = substr($header, 3);
+        }
 
         Preg::match('/' . $fixedHeaderRegexp . '/', $header, $fixedHeaderParts);
 
@@ -131,7 +141,7 @@ trait IGNFGrid
 
         $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
 
-        $rawData = $this->gridFile->fread($this->gridFile->getSize() - strlen($header));
+        $rawData = $this->gridFile->fread($this->gridFile->getSize() - $headerLength);
         $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
 
         $cursor = 0;

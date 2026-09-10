@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4844",
+    "title": "North America/USA - Montana - Interstate",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-106.33, 45.7], [-103.91, 45.7], [-103.91, 47.89], [-106.33, 47.89], [-106.33, 45.7]
+        ]
+    ]
+}

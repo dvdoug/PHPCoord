@@ -24,6 +24,9 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 
 use function array_map;
 
+/**
+ * @template-covariant T of Angle|Length|Scale = Angle|Length|Scale
+ */
 class Rate implements UnitOfMeasure
 {
     /**
@@ -105,24 +108,39 @@ class Rate implements UnitOfMeasure
         ],
     ];
 
+    /**
+     * @var T
+     */
     private Angle|Length|Scale $change;
 
     private Time $time;
 
+    /**
+     * @param T $change
+     */
     public function __construct(Angle|Length|Scale $change, Time $time)
     {
         $this->change = $change;
         $this->time = $time;
     }
 
+    /**
+     * @return T
+     */
     public function getChange(): Angle|Length|Scale
     {
         return $this->change;
     }
 
+    /**
+     * @return T
+     */
     public function getChangePerYear(): Angle|Length|Scale
     {
-        return $this->change->divide($this->time->asYears()->getValue());
+        /** @var T $change */
+        $change = $this->change->divide($this->time->asYears()->getValue());
+
+        return $change;
     }
 
     public function getTime(): Time
@@ -145,11 +163,20 @@ class Rate implements UnitOfMeasure
         return (string) $this->getValue();
     }
 
+    /**
+     * @return self<T>
+     */
     public function multiply(float $multiplicand): self
     {
-        return new self($this->change->multiply($multiplicand), $this->time);
+        /** @var T $change */
+        $change = $this->change->multiply($multiplicand);
+
+        return new self($change, $this->time);
     }
 
+    /**
+     * @return self<Angle|Length|Scale>
+     */
     public static function makeUnit(float $measurement, string $srid): self
     {
         if (!isset(self::$sridData[$srid])) {

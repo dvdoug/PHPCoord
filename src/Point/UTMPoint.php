@@ -120,9 +120,9 @@ class UTMPoint extends ProjectedPoint
         return $this->crs->getBaseCRS();
     }
 
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
     {
-        return $this->asGeographicPoint()->convert($to, $ignoreBoundaryRestrictions);
+        return $this->asGeographicPoint()->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
     }
 
     public function calculateDistance(Point $to): Length

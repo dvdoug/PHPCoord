@@ -84,7 +84,7 @@ AbInvA96_2020-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ABINVA96_2020_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9384')
 
-Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / AbInvA96_2020 SnakeGrid projected CRS through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) used in conjunction with the AbInvA96_2020-TM map projection (code 9385).
+Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / AbInvA96_2020 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to AbInvA96_2020-IRF (1) (code 9386) used in conjunction with the AbInvA96_2020-TM map projection (code 9385).
 
 Abidjan 1987
 ------------
@@ -218,7 +218,7 @@ American Samoa 1962
 
 Amersfoort
 ----------
-| Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone
+| Extent: Netherlands
 
 .. code-block:: php
 
@@ -229,7 +229,7 @@ Amersfoort
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_AMERSFOORT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4289')
 
-Use of geographic2D CRS Amersfoort (code 4289) for spatial referencing is discouraged. Use projected CRS Amersfoort / RD New (code 28992).
+Use of this geographic2D CRS (Amersfoort, code 4289) for spatial referencing is discouraged. Use projected CRS RD (code 28992) or geodetic CRS ETRS89-NLD [AGRS2010] (codes 11035-11037).
 
 Ammassalik 1958
 ---------------
@@ -561,36 +561,6 @@ BES2020 Sint Eustatius
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10739')
 
 
-BGS2005
--------
-| Extent: Bulgaria
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_BGS2005)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::7798')
-    Geographic::fromSRID(Geographic2D::EPSG_BGS2005)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::7798')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BGS2005)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7798')
-
-Adopted 2010-07-29. Replaces earlier systems.
-
-BH_ETRS89
----------
-| Extent: Bosnia and Herzegovina
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_BH_ETRS89)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10328')
-    Geographic::fromSRID(Geographic2D::EPSG_BH_ETRS89)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10328')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_BH_ETRS89)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10328')
-
-In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
-
 Barbados 1938
 -------------
 | Extent: Barbados - onshore
@@ -880,20 +850,6 @@ CH1903+
 
 Replaces CH1903.
 
-CHTRS95
--------
-| Extent: Liechtenstein; Switzerland
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_CHTRS95)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4151')
-    Geographic::fromSRID(Geographic2D::EPSG_CHTRS95)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4151')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CHTRS95)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4151')
-
-
 CIGD11
 ------
 | Extent: Cayman Islands. Includes Grand Cayman, Little Cayman and Cayman Brac
@@ -921,7 +877,7 @@ CNH22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CNH22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10191')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CNH22 SnakeGrid projected CRS through transformation ETRS89 to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map projection (code 10193).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CNH22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map projection (code 10193).
 
 COV23-IRF
 ---------
@@ -936,22 +892,36 @@ COV23-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_COV23_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10468')
 
-Intermediate CRS created in 2023 to assist the emulation of the ETRS89 / COV23 SnakeGrid projected CRS through transformation ETRS89 to COV23 (1) (code 10469) used in conjunction with the COV23-TM map projection (code 10470).
+Intermediate CRS created in 2023 to assist the emulation of the ETRS89 / COV23 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to COV23 (1) (code 10469) used in conjunction with the COV23-TM map projection (code 10470).
 
-CR-SIRGAS
----------
+CR-SIRGAS epoch 2014.59
+-----------------------
 | Extent: Costa Rica
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_CR_SIRGAS)
+    Geographic2D::fromSRID(Geographic2D::EPSG_CR_SIRGAS_EPOCH_2014_59)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::8907')
-    Geographic::fromSRID(Geographic2D::EPSG_CR_SIRGAS)
+    Geographic::fromSRID(Geographic2D::EPSG_CR_SIRGAS_EPOCH_2014_59)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::8907')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CR_SIRGAS)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CR_SIRGAS_EPOCH_2014_59)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8907')
 
 Replaces CR05 (CRS code 5365) from April 2018.
+
+CR-SIRGAS epoch 2019.24
+-----------------------
+| Extent: Costa Rica
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CR_SIRGAS_EPOCH_2019_24)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11043')
+    Geographic::fromSRID(Geographic2D::EPSG_CR_SIRGAS_EPOCH_2019_24)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11043')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CR_SIRGAS_EPOCH_2019_24)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11043')
+
 
 CR05
 ----
@@ -966,7 +936,7 @@ CR05
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CR05)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5365')
 
-Replaces Ocotepeque (CRS code 5451) in Costa Rica from March 2007. Replaced by CR-SIRGAS (CRS code 8907) from April 2018.
+Replaces Ocotepeque (CRS code 5451) in Costa Rica from March 2007. Replaced by CR-SIRGAS epoch 2014.59 (CRS code 8907) from April 2018.
 
 CSG67
 -----
@@ -1025,7 +995,7 @@ CWS13-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CWS13_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10196')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CWS13 SnakeGrid projected CRS through transformation ETRS89 to CWS13-IRF (1) (code 10197) used in conjunction with the CWS13-TM map projection (code 10198).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CWS13 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to CWS13-IRF (1) (code 10197) used in conjunction with the CWS13-TM map projection (code 10198).
 
 Cadastre 1997
 -------------
@@ -1295,7 +1265,7 @@ Replaced by Corrego Alegre 1970-72 (CRS code 4225).
 
 Corrego Alegre 1970-72
 ----------------------
-| Extent: Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also east of 42°W
+| Extent: Brazil - onshore - north of 15°S and east of 42°W, between 15°S and 18°S and east of 54°W, and between 18°S and 32°45'S
 
 .. code-block:: php
 
@@ -1366,7 +1336,7 @@ DIBA15-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DIBA15_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10204')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DIBA15 SnakeGrid projected CRS through transformation ETRS89 to DIBA15-IRF (1) (code 10205) used in conjunction with the DIBA15-TM map projection (code 10206).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DIBA15 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to DIBA15-IRF (1) (code 10205) used in conjunction with the DIBA15-TM map projection (code 10206).
 
 DRUKREF 03
 ----------
@@ -1381,6 +1351,7 @@ DRUKREF 03
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DRUKREF_03)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5264')
 
+Replaced by DrukRef23 (CRS code 11226).
 
 Dabola 1981
 -----------
@@ -1396,6 +1367,21 @@ Dabola 1981
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4155')
 
 Replaces Conakry 1905 (EPSG code 4315).
+
+Dart+26-IRF
+-----------
+| Extent: Ireland - on or related to the DART+ rail project from Dublin city centre to Drogheda, Greystones, Hazelhatch and Kilcock
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_DART_PLUS_26_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11461')
+    Geographic::fromSRID(Geographic2D::EPSG_DART_PLUS_26_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11461')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DART_PLUS_26_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11461')
+
+Intermediate CRS created in 2026 to assist the emulation of the ETRS89 / Dart+26 SnakeGrid projected CRS through transformation ETRS89-IRE [ETRF2000] to Dart+26-IRF (1) (code 11462) used in conjunction with the Dart+26-TM map projection (code 11463).
 
 Datum 73
 --------
@@ -1481,7 +1467,7 @@ DoPw22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DOPW22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10175')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DoPw22 SnakeGrid projected CRS through transformation ETRS89 to DoPw22-IRF (1) (code 10181) used in conjunction with the DoPw22-TM map projection (code 10182).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DoPw22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to DoPw22-IRF (1) (code 10181) used in conjunction with the DoPw22-TM map projection (code 10182).
 
 Dominica 1945
 -------------
@@ -1512,6 +1498,21 @@ Douala 1948
 
 Replaced by Manoca 1962 (code 4193).
 
+DrukRef23
+---------
+| Extent: Bhutan
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_DRUKREF23)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11226')
+    Geographic::fromSRID(Geographic2D::EPSG_DRUKREF23)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11226')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_DRUKREF23)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11226')
+
+Replaces DRUKREF 03 (CRS code 5264).
+
 EBBWV14-IRF
 -----------
 | Extent: UK - on or related to the rail route from Newport (Park Junction) to Ebbw Vale
@@ -1525,7 +1526,7 @@ EBBWV14-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EBBWV14_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9939')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection (code 9942).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection (code 9942).
 
 ECML14-IRF
 ----------
@@ -1540,7 +1541,7 @@ ECML14-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ECML14_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10623')
 
-Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / ECML14 SnakeGrid projected CRS through transformation ETRS89 to ECML14-IRF (1) (code 10624) used in conjunction with the ECML14-TM map projection (code 10625).
+Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / ECML14 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to ECML14-IRF (1) (code 10624) used in conjunction with the ECML14-TM map projection (code 10625).
 
 ECML14_NB-IRF
 -------------
@@ -1555,7 +1556,7 @@ ECML14_NB-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ECML14_NB_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9758')
 
-Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_NB SnakeGrid projected CRS through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) used in conjunction with the ECML14_NB-TM map projection (code 9760).
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_NB SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to ECML14_NB-IRF (1) (code 9759) used in conjunction with the ECML14_NB-TM map projection (code 9760).
 
 ED50
 ----
@@ -1640,7 +1641,7 @@ EOS21-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EOS21_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9739')
 
-Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EOS21 SnakeGrid projected CRS through transformation ETRS89 to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map projection (code 9738).
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EOS21 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map projection (code 9738).
 
 EST92
 -----
@@ -1657,21 +1658,6 @@ EST92
 
 This name is also used for a projected CRS (see projCRS code 3300). Replaced by EST97 (code 4180).
 
-EST97
------
-| Extent: Estonia
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_EST97)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4180')
-    Geographic::fromSRID(Geographic2D::EPSG_EST97)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4180')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EST97)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4180')
-
-This name is also used for a projected CRS (see projCRS code 3301). Replaces EST92 (code 4133).
-
 ETRF2000
 --------
 | Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
@@ -1686,20 +1672,6 @@ ETRF2000
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9067')
 
 Replaces ETRF97 (code 9066). On the publication of ETRF2005 the EUREF Technical Working Group recommended ETRF2000 be the realization of ETRS89. ETRF2014 and ETRF2020 (codes 9069 and 10571) are technically superior to all earlier realizations of ETRS89.
-
-ETRF2000-PL
------------
-| Extent: Poland
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_ETRF2000_PL)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9702')
-    Geographic::fromSRID(Geographic2D::EPSG_ETRF2000_PL)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9702')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRF2000_PL)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9702')
-
 
 ETRF2005
 --------
@@ -1881,35 +1853,764 @@ ETRS89
 
 Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.
 
-ETRS89/DREF91/2016
-------------------
+ETRS89-ALB [2008]
+-----------------
+| Extent: Albania
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ALB_2008)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11047')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ALB_2008)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11047')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ALB_2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11047')
+
+Horizontal component of national realization of ETRS89 in Albania. The active GNSS network uses ETRS89-ALB [KRGJSH 2014].
+
+ETRS89-ALB [KRGJSH 2014]
+------------------------
+| Extent: Albania
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ALB_KRGJSH_2014)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11053')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ALB_KRGJSH_2014)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11053')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ALB_KRGJSH_2014)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11053')
+
+Used for the coordinates of the 27 reference stations of the active ALBCORS network in Albania. Differences with the 2008 realization (CRS code 11047) used for other spatial referencing are negligible (5-7 mm for all components).
+
+ETRS89-AUT [2002]
+-----------------
+| Extent: Austria
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_AUT_2002)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11057')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_AUT_2002)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11057')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_AUT_2002)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11057')
+
+Horizontal component of national realization of ETRS89 in Austria.
+
+ETRS89-BEL [BEREF2002]
+----------------------
+| Extent: Belgium
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_BEL_BEREF2002)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11063')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_BEL_BEREF2002)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11063')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_BEL_BEREF2002)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11063')
+
+Horizontal component of national realization of ETRS89 in Belgium. Replaced by BEREF2011 (CRS code 11215).
+
+ETRS89-BEL [BEREF2011]
+----------------------
+| Extent: Belgium
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_BEL_BEREF2011)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11215')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_BEL_BEREF2011)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11215')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_BEL_BEREF2011)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11215')
+
+Horizontal component of second national realization of ETRS89 in Belgium. Replaces BEREF2002 (CRS code 11063).
+
+ETRS89-BGR [BGS2005]
+--------------------
+| Extent: Bulgaria
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_BGR_BGS2005)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::7798')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_BGR_BGS2005)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::7798')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_BGR_BGS2005)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7798')
+
+Adopted 2010-07-29. Replaces earlier systems.
+
+ETRS89-BIH [BH_ETRS89]
+----------------------
+| Extent: Bosnia and Herzegovina
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_BIH_BH_ETRS89)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10328')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_BIH_BH_ETRS89)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10328')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_BIH_BH_ETRS89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10328')
+
+In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
+
+ETRS89-CHE [CHTRF95]
+--------------------
+| Extent: Liechtenstein; Switzerland
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_CHE_CHTRF95)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11307')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_CHE_CHTRF95)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11307')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_CHE_CHTRF95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11307')
+
+First realization of CHTRS95. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).
+
+ETRS89-CHE [CHTRS95]
+--------------------
+| Extent: Liechtenstein; Switzerland
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_CHE_CHTRS95)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4151')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_CHE_CHTRS95)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4151')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_CHE_CHTRS95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4151')
+
+First realized through CHTRF95 and subsequently CHTRF98, with an aim to re-measure every 6 years. CHTRF98, CHTRF2004, CHTRF2010 and CHTRF2016 are all within 2cm of CHTRF95 and used for scientific applications, but for most practical purposes differences are considered insignificant. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).
+
+ETRS89-CZE [2007]
+-----------------
+| Extent: Czechia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_CZE_2007)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11070')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_CZE_2007)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11070')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_CZE_2007)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11070')
+
+Horizontal component of national realization of ETRS89 in Czechia.
+
+ETRS89-DEU [ETRS89/DREF91/2016]
+-------------------------------
 | Extent: Germany
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DEU_ETRS89_DREF91_2016)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10284')
-    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_DEU_ETRS89_DREF91_2016)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::10284')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_DREF91_2016)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_DEU_ETRS89_DREF91_2016)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10284')
 
-German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+German national realization of ETRS89. Replaces ETRS89-DEU [ETRS89/DREF91/2002] from 2016-12-01. Replaced by ETRS89-DEU [ETRS89/DREF91/2025] from 2025-07-01.
 
-EUREF-FIN
----------
+ETRS89-DEU [ETRS89/DREF91/2025]
+-------------------------------
+| Extent: Germany
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DEU_ETRS89_DREF91_2025)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11199')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_DEU_ETRS89_DREF91_2025)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11199')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_DEU_ETRS89_DREF91_2025)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11199')
+
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2025 from 2025-07-01.
+
+ETRS89-DNK
+----------
+| Extent: Denmark
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_DNK)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10892')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_DNK)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10892')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_DNK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10892')
+
+Horizontal component of the national realization of ETRS89 in Denmark.
+
+ETRS89-ESP [ERGNSS]
+-------------------
+| Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ESP_ERGNSS)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11128')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ESP_ERGNSS)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11128')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ESP_ERGNSS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11128')
+
+Horizontal component of national realization of ETRS89 in Spain. Replaces ETRS89-ESP [REGENTE] for CORS services from 2018-03-15.
+
+ETRS89-ESP [REGENTE]
+--------------------
+| Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ESP_REGENTE)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11134')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ESP_REGENTE)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11134')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ESP_REGENTE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11134')
+
+Horizontal component of national realization of ETRS89 in Spain. For GNSS CORS services, replaced by ETRS89-ESP [ERGNSS] (code 11128) from 2018-03-25. For most purposes the offset of approximately 2cm is considered insignificant.
+
+ETRS89-EST [EST97]
+------------------
+| Extent: Estonia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_EST_EST97)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4180')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_EST_EST97)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4180')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_EST_EST97)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4180')
+
+Replaces EST92 (code 4133).
+
+ETRS89-FIN [EUREF-FIN]
+----------------------
 | Extent: Finland
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_EUREF_FIN)
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FIN_EUREF_FIN)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10690')
-    Geographic::fromSRID(Geographic2D::EPSG_EUREF_FIN)
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FIN_EUREF_FIN)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::10690')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EUREF_FIN)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FIN_EUREF_FIN)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10690')
 
 EUREF-FIN is the national realization of ETRS89 in Finland.
+
+ETRS89-FRA [RGF93 v1]
+---------------------
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V1)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4171')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V1)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4171')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V1)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4171')
+
+See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by ETRS89-FRA [RGF93 v2] (CRS code 9777) from 2010-06-18.
+
+ETRS89-FRA [RGF93 v1] (lon-lat)
+-------------------------------
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V1_LON_LAT)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::7084')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V1_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::7084')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V1_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7084')
+
+See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by ETRS89-FRA [RGF93 v2] (lon-lat) (CRS code 9779) from 2010-06-18.
+
+ETRS89-FRA [RGF93 v2]
+---------------------
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9777')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9777')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9777')
+
+Replaces ETRS89-FRA [RGF93 v1] (CRS code 4171) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] (CRS code 9782) from 2021-01-05. See CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
+
+ETRS89-FRA [RGF93 v2] (lon-lat)
+-------------------------------
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2_LON_LAT)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9779')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9779')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9779')
+
+Replaces ETRS89-FRA [RGF93 v1] (lon-lat) (code 7084) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] (lon-lat) (CRS code 9784) from 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+
+ETRS89-FRA [RGF93 v2b]
+----------------------
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2B)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9782')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2B)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9782')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2B)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9782')
+
+Replaces ETRS89-FRA [RGF93 v2] (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed used by IGN for GIS purposes.
+
+ETRS89-FRA [RGF93 v2b] (lon-lat)
+--------------------------------
+| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2B_LON_LAT)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9784')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2B_LON_LAT)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9784')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRA_RGF93_V2B_LON_LAT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9784')
+
+Replaces ETRS89-FRA [RGF93 v2] (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+
+ETRS89-FRO [2008]
+-----------------
+| Extent: Faroe Islands
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_FRO_2008)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11087')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_FRO_2008)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11087')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_FRO_2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11087')
+
+Horizontal component of national realization of ETRS89 in the Faroe Islands.
+
+ETRS89-GBR [OSNet v2009]
+------------------------
+| Extent: UK - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_GBR_OSNET_V2009)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11009')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_GBR_OSNET_V2009)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11009')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_GBR_OSNET_V2009)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11009')
+
+Horizontal component of second national realization of ETRS89 in Great Britain. Replaces ETRS89-GBR [OSNet v2001] from 2016.
+
+ETRS89-GRC [HTRS07]
+-------------------
+| Extent: Greece. Includes Aegean Islands, Ionian Islands, Dodecanese Islands, Crete, and Mount Athos
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_GRC_HTRS07)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11093')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_GRC_HTRS07)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11093')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_GRC_HTRS07)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11093')
+
+Horizontal component of national realization of ETRS89 in Greece.
+
+ETRS89-HRV [CROPOS]
+-------------------
+| Extent: Croatia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_HRV_CROPOS)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11189')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_HRV_CROPOS)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11189')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_HRV_CROPOS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11189')
+
+ETRS89-HRV [HTRS96] (CRS code 4761) used for national spatial referencing.
+
+ETRS89-HRV [HTRS96]
+-------------------
+| Extent: Croatia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_HRV_HTRS96)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4761')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_HRV_HTRS96)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4761')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_HRV_HTRS96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4761')
+
+
+ETRS89-HUN [ETRF2000]
+---------------------
+| Extent: Hungary
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_HUN_ETRF2000)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11163')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_HUN_ETRF2000)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11163')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_HUN_ETRF2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11163')
+
+Horizontal component of national realization of ETRS89 in Hungary.
+
+ETRS89-IRE [ETRF2000]
+---------------------
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_IRE_ETRF2000)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4173')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_IRE_ETRF2000)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4173')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_IRE_ETRF2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4173')
+
+
+ETRS89-ITA [IGM95]
+------------------
+| Extent: Italy; San Marino, Vatican City State
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ITA_IGM95)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4670')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ITA_IGM95)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4670')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ITA_IGM95)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4670')
+
+Replaced by ETRS89-ITA [RDN2008] (CRS code 6706) from 2011-11-10.
+
+ETRS89-ITA [RDN2008]
+--------------------
+| Extent: Italy; San Marino, Vatican City State
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ITA_RDN2008)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::6706')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ITA_RDN2008)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::6706')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ITA_RDN2008)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6706')
+
+Replaces ETRS89-ITA [IGM95] (CRS code 4670) from 2011-11-10.
+
+ETRS89-LTU [LKS94]
+------------------
+| Extent: Lithuania
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_LTU_LKS94)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4669')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_LTU_LKS94)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4669')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_LTU_LKS94)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4669')
+
+
+ETRS89-LUX [2020]
+-----------------
+| Extent: Luxembourg
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_LUX_2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11393')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_LUX_2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11393')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_LUX_2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11393')
+
+Horizontal component of national realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2013] from 2021-10-31. Replaced by ETRS89-LUX [2025] from 2026-10-31.
+
+ETRS89-LUX [2025]
+-----------------
+| Extent: Luxembourg
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_LUX_2025)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11547')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_LUX_2025)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11547')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_LUX_2025)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11547')
+
+Horizontal component of national realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2020] from 2026-10-31.
+
+ETRS89-LVA [LKS-2020]
+---------------------
+| Extent: Latvia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_LVA_LKS_2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10305')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_LVA_LKS_2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10305')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_LVA_LKS_2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10305')
+
+Replaces ETRS89-LVA [LKS-92] (CRS code 4661) from 2026-10-01.
+
+ETRS89-LVA [LKS-92]
+-------------------
+| Extent: Latvia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_LVA_LKS_92)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4661')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_LVA_LKS_92)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4661')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_LVA_LKS_92)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4661')
+
+Replaced by ETRS89-LVA [LKS-2020] (CRS code 10305) from 2026-10-01.
+
+ETRS89-MDA [MOLDREF99]
+----------------------
+| Extent: Moldova
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_MDA_MOLDREF99)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4023')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_MDA_MOLDREF99)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4023')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_MDA_MOLDREF99)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4023')
+
+
+ETRS89-MKD [EUREF-MAK2010]
+--------------------------
+| Extent: North Macedonia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_MKD_EUREF_MAK2010)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11099')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_MKD_EUREF_MAK2010)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11099')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_MKD_EUREF_MAK2010)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11099')
+
+Horizontal component of national realization of ETRS89 in North Macedonia.
+
+ETRS89-NLD [AGRS2010]
+---------------------
+| Extent: Netherlands
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_NLD_AGRS2010)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11037')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_NLD_AGRS2010)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11037')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_NLD_AGRS2010)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11037')
+
+Horizontal component of national realization of ETRS89 in the Netherlands, aligned to ETRF2000.
+
+ETRS89-NOR [EUREF89]
+--------------------
+| Extent: Norway including Svalbard
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_NOR_EUREF89)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10875')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_NOR_EUREF89)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10875')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_NOR_EUREF89)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10875')
+
+Horizontal component of the national realization of ETRS89 in Norway.
+
+ETRS89-POL [PL-ETRF2000]
+------------------------
+| Extent: Poland
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_POL_PL_ETRF2000)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9702')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_POL_PL_ETRF2000)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9702')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_POL_PL_ETRF2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9702')
+
+
+ETRS89-PRT [1995]
+-----------------
+| Extent: Portugal - mainland ("continental")
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_PRT_1995)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11108')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_PRT_1995)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11108')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_PRT_1995)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11108')
+
+Horizontal component of national realization of ETRS89 in continental Portugal.
+
+ETRS89-ROU [ETRF2000]
+---------------------
+| Extent: Romania
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_ROU_ETRF2000)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11119')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_ROU_ETRF2000)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11119')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_ROU_ETRF2000)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11119')
+
+Horizontal component of national realization of ETRS89 in Romania.
+
+ETRS89-SRB [SREF98]
+-------------------
+| Extent: Serbia including Vojvodina
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SRB_SREF98)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4075')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_SRB_SREF98)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4075')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_SRB_SREF98)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4075')
+
+Replaces MGI 1901 (CRS code 3906) in Serbia. Replaced by ETRS89-SRB [STRS00] (CRS code 8685).
+
+ETRS89-SRB [STRS00]
+-------------------
+| Extent: Serbia including Vojvodina
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SRB_STRS00)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::8685')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_SRB_STRS00)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::8685')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_SRB_STRS00)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8685')
+
+In Serbia replaces MGI 1901 and SREF98 (CRS codes 3906 and 4075).
+
+ETRS89-SVK [SKTRF09]
+--------------------
+| Extent: Slovakia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SVK_SKTRF09)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11076')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_SVK_SKTRF09)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11076')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_SVK_SKTRF09)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11076')
+
+Horizontal component of national realization of ETRS89 in Slovakia. From 2024-04-01 replaced by ETRS89-SVK [SKTRF2022] (CRS code 11079).
+
+ETRS89-SVK [SKTRF2022]
+----------------------
+| Extent: Slovakia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SVK_SKTRF2022)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11079')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_SVK_SKTRF2022)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11079')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_SVK_SKTRF2022)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11079')
+
+Horizontal component of national realization of ETRS89 in Slovakia. Replaces ETRS89-SVK [SKTRF09] (CRS code 11076) from 2024-04-01.
+
+ETRS89-SVN [D96]
+----------------
+| Extent: Slovenia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SVN_D96)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4765')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_SVN_D96)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4765')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_SVN_D96)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4765')
+
+Replaces MGI, alias D48, (CRS code 4312).
+
+ETRS89-SWE [SWEREF 99]
+----------------------
+| Extent: Sweden
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SWE_SWEREF_99)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4619')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_SWE_SWEREF_99)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4619')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_SWE_SWEREF_99)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4619')
+
+
+ETRS89-XKX [KOSOVAREF01]
+------------------------
+| Extent: Kosovo
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_XKX_KOSOVAREF01)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9140')
+    Geographic::fromSRID(Geographic2D::EPSG_ETRS89_XKX_KOSOVAREF01)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9140')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ETRS89_XKX_KOSOVAREF01)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9140')
+
+In Kosovo replaces MGI 1901 (CRS code 3906).
 
 EWR2-IRF
 --------
@@ -1924,7 +2625,7 @@ EWR2-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EWR2_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9763')
 
-Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through transformation ETRS89 to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code 9765). In 2024 the EWR2 Grid (ETRS89 / EWR2 SnakeGrid) was extended eastwards as the EWR3 Grid (ETRS89 / EWR3 SnakeGrid). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this extent the EWR3 Grid replaces the EWR2 Grid.
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code 9765). In 2024 the EWR2 Grid (ETRS89 / EWR2 SnakeGrid) was extended eastwards as the EWR3 Grid (ETRS89 / EWR3 SnakeGrid). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this extent the EWR3 Grid replaces the EWR2 Grid.
 
 EWR3-IRF
 --------
@@ -1939,7 +2640,7 @@ EWR3-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_EWR3_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10849')
 
-Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / EWR3 SnakeGrid projected CRS through transformation ETRS89 to EWR3-IRF (1) (code 10850) used in conjunction with the EWR3-TM map projection (code 9765). The EWR3 SnakeGrid is an extension of the EWR2 SnakeGrid, and between Oxford and Bedford the two grids are identical.
+Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / EWR3 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to EWR3-IRF (1) (code 10850) used in conjunction with the EWR3-TM map projection (code 9765). The EWR3 SnakeGrid is an extension of the EWR2 SnakeGrid, and between Oxford and Bedford the two grids are identical.
 
 Easter Island 1967
 ------------------
@@ -2056,7 +2757,7 @@ FNL22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_FNL22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9974')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through transformation ETRS89 to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code 9976).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code 9976).
 
 Fahud
 -----
@@ -2146,7 +2847,7 @@ GBK19-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GBK19_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9453')
 
-Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / GBK19 SnakeGrid projected CRS through transformation ETRS89 to GBK19-IRF (1) (code 9454) used in conjunction with the GBK19-TM map projection (code 9455).
+Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / GBK19 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to GBK19-IRF (1) (code 9454) used in conjunction with the GBK19-TM map projection (code 9455).
 
 GCGD59
 ------
@@ -2338,7 +3039,7 @@ GWPBS22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GWPBS22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10209')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWPBS22 SnakeGrid projected CRS through transformation ETRS89 to GWPBS22-IRF (1) (code 10210) used in conjunction with the GW22-LCC map projection (code 10211).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWPBS22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to GWPBS22-IRF (1) (code 10210) used in conjunction with the GW22-LCC map projection (code 10211).
 
 GWWAB22-IRF
 -----------
@@ -2353,7 +3054,7 @@ GWWAB22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GWWAB22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10214')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWAB22 SnakeGrid projected CRS through transformation ETRS89 to GWWAB22-IRF (1) (code 10215) used in conjunction with the GW22-LCC map projection (code 10211).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWAB22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to GWWAB22-IRF (1) (code 10215) used in conjunction with the GW22-LCC map projection (code 10211).
 
 GWWWA22-IRF
 -----------
@@ -2368,7 +3069,7 @@ GWWWA22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GWWWA22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10219')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWWA22 SnakeGrid projected CRS through transformation ETRS89 to GWWWA22-IRF (1) (code 10220) used in conjunction with the GW22-LCC map projection (code 10211).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWWA22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to GWWWA22-IRF (1) (code 10220) used in conjunction with the GW22-LCC map projection (code 10211).
 
 Gambia
 ------
@@ -2586,20 +3287,6 @@ HS2-IRF
 
 Intermediate CRS created to assist the emulation of the ETRS89 / HS2P1+14 SnakeGrid projected CRS through transformation HS2-IRF to ETRS89 (1) (code 9302) used in conjunction with the HS2-TM map projection (code 9301).
 
-HTRS96
-------
-| Extent: Croatia
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_HTRS96)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4761')
-    Geographic::fromSRID(Geographic2D::EPSG_HTRS96)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4761')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_HTRS96)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4761')
-
-
 HULLEE13-IRF
 ------------
 | Extent: UK - on or related to the rail route from the Morley tunnel through Leeds to Hull
@@ -2613,7 +3300,7 @@ HULLEE13-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_HULLEE13_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9964')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map projection (code 9966).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map projection (code 9966).
 
 Hanoi 1972
 ----------
@@ -2894,21 +3581,6 @@ IGD05/12
 
 Replaces IGD05 (CRS code 7136) from March 2012.
 
-IGM95
------
-| Extent: Italy; San Marino, Vatican City State
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_IGM95)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4670')
-    Geographic::fromSRID(Geographic2D::EPSG_IGM95)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4670')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_IGM95)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4670')
-
-Replaced by RDN2008 (CRS code 6706) from 2011-11-10.
-
 IGN 1962 Kerguelen
 ------------------
 | Extent: French Southern Territories - Kerguelen onshore
@@ -3101,7 +3773,7 @@ IGS20
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_IGS20)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10178')
 
-Used for products from the International GNSS Service (IGS) from 2022-11-27 to 2025-02-01. Replaces IGb14 (code 9380). Replaced by IGb20 (code 10785). For most practical purposes IGS20 is equivalent to ITRF2020.
+For most practical purposes IGS20 is equivalent to ITRF2020. Replaces IGb14 (code 9380). Used for products from the International GNSS Service (IGS) from 2022-11-27: IGS20 used from 2022-11-27 to 2025-02-01 (GPS weeks 2238 through 2351); IGb20 (extract from ITRF2020-u2023) used from 2025-02-02 to 2026-01-10 (GPS weeks 2352 through 2400); IGc20 used from 2026-01-11 (GPS week 2401). Users referencing updates should include this information in their metadata.
 
 IGS97
 -----
@@ -3190,20 +3862,6 @@ IKBD-92
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4667')
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_IKBD_92)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4667')
-
-
-IRENET95
---------
-| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_IRENET95)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4173')
-    Geographic::fromSRID(Geographic2D::EPSG_IRENET95)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4173')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_IRENET95)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4173')
 
 
 ISN2004
@@ -3324,7 +3982,7 @@ ITRF2020
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_ITRF2020)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9990')
 
-Replaces ITRF2014 (code 9000).  Replaced by ITRF2020-u2023 (CRS code 10781).
+Replaces ITRF2014 (code 9000). Updated through ITRF2020-u2023 from December 2024 and through ITRF2020-u2024 from October 2025. Users referencing updates should include this information in their metadata.
 
 ITRF2020-u2023
 --------------
@@ -3592,20 +4250,20 @@ JGD2000
 
 Replaces Tokyo (CRS code 4301) from April 2002. From 21st October 2011 replaced by JGD2011 (CRS code 6668).
 
-JGD2011
+JGD2024
 -------
 | Extent: Japan
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_JGD2011)
+    Geographic2D::fromSRID(Geographic2D::EPSG_JGD2024)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::6668')
-    Geographic::fromSRID(Geographic2D::EPSG_JGD2011)
+    Geographic::fromSRID(Geographic2D::EPSG_JGD2024)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::6668')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_JGD2011)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_JGD2024)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6668')
 
-Replaces JGD2000 (CRS code 4612) with effect from 21st October 2011.
+Replaces JGD2000 (CRS code 4612) with effect from 21st October 2011. On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this geodetic CRS was changed from JGD2011 to JGD2024; there is no change of definition or of coordinate values.
 
 Jamaica 1875
 ------------
@@ -3706,21 +4364,6 @@ KOC
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_KOC)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4246')
 
-
-KOSOVAREF01
------------
-| Extent: Kosovo
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_KOSOVAREF01)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9140')
-    Geographic::fromSRID(Geographic2D::EPSG_KOSOVAREF01)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9140')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_KOSOVAREF01)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9140')
-
-In Kosovo replaces MGI 1901 (CRS code 3906).
 
 KSA-GRF17
 ---------
@@ -3982,50 +4625,6 @@ LGD2006
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4754')
 
 Replaces ELD79.
-
-LKS-2020
---------
-| Extent: Latvia
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_LKS_2020)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10305')
-    Geographic::fromSRID(Geographic2D::EPSG_LKS_2020)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10305')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LKS_2020)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10305')
-
-Replaces LKS-92 (CRS code 4661) from 2025-10-01.
-
-LKS-92
-------
-| Extent: Latvia
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_LKS_92)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4661')
-    Geographic::fromSRID(Geographic2D::EPSG_LKS_92)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4661')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LKS_92)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4661')
-
-Replaced by LKS-2020 (CRS code 10305) from 2025-10-01.
-
-LKS94
------
-| Extent: Lithuania
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_LKS94)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4669')
-    Geographic::fromSRID(Geographic2D::EPSG_LKS94)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4669')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_LKS94)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4669')
-
 
 LTF2004(G)
 ----------
@@ -4363,7 +4962,7 @@ MALS09-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MALS09_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10224')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MALS09 SnakeGrid projected CRS through transformation ETRS89 to MALS09-IRF (1) (code 10225) used in conjunction with the MALS09-TM map projection (code 10226).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MALS09 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to MALS09-IRF (1) (code 10225) used in conjunction with the MALS09-TM map projection (code 10226).
 
 MARGEN
 ------
@@ -4438,7 +5037,7 @@ MML07-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MML07_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9372')
 
-Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS (code 9373) through transformation ETRS89 to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map projection (code 9370).
+Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS (code 9373) through transformation ETRS89-GBR [OSNet v2009] to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map projection (code 9370).
 
 MMN
 ---
@@ -4481,25 +5080,11 @@ MOLDOR11-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MOLDOR11_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9871')
 
-Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map projection (code 9879).
-
-MOLDREF99
----------
-| Extent: Moldova
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_MOLDREF99)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4023')
-    Geographic::fromSRID(Geographic2D::EPSG_MOLDREF99)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4023')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MOLDREF99)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4023')
-
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map projection (code 9879).
 
 MOP78
 -----
-| Extent: Wallis and Futuna - Wallis
+| Extent: Wallis and Futuna - Wallis - onshore
 
 .. code-block:: php
 
@@ -4525,7 +5110,7 @@ MRH21-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MRH21_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9866')
 
-Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through transformation ETRS89 to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code 9868).
+Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code 9868).
 
 MTRF-2000
 ---------
@@ -4555,7 +5140,7 @@ MWC18-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MWC18_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20033')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MWC18 SnakeGrid projected CRS through transformation ETRS89 to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map projection (code 10127).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MWC18 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map projection (code 10127).
 
 Macao 1920
 ----------
@@ -4980,7 +5565,9 @@ Moznet
 
 NAD27
 -----
-| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore
+| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and 
+
+. US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -5025,7 +5612,7 @@ Note: this CRS includes longitudes which are POSITIVE EAST.
 
 NAD83
 -----
-| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands
+| Extent: North America: Canada. Puerto Rico. USA. US Virgin Islands. British Virgin Islands
 
 .. code-block:: php
 
@@ -5040,7 +5627,7 @@ Longitude is POSITIVE EAST. The adjustment included connections to Greenland and
 
 NAD83(2011)
 -----------
-| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
+| Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -5055,7 +5642,7 @@ Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(CORS9
 
 NAD83(CORS96)
 -------------
-| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
+| Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -5205,7 +5792,7 @@ Adopted by the Canadian federal government from 1996-01-01. Replaced by NAD83(CS
 
 NAD83(FBN)
 ----------
-| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
+| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - conterminous (contiguous) lower 48 states (CONUS) onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -5235,7 +5822,7 @@ Note: this CRS includes POSITIVE EAST longitudes. In PRVI replaces NAD83(HARN) =
 
 NAD83(HARN)
 -----------
-| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
+| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore plus offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -5280,7 +5867,7 @@ Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).
 
 NAD83(NSRS2007)
 ---------------
-| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
+| Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -5323,20 +5910,19 @@ NAD83(PACP00)
 
 Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).
 
-NATRF2022
----------
-| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+NATRF2022e2020
+--------------
+| Extent: North America: Canada; USA - Alaska, conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
-    Geographic2D::fromSRID(Geographic2D::EPSG_NATRF2022)
+    Geographic2D::fromSRID(Geographic2D::EPSG_NATRF2022E2020)
     Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10968')
-    Geographic::fromSRID(Geographic2D::EPSG_NATRF2022)
+    Geographic::fromSRID(Geographic2D::EPSG_NATRF2022E2020)
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::10968')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NATRF2022)
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NATRF2022E2020)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10968')
 
-CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event that definitions change, the record will be deprecated and replaced with a new EPSG code.
 
 NEA74 Noumea
 ------------
@@ -5394,6 +5980,21 @@ NGO 1948 (Oslo)
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NGO_1948_OSLO)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4817')
 
+
+NKG_ETRF14
+----------
+| Extent: Denmark, Estonia, Finland, Latvia, Lithuania, and Sweden; Norway - onshore, nearshore, and offshore southeast of a line joining Haugesund and the western limit of the Norway-Denmark maritime boundary
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_NKG_ETRF14)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10807')
+    Geographic::fromSRID(Geographic2D::EPSG_NKG_ETRF14)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10807')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_NKG_ETRF14)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10807')
+
+Replaces NKG_ETRF00 (ETRF2000 at epoch 2000.0).
 
 NSIDC Authalic Sphere
 ---------------------
@@ -5775,7 +6376,7 @@ OxWo08-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_OXWO08_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10229')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through transformation ETRS89 to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM map projection (code 10234).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM map projection (code 10234).
 
 PD/83
 -----
@@ -6003,7 +6604,7 @@ Palestine 1923
 
 Pampa del Castillo
 ------------------
-| Extent: Argentina - Chibut province south of approximately 42°30'S and Santa Cruz province north of approximately 50°20'S
+| Extent: Argentina - Chibut province south of approximately 42°30'S, Santa Cruz province north of approximately 50°20'S, and offshore Golfo San Jorge
 
 .. code-block:: php
 
@@ -6351,7 +6952,7 @@ RBEPP12-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RBEPP12_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10277')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / RBEPP12 SnakeGrid projected CRS through transformation ETRS89 to RBEPP12-IRF (1) (code 10278) used in conjunction with the RBEPP12-LCC map projection (code 10279).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / RBEPP12 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to RBEPP12-IRF (1) (code 10278) used in conjunction with the RBEPP12-LCC map projection (code 10279).
 
 RD/83
 -----
@@ -6368,21 +6969,6 @@ RD/83
 
 Consistent with DHDN (CRS code 4314) at the 1-metre level. For low accuracy applications RD/83 can be considered the same as DHDN.
 
-RDN2008
--------
-| Extent: Italy; San Marino, Vatican City State
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RDN2008)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::6706')
-    Geographic::fromSRID(Geographic2D::EPSG_RDN2008)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::6706')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RDN2008)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::6706')
-
-Replaces IGM95 (CRS code 4670) from 2011-11-10.
-
 REDGEOMIN
 ---------
 | Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
@@ -6396,6 +6982,7 @@ REDGEOMIN
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_REDGEOMIN)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9696')
 
+REDGEOMIN coordinates are updated on a biannual basis identified using syntax "REDGEOMIN([frame]@[epoch]", e.g. REDGEOMIN(IGS20@2024.0), REDGEOMIN(IGS20@2024.5), etc. This EPSG record references any of these updates without distinction. Users should include the update used in the metadata of  their spatial data metadata. Data should be reduced to this epoch using the ADELA deformation model.
 
 REGCAN95
 --------
@@ -6456,96 +7043,6 @@ RGAF09 (lon-lat)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7086')
 
 Replaces RRAF 1991. See CRS code 5489 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
-
-RGF93 v1
---------
-| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4171')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V1)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4171')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V1)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4171')
-
-See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2 (CRS code 9777) from 2010-06-18.
-
-RGF93 v1 (lon-lat)
-------------------
-| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V1_LON_LAT)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::7084')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V1_LON_LAT)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::7084')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V1_LON_LAT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::7084')
-
-See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
-
-RGF93 v2
---------
-| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9777')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9777')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9777')
-
-Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
-
-RGF93 v2 (lon-lat)
-------------------
-| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2_LON_LAT)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9779')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2_LON_LAT)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9779')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2_LON_LAT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9779')
-
-Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
-
-RGF93 v2b
----------
-| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9782')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2B)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9782')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2B)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9782')
-
-Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed used by IGN for GIS purposes.
-
-RGF93 v2b (lon-lat)
--------------------
-| Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_RGF93_V2B_LON_LAT)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::9784')
-    Geographic::fromSRID(Geographic2D::EPSG_RGF93_V2B_LON_LAT)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::9784')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_RGF93_V2B_LON_LAT)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9784')
-
-Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
 
 RGFG95
 ------
@@ -7112,7 +7609,7 @@ Artificial CRS created in 2022 to assist the transformation of coordinates betwe
 
 SAD69
 -----
-| Extent: Brazil. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego
+| Extent: Brazil. Chile - onshore south of 43°30'S including Tierra del Fuego. In rest of South America - onshore north of approximately 45°S
 
 .. code-block:: php
 
@@ -7153,7 +7650,7 @@ SCM22-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SCM22_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9969')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through transformation ETRS89 to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code 9971).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code 9971).
 
 SHGD2015
 --------
@@ -7467,7 +7964,7 @@ SIRGAS-Chile 2002
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SIRGAS_CHILE_2002)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5360')
 
-Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (CRS code 6248) in Chile, HITO XVIII (CRS code 6254) in Chilean Tierra del Fuego and Easter Island 1967 (CRS code 6719) in Easter Island. Replaced by SIRGAS-Chile 2010 (CRS code 8949).
+Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (CRS code 6248) in Chile, HITO XVIII (CRS code 6254) in Chilean Tierra del Fuego and Easter Island 1967 (CRS code 6719) in Easter Island. Replaced by SIRGAS-Chile 2013 (CRS code 9148).
 
 SIRGAS-Chile 2010
 -----------------
@@ -7497,7 +7994,7 @@ SIRGAS-Chile 2013
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SIRGAS_CHILE_2013)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9148')
 
-Densification within Chile of SIRGAS-CON at epoch 2013.00. Replaces SIRGAS-Chile 2010 (CRS code 8949) due to significant tectonic deformation. Replaced by SIRGAS-Chile 2016 (CRS code 9153).
+Densification within Chile of SIRGAS-CON at epoch 2013.00. Replaces SIRGAS-Chile 2002 (CRS code 5360) due to significant tectonic deformation. Replaced by SIRGAS-Chile 2016 (CRS code 9153).
 
 SIRGAS-Chile 2016
 -----------------
@@ -7527,7 +8024,22 @@ SIRGAS-Chile 2021
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SIRGAS_CHILE_2021)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::20041')
 
-Densification within Chile of SIRGAS-CON at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9153) due to significant tectonic deformation.
+Densification within Chile of SIRGAS-CON at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9153) and replaced by SIRGAS-Chile 2025 (CRS code 11473) due to significant tectonic deformation.
+
+SIRGAS-Chile 2025
+-----------------
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SIRGAS_CHILE_2025)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11473')
+    Geographic::fromSRID(Geographic2D::EPSG_SIRGAS_CHILE_2025)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11473')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SIRGAS_CHILE_2025)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11473')
+
+Densification within Chile of SIRGAS-CON at epoch 2025.00. Replaces SIRGAS-Chile 2021 (CRS code 20041) due to significant tectonic deformation.
 
 SIRGAS-ROU98
 ------------
@@ -7585,37 +8097,7 @@ SMITB20-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SMITB20_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10272')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SMITB20 SnakeGrid projected CRS through transformation ETRS89 to SMITB20-IRF (1) (code 10273) used in conjunction with the SMITB20-TM map projection (code 10274).
-
-SRB_ETRS89
-----------
-| Extent: Serbia including Vojvodina
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_SRB_ETRS89)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::8685')
-    Geographic::fromSRID(Geographic2D::EPSG_SRB_ETRS89)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::8685')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SRB_ETRS89)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8685')
-
-In Serbia replaces MGI 1901 and SREF98 (CRS codes 3906 and 4075).
-
-SREF98
-------
-| Extent: Serbia including Vojvodina
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_SREF98)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4075')
-    Geographic::fromSRID(Geographic2D::EPSG_SREF98)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4075')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SREF98)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4075')
-
-Replaces MGI 1901 (CRS code 3906) in Serbia. Replaced by SRB_ETRS89 (STRS00) (CRS code 8685).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SMITB20 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to SMITB20-IRF (1) (code 10273) used in conjunction with the SMITB20-TM map projection (code 10274).
 
 SRGI2013
 --------
@@ -7630,7 +8112,22 @@ SRGI2013
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SRGI2013)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9470')
 
-Supports horizontal component of national horizontal control network (JKHN). Adopted 2013-10-11. Replaces DGN95 and all older systems.
+Horizontal component (JKHN) of national geodetic control network (JKG). Adopted 2013-10-11. Replaces DGN95 and all older systems.
+
+SRGI2013 epoch 2021.0
+---------------------
+| Extent: Indonesia
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SRGI2013_EPOCH_2021_0)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11033')
+    Geographic::fromSRID(Geographic2D::EPSG_SRGI2013_EPOCH_2021_0)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11033')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SRGI2013_EPOCH_2021_0)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11033')
+
+Horizontal component of geographic 3D CRS (code 11030). Horizontal component (JKHN) of national geodetic control network (JKG).
 
 ST71 Belep
 ----------
@@ -7691,20 +8188,6 @@ SVY21
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4757')
 
 
-SWEREF99
---------
-| Extent: Sweden
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_SWEREF99)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4619')
-    Geographic::fromSRID(Geographic2D::EPSG_SWEREF99)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4619')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SWEREF99)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4619')
-
-
 SYC20-IRF
 ---------
 | Extent: UK - on or related to the rail route from Shrewsbury to Crewe
@@ -7718,7 +8201,22 @@ SYC20-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SYC20_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10237')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SYC20 SnakeGrid projected CRS through transformation ETRS89 to SYC20-IRF (1) (code 10238) used in conjunction with the SYC20-TM map projection (code 10239).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SYC20 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to SYC20-IRF (1) (code 10238) used in conjunction with the SYC20-TM map projection (code 10239).
+
+SZCTW-IRF
+---------
+| Extent: UK - Sizewell power station site and  rail and road routes related to the site
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_SZCTW_IRF)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::11466')
+    Geographic::fromSRID(Geographic2D::EPSG_SZCTW_IRF)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::11466')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SZCTW_IRF)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::11466')
+
+Intermediate CRS created in 2026 to assist the emulation of the ETRS89 / SZCTW SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to SZCTW-IRF (1) (code 11467) used in conjunction with the SZCTW-TM map projection (code 11468).
 
 Saba
 ----
@@ -7888,7 +8386,7 @@ ShAb07-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SHAB07_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10185')
 
-Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / ShAb07 SnakeGrid projected CRS through transformation ETRS89 to ShAb07-IRF (1) (code 10186) used in conjunction with the ShAb07-TM map projection (code 10187).
+Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / ShAb07 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to ShAb07-IRF (1) (code 10186) used in conjunction with the ShAb07-TM map projection (code 10187).
 
 Sibun Gorge 1922
 ----------------
@@ -7947,21 +8445,6 @@ Sint Eustatius
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SINT_EUSTATIUS)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10736')
 
-
-Slovenia 1996
--------------
-| Extent: Slovenia
-
-.. code-block:: php
-
-    Geographic2D::fromSRID(Geographic2D::EPSG_SLOVENIA_1996)
-    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4765')
-    Geographic::fromSRID(Geographic2D::EPSG_SLOVENIA_1996)
-    Geographic::fromSRID('urn:ogc:def:crs:EPSG::4765')
-    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_SLOVENIA_1996)
-    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4765')
-
-Replaces MG! alias D48 (CRS code 4312).
 
 Solomon 1968
 ------------
@@ -8206,7 +8689,7 @@ TPEN11-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_TPEN11_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9364')
 
-Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / TPEN11 SnakeGrid projected CRS through transformation ETRS89 to TPEN11-IRF (1) (code 9365) used in conjunction with the TPEN11-TM map projection (code 9366).
+Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / TPEN11 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to TPEN11-IRF (1) (code 9365) used in conjunction with the TPEN11-TM map projection (code 9366).
 
 TUREF
 -----
@@ -8618,7 +9101,7 @@ WC05-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_WC05_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10628')
 
-Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / WC05 SnakeGrid projected CRS through transformation ETRS89 to WC05-IRF (1) (code 10629) used in conjunction with the WC05-TM map projection (code 10631).
+Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / WC05 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to WC05-IRF (1) (code 10629) used in conjunction with the WC05-TM map projection (code 10631).
 
 WGS 66
 ------
@@ -8812,7 +9295,7 @@ WSPG-IRF
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_WSPG_IRF)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10860')
 
-Intermediate CRS created in 2025 to assist the emulation of the ETRS89 / WSPG SnakeGrid projected CRS through transformation ETRS89 to WSPG-IRF (1) (code 10861) used in conjunction with the WSPG-TM map projection (code 10862).
+Intermediate CRS created in 2025 to assist the emulation of the ETRS89 / WSPG SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to WSPG-IRF (1) (code 10861) used in conjunction with the WSPG-TM map projection (code 10862).
 
 Wake Island 1952
 ----------------
@@ -8842,6 +9325,20 @@ Xian 1980
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4610')
 
 Replaces Beijing 1954 (CRS code 4214). Replaced by CGCS2000(CRS code 4490).
+
+Xrail84
+-------
+| Extent: UK - Greater London and surrounding area
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_XRAIL84)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10993')
+    Geographic::fromSRID(Geographic2D::EPSG_XRAIL84)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10993')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_XRAIL84)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10993')
+
 
 Yacare
 ------

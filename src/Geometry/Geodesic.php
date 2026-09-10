@@ -11,27 +11,32 @@ namespace PHPCoord\Geometry;
 
 use PHPCoord\CoordinateOperation\GeographicValue;
 use PHPCoord\Datum\Ellipsoid;
+use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
 use function abs;
+use function array_keys;
 use function atan2;
 use function cos;
-use function count;
 use function deg2rad;
 use function fmod;
 use function hypot;
 use function intdiv;
+use function is_finite;
 use function max;
 use function min;
+use function rad2deg;
 use function range;
 use function round;
 use function sin;
 use function sqrt;
 
 use const M_PI;
+use const NAN;
 use const PHP_FLOAT_EPSILON;
 use const PHP_FLOAT_MIN;
+use const PHP_ROUND_HALF_EVEN;
 
 /**
  * This is a cut-down and "PHP native" translation of the distance calculation code found inside GeographicLib,
@@ -196,6 +201,8 @@ class Geodesic
     ): array {
         $sig12 = -1;
         $dnm = 1;
+        $salp2 = 0.0;
+        $calp2 = 1.0;
         $sbet12 = $sbet2 * $cbet1 - $cbet2 * $sbet1;
         $cbet12 = $cbet2 * $cbet1 + $sbet2 * $sbet1;
         $sbet12a = $sbet2 * $cbet1;
@@ -221,6 +228,9 @@ class Geodesic
         $csig12 = $sbet1 * $sbet2 + $cbet1 * $cbet2 * $comg12;
 
         if ($shortline && $ssig12 < PHP_FLOAT_EPSILON) {
+            $salp2 = $cbet1 * $somg12;
+            $calp2 = $sbet12 - $cbet1 * $sbet2 * ($comg12 >= 0 ? $somg12 ** 2 / (1 + $comg12) : 1 - $comg12);
+            [$salp2, $calp2] = normalise($salp2, $calp2);
             $sig12 = atan2($ssig12, $csig12);
         } elseif (!(abs($this->n) >= 0.1 || $csig12 >= 0 || $ssig12 >= 6 * abs($this->n) * M_PI * $cbet1 ** 2)) {
             $lam12x = atan2(-$slam12, -$clam12);
@@ -250,7 +260,7 @@ class Geodesic
             $calp1 = 0;
         }
 
-        return [$sig12, $salp1, $calp1, $dnm];
+        return [$sig12, $salp1, $calp1, $dnm, $salp2, $calp2];
     }
 
     /**
@@ -280,6 +290,7 @@ class Geodesic
         $csig1 = $comg1 = $calp1 * $cbet1;
         [$ssig1, $csig1] = normalise($ssig1, $csig1);
 
+        $salp2 = $cbet2 !== $cbet1 ? $salp0 / $cbet2 : $salp1;
         $calp2 = $cbet2 !== $cbet1 || abs($sbet2) !== -$sbet1 ?
             sqrt(($calp1 * $cbet1) ** 2 + ($cbet1 < -$sbet1 ?
                     ($cbet2 - $cbet1) * ($cbet1 + $cbet2) :
@@ -326,20 +337,36 @@ class Geodesic
             $dlam12 *= $this->f1 / ($calp2 * $cbet2);
         }
 
-        return [$lam12, $sig12, $ssig1, $csig1, $ssig2, $csig2, $eps, $dlam12];
+        return [$lam12, $sig12, $ssig1, $csig1, $ssig2, $csig2, $eps, $dlam12, $salp2, $calp2];
     }
 
     public function distance(GeographicValue $from, GeographicValue $to): Length
     {
-        $lon12 = abs(angleDiff($from->getLongitude()->asDegrees()->getValue(), $to->getLongitude()->asDegrees()->getValue()));
+        [$s12] = $this->inverse($from, $to);
+
+        return new Metre($s12);
+    }
+
+    /**
+     * Karney inverse geodesic problem: distance (metres) and forward azimuth (radians) from $from to $to.
+     *
+     * @return array{0: float, 1: float}
+     */
+    public function inverse(GeographicValue $from, GeographicValue $to): array
+    {
+        [$lon12, $lon12s] = angleDiff($from->getLongitude()->asDegrees()->getValue(), $to->getLongitude()->asDegrees()->getValue());
+        $lonsign = copySign(1.0, $lon12);
+        $lon12 *= $lonsign;
+        $lon12s *= $lonsign;
         $lam12 = deg2rad($lon12);
-        [$slam12, $clam12] = sinCos($lon12);
-        $lon12s = (180 - $lon12);
+        [$slam12, $clam12] = sinCosDe($lon12, $lon12s);
+        $lon12s = (180 - $lon12) - $lon12s;
 
         $lat1 = $from->getLatitude()->asDegrees()->getValue();
         $lat2 = $to->getLatitude()->asDegrees()->getValue();
         $swapp = abs($lat1) < abs($lat2) ? -1 : 1;
         if ($swapp < 0) {
+            $lonsign *= -1;
             [$lat2, $lat1] = [$lat1, $lat2];
         }
         $latsign = copySign(1, -$lat1);
@@ -359,10 +386,18 @@ class Geodesic
         $dn1 = sqrt(1 + $this->ep2 * $sbet1 ** 2);
         $dn2 = sqrt(1 + $this->ep2 * $sbet2 ** 2);
 
+        $salp1 = 1.0;
+        $calp1 = 0.0;
+        $salp2 = 0.0;
+        $calp2 = 1.0;
+        $s12x = 0.0;
+
         $meridian = $lat1 == -90 || $slam12 == 0;
 
         if ($meridian) {
+            $salp1 = $slam12;
             $calp1 = $clam12;
+            $salp2 = 0.0;
             $calp2 = 1.0;
 
             $ssig1 = $sbet1;
@@ -375,7 +410,7 @@ class Geodesic
                 $csig1 * $csig2 + $ssig1 * $ssig2
             );
 
-            [$s12x] = $this->lengths(
+            [$s12x, $m12x] = $this->lengths(
                 $this->n,
                 $sig12,
                 $ssig1,
@@ -386,13 +421,18 @@ class Geodesic
                 $dn2,
             );
 
-            if ($sig12 < 1) {
+            if ($sig12 < 1 || $m12x >= 0) {
                 $s12x *= $this->b;
+            } else {
+                $meridian = false;
             }
-        } elseif ($sbet1 == 0 && $lon12s >= $this->f * 180) {
+        }
+        if (!$meridian && $sbet1 == 0 && $lon12s >= $this->f * 180) {
             $s12x = $this->a * $lam12;
-        } else {
-            [$sig12, $salp1, $calp1, $dnm] = $this->inverseStart(
+            $salp1 = $salp2 = 1.0;
+            $calp1 = $calp2 = 0.0;
+        } elseif (!$meridian) {
+            [$sig12, $salp1, $calp1, $dnm, $salp2, $calp2] = $this->inverseStart(
                 $sbet1,
                 $cbet1,
                 $sbet2,
@@ -414,7 +454,7 @@ class Geodesic
 
                 while ($numit < 20) {
                     [$v, $sig12, $ssig1, $csig1, $ssig2, $csig2,
-                        $eps, $dv] = $this->lambda(
+                        $eps, $dv, $salp2, $calp2] = $this->lambda(
                             $sbet1,
                             $cbet1,
                             $dn1,
@@ -473,7 +513,90 @@ class Geodesic
             }
         }
 
-        return new Metre($s12x);
+        if ($swapp < 0) {
+            [$salp1, $salp2] = [$salp2, $salp1];
+            [$calp1, $calp2] = [$calp2, $calp1];
+        }
+        $salp1 *= $swapp * $lonsign;
+        $calp1 *= $swapp * $latsign;
+
+        return [$s12x, atan2($salp1, $calp1)];
+    }
+
+    /**
+     * Karney direct geodesic problem: destination given distance (metres) and forward azimuth (radians).
+     */
+    public function direct(GeographicValue $from, float $s12, float $azi1): GeographicValue
+    {
+        $lat1 = $from->getLatitude()->asDegrees()->getValue();
+        $lon1 = $from->getLongitude()->asDegrees()->getValue();
+        [$salp1, $calp1] = sinCos(rad2deg($azi1));
+
+        [$sbet1, $cbet1] = sinCos($lat1);
+        $sbet1 *= $this->f1;
+        [$sbet1, $cbet1] = normalise($sbet1, $cbet1);
+        $cbet1 = max(PHP_FLOAT_MIN, $cbet1);
+
+        $salp0 = $salp1 * $cbet1;
+        $calp0 = hypot($calp1, $salp1 * $sbet1);
+
+        $ssig1 = $sbet1;
+        $somg1 = $salp0 * $sbet1;
+        $csig1 = $comg1 = $sbet1 != 0 || $calp1 != 0 ? $cbet1 * $calp1 : 1.0;
+        [$ssig1, $csig1] = normalise($ssig1, $csig1);
+
+        $k2 = $calp0 ** 2 * $this->ep2;
+        $eps = $k2 / (2 * (1 + sqrt(1 + $k2)) + $k2);
+
+        $A1m1 = a1($eps);
+        $C1a = c1($eps);
+        $B11 = sinCosSeries($ssig1, $csig1, $C1a);
+        $s = sin($B11);
+        $c = cos($B11);
+        $stau1 = $ssig1 * $c + $csig1 * $s;
+        $ctau1 = $csig1 * $c - $ssig1 * $s;
+
+        $C1pa = c1p($eps);
+        $C3a = $this->c3($eps);
+        $A3c = -$this->f * $salp0 * polyVal(5, $this->a3Coefficients, 0, $eps);
+        $B31 = sinCosSeries($ssig1, $csig1, $C3a);
+
+        $tau12 = $s12 / ($this->b * (1 + $A1m1));
+        $s = sin($tau12);
+        $c = cos($tau12);
+        $B12 = -sinCosSeries($stau1 * $c + $ctau1 * $s, $ctau1 * $c - $stau1 * $s, $C1pa);
+        $sig12 = $tau12 - ($B12 - $B11);
+        $ssig12 = sin($sig12);
+        $csig12 = cos($sig12);
+
+        if (abs($this->f) > 0.01) {
+            $ssig2 = $ssig1 * $csig12 + $csig1 * $ssig12;
+            $csig2 = $csig1 * $csig12 - $ssig1 * $ssig12;
+            $B12 = sinCosSeries($ssig2, $csig2, $C1a);
+            $serr = (1 + $A1m1) * ($sig12 + ($B12 - $B11)) - $s12 / $this->b;
+            $sig12 -= $serr / sqrt(1 + $k2 * $ssig2 ** 2);
+            $ssig12 = sin($sig12);
+            $csig12 = cos($sig12);
+        }
+
+        $ssig2 = $ssig1 * $csig12 + $csig1 * $ssig12;
+        $csig2 = $csig1 * $csig12 - $ssig1 * $ssig12;
+
+        $sbet2 = $calp0 * $ssig2;
+        $cbet2 = hypot($salp0, $calp0 * $csig2);
+        if ($cbet2 == 0) {
+            $cbet2 = $csig2 = PHP_FLOAT_MIN;
+        }
+
+        $somg2 = $salp0 * $ssig2;
+        $comg2 = $csig2;
+        $omg12 = atan2($somg2 * $comg1 - $comg2 * $somg1, $comg2 * $comg1 + $somg2 * $somg1);
+        $lam12 = $omg12 + $A3c * ($sig12 + (sinCosSeries($ssig2, $csig2, $C3a) - $B31));
+
+        $lat2 = rad2deg(atan2($sbet2, $this->f1 * $cbet2));
+        $lon2 = $lon1 + rad2deg($lam12);
+
+        return new GeographicValue(new Degree($lat2), new Degree($lon2), $from->getHeight(), $from->getDatum());
     }
 }
 
@@ -511,14 +634,72 @@ function polyVal(int $N, array $p, int $s, float $x): float
     return $y;
 }
 
-function angleDiff(float $x, float $y): float
+/**
+ * Error-free transformation of a sum: u + v = s + t with s = round(u + v).
+ *
+ * @return array{0: float, 1: float}
+ */
+function errorFreeSum(float $u, float $v): array
 {
-    $d = ($y - $x);
-    if ($d < -180) {
-        $d += 360;
+    $s = $u + $v;
+    $up = $s - $v;
+    $vpp = $s - $up;
+    $up -= $u;
+    $vpp -= $v;
+    $t = $s == 0.0 ? $s : 0.0 - ($up + $vpp);
+
+    return [$s, $t];
+}
+
+function remainder(float $x, float $y): float
+{
+    if (!is_finite($x) || $y == 0.0) {
+        return NAN;
     }
 
-    return $d;
+    return $x - $y * round($x / $y, 0, PHP_ROUND_HALF_EVEN);
+}
+
+/**
+ * y − x reduced to [−180, 180], with rounding error t (GeographicLib AngDiff).
+ *
+ * @return array{0: float, 1: float}
+ */
+function angleDiff(float $x, float $y): array
+{
+    [$d, $t] = errorFreeSum(remainder(-$x, 360.0), remainder($y, 360.0));
+    [$d, $t] = errorFreeSum(remainder($d, 360.0), $t);
+    if ($d == 0.0 || abs($d) == 180.0) {
+        $d = copySign($d, $t == 0.0 ? $y - $x : -$t);
+    }
+
+    return [$d, $t];
+}
+
+/**
+ * sin/cos of (x + t) degrees with x in [−180, 180] (GeographicLib sincosde).
+ *
+ * @return float[]
+ */
+function sinCosDe(float $x, float $t): array
+{
+    $q = (int) round($x / 90);
+    $r = deg2rad($x - 90 * $q + $t);
+    $s = sin($r);
+    $c = cos($r);
+    $q %= 4;
+    if ($q < 0) {
+        $q += 4;
+    }
+    if ($q == 1) {
+        [$s, $c] = [$c, -$s];
+    } elseif ($q == 2) {
+        [$s, $c] = [-$s, -$c];
+    } elseif ($q == 3) {
+        [$s, $c] = [-$c, $s];
+    }
+
+    return [$s, $c];
 }
 
 /**
@@ -552,7 +733,7 @@ function sinCos(float $x): array
  */
 function sinCosSeries(float $sinx, float $cosx, array $c): float
 {
-    $k = count($c);
+    $k = max(array_keys($c)) + 1;
     $n = $k - 1;
     $ar = 2 * ($cosx - $sinx) * ($cosx + $sinx);
     $y1 = 0;
@@ -627,6 +808,32 @@ function c1(float $eps): array
         3, -5, 512,
         -7, 1280,
         -7, 2048,
+    ];
+    $d = $eps;
+    $o = 0;
+    foreach (range(1, 6) as $l) {
+        $m = intdiv(6 - $l, 2);
+        $c[$l] = $d * polyVal($m, $coeff, $o, $eps ** 2) / $coeff[$o + $m + 1];
+        $o += $m + 2;
+        $d *= $eps;
+    }
+
+    return $c;
+}
+
+/**
+ * @return float[]
+ */
+function c1p(float $eps): array
+{
+    $c = [];
+    $coeff = [
+        205, -432, 768, 1536,
+        4005, -4736, 3840, 12288,
+        -225, 116, 384,
+        -7173, 2695, 7680,
+        3467, 7680,
+        38081, 61440,
     ];
     $d = $eps;
     $o = 0;

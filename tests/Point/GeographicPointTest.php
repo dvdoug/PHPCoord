@@ -21,7 +21,11 @@ use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLatitudeProvider;
 use PHPCoord\CoordinateOperation\NADCON5NAD83FBNNAD832007CONUSLongitudeProvider;
 use PHPCoord\CoordinateOperation\NTv2AGD66GDA94AustraliaProvider;
 use PHPCoord\CoordinateOperation\NTv2NAD27NAD83CanadaProvider;
+use PHPCoord\CoordinateOperation\NTv2VelNAD83CSRSv8CanadaProvider;
+use PHPCoord\CoordinateOperation\GeoTiffNKGRF17velEuropeProvider;
+use PHPCoord\CoordinateOperation\IGNFXyzVelocityRGNC15Provider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
+use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
@@ -30,6 +34,7 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
+use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
@@ -40,10 +45,14 @@ use PHPCoord\UnitOfMeasure\Length\ClarkeLink;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Link;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Length\Millimetre;
 use PHPCoord\UnitOfMeasure\Length\USSurveyFoot;
+use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use PHPCoord\UnitOfMeasure\Time\Year;
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
@@ -338,6 +347,23 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(3.22, $to->getHeight()->getValue(), 0.01);
     }
 
+    public function testCoordinateFrameRotationGeog3DToCompound(): void
+    {
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), new Metre(0));
+        $geog3DTarget = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
+        $expected = $from->coordinateFrameRotation($geog3DTarget, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
+
+        $toCRS = Compound::fromSRID(Compound::EPSG_WGS_84_PLUS_EGM96_HEIGHT);
+        $to = $from->coordinateFrameRotation($toCRS, new Metre(0), new Metre(0), new Metre(4.5), new ArcSecond(0), new ArcSecond(0), new ArcSecond(-0.554), new PartsPerMillion(0.219));
+
+        $horizontalPoint = $to->getHorizontalPoint();
+        self::assertInstanceOf(GeographicPoint::class, $horizontalPoint);
+        self::assertEqualsWithDelta($expected->getLatitude()->getValue(), $horizontalPoint->getLatitude()->getValue(), 0.000001);
+        self::assertEqualsWithDelta($expected->getLongitude()->getValue(), $horizontalPoint->getLongitude()->getValue(), 0.000001);
+        self::assertNotNull($expected->getHeight());
+        self::assertEqualsWithDelta($expected->getHeight()->getValue(), $to->getVerticalPoint()->getHeight()->getValue(), 0.01);
+    }
+
     public function test2DPositionVectorTransformation(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_72), new Degree(55.0), new Degree(44.0), null);
@@ -554,8 +580,8 @@ class GeographicPointTest extends TestCase
         $toCRS = Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID);
         $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Link(12513.318 * 100), new Link(16628.885 * 100));
 
-        self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.1);
-        self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.1);
+        self::assertEqualsWithDelta(1601528.90, $to->getEasting()->getValue(), 0.02);
+        self::assertEqualsWithDelta(1336966.01, $to->getNorthing()->getValue(), 0.02);
     }
 
     public function testGeocentricTranslation(): void
@@ -617,6 +643,16 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(3962799.45, $to->getEasting()->getValue(), 0.01);
         self::assertEqualsWithDelta(2999718.85, $to->getNorthing()->getValue(), 0.01);
+    }
+
+    public function testLambertAzimuthalEqualAreaNorthPolar(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(90), new Degree(180), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_EXTENDED_LAEA_EUROPE);
+        $to = $from->lambertAzimuthalEqualArea($toCRS, new Degree(90), new Degree(180), new Metre(0), new Metre(0));
+
+        self::assertEquals(0.0, $to->getEasting()->asMetres()->getValue());
+        self::assertEquals(0.0, $to->getNorthing()->asMetres()->getValue());
     }
 
     public function testLambertAzimuthalEqualAreaSpherical(): void
@@ -706,7 +742,22 @@ class GeographicPointTest extends TestCase
 
     public function testLambertCylindricalEqualAreaSpherical(): void
     {
-        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_NAD27), new Degree(35), new Degree(80), null);
+        // Snyder 1987 p. 278, R = 1; metres below are that example with R = 6378206.4 m.
+        $fromCRS = new Geographic2D(
+            'foo',
+            Ellipsoidal::fromSRID(Ellipsoidal::EPSG_2D_AXES_LATITUDE_LONGITUDE_ORIENTATIONS_NORTH_EAST_UOM_DEGREE),
+            new Datum(
+                Datum::DATUM_TYPE_GEODETIC,
+                new Ellipsoid(
+                    new Metre(6378206.4),
+                    new Metre(6378206.4)
+                ),
+                null,
+                null,
+            ),
+            BoundingArea::createWorld()
+        );
+        $from = GeographicPoint::create($fromCRS, new Degree(35), new Degree(80), null);
         $toCRS = Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST);
         $to = $from->lambertCylindricalEqualAreaSpherical($toCRS, new Degree(30), new Degree(-75), new Metre(0), new Metre(0));
 
@@ -733,6 +784,27 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(42665.90, $to->getEasting()->asMetres()->getValue(), 0.01);
         self::assertEqualsWithDelta(65509.82, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
+    public function testAzimuthalEquidistant(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(63.0), new Degree(44.0), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_EQUI7_EUROPE);
+        $to = $from->azimuthalEquidistant($toCRS, new Degree(53.0), new Degree(24.0), new Metre(5837287.820), new Metre(2121415.696));
+
+        self::assertEqualsWithDelta(6840895.297, $to->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta(3382726.731, $to->getNorthing()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testModifiedAzimuthalEquidistantOnMeridian(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_GUAM_1963), new Radian(0.167490973), new Radian(2.411499514), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_GUAM_1963_YAP_ISLANDS);
+        $to = $from->modifiedAzimuthalEquidistant($toCRS, new Radian(0.166621493), new Radian(2.411499514), new Metre(40000), new Metre(60000));
+        $roundTrip = $to->modifiedAzimuthalEquidistant(Geographic2D::fromSRID(Geographic2D::EPSG_GUAM_1963), new Radian(0.166621493), new Radian(2.411499514), new Metre(40000), new Metre(60000));
+
+        self::assertEqualsWithDelta(0.167490973, $roundTrip->getLatitude()->asRadians()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(2.411499514, $roundTrip->getLongitude()->asRadians()->getValue(), 0.0000001);
     }
 
     public function testObliqueStereographic(): void
@@ -847,6 +919,27 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(596562.78, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
 
+    public function testObliqueMercatorHotineVariantBAzimuth90AtCentre(): void
+    {
+        $latC = UnitOfMeasureFactory::makeUnit(47.08398174, 'urn:ogc:def:uom:EPSG::9110');
+        $lonC = UnitOfMeasureFactory::makeUnit(19.02548584, 'urn:ogc:def:uom:EPSG::9110');
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_HD72), $latC, $lonC, null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_HD72_EOV);
+        $to = $from->obliqueMercatorHotineVariantB(
+            $toCRS,
+            $latC,
+            $lonC,
+            new Degree(90),
+            new Degree(90),
+            new Coefficient(0.99993),
+            new Metre(650000),
+            new Metre(200000)
+        );
+
+        self::assertEqualsWithDelta(650000.0, $to->getEasting()->asMetres()->getValue(), 0.01);
+        self::assertEqualsWithDelta(200000.0, $to->getNorthing()->asMetres()->getValue(), 0.01);
+    }
+
     public function testTransverseMercator(): void
     {
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_OSGB36), new Degree(51.5), new Degree(0.5), null);
@@ -885,6 +978,16 @@ class GeographicPointTest extends TestCase
 
         self::assertEqualsWithDelta(56334519, $to->getEasting()->asMetres()->getValue(), 1);
         self::assertEqualsWithDelta(6251930, $to->getNorthing()->asMetres()->getValue(), 1);
+    }
+
+    public function testTransverseMercatorZonedGridZone1(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree(0), new Degree(-177), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE);
+        $to = $from->transverseMercatorZonedGrid($toCRS, new Degree(0), new Degree(-180), new Degree(6), new Unity(0.9996), new Metre(500000), new Metre(0));
+
+        self::assertEqualsWithDelta(1500000.0, $to->getEasting()->asMetres()->getValue(), 0.1);
+        self::assertEqualsWithDelta(0.0, $to->getNorthing()->asMetres()->getValue(), 0.1);
     }
 
     public function testTransverseMercator3D(): void
@@ -1416,6 +1519,26 @@ class GeographicPointTest extends TestCase
         self::assertEqualsWithDelta(98.974, $to->getNorthing()->asMetres()->getValue(), 0.01);
     }
 
+    public function testPointMotionGeog3dNeuVelocities(): void
+    {
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2014);
+        $from = GeographicPoint::create($crs, new Degree(51.0), new Degree(-141.0), new Metre(1000), (new Year(2017.55))->asDateTime());
+        $to = $from->pointMotionNeuVelocities($crs, new Rate(new Millimetre(15.12), new Year(1)), new Rate(new Millimetre(-2.86), new Year(1)), new Rate(new Millimetre(1.10), new Year(1)), new Year(1997.0));
+
+        self::assertEqualsWithDelta(Degree::fromDegreeMinuteSecondHemisphere('50°59\'59.98995"N')->getValue(), $to->getLatitude()->asDegrees()->getValue(), 1e-8);
+        self::assertEqualsWithDelta(Degree::fromDegreeMinuteSecondHemisphere('140°59\'59.99699"W')->getValue(), $to->getLongitude()->asDegrees()->getValue(), 1e-8);
+        self::assertEqualsWithDelta(999.977, $to->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertEquals(1997.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testPointMotionGeog3dNeuVelocitiesEpochMissing(): void
+    {
+        $this->expectException(InvalidCoordinateException::class);
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2014);
+        $from = GeographicPoint::create($crs, new Degree(51.0), new Degree(-141.0), new Metre(1000));
+        $from->pointMotionNeuVelocities($crs, new Rate(new Millimetre(15.12), new Year(1)), new Rate(new Millimetre(-2.86), new Year(1)), new Rate(new Millimetre(1.10), new Year(1)), new Year(1997.0));
+    }
+
     #[Group('distance')]
     #[Group('integration')]
     #[DataProvider('karneyTestData')]
@@ -1427,6 +1550,197 @@ class GeographicPointTest extends TestCase
         $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree((float) $lat1), new Degree((float) $lon1), null);
         $to = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), new Degree((float) $lat2), new Degree((float) $lon2), null);
         self::assertEqualsWithDelta($expectedDistance, $from->calculateDistance($to)->getValue(), 0.001);
+    }
+
+    public function testAtEpochRequiresCoordinateEpoch(): void
+    {
+        $from = GeographicPoint::create(
+            Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V8),
+            new Degree(45.0),
+            new Degree(-75.0),
+            new Metre(0)
+        );
+        $this->expectException(InvalidCoordinateException::class);
+        $from->atEpoch(new DateTimeImmutable('2010-01-01'));
+    }
+
+    public function testAtEpochCanadaVelocityGridV8Identity(): void
+    {
+        if (!class_exists(NTv2VelNAD83CSRSv8CanadaProvider::class)) {
+            self::markTestSkipped('North America datapack not installed');
+        }
+
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V8);
+        $from = GeographicPoint::create(
+            $crs,
+            Degree::fromDegreeMinuteSecondHemisphere('45°25\'45.714920"N'),
+            Degree::fromDegreeMinuteSecondHemisphere('75°42\'05.960075"W'),
+            new Metre(39.524),
+            (new Year(2010.0))->asDateTime()
+        );
+        $to = $from->atEpoch(new DateTimeImmutable('2010-01-01'));
+
+        self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $to->getLatitude()->asDegrees()->getValue(), 1e-12);
+        self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $to->getLongitude()->asDegrees()->getValue(), 1e-12);
+        self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $to->getHeight()->asMetres()->getValue(), 1e-9);
+        self::assertEquals(2010.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testAtEpochCanadaVelocityGridV8RoundTrip(): void
+    {
+        if (!class_exists(NTv2VelNAD83CSRSv8CanadaProvider::class)) {
+            self::markTestSkipped('North America datapack not installed');
+        }
+
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V8);
+        $from = GeographicPoint::create(
+            $crs,
+            Degree::fromDegreeMinuteSecondHemisphere('45°25\'45.714920"N'),
+            Degree::fromDegreeMinuteSecondHemisphere('75°42\'05.960075"W'),
+            new Metre(39.524),
+            (new Year(2010.0))->asDateTime()
+        );
+        $at2002 = $from->atEpoch(new DateTimeImmutable('2002-01-01'));
+        $back = $at2002->atEpoch(new DateTimeImmutable('2010-01-01'));
+
+        self::assertNotEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $at2002->getLatitude()->asDegrees()->getValue(), 1e-12);
+        self::assertEquals(2002.0, Year::fromDateTime($at2002->getCoordinateEpoch())->getValue());
+        self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $back->getLatitude()->asDegrees()->getValue(), 1e-10);
+        self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $back->getLongitude()->asDegrees()->getValue(), 1e-10);
+        self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $back->getHeight()->asMetres()->getValue(), 1e-6);
+    }
+
+    public function testAtEpochCanadaVelocityGridV8FromGeographic2D(): void
+    {
+        if (!class_exists(NTv2VelNAD83CSRSv8CanadaProvider::class)) {
+            self::markTestSkipped('North America datapack not installed');
+        }
+
+        $from = GeographicPoint::create(
+            Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V8),
+            new Degree(45.4293652556),
+            new Degree(-75.7016555764),
+            null,
+            (new Year(2010.0))->asDateTime()
+        );
+        $to = $from->atEpoch(new DateTimeImmutable('2002-01-01'));
+
+        self::assertInstanceOf(Geographic2D::class, $to->getCRS());
+        self::assertNull($to->getHeight());
+        self::assertEquals(2002.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testAtEpochNkgVelocityGridIdentity(): void
+    {
+        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
+            self::markTestSkipped('Europe datapack not installed');
+        }
+
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_ETRF2014);
+        $from = GeographicPoint::create(
+            $crs,
+            new Degree(59.5),
+            new Degree(18.0),
+            new Metre(0),
+            (new Year(2010.0))->asDateTime()
+        );
+        $to = $from->atEpoch(new DateTimeImmutable('2010-01-01'));
+
+        self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $to->getLatitude()->asDegrees()->getValue(), 1e-12);
+        self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $to->getLongitude()->asDegrees()->getValue(), 1e-12);
+        self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $to->getHeight()->asMetres()->getValue(), 1e-9);
+        self::assertEquals(2010.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testAtEpochNkgVelocityGridRoundTrip(): void
+    {
+        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
+            self::markTestSkipped('Europe datapack not installed');
+        }
+
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_ETRF2014);
+        $from = GeographicPoint::create(
+            $crs,
+            new Degree(59.5),
+            new Degree(18.0),
+            new Metre(0),
+            (new Year(2010.0))->asDateTime()
+        );
+        $at2000 = $from->atEpoch(new DateTimeImmutable('2000-01-01'));
+        $back = $at2000->atEpoch(new DateTimeImmutable('2010-01-01'));
+
+        self::assertNotEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $at2000->getHeight()->asMetres()->getValue(), 1e-4);
+        self::assertEquals(2000.0, Year::fromDateTime($at2000->getCoordinateEpoch())->getValue());
+        self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $back->getLatitude()->asDegrees()->getValue(), 1e-10);
+        self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $back->getLongitude()->asDegrees()->getValue(), 1e-10);
+        self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $back->getHeight()->asMetres()->getValue(), 1e-6);
+    }
+
+    public function testAtEpochNkgVelocityGridFromGeographic2D(): void
+    {
+        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
+            self::markTestSkipped('Europe datapack not installed');
+        }
+
+        $from = GeographicPoint::create(
+            Geographic2D::fromSRID(Geographic2D::EPSG_ETRF2014),
+            new Degree(59.5),
+            new Degree(18.0),
+            null,
+            (new Year(2010.0))->asDateTime()
+        );
+        $to = $from->atEpoch(new DateTimeImmutable('2000-01-01'));
+
+        self::assertInstanceOf(Geographic2D::class, $to->getCRS());
+        self::assertNull($to->getHeight());
+        self::assertEquals(2000.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+    }
+
+    public function testAtEpochRgnc15VelocityGridFromGeographic3D(): void
+    {
+        if (!class_exists(IGNFXyzVelocityRGNC15Provider::class)) {
+            self::markTestSkipped('Oceania datapack not installed');
+        }
+
+        $crs = Geographic3D::fromSRID(Geographic3D::EPSG_RGNC15);
+        $from = GeographicPoint::create($crs, new Degree(-22.25), new Degree(166.45), new Metre(0), (new Year(2015.0))->asDateTime());
+        $to = $from->atEpoch((new Year(2025.0))->asDateTime());
+
+        self::assertEquals($crs->getSRID(), $to->getCRS()->getSRID());
+        self::assertEquals(2025.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+        $geocentricCrs = Geocentric::fromSRID(Geocentric::EPSG_RGNC15);
+        $fromXyz = $from->geographicGeocentric($geocentricCrs);
+        $toXyz = $to->geographicGeocentric($geocentricCrs);
+        self::assertEqualsWithDelta($fromXyz->getX()->asMetres()->getValue() - 0.225, $toXyz->getX()->asMetres()->getValue(), 1e-4);
+        self::assertEqualsWithDelta($fromXyz->getY()->asMetres()->getValue() - 0.170, $toXyz->getY()->asMetres()->getValue(), 1e-4);
+        self::assertEqualsWithDelta($fromXyz->getZ()->asMetres()->getValue() + 0.435, $toXyz->getZ()->asMetres()->getValue(), 1e-4);
+
+        $back = $to->atEpoch((new Year(2015.0))->asDateTime());
+        self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $back->getLatitude()->asDegrees()->getValue(), 1e-9);
+        self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $back->getLongitude()->asDegrees()->getValue(), 1e-9);
+        self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $back->getHeight()->asMetres()->getValue(), 1e-4);
+        self::assertEquals(2015.0, Year::fromDateTime($back->getCoordinateEpoch())->getValue());
+    }
+
+    public function testAtEpochRgnc15VelocityGridFromGeographic2D(): void
+    {
+        if (!class_exists(IGNFXyzVelocityRGNC15Provider::class)) {
+            self::markTestSkipped('Oceania datapack not installed');
+        }
+
+        $from = GeographicPoint::create(
+            Geographic2D::fromSRID(Geographic2D::EPSG_RGNC15),
+            new Degree(-22.25),
+            new Degree(166.45),
+            null,
+            (new Year(2015.0))->asDateTime()
+        );
+        $to = $from->atEpoch((new Year(2025.0))->asDateTime());
+
+        self::assertInstanceOf(Geographic2D::class, $to->getCRS());
+        self::assertNull($to->getHeight());
+        self::assertEquals(2025.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+        self::assertNotEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $to->getLatitude()->asDegrees()->getValue(), 1e-12);
     }
 
     public static function karneyTestData(): array

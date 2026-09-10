@@ -25,9 +25,9 @@
 4122	Geographic 2D	ATS77		6122	Canada - Maritime Provinces
 4123	Geographic 2D	KKJ		6123	Finland - onshore
 4124	Geographic 2D	RT90		6124	Sweden
-4669	Geographic 2D	LKS94	LKS94 (ETRS89)	6126	Lithuania
-4951	Geographic 3D	LKS94	LKS94 (ETRS89)	6126	Lithuania
-4950	Geocentric	LKS94	LKS94 (ETRS89)	6126	Lithuania
+4669	Geographic 2D	ETRS89-LTU [LKS94]	LKS94 (ETRS89)	6126	Lithuania
+4951	Geographic 3D	ETRS89-LTU [LKS94]	LKS94 (ETRS89)	6126	Lithuania
+4950	Geocentric	ETRS89-LTU [LKS94]	LKS94 (ETRS89)	6126	Lithuania
 4127	Geographic 2D	Tete		6127	Mozambique - onshore
 4128	Geographic 2D	Madzansua		6128	Mozambique - west - Tete province
 4129	Geographic 2D	Observatario	Observatario Campos Rodrigues 1907	6129	Mozambique - south
@@ -58,9 +58,9 @@
 4940	Geocentric	Hartebeesthoek94		6148	Africa - South Africa; Lesotho and Eswatini.
 4149	Geographic 2D	CH1903		6149	Europe - Liechtenstein and Switzerland
 4150	Geographic 2D	CH1903+		6150	Europe - Liechtenstein and Switzerland
-4151	Geographic 2D	CHTRS95		6151	Europe - Liechtenstein and Switzerland
-4933	Geographic 3D	CHTRS95		6151	Europe - Liechtenstein and Switzerland
-4932	Geocentric	CHTRS95		6151	Europe - Liechtenstein and Switzerland
+4151	Geographic 2D	ETRS89-CHE [CHTRS95]		6151	Europe - Liechtenstein and Switzerland
+4933	Geographic 3D	ETRS89-CHE [CHTRS95]		6151	Europe - Liechtenstein and Switzerland
+4932	Geocentric	ETRS89-CHE [CHTRS95]		6151	Europe - Liechtenstein and Switzerland
 4152	Geographic 2D	NAD83(HARN)	NAD83(HPGN)	6152	USA - HARN
 4957	Geographic 3D	NAD83(HARN)	NAD83(HPGN)	6152	USA - HARN
 4956	Geocentric	NAD83(HARN)	NAD83(HPGN)	6152	USA - HARN
@@ -88,12 +88,12 @@
 4170	Geographic 2D	SIRGAS 1995	SIRGAS	6170	South America - SIRGAS 1995 by country
 4975	Geographic 3D	SIRGAS 1995	SIRGAS	6170	South America - SIRGAS 1995 by country
 4974	Geocentric	SIRGAS 1995	SIRGAS	6170	South America - SIRGAS 1995 by country
-4171	Geographic 2D	RGF93 v1	RGF93 (lat-lon)	6171	France
-4965	Geographic 3D	RGF93 v1	RGF93 (lat-lon)	6171	France
-4964	Geocentric	RGF93 v1		6171	France
-4173	Geographic 2D	IRENET95	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
-4943	Geographic 3D	IRENET95	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
-4942	Geocentric	IRENET95	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
+4171	Geographic 2D	ETRS89-FRA [RGF93 v1]	RGF93 (lat-lon)	6171	France
+4965	Geographic 3D	ETRS89-FRA [RGF93 v1]	RGF93 (lat-lon)	6171	France
+4964	Geocentric	ETRS89-FRA [RGF93 v1]		6171	France
+4173	Geographic 2D	ETRS89-IRE [ETRF2000]	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
+4943	Geographic 3D	ETRS89-IRE [ETRF2000]	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
+4942	Geocentric	ETRS89-IRE [ETRF2000]	ETRS89	6173	Europe - Ireland (Republic and Ulster) - onshore
 4174	Geographic 2D	Sierra Leone 1924		6174	Sierra Leone - Freetown Peninsula
 4175	Geographic 2D	Sierra Leone 1968		6175	Sierra Leone - onshore
 4176	Geographic 2D	Australian Antarctic	AAD98	6176	Antarctica - Australian sector
@@ -101,8 +101,8 @@
 4930	Geocentric	Australian Antarctic	AAD98	6176	Antarctica - Australian sector
 4178	Geographic 2D	Pulkovo 1942(83)	42/83	6178	Europe - onshore - eastern - S-42(83)
 4179	Geographic 2D	Pulkovo 1942(58)	Pulkovo 1942(56)	6179	Europe - onshore - eastern - S-42(58)
-4180	Geographic 2D	EST97		6180	Estonia
-4935	Geographic 3D	EST97		6180	Estonia
+4180	Geographic 2D	ETRS89-EST [EST97]		6180	Estonia
+4935	Geographic 3D	ETRS89-EST [EST97]		6180	Estonia
 4181	Geographic 2D	LUREF	LUREF	6181	Luxembourg
 4182	Geographic 2D	Azores Occidental 1939		6182	Portugal - Azores W - onshore
 4183	Geographic 2D	Azores Central 1948	Graciosa	6183	Portugal - Azores C - onshore
@@ -259,9 +259,9 @@
 4615	Geographic 2D	Porto Santo	Porto Santo 1936	6615	Portugal - Madeira archipelago onshore
 4616	Geographic 2D	Selvagem Grande	Marco Astro	6616	Portugal - Selvagens onshore
 4618	Geographic 2D	SAD69		6618	South America - SAD69 by country
-4619	Geographic 2D	SWEREF99		6619	Sweden
-4977	Geographic 3D	SWEREF99		6619	Sweden
-4976	Geocentric	SWEREF99		6619	Sweden
+4619	Geographic 2D	ETRS89-SWE [SWEREF 99]		6619	Sweden
+4977	Geographic 3D	ETRS89-SWE [SWEREF 99]		6619	Sweden
+4976	Geocentric	ETRS89-SWE [SWEREF 99]		6619	Sweden
 4620	Geographic 2D	Point 58	12th Parallel traverse	6620	Africa - 12th parallel N
 4621	Geographic 2D	Fort Marigot		6621	Guadeloupe - St Martin and St Barthelemy - onshore
 4622	Geographic 2D	Guadeloupe 1948	Sainte Anne	6622	Guadeloupe - Grande-Terre and surrounding islands - onshore
@@ -295,18 +295,18 @@
 4945	Geographic 3D	ISN93		6659	Iceland
 4944	Geocentric	ISN93		6659	Iceland
 4660	Geographic 2D	Helle 1954		6660	Jan Mayen - onshore
-4661	Geographic 2D	LKS-92		6661	Latvia
-4949	Geographic 3D	LKS-92		6661	Latvia
-4948	Geocentric	LKS-92		6661	Latvia
+4661	Geographic 2D	ETRS89-LVA [LKS-92]		6661	Latvia
+4949	Geographic 3D	ETRS89-LVA [LKS-92]		6661	Latvia
+4948	Geocentric	ETRS89-LVA [LKS-92]		6661	Latvia
 4663	Geographic 2D	Porto Santo 1995	Base SE	6663	Portugal - Madeira archipelago onshore
 4664	Geographic 2D	Azores Oriental 1995	Sao Braz	6664	Portugal - Azores E - onshore
 4665	Geographic 2D	Azores Central 1995	Base SW	6665	Portugal - Azores C - onshore
 4666	Geographic 2D	Lisbon 1890		6666	Portugal - mainland - onshore
 4667	Geographic 2D	IKBD-92		6667	Asia - Middle East - Iraq-Kuwait boundary
 4668	Geographic 2D	ED79		6668	Europe - west
-4670	Geographic 2D	IGM95		6670	Italy - including San Marino and Vatican
-4983	Geographic 3D	IGM95		6670	Italy - including San Marino and Vatican
-4982	Geocentric	IGM95		6670	Italy - including San Marino and Vatican
+4670	Geographic 2D	ETRS89-ITA [IGM95]		6670	Italy - including San Marino and Vatican
+4983	Geographic 3D	ETRS89-ITA [IGM95]		6670	Italy - including San Marino and Vatican
+4982	Geocentric	ETRS89-ITA [IGM95]		6670	Italy - including San Marino and Vatican
 4671	Geographic 2D	Voirol 1879		6671	Algeria - north of 32°N
 4672	Geographic 2D	Chatham Islands 1971	CI1971	6672	New Zealand - Chatham Islands group
 4673	Geographic 2D	Chatham Islands 1979	CI1979	6673	New Zealand - Chatham Islands group
@@ -430,9 +430,9 @@
 4760	Geographic 2D	WGS 66		6760	World
 4891	Geographic 3D	WGS 66		6760	World
 4890	Geocentric	WGS 66		6760	World
-4761	Geographic 2D	HTRS96		6761	Croatia
-4889	Geographic 3D	HTRS96		6761	Croatia
-4888	Geocentric	HTRS96		6761	Croatia
+4761	Geographic 2D	ETRS89-HRV [HTRS96]		6761	Croatia
+4889	Geographic 3D	ETRS89-HRV [HTRS96]		6761	Croatia
+4888	Geocentric	ETRS89-HRV [HTRS96]		6761	Croatia
 4762	Geographic 2D	BDA2000		6762	Bermuda
 4887	Geographic 3D	BDA2000		6762	Bermuda
 4886	Geocentric	BDA2000		6762	Bermuda
@@ -440,9 +440,9 @@
 4764	Geographic 2D	RSRGD2000		6764	Antarctica - Ross Sea Region
 4885	Geographic 3D	RSRGD2000		6764	Antarctica - Ross Sea Region
 4884	Geocentric	RSRGD2000		6764	Antarctica - Ross Sea Region
-4765	Geographic 2D	Slovenia 1996	D96	6765	Slovenia
-4883	Geographic 3D	Slovenia 1996	D96	6765	Slovenia
-4882	Geocentric	Slovenia 1996	D96	6765	Slovenia
+4765	Geographic 2D	ETRS89-SVN [D96]	D96	6765	Slovenia
+4883	Geographic 3D	ETRS89-SVN [D96]	D96	6765	Slovenia
+4882	Geocentric	ETRS89-SVN [D96]	D96	6765	Slovenia
 4801	Geographic 2D	CH1903 (Bern)		6801	Europe - Liechtenstein and Switzerland
 4802	Geographic 2D	Bogota 1975 (Bogota)		6802	Colombia - mainland
 4803	Geographic 2D	Lisbon (Lisbon)	Lisbon 1937 (Lisbon)	6803	Portugal - mainland - onshore

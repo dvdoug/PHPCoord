@@ -12,43 +12,402 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk4
 {
     /**
-     * Pulkovo 1942(83) / Gauss-Kruger zone 2
-     * Extent: Germany - states of former East Germany - west of 12°E
-     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 2 (CRS code 3833). See CRS code 5664 for variant with axes order
-     * reversed to easting before northing for use in GIS applications.
+     * Pulkovo 1942 / Gauss-Kruger CM 117E
+     * Extent: Russia - onshore between 114°E and 120°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 20 (code 28420).
      */
-    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_2 = 'urn:ogc:def:crs:EPSG::3834';
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_117E = 'urn:ogc:def:crs:EPSG::2510';
 
     /**
-     * Pulkovo 1942(83) / Gauss-Kruger zone 2 (E-N)
-     * Extent: Germany - states of former East Germany - west of 12°E
-     * Pulkovo 1942(83) / Gauss-Kruger zone 2 (CRS code 3834) but with axis order reversed (and axis abbreviations
-     * changed) for GIS applications.
+     * Pulkovo 1942 / Gauss-Kruger CM 123E
+     * Extent: Russia - onshore between 120°E and 126°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 21 (code 28421).
      */
-    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_2_E_N = 'urn:ogc:def:crs:EPSG::5664';
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_123E = 'urn:ogc:def:crs:EPSG::2511';
 
     /**
-     * Pulkovo 1942(83) / Gauss-Kruger zone 3
-     * Extent: Germany (former DDR) - onshore east of 12°E. Czechia, Hungary and Slovakia - west of 18°E
-     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 3 (CRS code 3333). See CRS code 5665 for variant with axes order
-     * reversed to easting before northing for use in GIS applications.
+     * Pulkovo 1942 / Gauss-Kruger CM 129E
+     * Extent: Russia - onshore between 126°E and 132°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 22 (code 28422).
      */
-    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::3835';
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_129E = 'urn:ogc:def:crs:EPSG::2512';
 
     /**
-     * Pulkovo 1942(83) / Gauss-Kruger zone 3 (E-N)
-     * Extent: Germany (former DDR) - onshore east of 12°E. Czechia, Hungary and Slovakia - west of 18°E
-     * Pulkovo 1942(83) / Gauss-Kruger zone 3 (CRS code 3835) but with axis order reversed (and axis abbreviations
-     * changed) for GIS applications.
+     * Pulkovo 1942 / Gauss-Kruger CM 135E
+     * Extent: Russia - onshore between 132°E and 138°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 23 (code 28423).
      */
-    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5665';
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_135E = 'urn:ogc:def:crs:EPSG::2513';
 
     /**
-     * Pulkovo 1942(83) / Gauss-Kruger zone 4
-     * Extent: Czechia, Hungary and Slovakia - east of 18°E
-     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 4 (CRS code 3334).
+     * Pulkovo 1942 / Gauss-Kruger CM 141E
+     * Extent: Russia - onshore between 138°E and 144°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 24 (code 28424).
      */
-    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::3836';
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_141E = 'urn:ogc:def:crs:EPSG::2514';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 147E
+     * Extent: Russia - onshore between 144°E and 150°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 25 (code 28425).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_147E = 'urn:ogc:def:crs:EPSG::2515';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 153E
+     * Extent: Russia - onshore between 150°E and 156°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 26 (code 28426).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_153E = 'urn:ogc:def:crs:EPSG::2516';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 159E
+     * Extent: Russia - onshore between 156°E and 162°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 27 (code 28427).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_159E = 'urn:ogc:def:crs:EPSG::2517';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 165E
+     * Extent: Russia - onshore between 162°E and 168°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 28 (code 28428).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_165E = 'urn:ogc:def:crs:EPSG::2518';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 171E
+     * Extent: Russia - onshore between 168°E and 174°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 29 (code 28429).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_171E = 'urn:ogc:def:crs:EPSG::2519';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 171W
+     * Extent: Russia - onshore east of 174°W
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 32 (code 28432).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_171W = 'urn:ogc:def:crs:EPSG::2522';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 177E
+     * Extent: Russia - onshore between 174°E and 180°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 30 (code 28430).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_177E = 'urn:ogc:def:crs:EPSG::2520';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 177W
+     * Extent: Russia - onshore between 180°E and 174°W
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 31 (code 28431).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_177W = 'urn:ogc:def:crs:EPSG::2521';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 21E
+     * Extent: Belarus, Estonia, Latvia, Lithuania and Ukraine - onshore west of 24°E. Russia - Kaliningrad onshore
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 4 (code 28404).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_21E = 'urn:ogc:def:crs:EPSG::2494';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 27E
+     * Extent: Estonia; Latvia and Lithuania - onshore east of 24°E; Belarus, Moldova, Russia and Ukraine - onshore
+     * 24°E to 30°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 5 (code 28405).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_27E = 'urn:ogc:def:crs:EPSG::2495';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 33E
+     * Extent: Belarus and Moldova - east of 30°E; Russia and Ukraine - onshore 30°E to 36°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 6 (code 28406).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_33E = 'urn:ogc:def:crs:EPSG::2496';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 39E
+     * Extent: Georgia - onshore west of 36°E; Russia - onshore 36°E to 42°E; Ukraine - onshore east of 36°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 7 (code 28407).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_39E = 'urn:ogc:def:crs:EPSG::2497';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 45E
+     * Extent: Armenia - west of 48°E; Azerbaijan - west of 48°E; Georgia - east of 42°E; Kazakhstan - west of
+     * 48°E; Russia - onshore 42°E to 48°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 8 (code 28408).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_45E = 'urn:ogc:def:crs:EPSG::2498';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 51E
+     * Extent: Azerbaijan - east of 48°E; Kazakhstan - 48°E to 54°E; Russia - 48°E to 54°E; Turkmenistan - west of
+     * 54°E. Includes Caspian Sea (considered a lake rather than offshore)
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 9 (code 28409).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_51E = 'urn:ogc:def:crs:EPSG::2499';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 57E
+     * Extent: Kazakhstan; Russia - onshore; Turkmenistan - 54°E to 60°E; Uzbekistan - west of 60°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 10 (code 28410).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_57E = 'urn:ogc:def:crs:EPSG::2500';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 63E
+     * Extent: Kazakhstan; Russia - onshore; Uzbekistan - 60°E to 66°E; Turkmenistan - east of 60°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 11 (code 28411).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_63E = 'urn:ogc:def:crs:EPSG::2501';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 69E
+     * Extent: Kazakhstan, Russia onshore and Uzbekistan - 66°E to 72°E; Kyrgyzstan and Tajikistan - west of 72°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 12 (code 28412).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_69E = 'urn:ogc:def:crs:EPSG::2502';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 75E
+     * Extent: Kazakhstan; Kyrgyzstan; Russia onshore - 72°E to 78°E; Tajikistan and Uzbekistan - east of 72°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 13 (code 28413).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_75E = 'urn:ogc:def:crs:EPSG::2503';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 81E
+     * Extent: Kazakhstan and Russia onshore - 78°E to 84°E; Kyrgyzstan - east of 78°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 14 (code 28414).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_81E = 'urn:ogc:def:crs:EPSG::2504';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 87E
+     * Extent: Kazakhstan - east of 84°E; Russia - onshore 84°E to 90°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 15 (code 28415).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_87E = 'urn:ogc:def:crs:EPSG::2505';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 93E
+     * Extent: Russia - onshore between 90°E and 96°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 16 (code 28416).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_93E = 'urn:ogc:def:crs:EPSG::2506';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 99E
+     * Extent: Russia - onshore between 96°E and 102°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 17 (code 28417).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_99E = 'urn:ogc:def:crs:EPSG::2507';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 10
+     * Extent: Kazakhstan; Russia - onshore; Turkmenistan - 54°E to 60°E; Uzbekistan - west of 60°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 57E (code 2500).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::28410';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 11
+     * Extent: Kazakhstan; Russia - onshore; Uzbekistan - 60°E to 66°E; Turkmenistan - east of 60°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 63E (code 2501).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::28411';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 12
+     * Extent: Kazakhstan, Russia onshore and Uzbekistan - 66°E to 72°E; Kyrgyzstan and Tajikistan - west of 72°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 69E (code 2502).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::28412';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 13
+     * Extent: Kazakhstan; Kyrgyzstan; Russia onshore - 72°E to 78°E; Tajikistan and Uzbekistan - east of 72°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 75E (code 2503).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::28413';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 14
+     * Extent: Kazakhstan and Russia onshore - 78°E to 84°E; Kyrgyzstan - east of 78°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 81E (code 2504).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::28414';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 15
+     * Extent: Kazakhstan - east of 84°E; Russia - onshore 84°E to 90°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 87E (code 2505).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::28415';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 16
+     * Extent: Russia - onshore between 90°E and 96°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 93E (code 2506).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_16 = 'urn:ogc:def:crs:EPSG::28416';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 17
+     * Extent: Russia - onshore between 96°E and 102°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 99E (code 2507).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_17 = 'urn:ogc:def:crs:EPSG::28417';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 18
+     * Extent: Russia - onshore between 102°E and 108°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 105E (code 2508).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_18 = 'urn:ogc:def:crs:EPSG::28418';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 19
+     * Extent: Russia - onshore between 108°E and 114°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 111E (code 2509).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_19 = 'urn:ogc:def:crs:EPSG::28419';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 20
+     * Extent: Russia - onshore between 114°E and 120°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 117E (code 2510).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_20 = 'urn:ogc:def:crs:EPSG::28420';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 21
+     * Extent: Russia - onshore between 120°E and 126°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 123E (code 2511).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_21 = 'urn:ogc:def:crs:EPSG::28421';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 22
+     * Extent: Russia - onshore between 126°E and 132°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 129E (code 2512).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_22 = 'urn:ogc:def:crs:EPSG::28422';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 23
+     * Extent: Russia - onshore between 132°E and 138°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 135E (code 2513).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::28423';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 24
+     * Extent: Russia - onshore between 138°E and 144°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 141E (code 2514).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_24 = 'urn:ogc:def:crs:EPSG::28424';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 25
+     * Extent: Russia - onshore between 144°E and 150°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 147E (code 2515).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_25 = 'urn:ogc:def:crs:EPSG::28425';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 26
+     * Extent: Russia - onshore between 150°E and 156°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 153E (code 2516).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_26 = 'urn:ogc:def:crs:EPSG::28426';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 27
+     * Extent: Russia - onshore between 156°E and 162°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 159E (code 2517).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_27 = 'urn:ogc:def:crs:EPSG::28427';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 28
+     * Extent: Russia - onshore between 162°E and 168°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 165E (code 2518).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_28 = 'urn:ogc:def:crs:EPSG::28428';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 29
+     * Extent: Russia - onshore between 168°E and 174°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 171E (code 2519).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_29 = 'urn:ogc:def:crs:EPSG::28429';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 30
+     * Extent: Russia - onshore between 174°E and 180°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 177E (code 2520).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_30 = 'urn:ogc:def:crs:EPSG::28430';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 31
+     * Extent: Russia - onshore between 180°E and 174°W
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 177W (code 2521).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_31 = 'urn:ogc:def:crs:EPSG::28431';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 32
+     * Extent: Russia - onshore east of 174°W
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 171W (code 2522).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_32 = 'urn:ogc:def:crs:EPSG::28432';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 4
+     * Extent: Belarus, Estonia, Latvia, Lithuania and Ukraine - onshore west of 24°E. Russia - Kaliningrad onshore
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 21E (code 2494).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::28404';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 5
+     * Extent: Estonia; Latvia and Lithuania - onshore east of 24°E; Belarus, Moldova, Russia and Ukraine - onshore
+     * 24°E to 30°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 27E (code 2495).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::28405';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 6
+     * Extent: Belarus and Moldova - east of 30°E; Russia and Ukraine - onshore 30°E to 36°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 33E (code 2496).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::28406';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 7
+     * Extent: Georgia - onshore west of 36°E; Russia - onshore 36°E to 42°E; Ukraine - onshore east of 36°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 39E (code 2497).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::28407';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 8
+     * Extent: Armenia - west of 48°E; Azerbaijan - west of 48°E; Georgia - east of 42°E; Kazakhstan - west of
+     * 48°E; Russia - onshore 42°E to 48°E
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 45E (code 2498).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::28408';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger zone 9
+     * Extent: Azerbaijan - east of 48°E; Kazakhstan - 48°E to 54°E; Russia - 48°E to 54°E; Turkmenistan - west of
+     * 54°E. Includes Caspian Sea (considered a lake rather than offshore)
+     * Also found with truncated false easting - see Pulkovo 1942 / Gauss-Kruger CM 51E (code 2499).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::28409';
 
     /**
      * Pulkovo 1995 / 3-degree Gauss-Kruger CM 102E
@@ -1269,12 +1628,6 @@ trait ProjectedConstantsChunk4
     public const EPSG_PULKOVO_1995_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::20009';
 
     /**
-     * QND95 / Qatar National Grid
-     * Extent: Qatar - onshore.
-     */
-    public const EPSG_QND95_QATAR_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::2932';
-
-    /**
      * Qatar 1948 / Qatar Grid
      * Extent: Qatar - onshore
      * Also known as Qatar Plane Coordinate or QPC system. Replaced by Qatar National Grid (code 28600).
@@ -1342,6 +1695,12 @@ trait ProjectedConstantsChunk4
      * Replaces  Pulkovo 1942 / Gauss-Kruger zone 9 (code 28409) in Kazakhstan from 2025-01-01.
      */
     public const EPSG_QAZTRF_23_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::10943';
+
+    /**
+     * QND95 / Qatar National Grid
+     * Extent: Qatar - onshore.
+     */
+    public const EPSG_QND95_QATAR_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::2932';
 
     /**
      * Qoornoq 1927 / Greenland zone 2 west
@@ -1412,12 +1771,124 @@ trait ProjectedConstantsChunk4
     public const EPSG_QOORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
 
     /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 instead
+     */
+    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_8_EAST = 'urn:ogc:def:crs:EPSG::2307';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_22N instead
+     */
+    public const EPSG_QORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
+
+    /**
+     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_23N instead
+     */
+    public const EPSG_QORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
+
+    /**
+     * Rassadiran / Nakhl e Taqi
+     * Extent: Iran - Taheri refinery site
+     * Engineering survey for terminal site only.
+     */
+    public const EPSG_RASSADIRAN_NAKHL_E_TAQI = 'urn:ogc:def:crs:EPSG::2057';
+
+    /**
      * RBEPP12 Grid
      * Extent: UK - on or related to the rail route from Reading via Newbury to Penzance
-     * Defined through transformation ETRS89 to RBEPP12-IRF (1) (code 10278) and map projection RBEPP12-LCC (code
-     * 10279). Emulates the RBEPP12 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to RBEPP12-IRF (1) (code 10278) and map projection
+     * RBEPP12-LCC (code 10279). Emulates the RBEPP12 Snake projection applied to ETRS89 as realized through OSNet
+     * v2009.
      */
     public const EPSG_RBEPP12_GRID = 'urn:ogc:def:crs:EPSG::10280';
+
+    /**
+     * RD
+     * Extent: Netherlands
+     * Replaces 28991 (RD Old). Since 2000-10-01 has been redefined as derived from ETRS89 by application of the
+     * official transformation RDNAPTRANS(TM). Since 2008 use has been extended from onshore to offshore through the
+     * RDNAPTRANS(TM) transformation.
+     */
+    public const EPSG_RD = 'urn:ogc:def:crs:EPSG::28992';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_ITALY_ZONE_E_N instead
+     */
+    public const EPSG_RDN2008_ITALY_ZONE_E_N = 'urn:ogc:def:crs:EPSG::7794';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_ITALY_ZONE_N_E instead
+     */
+    public const EPSG_RDN2008_ITALY_ZONE_N_E = 'urn:ogc:def:crs:EPSG::6875';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_UTM_ZONE_32N instead
+     */
+    public const EPSG_RDN2008_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::7791';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_UTM_ZONE_32N_N_E instead
+     */
+    public const EPSG_RDN2008_UTM_ZONE_32N_N_E = 'urn:ogc:def:crs:EPSG::6707';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_UTM_ZONE_33N instead
+     */
+    public const EPSG_RDN2008_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::7792';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_UTM_ZONE_33N_N_E instead
+     */
+    public const EPSG_RDN2008_UTM_ZONE_33N_N_E = 'urn:ogc:def:crs:EPSG::6708';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_UTM_ZONE_34N instead
+     */
+    public const EPSG_RDN2008_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::7793';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_UTM_ZONE_34N_N_E instead
+     */
+    public const EPSG_RDN2008_UTM_ZONE_34N_N_E = 'urn:ogc:def:crs:EPSG::6709';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_ZONE_12_E_N instead
+     */
+    public const EPSG_RDN2008_ZONE_12_E_N = 'urn:ogc:def:crs:EPSG::7795';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008_ZONE_12_N_E instead
+     */
+    public const EPSG_RDN2008_ZONE_12_N_E = 'urn:ogc:def:crs:EPSG::6876';
 
     /**
      * RD/83 / 3-degree Gauss-Kruger zone 4
@@ -1454,88 +1925,11 @@ trait ProjectedConstantsChunk4
     public const EPSG_RD_83_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N = 'urn:ogc:def:crs:EPSG::5669';
 
     /**
-     * RDN2008 / Italy zone (E-N)
-     * Extent: Italy
-     * Used by public and private agencies that need a single projected CRS for all Italian territory. See RDN2008 /
-     * Italy zone (N-E) (CRS code 6875) for similar CRS with north-east axis order.
+     * RD Old
+     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone
+     * Replaced by RD (CRS code 28992).
      */
-    public const EPSG_RDN2008_ITALY_ZONE_E_N = 'urn:ogc:def:crs:EPSG::7794';
-
-    /**
-     * RDN2008 / Italy zone (N-E)
-     * Extent: Italy
-     * Used by public and private agencies that need a single projected CRS for all Italian territory. See RDN2008 /
-     * Italy zone (E-N) (CRS code 7794) for similar CRS with east-north axis order used for GIS purposes.
-     */
-    public const EPSG_RDN2008_ITALY_ZONE_N_E = 'urn:ogc:def:crs:EPSG::6875';
-
-    /**
-     * RDN2008 / UTM zone 32N
-     * Extent: Italy - west of 12°E
-     * Replaces IGM95 / UTM zone 32N (CRS code 3064) from 2011-11-10. See RDN2008 / UTM zone 32N (N-E) (CRS code 6707)
-     * for similar CRS with north-east axis order used for topographic mapping and engineering purposes.
-     */
-    public const EPSG_RDN2008_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::7791';
-
-    /**
-     * RDN2008 / UTM zone 32N (N-E)
-     * Extent: Italy - west of 12°E
-     * Replaces IGM95 / UTM zone 32N (CRS code 3064) from 2011-11-10. See RDN2008 / UTM zone 32N (CRS code 7791) for
-     * similar CRS with east-north axis order used for GIS purposes.
-     */
-    public const EPSG_RDN2008_UTM_ZONE_32N_N_E = 'urn:ogc:def:crs:EPSG::6707';
-
-    /**
-     * RDN2008 / UTM zone 33N
-     * Extent: Italy - between 12°E and 18°E including San Marino and Vatican City State
-     * Replaces IGM95 / UTM zone 33N (CRS code 3065) west of 18°E from 2011-11-10. See RDN2008 / UTM zone 33N (N-E)
-     * (CRS code 6708) for similar CRS with north-east axis order used for topographic mapping and engineering
-     * purposes.
-     */
-    public const EPSG_RDN2008_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::7792';
-
-    /**
-     * RDN2008 / UTM zone 33N (N-E)
-     * Extent: Italy - between 12°E and 18°E including San Marino and Vatican City State
-     * Replaces IGM95 / UTM zone 33N (CRS code 3065) west of 18°E from 2011-11-10. See RDN2008 / UTM zone 33N (CRS
-     * code 7792) for similar CRS with east-north axis order used for GIS purposes.
-     */
-    public const EPSG_RDN2008_UTM_ZONE_33N_N_E = 'urn:ogc:def:crs:EPSG::6708';
-
-    /**
-     * RDN2008 / UTM zone 34N
-     * Extent: Italy - east of 18°E
-     * Replaces IGM95 / UTM zone 33N (CRS code 3065) east of 18°E from 2011-11-10. See RDN2008 / UTM zone 34N (N-E)
-     * (CRS code 6709) for similar CRS with north-east axis order used for topographic mapping and engineering
-     * purposes.
-     */
-    public const EPSG_RDN2008_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::7793';
-
-    /**
-     * RDN2008 / UTM zone 34N (N-E)
-     * Extent: Italy - east of 18°E
-     * Replaces IGM95 / UTM zone 33N (CRS code 3065) east of 18°E from 2011-11-10. See RDN2008 / UTM zone 34N (CRS
-     * code 7793) for similar CRS with east-north axis order used for GIS purposes.
-     */
-    public const EPSG_RDN2008_UTM_ZONE_34N_N_E = 'urn:ogc:def:crs:EPSG::6709';
-
-    /**
-     * RDN2008 / Zone 12 (E-N)
-     * Extent: Italy
-     * Used in some Italian Departments whose territory falls in both zones 32 and 33 (i.e. crosses the 12°E
-     * meridian). See RDN2008 / Zone 12 (N-E) (CRS code 6876) for similar CRS with north-east axis order used for
-     * topographic mapping and engineering purposes.
-     */
-    public const EPSG_RDN2008_ZONE_12_E_N = 'urn:ogc:def:crs:EPSG::7795';
-
-    /**
-     * RDN2008 / Zone 12 (N-E)
-     * Extent: Italy
-     * Used in some Italian Departments whose territory falls in both UTM zones 32N and 33N (i.e. crosses the meridan
-     * of 12°E). See RDN2008 / Zone 12 (E-N) (CRS code 7795) for similar CRS with east-north axis order used for GIS
-     * purposes.
-     */
-    public const EPSG_RDN2008_ZONE_12_N_E = 'urn:ogc:def:crs:EPSG::6876';
+    public const EPSG_RD_OLD = 'urn:ogc:def:crs:EPSG::28991';
 
     /**
      * REDGEOMIN / UTM zone 12S
@@ -1604,6 +1998,21 @@ trait ProjectedConstantsChunk4
     public const EPSG_REGVEN_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::2203';
 
     /**
+     * Reunion 1947 / TM Reunion
+     * Extent: Reunion - onshore
+     * Replaces Reunion 1947 / Gauss Laborde Reunion (alias Piton des Neiges / Gauss Laborde Reunion). Replaced by
+     * RGR92 / UTM zone 40S (CRS code 2975).
+     */
+    public const EPSG_REUNION_1947_TM_REUNION = 'urn:ogc:def:crs:EPSG::3727';
+
+    /**
+     * Reykjavik 1900 / Lambert 1900
+     * Extent: Iceland - mainland
+     * Replaced by Hjorsey 1955 / Lambert 1955 (CRS code 3053). See ellipsoid remarks.
+     */
+    public const EPSG_REYKJAVIK_1900_LAMBERT_1900 = 'urn:ogc:def:crs:EPSG::3052';
+
+    /**
      * RGAF09 / UTM zone 20N
      * Extent: French Antilles west of 60°W - Guadeloupe (including Grande Terre, Basse Terre, Marie Galante, Les
      * Saintes, Iles de la Petite Terre, La Desirade); Martinique; St Barthélemy; northern St Martin
@@ -1612,184 +2021,154 @@ trait ProjectedConstantsChunk4
     public const EPSG_RGAF09_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::5490';
 
     /**
-     * RGF93 v1 / CC42
-     * Extent: France onshore - mainland south of 43°N and Corsica.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC42 instead
      */
     public const EPSG_RGF93_V1_CC42 = 'urn:ogc:def:crs:EPSG::3942';
 
     /**
-     * RGF93 v1 / CC43
-     * Extent: France - mainland onshore south of 44°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC43 instead
      */
     public const EPSG_RGF93_V1_CC43 = 'urn:ogc:def:crs:EPSG::3943';
 
     /**
-     * RGF93 v1 / CC44
-     * Extent: France - mainland onshore between 43°N and 45°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC44 instead
      */
     public const EPSG_RGF93_V1_CC44 = 'urn:ogc:def:crs:EPSG::3944';
 
     /**
-     * RGF93 v1 / CC45
-     * Extent: France - mainland onshore between 44°N and 46°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC45 instead
      */
     public const EPSG_RGF93_V1_CC45 = 'urn:ogc:def:crs:EPSG::3945';
 
     /**
-     * RGF93 v1 / CC46
-     * Extent: France - mainland onshore between 45°N and 47°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC46 instead
      */
     public const EPSG_RGF93_V1_CC46 = 'urn:ogc:def:crs:EPSG::3946';
 
     /**
-     * RGF93 v1 / CC47
-     * Extent: France - mainland onshore between 46°N and 48°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC47 instead
      */
     public const EPSG_RGF93_V1_CC47 = 'urn:ogc:def:crs:EPSG::3947';
 
     /**
-     * RGF93 v1 / CC48
-     * Extent: France - mainland onshore between 47°N and 49°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC48 instead
      */
     public const EPSG_RGF93_V1_CC48 = 'urn:ogc:def:crs:EPSG::3948';
 
     /**
-     * RGF93 v1 / CC49
-     * Extent: France - mainland onshore between 48°N and 50°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC49 instead
      */
     public const EPSG_RGF93_V1_CC49 = 'urn:ogc:def:crs:EPSG::3949';
 
     /**
-     * RGF93 v1 / CC50
-     * Extent: France - mainland onshore north of 49°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_CC50 instead
      */
     public const EPSG_RGF93_V1_CC50 = 'urn:ogc:def:crs:EPSG::3950';
 
     /**
-     * RGF93 v1 / Lambert-93
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica).
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_LAMBERT_93 instead
      */
     public const EPSG_RGF93_V1_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::2154';
 
     /**
-     * RGF93 v2 / CC42
-     * Extent: France onshore - mainland south of 43°N and Corsica.
-     */
-    public const EPSG_RGF93_V2_CC42 = 'urn:ogc:def:crs:EPSG::9822';
-
-    /**
-     * RGF93 v2 / CC43
-     * Extent: France - mainland onshore south of 44°N.
-     */
-    public const EPSG_RGF93_V2_CC43 = 'urn:ogc:def:crs:EPSG::9823';
-
-    /**
-     * RGF93 v2 / CC44
-     * Extent: France - mainland onshore between 43°N and 45°N.
-     */
-    public const EPSG_RGF93_V2_CC44 = 'urn:ogc:def:crs:EPSG::9824';
-
-    /**
-     * RGF93 v2 / CC45
-     * Extent: France - mainland onshore between 44°N and 46°N.
-     */
-    public const EPSG_RGF93_V2_CC45 = 'urn:ogc:def:crs:EPSG::9825';
-
-    /**
-     * RGF93 v2 / CC46
-     * Extent: France - mainland onshore between 45°N and 47°N.
-     */
-    public const EPSG_RGF93_V2_CC46 = 'urn:ogc:def:crs:EPSG::9826';
-
-    /**
-     * RGF93 v2 / CC47
-     * Extent: France - mainland onshore between 46°N and 48°N.
-     */
-    public const EPSG_RGF93_V2_CC47 = 'urn:ogc:def:crs:EPSG::9827';
-
-    /**
-     * RGF93 v2 / CC48
-     * Extent: France - mainland onshore between 47°N and 49°N.
-     */
-    public const EPSG_RGF93_V2_CC48 = 'urn:ogc:def:crs:EPSG::9828';
-
-    /**
-     * RGF93 v2 / CC49
-     * Extent: France - mainland onshore between 48°N and 50°N.
-     */
-    public const EPSG_RGF93_V2_CC49 = 'urn:ogc:def:crs:EPSG::9829';
-
-    /**
-     * RGF93 v2 / CC50
-     * Extent: France - mainland onshore north of 49°N.
-     */
-    public const EPSG_RGF93_V2_CC50 = 'urn:ogc:def:crs:EPSG::9830';
-
-    /**
-     * RGF93 v2 / Lambert-93
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica).
-     */
-    public const EPSG_RGF93_V2_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9793';
-
-    /**
-     * RGF93 v2b / CC42
-     * Extent: France onshore - mainland south of 43°N and Corsica.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC42 instead
      */
     public const EPSG_RGF93_V2B_CC42 = 'urn:ogc:def:crs:EPSG::9842';
 
     /**
-     * RGF93 v2b / CC43
-     * Extent: France - mainland onshore south of 44°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC43 instead
      */
     public const EPSG_RGF93_V2B_CC43 = 'urn:ogc:def:crs:EPSG::9843';
 
     /**
-     * RGF93 v2b / CC44
-     * Extent: France - mainland onshore between 43°N and 45°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC44 instead
      */
     public const EPSG_RGF93_V2B_CC44 = 'urn:ogc:def:crs:EPSG::9844';
 
     /**
-     * RGF93 v2b / CC45
-     * Extent: France - mainland onshore between 44°N and 46°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC45 instead
      */
     public const EPSG_RGF93_V2B_CC45 = 'urn:ogc:def:crs:EPSG::9845';
 
     /**
-     * RGF93 v2b / CC46
-     * Extent: France - mainland onshore between 45°N and 47°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC46 instead
      */
     public const EPSG_RGF93_V2B_CC46 = 'urn:ogc:def:crs:EPSG::9846';
 
     /**
-     * RGF93 v2b / CC47
-     * Extent: France - mainland onshore between 46°N and 48°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC47 instead
      */
     public const EPSG_RGF93_V2B_CC47 = 'urn:ogc:def:crs:EPSG::9847';
 
     /**
-     * RGF93 v2b / CC48
-     * Extent: France - mainland onshore between 47°N and 49°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC48 instead
      */
     public const EPSG_RGF93_V2B_CC48 = 'urn:ogc:def:crs:EPSG::9848';
 
     /**
-     * RGF93 v2b / CC49
-     * Extent: France - mainland onshore between 48°N and 50°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC49 instead
      */
     public const EPSG_RGF93_V2B_CC49 = 'urn:ogc:def:crs:EPSG::9849';
 
     /**
-     * RGF93 v2b / CC50
-     * Extent: France - mainland onshore north of 49°N.
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_CC50 instead
      */
     public const EPSG_RGF93_V2B_CC50 = 'urn:ogc:def:crs:EPSG::9850';
 
     /**
-     * RGF93 v2b / Lambert-93
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica).
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_LAMBERT_93 instead
      */
     public const EPSG_RGF93_V2B_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9794';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC42 instead
+     */
+    public const EPSG_RGF93_V2_CC42 = 'urn:ogc:def:crs:EPSG::9822';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC43 instead
+     */
+    public const EPSG_RGF93_V2_CC43 = 'urn:ogc:def:crs:EPSG::9823';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC44 instead
+     */
+    public const EPSG_RGF93_V2_CC44 = 'urn:ogc:def:crs:EPSG::9824';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC45 instead
+     */
+    public const EPSG_RGF93_V2_CC45 = 'urn:ogc:def:crs:EPSG::9825';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC46 instead
+     */
+    public const EPSG_RGF93_V2_CC46 = 'urn:ogc:def:crs:EPSG::9826';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC47 instead
+     */
+    public const EPSG_RGF93_V2_CC47 = 'urn:ogc:def:crs:EPSG::9827';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC48 instead
+     */
+    public const EPSG_RGF93_V2_CC48 = 'urn:ogc:def:crs:EPSG::9828';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC49 instead
+     */
+    public const EPSG_RGF93_V2_CC49 = 'urn:ogc:def:crs:EPSG::9829';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_CC50 instead
+     */
+    public const EPSG_RGF93_V2_CC50 = 'urn:ogc:def:crs:EPSG::9830';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_LAMBERT_93 instead
+     */
+    public const EPSG_RGF93_V2_LAMBERT_93 = 'urn:ogc:def:crs:EPSG::9793';
 
     /**
      * RGFG95 / UTM zone 21N
@@ -2279,113 +2658,6 @@ trait ProjectedConstantsChunk4
     public const EPSG_RT90_7_5_GON_V = 'urn:ogc:def:crs:EPSG::3019';
 
     /**
-     * Rassadiran / Nakhl e Taqi
-     * Extent: Iran - Taheri refinery site
-     * Engineering survey for terminal site only.
-     */
-    public const EPSG_RASSADIRAN_NAKHL_E_TAQI = 'urn:ogc:def:crs:EPSG::2057';
-
-    /**
-     * Reunion 1947 / TM Reunion
-     * Extent: Reunion - onshore
-     * Replaces Reunion 1947 / Gauss Laborde Reunion (alias Piton des Neiges / Gauss Laborde Reunion). Replaced by
-     * RGR92 / UTM zone 40S (CRS code 2975).
-     */
-    public const EPSG_REUNION_1947_TM_REUNION = 'urn:ogc:def:crs:EPSG::3727';
-
-    /**
-     * Reykjavik 1900 / Lambert 1900
-     * Extent: Iceland - mainland
-     * Replaced by Hjorsey 1955 / Lambert 1955 (CRS code 3053). See ellipsoid remarks.
-     */
-    public const EPSG_REYKJAVIK_1900_LAMBERT_1900 = 'urn:ogc:def:crs:EPSG::3052';
-
-    /**
-     * S-JTSK (Ferro) / Krovak
-     * Extent: Czechia; Slovakia
-     * Original definition. In Slovakia, deprecated and replaced by Greenwich-meridian equivalent CRS code 5513. In
-     * Czechia remains legal system, but see S-JTSK/05 (Ferro) / Modified Krovak (CRS code 5224) for a scientific
-     * working system.
-     */
-    public const EPSG_S_JTSK_FERRO_KROVAK = 'urn:ogc:def:crs:EPSG::2065';
-
-    /**
-     * S-JTSK (Ferro) / Krovak East North
-     * Extent: Czechia; Slovakia
-     * North-orientated alternative for GIS purposes to the south-orientated S-JTSK / Krovak (Ferro) legal system (CRS
-     * code 2065) . Coordinates are negative. In SK deprecated and replaced by equivalent CRS referenced to the
-     * Greenwich meridian, CRS code 5514.
-     */
-    public const EPSG_S_JTSK_FERRO_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5221';
-
-    /**
-     * S-JTSK / Krovak
-     * Extent: Czechia; Slovakia
-     * Equivalent to CRS code 2065 but referenced to Greenwich meridian. In Slovakia remains the legal system for
-     * cadastre but for non-cadastral purposes replaced by CRS 8352. In Czechia remains the legal system but see CRS
-     * 5515 for a scientific working system.
-     */
-    public const EPSG_S_JTSK_KROVAK = 'urn:ogc:def:crs:EPSG::5513';
-
-    /**
-     * S-JTSK / Krovak East North
-     * Extent: Czechia; Slovakia
-     * North-orientated alternative for GIS purposes to south-orientated S-JTSK / Krovak (CRS code 5513) which remains
-     * the legal system. Coordinates are negative.
-     */
-    public const EPSG_S_JTSK_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5514';
-
-    /**
-     * S-JTSK [JTSK03] / Krovak
-     * Extent: Slovakia
-     * Improvement upon the scale and homogineity of S-JTSK / Krovak (CRS code 5513) in Slovakia. See CRS code 8353 for
-     * north-orientated alternative used for GIS purposes. For cadastre in Slovakia, use CRS code 5513.
-     */
-    public const EPSG_S_JTSK_JTSK03_KROVAK = 'urn:ogc:def:crs:EPSG::8352';
-
-    /**
-     * S-JTSK [JTSK03] / Krovak East North
-     * Extent: Slovakia
-     * North-orientated alternative to S-JTSK [JTSK03] / Krovak (CRS code 8352) for GIS purposes. Coordinates are
-     * negative.
-     */
-    public const EPSG_S_JTSK_JTSK03_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::8353';
-
-    /**
-     * S-JTSK/05 (Ferro) / Modified Krovak
-     * Extent: Czechia
-     * Improves the scale and homogineity of CRS code 2065 in Czechia as a scientific working system, but 2065 remains
-     * the legal system. See CRS code 5515 for Greenwich-referenced equivalent; 5225 for north-orientated alternative
-     * used for GIS purposes.
-     */
-    public const EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK = 'urn:ogc:def:crs:EPSG::5224';
-
-    /**
-     * S-JTSK/05 (Ferro) / Modified Krovak East North
-     * Extent: Czechia
-     * North-orientated alternative to south-orientated S-JTSK/05 (Ferro) / Modified Krovak (CRS code 5224) for GIS
-     * purposes. Coordinates are negative. See CRS code 5516 for Greenwich-referenced equivalent,.
-     */
-    public const EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5225';
-
-    /**
-     * S-JTSK/05 / Modified Krovak
-     * Extent: Czechia
-     * Greenwich-referenced alternative to S-JTSK/05 (Ferro) / Modified Krovak, CRS code 5224. S-JTSK / Krovak, CRS
-     * code 5513, remains the legal system.
-     */
-    public const EPSG_S_JTSK_05_MODIFIED_KROVAK = 'urn:ogc:def:crs:EPSG::5515';
-
-    /**
-     * S-JTSK/05 / Modified Krovak East North
-     * Extent: Czechia
-     * North-orientated alternative to S-JTSK/05 / Modified Krovak (CRS code 5515) for GIS purposes. Coordinates are
-     * negative. See CRS code 5225 for Ferro-referenced equivalent. S-JTSK / Krovak (CRS code 5513) remains the legal
-     * system.
-     */
-    public const EPSG_S_JTSK_05_MODIFIED_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5516';
-
-    /**
      * S34J reconstruction east-orientated
      * Extent: Denmark - Jutland and Funen - onshore
      * Reconstruction emulating the historic S34J CRS but with axis direction flip: W (S34J) = E (S34J e-o) * -1, N
@@ -2411,6 +2683,86 @@ trait ProjectedConstantsChunk4
      * S45B-reconstruction (code 10253).
      */
     public const EPSG_S45B_RECONSTRUCTION_EAST_ORIENTATED = 'urn:ogc:def:crs:EPSG::10254';
+
+    /**
+     * Saba DPnet
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
+     * Short cadastral map coordinates.
+     */
+    public const EPSG_SABA_DPNET = 'urn:ogc:def:crs:EPSG::10641';
+
+    /**
+     * SAD69(96) / Brazil Polyconic
+     * Extent: Brazil. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim Vaz and Sao Pedro e Sao
+     * Paulo
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / Brazil Polyconic (CRS code
+     * 29101).
+     */
+    public const EPSG_SAD69_96_BRAZIL_POLYCONIC = 'urn:ogc:def:crs:EPSG::5530';
+
+    /**
+     * SAD69(96) / UTM zone 18S
+     * Extent: Brazil - west of 72°W
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil replaces SAD69 / UTM zone 18S (CRS code
+     * 29188); replaced by SIRGAS 2000 / UTM zone 18S (CRS code 31978).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::5875';
+
+    /**
+     * SAD69(96) / UTM zone 19S
+     * Extent: Brazil - between 72°W and 66°W, northern and southern hemispheres
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil replaces SAD69 / UTM zone 19S (CRS code
+     * 29189); replaced by SIRGAS 2000 / UTM zone 19S (CRS code 31979).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5876';
+
+    /**
+     * SAD69(96) / UTM zone 20S
+     * Extent: Brazil - between 66°W and 60°W, northern and southern hemispheres
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil replaces SAD69 / UTM zone 20S (CRS code
+     * 29190); replaced by SIRGAS 2000 / UTM zone 20S (CRS code 31980).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::5877';
+
+    /**
+     * SAD69(96) / UTM zone 21S
+     * Extent: Brazil - between 60°W and 54°W, northern and southern hemispheres
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 21S (CRS code 29191) in
+     * Brazil. Replaced by SIRGAS 2000 / UTM zone 21S (CRS code 31981).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::5531';
+
+    /**
+     * SAD69(96) / UTM zone 22S
+     * Extent: Brazil northern and southern hemispheres between 54°W and 48°W
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 22S (CRS code 29192) in
+     * Brazil. Replaced by SIRGAS 2000 / UTM zone 22S (CRS code 31982).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_22S = 'urn:ogc:def:crs:EPSG::5858';
+
+    /**
+     * SAD69(96) / UTM zone 23S
+     * Extent: Brazil - between 48°W and 42°W, northern and southern hemispheres
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 23S (CRS code 29193).
+     * Replaced by SIRGAS 2000 / UTM zone 23S (CRS code 31983).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_23S = 'urn:ogc:def:crs:EPSG::5533';
+
+    /**
+     * SAD69(96) / UTM zone 24S
+     * Extent: Brazil - between 42°W and 36°W, northern and southern hemispheres
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 24S (CRS code 29194).
+     * Replaced by SIRGAS 2000 / UTM zone 24S (CRS code 31984).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_24S = 'urn:ogc:def:crs:EPSG::5534';
+
+    /**
+     * SAD69(96) / UTM zone 25S
+     * Extent: Brazil - between 36°W and 30°W, northern and southern hemispheres
+     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 25S (CRS code 29195).
+     * Replaced by SIRGAS 2000 / UTM zone 25S (CRS code 31985).
+     */
+    public const EPSG_SAD69_96_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::5535';
 
     /**
      * SAD69 / Brazil Polyconic
@@ -2542,86 +2894,140 @@ trait ProjectedConstantsChunk4
     public const EPSG_SAD69_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::29195';
 
     /**
-     * SAD69(96) / Brazil Polyconic
-     * Extent: Brazil. Includes Rocas, Fernando de Noronha archipelago, Trindade, Ihlas Martim Vaz and Sao Pedro e Sao
-     * Paulo
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / Brazil Polyconic (CRS code
-     * 29101).
+     * Saint Pierre et Miquelon 1950 / UTM zone 21N
+     * Extent: St Pierre and Miquelon - onshore
+     * Replaced by RGSPM06 / UTM zone 21N (CRS code 4467).
      */
-    public const EPSG_SAD69_96_BRAZIL_POLYCONIC = 'urn:ogc:def:crs:EPSG::5530';
+    public const EPSG_SAINT_PIERRE_ET_MIQUELON_1950_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::2987';
 
     /**
-     * SAD69(96) / UTM zone 18S
-     * Extent: Brazil - west of 72°W
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil replaces SAD69 / UTM zone 18S (CRS code
-     * 29188); replaced by SIRGAS 2000 / UTM zone 18S (CRS code 31978).
+     * Sapper Hill 1943 / UTM zone 20S
+     * Extent: Falkland Islands (Malvinas) - onshore west of 60°W.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::5875';
+    public const EPSG_SAPPER_HILL_1943_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::29220';
 
     /**
-     * SAD69(96) / UTM zone 19S
-     * Extent: Brazil - between 72°W and 66°W, northern and southern hemispheres
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil replaces SAD69 / UTM zone 19S (CRS code
-     * 29189); replaced by SIRGAS 2000 / UTM zone 19S (CRS code 31979).
+     * Sapper Hill 1943 / UTM zone 21S
+     * Extent: Falkland Islands (Malvinas) - onshore east of 60°W.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5876';
+    public const EPSG_SAPPER_HILL_1943_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::29221';
 
     /**
-     * SAD69(96) / UTM zone 20S
-     * Extent: Brazil - between 66°W and 60°W, northern and southern hemispheres
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil replaces SAD69 / UTM zone 20S (CRS code
-     * 29190); replaced by SIRGAS 2000 / UTM zone 20S (CRS code 31980).
+     * Schwarzeck / Lo22/11
+     * Extent: Namibia - onshore west of 12°E.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::5877';
+    public const EPSG_SCHWARZECK_LO22_11 = 'urn:ogc:def:crs:EPSG::29371';
 
     /**
-     * SAD69(96) / UTM zone 21S
-     * Extent: Brazil - between 60°W and 54°W, northern and southern hemispheres
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 21S (CRS code 29191) in
-     * Brazil. Replaced by SIRGAS 2000 / UTM zone 21S (CRS code 31981).
+     * Schwarzeck / Lo22/13
+     * Extent: Namibia - onshore between 12°E and 14°E.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::5531';
+    public const EPSG_SCHWARZECK_LO22_13 = 'urn:ogc:def:crs:EPSG::29373';
 
     /**
-     * SAD69(96) / UTM zone 22S
-     * Extent: Brazil northern and southern hemispheres between 54°W and 48°W
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 22S (CRS code 29192) in
-     * Brazil. Replaced by SIRGAS 2000 / UTM zone 22S (CRS code 31982).
+     * Schwarzeck / Lo22/15
+     * Extent: Namibia - onshore between 14°E and 16°E.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_22S = 'urn:ogc:def:crs:EPSG::5858';
+    public const EPSG_SCHWARZECK_LO22_15 = 'urn:ogc:def:crs:EPSG::29375';
 
     /**
-     * SAD69(96) / UTM zone 23S
-     * Extent: Brazil - between 48°W and 42°W, northern and southern hemispheres
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 23S (CRS code 29193).
-     * Replaced by SIRGAS 2000 / UTM zone 23S (CRS code 31983).
+     * Schwarzeck / Lo22/17
+     * Extent: Namibia - onshore between 16°E and 18°E.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_23S = 'urn:ogc:def:crs:EPSG::5533';
+    public const EPSG_SCHWARZECK_LO22_17 = 'urn:ogc:def:crs:EPSG::29377';
 
     /**
-     * SAD69(96) / UTM zone 24S
-     * Extent: Brazil - between 42°W and 36°W, northern and southern hemispheres
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 24S (CRS code 29194).
-     * Replaced by SIRGAS 2000 / UTM zone 24S (CRS code 31984).
+     * Schwarzeck / Lo22/19
+     * Extent: Namibia - between 18°E and 20°E.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_24S = 'urn:ogc:def:crs:EPSG::5534';
+    public const EPSG_SCHWARZECK_LO22_19 = 'urn:ogc:def:crs:EPSG::29379';
 
     /**
-     * SAD69(96) / UTM zone 25S
-     * Extent: Brazil - between 36°W and 30°W, northern and southern hemispheres
-     * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. Replaces SAD69 / UTM zone 25S (CRS code 29195).
-     * Replaced by SIRGAS 2000 / UTM zone 25S (CRS code 31985).
+     * Schwarzeck / Lo22/21
+     * Extent: Namibia - between 20°E and 22°E.
      */
-    public const EPSG_SAD69_96_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::5535';
+    public const EPSG_SCHWARZECK_LO22_21 = 'urn:ogc:def:crs:EPSG::29381';
+
+    /**
+     * Schwarzeck / Lo22/23
+     * Extent: Namibia - between 22°E and 24°E.
+     */
+    public const EPSG_SCHWARZECK_LO22_23 = 'urn:ogc:def:crs:EPSG::29383';
+
+    /**
+     * Schwarzeck / Lo22/25
+     * Extent: Namibia - east of 24°E.
+     */
+    public const EPSG_SCHWARZECK_LO22_25 = 'urn:ogc:def:crs:EPSG::29385';
+
+    /**
+     * Schwarzeck / UTM zone 33S
+     * Extent: Namibia - offshore
+     * CARE! The ellipsoid semi-major axis dimension is defined in German Legal Metres as 6377397.155 GLM but the
+     * coordinate system axes are in International metres. For use in this projected CRS, the ellipsoid semi-major axis
+     * needs to be converted to International metres as 6377483.865 m.
+     */
+    public const EPSG_SCHWARZECK_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::29333';
 
     /**
      * SCM22 Grid
      * Extent: UK - on or related to the Scottish central mainline rail route from Motherwell through Perth and
      * Pitlochry to Inverness
-     * Defined through transformation ETRS89 to SCM22-IRF (1) (code 9970) and map projection SCM22-TM (code 9971).
-     * Emulates the SCM22 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to SCM22-IRF (1) (code 9970) and map projection SCM22-TM
+     * (code 9971). Emulates the SCM22 Snake projection applied to ETRS89 as realized through OSNet v2009.
      */
     public const EPSG_SCM22_GRID = 'urn:ogc:def:crs:EPSG::9972';
+
+    /**
+     * Scoresbysund 1952 / Greenland zone 5 east
+     * Extent: Greenland - east coast onshore - between 69°N and 72°N
+     * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
+     * abbreviation E but is positive to the west.
+     */
+    public const EPSG_SCORESBYSUND_1952_GREENLAND_ZONE_5_EAST = 'urn:ogc:def:crs:EPSG::2218';
+
+    /**
+     * Scoresbysund 1952 / Greenland zone 6 east
+     * Extent: Greenland - east coast onshore - between 68°N and 69°N
+     * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
+     * abbreviation E but is positive to the west.
+     */
+    public const EPSG_SCORESBYSUND_1952_GREENLAND_ZONE_6_EAST = 'urn:ogc:def:crs:EPSG::2221';
+
+    /**
+     * Segara (Jakarta) / NEIEZ
+     * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
+     * areas
+     * Replaced by Greenwich-based Segara / NEIEZ (CRS code 3000).
+     */
+    public const EPSG_SEGARA_JAKARTA_NEIEZ = 'urn:ogc:def:crs:EPSG::5329';
+
+    /**
+     * Segara / NEIEZ
+     * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
+     * areas.
+     */
+    public const EPSG_SEGARA_NEIEZ = 'urn:ogc:def:crs:EPSG::3000';
+
+    /**
+     * Segara / UTM zone 50S
+     * Extent: Indonesia - east Kalimantan - Mahakam delta coastal and offshore shelf areas.
+     */
+    public const EPSG_SEGARA_UTM_ZONE_50S = 'urn:ogc:def:crs:EPSG::2933';
+
+    /**
+     * Selvagem Grande / UTM zone 28N
+     * Extent: Portugal - Selvagens islands (Madeira province) - onshore.
+     */
+    public const EPSG_SELVAGEM_GRANDE_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::2943';
+
+    /**
+     * ShAb07 Grid
+     * Extent: UK - on or related to the rail route from Shrewsbury to Aberystwyth
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to ShAb07-IRF (1) (code 10186) and map projection
+     * ShAb07-TM (code 10187). Emulates the ShAb07 Snake projection applied to ETRS89 as realized through OSNet v2009.
+     */
+    public const EPSG_SHAB07_GRID = 'urn:ogc:def:crs:EPSG::10188';
 
     /**
      * SHMG2015
@@ -2629,6 +3035,58 @@ trait ProjectedConstantsChunk4
      * Replaces previous CRSs (codes 7877, 7878, 7882 and 7883) from 2015.
      */
     public const EPSG_SHMG2015 = 'urn:ogc:def:crs:EPSG::7887';
+
+    /**
+     * Sibun Gorge 1922 / Colony Grid
+     * Extent: Belize - onshore.
+     */
+    public const EPSG_SIBUN_GORGE_1922_COLONY_GRID = 'urn:ogc:def:crs:EPSG::5589';
+
+    /**
+     * Sierra Leone 1924 / New Colony Grid
+     * Extent: Sierra Leone - Freetown Peninsula
+     * Replaces the Sierra Leone 1924 / Colony Grid. New grid is 422.3 ft west and 112.1 ft south of old grid.
+     * Ellipsoid semi-major axis (a)=20926201 Gold Coast feet; 1 Gold Coast foot = 0.3047997101815 m.
+     */
+    public const EPSG_SIERRA_LEONE_1924_NEW_COLONY_GRID = 'urn:ogc:def:crs:EPSG::2159';
+
+    /**
+     * Sierra Leone 1924 / New War Office Grid
+     * Extent: Sierra Leone - Freetown Peninsula
+     * Replaces the Sierra Leone War Office Grid. New grid is 422.3 ft west and 112.1 ft south of old grid. Ellipsoid
+     * semi-major axis (a)=20926201 Gold Coast feet; 1 Gold Coast foot = 0.3047997101815 m.
+     */
+    public const EPSG_SIERRA_LEONE_1924_NEW_WAR_OFFICE_GRID = 'urn:ogc:def:crs:EPSG::2160';
+
+    /**
+     * Sierra Leone 1968 / UTM zone 28N
+     * Extent: Sierra Leone - onshore west of 12°W
+     * Replaces Sierra Leone 1960 / UTM zone 28N. The 1968 readjustment coordinates are within 3m of the 1960
+     * provisional adjustment.
+     */
+    public const EPSG_SIERRA_LEONE_1968_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::2161';
+
+    /**
+     * Sierra Leone 1968 / UTM zone 29N
+     * Extent: Sierra Leone - onshore east of 12°W
+     * Replaces Sierra Leone 1960 / UTM zone 29N. The 1968 readjustment coordinates are within 3m of the 1960
+     * provisional adjustment.
+     */
+    public const EPSG_SIERRA_LEONE_1968_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::2162';
+
+    /**
+     * Sint Eustatius DPnet long
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Cadastral map long coordinates. Replaces DPnet short (CRS code 10744).
+     */
+    public const EPSG_SINT_EUSTATIUS_DPNET_LONG = 'urn:ogc:def:crs:EPSG::10745';
+
+    /**
+     * Sint Eustatius DPnet short
+     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
+     * Former cadastral map coordinates. Replaced by DPnet long (CRS code 10745).
+     */
+    public const EPSG_SINT_EUSTATIUS_DPNET_SHORT = 'urn:ogc:def:crs:EPSG::10744';
 
     /**
      * SIRGAS 1995 / UTM zone 17N
@@ -2940,16 +3398,16 @@ trait ProjectedConstantsChunk4
     /**
      * SIRGAS-Chile 2002 / UTM zone 18S
      * Extent: Chile - 78°W to 72°W
-     * Replaces PSAD56 / UTM zone 18S (CRS code 24878) in Chile. Replaced by SIRGAS-Chile 2010 / UTM zone 18S (CRS code
-     * 8950).
+     * Replaces PSAD56 / UTM zone 18S (CRS code 24878) in Chile. Replaced by SIRGAS-Chile 2013 / UTM zone 18S (CRS code
+     * 9149).
      */
     public const EPSG_SIRGAS_CHILE_2002_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::5362';
 
     /**
      * SIRGAS-Chile 2002 / UTM zone 19S
      * Extent: Chile - 72°W to 66°W
-     * Replaces PSAD56 / UTM zone 19S (CRS code 24879) in Chile. Replaced by SIRGAS-Chile 2010 / UTM zone 19S (CRS code
-     * 8951).
+     * Replaces PSAD56 / UTM zone 19S (CRS code 24879) in Chile. Replaced by SIRGAS-Chile 2013 / UTM zone 19S (CRS code
+     * 9150).
      */
     public const EPSG_SIRGAS_CHILE_2002_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5361';
 
@@ -2958,6 +3416,7 @@ trait ProjectedConstantsChunk4
      * Extent: Chile - 78°W to 72°W
      * Replaces SIRGAS-Chile 2002 / UTM zone 18S (CRS code 5362). Replaced by SIRGAS-Chile 2013 / UTM zone 18S (CRS
      * code 9149).
+     * @deprecated
      */
     public const EPSG_SIRGAS_CHILE_2010_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::8950';
 
@@ -2966,13 +3425,14 @@ trait ProjectedConstantsChunk4
      * Extent: Chile - 72°W to 66°W
      * Replaces SIRGAS-Chile 2002 / UTM zone 19S (CRS code 5361). Replaced by SIRGAS-Chile 2013 / UTM zone 19S (CRS
      * code 9150).
+     * @deprecated
      */
     public const EPSG_SIRGAS_CHILE_2010_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::8951';
 
     /**
      * SIRGAS-Chile 2013 / UTM zone 18S
      * Extent: Chile - 78°W to 72°W
-     * Replaces SIRGAS-Chile 2010 / UTM zone 18S (CRS code 8950). Replaced by SIRGAS-Chile 2016 / UTM zone 18S (CRS
+     * Replaces SIRGAS-Chile 2002 / UTM zone 18S (CRS code 5362). Replaced by SIRGAS-Chile 2016 / UTM zone 18S (CRS
      * code 9154).
      */
     public const EPSG_SIRGAS_CHILE_2013_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::9149';
@@ -2980,7 +3440,7 @@ trait ProjectedConstantsChunk4
     /**
      * SIRGAS-Chile 2013 / UTM zone 19S
      * Extent: Chile - 72°W to 66°W
-     * Replaces SIRGAS-Chile 2010 / UTM zone 19S (CRS code 8951). Replaced by SIRGAS-Chile 2016 / UTM zone 19S (CRS
+     * Replaces SIRGAS-Chile 2002 / UTM zone 19S (CRS code 5361). Replaced by SIRGAS-Chile 2016 / UTM zone 19S (CRS
      * code 9155).
      */
     public const EPSG_SIRGAS_CHILE_2013_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::9150';
@@ -3008,7 +3468,7 @@ trait ProjectedConstantsChunk4
     /**
      * SIRGAS-Chile 2021 / UTM zone 18S
      * Extent: Chile - 78°W to 72°W
-     * Replaces SIRGAS-Chile 2021 / UTM zone 18S (CRS code 9154).
+     * Replaces SIRGAS-Chile 2016 / UTM zone 18S (CRS code 9154).
      */
     public const EPSG_SIRGAS_CHILE_2021_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::20048';
 
@@ -3018,6 +3478,27 @@ trait ProjectedConstantsChunk4
      * Replaces SIRGAS-Chile 2016 / UTM zone 19S (CRS code 9155).
      */
     public const EPSG_SIRGAS_CHILE_2021_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::20049';
+
+    /**
+     * SIRGAS-Chile 2025 / UTM zone 12S
+     * Extent: Chile - Easter Island - west of 108°W
+     * Replaces SIRGAS-Chile 2021 / UTM zone 12S (CRS code 20042).
+     */
+    public const EPSG_SIRGAS_CHILE_2025_UTM_ZONE_12S = 'urn:ogc:def:crs:EPSG::11474';
+
+    /**
+     * SIRGAS-Chile 2025 / UTM zone 18S
+     * Extent: Chile - 78°W to 72°W
+     * Replaces SIRGAS-Chile 2021 / UTM zone 18S (CRS code 20048).
+     */
+    public const EPSG_SIRGAS_CHILE_2025_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::11475';
+
+    /**
+     * SIRGAS-Chile 2025 / UTM zone 19S
+     * Extent: Chile - 72°W to 66°W
+     * Replaces SIRGAS-Chile 2021 / UTM zone 19S (CRS code 20049).
+     */
+    public const EPSG_SIRGAS_CHILE_2025_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::11476';
 
     /**
      * SIRGAS-ROU98 / UTM zone 21S
@@ -3032,6 +3513,12 @@ trait ProjectedConstantsChunk4
     public const EPSG_SIRGAS_ROU98_UTM_ZONE_22S = 'urn:ogc:def:crs:EPSG::5383';
 
     /**
+     * Sister Islands National Grid 1961
+     * Extent: Cayman Islands - Little Cayman and Cayman Brac.
+     */
+    public const EPSG_SISTER_ISLANDS_NATIONAL_GRID_1961 = 'urn:ogc:def:crs:EPSG::6129';
+
+    /**
      * SLD99 / Sri Lanka Grid 1999
      * Extent: Sri Lanka - onshore
      * Used in parallel with Kandawala / Sri Lanka Grid (CRS code 5234).
@@ -3039,19 +3526,152 @@ trait ProjectedConstantsChunk4
     public const EPSG_SLD99_SRI_LANKA_GRID_1999 = 'urn:ogc:def:crs:EPSG::5235';
 
     /**
+     * @deprecated use EPSG_ETRS89_SVN_D96_SLOVENE_NATIONAL_GRID instead
+     */
+    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::3794';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96_UTM_ZONE_33N instead
+     */
+    public const EPSG_SLOVENIA_1996_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::8687';
+
+    /**
      * SMITB20 Grid
      * Extent: UK - on or related to the rail route from Okehampton to Penstone
-     * Defined through transformation ETRS89 to SMITB20-IRF (1) (code 10273) and map projection SMITB20-TM (code
-     * 10274). Emulates the SMITB20 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to SMITB20-IRF (1) (code 10273) and map projection
+     * SMITB20-TM (code 10274). Emulates the SMITB20 Snake projection applied to ETRS89 as realized through OSNet
+     * v2009.
      */
     public const EPSG_SMITB20_GRID = 'urn:ogc:def:crs:EPSG::10275';
 
     /**
-     * SRB_ETRS89 / UTM zone 34N
-     * Extent: Serbia including Vojvodina
-     * Between 2012 and 2017 the CS axes were sometimes labelled Y,X.
+     * South East Island 1943 / UTM zone 40N
+     * Extent: Seychelles - Mahe, Silhouette, North, Aride Island, Praslin, La Digue and Frigate islands including
+     * adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island.
+     */
+    public const EPSG_SOUTH_EAST_ISLAND_1943_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::6915';
+
+    /**
+     * South Yemen / Gauss-Kruger zone 8
+     * Extent: Yemen - South Yemen onshore mainland west of 48°E.
+     */
+    public const EPSG_SOUTH_YEMEN_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::2395';
+
+    /**
+     * South Yemen / Gauss-Kruger zone 9
+     * Extent: Yemen - South Yemen onshore mainland east of 48°E.
+     */
+    public const EPSG_SOUTH_YEMEN_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::2396';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SRB_STRS00_UTM_ZONE_34N instead
      */
     public const EPSG_SRB_ETRS89_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::8682';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 46N
+     * Extent: Indonesia - north of equator and west of 96°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 46N (CRS code 9476).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_46N = 'urn:ogc:def:crs:EPSG::11266';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 47N
+     * Extent: Indonesia - north of equator and between 96°E and 102°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 47N (CRS code 9477).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_47N = 'urn:ogc:def:crs:EPSG::11267';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 47S
+     * Extent: Indonesia - south of equator and between 96°E and 102°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 47S (CRS code 9487).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::11277';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 48N
+     * Extent: Indonesia - north of equator and between 102°E and 108°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 48N (CRS code 9478).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_48N = 'urn:ogc:def:crs:EPSG::11268';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 48S
+     * Extent: Indonesia - south of equator and between 102°E and 108°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 48S (CRS code 9488).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_48S = 'urn:ogc:def:crs:EPSG::11278';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 49N
+     * Extent: Indonesia - north of equator and between 108°E and 114°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 49N (CRS code 9479).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_49N = 'urn:ogc:def:crs:EPSG::11269';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 49S
+     * Extent: Indonesia - south of equator and between 108°E and 114°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 49S (CRS code 9489).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_49S = 'urn:ogc:def:crs:EPSG::11279';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 50N
+     * Extent: Indonesia - north of equator and between 114°E and 120°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 50N (CRS code 9480).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::11270';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 50S
+     * Extent: Indonesia - south of equator and between 114°E and 120°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 50S (CRS code 9490).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_50S = 'urn:ogc:def:crs:EPSG::11280';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 51N
+     * Extent: Indonesia - north of equator and between 120°E and 126°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 51N (CRS code 9481).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_51N = 'urn:ogc:def:crs:EPSG::11271';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 51S
+     * Extent: Indonesia - south of equator and between 120°E and 126°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 51S (CRS code 9491).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_51S = 'urn:ogc:def:crs:EPSG::11281';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 52N
+     * Extent: Indonesia - north of equator and between 126°E and 132°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 52N (CRS code 9482).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_52N = 'urn:ogc:def:crs:EPSG::11272';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 52S
+     * Extent: Indonesia - south of equator and between 126°E and 132°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 52S (CRS code 9492).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_52S = 'urn:ogc:def:crs:EPSG::11282';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 53S
+     * Extent: Indonesia - south of equator and between 132°E and 138°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 53S (CRS code 9493).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_53S = 'urn:ogc:def:crs:EPSG::11283';
+
+    /**
+     * SRGI2013 epoch 2021.0 / UTM zone 54S
+     * Extent: Indonesia - south of equator and east of 138°E
+     * Static snapshot at epoch 2021.0 of dynamic CRS SRGI2013 / UTM zone 54S (CRS code 9494).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_UTM_ZONE_54S = 'urn:ogc:def:crs:EPSG::11284';
 
     /**
      * SRGI2013 / UTM zone 46N
@@ -3188,402 +3808,6 @@ trait ProjectedConstantsChunk4
     public const EPSG_ST87_OUVEA_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::3164';
 
     /**
-     * SVY21 / Singapore TM
-     * Extent: Singapore
-     * For cadastral purposes, replaces Kertau 1968 / Singapore Grid (CRS code 24500) from August 2004.
-     */
-    public const EPSG_SVY21_SINGAPORE_TM = 'urn:ogc:def:crs:EPSG::3414';
-
-    /**
-     * SWEREF99 / RT90 0 gon emulation
-     * Extent: Sweden - communes between approximately 16°55'E and 19°10'E; Gotland. See information source for map
-     * Approximates RT90 0 gon (CRS code 3022) to an accuracy of 0.2m.
-     */
-    public const EPSG_SWEREF99_RT90_0_GON_EMULATION = 'urn:ogc:def:crs:EPSG::3848';
-
-    /**
-     * SWEREF99 / RT90 2.5 gon O emulation
-     * Extent: Sweden - communes between approximately 19°10'E and 21°25'E. See information source for map
-     * Approximates RT90 2.5 gon O (CRS code 3023) to an accuracy of 0.2m.
-     */
-    public const EPSG_SWEREF99_RT90_2_5_GON_O_EMULATION = 'urn:ogc:def:crs:EPSG::3849';
-
-    /**
-     * SWEREF99 / RT90 2.5 gon V emulation
-     * Extent: Sweden - communes between approximately 14°40'E and 16°55'E. See information source for map
-     * Approximates RT90 2.5 gon V (CRS code 3021) to an accuracy of 0.2m.
-     */
-    public const EPSG_SWEREF99_RT90_2_5_GON_V_EMULATION = 'urn:ogc:def:crs:EPSG::3847';
-
-    /**
-     * SWEREF99 / RT90 5 gon O emulation
-     * Extent: Sweden - east of approximately 21°26'E. See information source for map
-     * Approximates RT90 5 gon O (CRS code 3024) to an accuracy of 0.2m.
-     */
-    public const EPSG_SWEREF99_RT90_5_GON_O_EMULATION = 'urn:ogc:def:crs:EPSG::3850';
-
-    /**
-     * SWEREF99 / RT90 5 gon V emulation
-     * Extent: Sweden - communes between approximately 12°26'E and 14°40'E. See information source for map
-     * Approximates RT90 5 gon V (CRS code 3020) to an accuracy of 0.2m.
-     */
-    public const EPSG_SWEREF99_RT90_5_GON_V_EMULATION = 'urn:ogc:def:crs:EPSG::3846';
-
-    /**
-     * SWEREF99 / RT90 7.5 gon V emulation
-     * Extent: Sweden - communes west of approximately 12°26'E. See information source for map
-     * Approximates RT90 7.5 gon V (CRS code 3019) to an accuracy of 0.2m.
-     */
-    public const EPSG_SWEREF99_RT90_7_5_GON_V_EMULATION = 'urn:ogc:def:crs:EPSG::3845';
-
-    /**
-     * SWEREF99 12 00
-     * Extent: Sweden - communes west of approximately 12°45'E and south of approximately 60°N. See information
-     * source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_12_00 = 'urn:ogc:def:crs:EPSG::3007';
-
-    /**
-     * SWEREF99 13 30
-     * Extent: Sweden - communes between approximately 12°45'E and 14°15'E and south of approximately 62°10'N. See
-     * information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_13_30 = 'urn:ogc:def:crs:EPSG::3008';
-
-    /**
-     * SWEREF99 14 15
-     * Extent: Sweden - communes west of approximately 15°E and between approximately 61°35'N and 64°25'N. See
-     * information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_14_15 = 'urn:ogc:def:crs:EPSG::3012';
-
-    /**
-     * SWEREF99 15 00
-     * Extent: Sweden - communes between approximately 14°15'E and 15°45'E and south of approximately 61°30'N. See
-     * information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_15_00 = 'urn:ogc:def:crs:EPSG::3009';
-
-    /**
-     * SWEREF99 15 45
-     * Extent: Sweden - communes between approximately 15°E and 16°30'E and between approximately 60°30'N and 65°N.
-     * See information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_15_45 = 'urn:ogc:def:crs:EPSG::3013';
-
-    /**
-     * SWEREF99 16 30
-     * Extent: Sweden - communes between approximately 15°45'E and 17°15'E and south of approximately 62°20'N. See
-     * information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_16_30 = 'urn:ogc:def:crs:EPSG::3010';
-
-    /**
-     * SWEREF99 17 15
-     * Extent: Sweden - communes between approximately 14°20'E and 18°50'E and between approximately 67°10'N and
-     * 62°05'N. See information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_17_15 = 'urn:ogc:def:crs:EPSG::3014';
-
-    /**
-     * SWEREF99 18 00
-     * Extent: Sweden - communes east of approximately 17°15'E between approximately 60°40'N and 58°50'N. See
-     * information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_18_00 = 'urn:ogc:def:crs:EPSG::3011';
-
-    /**
-     * SWEREF99 18 45
-     * Extent: Sweden - mainland communes between approximately 18°E and 19°30'E and between approximately 62°50'N
-     * and 66°N. Also Gotland. See information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_18_45 = 'urn:ogc:def:crs:EPSG::3015';
-
-    /**
-     * SWEREF99 20 15
-     * Extent: Sweden - communes in Vaasterbotten east of approximately 19°30'E and (i) north of 63°30'N and (ii)
-     * south of approximately 65°05'N. Also Norbotten west of approximately 23°20'E. See information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_20_15 = 'urn:ogc:def:crs:EPSG::3016';
-
-    /**
-     * SWEREF99 21 45
-     * Extent: Sweden - communes in Norbotten east of approximately 19°30'E and south of approximately 65°50'N. See
-     * information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24). For medium and small scale applications see SWEREF 99 TM
-     * (CRS code 3006).
-     */
-    public const EPSG_SWEREF99_21_45 = 'urn:ogc:def:crs:EPSG::3017';
-
-    /**
-     * SWEREF99 23 15
-     * Extent: Sweden - communes east of approximately 21°50'E. See information source for map
-     * From 2003 replaces RT90 systems (CRS codes 3019-24).
-     */
-    public const EPSG_SWEREF99_23_15 = 'urn:ogc:def:crs:EPSG::3018';
-
-    /**
-     * SWEREF99 TM
-     * Extent: Sweden
-     * From 2003 replaces RT90 2.5 gon V (CRS code 3021). For large scale applications see CRS codes 3007-18.
-     */
-    public const EPSG_SWEREF99_TM = 'urn:ogc:def:crs:EPSG::3006';
-
-    /**
-     * SYC20 Grid
-     * Extent: UK - on or related to the rail route from Shrewsbury to Crewe
-     * The CRS's definition through transformation ETRS89 to SYC20-IRF (1) (code 10238) and map projection SYC20-TM
-     * (code 10239) emulates the SYC20 Snake projection applied to ETRS89 as realized through OSNet 2009.
-     */
-    public const EPSG_SYC20_GRID = 'urn:ogc:def:crs:EPSG::10240';
-
-    /**
-     * Saba DPnet
-     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Saba - onshore
-     * Short cadastral map coordinates.
-     */
-    public const EPSG_SABA_DPNET = 'urn:ogc:def:crs:EPSG::10641';
-
-    /**
-     * Saint Pierre et Miquelon 1950 / UTM zone 21N
-     * Extent: St Pierre and Miquelon - onshore
-     * Replaced by RGSPM06 / UTM zone 21N (CRS code 4467).
-     */
-    public const EPSG_SAINT_PIERRE_ET_MIQUELON_1950_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::2987';
-
-    /**
-     * Sapper Hill 1943 / UTM zone 20S
-     * Extent: Falkland Islands (Malvinas) - onshore west of 60°W.
-     */
-    public const EPSG_SAPPER_HILL_1943_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::29220';
-
-    /**
-     * Sapper Hill 1943 / UTM zone 21S
-     * Extent: Falkland Islands (Malvinas) - onshore east of 60°W.
-     */
-    public const EPSG_SAPPER_HILL_1943_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::29221';
-
-    /**
-     * Schwarzeck / Lo22/11
-     * Extent: Namibia - onshore west of 12°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_11 = 'urn:ogc:def:crs:EPSG::29371';
-
-    /**
-     * Schwarzeck / Lo22/13
-     * Extent: Namibia - onshore between 12°E and 14°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_13 = 'urn:ogc:def:crs:EPSG::29373';
-
-    /**
-     * Schwarzeck / Lo22/15
-     * Extent: Namibia - onshore between 14°E and 16°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_15 = 'urn:ogc:def:crs:EPSG::29375';
-
-    /**
-     * Schwarzeck / Lo22/17
-     * Extent: Namibia - onshore between 16°E and 18°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_17 = 'urn:ogc:def:crs:EPSG::29377';
-
-    /**
-     * Schwarzeck / Lo22/19
-     * Extent: Namibia - between 18°E and 20°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_19 = 'urn:ogc:def:crs:EPSG::29379';
-
-    /**
-     * Schwarzeck / Lo22/21
-     * Extent: Namibia - between 20°E and 22°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_21 = 'urn:ogc:def:crs:EPSG::29381';
-
-    /**
-     * Schwarzeck / Lo22/23
-     * Extent: Namibia - between 22°E and 24°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_23 = 'urn:ogc:def:crs:EPSG::29383';
-
-    /**
-     * Schwarzeck / Lo22/25
-     * Extent: Namibia - east of 24°E.
-     */
-    public const EPSG_SCHWARZECK_LO22_25 = 'urn:ogc:def:crs:EPSG::29385';
-
-    /**
-     * Schwarzeck / UTM zone 33S
-     * Extent: Namibia - offshore
-     * CARE! The ellipsoid semi-major axis dimension is defined in German Legal Metres as 6377397.155 GLM but the
-     * coordinate system axes are in International metres. For use in this projected CRS, the ellipsoid semi-major axis
-     * needs to be converted to International metres as 6377483.865 m.
-     */
-    public const EPSG_SCHWARZECK_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::29333';
-
-    /**
-     * Scoresbysund 1952 / Greenland zone 5 east
-     * Extent: Greenland - east coast onshore - between 69°N and 72°N
-     * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
-     * abbreviation E but is positive to the west.
-     */
-    public const EPSG_SCORESBYSUND_1952_GREENLAND_ZONE_5_EAST = 'urn:ogc:def:crs:EPSG::2218';
-
-    /**
-     * Scoresbysund 1952 / Greenland zone 6 east
-     * Extent: Greenland - east coast onshore - between 68°N and 69°N
-     * Historically also found with coordinate system axis abbreviations N/E (CS code 4501); second axis has
-     * abbreviation E but is positive to the west.
-     */
-    public const EPSG_SCORESBYSUND_1952_GREENLAND_ZONE_6_EAST = 'urn:ogc:def:crs:EPSG::2221';
-
-    /**
-     * Segara (Jakarta) / NEIEZ
-     * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
-     * areas
-     * Replaced by Greenwich-based Segara / NEIEZ (CRS code 3000).
-     */
-    public const EPSG_SEGARA_JAKARTA_NEIEZ = 'urn:ogc:def:crs:EPSG::5329';
-
-    /**
-     * Segara / NEIEZ
-     * Extent: Indonesia - Kalimantan - onshore east coastal area including Mahakam delta coastal and offshore shelf
-     * areas.
-     */
-    public const EPSG_SEGARA_NEIEZ = 'urn:ogc:def:crs:EPSG::3000';
-
-    /**
-     * Segara / UTM zone 50S
-     * Extent: Indonesia - east Kalimantan - Mahakam delta coastal and offshore shelf areas.
-     */
-    public const EPSG_SEGARA_UTM_ZONE_50S = 'urn:ogc:def:crs:EPSG::2933';
-
-    /**
-     * Selvagem Grande / UTM zone 28N
-     * Extent: Portugal - Selvagens islands (Madeira province) - onshore.
-     */
-    public const EPSG_SELVAGEM_GRANDE_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::2943';
-
-    /**
-     * ShAb07 Grid
-     * Extent: UK - on or related to the rail route from Shrewsbury to Aberystwyth
-     * Defined through transformation ETRS89 to ShAb07-IRF (1) (code 10186) and map projection ShAb07-TM (code 10187).
-     * Emulates the ShAb07 Snake projection applied to ETRS89 as realized through OSNet 2009.
-     */
-    public const EPSG_SHAB07_GRID = 'urn:ogc:def:crs:EPSG::10188';
-
-    /**
-     * Sibun Gorge 1922 / Colony Grid
-     * Extent: Belize - onshore.
-     */
-    public const EPSG_SIBUN_GORGE_1922_COLONY_GRID = 'urn:ogc:def:crs:EPSG::5589';
-
-    /**
-     * Sierra Leone 1924 / New Colony Grid
-     * Extent: Sierra Leone - Freetown Peninsula
-     * Replaces the Sierra Leone 1924 / Colony Grid. New grid is 422.3 ft west and 112.1 ft south of old grid.
-     * Ellipsoid semi-major axis (a)=20926201 Gold Coast feet; 1 Gold Coast foot = 0.3047997101815 m.
-     */
-    public const EPSG_SIERRA_LEONE_1924_NEW_COLONY_GRID = 'urn:ogc:def:crs:EPSG::2159';
-
-    /**
-     * Sierra Leone 1924 / New War Office Grid
-     * Extent: Sierra Leone - Freetown Peninsula
-     * Replaces the Sierra Leone War Office Grid. New grid is 422.3 ft west and 112.1 ft south of old grid. Ellipsoid
-     * semi-major axis (a)=20926201 Gold Coast feet; 1 Gold Coast foot = 0.3047997101815 m.
-     */
-    public const EPSG_SIERRA_LEONE_1924_NEW_WAR_OFFICE_GRID = 'urn:ogc:def:crs:EPSG::2160';
-
-    /**
-     * Sierra Leone 1968 / UTM zone 28N
-     * Extent: Sierra Leone - onshore west of 12°W
-     * Replaces Sierra Leone 1960 / UTM zone 28N. The 1968 readjustment coordinates are within 3m of the 1960
-     * provisional adjustment.
-     */
-    public const EPSG_SIERRA_LEONE_1968_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::2161';
-
-    /**
-     * Sierra Leone 1968 / UTM zone 29N
-     * Extent: Sierra Leone - onshore east of 12°W
-     * Replaces Sierra Leone 1960 / UTM zone 29N. The 1968 readjustment coordinates are within 3m of the 1960
-     * provisional adjustment.
-     */
-    public const EPSG_SIERRA_LEONE_1968_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::2162';
-
-    /**
-     * Sint Eustatius DPnet long
-     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
-     * Cadastral map long coordinates. Replaces DPnet short (CRS code 10744).
-     */
-    public const EPSG_SINT_EUSTATIUS_DPNET_LONG = 'urn:ogc:def:crs:EPSG::10745';
-
-    /**
-     * Sint Eustatius DPnet short
-     * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore
-     * Former cadastral map coordinates. Replaced by DPnet long (CRS code 10745).
-     */
-    public const EPSG_SINT_EUSTATIUS_DPNET_SHORT = 'urn:ogc:def:crs:EPSG::10744';
-
-    /**
-     * Sister Islands National Grid 1961
-     * Extent: Cayman Islands - Little Cayman and Cayman Brac.
-     */
-    public const EPSG_SISTER_ISLANDS_NATIONAL_GRID_1961 = 'urn:ogc:def:crs:EPSG::6129';
-
-    /**
-     * Slovenia 1996 / Slovene National Grid
-     * Extent: Slovenia
-     * Replaces D48/GK (CRS code 3787).
-     */
-    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::3794';
-
-    /**
-     * Slovenia 1996 / UTM zone 33N
-     * Extent: Slovenia
-     * May be taken as approximation for WGS 84 / UTM zone 33N for applications with 1m accuracy. D96/TM (CRS code
-     * 3794) used for non-military purposes.
-     */
-    public const EPSG_SLOVENIA_1996_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::8687';
-
-    /**
-     * South East Island 1943 / UTM zone 40N
-     * Extent: Seychelles - Mahe, Silhouette, North, Aride Island, Praslin, La Digue and Frigate islands including
-     * adjacent smaller granitic islands on the Seychelles Bank, Bird Island and Denis Island.
-     */
-    public const EPSG_SOUTH_EAST_ISLAND_1943_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::6915';
-
-    /**
-     * South Yemen / Gauss-Kruger zone 8
-     * Extent: Yemen - South Yemen onshore mainland west of 48°E.
-     */
-    public const EPSG_SOUTH_YEMEN_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::2395';
-
-    /**
-     * South Yemen / Gauss-Kruger zone 9
-     * Extent: Yemen - South Yemen onshore mainland east of 48°E.
-     */
-    public const EPSG_SOUTH_YEMEN_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::2396';
-
-    /**
      * St. Helena Tritan / SHLG(Tritan)
      * Extent: St Helena, Ascension and Tristan da Cunha - St Helena Island - onshore
      * Replaced by SHMG2015 (CRS code 7887) from 2015.
@@ -3622,188 +3846,211 @@ trait ProjectedConstantsChunk4
     public const EPSG_ST_VINCENT_45_BRITISH_WEST_INDIES_GRID = 'urn:ogc:def:crs:EPSG::2007';
 
     /**
-     * TC(1948) / UTM zone 39N
-     * Extent: UAE - Abu Dhabi onshore west of 54°E.
+     * SVY21 / Singapore TM
+     * Extent: Singapore
+     * For cadastral purposes, replaces Kertau 1968 / Singapore Grid (CRS code 24500) from August 2004.
      */
-    public const EPSG_TC_1948_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::30339';
+    public const EPSG_SVY21_SINGAPORE_TM = 'urn:ogc:def:crs:EPSG::3414';
 
     /**
-     * TC(1948) / UTM zone 40N
-     * Extent: UAE - Abu Dhabi onshore east of 54°E; Dubai onshore.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_12_00 instead
      */
-    public const EPSG_TC_1948_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::30340';
+    public const EPSG_SWEREF99_12_00 = 'urn:ogc:def:crs:EPSG::3007';
 
     /**
-     * TGD2005 / Tonga Map Grid
-     * Extent: Tonga.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_13_30 instead
      */
-    public const EPSG_TGD2005_TONGA_MAP_GRID = 'urn:ogc:def:crs:EPSG::5887';
+    public const EPSG_SWEREF99_13_30 = 'urn:ogc:def:crs:EPSG::3008';
 
     /**
-     * TM65 / Irish Grid
-     * Extent: Ireland - onshore
-     * Not used in Northern Ireland. Replaced by TM75 / Irish Grid (code 29903) in 1975.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_14_15 instead
      */
-    public const EPSG_TM65_IRISH_GRID = 'urn:ogc:def:crs:EPSG::29902';
+    public const EPSG_SWEREF99_14_15 = 'urn:ogc:def:crs:EPSG::3012';
 
     /**
-     * TM75 / Irish Grid
-     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
-     * Replaces both OSNI 1952 / Irish National Grid (code 29901) and TM65 / Irish Grid (code 29902) from 1975.
-     * Replaced by IRENET95 / Irish Transverse Mercator (code 2157) from 1/1/2001.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_15_00 instead
      */
-    public const EPSG_TM75_IRISH_GRID = 'urn:ogc:def:crs:EPSG::29903';
+    public const EPSG_SWEREF99_15_00 = 'urn:ogc:def:crs:EPSG::3009';
 
     /**
-     * TPEN11 Grid
-     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds
-     * The CRS's definition through transformation ETRS89 to TPEN11-IRF (1) (code 9365) and map projection TPEN11-TM
-     * (code 9366) emulates the combined TPEN11 Snake and TPEN11ext Snake projections applied to ETRS89 as realized
-     * through OSNet 2009 CORS.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_15_45 instead
      */
-    public const EPSG_TPEN11_GRID = 'urn:ogc:def:crs:EPSG::9367';
+    public const EPSG_SWEREF99_15_45 = 'urn:ogc:def:crs:EPSG::3013';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 10
-     * Extent: Turkey - between 28°30'E and 31°30'E, onshore
-     * Also found with truncated false easting - see TUREF / TM30 (code 5254).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_16_30 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::5270';
+    public const EPSG_SWEREF99_16_30 = 'urn:ogc:def:crs:EPSG::3010';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 11
-     * Extent: Turkey - between 31°30'E and 34°30'E, onshore
-     * Also found with truncated false easting - see TUREF / TM33 (code 5255).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_17_15 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::5271';
+    public const EPSG_SWEREF99_17_15 = 'urn:ogc:def:crs:EPSG::3014';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 12
-     * Extent: Turkey - between 34°30'E and 37°30'E, onshore
-     * Also found with truncated false easting - see TUREF / TM36 (code 5256).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_18_00 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::5272';
+    public const EPSG_SWEREF99_18_00 = 'urn:ogc:def:crs:EPSG::3011';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 13
-     * Extent: Turkey - between 37°30'E and 40°30'E, onshore
-     * Also found with truncated false easting - see TUREF / TM39 (code 5257).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_18_45 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::5273';
+    public const EPSG_SWEREF99_18_45 = 'urn:ogc:def:crs:EPSG::3015';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 14
-     * Extent: Turkey - between 40°30'E and 43°30'E, onshore
-     * Also found with truncated false easting - see TUREF / TM42 (code 5258).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_20_15 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::5274';
+    public const EPSG_SWEREF99_20_15 = 'urn:ogc:def:crs:EPSG::3016';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 15
-     * Extent: Turkey - east of 43°30'E
-     * Also found with truncated false easting - see TUREF / TM45 (code 5259).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_21_45 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::5275';
+    public const EPSG_SWEREF99_21_45 = 'urn:ogc:def:crs:EPSG::3017';
 
     /**
-     * TUREF / 3-degree Gauss-Kruger zone 9
-     * Extent: Turkey - west of 28°30'E, onshore
-     * Also found with truncated false easting - see TUREF / TM27 (code 5253).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_23_15 instead
      */
-    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::5269';
+    public const EPSG_SWEREF99_23_15 = 'urn:ogc:def:crs:EPSG::3018';
 
     /**
-     * TUREF / LAEA Europe
-     * Extent: Turkey
-     * At applicable scales and usages, may be considered consistent with ETRS89-extended / LAEA Europe (CRS code
-     * 3035): see CT 9049.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_RT90_0_GON_EMULATION instead
      */
-    public const EPSG_TUREF_LAEA_EUROPE = 'urn:ogc:def:crs:EPSG::5636';
+    public const EPSG_SWEREF99_RT90_0_GON_EMULATION = 'urn:ogc:def:crs:EPSG::3848';
 
     /**
-     * TUREF / LCC Europe
-     * Extent: Turkey
-     * At applicable scales (1:500,000 and smaller) may be considered consistent with ETRS89-extended / LCC Europe (CRS
-     * code 3034): see CT 9050.
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_RT90_2_5_GON_O_EMULATION instead
      */
-    public const EPSG_TUREF_LCC_EUROPE = 'urn:ogc:def:crs:EPSG::5637';
+    public const EPSG_SWEREF99_RT90_2_5_GON_O_EMULATION = 'urn:ogc:def:crs:EPSG::3849';
 
     /**
-     * TUREF / TM27
-     * Extent: Turkey - west of 28°30'E, onshore
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 9 (code 5269).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_RT90_2_5_GON_V_EMULATION instead
      */
-    public const EPSG_TUREF_TM27 = 'urn:ogc:def:crs:EPSG::5253';
+    public const EPSG_SWEREF99_RT90_2_5_GON_V_EMULATION = 'urn:ogc:def:crs:EPSG::3847';
 
     /**
-     * TUREF / TM30
-     * Extent: Turkey - between 28°30'E and 31°30'E, onshore
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 10 (code 5270).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_RT90_5_GON_O_EMULATION instead
      */
-    public const EPSG_TUREF_TM30 = 'urn:ogc:def:crs:EPSG::5254';
+    public const EPSG_SWEREF99_RT90_5_GON_O_EMULATION = 'urn:ogc:def:crs:EPSG::3850';
 
     /**
-     * TUREF / TM33
-     * Extent: Turkey - between 31°30'E and 34°30'E, onshore
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 11 (code 5271).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_RT90_5_GON_V_EMULATION instead
      */
-    public const EPSG_TUREF_TM33 = 'urn:ogc:def:crs:EPSG::5255';
+    public const EPSG_SWEREF99_RT90_5_GON_V_EMULATION = 'urn:ogc:def:crs:EPSG::3846';
 
     /**
-     * TUREF / TM36
-     * Extent: Turkey - between 34°30'E and 37°30'E, onshore
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 12 (code 5272).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_RT90_7_5_GON_V_EMULATION instead
      */
-    public const EPSG_TUREF_TM36 = 'urn:ogc:def:crs:EPSG::5256';
+    public const EPSG_SWEREF99_RT90_7_5_GON_V_EMULATION = 'urn:ogc:def:crs:EPSG::3845';
 
     /**
-     * TUREF / TM39
-     * Extent: Turkey - between 37°30'E and 40°30'E, onshore
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 13 (code 5273).
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_TM instead
      */
-    public const EPSG_TUREF_TM39 = 'urn:ogc:def:crs:EPSG::5257';
+    public const EPSG_SWEREF99_TM = 'urn:ogc:def:crs:EPSG::3006';
 
     /**
-     * TUREF / TM42
-     * Extent: Turkey - between 40°30'E and 43°30'E, onshore
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 14 (code 5274).
+     * SYC20 Grid
+     * Extent: UK - on or related to the rail route from Shrewsbury to Crewe
+     * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to SYC20-IRF (1) (code 10238) and map
+     * projection SYC20-TM (code 10239) emulates the SYC20 Snake projection applied to ETRS89 as realized through OSNet
+     * v2009.
      */
-    public const EPSG_TUREF_TM42 = 'urn:ogc:def:crs:EPSG::5258';
+    public const EPSG_SYC20_GRID = 'urn:ogc:def:crs:EPSG::10240';
 
     /**
-     * TUREF / TM45
-     * Extent: Turkey - east of 43°30'E
-     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 15 (code 5275).
+     * SZCTW Grid
+     * Extent: UK - Sizewell power station site and  rail and road routes related to the site
+     * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to SZCTW-IRF (1) (code 11467) and map
+     * projection SZCTW-TM (code 11468) emulates the SZCTW Snake projection applied to ETRS89 as realized through OSNet
+     * v2009. Snake Grid initially designed to cover the rail corridor to the site along with a section of the
+     * adjoining mainline for compliance with request from Network Rail, but its use was later expanded for site
+     * surveying more generally to replace multiple local grids.
      */
-    public const EPSG_TUREF_TM45 = 'urn:ogc:def:crs:EPSG::5259';
+    public const EPSG_SZCTW_GRID = 'urn:ogc:def:crs:EPSG::11469';
 
     /**
-     * TWD67 / TM2 zone 119
-     * Extent: Taiwan, Republic of China - onshore - Penghu (Pescadores) Islands
-     * Except for cadastral use, replaced by TWD97 / TM2 zone 119 (CRS code 3825).
+     * S-JTSK/05 (Ferro) / Modified Krovak
+     * Extent: Czechia
+     * Improves the scale and homogineity of CRS code 2065 in Czechia as a scientific working system, but 2065 remains
+     * the legal system. See CRS code 5515 for Greenwich-referenced equivalent; 5225 for north-orientated alternative
+     * used for GIS purposes.
      */
-    public const EPSG_TWD67_TM2_ZONE_119 = 'urn:ogc:def:crs:EPSG::3827';
+    public const EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK = 'urn:ogc:def:crs:EPSG::5224';
 
     /**
-     * TWD67 / TM2 zone 121
-     * Extent: Taiwan, Republic of China - onshore - Taiwan Island
-     * Except for cadastral use, replaced by TWD97 / TM2 zone 121 (CRS code 3826).
+     * S-JTSK/05 (Ferro) / Modified Krovak East North
+     * Extent: Czechia
+     * North-orientated alternative to south-orientated S-JTSK/05 (Ferro) / Modified Krovak (CRS code 5224) for GIS
+     * purposes. Coordinates are negative. See CRS code 5516 for Greenwich-referenced equivalent,.
      */
-    public const EPSG_TWD67_TM2_ZONE_121 = 'urn:ogc:def:crs:EPSG::3828';
+    public const EPSG_S_JTSK_05_FERRO_MODIFIED_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5225';
 
     /**
-     * TWD97 / TM2 zone 119
-     * Extent: Taiwan, Republic of China - between 118°E and 120°E, - Penghu (Pescadores) Islands
-     * Except for cadastral use, replaces TWD67 / TM2 zone 119 (CRS code 3827).
+     * S-JTSK/05 / Modified Krovak
+     * Extent: Czechia
+     * Greenwich-referenced alternative to S-JTSK/05 (Ferro) / Modified Krovak, CRS code 5224. S-JTSK / Krovak, CRS
+     * code 5513, remains the legal system.
      */
-    public const EPSG_TWD97_TM2_ZONE_119 = 'urn:ogc:def:crs:EPSG::3825';
+    public const EPSG_S_JTSK_05_MODIFIED_KROVAK = 'urn:ogc:def:crs:EPSG::5515';
 
     /**
-     * TWD97 / TM2 zone 121
-     * Extent: Taiwan, Republic of China - between 120°E and 122°E, - Taiwan Island
-     * Except for cadastral use, replaces TWD67 / TM2 zone 121 (CRS code 3828).
+     * S-JTSK/05 / Modified Krovak East North
+     * Extent: Czechia
+     * North-orientated alternative to S-JTSK/05 / Modified Krovak (CRS code 5515) for GIS purposes. Coordinates are
+     * negative. See CRS code 5225 for Ferro-referenced equivalent. S-JTSK / Krovak (CRS code 5513) remains the legal
+     * system.
      */
-    public const EPSG_TWD97_TM2_ZONE_121 = 'urn:ogc:def:crs:EPSG::3826';
+    public const EPSG_S_JTSK_05_MODIFIED_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5516';
+
+    /**
+     * S-JTSK (Ferro) / Krovak
+     * Extent: Czechia; Slovakia
+     * Original definition. In Slovakia, deprecated and replaced by Greenwich-meridian equivalent CRS code 5513. In
+     * Czechia remains legal system, but see S-JTSK/05 (Ferro) / Modified Krovak (CRS code 5224) for a scientific
+     * working system.
+     */
+    public const EPSG_S_JTSK_FERRO_KROVAK = 'urn:ogc:def:crs:EPSG::2065';
+
+    /**
+     * S-JTSK (Ferro) / Krovak East North
+     * Extent: Czechia; Slovakia
+     * North-orientated alternative for GIS purposes to the south-orientated S-JTSK / Krovak (Ferro) legal system (CRS
+     * code 2065) . Coordinates are negative. In SK deprecated and replaced by equivalent CRS referenced to the
+     * Greenwich meridian, CRS code 5514.
+     */
+    public const EPSG_S_JTSK_FERRO_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5221';
+
+    /**
+     * S-JTSK [JTSK03] / Krovak
+     * Extent: Slovakia
+     * Improvement upon the scale and homogineity of S-JTSK / Krovak (CRS code 5513) in Slovakia. See CRS code 8353 for
+     * north-orientated alternative used for GIS purposes. For cadastre in Slovakia, use CRS code 5513.
+     */
+    public const EPSG_S_JTSK_JTSK03_KROVAK = 'urn:ogc:def:crs:EPSG::8352';
+
+    /**
+     * S-JTSK [JTSK03] / Krovak East North
+     * Extent: Slovakia
+     * North-orientated alternative to S-JTSK [JTSK03] / Krovak (CRS code 8352) for GIS purposes. Coordinates are
+     * negative.
+     */
+    public const EPSG_S_JTSK_JTSK03_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::8353';
+
+    /**
+     * S-JTSK / Krovak
+     * Extent: Czechia; Slovakia
+     * Equivalent to CRS code 2065 but referenced to Greenwich meridian. In Slovakia remains the legal system for
+     * cadastre but for non-cadastral purposes replaced by CRS 8352. In Czechia remains the legal system but see CRS
+     * 5515 for a scientific working system.
+     */
+    public const EPSG_S_JTSK_KROVAK = 'urn:ogc:def:crs:EPSG::5513';
+
+    /**
+     * S-JTSK / Krovak East North
+     * Extent: Czechia; Slovakia
+     * North-orientated alternative for GIS purposes to south-orientated S-JTSK / Krovak (CRS code 5513) which remains
+     * the legal system. Coordinates are negative.
+     */
+    public const EPSG_S_JTSK_KROVAK_EAST_NORTH = 'urn:ogc:def:crs:EPSG::5514';
 
     /**
      * Tahaa 54 / UTM zone 5S
@@ -3827,6 +4074,14 @@ trait ProjectedConstantsChunk4
     public const EPSG_TAHITI_79_UTM_ZONE_6S = 'urn:ogc:def:crs:EPSG::3304';
 
     /**
+     * Tananarive / Laborde Grid
+     * Extent: Madagascar - onshore
+     * See Tananarive (Paris) / Laborde Grid (CRS code 29701) for original definition in grads with respect to the
+     * Paris meridian. This is equivalent.
+     */
+    public const EPSG_TANANARIVE_LABORDE_GRID = 'urn:ogc:def:crs:EPSG::8441';
+
+    /**
      * Tananarive (Paris) / Laborde Grid
      * Extent: Madagascar - onshore
      * See Tananarive / Laborde Grid (CRS code 8441) for equivalent referenced to Greenwich. May be approximated by
@@ -3840,14 +4095,6 @@ trait ProjectedConstantsChunk4
      * See projection remarks.
      */
     public const EPSG_TANANARIVE_PARIS_LABORDE_GRID_APPROXIMATION = 'urn:ogc:def:crs:EPSG::29702';
-
-    /**
-     * Tananarive / Laborde Grid
-     * Extent: Madagascar - onshore
-     * See Tananarive (Paris) / Laborde Grid (CRS code 29701) for original definition in grads with respect to the
-     * Paris meridian. This is equivalent.
-     */
-    public const EPSG_TANANARIVE_LABORDE_GRID = 'urn:ogc:def:crs:EPSG::8441';
 
     /**
      * Tananarive / UTM zone 38S
@@ -3874,6 +4121,18 @@ trait ProjectedConstantsChunk4
     public const EPSG_TAPI_AIKE_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::9250';
 
     /**
+     * TC(1948) / UTM zone 39N
+     * Extent: UAE - Abu Dhabi onshore west of 54°E.
+     */
+    public const EPSG_TC_1948_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::30339';
+
+    /**
+     * TC(1948) / UTM zone 40N
+     * Extent: UAE - Abu Dhabi onshore east of 54°E; Dubai onshore.
+     */
+    public const EPSG_TC_1948_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::30340';
+
+    /**
      * Tete / UTM zone 36S
      * Extent: Mozambique - onshore west of 36°E.
      */
@@ -3884,6 +4143,12 @@ trait ProjectedConstantsChunk4
      * Extent: Mozambique - onshore east of 36°E.
      */
     public const EPSG_TETE_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::2737';
+
+    /**
+     * TGD2005 / Tonga Map Grid
+     * Extent: Tonga.
+     */
+    public const EPSG_TGD2005_TONGA_MAP_GRID = 'urn:ogc:def:crs:EPSG::5887';
 
     /**
      * Timbalai 1948 / RSO Borneo (ch)
@@ -3929,6 +4194,58 @@ trait ProjectedConstantsChunk4
      * Extent: Brunei east of 114°E; Malaysia - East Malaysia (Sabah, Sarawak) east of 114°E).
      */
     public const EPSG_TIMBALAI_1948_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::29850';
+
+    /**
+     * TM65 / Irish Grid
+     * Extent: Ireland - onshore
+     * Not used in Northern Ireland. Replaced by TM75 / Irish Grid (code 29903) in 1975.
+     */
+    public const EPSG_TM65_IRISH_GRID = 'urn:ogc:def:crs:EPSG::29902';
+
+    /**
+     * TM75 / Irish Grid
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
+     * Replaces both OSNI 1952 / Irish National Grid (code 29901) and TM65 / Irish Grid (code 29902) from 1975.
+     * Replaced by IRENET95 / Irish Transverse Mercator (code 2157) from 1/1/2001.
+     */
+    public const EPSG_TM75_IRISH_GRID = 'urn:ogc:def:crs:EPSG::29903';
+
+    /**
+     * Tokyo 1892 / Korea Central Belt
+     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore
+     * between 126°E and 128°E
+     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea Central Belt, a system that was never put into use. In
+     * South Korea, replaced by Korean 1985 / Central Belt and Korean 1985 / Central Belt Jeju (CRS codes 2097 and
+     * 5168).
+     */
+    public const EPSG_TOKYO_1892_KOREA_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5170';
+
+    /**
+     * Tokyo 1892 / Korea East Belt
+     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore
+     * between 128°E and 130°E
+     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea East Belt, a system that was never put into use. In South
+     * Korea, replaced by Korean 1985 / East Belt (CRS code 2096).
+     */
+    public const EPSG_TOKYO_1892_KOREA_EAST_BELT = 'urn:ogc:def:crs:EPSG::5171';
+
+    /**
+     * Tokyo 1892 / Korea East Sea Belt
+     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore east
+     * of 130°E
+     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea East Sea Belt, a system that was never put into use. In
+     * South Korea, replaced by Korean 1985 / East Sea Belt (CRS code 5167).
+     */
+    public const EPSG_TOKYO_1892_KOREA_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5172';
+
+    /**
+     * Tokyo 1892 / Korea West Belt
+     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore west
+     * of 126°E
+     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea West Belt, a system that was never put into use. In South
+     * Korea, replaced by Korean 1985 / West Belt (CRS code 2098).
+     */
+    public const EPSG_TOKYO_1892_KOREA_WEST_BELT = 'urn:ogc:def:crs:EPSG::5169';
 
     /**
      * Tokyo / Japan Plane Rectangular CS I
@@ -4118,41 +4435,13 @@ trait ProjectedConstantsChunk4
     public const EPSG_TOKYO_UTM_ZONE_55N = 'urn:ogc:def:crs:EPSG::3096';
 
     /**
-     * Tokyo 1892 / Korea Central Belt
-     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore
-     * between 126°E and 128°E
-     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea Central Belt, a system that was never put into use. In
-     * South Korea, replaced by Korean 1985 / Central Belt and Korean 1985 / Central Belt Jeju (CRS codes 2097 and
-     * 5168).
+     * TPEN11 Grid
+     * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds
+     * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to TPEN11-IRF (1) (code 9365) and map
+     * projection TPEN11-TM (code 9366) emulates the combined TPEN11 Snake and TPEN11ext Snake projections applied to
+     * ETRS89 as realized through OSNet v2009.
      */
-    public const EPSG_TOKYO_1892_KOREA_CENTRAL_BELT = 'urn:ogc:def:crs:EPSG::5170';
-
-    /**
-     * Tokyo 1892 / Korea East Belt
-     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore
-     * between 128°E and 130°E
-     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea East Belt, a system that was never put into use. In South
-     * Korea, replaced by Korean 1985 / East Belt (CRS code 2096).
-     */
-    public const EPSG_TOKYO_1892_KOREA_EAST_BELT = 'urn:ogc:def:crs:EPSG::5171';
-
-    /**
-     * Tokyo 1892 / Korea East Sea Belt
-     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore east
-     * of 130°E
-     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea East Sea Belt, a system that was never put into use. In
-     * South Korea, replaced by Korean 1985 / East Sea Belt (CRS code 5167).
-     */
-    public const EPSG_TOKYO_1892_KOREA_EAST_SEA_BELT = 'urn:ogc:def:crs:EPSG::5172';
-
-    /**
-     * Tokyo 1892 / Korea West Belt
-     * Extent: Democratic People's Republic of Korea (North Korea) and Republic of Korea (South Korea) - onshore west
-     * of 126°E
-     * Sometimes incorrectly assumed to be Tokyo 1918 / Korea West Belt, a system that was never put into use. In South
-     * Korea, replaced by Korean 1985 / West Belt (CRS code 2098).
-     */
-    public const EPSG_TOKYO_1892_KOREA_WEST_BELT = 'urn:ogc:def:crs:EPSG::5169';
+    public const EPSG_TPEN11_GRID = 'urn:ogc:def:crs:EPSG::9367';
 
     /**
      * Trinidad 1903 / Trinidad Grid
@@ -4167,6 +4456,148 @@ trait ProjectedConstantsChunk4
      * Trinidad.
      */
     public const EPSG_TRINIDAD_1903_TRINIDAD_GRID_FTCLA = 'urn:ogc:def:crs:EPSG::2314';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 10
+     * Extent: Turkey - between 28°30'E and 31°30'E, onshore
+     * Also found with truncated false easting - see TUREF / TM30 (code 5254).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::5270';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 11
+     * Extent: Turkey - between 31°30'E and 34°30'E, onshore
+     * Also found with truncated false easting - see TUREF / TM33 (code 5255).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::5271';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 12
+     * Extent: Turkey - between 34°30'E and 37°30'E, onshore
+     * Also found with truncated false easting - see TUREF / TM36 (code 5256).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::5272';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 13
+     * Extent: Turkey - between 37°30'E and 40°30'E, onshore
+     * Also found with truncated false easting - see TUREF / TM39 (code 5257).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::5273';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 14
+     * Extent: Turkey - between 40°30'E and 43°30'E, onshore
+     * Also found with truncated false easting - see TUREF / TM42 (code 5258).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::5274';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 15
+     * Extent: Turkey - east of 43°30'E
+     * Also found with truncated false easting - see TUREF / TM45 (code 5259).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::5275';
+
+    /**
+     * TUREF / 3-degree Gauss-Kruger zone 9
+     * Extent: Turkey - west of 28°30'E, onshore
+     * Also found with truncated false easting - see TUREF / TM27 (code 5253).
+     */
+    public const EPSG_TUREF_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::5269';
+
+    /**
+     * TUREF / LAEA Europe
+     * Extent: Turkey
+     * At applicable scales and usages, may be considered consistent with ETRS89-extended / LAEA Europe (CRS code
+     * 3035): see CT 9049.
+     */
+    public const EPSG_TUREF_LAEA_EUROPE = 'urn:ogc:def:crs:EPSG::5636';
+
+    /**
+     * TUREF / LCC Europe
+     * Extent: Turkey
+     * At applicable scales (1:500,000 and smaller) may be considered consistent with ETRS89-extended / LCC Europe (CRS
+     * code 3034): see CT 9050.
+     */
+    public const EPSG_TUREF_LCC_EUROPE = 'urn:ogc:def:crs:EPSG::5637';
+
+    /**
+     * TUREF / TM27
+     * Extent: Turkey - west of 28°30'E, onshore
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 9 (code 5269).
+     */
+    public const EPSG_TUREF_TM27 = 'urn:ogc:def:crs:EPSG::5253';
+
+    /**
+     * TUREF / TM30
+     * Extent: Turkey - between 28°30'E and 31°30'E, onshore
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 10 (code 5270).
+     */
+    public const EPSG_TUREF_TM30 = 'urn:ogc:def:crs:EPSG::5254';
+
+    /**
+     * TUREF / TM33
+     * Extent: Turkey - between 31°30'E and 34°30'E, onshore
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 11 (code 5271).
+     */
+    public const EPSG_TUREF_TM33 = 'urn:ogc:def:crs:EPSG::5255';
+
+    /**
+     * TUREF / TM36
+     * Extent: Turkey - between 34°30'E and 37°30'E, onshore
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 12 (code 5272).
+     */
+    public const EPSG_TUREF_TM36 = 'urn:ogc:def:crs:EPSG::5256';
+
+    /**
+     * TUREF / TM39
+     * Extent: Turkey - between 37°30'E and 40°30'E, onshore
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 13 (code 5273).
+     */
+    public const EPSG_TUREF_TM39 = 'urn:ogc:def:crs:EPSG::5257';
+
+    /**
+     * TUREF / TM42
+     * Extent: Turkey - between 40°30'E and 43°30'E, onshore
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 14 (code 5274).
+     */
+    public const EPSG_TUREF_TM42 = 'urn:ogc:def:crs:EPSG::5258';
+
+    /**
+     * TUREF / TM45
+     * Extent: Turkey - east of 43°30'E
+     * Also found with zone number prefix to false easting - see TUREF / 3-degree Gauss-Kruger zone 15 (code 5275).
+     */
+    public const EPSG_TUREF_TM45 = 'urn:ogc:def:crs:EPSG::5259';
+
+    /**
+     * TWD67 / TM2 zone 119
+     * Extent: Taiwan, Republic of China - onshore - Penghu (Pescadores) Islands
+     * Except for cadastral use, replaced by TWD97 / TM2 zone 119 (CRS code 3825).
+     */
+    public const EPSG_TWD67_TM2_ZONE_119 = 'urn:ogc:def:crs:EPSG::3827';
+
+    /**
+     * TWD67 / TM2 zone 121
+     * Extent: Taiwan, Republic of China - onshore - Taiwan Island
+     * Except for cadastral use, replaced by TWD97 / TM2 zone 121 (CRS code 3826).
+     */
+    public const EPSG_TWD67_TM2_ZONE_121 = 'urn:ogc:def:crs:EPSG::3828';
+
+    /**
+     * TWD97 / TM2 zone 119
+     * Extent: Taiwan, Republic of China - between 118°E and 120°E, - Penghu (Pescadores) Islands
+     * Except for cadastral use, replaces TWD67 / TM2 zone 119 (CRS code 3827).
+     */
+    public const EPSG_TWD97_TM2_ZONE_119 = 'urn:ogc:def:crs:EPSG::3825';
+
+    /**
+     * TWD97 / TM2 zone 121
+     * Extent: Taiwan, Republic of China - between 120°E and 122°E, - Taiwan Island
+     * Except for cadastral use, replaces TWD67 / TM2 zone 121 (CRS code 3828).
+     */
+    public const EPSG_TWD97_TM2_ZONE_121 = 'urn:ogc:def:crs:EPSG::3826';
 
     /**
      * UCS-2000 / Gauss-Kruger CM 21E
@@ -4493,6 +4924,22 @@ trait ProjectedConstantsChunk4
     public const EPSG_UZGD2024_UZREF24_ZONE_43 = 'urn:ogc:def:crs:EPSG::10729';
 
     /**
+     * Vanua Levu 1915 / Vanua Levu Grid
+     * Extent: Fiji - Vanua Levu and Taveuni
+     * For topographic mapping, replaced by Fiji 1956 / UTM (CRS codes 3141-42). For other purposes, replaced by Fiji
+     * 1986 / Fiji Map Grid (CRS code 3460).
+     */
+    public const EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID = 'urn:ogc:def:crs:EPSG::3139';
+
+    /**
+     * Viti Levu 1912 / Viti Levu Grid
+     * Extent: Fiji - Viti Levu island
+     * For topographic mapping, replaced by Fiji 1956 / UTM (CRS codes 3141-42). For other purposes, replaced by Fiji
+     * 1986 / Fiji Map Grid (CRS code 3460).
+     */
+    public const EPSG_VITI_LEVU_1912_VITI_LEVU_GRID = 'urn:ogc:def:crs:EPSG::3140';
+
+    /**
      * VN-2000 / TM-3 103-00
      * Extent: Vietnam - Dien Bien and Lai Chau provinces.
      */
@@ -4619,22 +5066,6 @@ trait ProjectedConstantsChunk4
     public const EPSG_VN_2000_UTM_ZONE_49N = 'urn:ogc:def:crs:EPSG::3406';
 
     /**
-     * Vanua Levu 1915 / Vanua Levu Grid
-     * Extent: Fiji - Vanua Levu and Taveuni
-     * For topographic mapping, replaced by Fiji 1956 / UTM (CRS codes 3141-42). For other purposes, replaced by Fiji
-     * 1986 / Fiji Map Grid (CRS code 3460).
-     */
-    public const EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID = 'urn:ogc:def:crs:EPSG::3139';
-
-    /**
-     * Viti Levu 1912 / Viti Levu Grid
-     * Extent: Fiji - Viti Levu island
-     * For topographic mapping, replaced by Fiji 1956 / UTM (CRS codes 3141-42). For other purposes, replaced by Fiji
-     * 1986 / Fiji Map Grid (CRS code 3460).
-     */
-    public const EPSG_VITI_LEVU_1912_VITI_LEVU_GRID = 'urn:ogc:def:crs:EPSG::3140';
-
-    /**
      * Voirol 1875 / Nord Algerie (ancienne)
      * Extent: Algeria - onshore north of 38.5 grads North (34°39'N)
      * Replaced by Nord Sahara 1959 / Voirol Unifie Nord (code 30791). The appropriate usage of CRSs using the Voirol
@@ -4673,730 +5104,10 @@ trait ProjectedConstantsChunk4
     /**
      * WC05 Grid
      * Extent: UK - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
-     * Defined through transformation ETRS89 to WC05-IRF (1) (code 10629) and map projection WC05-TM (code 10631).
-     * Emulates the WC05 Snake projection applied to ETRS89 as realized through OSNet 2009.
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to WC05-IRF (1) (code 10629) and map projection WC05-TM
+     * (code 10631). Emulates the WC05 Snake projection applied to ETRS89 as realized through OSNet v2009.
      */
     public const EPSG_WC05_GRID = 'urn:ogc:def:crs:EPSG::10632';
-
-    /**
-     * WGS 72 / UTM zone 10N
-     * Extent: Between 126°W and 120°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::32210';
-
-    /**
-     * WGS 72 / UTM zone 10S
-     * Extent: Between 126°W and 120°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_10S = 'urn:ogc:def:crs:EPSG::32310';
-
-    /**
-     * WGS 72 / UTM zone 11N
-     * Extent: Between 120°W and 114°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::32211';
-
-    /**
-     * WGS 72 / UTM zone 11S
-     * Extent: Between 120°W and 114°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_11S = 'urn:ogc:def:crs:EPSG::32311';
-
-    /**
-     * WGS 72 / UTM zone 12N
-     * Extent: Between 114°W and 108°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::32212';
-
-    /**
-     * WGS 72 / UTM zone 12S
-     * Extent: Between 114°W and 108°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_12S = 'urn:ogc:def:crs:EPSG::32312';
-
-    /**
-     * WGS 72 / UTM zone 13N
-     * Extent: Between 108°W and 102°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::32213';
-
-    /**
-     * WGS 72 / UTM zone 13S
-     * Extent: Between 108°W and 102°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_13S = 'urn:ogc:def:crs:EPSG::32313';
-
-    /**
-     * WGS 72 / UTM zone 14N
-     * Extent: Between 102°W and 96°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::32214';
-
-    /**
-     * WGS 72 / UTM zone 14S
-     * Extent: Between 102°W and 96°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_14S = 'urn:ogc:def:crs:EPSG::32314';
-
-    /**
-     * WGS 72 / UTM zone 15N
-     * Extent: Between 96°W and 90°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::32215';
-
-    /**
-     * WGS 72 / UTM zone 15S
-     * Extent: Between 96°W and 90°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_15S = 'urn:ogc:def:crs:EPSG::32315';
-
-    /**
-     * WGS 72 / UTM zone 16N
-     * Extent: Between 90°W and 84°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::32216';
-
-    /**
-     * WGS 72 / UTM zone 16S
-     * Extent: Between 90°W and 84°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_16S = 'urn:ogc:def:crs:EPSG::32316';
-
-    /**
-     * WGS 72 / UTM zone 17N
-     * Extent: Between 84°W and 78°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::32217';
-
-    /**
-     * WGS 72 / UTM zone 17S
-     * Extent: Between 84°W and 78°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_17S = 'urn:ogc:def:crs:EPSG::32317';
-
-    /**
-     * WGS 72 / UTM zone 18N
-     * Extent: Between 78°W and 72°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::32218';
-
-    /**
-     * WGS 72 / UTM zone 18S
-     * Extent: Between 78°W and 72°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::32318';
-
-    /**
-     * WGS 72 / UTM zone 19N
-     * Extent: Between 72°W and 66°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::32219';
-
-    /**
-     * WGS 72 / UTM zone 19S
-     * Extent: Between 72°W and 66°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::32319';
-
-    /**
-     * WGS 72 / UTM zone 1N
-     * Extent: Between 180°W and 174°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_1N = 'urn:ogc:def:crs:EPSG::32201';
-
-    /**
-     * WGS 72 / UTM zone 1S
-     * Extent: Between 180°W to 174°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::32301';
-
-    /**
-     * WGS 72 / UTM zone 20N
-     * Extent: Between 66°W and 60°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::32220';
-
-    /**
-     * WGS 72 / UTM zone 20S
-     * Extent: Between 66°W and 60°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::32320';
-
-    /**
-     * WGS 72 / UTM zone 21N
-     * Extent: Between 60°W and 54°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::32221';
-
-    /**
-     * WGS 72 / UTM zone 21S
-     * Extent: Between 60°W and 54°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::32321';
-
-    /**
-     * WGS 72 / UTM zone 22N
-     * Extent: Between 54°W and 48°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::32222';
-
-    /**
-     * WGS 72 / UTM zone 22S
-     * Extent: Between 54°W and 48°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_22S = 'urn:ogc:def:crs:EPSG::32322';
-
-    /**
-     * WGS 72 / UTM zone 23N
-     * Extent: Between 48°W and 42°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::32223';
-
-    /**
-     * WGS 72 / UTM zone 23S
-     * Extent: Between 48°W and 42°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_23S = 'urn:ogc:def:crs:EPSG::32323';
-
-    /**
-     * WGS 72 / UTM zone 24N
-     * Extent: Between 42°W and 36°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::32224';
-
-    /**
-     * WGS 72 / UTM zone 24S
-     * Extent: Between 42°W and 36°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_24S = 'urn:ogc:def:crs:EPSG::32324';
-
-    /**
-     * WGS 72 / UTM zone 25N
-     * Extent: Between 36°W and 30°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_25N = 'urn:ogc:def:crs:EPSG::32225';
-
-    /**
-     * WGS 72 / UTM zone 25S
-     * Extent: Between 36°W and 30°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::32325';
-
-    /**
-     * WGS 72 / UTM zone 26N
-     * Extent: Between 30°W and 24°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::32226';
-
-    /**
-     * WGS 72 / UTM zone 26S
-     * Extent: Between 30°W and 24°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_26S = 'urn:ogc:def:crs:EPSG::32326';
-
-    /**
-     * WGS 72 / UTM zone 27N
-     * Extent: Between 24°W and 18°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_27N = 'urn:ogc:def:crs:EPSG::32227';
-
-    /**
-     * WGS 72 / UTM zone 27S
-     * Extent: Between 24°W and 18°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_27S = 'urn:ogc:def:crs:EPSG::32327';
-
-    /**
-     * WGS 72 / UTM zone 28N
-     * Extent: Between 18°W and 12°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::32228';
-
-    /**
-     * WGS 72 / UTM zone 28S
-     * Extent: Between 18°W and 12°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_28S = 'urn:ogc:def:crs:EPSG::32328';
-
-    /**
-     * WGS 72 / UTM zone 29N
-     * Extent: Between 12°W and 6°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::32229';
-
-    /**
-     * WGS 72 / UTM zone 29S
-     * Extent: Between 12°W and 6°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_29S = 'urn:ogc:def:crs:EPSG::32329';
-
-    /**
-     * WGS 72 / UTM zone 2N
-     * Extent: Between 174°W and 168°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_2N = 'urn:ogc:def:crs:EPSG::32202';
-
-    /**
-     * WGS 72 / UTM zone 2S
-     * Extent: Between 174°W and 168°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_2S = 'urn:ogc:def:crs:EPSG::32302';
-
-    /**
-     * WGS 72 / UTM zone 30N
-     * Extent: Between 6°W and 0°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_30N = 'urn:ogc:def:crs:EPSG::32230';
-
-    /**
-     * WGS 72 / UTM zone 30S
-     * Extent: Between 6°W and 0°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_30S = 'urn:ogc:def:crs:EPSG::32330';
-
-    /**
-     * WGS 72 / UTM zone 31N
-     * Extent: Between 0°E and 6°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::32231';
-
-    /**
-     * WGS 72 / UTM zone 31S
-     * Extent: Between 0°E and 6°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_31S = 'urn:ogc:def:crs:EPSG::32331';
-
-    /**
-     * WGS 72 / UTM zone 32N
-     * Extent: Between 6°E and 12°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::32232';
-
-    /**
-     * WGS 72 / UTM zone 32S
-     * Extent: Between 6°E and 12°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::32332';
-
-    /**
-     * WGS 72 / UTM zone 33N
-     * Extent: Between 12°E and 18°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::32233';
-
-    /**
-     * WGS 72 / UTM zone 33S
-     * Extent: Between 12°E and 18°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::32333';
-
-    /**
-     * WGS 72 / UTM zone 34N
-     * Extent: Between 18°E and 24°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::32234';
-
-    /**
-     * WGS 72 / UTM zone 34S
-     * Extent: Between 18°E and 24°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_34S = 'urn:ogc:def:crs:EPSG::32334';
-
-    /**
-     * WGS 72 / UTM zone 35N
-     * Extent: Between 24°E and 30°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::32235';
-
-    /**
-     * WGS 72 / UTM zone 35S
-     * Extent: Between 24°E and 30°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_35S = 'urn:ogc:def:crs:EPSG::32335';
-
-    /**
-     * WGS 72 / UTM zone 36N
-     * Extent: Between 30°E and 36°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::32236';
-
-    /**
-     * WGS 72 / UTM zone 36S
-     * Extent: Between 30°E and 36°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_36S = 'urn:ogc:def:crs:EPSG::32336';
-
-    /**
-     * WGS 72 / UTM zone 37N
-     * Extent: Between 36°E and 42°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_37N = 'urn:ogc:def:crs:EPSG::32237';
-
-    /**
-     * WGS 72 / UTM zone 37S
-     * Extent: Between 36°E and 42°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::32337';
-
-    /**
-     * WGS 72 / UTM zone 38N
-     * Extent: Between 42°E and 48°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_38N = 'urn:ogc:def:crs:EPSG::32238';
-
-    /**
-     * WGS 72 / UTM zone 38S
-     * Extent: Between 42°E and 48°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_38S = 'urn:ogc:def:crs:EPSG::32338';
-
-    /**
-     * WGS 72 / UTM zone 39N
-     * Extent: Between 48°E and 54°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::32239';
-
-    /**
-     * WGS 72 / UTM zone 39S
-     * Extent: Between 48°E and 54°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_39S = 'urn:ogc:def:crs:EPSG::32339';
-
-    /**
-     * WGS 72 / UTM zone 3N
-     * Extent: Between 168°W and 162°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_3N = 'urn:ogc:def:crs:EPSG::32203';
-
-    /**
-     * WGS 72 / UTM zone 3S
-     * Extent: Between 168°W and 162°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_3S = 'urn:ogc:def:crs:EPSG::32303';
-
-    /**
-     * WGS 72 / UTM zone 40N
-     * Extent: Between 54°E and 60°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::32240';
-
-    /**
-     * WGS 72 / UTM zone 40S
-     * Extent: Between 54°E and 60°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_40S = 'urn:ogc:def:crs:EPSG::32340';
-
-    /**
-     * WGS 72 / UTM zone 41N
-     * Extent: Between 60°E and 66°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::32241';
-
-    /**
-     * WGS 72 / UTM zone 41S
-     * Extent: Between 60°E and 66°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_41S = 'urn:ogc:def:crs:EPSG::32341';
-
-    /**
-     * WGS 72 / UTM zone 42N
-     * Extent: Between 66°E and 72°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_42N = 'urn:ogc:def:crs:EPSG::32242';
-
-    /**
-     * WGS 72 / UTM zone 42S
-     * Extent: Between 66°E and 72°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_42S = 'urn:ogc:def:crs:EPSG::32342';
-
-    /**
-     * WGS 72 / UTM zone 43N
-     * Extent: Between 72°E and 78°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_43N = 'urn:ogc:def:crs:EPSG::32243';
-
-    /**
-     * WGS 72 / UTM zone 43S
-     * Extent: Between 72°E and 78°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_43S = 'urn:ogc:def:crs:EPSG::32343';
-
-    /**
-     * WGS 72 / UTM zone 44N
-     * Extent: Between 78°E and 84°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_44N = 'urn:ogc:def:crs:EPSG::32244';
-
-    /**
-     * WGS 72 / UTM zone 44S
-     * Extent: Between 78°E and 84°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_44S = 'urn:ogc:def:crs:EPSG::32344';
-
-    /**
-     * WGS 72 / UTM zone 45N
-     * Extent: Between 84°E and 90°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_45N = 'urn:ogc:def:crs:EPSG::32245';
-
-    /**
-     * WGS 72 / UTM zone 45S
-     * Extent: Between 84°E and 90°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_45S = 'urn:ogc:def:crs:EPSG::32345';
-
-    /**
-     * WGS 72 / UTM zone 46N
-     * Extent: Between 90°E and 96°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_46N = 'urn:ogc:def:crs:EPSG::32246';
-
-    /**
-     * WGS 72 / UTM zone 46S
-     * Extent: Between 90°E and 96°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_46S = 'urn:ogc:def:crs:EPSG::32346';
-
-    /**
-     * WGS 72 / UTM zone 47N
-     * Extent: Between 96°E and 102°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_47N = 'urn:ogc:def:crs:EPSG::32247';
-
-    /**
-     * WGS 72 / UTM zone 47S
-     * Extent: Between 96°E and 102°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::32347';
-
-    /**
-     * WGS 72 / UTM zone 48N
-     * Extent: Between 102°E and 108°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_48N = 'urn:ogc:def:crs:EPSG::32248';
-
-    /**
-     * WGS 72 / UTM zone 48S
-     * Extent: Between 102°E and 108°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_48S = 'urn:ogc:def:crs:EPSG::32348';
-
-    /**
-     * WGS 72 / UTM zone 49N
-     * Extent: Between 108°E and 114°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_49N = 'urn:ogc:def:crs:EPSG::32249';
-
-    /**
-     * WGS 72 / UTM zone 49S
-     * Extent: Between 108°E and 114°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_49S = 'urn:ogc:def:crs:EPSG::32349';
-
-    /**
-     * WGS 72 / UTM zone 4N
-     * Extent: Between 162°W and 156°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_4N = 'urn:ogc:def:crs:EPSG::32204';
-
-    /**
-     * WGS 72 / UTM zone 4S
-     * Extent: Between 162°W and 156°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_4S = 'urn:ogc:def:crs:EPSG::32304';
-
-    /**
-     * WGS 72 / UTM zone 50N
-     * Extent: Between 114°E and 120°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::32250';
-
-    /**
-     * WGS 72 / UTM zone 50S
-     * Extent: Between 114°E and 120°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_50S = 'urn:ogc:def:crs:EPSG::32350';
-
-    /**
-     * WGS 72 / UTM zone 51N
-     * Extent: Between 120°E and 126°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_51N = 'urn:ogc:def:crs:EPSG::32251';
-
-    /**
-     * WGS 72 / UTM zone 51S
-     * Extent: Between 120°E and 126°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_51S = 'urn:ogc:def:crs:EPSG::32351';
-
-    /**
-     * WGS 72 / UTM zone 52N
-     * Extent: Between 126°E and 132°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_52N = 'urn:ogc:def:crs:EPSG::32252';
-
-    /**
-     * WGS 72 / UTM zone 52S
-     * Extent: Between 126°E and 132°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_52S = 'urn:ogc:def:crs:EPSG::32352';
-
-    /**
-     * WGS 72 / UTM zone 53N
-     * Extent: Between 132°E and 138°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_53N = 'urn:ogc:def:crs:EPSG::32253';
-
-    /**
-     * WGS 72 / UTM zone 53S
-     * Extent: Between 132°E and 138°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_53S = 'urn:ogc:def:crs:EPSG::32353';
-
-    /**
-     * WGS 72 / UTM zone 54N
-     * Extent: Between 138°E and 144°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_54N = 'urn:ogc:def:crs:EPSG::32254';
-
-    /**
-     * WGS 72 / UTM zone 54S
-     * Extent: Between 138°E and 144°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_54S = 'urn:ogc:def:crs:EPSG::32354';
-
-    /**
-     * WGS 72 / UTM zone 55N
-     * Extent: Between 144°E and 150°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_55N = 'urn:ogc:def:crs:EPSG::32255';
-
-    /**
-     * WGS 72 / UTM zone 55S
-     * Extent: Between 144°E and 150°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_55S = 'urn:ogc:def:crs:EPSG::32355';
-
-    /**
-     * WGS 72 / UTM zone 56N
-     * Extent: Between 150°E and 156°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_56N = 'urn:ogc:def:crs:EPSG::32256';
-
-    /**
-     * WGS 72 / UTM zone 56S
-     * Extent: Between 150°E and 156°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_56S = 'urn:ogc:def:crs:EPSG::32356';
-
-    /**
-     * WGS 72 / UTM zone 57N
-     * Extent: Between 156°E and 162°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_57N = 'urn:ogc:def:crs:EPSG::32257';
-
-    /**
-     * WGS 72 / UTM zone 57S
-     * Extent: Between 156°E and 162°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_57S = 'urn:ogc:def:crs:EPSG::32357';
-
-    /**
-     * WGS 72 / UTM zone 58N
-     * Extent: Between 162°E and 168°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_58N = 'urn:ogc:def:crs:EPSG::32258';
-
-    /**
-     * WGS 72 / UTM zone 58S
-     * Extent: Between 162°E and 168°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::32358';
-
-    /**
-     * WGS 72 / UTM zone 59N
-     * Extent: Between 168°E and 174°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_59N = 'urn:ogc:def:crs:EPSG::32259';
-
-    /**
-     * WGS 72 / UTM zone 59S
-     * Extent: Between 168°E and 174°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_59S = 'urn:ogc:def:crs:EPSG::32359';
-
-    /**
-     * WGS 72 / UTM zone 5N
-     * Extent: Between 156°W and 150°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::32205';
-
-    /**
-     * WGS 72 / UTM zone 5S
-     * Extent: Between 156°W and 150°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_5S = 'urn:ogc:def:crs:EPSG::32305';
-
-    /**
-     * WGS 72 / UTM zone 60N
-     * Extent: Between 174°E and 180°E, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_60N = 'urn:ogc:def:crs:EPSG::32260';
-
-    /**
-     * WGS 72 / UTM zone 60S
-     * Extent: Between 174°E and 180°E, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_60S = 'urn:ogc:def:crs:EPSG::32360';
-
-    /**
-     * WGS 72 / UTM zone 6N
-     * Extent: Between 150°W and 144°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_6N = 'urn:ogc:def:crs:EPSG::32206';
-
-    /**
-     * WGS 72 / UTM zone 6S
-     * Extent: Between 150°W and 144°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_6S = 'urn:ogc:def:crs:EPSG::32306';
-
-    /**
-     * WGS 72 / UTM zone 7N
-     * Extent: Between 144°W and 138°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::32207';
-
-    /**
-     * WGS 72 / UTM zone 7S
-     * Extent: Between 144°W and 138°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_7S = 'urn:ogc:def:crs:EPSG::32307';
-
-    /**
-     * WGS 72 / UTM zone 8N
-     * Extent: Between 138°W and 132°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::32208';
-
-    /**
-     * WGS 72 / UTM zone 8S
-     * Extent: Between 138°W and 132°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_8S = 'urn:ogc:def:crs:EPSG::32308';
-
-    /**
-     * WGS 72 / UTM zone 9N
-     * Extent: Between 132°W and 126°W, northern hemisphere between equator and 84°N.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::32209';
-
-    /**
-     * WGS 72 / UTM zone 9S
-     * Extent: Between 132°W and 126°W, southern hemisphere between 80°S and equator.
-     */
-    public const EPSG_WGS_72_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::32309';
 
     /**
      * WGS 72BE / South China Sea Lambert
@@ -6136,6 +5847,726 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_72BE_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::32509';
 
     /**
+     * WGS 72 / UTM zone 10N
+     * Extent: Between 126°W and 120°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::32210';
+
+    /**
+     * WGS 72 / UTM zone 10S
+     * Extent: Between 126°W and 120°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_10S = 'urn:ogc:def:crs:EPSG::32310';
+
+    /**
+     * WGS 72 / UTM zone 11N
+     * Extent: Between 120°W and 114°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::32211';
+
+    /**
+     * WGS 72 / UTM zone 11S
+     * Extent: Between 120°W and 114°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_11S = 'urn:ogc:def:crs:EPSG::32311';
+
+    /**
+     * WGS 72 / UTM zone 12N
+     * Extent: Between 114°W and 108°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::32212';
+
+    /**
+     * WGS 72 / UTM zone 12S
+     * Extent: Between 114°W and 108°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_12S = 'urn:ogc:def:crs:EPSG::32312';
+
+    /**
+     * WGS 72 / UTM zone 13N
+     * Extent: Between 108°W and 102°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::32213';
+
+    /**
+     * WGS 72 / UTM zone 13S
+     * Extent: Between 108°W and 102°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_13S = 'urn:ogc:def:crs:EPSG::32313';
+
+    /**
+     * WGS 72 / UTM zone 14N
+     * Extent: Between 102°W and 96°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::32214';
+
+    /**
+     * WGS 72 / UTM zone 14S
+     * Extent: Between 102°W and 96°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_14S = 'urn:ogc:def:crs:EPSG::32314';
+
+    /**
+     * WGS 72 / UTM zone 15N
+     * Extent: Between 96°W and 90°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::32215';
+
+    /**
+     * WGS 72 / UTM zone 15S
+     * Extent: Between 96°W and 90°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_15S = 'urn:ogc:def:crs:EPSG::32315';
+
+    /**
+     * WGS 72 / UTM zone 16N
+     * Extent: Between 90°W and 84°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::32216';
+
+    /**
+     * WGS 72 / UTM zone 16S
+     * Extent: Between 90°W and 84°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_16S = 'urn:ogc:def:crs:EPSG::32316';
+
+    /**
+     * WGS 72 / UTM zone 17N
+     * Extent: Between 84°W and 78°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::32217';
+
+    /**
+     * WGS 72 / UTM zone 17S
+     * Extent: Between 84°W and 78°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_17S = 'urn:ogc:def:crs:EPSG::32317';
+
+    /**
+     * WGS 72 / UTM zone 18N
+     * Extent: Between 78°W and 72°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::32218';
+
+    /**
+     * WGS 72 / UTM zone 18S
+     * Extent: Between 78°W and 72°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::32318';
+
+    /**
+     * WGS 72 / UTM zone 19N
+     * Extent: Between 72°W and 66°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::32219';
+
+    /**
+     * WGS 72 / UTM zone 19S
+     * Extent: Between 72°W and 66°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::32319';
+
+    /**
+     * WGS 72 / UTM zone 1N
+     * Extent: Between 180°W and 174°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_1N = 'urn:ogc:def:crs:EPSG::32201';
+
+    /**
+     * WGS 72 / UTM zone 1S
+     * Extent: Between 180°W to 174°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::32301';
+
+    /**
+     * WGS 72 / UTM zone 20N
+     * Extent: Between 66°W and 60°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::32220';
+
+    /**
+     * WGS 72 / UTM zone 20S
+     * Extent: Between 66°W and 60°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::32320';
+
+    /**
+     * WGS 72 / UTM zone 21N
+     * Extent: Between 60°W and 54°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::32221';
+
+    /**
+     * WGS 72 / UTM zone 21S
+     * Extent: Between 60°W and 54°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::32321';
+
+    /**
+     * WGS 72 / UTM zone 22N
+     * Extent: Between 54°W and 48°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::32222';
+
+    /**
+     * WGS 72 / UTM zone 22S
+     * Extent: Between 54°W and 48°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_22S = 'urn:ogc:def:crs:EPSG::32322';
+
+    /**
+     * WGS 72 / UTM zone 23N
+     * Extent: Between 48°W and 42°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::32223';
+
+    /**
+     * WGS 72 / UTM zone 23S
+     * Extent: Between 48°W and 42°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_23S = 'urn:ogc:def:crs:EPSG::32323';
+
+    /**
+     * WGS 72 / UTM zone 24N
+     * Extent: Between 42°W and 36°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::32224';
+
+    /**
+     * WGS 72 / UTM zone 24S
+     * Extent: Between 42°W and 36°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_24S = 'urn:ogc:def:crs:EPSG::32324';
+
+    /**
+     * WGS 72 / UTM zone 25N
+     * Extent: Between 36°W and 30°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_25N = 'urn:ogc:def:crs:EPSG::32225';
+
+    /**
+     * WGS 72 / UTM zone 25S
+     * Extent: Between 36°W and 30°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_25S = 'urn:ogc:def:crs:EPSG::32325';
+
+    /**
+     * WGS 72 / UTM zone 26N
+     * Extent: Between 30°W and 24°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::32226';
+
+    /**
+     * WGS 72 / UTM zone 26S
+     * Extent: Between 30°W and 24°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_26S = 'urn:ogc:def:crs:EPSG::32326';
+
+    /**
+     * WGS 72 / UTM zone 27N
+     * Extent: Between 24°W and 18°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_27N = 'urn:ogc:def:crs:EPSG::32227';
+
+    /**
+     * WGS 72 / UTM zone 27S
+     * Extent: Between 24°W and 18°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_27S = 'urn:ogc:def:crs:EPSG::32327';
+
+    /**
+     * WGS 72 / UTM zone 28N
+     * Extent: Between 18°W and 12°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::32228';
+
+    /**
+     * WGS 72 / UTM zone 28S
+     * Extent: Between 18°W and 12°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_28S = 'urn:ogc:def:crs:EPSG::32328';
+
+    /**
+     * WGS 72 / UTM zone 29N
+     * Extent: Between 12°W and 6°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::32229';
+
+    /**
+     * WGS 72 / UTM zone 29S
+     * Extent: Between 12°W and 6°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_29S = 'urn:ogc:def:crs:EPSG::32329';
+
+    /**
+     * WGS 72 / UTM zone 2N
+     * Extent: Between 174°W and 168°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_2N = 'urn:ogc:def:crs:EPSG::32202';
+
+    /**
+     * WGS 72 / UTM zone 2S
+     * Extent: Between 174°W and 168°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_2S = 'urn:ogc:def:crs:EPSG::32302';
+
+    /**
+     * WGS 72 / UTM zone 30N
+     * Extent: Between 6°W and 0°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_30N = 'urn:ogc:def:crs:EPSG::32230';
+
+    /**
+     * WGS 72 / UTM zone 30S
+     * Extent: Between 6°W and 0°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_30S = 'urn:ogc:def:crs:EPSG::32330';
+
+    /**
+     * WGS 72 / UTM zone 31N
+     * Extent: Between 0°E and 6°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::32231';
+
+    /**
+     * WGS 72 / UTM zone 31S
+     * Extent: Between 0°E and 6°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_31S = 'urn:ogc:def:crs:EPSG::32331';
+
+    /**
+     * WGS 72 / UTM zone 32N
+     * Extent: Between 6°E and 12°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::32232';
+
+    /**
+     * WGS 72 / UTM zone 32S
+     * Extent: Between 6°E and 12°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::32332';
+
+    /**
+     * WGS 72 / UTM zone 33N
+     * Extent: Between 12°E and 18°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::32233';
+
+    /**
+     * WGS 72 / UTM zone 33S
+     * Extent: Between 12°E and 18°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::32333';
+
+    /**
+     * WGS 72 / UTM zone 34N
+     * Extent: Between 18°E and 24°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::32234';
+
+    /**
+     * WGS 72 / UTM zone 34S
+     * Extent: Between 18°E and 24°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_34S = 'urn:ogc:def:crs:EPSG::32334';
+
+    /**
+     * WGS 72 / UTM zone 35N
+     * Extent: Between 24°E and 30°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::32235';
+
+    /**
+     * WGS 72 / UTM zone 35S
+     * Extent: Between 24°E and 30°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_35S = 'urn:ogc:def:crs:EPSG::32335';
+
+    /**
+     * WGS 72 / UTM zone 36N
+     * Extent: Between 30°E and 36°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_36N = 'urn:ogc:def:crs:EPSG::32236';
+
+    /**
+     * WGS 72 / UTM zone 36S
+     * Extent: Between 30°E and 36°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_36S = 'urn:ogc:def:crs:EPSG::32336';
+
+    /**
+     * WGS 72 / UTM zone 37N
+     * Extent: Between 36°E and 42°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_37N = 'urn:ogc:def:crs:EPSG::32237';
+
+    /**
+     * WGS 72 / UTM zone 37S
+     * Extent: Between 36°E and 42°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_37S = 'urn:ogc:def:crs:EPSG::32337';
+
+    /**
+     * WGS 72 / UTM zone 38N
+     * Extent: Between 42°E and 48°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_38N = 'urn:ogc:def:crs:EPSG::32238';
+
+    /**
+     * WGS 72 / UTM zone 38S
+     * Extent: Between 42°E and 48°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_38S = 'urn:ogc:def:crs:EPSG::32338';
+
+    /**
+     * WGS 72 / UTM zone 39N
+     * Extent: Between 48°E and 54°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::32239';
+
+    /**
+     * WGS 72 / UTM zone 39S
+     * Extent: Between 48°E and 54°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_39S = 'urn:ogc:def:crs:EPSG::32339';
+
+    /**
+     * WGS 72 / UTM zone 3N
+     * Extent: Between 168°W and 162°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_3N = 'urn:ogc:def:crs:EPSG::32203';
+
+    /**
+     * WGS 72 / UTM zone 3S
+     * Extent: Between 168°W and 162°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_3S = 'urn:ogc:def:crs:EPSG::32303';
+
+    /**
+     * WGS 72 / UTM zone 40N
+     * Extent: Between 54°E and 60°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::32240';
+
+    /**
+     * WGS 72 / UTM zone 40S
+     * Extent: Between 54°E and 60°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_40S = 'urn:ogc:def:crs:EPSG::32340';
+
+    /**
+     * WGS 72 / UTM zone 41N
+     * Extent: Between 60°E and 66°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_41N = 'urn:ogc:def:crs:EPSG::32241';
+
+    /**
+     * WGS 72 / UTM zone 41S
+     * Extent: Between 60°E and 66°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_41S = 'urn:ogc:def:crs:EPSG::32341';
+
+    /**
+     * WGS 72 / UTM zone 42N
+     * Extent: Between 66°E and 72°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_42N = 'urn:ogc:def:crs:EPSG::32242';
+
+    /**
+     * WGS 72 / UTM zone 42S
+     * Extent: Between 66°E and 72°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_42S = 'urn:ogc:def:crs:EPSG::32342';
+
+    /**
+     * WGS 72 / UTM zone 43N
+     * Extent: Between 72°E and 78°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_43N = 'urn:ogc:def:crs:EPSG::32243';
+
+    /**
+     * WGS 72 / UTM zone 43S
+     * Extent: Between 72°E and 78°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_43S = 'urn:ogc:def:crs:EPSG::32343';
+
+    /**
+     * WGS 72 / UTM zone 44N
+     * Extent: Between 78°E and 84°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_44N = 'urn:ogc:def:crs:EPSG::32244';
+
+    /**
+     * WGS 72 / UTM zone 44S
+     * Extent: Between 78°E and 84°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_44S = 'urn:ogc:def:crs:EPSG::32344';
+
+    /**
+     * WGS 72 / UTM zone 45N
+     * Extent: Between 84°E and 90°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_45N = 'urn:ogc:def:crs:EPSG::32245';
+
+    /**
+     * WGS 72 / UTM zone 45S
+     * Extent: Between 84°E and 90°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_45S = 'urn:ogc:def:crs:EPSG::32345';
+
+    /**
+     * WGS 72 / UTM zone 46N
+     * Extent: Between 90°E and 96°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_46N = 'urn:ogc:def:crs:EPSG::32246';
+
+    /**
+     * WGS 72 / UTM zone 46S
+     * Extent: Between 90°E and 96°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_46S = 'urn:ogc:def:crs:EPSG::32346';
+
+    /**
+     * WGS 72 / UTM zone 47N
+     * Extent: Between 96°E and 102°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_47N = 'urn:ogc:def:crs:EPSG::32247';
+
+    /**
+     * WGS 72 / UTM zone 47S
+     * Extent: Between 96°E and 102°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_47S = 'urn:ogc:def:crs:EPSG::32347';
+
+    /**
+     * WGS 72 / UTM zone 48N
+     * Extent: Between 102°E and 108°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_48N = 'urn:ogc:def:crs:EPSG::32248';
+
+    /**
+     * WGS 72 / UTM zone 48S
+     * Extent: Between 102°E and 108°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_48S = 'urn:ogc:def:crs:EPSG::32348';
+
+    /**
+     * WGS 72 / UTM zone 49N
+     * Extent: Between 108°E and 114°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_49N = 'urn:ogc:def:crs:EPSG::32249';
+
+    /**
+     * WGS 72 / UTM zone 49S
+     * Extent: Between 108°E and 114°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_49S = 'urn:ogc:def:crs:EPSG::32349';
+
+    /**
+     * WGS 72 / UTM zone 4N
+     * Extent: Between 162°W and 156°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_4N = 'urn:ogc:def:crs:EPSG::32204';
+
+    /**
+     * WGS 72 / UTM zone 4S
+     * Extent: Between 162°W and 156°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_4S = 'urn:ogc:def:crs:EPSG::32304';
+
+    /**
+     * WGS 72 / UTM zone 50N
+     * Extent: Between 114°E and 120°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::32250';
+
+    /**
+     * WGS 72 / UTM zone 50S
+     * Extent: Between 114°E and 120°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_50S = 'urn:ogc:def:crs:EPSG::32350';
+
+    /**
+     * WGS 72 / UTM zone 51N
+     * Extent: Between 120°E and 126°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_51N = 'urn:ogc:def:crs:EPSG::32251';
+
+    /**
+     * WGS 72 / UTM zone 51S
+     * Extent: Between 120°E and 126°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_51S = 'urn:ogc:def:crs:EPSG::32351';
+
+    /**
+     * WGS 72 / UTM zone 52N
+     * Extent: Between 126°E and 132°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_52N = 'urn:ogc:def:crs:EPSG::32252';
+
+    /**
+     * WGS 72 / UTM zone 52S
+     * Extent: Between 126°E and 132°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_52S = 'urn:ogc:def:crs:EPSG::32352';
+
+    /**
+     * WGS 72 / UTM zone 53N
+     * Extent: Between 132°E and 138°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_53N = 'urn:ogc:def:crs:EPSG::32253';
+
+    /**
+     * WGS 72 / UTM zone 53S
+     * Extent: Between 132°E and 138°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_53S = 'urn:ogc:def:crs:EPSG::32353';
+
+    /**
+     * WGS 72 / UTM zone 54N
+     * Extent: Between 138°E and 144°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_54N = 'urn:ogc:def:crs:EPSG::32254';
+
+    /**
+     * WGS 72 / UTM zone 54S
+     * Extent: Between 138°E and 144°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_54S = 'urn:ogc:def:crs:EPSG::32354';
+
+    /**
+     * WGS 72 / UTM zone 55N
+     * Extent: Between 144°E and 150°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_55N = 'urn:ogc:def:crs:EPSG::32255';
+
+    /**
+     * WGS 72 / UTM zone 55S
+     * Extent: Between 144°E and 150°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_55S = 'urn:ogc:def:crs:EPSG::32355';
+
+    /**
+     * WGS 72 / UTM zone 56N
+     * Extent: Between 150°E and 156°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_56N = 'urn:ogc:def:crs:EPSG::32256';
+
+    /**
+     * WGS 72 / UTM zone 56S
+     * Extent: Between 150°E and 156°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_56S = 'urn:ogc:def:crs:EPSG::32356';
+
+    /**
+     * WGS 72 / UTM zone 57N
+     * Extent: Between 156°E and 162°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_57N = 'urn:ogc:def:crs:EPSG::32257';
+
+    /**
+     * WGS 72 / UTM zone 57S
+     * Extent: Between 156°E and 162°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_57S = 'urn:ogc:def:crs:EPSG::32357';
+
+    /**
+     * WGS 72 / UTM zone 58N
+     * Extent: Between 162°E and 168°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_58N = 'urn:ogc:def:crs:EPSG::32258';
+
+    /**
+     * WGS 72 / UTM zone 58S
+     * Extent: Between 162°E and 168°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_58S = 'urn:ogc:def:crs:EPSG::32358';
+
+    /**
+     * WGS 72 / UTM zone 59N
+     * Extent: Between 168°E and 174°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_59N = 'urn:ogc:def:crs:EPSG::32259';
+
+    /**
+     * WGS 72 / UTM zone 59S
+     * Extent: Between 168°E and 174°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_59S = 'urn:ogc:def:crs:EPSG::32359';
+
+    /**
+     * WGS 72 / UTM zone 5N
+     * Extent: Between 156°W and 150°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_5N = 'urn:ogc:def:crs:EPSG::32205';
+
+    /**
+     * WGS 72 / UTM zone 5S
+     * Extent: Between 156°W and 150°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_5S = 'urn:ogc:def:crs:EPSG::32305';
+
+    /**
+     * WGS 72 / UTM zone 60N
+     * Extent: Between 174°E and 180°E, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_60N = 'urn:ogc:def:crs:EPSG::32260';
+
+    /**
+     * WGS 72 / UTM zone 60S
+     * Extent: Between 174°E and 180°E, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_60S = 'urn:ogc:def:crs:EPSG::32360';
+
+    /**
+     * WGS 72 / UTM zone 6N
+     * Extent: Between 150°W and 144°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_6N = 'urn:ogc:def:crs:EPSG::32206';
+
+    /**
+     * WGS 72 / UTM zone 6S
+     * Extent: Between 150°W and 144°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_6S = 'urn:ogc:def:crs:EPSG::32306';
+
+    /**
+     * WGS 72 / UTM zone 7N
+     * Extent: Between 144°W and 138°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::32207';
+
+    /**
+     * WGS 72 / UTM zone 7S
+     * Extent: Between 144°W and 138°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_7S = 'urn:ogc:def:crs:EPSG::32307';
+
+    /**
+     * WGS 72 / UTM zone 8N
+     * Extent: Between 138°W and 132°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::32208';
+
+    /**
+     * WGS 72 / UTM zone 8S
+     * Extent: Between 138°W and 132°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_8S = 'urn:ogc:def:crs:EPSG::32308';
+
+    /**
+     * WGS 72 / UTM zone 9N
+     * Extent: Between 132°W and 126°W, northern hemisphere between equator and 84°N.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::32209';
+
+    /**
+     * WGS 72 / UTM zone 9S
+     * Extent: Between 132°W and 126°W, southern hemisphere between 80°S and equator.
+     */
+    public const EPSG_WGS_72_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::32309';
+
+    /**
      * WGS 84 / Agriculture Canada Albers
      * Extent: Canada - onshore south of 60°N - Alberta, British Columbia (BC), Manitoba, New Brunswick (NB),
      * Newfoundland and Labrador, Nova Scotia (NS), Ontario, Prince Edward Island (PEI), Quebec and Saskatchewan
@@ -6205,6 +6636,12 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_AUSTRALIAN_CENTRE_FOR_REMOTE_SENSING_LAMBERT = 'urn:ogc:def:crs:EPSG::4462';
 
     /**
+     * WGS 84 / Bihar
+     * Extent: India - Bihar.
+     */
+    public const EPSG_WGS_84_BIHAR = 'urn:ogc:def:crs:EPSG::7759';
+
+    /**
      * WGS 84 / BLM 14N (ftUS)
      * Extent: USA - Gulf of Mexico west of approximately 96°W - leasing areas Matagorda Island, Mustang Island, North
      * Padre Island and South Padre Island; outer continental shelf (GoM OCS) protraction areas Corpus Christi, Port
@@ -6250,10 +6687,17 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_BLM_17N_FTUS = 'urn:ogc:def:crs:EPSG::32667';
 
     /**
-     * WGS 84 / Bihar
-     * Extent: India - Bihar.
+     * WGS 84 / Cape Verde National
+     * Extent: Cape Verde. Includes Boa Vista, Brava, Fogo, Maio, Sal, Santo Antao, Sao Nicolau, Sao Tiago, Sao Vicente
+     * Adopted in October 2004.
      */
-    public const EPSG_WGS_84_BIHAR = 'urn:ogc:def:crs:EPSG::7759';
+    public const EPSG_WGS_84_CAPE_VERDE_NATIONAL = 'urn:ogc:def:crs:EPSG::4826';
+
+    /**
+     * WGS 84 / Chhattisgarh
+     * Extent: India - Chhattisgarh.
+     */
+    public const EPSG_WGS_84_CHHATTISGARH = 'urn:ogc:def:crs:EPSG::7778';
 
     /**
      * WGS 84 / CIG92
@@ -6268,19 +6712,6 @@ trait ProjectedConstantsChunk4
      * Replaced by GDA94 / CKIG94 (CRS code 6723).
      */
     public const EPSG_WGS_84_CKIG92 = 'urn:ogc:def:crs:EPSG::6722';
-
-    /**
-     * WGS 84 / Cape Verde National
-     * Extent: Cape Verde. Includes Boa Vista, Brava, Fogo, Maio, Sal, Santo Antao, Sao Nicolau, Sao Tiago, Sao Vicente
-     * Adopted in October 2004.
-     */
-    public const EPSG_WGS_84_CAPE_VERDE_NATIONAL = 'urn:ogc:def:crs:EPSG::4826';
-
-    /**
-     * WGS 84 / Chhattisgarh
-     * Extent: India - Chhattisgarh.
-     */
-    public const EPSG_WGS_84_CHHATTISGARH = 'urn:ogc:def:crs:EPSG::7778';
 
     /**
      * WGS 84 / Delhi
@@ -6651,6 +7082,84 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_EQUAL_EARTH_GREENWICH = 'urn:ogc:def:crs:EPSG::8857';
 
     /**
+     * WGS 84 / Equi7 Africa
+     * Extent: Africa and the Arabian peninsula
+     * Basis for the Equi7 grid for Africa. Designed in 2014 to efficiently handle the archiving, processing, and
+     * displaying of high resolution raster data over land while preserving geometric accuracy. Neither conformal nor
+     * equal area.
+     */
+    public const EPSG_WGS_84_EQUI7_AFRICA = 'urn:ogc:def:crs:EPSG::27701';
+
+    /**
+     * WGS 84 / Equi7 Antarctica
+     * Extent: Antarctica
+     * Basis for the Equi7 grid for Antarctica. Designed in 2014 to efficiently handle the archiving, processing, and
+     * displaying of high resolution raster data over land while preserving geometric accuracy. Neither conformal nor
+     * equal area.
+     */
+    public const EPSG_WGS_84_EQUI7_ANTARCTICA = 'urn:ogc:def:crs:EPSG::27702';
+
+    /**
+     * WGS 84 / Equi7 Asia
+     * Extent: Asia including Maldives and British Indian Ocean Territory
+     * Basis for the Equi7 grid for Asia. Designed in 2014 to efficiently handle the archiving, processing, and
+     * displaying of high resolution raster data over land while preserving geometric accuracy. Neither conformal nor
+     * equal area.
+     */
+    public const EPSG_WGS_84_EQUI7_ASIA = 'urn:ogc:def:crs:EPSG::27703';
+
+    /**
+     * WGS 84 / Equi7 Europe
+     * Extent: Europe including Russia west of the Ural Mountains
+     * Basis for the Equi7 grid for Europe. The map projection is neither conformal nor equal-area. For compatibility
+     * with EU INSPIRE technical guidelines use ETRS89-extended / LAEA Europe (CRS code 3035).
+     */
+    public const EPSG_WGS_84_EQUI7_EUROPE = 'urn:ogc:def:crs:EPSG::27704';
+
+    /**
+     * WGS 84 / Equi7 North America
+     * Extent: North America including Greenland, the Caribbean and Central America, together with circum-polar area
+     * north of 83°40'N. Excluding the circum-polar area, the longitude extent is from 167.65° in west across the
+     * 180° meridian to 15.72° in east
+     * Basis for the Equi7 grid for North America. Designed in 2014 to efficiently handle the archiving, processing,
+     * and displaying of high resolution raster data over land while preserving geometric accuracy. Neither conformal
+     * nor equal-area.
+     */
+    public const EPSG_WGS_84_EQUI7_NORTH_AMERICA = 'urn:ogc:def:crs:EPSG::27705';
+
+    /**
+     * WGS 84 / Equi7 Oceania
+     * Extent: Australasia and the western Pacific Ocean
+     * Basis for the Equi7 grid for Oceania. Designed in 2014 to efficiently handle the archiving, processing, and
+     * displaying of high resolution raster data over land while preserving geometric accuracy. Neither conformal nor
+     * equal-area.
+     */
+    public const EPSG_WGS_84_EQUI7_OCEANIA = 'urn:ogc:def:crs:EPSG::27706';
+
+    /**
+     * WGS 84 / Equi7 South America
+     * Extent: South America including Panama
+     * Basis for the Equi7 grid for South America. Designed in 2014 to efficiently handle the archiving, processing,
+     * and displaying of high resolution raster data over land while preserving geometric accuracy. Neither conformal
+     * nor equal-area.
+     */
+    public const EPSG_WGS_84_EQUI7_SOUTH_AMERICA = 'urn:ogc:def:crs:EPSG::27707';
+
+    /**
+     * WGS 84 / Gabon TM
+     * Extent: Gabon - onshore
+     * For topographic mapping and surveying applications see WGS 84 / Gabon TM 2011, CRS code 5523.
+     */
+    public const EPSG_WGS_84_GABON_TM = 'urn:ogc:def:crs:EPSG::5223';
+
+    /**
+     * WGS 84 / Gabon TM 2011
+     * Extent: Gabon
+     * For forestry applications see CRS code 5223.
+     */
+    public const EPSG_WGS_84_GABON_TM_2011 = 'urn:ogc:def:crs:EPSG::5523';
+
+    /**
      * WGS 84 / GLANCE Africa
      * Extent: Africa and the Arabian peninsula
      * Basis for the equal area continental tiling system for Africa used by the GLANCE land cover products.
@@ -6696,20 +7205,6 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_GLANCE_SOUTH_AMERICA = 'urn:ogc:def:crs:EPSG::10603';
 
     /**
-     * WGS 84 / Gabon TM
-     * Extent: Gabon - onshore
-     * For topographic mapping and surveying applications see WGS 84 / Gabon TM 2011, CRS code 5523.
-     */
-    public const EPSG_WGS_84_GABON_TM = 'urn:ogc:def:crs:EPSG::5223';
-
-    /**
-     * WGS 84 / Gabon TM 2011
-     * Extent: Gabon
-     * For forestry applications see CRS code 5223.
-     */
-    public const EPSG_WGS_84_GABON_TM_2011 = 'urn:ogc:def:crs:EPSG::5523';
-
-    /**
      * WGS 84 / Goa
      * Extent: India - Goa.
      */
@@ -6750,16 +7245,16 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_IBCSO_POLAR_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::9354';
 
     /**
-     * WGS 84 / India NSF LCC
-     * Extent: India. Includes Amandivis, Laccadives, Minicoy, Andaman Islands, Nicobar Islands, and Sikkim.
-     */
-    public const EPSG_WGS_84_INDIA_NSF_LCC = 'urn:ogc:def:crs:EPSG::7755';
-
-    /**
      * WGS 84 / India Northeast
      * Extent: India - Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland and Tripura.
      */
     public const EPSG_WGS_84_INDIA_NORTHEAST = 'urn:ogc:def:crs:EPSG::7771';
+
+    /**
+     * WGS 84 / India NSF LCC
+     * Extent: India. Includes Amandivis, Laccadives, Minicoy, Andaman Islands, Nicobar Islands, and Sikkim.
+     */
+    public const EPSG_WGS_84_INDIA_NSF_LCC = 'urn:ogc:def:crs:EPSG::7755';
 
     /**
      * WGS 84 / Jammu and Kashmir
@@ -6784,6 +7279,15 @@ trait ProjectedConstantsChunk4
      * Extent: India - Kerala; Mayyazhi (Mahe) area of Pudacherry territory.
      */
     public const EPSG_WGS_84_KERALA = 'urn:ogc:def:crs:EPSG::7781';
+
+    /**
+     * WGS 84 / LAEA Mozambique
+     * Extent: Mozambique
+     * Used for equal-area statistical analysis of national remote-sensing and hydrological products. Replaces use of
+     * continental equal-area projections over Mozambique. In production use under DNGRH contract DNGRH-346682-CS-QCBS
+     * (World Bank programme P180171).
+     */
+    public const EPSG_WGS_84_LAEA_MOZAMBIQUE = 'urn:ogc:def:crs:EPSG::26001';
 
     /**
      * WGS 84 / Lakshadweep
@@ -6830,53 +7334,18 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_MIZORAM = 'urn:ogc:def:crs:EPSG::7783';
 
     /**
+     * WGS 84 / Nagaland
+     * Extent: India - Nagaland.
+     */
+    public const EPSG_WGS_84_NAGALAND = 'urn:ogc:def:crs:EPSG::7770';
+
+    /**
      * WGS 84 / NIWA Albers
      * Extent: Southwestern Pacific Ocean and Southern Ocean areas surrounding New Zealand
      * For spatial referencing and conformal mapping nearshore see NZGD2000 / NZCS2000 (CRS code 3851) and for offshore
      * see WGS 84 / Mercator 41 (CRS code 3994).
      */
     public const EPSG_WGS_84_NIWA_ALBERS = 'urn:ogc:def:crs:EPSG::9191';
-
-    /**
-     * WGS 84 / NSIDC EASE-Grid 2.0 Global
-     * Extent: World between 86°S and 86°N
-     * Supersedes NSIDC EASE-Grid Global, CRS code 3410. This ellipsoidal development is to be preferred for new data.
-     */
-    public const EPSG_WGS_84_NSIDC_EASE_GRID_2_0_GLOBAL = 'urn:ogc:def:crs:EPSG::6933';
-
-    /**
-     * WGS 84 / NSIDC EASE-Grid 2.0 North
-     * Extent: Northern hemisphere
-     * Supersedes NSIDC EASE-Grid North, CRS code 3408. This ellipsoidal development is to be preferred for new data.
-     */
-    public const EPSG_WGS_84_NSIDC_EASE_GRID_2_0_NORTH = 'urn:ogc:def:crs:EPSG::6931';
-
-    /**
-     * WGS 84 / NSIDC EASE-Grid 2.0 South
-     * Extent: Southern hemisphere
-     * Supersedes NSIDC EASE-Grid South, CRS code 3409. This ellipsoidal development is to be preferred for new data.
-     */
-    public const EPSG_WGS_84_NSIDC_EASE_GRID_2_0_SOUTH = 'urn:ogc:def:crs:EPSG::6932';
-
-    /**
-     * WGS 84 / NSIDC Sea Ice Polar Stereographic North
-     * Extent: Northern hemisphere - north of 60°N, including Arctic
-     * Geodetically preferred alternative to NSIDC PS North (see CRS code 3411).
-     */
-    public const EPSG_WGS_84_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH = 'urn:ogc:def:crs:EPSG::3413';
-
-    /**
-     * WGS 84 / NSIDC Sea Ice Polar Stereographic South
-     * Extent: Southern hemisphere - south of 60°S - Antarctica
-     * Geodetically preferred alternative to NSIDC PS South (see CRS code 3412).
-     */
-    public const EPSG_WGS_84_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH = 'urn:ogc:def:crs:EPSG::3976';
-
-    /**
-     * WGS 84 / Nagaland
-     * Extent: India - Nagaland.
-     */
-    public const EPSG_WGS_84_NAGALAND = 'urn:ogc:def:crs:EPSG::7770';
 
     /**
      * WGS 84 / North Pole LAEA Alaska
@@ -6919,6 +7388,41 @@ trait ProjectedConstantsChunk4
      * For studies of Russian Arctic area.
      */
     public const EPSG_WGS_84_NORTH_POLE_LAEA_RUSSIA = 'urn:ogc:def:crs:EPSG::3576';
+
+    /**
+     * WGS 84 / NSIDC EASE-Grid 2.0 Global
+     * Extent: World between 86°S and 86°N
+     * Supersedes NSIDC EASE-Grid Global, CRS code 3410. This ellipsoidal development is to be preferred for new data.
+     */
+    public const EPSG_WGS_84_NSIDC_EASE_GRID_2_0_GLOBAL = 'urn:ogc:def:crs:EPSG::6933';
+
+    /**
+     * WGS 84 / NSIDC EASE-Grid 2.0 North
+     * Extent: Northern hemisphere
+     * Supersedes NSIDC EASE-Grid North, CRS code 3408. This ellipsoidal development is to be preferred for new data.
+     */
+    public const EPSG_WGS_84_NSIDC_EASE_GRID_2_0_NORTH = 'urn:ogc:def:crs:EPSG::6931';
+
+    /**
+     * WGS 84 / NSIDC EASE-Grid 2.0 South
+     * Extent: Southern hemisphere
+     * Supersedes NSIDC EASE-Grid South, CRS code 3409. This ellipsoidal development is to be preferred for new data.
+     */
+    public const EPSG_WGS_84_NSIDC_EASE_GRID_2_0_SOUTH = 'urn:ogc:def:crs:EPSG::6932';
+
+    /**
+     * WGS 84 / NSIDC Sea Ice Polar Stereographic North
+     * Extent: Northern hemisphere - north of 60°N, including Arctic
+     * Geodetically preferred alternative to NSIDC PS North (see CRS code 3411).
+     */
+    public const EPSG_WGS_84_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_NORTH = 'urn:ogc:def:crs:EPSG::3413';
+
+    /**
+     * WGS 84 / NSIDC Sea Ice Polar Stereographic South
+     * Extent: Southern hemisphere - south of 60°S - Antarctica
+     * Geodetically preferred alternative to NSIDC PS South (see CRS code 3412).
+     */
+    public const EPSG_WGS_84_NSIDC_SEA_ICE_POLAR_STEREOGRAPHIC_SOUTH = 'urn:ogc:def:crs:EPSG::3976';
 
     /**
      * WGS 84 / Orissa
@@ -7512,6 +8016,26 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_SOUTH_GEORGIA_LAMBERT = 'urn:ogc:def:crs:EPSG::3762';
 
     /**
+     * WGS 84 / Tamil Nadu
+     * Extent: India - Tamil Nadu; Pudacherry and Karaikal areas of Pudacherry territory.
+     */
+    public const EPSG_WGS_84_TAMIL_NADU = 'urn:ogc:def:crs:EPSG::7785';
+
+    /**
+     * WGS 84 / TMzn35N
+     * Extent: Moldova - west of 30°E
+     * In Moldova for mapping at 1:10,000 and larger and cadastre use MOLDREF99 / Moldova TM (CRS code 4026).
+     */
+    public const EPSG_WGS_84_TMZN35N = 'urn:ogc:def:crs:EPSG::4037';
+
+    /**
+     * WGS 84 / TMzn36N
+     * Extent: Moldova - east of 30°E
+     * In Moldova for mapping at 1:10,000 and larger and cadastre use MOLDREF99 / Moldova TM (CRS code 4026).
+     */
+    public const EPSG_WGS_84_TMZN36N = 'urn:ogc:def:crs:EPSG::4038';
+
+    /**
      * WGS 84 / TM 116 SE
      * Extent: Indonesia - offshore Madura Strait and western Bali Sea
      * Used by BP for Terang-Sirasun.
@@ -7541,18 +8065,18 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_TM_36_SE = 'urn:ogc:def:crs:EPSG::32766';
 
     /**
+     * WGS 84 / TM 60 SW
+     * Extent: Falkland Islands (Malvinas) - offshore - between 63°W and 57°W.
+     */
+    public const EPSG_WGS_84_TM_60_SW = 'urn:ogc:def:crs:EPSG::6703';
+
+    /**
      * WGS 84 / TM 6 NE
      * Extent: Nigeria - offshore
      * Used for oil exploration beyond the contintental shelf by ExxonMobil and with effect from March 2004 by Total
      * for all offshore areas.
      */
     public const EPSG_WGS_84_TM_6_NE = 'urn:ogc:def:crs:EPSG::2311';
-
-    /**
-     * WGS 84 / TM 60 SW
-     * Extent: Falkland Islands (Malvinas) - offshore - between 63°W and 57°W.
-     */
-    public const EPSG_WGS_84_TM_60_SW = 'urn:ogc:def:crs:EPSG::6703';
 
     /**
      * WGS 84 / TM 90 NE
@@ -7575,26 +8099,6 @@ trait ProjectedConstantsChunk4
      * Note: this CRS uses US survet feet, not international feet.
      */
     public const EPSG_WGS_84_TM_ZONE_21N_FTUS = 'urn:ogc:def:crs:EPSG::8036';
-
-    /**
-     * WGS 84 / TMzn35N
-     * Extent: Moldova - west of 30°E
-     * In Moldova for mapping at 1:10,000 and larger and cadastre use MOLDREF99 / Moldova TM (CRS code 4026).
-     */
-    public const EPSG_WGS_84_TMZN35N = 'urn:ogc:def:crs:EPSG::4037';
-
-    /**
-     * WGS 84 / TMzn36N
-     * Extent: Moldova - east of 30°E
-     * In Moldova for mapping at 1:10,000 and larger and cadastre use MOLDREF99 / Moldova TM (CRS code 4026).
-     */
-    public const EPSG_WGS_84_TMZN36N = 'urn:ogc:def:crs:EPSG::4038';
-
-    /**
-     * WGS 84 / Tamil Nadu
-     * Extent: India - Tamil Nadu; Pudacherry and Karaikal areas of Pudacherry territory.
-     */
-    public const EPSG_WGS_84_TAMIL_NADU = 'urn:ogc:def:crs:EPSG::7785';
 
     /**
      * WGS 84 / Tripura
@@ -8449,16 +8953,16 @@ trait ProjectedConstantsChunk4
     public const EPSG_WGS_84_UTM_ZONE_9S = 'urn:ogc:def:crs:EPSG::32709';
 
     /**
-     * WGS 84 / Uttar Pradesh
-     * Extent: India - Uttar Pradesh.
-     */
-    public const EPSG_WGS_84_UTTAR_PRADESH = 'urn:ogc:def:crs:EPSG::7775';
-
-    /**
      * WGS 84 / Uttaranchal
      * Extent: India - Uttarakhand (Uttaranchal).
      */
     public const EPSG_WGS_84_UTTARANCHAL = 'urn:ogc:def:crs:EPSG::7776';
+
+    /**
+     * WGS 84 / Uttar Pradesh
+     * Extent: India - Uttar Pradesh.
+     */
+    public const EPSG_WGS_84_UTTAR_PRADESH = 'urn:ogc:def:crs:EPSG::7775';
 
     /**
      * WGS 84 / West Bengal
@@ -8486,8 +8990,9 @@ trait ProjectedConstantsChunk4
      * WSPG Grid
      * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
      * and Wilton works, Redcar
-     * The CRS's definition through transformation ETRS89 to WSPG-IRF (1) (code 10860) and map projection WSPG-TM (code
-     * 10862) emulates the WSPG Snake projection applied to ETRS89 as realized through OSNet 2009 CORS.
+     * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to WSPG-IRF (1) (code 10860) and map
+     * projection WSPG-TM (code 10862) emulates the WSPG Snake projection applied to ETRS89 as realized through OSNet
+     * v2009.
      */
     public const EPSG_WSPG_GRID = 'urn:ogc:def:crs:EPSG::10863';
 
@@ -8940,6 +9445,13 @@ trait ProjectedConstantsChunk4
     public const EPSG_XIAN_1980_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::2337';
 
     /**
+     * Xrail84 / London Survey Grid TM
+     * Extent: UK - Greater London and surrounding area
+     * Horizontal component of  the London Survey Grid 2025 (LSG2025) (CRS code 11006).
+     */
+    public const EPSG_XRAIL84_LONDON_SURVEY_GRID_TM = 'urn:ogc:def:crs:EPSG::10995';
+
+    /**
      * Yemen NGN96 / UTM zone 37N
      * Extent: Yemen - west of 42°E.
      */
@@ -8994,56 +9506,4 @@ trait ProjectedConstantsChunk4
      * Extent: Suriname.
      */
     public const EPSG_ZANDERIJ_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::31121';
-
-    /**
-     * Fk89 / Faroe Lambert FK89
-     * Extent: Faroe Islands - onshore
-     * Replaces FD54 / Faroe Lambert (fk54) (CRS code 3144) for cadastral survey.
-     */
-    public const EPSG_FK89_FAROE_LAMBERT_FK89 = 'urn:ogc:def:crs:EPSG::3173';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_2_WEST instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_2_WEST = 'urn:ogc:def:crs:EPSG::2299';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_3_WEST instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_3_WEST = 'urn:ogc:def:crs:EPSG::2301';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_4_WEST instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_4_WEST = 'urn:ogc:def:crs:EPSG::2303';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_5_WEST instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_5_WEST = 'urn:ogc:def:crs:EPSG::2304';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_6_WEST instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_6_WEST = 'urn:ogc:def:crs:EPSG::2305';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_7_WEST instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_7_WEST = 'urn:ogc:def:crs:EPSG::2306';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_GREENLAND_ZONE_8 instead
-     */
-    public const EPSG_QORNOQ_1927_GREENLAND_ZONE_8_EAST = 'urn:ogc:def:crs:EPSG::2307';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_22N instead
-     */
-    public const EPSG_QORNOQ_1927_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::2216';
-
-    /**
-     * @deprecated use EPSG_QOORNOQ_1927_UTM_ZONE_23N instead
-     */
-    public const EPSG_QORNOQ_1927_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::2217';
 }

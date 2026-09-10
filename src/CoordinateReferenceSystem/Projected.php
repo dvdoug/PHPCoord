@@ -26,7 +26,6 @@ class Projected extends CoordinateReferenceSystem
     use ProjectedConstantsChunk3;
     use ProjectedConstantsChunk4;
     use ProjectedSRIDData;
-
     protected Geographic2D|Geographic3D $baseCRS;
 
     protected ?string $derivingConversion;

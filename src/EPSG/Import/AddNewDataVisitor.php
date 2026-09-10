@@ -24,6 +24,7 @@ use function explode;
 use function array_map;
 use function rtrim;
 use function implode;
+use function trim;
 
 use const SORT_NATURAL;
 
@@ -40,6 +41,9 @@ class AddNewDataVisitor extends NodeVisitorAbstract
         foreach ($this->data as &$dataRow) {
             if (isset($dataRow['constant_help'])) {
                 $dataRow['help'] = $dataRow['constant_help'];
+            }
+            if (isset($dataRow['help'])) {
+                $dataRow['help'] = trim($dataRow['help']);
             }
             unset($dataRow['constant_help']);
             unset($dataRow['deprecated']);

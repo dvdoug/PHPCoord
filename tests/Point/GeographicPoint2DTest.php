@@ -25,7 +25,7 @@ use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2DSRIDData;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
-use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\ExtentInteriorPoints;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
@@ -44,8 +44,7 @@ class GeographicPoint2DTest extends TestCase
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
         $method = CoordinateOperationMethods::getMethodData($operation['method']);
-        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
-        $centre = $operationExtent->getPointInside();
+        $centre = ExtentInteriorPoints::get($operation['extent']);
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
         $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
@@ -82,7 +81,7 @@ class GeographicPoint2DTest extends TestCase
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
-                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
+                    if (str_ends_with($paramName, 'File') && $paramValue && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

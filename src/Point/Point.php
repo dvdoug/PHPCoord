@@ -24,6 +24,7 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
@@ -37,6 +38,7 @@ use function atan2;
 use function class_exists;
 use function is_string;
 use function property_exists;
+use function sqrt;
 use function sscanf;
 use function str_ends_with;
 use function str_starts_with;
@@ -49,9 +51,21 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_AND_SLOPE,
         CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD,
         CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL,
+    ];
+    protected const METHODS_REQUIRING_EPOCH_CHANGE = [
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG,
+        CoordinateOperationMethods::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => CoordinateOperationMethods::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG,
+        CoordinateOperationMethods::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => CoordinateOperationMethods::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG,
+        CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL,
     ];
     protected const METHODS_THAT_REQUIRE_DIRECTION = [
         CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION => CoordinateOperationMethods::EPSG_SIMILARITY_TRANSFORMATION,
@@ -59,14 +73,48 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_NADCON5_2D => CoordinateOperationMethods::EPSG_NADCON5_2D,
         CoordinateOperationMethods::EPSG_NADCON5_3D => CoordinateOperationMethods::EPSG_NADCON5_3D,
         CoordinateOperationMethods::EPSG_NTV2 => CoordinateOperationMethods::EPSG_NTV2,
+        CoordinateOperationMethods::EPSG_NTV1 => CoordinateOperationMethods::EPSG_NTV1,
         CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019 => CoordinateOperationMethods::EPSG_ZERO_TIDE_HEIGHT_TO_MEAN_TIDE_HEIGHT_EVRF2019,
-        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATION_BY_GRID_INTERPOLATION_IGN,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN_BY_GRID_IGN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN_BY_GRID_IGN,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTX,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GTG,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_GGXF,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PL_TXT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD,
         CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN,
         CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 => CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2,
         CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCENTRIC_DOMAIN,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG2D_DOMAIN,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOG3D_DOMAIN,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOCENTRIC_DOMAIN,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG2D_DOMAIN,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_DOMAIN => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_DOMAIN,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_TO_COMPOUND => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_GEOG3D_TO_COMPOUND,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOCEN => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOCEN,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG2D => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG2D,
+        CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG3D => CoordinateOperationMethods::EPSG_COORDINATE_FRAME_ROTATION_FULL_MATRIX_GEOG3D,
+        CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOCENTRIC_DOMAIN => CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOCENTRIC_DOMAIN,
+        CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN => CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG2D_DOMAIN,
+        CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG3D_DOMAIN => CoordinateOperationMethods::EPSG_POSITION_VECTOR_TRANSFORMATION_GEOG3D_DOMAIN,
+        CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOCENTRIC_DOMAIN => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOCENTRIC_DOMAIN,
+        CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG2D_DOMAIN,
+        CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG3D_DOMAIN => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_CF_GEOG3D_DOMAIN,
+        CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOCENTRIC_DOMAIN,
+        CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG2D_DOMAIN,
+        CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG3D_DOMAIN => CoordinateOperationMethods::EPSG_MOLODENSKY_BADEKAS_PV_GEOG3D_DOMAIN,
+        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_COORDINATE_FRAME_ROTATION_GEOCEN,
+        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN,
+        CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC => CoordinateOperationMethods::EPSG_TIME_DEPENDENT_POSITION_VECTOR_TFM_GEOCENTRIC,
+        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN => CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCEN_DOMAIN_BY_XYZ_GRID_GTG => CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_GEOCEN_DOMAIN_BY_XYZ_GRID_GTG,
+        CoordinateOperationMethods::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => CoordinateOperationMethods::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG,
+        CoordinateOperationMethods::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => CoordinateOperationMethods::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG,
+        CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN => CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN,
     ];
 
     /**
@@ -76,7 +124,7 @@ abstract class Point implements Stringable
 
     /**
      * @internal
-     * @param array{horizontalPoint?: Point} $additionalParams
+     * @param array{horizontalPoint?: Point, targetEpoch?: Time} $additionalParams
      */
     public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, Length $accuracy, array $additionalParams = []): self
     {
@@ -91,18 +139,23 @@ abstract class Point implements Stringable
 
             return $point;
         }
+
         $method = CoordinateOperationMethods::getFunctionName($operation['method']);
         $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
 
         if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']]) && isset($additionalParams['horizontalPoint'])) {
             $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
         }
+        if (isset($additionalParams['targetEpoch'])) {
+            $params['targetEpoch'] = $additionalParams['targetEpoch'];
+        }
 
         $point = $this->$method($to, ...$params);
         assert(property_exists($this, 'accuracy'));
         assert(property_exists($point, 'accuracy'));
-        $existingAccuracy = $this->accuracy ?? new Metre(0);
-        $point->accuracy = $existingAccuracy->add($accuracy);
+        $existingMetres = ($this->accuracy ?? new Metre(0))->asMetres()->getValue();
+        $stepMetres = $accuracy->asMetres()->getValue();
+        $point->accuracy = new Metre(sqrt($existingMetres ** 2 + $stepMetres ** 2));
 
         return $point;
     }
@@ -321,8 +374,8 @@ abstract class Point implements Stringable
             }
         }
 
-        $xt = $xs + $mTdX * $scalingFactorForCoordDifferences->asUnity()->getValue();
-        $yt = $ys + $mTdY * $scalingFactorForCoordDifferences->asUnity()->getValue();
+        $xt = $xs + $mTdX / $scalingFactorForCoordDifferences->asUnity()->getValue();
+        $yt = $ys + $mTdY / $scalingFactorForCoordDifferences->asUnity()->getValue();
 
         return ['xt' => $xt, 'yt' => $yt];
     }

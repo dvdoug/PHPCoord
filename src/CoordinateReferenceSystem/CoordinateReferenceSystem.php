@@ -14,7 +14,9 @@ use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 
+use function array_key_exists;
 use function array_merge;
+use function in_array;
 
 abstract class CoordinateReferenceSystem
 {
@@ -116,6 +118,58 @@ abstract class CoordinateReferenceSystem
         }
 
         return self::$cachedObjects[$srid];
+    }
+
+    /**
+     * If $crsSrid is an ETRS89 national realization (OSNet, AGRS2010, …), the generic ETRS89 CRS of the same type
+     * (4258 / 4937 / 4936). Compounds keep the same vertical (e.g. NLD+NAP → ETRS89+NAP).
+     * Reads sridData rather than fromSRID() so we don't load bounding polygons for every CRS in the graph.
+     *
+     * @internal
+     */
+    public static function getETRS89EnsembleEquivalentSRID(string $crsSrid): ?string
+    {
+        static $cache = [
+        ];
+        if (array_key_exists($crsSrid, $cache)) {
+            return $cache[$crsSrid];
+        }
+        $equivalent = self::calculateETRS89EnsembleEquivalentSRID($crsSrid);
+        if ($equivalent === $crsSrid) {
+            $equivalent = null;
+        }
+
+        return $cache[$crsSrid] = $equivalent;
+    }
+
+    private static function calculateETRS89EnsembleEquivalentSRID(string $crsSrid): ?string
+    {
+        static $etrs89Members = null;
+        $etrs89Members ??= Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE)->getEnsembleMembers();
+        $compound = Compound::getSRIDData($crsSrid);
+        if ($compound) {
+            $horizontalEquivalent = self::getETRS89EnsembleEquivalentSRID($compound['horizontal_crs']);
+            if (!$horizontalEquivalent) {
+                return null;
+            }
+
+            return Compound::findSRIDByHorizontalAndVertical($horizontalEquivalent, $compound['vertical_crs']);
+        }
+        $byType = [
+            Geographic2D::class => Geographic2D::EPSG_ETRS89,
+            Geographic3D::class => Geographic3D::EPSG_ETRS89,
+            Geocentric::class => Geocentric::EPSG_ETRS89,
+        ];
+        foreach ($byType as $class => $ensembleCrs) {
+            $data = $class::getSRIDData($crsSrid);
+            if (!$data) {
+                continue;
+            }
+
+            return in_array($data['datum'], $etrs89Members, true) ? $ensembleCrs : null;
+        }
+
+        return null;
     }
 
     /**

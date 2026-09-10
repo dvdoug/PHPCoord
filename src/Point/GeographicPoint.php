@@ -19,12 +19,13 @@ use PHPCoord\CoordinateOperation\GeocentricValue;
 use PHPCoord\CoordinateOperation\GeographicGeoidHeightGrid;
 use PHPCoord\CoordinateOperation\GeographicGrid;
 use PHPCoord\CoordinateOperation\GeographicValue;
+use PHPCoord\CoordinateOperation\GeoTiffGrid;
 use PHPCoord\CoordinateOperation\NADCON5Grid;
 use PHPCoord\CoordinateOperation\NADCON5Grids;
+use PHPCoord\CoordinateOperation\NTv2VelGrid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -32,6 +33,7 @@ use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
+use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
 use PHPCoord\Geometry\BoundingArea;
@@ -42,11 +44,15 @@ use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Rate;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use PHPCoord\UnitOfMeasure\Time\Time;
+use PHPCoord\UnitOfMeasure\Time\Year;
 
 use function abs;
+use function assert;
 use function asinh;
 use function atan;
 use function atan2;
@@ -54,6 +60,7 @@ use function atanh;
 use function cos;
 use function cosh;
 use function count;
+use function floor;
 use function hypot;
 use function implode;
 use function is_nan;
@@ -64,7 +71,6 @@ use function sinh;
 use function sqrt;
 use function str_replace;
 use function tan;
-use function assert;
 
 use const M_E;
 use const M_PI;
@@ -108,11 +114,11 @@ class GeographicPoint extends Point implements ConvertiblePoint
 
     protected function __construct(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height, ?DateTimeInterface $epoch, ?Length $accuracy = null)
     {
-        if ($crs instanceof Geographic2D && $height !== null) {
+        if ($crs instanceof Geographic2D && $height) {
             throw new InvalidCoordinateReferenceSystemException('A 2D geographic point must not include a height');
         }
 
-        if ($crs instanceof Geographic3D && $height === null) {
+        if ($crs instanceof Geographic3D && !$height) {
             throw new InvalidCoordinateReferenceSystemException('A 3D geographic point must include a height, none given');
         }
 
@@ -155,6 +161,20 @@ class GeographicPoint extends Point implements ConvertiblePoint
     public function getLongitude(): Angle
     {
         return $this->longitude;
+    }
+
+    protected function geographic3DForPointMotion(): self
+    {
+        if ($this->crs instanceof Geographic3D) {
+            return $this;
+        }
+
+        $geog3D = $this->crs->getBaseCRS();
+        if (!$geog3D instanceof Geographic3D) {
+            $geog3D = $this->geographic3DCRSForDatum($this->crs->getDatum());
+        }
+
+        return self::create($geog3D, $this->latitude, $this->longitude, new Metre(0), $this->epoch);
     }
 
     public function getHeight(): ?Length
@@ -255,21 +275,57 @@ class GeographicPoint extends Point implements ConvertiblePoint
     }
 
     /**
-     * Coordinate Frame rotation (geog2D/geog3D domain)
+     * Coordinate Frame rotation (geog2D/geog3D domain, or geog3D to compound)
      * Note the analogy with the Position Vector tfm (codes 9606/1037) but beware of the differences!  The Position Vector
      * convention is used by IAG and recommended by ISO 19111. See methods 1032/1038/9607 for similar tfms operating
-     * between other CRS types.
+     * between other CRS types. Method 1149 is the same 7-parameter tfm with H = h into a compound CRS.
      */
     public function coordinateFrameRotation(
-        Geographic2D|Geographic3D $to,
+        Geographic2D|Geographic3D|Compound $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
         Length $zAxisTranslation,
         Angle $xAxisRotation,
         Angle $yAxisRotation,
         Angle $zAxisRotation,
-        Scale $scaleDifference
-    ): self {
+        Scale $scaleDifference,
+        bool $inReverse = false
+    ): self|CompoundPoint {
+        if ($to instanceof Compound) {
+            /** @var Geographic2D $horizontal */
+            $horizontal = $to->getHorizontal();
+
+            $targetGeog3D = new Geographic3D(
+                $horizontal->getName(),
+                $this->crs->getCoordinateSystem(),
+                $horizontal->getDatum(),
+                $to->getBoundingArea()
+            );
+            $transformed = $this->coordinateFrameMolodenskyBadekas(
+                $targetGeog3D,
+                $xAxisTranslation,
+                $yAxisTranslation,
+                $zAxisTranslation,
+                $xAxisRotation,
+                $yAxisRotation,
+                $zAxisRotation,
+                $scaleDifference,
+                new Metre(0),
+                new Metre(0),
+                new Metre(0),
+                $inReverse
+            );
+            /** @var Length $height */
+            $height = $transformed->getHeight();
+
+            return CompoundPoint::create(
+                $to,
+                self::create($horizontal, $transformed->getLatitude(), $transformed->getLongitude(), null, $this->getCoordinateEpoch()),
+                VerticalPoint::create($to->getVertical(), $height, $this->getCoordinateEpoch()),
+                $this->getCoordinateEpoch()
+            );
+        }
+
         return $this->coordinateFrameMolodenskyBadekas(
             $to,
             $xAxisTranslation,
@@ -281,7 +337,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $scaleDifference,
             new Metre(0),
             new Metre(0),
-            new Metre(0)
+            new Metre(0),
+            $inReverse
         );
     }
 
@@ -301,7 +358,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Scale $scaleDifference,
         Length $ordinate1OfEvaluationPoint,
         Length $ordinate2OfEvaluationPoint,
-        Length $ordinate3OfEvaluationPoint
+        Length $ordinate3OfEvaluationPoint,
+        bool $inReverse = false
     ): self {
         $geographicValue = new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
         $asGeocentric = $geographicValue->asGeocentricValue();
@@ -320,9 +378,16 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
         $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
 
-        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * $rz) + (($zs - $zp) * -$ry)) + $tx + $xp;
-        $yt = $M * ((($xs - $xp) * -$rz) + (($ys - $yp) * 1) + (($zs - $zp) * $rx)) + $ty + $yp;
-        $zt = $M * ((($xs - $xp) * $ry) + (($ys - $yp) * -$rx) + (($zs - $zp) * 1)) + $tz + $zp;
+        if ($inReverse) {
+            $xt = (1 / $M) * ((($xs - $tx - $xp) * (cos($ry) * cos($rz))) + (($ys - $ty - $yp) * (-cos($ry) * sin($rz))) + (($zs - $tz - $zp) * sin($ry))) + $xp;
+            $yt = (1 / $M) * ((($xs - $tx - $xp) * (cos($rx) * sin($rz) + sin($rx) * sin($ry) * cos($rz))) + (($ys - $ty - $yp) * (cos($rx) * cos($rz) - sin($rx) * sin($ry) * sin($rz))) + (($zs - $tz - $zp) * (-sin($rx) * cos($ry)))) + $yp;
+            $zt = (1 / $M) * ((($xs - $tx - $xp) * (sin($rx) * sin($rz) - cos($rx) * sin($ry) * cos($rz))) + (($ys - $ty - $yp) * (sin($rx) * cos($rz) + cos($rx) * sin($ry) * sin($rz))) + (($zs - $tz - $zp) * (cos($rx) * cos($ry)))) + $zp;
+        } else {
+            $xt = $M * ((($xs - $xp) * (cos($ry) * cos($rz))) + (($ys - $yp) * (cos($rx) * sin($rz) + sin($rx) * sin($ry) * cos($rz))) + (($zs - $zp) * (sin($rx) * sin($rz) - cos($rx) * sin($ry) * cos($rz)))) + $tx + $xp;
+            $yt = $M * ((($xs - $xp) * (-cos($ry) * sin($rz))) + (($ys - $yp) * (cos($rx) * cos($rz) - sin($rx) * sin($ry) * sin($rz))) + (($zs - $zp) * (sin($rx) * cos($rz) + cos($rx) * sin($ry) * sin($rz)))) + $ty + $yp;
+            $zt = $M * ((($xs - $xp) * sin($ry)) + (($ys - $yp) * (-sin($rx) * cos($ry))) + (($zs - $zp) * (cos($rx) * cos($ry)))) + $tz + $zp;
+        }
+
         $newGeocentric = new GeocentricValue(new Metre($xt), new Metre($yt), new Metre($zt), $to->getDatum());
         $newGeographic = $newGeocentric->asGeographicValue();
 
@@ -343,7 +408,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Angle $xAxisRotation,
         Angle $yAxisRotation,
         Angle $zAxisRotation,
-        Scale $scaleDifference
+        Scale $scaleDifference,
+        bool $inReverse = false
     ): self {
         return $this->positionVectorMolodenskyBadekas(
             $to,
@@ -356,7 +422,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $scaleDifference,
             new Metre(0),
             new Metre(0),
-            new Metre(0)
+            new Metre(0),
+            $inReverse
         );
     }
 
@@ -376,7 +443,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Scale $scaleDifference,
         Length $ordinate1OfEvaluationPoint,
         Length $ordinate2OfEvaluationPoint,
-        Length $ordinate3OfEvaluationPoint
+        Length $ordinate3OfEvaluationPoint,
+        bool $inReverse = false
     ): self {
         $geographicValue = new GeographicValue($this->latitude, $this->longitude, $this->height, $this->crs->getDatum());
         $asGeocentric = $geographicValue->asGeocentricValue();
@@ -395,9 +463,16 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $yp = $ordinate2OfEvaluationPoint->asMetres()->getValue();
         $zp = $ordinate3OfEvaluationPoint->asMetres()->getValue();
 
-        $xt = $M * ((($xs - $xp) * 1) + (($ys - $yp) * -$rz) + (($zs - $zp) * $ry)) + $tx + $xp;
-        $yt = $M * ((($xs - $xp) * $rz) + (($ys - $yp) * 1) + (($zs - $zp) * -$rx)) + $ty + $yp;
-        $zt = $M * ((($xs - $xp) * -$ry) + (($ys - $yp) * $rx) + (($zs - $zp) * 1)) + $tz + $zp;
+        if ($inReverse) {
+            $xt = (1 / $M) * ((($xs - $tx - $xp) * (cos(-$ry) * cos(-$rz))) + (($ys - $ty - $yp) * (-cos(-$ry) * sin(-$rz))) + (($zs - $tz - $zp) * sin(-$ry))) + $xp;
+            $yt = (1 / $M) * ((($xs - $tx - $xp) * (cos(-$rx) * sin(-$rz) + sin(-$rx) * sin(-$ry) * cos(-$rz))) + (($ys - $ty - $yp) * (cos(-$rx) * cos(-$rz) - sin(-$rx) * sin(-$ry) * sin(-$rz))) + (($zs - $tz - $zp) * (-sin(-$rx) * cos(-$ry)))) + $yp;
+            $zt = (1 / $M) * ((($xs - $tx - $xp) * (sin(-$rx) * sin(-$rz) - cos(-$rx) * sin(-$ry) * cos(-$rz))) + (($ys - $ty - $yp) * (sin(-$rx) * cos(-$rz) + cos(-$rx) * sin(-$ry) * sin(-$rz))) + (($zs - $tz - $zp) * (cos(-$rx) * cos(-$ry)))) + $zp;
+        } else {
+            $xt = $M * ((($xs - $xp) * (cos(-$ry) * cos(-$rz))) + (($ys - $yp) * (cos(-$rx) * sin(-$rz) + sin(-$rx) * sin(-$ry) * cos(-$rz))) + (($zs - $zp) * (sin(-$rx) * sin(-$rz) - cos(-$rx) * sin(-$ry) * cos(-$rz)))) + $tx + $xp;
+            $yt = $M * ((($xs - $xp) * (-cos(-$ry) * sin(-$rz))) + (($ys - $yp) * (cos(-$rx) * cos(-$rz) - sin(-$rx) * sin(-$ry) * sin(-$rz))) + (($zs - $zp) * (sin(-$rx) * cos(-$rz) + cos(-$rx) * sin(-$ry) * sin(-$rz)))) + $ty + $yp;
+            $zt = $M * ((($xs - $xp) * sin(-$ry)) + (($ys - $yp) * (-sin(-$rx) * cos(-$ry))) + (($zs - $zp) * (cos(-$rx) * cos(-$ry)))) + $tz + $zp;
+        }
+
         $newGeocentric = new GeocentricValue(new Metre($xt), new Metre($yt), new Metre($zt), $to->getDatum());
         $newGeographic = $newGeocentric->asGeographicValue();
 
@@ -414,7 +489,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Geographic2D|Geographic3D $to,
         Length $xAxisTranslation,
         Length $yAxisTranslation,
-        Length $zAxisTranslation
+        Length $zAxisTranslation,
+        bool $inReverse = false
     ): self {
         return $this->positionVectorTransformation(
             $to,
@@ -424,7 +500,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
             new Radian(0),
             new Radian(0),
             new Radian(0),
-            new Unity(0)
+            new Unity(0),
+            $inReverse
         );
     }
 
@@ -586,6 +663,27 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $easting = $falseEasting->asMetres()->getValue() + $nu * 1 / tan($latitude) * sin($L);
             $northing = $falseNorthing->asMetres()->getValue() + $M - $MO + $nu * 1 / tan($latitude) * (1 - cos($L));
         }
+
+        return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
+    }
+
+    /**
+     * Azimuthal Equidistant
+     * Uses Karney geodesics (EPSG 1125 / Equi-7); not Modified Azimuthal Equidistant (9832).
+     */
+    public function azimuthalEquidistant(
+        Projected $to,
+        Angle $latitudeOfNaturalOrigin,
+        Angle $longitudeOfNaturalOrigin,
+        Length $falseEasting,
+        Length $falseNorthing
+    ): ProjectedPoint {
+        $geodesic = new Geodesic($this->crs->getDatum()->getEllipsoid());
+        $origin = new GeographicValue($latitudeOfNaturalOrigin, $longitudeOfNaturalOrigin, null, $this->crs->getDatum());
+        [$s12, $alpha12] = $geodesic->inverse($origin, $this->asGeographicValue());
+
+        $easting = $falseEasting->asMetres()->getValue() + $s12 * sin($alpha12);
+        $northing = $falseNorthing->asMetres()->getValue() + $s12 * cos($alpha12);
 
         return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
@@ -984,14 +1082,28 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $q = (1 - $e2) * ((sin($latitude) / (1 - $e2 * sin($latitude) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitude)) / (1 + $e * sin($latitude)))));
         $qO = (1 - $e2) * ((sin($latitudeOrigin) / (1 - $e2 * sin($latitudeOrigin) ** 2)) - ((1 / (2 * $e)) * log((1 - $e * sin($latitudeOrigin)) / (1 + $e * sin($latitudeOrigin)))));
         $qP = (1 - $e2) * ((1 / (1 - $e2)) - ((1 / (2 * $e)) * log((1 - $e) / (1 + $e))));
-        $beta = self::asin($q / $qP);
-        $betaO = self::asin($qO / $qP);
-        $Rq = $a * sqrt($qP / 2);
-        $B = $Rq * sqrt(2 / (1 + sin($betaO) * sin($beta) + (cos($betaO) * cos($beta) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue()))));
-        $D = $a * (cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2)) / ($Rq * cos($betaO));
+        $deltaLon = $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
 
-        $easting = $falseEasting->asMetres()->getValue() + (($B * $D) * (cos($beta) * sin($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
-        $northing = $falseNorthing->asMetres()->getValue() + ($B / $D) * ((cos($betaO) * sin($beta)) - (sin($betaO) * cos($beta) * cos($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue())));
+        if (abs($latitudeOrigin) === M_PI / 2) {
+            if ($latitudeOrigin >= 0) {
+                $rho = $a * sqrt($qP - $q);
+                $easting = $falseEasting->asMetres()->getValue() + $rho * sin($deltaLon);
+                $northing = $falseNorthing->asMetres()->getValue() - $rho * cos($deltaLon);
+            } else {
+                $rho = $a * sqrt($qP + $q);
+                $easting = $falseEasting->asMetres()->getValue() + $rho * sin($deltaLon);
+                $northing = $falseNorthing->asMetres()->getValue() + $rho * cos($deltaLon);
+            }
+        } else {
+            $beta = self::asin($q / $qP);
+            $betaO = self::asin($qO / $qP);
+            $Rq = $a * sqrt($qP / 2);
+            $B = $Rq * sqrt(2 / (1 + sin($betaO) * sin($beta) + (cos($betaO) * cos($beta) * cos($deltaLon))));
+            $D = $a * (cos($latitudeOrigin) / sqrt(1 - $e2 * sin($latitudeOrigin) ** 2)) / ($Rq * cos($betaO));
+
+            $easting = $falseEasting->asMetres()->getValue() + (($B * $D) * (cos($beta) * sin($deltaLon)));
+            $northing = $falseNorthing->asMetres()->getValue() + ($B / $D) * ((cos($betaO) * sin($beta)) - (sin($betaO) * cos($beta) * cos($deltaLon)));
+        }
 
         return ProjectedPoint::create($to, new Metre($easting), new Metre($northing), new Metre(-$easting), new Metre(-$northing), $this->epoch);
     }
@@ -1241,8 +1353,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $t = tan(M_PI / 4 - $latitude / 2) / ((1 - $e * sin($latitude)) / (1 + $e * sin($latitude))) ** ($e / 2);
         $n = sin($latitudeOrigin);
         $F = $mO / ($n * $tO ** $n);
-        $rO = $a * $F * $tO ** $n ** $kO;
-        $r = $a * $F * $t ** $n ** $kO;
+        $rO = $a * $F * $tO ** $n * $kO;
+        $r = $a * $F * $t ** $n * $kO;
         $theta = $n * $this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue();
 
         $westing = $falseEasting->asMetres()->getValue() - $r * sin($theta);
@@ -1377,7 +1489,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $H = $e * cos($latitudeOrigin) * cos($alpha) / sqrt(1 - $e2);
 
         if (sin($alpha) === 0.0) {
-            $s = self::asin(cos($latitudeOrigin) * sin($psi) - sin($latitudeOrigin) * cos($alpha)) * cos($alpha) / abs(cos($alpha));
+            $s = self::asin(cos($latitudeOrigin) * sin($psi) - sin($latitudeOrigin) * cos($psi)) * static::sign(cos($alpha));
         } else {
             $s = self::asin(sin($this->normaliseLongitude($this->longitude->subtract($longitudeOfNaturalOrigin))->asRadians()->getValue()) * cos($psi) / sin($alpha));
         }
@@ -1752,7 +1864,12 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $V = sin($B * ($longitude - $lonO));
         $U = (-$V * cos($gammaO) + $S * sin($gammaO)) / $T;
         $v = $A * log((1 - $U) / (1 + $U)) / (2 * $B);
-        $u = ($A * atan2($S * cos($gammaO) + $V * sin($gammaO), cos($B * ($longitude - $lonO))) / $B) - (abs($uC) * static::sign($latC));
+        $uFromNaturalOrigin = $A * atan2($S * cos($gammaO) + $V * sin($gammaO), cos($B * ($longitude - $lonO))) / $B;
+        if ($alphaC === M_PI / 2 && $longitude === $lonC) {
+            $u = 0.0;
+        } else {
+            $u = $uFromNaturalOrigin - abs($uC) * static::sign($latC);
+        }
 
         $easting = $v * cos($gammaC) + $u * sin($gammaC) + $eastingAtProjectionCentre->asMetres()->getValue();
         $northing = $u * cos($gammaC) - $v * sin($gammaC) + $northingAtProjectionCentre->asMetres()->getValue();
@@ -1908,7 +2025,9 @@ class GeographicPoint extends Point implements ConvertiblePoint
         Length $falseNorthing
     ): ProjectedPoint {
         $W = $zoneWidth->asDegrees()->getValue();
-        $Z = (int) ($this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / $W) % (int) (360 / $W) + 1;
+        $zoneIndex = $this->longitude->subtract($initialLongitude)->asDegrees()->getValue() / $W;
+        $zoneCount = 360 / $W;
+        $Z = (int) ($zoneIndex - floor($zoneIndex / $zoneCount) * $zoneCount) + 1;
 
         $longitudeOrigin = $initialLongitude->add(new Degree($Z * $W - $W / 2));
         $falseEasting = $falseEasting->add(new Metre($Z * 1000000));
@@ -2032,8 +2151,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
         $toLongitude = $this->longitude->add($longitudeOffset);
         $toHeight = $this->height->add($geoidHeight);
 
-        assert($to->getHorizontal() instanceof Geographic2D);
-        $horizontal = static::create($to->getHorizontal(), $toLatitude, $toLongitude, null, $this->epoch);
+        $horizontal = static::create($to->getHorizontal(), $toLatitude, $toLongitude, null, $this->epoch); // @phpstan-ignore argument.type
         $vertical = VerticalPoint::create($to->getVertical(), $toHeight, $this->epoch);
 
         return CompoundPoint::create($to, $horizontal, $vertical, $this->epoch);
@@ -2178,9 +2296,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
         /** @var ProjectedPoint $projected */
         $projected = $this->transverseMercator($etrs89NationalGrid, new Degree(49), new Degree(-2), new Unity(0.9996012717), new Metre(400000), new Metre(-100000));
 
-        assert($to->getHorizontal() instanceof Geographic2D);
         $horizontalPoint = self::create(
-            $to->getHorizontal(),
+            $to->getHorizontal(), // @phpstan-ignore argument.type
             $this->latitude,
             $this->longitude,
             null,
@@ -2233,12 +2350,11 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     public function geographic3DTo2DPlusGravityHeightFromGrid(
         Compound $to,
-        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
+        GeographicGeoidHeightGrid|GeoTiffGrid $geoidHeightCorrectionModelFile
     ): CompoundPoint {
         assert($this->height instanceof Length);
-        assert($to->getHorizontal() instanceof Geographic);
         $horizontalPoint = self::create(
-            $to->getHorizontal(),
+            $to->getHorizontal(), // @phpstan-ignore argument.type
             $this->latitude,
             $this->longitude,
             null,
@@ -2264,7 +2380,7 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     public function geographic3DToGravityHeightFromGrid(
         Vertical $to,
-        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
+        GeographicGeoidHeightGrid|GeoTiffGrid $geoidHeightCorrectionModelFile
     ): VerticalPoint {
         assert($this->height instanceof Length);
 
@@ -2273,6 +2389,275 @@ class GeographicPoint extends Point implements ConvertiblePoint
             $this->height->subtract($geoidHeightCorrectionModelFile->getHeightAdjustment($this)),
             $this->getCoordinateEpoch()
         );
+    }
+
+    /**
+     * Geographic3D to Depth.
+     * GN 7-2 §4.13.1: D = ζ − h. Not reversible (no horizontal position on reverse).
+     */
+    public function geographic3DToDepthFromGrid(
+        Vertical $to,
+        GeographicGeoidHeightGrid|GeoTiffGrid $geoidHeightCorrectionModelFile
+    ): VerticalPoint {
+        assert($this->height instanceof Length);
+
+        return VerticalPoint::create(
+            $to,
+            $geoidHeightCorrectionModelFile->getHeightAdjustment($this)->subtract($this->height),
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geog3D to Geog2D+Depth.
+     * GN 7-2 §4.13.2: D = ζ − h.
+     */
+    public function geographic3DTo2DPlusDepthFromGrid(
+        Compound $to,
+        GeographicGeoidHeightGrid|GeoTiffGrid $geoidHeightCorrectionModelFile
+    ): CompoundPoint {
+        assert($this->height instanceof Length);
+        $horizontalPoint = self::create(
+            $to->getHorizontal(), // @phpstan-ignore argument.type
+            $this->latitude,
+            $this->longitude,
+            null,
+            $this->getCoordinateEpoch()
+        );
+
+        $verticalPoint = VerticalPoint::create(
+            $to->getVertical(),
+            $geoidHeightCorrectionModelFile->getHeightAdjustment($this)->subtract($this->height),
+            $this->getCoordinateEpoch()
+        );
+
+        return CompoundPoint::create(
+            $to,
+            $horizontalPoint,
+            $verticalPoint,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight.
+     * Gravity-related height H = h − ζ where ζ is a constant geoid height.
+     */
+    public function geographic3DTo2DPlusGravityHeight(
+        Compound $to,
+        Length $geoidHeight
+    ): CompoundPoint {
+        assert($this->height instanceof Length);
+        $horizontalPoint = self::create(
+            $to->getHorizontal(), // @phpstan-ignore argument.type
+            $this->latitude,
+            $this->longitude,
+            null,
+            $this->getCoordinateEpoch()
+        );
+
+        $verticalPoint = VerticalPoint::create(
+            $to->getVertical(),
+            $this->height->subtract($geoidHeight),
+            $this->getCoordinateEpoch()
+        );
+
+        return CompoundPoint::create(
+            $to,
+            $horizontalPoint,
+            $verticalPoint,
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geographic3D to GravityRelatedHeight.
+     * Gravity-related height H = h − ζ where ζ is a constant geoid height.
+     */
+    public function geographic3DToGravityHeight(
+        Vertical $to,
+        Length $geoidHeight
+    ): VerticalPoint {
+        assert($this->height instanceof Length);
+
+        return VerticalPoint::create(
+            $to,
+            $this->height->subtract($geoidHeight),
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Point motion (geographic 3D domain) using NEU velocities
+     * GN 7-2 §4.2.3 / EPSG 1067.
+     * @param Rate<Length> $pointMotionVelocityNorth
+     * @param Rate<Length> $pointMotionVelocityEast
+     * @param Rate<Length> $pointMotionVelocityUp
+     */
+    public function pointMotionNeuVelocities(
+        Geographic3D $to,
+        Rate $pointMotionVelocityNorth,
+        Rate $pointMotionVelocityEast,
+        Rate $pointMotionVelocityUp,
+        Time $targetEpoch
+    ): self {
+        if (!$this->epoch) {
+            throw new InvalidCoordinateException('Point motion requires a coordinate epoch, none given');
+        }
+
+        // Points use PHP DateTimes for ease of use, but transformations use decimal years...
+        $pointEpoch = Year::fromDateTime($this->epoch);
+        $dt = $targetEpoch->subtract($pointEpoch)->getValue();
+
+        assert($this->height instanceof Length);
+        $latitude = $this->latitude->asRadians()->getValue();
+        $longitude = $this->longitude->asRadians()->getValue();
+        $height = $this->height->asMetres()->getValue();
+        $offset = $this->applyNeuVelocity(
+            $latitude,
+            $longitude,
+            $height,
+            $latitude,
+            $height,
+            $pointMotionVelocityNorth,
+            $pointMotionVelocityEast,
+            $pointMotionVelocityUp,
+            $dt
+        );
+
+        return static::create($to, new Radian($offset[0]), new Radian($offset[1]), new Metre($offset[2]), $targetEpoch->asYears()->asDateTime());
+    }
+
+    /**
+     * Point motion (geog3D domain) using NEU velocity grid (NTv2_Vel or GTG).
+     * GN 7-2 §4.2.3 / EPSG 1141 and PHPCoord 32769. Interpolate VN,VE,VU then apply 1067.
+     */
+    public function pointMotionNeuVelocityGrid(
+        Geographic3D $to,
+        NTv2VelGrid|GeoTiffGrid $pointMotionVelocityGridFile,
+        Time $targetEpoch
+    ): self {
+        /** @var array{0: Length, 1: Length, 2: Length} $velocities */
+        $velocities = $pointMotionVelocityGridFile->getValues(
+            $this->longitude->asDegrees()->getValue(),
+            $this->latitude->asDegrees()->getValue()
+        );
+
+        return $this->pointMotionNeuVelocities(
+            $to,
+            new Rate($velocities[1], new Year(1)),
+            new Rate($velocities[0], new Year(1)),
+            new Rate($velocities[2], new Year(1)),
+            $targetEpoch
+        );
+    }
+
+    /**
+     * Geographic 3D offset by an NEU velocity grid.
+     * The interval is the two datums' anchor epochs, not the date on the point.
+     * Reverse resamples the grid at the estimated source position.
+     */
+    public function geographic3DOffsetUsingNeuVelocityGrid(
+        Geographic3D $to,
+        NTv2VelGrid $pointMotionVelocityGridFile,
+        bool $inReverse = false
+    ): self {
+        $sourceAnchor = $this->crs->getDatum()->getAnchorEpoch();
+        $targetAnchor = $to->getDatum()->getAnchorEpoch();
+        if (!$sourceAnchor || !$targetAnchor) {
+            throw new InvalidCoordinateException('This CRS has no anchor epoch');
+        }
+
+        assert($this->height instanceof Length);
+        $dt = $targetAnchor->subtract($sourceAnchor)->getValue();
+        $baseLatitude = $this->latitude->asRadians()->getValue();
+        $baseLongitude = $this->longitude->asRadians()->getValue();
+        $baseHeight = $this->height->asMetres()->getValue();
+
+        /** @var array{0: Length, 1: Length, 2: Length} $velocities */
+        $velocities = $pointMotionVelocityGridFile->getValues(
+            $this->longitude->asDegrees()->getValue(),
+            $this->latitude->asDegrees()->getValue()
+        );
+        $moved = $this->applyNeuVelocity(
+            $baseLatitude,
+            $baseLongitude,
+            $baseHeight,
+            $baseLatitude,
+            $baseHeight,
+            new Rate($velocities[1], new Year(1)),
+            new Rate($velocities[0], new Year(1)),
+            new Rate($velocities[2], new Year(1)),
+            $dt
+        );
+
+        if ($inReverse) {
+            $sampleLatitude = $moved[0];
+            $sampleLongitude = $moved[1];
+            $sampleHeight = $moved[2];
+            do {
+                $previous = $velocities;
+                /** @var array{0: Length, 1: Length, 2: Length} $velocities */
+                $velocities = $pointMotionVelocityGridFile->getValues(
+                    (new Radian($sampleLongitude))->asDegrees()->getValue(),
+                    (new Radian($sampleLatitude))->asDegrees()->getValue()
+                );
+                $moved = $this->applyNeuVelocity(
+                    $baseLatitude,
+                    $baseLongitude,
+                    $baseHeight,
+                    $sampleLatitude,
+                    $sampleHeight,
+                    new Rate($velocities[1], new Year(1)),
+                    new Rate($velocities[0], new Year(1)),
+                    new Rate($velocities[2], new Year(1)),
+                    $dt
+                );
+                $sampleLatitude = $moved[0];
+                $sampleLongitude = $moved[1];
+                $sampleHeight = $moved[2];
+            } while (
+                abs($velocities[0]->getValue() - $previous[0]->getValue()) > self::ITERATION_CONVERGENCE_GRID
+                || abs($velocities[1]->getValue() - $previous[1]->getValue()) > self::ITERATION_CONVERGENCE_GRID
+                || abs($velocities[2]->getValue() - $previous[2]->getValue()) > self::ITERATION_CONVERGENCE_GRID
+            );
+        }
+
+        return static::create($to, new Radian($moved[0]), new Radian($moved[1]), new Metre($moved[2]), $targetAnchor->asDateTime());
+    }
+
+    /**
+     * @param  Rate<Length>                        $north
+     * @param  Rate<Length>                        $east
+     * @param  Rate<Length>                        $up
+     * @return array{0: float, 1: float, 2: float} latitude and longitude in radians, height in metres
+     */
+    private function applyNeuVelocity(
+        float $baseLatitude,
+        float $baseLongitude,
+        float $baseHeight,
+        float $sampleLatitude,
+        float $sampleHeight,
+        Rate $north,
+        Rate $east,
+        Rate $up,
+        float $dt
+    ): array {
+        $ellipsoid = $this->crs->getDatum()->getEllipsoid();
+        $a = $ellipsoid->getSemiMajorAxis()->asMetres()->getValue();
+        $e2 = $ellipsoid->getEccentricitySquared();
+        $rho = $a * (1 - $e2) / (1 - $e2 * sin($sampleLatitude) ** 2) ** (3 / 2);
+        $nu = $a / sqrt(1 - $e2 * (sin($sampleLatitude) ** 2));
+
+        $vn = $north->getChangePerYear()->asMetres()->getValue();
+        $ve = $east->getChangePerYear()->asMetres()->getValue();
+        $vu = $up->getChangePerYear()->asMetres()->getValue();
+
+        return [
+            $baseLatitude + $dt * $vn / ($rho + $sampleHeight),
+            $baseLongitude + $dt * $ve / (($nu + $sampleHeight) * cos($sampleLatitude)),
+            $baseHeight + $dt * $vu,
+        ];
     }
 
     /**

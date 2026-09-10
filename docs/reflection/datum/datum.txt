@@ -1,3 +1,17 @@
+AGRS2010 (ETRF2000)
+-------------------
+| Type: Geodetic
+| Extent: Netherlands
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_AGRS2010_ETRF2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1427')
+
+ITRF2005 at epoch 2010.5 aligned to ETRF2000 (R05) following the EUREF conventions.
+
+AGRS2010 is the annual solution for 2010 of the ETRS89 coordinates of 8 stations of the Active GNSS Reference System for the Netherlands (Actief GNSS Referentie Systeem voor Nederland, AGRS.NL).
+
 AIOC 1995
 ---------
 | Type: Vertical
@@ -122,6 +136,32 @@ Albanian 1987
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6191')
 
 
+Albanian Geodetic Reference Frame 2008
+--------------------------------------
+| Type: Geodetic
+| Extent: Albania
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ALBANIAN_GEODETIC_REFERENCE_FRAME_2008)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1429')
+
+Aligned to ETRF2000 at epoch 2008.0.
+
+Albanian Geodetic Reference Frame 2014
+--------------------------------------
+| Type: Geodetic
+| Extent: Albania
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ALBANIAN_GEODETIC_REFERENCE_FRAME_2014)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1430')
+
+Aligned to ETRF2000 at epoch 2014.177.
+
+Second national realization of ETRS89, in use for ALBCORS from 2014-03-06.
+
 Alboran
 -------
 | Type: Vertical
@@ -179,7 +219,7 @@ Replaces Tutuila vertical datum of 1962 (datum code 1121). Replaced by Pago Pago
 Amersfoort
 ----------
 | Type: Geodetic
-| Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone
+| Extent: Netherlands
 
 .. code-block:: php
 
@@ -187,6 +227,8 @@ Amersfoort
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6289')
 
 Originally defined through fundamental point Amersfoort, latitude 52°09'22.178"N, longitude 5°23'15.478"E (of Greenwich). Since 2000-10-01 has been redefined as derived from ETRS89 by application of the official transformation RDNAPTRANS(TM).
+
+Since 2008 extended offshore through the RDNAPTRANS(TM) transformation.
 
 Ammassalik 1958
 ---------------
@@ -766,6 +808,34 @@ Mean sea level between 1951 and 1956 at Clarendon Dock, Belfast. Initially reali
 
 Orthometric heights. Malin Head (datum code 5130) used for 1:50,000 and smaller mapping.
 
+Belgian Reference Frame 2002
+----------------------------
+| Type: Geodetic
+| Extent: Belgium
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BELGIAN_REFERENCE_FRAME_2002)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1432')
+
+Aligned to ETRF2000 at epoch 2002.73.
+
+National realization of ETRS89 in Belgium. Replaced by BEREF2011 (datum code 1447).
+
+Belgian Reference Frame 2011
+----------------------------
+| Type: Geodetic
+| Extent: Belgium
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BELGIAN_REFERENCE_FRAME_2011)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1447')
+
+ITRF2008 at epoch 2011.763 aligned to ETRF2000 using the EUREF conventions.
+
+Second national realization of ETRS89 in Belgium. Replaces BEREF2002 (datum code 1432).
+
 Bellevue
 --------
 | Type: Geodetic
@@ -827,6 +897,22 @@ Bhutan National Geodetic Datum
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1058')
 
 ITRF2000 at epoch 2003.87
+
+Replaced by National Reference Frame of Bhutan 2023 (datum code 1448).
+
+Bhutan Vertical Datum 2022
+--------------------------
+| Type: Vertical
+| Extent: Bhutan
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_BHUTAN_VERTICAL_DATUM_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1451')
+
+Surface formed by gravitational geoid DrukGeoid22  adjusted to zero-order levelling benchmark THIZ which has orthometric height of 2436.9872 m.
+
+Orthometric heights.
 
 Bioko
 -----
@@ -1082,19 +1168,45 @@ Defined through the application of the COV23 NTv2 transformation to ETRS89 as re
 
 Created in 2023 to support intermediate CRS COV23-IRF in the emulation of the COV23 Snake map projection.
 
-CR-SIRGAS
----------
+CR-SIRGAS epoch 2014.59
+-----------------------
 | Type: Geodetic
 | Extent: Costa Rica
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_CR_SIRGAS)
+    Datum::fromSRID(Datum::EPSG_CR_SIRGAS_EPOCH_2014_59)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1225')
 
 ITRF2008 (IGb08) at epoch 2014.59. Network of 42 GNSS stations of the passive and active reference system.
 
-Replaces CR05 from April 2018.
+CR-SIRGAS is a dynamic reference frame. CR-SIRGAS epoch 2014.59 is the first static 'snapshot'; it is coincident with the frame reference epoch. Replaces CR05 from April 2018.
+
+CR-SIRGAS epoch 2019.24
+-----------------------
+| Type: Geodetic
+| Extent: Costa Rica
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CR_SIRGAS_EPOCH_2019_24)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1428')
+
+ITRF2014 at epoch 2019.24. Network of 42 GNSS stations of the passive and active reference system.
+
+CR-SIRGAS is a dynamic reference frame. This is the second static 'snapshot'. Replaces CR05 from April 2018.
+
+CROPOS
+------
+| Type: Geodetic
+| Extent: Croatia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CROPOS)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1445')
+
+Aligned to ETRF2000 at epoch 2008.83.
 
 CWS13 Intermediate Reference Frame
 ----------------------------------
@@ -1638,6 +1750,22 @@ Cocos Islands 1965
 
 Fundamental point: Anna 1.
 
+Colombian Geodetic Vertical Datum 2023
+--------------------------------------
+| Type: Vertical
+| Extent: Colombia - mainland onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_COLOMBIAN_GEODETIC_VERTICAL_DATUM_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1464')
+
+Defined by the equipotential surface W0 = 62,636,853.4 m^2s^-2, as the conventional reference potential value adopted for the IHRS (IAG Resolution 1, Drewes et al. (2016)).
+
+COLGVD2023(QgeoidCOL2023) height is realized by quasigeoid model QgeoidCOL2023. Further information is available in IGAC Resolution 515 of 2026: 
+
+https://www.igac.gov.co/transparencia-y-acceso-a-la-informacion-publica/normograma/resolucion-515-de-2026
+
 Combani 1950
 ------------
 | Type: Geodetic
@@ -1721,7 +1849,7 @@ Replaced by Corrego Alegre 1970-72 (datum code 6225). NIMA gives coordinates of 
 Corrego Alegre 1970-72
 ----------------------
 | Type: Geodetic
-| Extent: Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also east of 42°W
+| Extent: Brazil - onshore - north of 15°S and east of 42°W, between 15°S and 18°S and east of 54°W, and between 18°S and 32°45'S
 
 .. code-block:: php
 
@@ -1746,19 +1874,19 @@ ITRF2000 at epoch 2005.83.  Network of 34 GPS stations throughout the country, f
 
 Replaces Ocotepeque (datum code 1070) in Costa Rica from March 2007.
 
-Croatian Terrestrial Reference System
--------------------------------------
+Croatian Terrestrial Reference System 1996
+------------------------------------------
 | Type: Geodetic
 | Extent: Croatia
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_CROATIAN_TERRESTRIAL_REFERENCE_SYSTEM)
+    Datum::fromSRID(Datum::EPSG_CROATIAN_TERRESTRIAL_REFERENCE_SYSTEM_1996)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6761')
 
-Densification of ETRS89 in Croatia at epoch 1995.55.
+Densification of ETRF89 in Croatia at epoch 1995.55.
 
-Based on 78 control points with coordinates determined in ETRS89.
+Based on 78 control points with coordinates determined in ETRF89.
 
 Croatian Vertical Reference Datum 1971
 --------------------------------------
@@ -1905,6 +2033,20 @@ Dansk Vertikal Reference 1990 ensemble
     Datum::fromSRID(Datum::EPSG_DANSK_VERTIKAL_REFERENCE_1990_ENSEMBLE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1371')
 
+
+Dart+26 Intermediate Reference Frame
+------------------------------------
+| Type: Geodetic
+| Extent: Ireland - on or related to the DART+ rail project from Dublin city centre to Drogheda, Greystones, Hazelhatch and Kilcock
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_DART_PLUS_26_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1460')
+
+Defined through the application of the Dart+26 NTv2 transformation to ETRS89 as realized through Irenet ETRF2000.
+
+Created in 2026 to support intermediate CRS Dart+26-IRF in the emulation of the Dart+26 Snake map projection.
 
 Datum 73
 --------
@@ -2375,6 +2517,202 @@ Polish densification of ETRS89 realized through adjustment of ASG-EUPOS network 
 
 Adopted as official Polish reference frame from 2012-12-01 through Ordinance of the Council of Ministers of 15th November 2012 on the state system of spatial reference system.
 
+ETRS89-AUT [2002]
+-----------------
+| Type: Geodetic
+| Extent: Austria
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_AUT_2002)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1431')
+
+Aligned to ETRF2000 at epoch 2002.56.
+
+ETRS89-CZE [2007]
+-----------------
+| Type: Geodetic
+| Extent: Czechia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_CZE_2007)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1433')
+
+Aligned to ETRF2000 at epoch 2007.0.
+
+ETRS89-DNK
+----------
+| Type: Geodetic
+| Extent: Denmark
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_DNK)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1412')
+
+ETRF92 at epoch 2015.829.
+
+The Danish ETRS89 realization was originally based on seven passive stations which over time have shown some instability. To remedy this, the Danish ETRS89 realization was updated in 2019 to include CORS stations. ETRS89 coordinates for the CORS stations were determined using a Helmert transformation that included observation of both the original passive stations and the CORS stations. The updated coordinates were determined in 2015, and hence, the intra-plate deformation epoch has changed to 2015.829 from the original epoch of 1992.7. Formally, the realization is unchanged, but in practice, the realization is now carried by the more geodynamically stable CORS stations.
+
+ETRS89-ESP [ERGNSS]
+-------------------
+| Type: Geodetic
+| Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_ESP_ERGNSS)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1442')
+
+Aligned to ETRF2000 at epoch 2017.0.
+
+ERGNSS coordinates aligned to ETRF2000 at epoch 2017.0 on 2018-03-15. The offset from REGENTE (ETRF96 at epoch 1995.4) of approximately 2cm is considered insignificant for most users.
+
+ETRS89-ESP [REGENTE]
+--------------------
+| Type: Geodetic
+| Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_ESP_REGENTE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1441')
+
+Aligned to ETRF96 at epoch 1995.4.
+
+ETRS89-FRO [2008]
+-----------------
+| Type: Geodetic
+| Extent: Faroe Islands
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_FRO_2008)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1436')
+
+ITRF2005 at epoch 2008.75 aligned to ETRF2000 following the EUREF conventions.
+
+Derived through a campaign of the Nordic Geodetic Commission in which stations across the Nordic countries were observed simultaneously for 7 full days in week 40 of 2008.
+
+ETRS89-HUN [ETRF2000]
+---------------------
+| Type: Geodetic
+| Extent: Hungary
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_HUN_ETRF2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1444')
+
+ITRF2020 at epoch 2024.0 aligned to ETRF2000 following EUREF conventions.
+
+ETRS89-IRE [ETRF2000]
+---------------------
+| Type: Geodetic
+| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_IRE_ETRF2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::6173')
+
+ETRS89 stations in Ireland
+
+Densification of ETRS89
+
+ETRS89-LUX [2020]
+-----------------
+| Type: Geodetic
+| Extent: Luxembourg
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_LUX_2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1453')
+
+IGS14 at epoch 2020.82 aligned to ETRF2000 following EUREF conventions.
+
+Replaces ETRS89-LUX [2013] from 2021-10-31. Replaced by ETRS89-LUX [2025] from 2026-10-31.
+
+ETRS89-LUX [2025]
+-----------------
+| Type: Geodetic
+| Extent: Luxembourg
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_LUX_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1463')
+
+IGb20 at epoch 2025.83 aligned to ETRF2000 following EUREF conventions.
+
+Replaces ETRS89-LUX [2020] from 2026-10-31.
+
+ETRS89-MKD [EUREF-MAK2010]
+--------------------------
+| Type: Geodetic
+| Extent: North Macedonia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_MKD_EUREF_MAK2010)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1438')
+
+Aligned to ETRF2000 at epoch 2010.631.
+
+ETRS89-PRT [1995]
+-----------------
+| Type: Geodetic
+| Extent: Portugal - mainland ("continental")
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_PRT_1995)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1439')
+
+Aligned to ETRF97 at epoch 1995.4.
+
+ETRS89-ROU [ETRF2000]
+---------------------
+| Type: Geodetic
+| Extent: Romania
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_ROU_ETRF2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1440')
+
+Aligned to ETRF2000 at epoch 2000.0.
+
+ETRS89-SVK [SKTRF09]
+--------------------
+| Type: Geodetic
+| Extent: Slovakia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_SVK_SKTRF09)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1434')
+
+Aligned to ETRF2000 at epoch 2008.5.
+
+In use 2011-04-01 to 2024-03-31. from 2024-04-01 replaced by ETRS89-SVK [SKTRF2022].
+
+ETRS89-SVK [SKTRF2022]
+----------------------
+| Type: Geodetic
+| Extent: Slovakia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_SVK_SKTRF2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1435')
+
+Aligned to ETRF2000 at epoch 2008.5.
+
+Replaces ETRS89-SVK [SKTRF09] from 2024-04-01.
+
 ETRS89/DREF91 Realization 2016
 ------------------------------
 | Type: Geodetic
@@ -2387,7 +2725,21 @@ ETRS89/DREF91 Realization 2016
 
 Realized by GNSS campaign 2008. Results were transformed from IGS05 epoch 2008.46 to ITRF2005 to ETRF2000, subsequently to ETRS89/DREF91 Realization 2002 (former German ETRS89 realization) by 3 rotation parameters.
 
-German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01. Replaced by ETRS89/DREF91 Realization 2025 from 2025-07-01.
+
+ETRS89/DREF91 Realization 2025
+------------------------------
+| Type: Geodetic
+| Extent: Germany
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_ETRS89_DREF91_REALIZATION_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1446')
+
+Realized by GNSS campaign 2021. Results were transformed from IGS20 epoch 2021.48 to ITRF2020 to ETRF2020.
+
+German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2016 from 2025-07-01.
 
 EUREF-FIN
 ---------
@@ -2402,6 +2754,20 @@ EUREF-FIN
 ETRF96 at epoch 1997.0.
 
 EUREF-FIN was realized with a GPS campaign in 1996-1997. Resulting ITRF96 coordinates at epoch 1997.0 were transformed to ETRF96 according to EUREF Technical Note 1. Formulas correct only rigid plate motion, thus epoch for postglacial rebound is 1997.0.
+
+EUREF89
+-------
+| Type: Geodetic
+| Extent: Norway including Svalbard
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_EUREF89)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1407')
+
+ITRF93 at epoch 1995.0.
+
+EUREF89 is the Norwegian realization of ETRS89. It was realized with GPS campaigns in 1994-1996. Resulting ITRF93 coordinates at epoch 1995.0 were transformed to ETRF93 (for which frame reference epoch is 1989.0) according to EUREF Technical Note 1. These formulas correct only for rigid plate motion, but not intraplate deformations.
 
 EWR2 Intermediate Reference Frame
 ---------------------------------
@@ -2780,7 +3146,7 @@ European Terrestrial Reference System 1989 ensemble
     Datum::fromSRID(Datum::EPSG_EUROPEAN_TERRESTRIAL_REFERENCE_SYSTEM_1989_ENSEMBLE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6258')
 
-Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005, ETRF2014 and ETRF2020. This 'ensemble' covers any or all of these realizations without distinction.
+Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005, ETRF2014 and ETRF2020. This ensemble covers any or all of these pan-European realizations and all national densifications without distinction.
 
 European Vertical Reference Frame 2000
 --------------------------------------
@@ -3546,6 +3912,42 @@ Greenland Lowest Astronomic Tide (2023)
 
 Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to GR96 through the gllat_2023 hydroid model.
 
+Greenland Lowest Astronomic Tide (2025)
+---------------------------------------
+| Type: Vertical
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_LOWEST_ASTRONOMIC_TIDE_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1457')
+
+Mean sea level as determined by satellite altimetry adjusted to LAT using coastal tide gauges and global tide models. Defined with respect to GR96 through the gllat_2025 hydroid model.
+
+Greenland Lowest Astronomical Tide
+----------------------------------
+| Type: Ensemble
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_LOWEST_ASTRONOMICAL_TIDE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1459')
+
+LAT as defined through any GLLAT hydroid model without distinction.
+
+Greenland Mean Sea Level
+------------------------
+| Type: Ensemble
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_MEAN_SEA_LEVEL)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1458')
+
+MSL as defined through any GLMSL hydroid model without distinction.
+
 Greenland Mean Sea Level (2023)
 -------------------------------
 | Type: Vertical
@@ -3557,6 +3959,18 @@ Greenland Mean Sea Level (2023)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1387')
 
 Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to GR96 through the glmsl_2023 hydroid model.
+
+Greenland Mean Sea Level (2025)
+-------------------------------
+| Type: Vertical
+| Extent: Greenland - offshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GREENLAND_MEAN_SEA_LEVEL_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1456')
+
+Mean sea level as determined by satellite altimetry and coastal tide gauges. Defined with respect to GR96 through the glmsl_2025 hydroid model.
 
 Greenland Reference 1996 (1996)
 -------------------------------
@@ -3858,6 +4272,20 @@ Helle 1954
     Datum::fromSRID(Datum::EPSG_HELLE_1954)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6660')
 
+
+Hellenic Terrestrial Reference System of 2007
+---------------------------------------------
+| Type: Geodetic
+| Extent: Greece. Includes Aegean Islands, Ionian Islands, Dodecanese Islands, Crete, and Mount Athos
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_HELLENIC_TERRESTRIAL_REFERENCE_SYSTEM_OF_2007)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1437')
+
+98 stations of the HEPOS network and 14 additional EPN/IGS stations referenced to ITRF2005 at epoch 2007.5 and aligned to ETRF2005.
+
+Observations were adjusted in ITRF2005 at epoch 2007.79 and the coordinates of EPN station AUT1 in Thessaloniki then aligned to ETRF2005 at epoch 2007.5 following the EUREF conventions. Due to the complex geodynamic conditions over the area, the three geocentric translations derived at AUT1 were applied to all other stations. After the EUREF Governing Board recommended not to use ETRF2005 and instead adopt ETRF2000, the HTRS07 coordinates were re-estimated in ITRF2005 at epoch 2007.83 and aligned to ETRF2000 strictly following the EUREF conventions. The Hellenic Positioning System (HEPOS) coordinates continue to be referenced to ETRF2005 at epoch 2007.5. The maximum differences between ETRF2000 at epoch 2007.83 and ETRF2005 at epoch 2007.5 are less than 2 cm in the horizontal components and 4 cm in the ellipsoidal height. In the tectonic setting of Greece, for practical applications of the static reference frame these differences are considered negligible.
 
 Helsinki 1943
 -------------
@@ -4289,6 +4717,20 @@ Mean sea level at Pointe-à-Pitre. Origin = IGN Marker 20A with defined height o
 
 Orthometric heights. Replaces IGN 1992 LD (datum code 5212).
 
+IGN 2023 Mayotte
+----------------
+| Type: Vertical
+| Extent: Mayotte - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_IGN_2023_MAYOTTE)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1443')
+
+Fundamental benchmark N-402-BIS at Issouf Ali pier, Dzaoudzi, with elevation of 5.002m above MSL Dzaoudzi 2015.
+
+Helmert orthometric heights.
+
 IGN Astro 1960
 --------------
 | Type: Geodetic
@@ -4435,7 +4877,7 @@ IGS20
 
 A subset of 332 stable, well-performing IGS stations from ITRF2020.
 
-Used for IGS products from GPS week 2238 (2022-11-27). Replaces IGb14. Compared to IGb14, IGS20 contains 98 new stations, mostly in previously sparsely covered areas, but with 25 IGb14 sites removed. For all practical purposes coincident with ITRF2020.
+Replaces IGb14. Compared to IGb14, IGS20 contains 98 new stations, mostly in previously sparsely covered areas, but with 25 IGb14 sites removed. For all practical purposes coincident with ITRF2020.
 
 IGS97
 -----
@@ -4506,20 +4948,6 @@ IGb20
 A subset of 343 stable, well-performing IGS stations from ITRF2020.
 
 Used for IGS products from GPS week 2352 (2025-02-02). Replaces IGS20. Compared to IGS20, IGb20 contains 11 new stations, mostly in previously sparsely covered areas. For all practical purposes coincident with ITRF2020-u2023.
-
-IRENET95
---------
-| Type: Geodetic
-| Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_IRENET95)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::6173')
-
-ETRS89 stations in Ireland
-
-Densification of ETRS89
 
 Ibiza
 -----
@@ -4879,7 +5307,7 @@ International Terrestrial Reference Frame 2020
 
 Origin at geocentre. Origin = ILRS SLR long-term solution at epoch 2015.0. Zero scale and scale rate between ITRF2020 and the average of VLBI and SLR scales/rates. Orientation = ITRF2014@ 2015.0 with zero rotation rates between the ITRF2020 and ITRF2014.
 
-Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022. Replaced by ITRF2020-u2023 (datum code 1399) from December 2024.
+Realization of the IERS Terrestrial Reference System (ITRS). Replaces ITRF2014 (datum code 1165) from April 2022. Updated through ITRF2020-u2023 from December 2024 and through ITRF2020-u2024 from October 2025.
 
 International Terrestrial Reference Frame 2020-u2023
 ----------------------------------------------------
@@ -5003,19 +5431,19 @@ Datum updated in 2012 with four APN stations removed from definition. Coordinate
 
 Replaces IGD05 (datum code 1114).
 
-Istituto Geografico Militaire 1995
-----------------------------------
+Istituto Geografico Militare 1995
+---------------------------------
 | Type: Geodetic
 | Extent: Italy; San Marino, Vatican City State
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_ISTITUTO_GEOGRAFICO_MILITAIRE_1995)
+    Datum::fromSRID(Datum::EPSG_ISTITUTO_GEOGRAFICO_MILITARE_1995)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6670')
 
 Densification of ETRF89 in Italy. Network of 1296 points observed 1992-1995 adjusted in 1996 constrained to 9 ETRF89 points at epoch 1989.0. By April 2021 the framework was composed of 3104 points of the fundamental network and 3819 densification points.
 
-Replaced by RDN2008 (datum code 1132) from 2011-11-10.
+Replaced by ETRS89-ITA [RDN2008] (datum code 1132) from 2011-11-10.
 
 Iwo Jima 1945
 -------------
@@ -5105,20 +5533,6 @@ Japanese Geodetic Datum 2000 (vertical)
 
 Orthometric heights. Replaces JSLD69 and JSLD72 with effect from April 2002. Replaced by JGD2011 (vertical) (datum code 1131) with effect from 21st October 2011.
 
-Japanese Geodetic Datum 2011
-----------------------------
-| Type: Geodetic
-| Extent: Japan
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_JAPANESE_GEODETIC_DATUM_2011)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::1128')
-
-ITRF94 at epoch 1997.0 except for northern Honshu area impacted by 2011 Tohoku earthquake which is ITRF2008 at epoch 2011.395. Fundamental point: Tokyo-Taisho, latitude: 35°39'29.1572"N, longitude: 139°44'28.8869"E (of Greenwich).
-
-Instigated under amendment to the Japanese Surveying Law with effect from 21st October 2011. Replaces JGD2000 (datum code 6612).
-
 Japanese Geodetic Datum 2011 (vertical)
 ---------------------------------------
 | Type: Vertical
@@ -5131,7 +5545,35 @@ Japanese Geodetic Datum 2011 (vertical)
 
 24.3900 metres above mean sea level Tokyo Bay.
 
-Orthometric heights. Replaces JGD2000 (vertical) (datum code 1130) with effect from 21st October 2011.
+Orthometric heights. Replaces JGD2000 (vertical) (datum code 1130) with effect from 21st October 2011. Replaced by JGD2024 (vertical) (datum code 1450) with effect from 1st April 2025.
+
+Japanese Geodetic Datum 2024
+----------------------------
+| Type: Geodetic
+| Extent: Japan
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_JAPANESE_GEODETIC_DATUM_2024)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1128')
+
+ITRF94 at epoch 1997.0 except for northern Honshu area impacted by 2011 Tohoku earthquake which is ITRF2008 at epoch 2011.395. Fundamental point: Tokyo-Taisho, latitude: 35°39'29.1572"N, longitude: 139°44'28.8869"E (of Greenwich).
+
+Instigated under amendment to the Japanese Surveying Law with effect from 21st October 2011. Replaces JGD2000 (datum code 6612). On adoption of JGD2024 (vertical) with effect from 1st April 2025, name of geodetic datum changed from JGD2011 to JGD2024.
+
+Japanese Geodetic Datum 2024 (vertical)
+---------------------------------------
+| Type: Vertical
+| Extent: Japan
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_JAPANESE_GEODETIC_DATUM_2024_VERTICAL)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1450')
+
+Based on IAG-recommended W0 value of 62,636,853.4 m2/s2 adjusted to match mean sea level of Tokyo Bay through an offset of +0.1366m.  
+
+JGD2024 (vertical) is a gravimetric geoid-based vertical datum using the "Geoid 2024 Japan and Surrounding Area" model (JPGEO2024). This model is the JGEOID2024 model with an offset of 0.1366m applied to match MSL of Tokyo Bay at the Aburatsubo tide gauge. The datum uses a height reference epoch of 2024.415 (1st June 2024). Replaces JGD2011 (vertical) (datum code 1131) with effect from 1st April 2025.
 
 Japanese Standard Levelling Datum 1969
 --------------------------------------
@@ -5733,7 +6175,7 @@ Latvian coordinate system 2020
 
 Aligned with ETRF2020 at 12th April 2020 (epoch 2020.28). Derived at 5 well-distributed base stations of the Latvian GNSS permanent network (LATREF) in IGS20 (ITRF2020), transformed to ETRF2020 using EUREF parameters (CT code 10572).
 
-LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661) with effect from 2025-10-01.
+LKS-2020 is the second national realization of ETRS89. Replaces LKS-92 (datum code 6661) with effect from 2026-10-01.
 
 Latvian geodetic coordinate system 1992
 ---------------------------------------
@@ -5747,7 +6189,7 @@ Latvian geodetic coordinate system 1992
 
 Constrained to 4 ETRS89 points in Latvia from the EUREF Baltic 1992 campaign.
 
-Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code 1356) with effect from 2025-10-01.
+Densification of ETRS89 during the 1992 Baltic campaign. Replaced by Latvian coordinate system 2020 (datum code 1356) with effect from 2026-10-01.
 
 Le Pouce 1934
 -------------
@@ -5975,6 +6417,20 @@ Lome
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6252')
 
 
+London Survey Grid height datum
+-------------------------------
+| Type: Vertical
+| Extent: UK - Greater London and surrounding area
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_LONDON_SURVEY_GRID_HEIGHT_DATUM)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1423')
+
+100m below mean sea level as defined by zero OSGM02 height, redefined in 2025 with respect to ETRS89-GBR [OSNet v2009] through the London Survey Grid geoid model LSGGM2025.
+
+LSGH is an orthometric height datum chosen to provide positive values for areas of interest to London Underground (LU).
+
 Low Water
 ---------
 | Type: Vertical
@@ -6160,7 +6616,7 @@ MOLDREF99
     Datum::fromSRID(Datum::EPSG_MOLDREF99)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1032')
 
-Densification of ETRS89.
+Densification of ETRF97 at epoch 1997.4.
 
 MOMRA Terrestrial Reference Frame 2000
 --------------------------------------
@@ -6191,7 +6647,7 @@ Mean sea level Jeddah 1969.
 MOP78
 -----
 | Type: Geodetic
-| Extent: Wallis and Futuna - Wallis
+| Extent: Wallis and Futuna - Wallis - onshore
 
 .. code-block:: php
 
@@ -6573,7 +7029,7 @@ Mayotte 1950
 
 IGN 1950 marker (height 0.0m) on southwest jetty at Dzaoudzi (Petite-Terre) is 2.18m above zero of tide gauge. SHOM 1953 marker on east (Issoufali) jetty at Dzaoudzi (height 4.74m) is the base for Mayotte heights.
 
-Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou (Grand-Terre) in 1979.
+Datum transferred to benchmark RN0 with height of 2.774m above tide gauge on eastern jetty at Mamoudzou (Grand-Terre) in 1979. Replaced by IGN 2023 Mayotte (datum code 1443).
 
 Mayotte Geodetic Reference Frame 2023
 -------------------------------------
@@ -7035,7 +7491,7 @@ Realized through the third precise levelling network. Uses normal heights. Repla
 NAD83 (Continuously Operating Reference Station 1996)
 -----------------------------------------------------
 | Type: Geodetic
-| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
+| Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -7049,7 +7505,7 @@ Replaced by NAD83(2011) from 2011-09-06.
 NAD83 (Federal Base Network)
 ----------------------------
 | Type: Geodetic
-| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - CONUS - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
+| Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - conterminous (contiguous) lower 48 states (CONUS) onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -7075,7 +7531,7 @@ In PRVI replaces NAD83(HARN) to correct errors. Replaced by NAD83(FBN).
 NAD83 (High Accuracy Reference Network)
 ---------------------------------------
 | Type: Geodetic
-| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
+| Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore. Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore plus offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -7089,7 +7545,7 @@ In CONUS, American Samoa and Guam replaced by NAD83(FBN). In Alaska replaced by 
 NAD83 (National Spatial Reference System 2007)
 ----------------------------------------------
 | Type: Geodetic
-| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
+| Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -7103,7 +7559,7 @@ Replaced by NAD83 (National Spatial Reference System 2011), datum code 1116.
 NAD83 (National Spatial Reference System 2011)
 ----------------------------------------------
 | Type: Geodetic
-| Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands
+| Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -7307,7 +7763,7 @@ Replaces 1984 adjustment which used the WGS72 ellipsoid.
 National Geodetic Vertical Datum 1929
 -------------------------------------
 | Type: Vertical
-| Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
 
 .. code-block:: php
 
@@ -7317,6 +7773,20 @@ National Geodetic Vertical Datum 1929
 26 tide gauges in the US and Canada.
 
 Normal orthometric heights.
+
+National Reference Frame of Bhutan 2023
+---------------------------------------
+| Type: Geodetic
+| Extent: Bhutan
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NATIONAL_REFERENCE_FRAME_OF_BHUTAN_2023)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1448')
+
+14 stations of the DrukNet GNSS CORS network aligned to ITRF2020 at epoch 2023.5 (2023-07-01).
+
+Replaces DRUKREF 03 (datum code 1058).
 
 National Vertical Datum 1992
 ----------------------------
@@ -7431,6 +7901,20 @@ Nivellement General Guyanais 1977
     Datum::fromSRID('urn:ogc:def:datum:EPSG::5153')
 
 Mean sea level 1936 at Cayenne. Origin = marker BM35 on stone on St Francois battery, Cayenne, with defined elevation of 1.64m above msl. NGG1977 height 0.00m is 1.96m above sounding datum defined at Cayenne in 1936 by SHM.
+
+Orthometric heights.
+
+Nivellement General de Futuna et d’Alofi 2022
+-----------------------------------------------
+| Type: Vertical
+| Extent: Wallis and Futuna - Futuna and Alofi - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NIVELLEMENT_GENERAL_DE_FUTUNA_ET_D’ALOFI_2022)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1455')
+
+Mean Sea Level at Sigave Cove jetty carried out by SHOM over 975 days in 2013 to 2016, and levelling from the fundamental benchmark FT - 0b which has orthometric height of 2.947m above MSL.
 
 Orthometric heights.
 
@@ -7570,6 +8054,20 @@ Coordinates of primary network readjusted on ED50 datum and then transformed con
 
 Adjustment includes Morocco and Tunisia but use only in Algeria. Within Algeria the adjustment is north of 32°N but use has been extended southwards in many disconnected projects, some based on independent astro stations rather than the geodetic network.
 
+Nordic Geodetic Commission ETRF14
+---------------------------------
+| Type: Geodetic
+| Extent: Denmark, Estonia, Finland, Latvia, Lithuania, and Sweden; Norway - onshore, nearshore, and offshore southeast of a line joining Haugesund and the western limit of the Norway-Denmark maritime boundary
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NORDIC_GEODETIC_COMMISSION_ETRF14)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1403')
+
+Aligned with (static snapshot of) ETRF2014 at epoch 2000.0.
+
+Replaces NKG_ETRF00 (ETRF2000 at epoch 2000.0).
+
 Normaal Amsterdams Peil
 -----------------------
 | Type: Vertical
@@ -7587,7 +8085,9 @@ Orthometric heights. From 2018, use has been extended from Netherlands onshore t
 North American Datum 1927
 -------------------------
 | Type: Geodetic
-| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore
+| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and 
+
+. US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -7629,7 +8129,7 @@ NAD27 (CGQ77) used in Quebec for all maps at scale 1/20 000 and larger; generall
 North American Datum 1983
 -------------------------
 | Type: Geodetic
-| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands
+| Extent: North America: Canada. Puerto Rico. USA. US Virgin Islands. British Virgin Islands
 
 .. code-block:: php
 
@@ -7780,24 +8280,24 @@ Defined by a time-dependent seven parameter transformation of ITRF2000 3D geocen
 
 Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).
 
-North American Terrestrial Reference Frame of 2022
---------------------------------------------------
+North American Terrestrial Reference Frame of 2022 epoch 2020.00
+----------------------------------------------------------------
 | Type: Geodetic
-| Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: North America: Canada; USA - Alaska, conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_TERRESTRIAL_REFERENCE_FRAME_OF_2022)
+    Datum::fromSRID(Datum::EPSG_NORTH_AMERICAN_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1422')
 
-Fixed to the stable part of the North American tectonic plate, aligned to ITRF2020 at epoch 2020.0.
+Static "snapshot" of dynamic, plate-fixed NATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the North American tectonic plate using three Euler pole geocentric Cartesian rotation rates.
 
-CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event that definitions change, the record will be deprecated and replaced with a new EPSG code.
+NATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00.
 
 North American Vertical Datum 1988
 ----------------------------------
 | Type: Vertical
-| Extent: Mexico - onshore. USA - CONUS and Alaska - onshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
+| Extent: Mexico - onshore. USA - onshore - USA - Alaska, conterminous (contiguous) lower 48 states (CONUS)
 
 .. code-block:: php
 
@@ -7848,19 +8348,33 @@ MSL defined by regression at 7 gauges with between 17 and 67 years observations.
 
 Includes initial NN1954 system and NNN1957 system. Former name retained. Normal-orthometric heights. Replaced by NN2000.
 
-Norway Normal Null 2000
------------------------
+Norway Normal Null 2000:2018
+----------------------------
 | Type: Vertical
 | Extent: Norway - onshore
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_NORWAY_NORMAL_NULL_2000)
+    Datum::fromSRID(Datum::EPSG_NORWAY_NORMAL_NULL_2000_2018)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1096')
 
 Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements caused by isostatic rebound, heights are reduced to epoch 2000.0 using values computed from the NKG2005LU uplift model.
 
-Replaces NN54. Uses Normal heights.
+Uses Normal heights. Renamed from Norway Normal Null 2000 effective 2026-03-01. Replaces NN54. Replaced by NN2000:2025.
+
+Norway Normal Null 2000:2025
+----------------------------
+| Type: Vertical
+| Extent: Norway - onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_NORWAY_NORMAL_NULL_2000_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1454')
+
+Adjustment is referenced to mean high tide at Amsterdams Peil in 1684. To account for land level movements caused by isostatic rebound, heights are reduced to epoch 2000.0 using values computed from the NKG2005LU uplift model.
+
+Uses Normal heights. Replaces NN2000:2018. NN2000:2025 is an improvement of the NN2000:2018 adjustment including additional levelling lines through new undersea tunnels. Height differences in southwest Norway are up to 10 cm.
 
 Norwegian Chart Datum
 ---------------------
@@ -8432,6 +8946,20 @@ Position fixed to the coordinates from the 19th century Principle Triangulation 
 
 Replaced by Geodetic Datum of 1965 alias 1975 Mapping Adjustment or TM75 (datum code 6300).
 
+OSNet v2009
+-----------
+| Type: Geodetic
+| Extent: UK - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including Sea of the Hebrides and The Minch; Isle of Man onshore
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_OSNET_V2009)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1425')
+
+ITRF97 at epoch 2009.756 aligned to ETRF97 following the EUREF conventions.
+
+Aligned to the EUREF IE/UK 2009 realization of ETRS89. OSNet v2009 is the second realization of ETRS89 in Great Britain. Replaced OSNet v2001 in 2016.
+
 Observatario
 ------------
 | Type: Geodetic
@@ -8665,7 +9193,7 @@ Fundamental point: Point 82'M  Jerusalem. Latitude: 31°44' 2.749"N, longitude: 
 Pampa del Castillo
 ------------------
 | Type: Geodetic
-| Extent: Argentina - Chibut province south of approximately 42°30'S and Santa Cruz province north of approximately 50°20'S
+| Extent: Argentina - Chibut province south of approximately 42°30'S, Santa Cruz province north of approximately 50°20'S, and offshore Golfo San Jorge
 
 .. code-block:: php
 
@@ -9261,7 +9789,9 @@ Red Geodesica Para Mineria en Chile
     Datum::fromSRID(Datum::EPSG_RED_GEODESICA_PARA_MINERIA_EN_CHILE)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1304')
 
-Realized through 26 stations in the IGS (SIRGAS-CON) active reference station network in Chile.
+Realized through 30 stations including 8 in Chile in the IGS (SIRGAS-CON) active reference station network.
+
+The frame is updated on a bi-annual basis using the ADELA deformation model. This EPSG record refers to any update without distinction.
 
 Red Geodesica Venezolana
 ------------------------
@@ -9343,7 +9873,7 @@ Reseau Geodesique Francais 1993 v2b
 
 Aligned with ETRF2000 at epoch 2019.0. Derived through reprocessing of the French GNSS permanent network (RGP) in IGS14. 
 
-RGF93 v2b is a realization of ETRS89. Third realization of RGF93. Replaces RGF93 v2 (datum code 1312) from 2021-01-05.
+RGF93 v2b is the third realization of ETRS89 in France. Replaces RGF93 v2 (datum code 1312) from 2021-01-05.
 
 Reseau Geodesique Francais Guyane 1995
 --------------------------------------
@@ -9557,7 +10087,7 @@ Rete Dinamica Nazionale 2008
 
 Italian densification of ETRS89 realised through network of 99 permanent reference stations in ETRF2000@2008.0.
 
-Adopted as official Italian reference datum 10/11/2011. Replaces IGM95 (datum code 6670).
+Adopted as official Italian reference datum 10/11/2011. Replaces ETRS89-ITA [IGM95] (datum code 6670).
 
 Reunion 1947
 ------------
@@ -9903,19 +10433,75 @@ Aligned to IGS14 at epoch 2015.00. Realized by a frame of 345 continuously opera
 
 Replaces SIR15P01 (datum code 1241).
 
-SIRGAS-Chile realization 1 epoch 2002
--------------------------------------
+SIRGAS-Chile 2002
+-----------------
 | Type: Geodetic
 | Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_REALIZATION_1_EPOCH_2002)
+    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_2002)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1064')
 
 ITRF2000 at epoch 2002.0.  Densification of SIRGAS 2000 network in Chile, consisting of 650 monumented stations.
 
-Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (datum code 6248) in Chile, HITO XVIII (datum code 6254) in Chilean Tierra del Fuego and Easter Island 1967 (datum code 6719) in Easter Island. Replaced by SIRGAS-Chile 2010 (datum code 1243).
+Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (datum code 6248) in Chile, HITO XVIII (datum code 6254) in Chilean Tierra del Fuego and Easter Island 1967 (datum code 6719) in Easter Island. Replaced by SIRGAS-Chile 2013 (datum code 1252).
+
+SIRGAS-Chile 2013
+-----------------
+| Type: Geodetic
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_2013)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1252')
+
+IGb08 at epoch 2013.00. Densification of SIRGAS-CON network in Chile, consisting of 130 monumented stations.
+
+Replaces SIRGAS-Chile 2002, following significant tectonic deformation. Replaced by SIRGAS-Chile 2016.
+
+SIRGAS-Chile 2016
+-----------------
+| Type: Geodetic
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_2016)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1253')
+
+IGb08 at epoch 2016.00. Densification of SIRGAS-CON network in Chile, consisting of 200 monumented stations.
+
+Replaces SIRGAS-Chile 2013. Replaced by SIRGAS-Chile 2021 due to significant tectonic deformation.
+
+SIRGAS-Chile 2021
+-----------------
+| Type: Geodetic
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_2021)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1327')
+
+Densification of SIRGAS-CON network in Chile, consisting of 97 stations forming the active CORS network (RGN) referenced to IGb2014 (ITRF2014) at epoch 2021.00. Passive stations used in previous realizations have been removed from this solution.
+
+Replaces SIRGAS-Chile 2016 from August 2021 due to significant tectonic deformation. 24 additional active CORS used in this realization compared to that of 2016.
+
+SIRGAS-Chile 2025
+-----------------
+| Type: Geodetic
+| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_2025)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1462')
+
+Aligned to IGS20 at epoch 2025.0 through SIRGAS-CON weekly solution SIR25P2347 at epoch 2025.0 using a network of 135 national CORS stations in Chile.
+
+Replaces SIRGAS-Chile 2021 from April 2025 due to significant tectonic deformation.
 
 SIRGAS-Chile realization 2 epoch 2010
 -------------------------------------
@@ -9930,48 +10516,6 @@ SIRGAS-Chile realization 2 epoch 2010
 IGS08 at epoch 2010.00. Densification of SIRGAS-CON network in Chile, consisting of 120 monumented stations.
 
 Replaces SIRGAS-Chile realization 1 epoch 2002, following significant tectonic deformation. Replaced by SIRGAS-Chile realization 3 epoch 2013.
-
-SIRGAS-Chile realization 3 epoch 2013
--------------------------------------
-| Type: Geodetic
-| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_REALIZATION_3_EPOCH_2013)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::1252')
-
-IGb08 at epoch 2013.00. Densification of SIRGAS-CON network in Chile, consisting of 130 monumented stations.
-
-Replaces SIRGAS-Chile realization 2 epoch 2010, following significant tectonic deformation. Replaced by SIRGAS-Chile realization 4 epoch 2016.
-
-SIRGAS-Chile realization 4 epoch 2016
--------------------------------------
-| Type: Geodetic
-| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_REALIZATION_4_EPOCH_2016)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::1253')
-
-IGb08 at epoch 2016.00. Densification of SIRGAS-CON network in Chile, consisting of 200 monumented stations.
-
-Replaces SIRGAS-Chile realization 3 epoch 2013. Replaced by SIRGAS-Chile realization 5 epoch 2021 due to significant tectonic deformation.
-
-SIRGAS-Chile realization 5 epoch 2021
--------------------------------------
-| Type: Geodetic
-| Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_SIRGAS_CHILE_REALIZATION_5_EPOCH_2021)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::1327')
-
-Densification of SIRGAS-CON network in Chile, consisting of 97 stations forming the active CORS network (RGN) referenced to IGb2014 (ITRF2014) at epoch 2021.00. Passive stations used in previous realizations have been removed from this solution.
-
-Replaces SIRGAS-Chile realization 4 epoch 2016 from August 2021 due to significant tectonic deformation. 24 additional active CORS used in this realization compared to that of 2016.
 
 SIRGAS-ROU98
 ------------
@@ -10064,19 +10608,19 @@ Fundamental point: Base 7 at Pierce Reservoir. Latitude: 1°22'02.9154"N, longit
 
 Replaces Kertau 1968 for cadastral purposes from August 2004.
 
-SWEREF99
---------
+SWEREF 99
+---------
 | Type: Geodetic
 | Extent: Sweden
 
 .. code-block:: php
 
-    Datum::fromSRID(Datum::EPSG_SWEREF99)
+    Datum::fromSRID(Datum::EPSG_SWEREF_99)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6619')
 
 Densification of ETRS89.
 
-The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been corrected to ETRS89 in accordance with guidelines given by EUREF.
+The solution was calculated in ITRF97 epoch 1999.5, and has subsequently been corrected to ETRS89 in accordance with guidelines given by EUREF. SwePOS CORS station coordinates were updated on 2021-02-07.
 
 SYC20 Intermediate Reference Frame
 ----------------------------------
@@ -10091,6 +10635,20 @@ SYC20 Intermediate Reference Frame
 Defined through the application of the SYC20 NTv2 transformation to ETRS89 as realized through OSNet v2009 CORS.
 
 Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SYC20 Snake map projection.
+
+SZCTW Intermediate Reference Frame
+----------------------------------
+| Type: Geodetic
+| Extent: UK - Sizewell power station site and  rail and road routes related to the site
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SZCTW_INTERMEDIATE_REFERENCE_FRAME)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1461')
+
+Defined through the application of the SZCTW NTv2 transformation (code 11467) to ETRS89 as realized through OSNet v2009 CORS.
+
+Created in 2026 to support intermediate CRS "SZCTW-IRF" in the emulation of the SZCTW Snake map projection.
 
 Saba
 ----
@@ -10387,6 +10945,20 @@ ITRF2008 at epoch 2012.0.
 
 Semi-dynamic datum. Geometric element of geodetic control network (JKG). Replaces DGN95 and all older datums.
 
+Sistem Referensi Geospasial Indonesia 2013 epoch 2021.0
+-------------------------------------------------------
+| Type: Geodetic
+| Extent: Indonesia
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SISTEM_REFERENSI_GEOSPASIAL_INDONESIA_2013_EPOCH_2021_0)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1426')
+
+Aligned to ITRF2014 at epoch 2021.0.
+
+This is a static snapshot at epoch 2021.0 of the SRGI2013 dynamic datum (reference frame) (datum code 1293). Between 2012 and 2020, the coordinate reference frame has experienced a significant shift of between 20 - 70 cm due to the effects of tectonic plate movements.
+
 Sistema Geodesico Nacional de Panama MACARIO SOLIS
 --------------------------------------------------
 | Type: Geodetic
@@ -10465,7 +11037,9 @@ Slovenia Geodetic Datum 1996
     Datum::fromSRID(Datum::EPSG_SLOVENIA_GEODETIC_DATUM_1996)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6765')
 
-Densification of ETRS89, based on ITRS89 at epoch 1995.55.
+Densification of ETRS89, based on ITRF96 at epoch 1995.55 aligned to ETRF96 following the EUREF conventions.
+
+The Slovenian ETRS89 realization D96 was originally determined through EUREF GPS campaigns in 1994, 1995 and 1996, the stations in which over time have shown some instability. To remedy this, the realization was updated in 2016 (ETRS89/D17, IGb08 at epoch 2016.75, aligned to ETRF2000 in accordance with the EUREF conventions).. Coordinate differences with the previous realization were up to 8 cm; consequently a hybrid realization D96-17 was implemented. D96-17 preserves geometry from the latest realization (D17) but minimizes the coordinate differences with the previous realization (D96). Formally, the D96 realization is unchanged, but in practice the realization is now carried by the D96-17 coordinates of the SIGNAL CORS stations. For practical purposes D96-17 coordinates are considered to be consistent with D96.
 
 Slovenian Vertical System 2000
 ------------------------------
@@ -10538,7 +11112,7 @@ Orthometric heights.
 South American Datum 1969
 -------------------------
 | Type: Geodetic
-| Extent: Brazil. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego
+| Extent: Brazil. Chile - onshore south of 43°30'S including Tierra del Fuego. In rest of South America - onshore north of approximately 45°S
 
 .. code-block:: php
 
@@ -10879,7 +11453,7 @@ Orthometric heights.
 Svalbard vertical datum 2006
 ----------------------------
 | Type: Vertical
-| Extent: Arctic (Norway (Svalbard)) - between 81°10'N and 76°10'N
+| Extent: 4860 - Svalbard - west of 37.91° between 76.21° and 81.12°
 
 .. code-block:: php
 
@@ -10887,6 +11461,34 @@ Svalbard vertical datum 2006
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1323')
 
 Mean Sea Level (MSL) at Ny-Ålesund. The SVD2006 surface (arcgp-2006-sk) is the Arctic Gravity Project 2006 (arcgp-2006) surface adjusted to two benchmarks tied to the Ny-Ålesund tide gauge. arcgp-2006-sk=arcgp-2006 - 0.8986m.
+
+Svalbard vertical datum 2024
+----------------------------
+| Type: Vertical
+| Extent: Svalbard including Bear Island
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SVALBARD_VERTICAL_DATUM_2024)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1424')
+
+21.9 cm above Mean Sea Level (MSL) 1995-2014 at Ny-Ålesund and propagated through the Svalbard_EGG2015_2024 quasi-geoid model.
+
+The SVD2024 surface is the European gravimetric geoid model EGG2015 surface adjusted to benchmarks tied to the tide gauges at Longyearbyen and Ny-Ålesund, as well as to tide gauge records on Halvmåneøya.
+
+Swiss Terrestrial Reference Frame 1995
+--------------------------------------
+| Type: Geodetic
+| Extent: Liechtenstein; Switzerland
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_SWISS_TERRESTRIAL_REFERENCE_FRAME_1995)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1449')
+
+ETRS89 (ETRF93) at epoch 1993.0.
+
+First realization of CHTRS95.
 
 Swiss Terrestrial Reference System 1995
 ---------------------------------------
@@ -10898,9 +11500,9 @@ Swiss Terrestrial Reference System 1995
     Datum::fromSRID(Datum::EPSG_SWISS_TERRESTRIAL_REFERENCE_SYSTEM_1995)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6151')
 
-ETRF89 at epoch 1993.0.
+ETRS89 (ETRF93) at epoch 1993.0.
 
-First realized through CHTRF95 and subsequently CHTRF98, 2004, 2010 and 2016 with an aim to re-measure every 6 years.
+First realized through CHTRF95 and subsequently CHTRF98, with an aim to re-measure every 6 years. CHTRF98, CHTRF2004, CHTRF2010 and CHTRF2016 are all within 2cm of CHTRF95 and used for scientific applications, but for most practical purposes differences are considered insignificant.
 
 System 34 Jylland Intermediate Datum
 ------------------------------------
@@ -11370,7 +11972,7 @@ Uganda Geodetic Reference Frame
     Datum::fromSRID(Datum::EPSG_UGANDA_GEODETIC_REFERENCE_FRAME)
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1401')
 
-A network of 9 zero-order points was aligned to ITRF2005 at epoch 2010.0.
+A network of 9 zero-order points was aligned to ITRF2005 at epoch 2010.0 with an accuracy of approximately 5cm. Fixed to the Somali tectonic plate.
 
 Replaces Arc 1960 datum (code 6210) in Uganda.
 
@@ -11772,6 +12374,18 @@ Xian 1980
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6610')
 
 Xian observatory.
+
+Xrail84
+-------
+| Type: Geodetic
+| Extent: UK - Greater London and surrounding area
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_XRAIL84)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1408')
+
+Network of 21 first order control stations established for Crossrail in 1984.
 
 Yacare
 ------

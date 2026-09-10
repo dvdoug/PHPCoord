@@ -62,8 +62,8 @@ class Geographic2D extends Geographic
      * AbInvA96_2020-IRF
      * Extent: UK - on or related to the A96 highway from Aberdeen to Inverness
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / AbInvA96_2020 SnakeGrid projected CRS
-     * through transformation ETRS89 to AbInvA96_2020-IRF (1) (code 9386) used in conjunction with the AbInvA96_2020-TM
-     * map projection (code 9385).
+     * through transformation ETRS89-GBR [OSNet v2009] to AbInvA96_2020-IRF (1) (code 9386) used in conjunction with
+     * the AbInvA96_2020-TM map projection (code 9385).
      */
     public const EPSG_ABINVA96_2020_IRF = 'urn:ogc:def:crs:EPSG::9384';
 
@@ -128,9 +128,9 @@ class Geographic2D extends Geographic
 
     /**
      * Amersfoort
-     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone
-     * Use of geographic2D CRS Amersfoort (code 4289) for spatial referencing is discouraged. Use projected CRS
-     * Amersfoort / RD New (code 28992).
+     * Extent: Netherlands
+     * Use of this geographic2D CRS (Amersfoort, code 4289) for spatial referencing is discouraged. Use projected CRS
+     * RD (code 28992) or geodetic CRS ETRS89-NLD [AGRS2010] (codes 11035-11037).
      */
     public const EPSG_AMERSFOORT = 'urn:ogc:def:crs:EPSG::4289';
 
@@ -283,20 +283,6 @@ class Geographic2D extends Geographic
     public const EPSG_BES2020_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10739';
 
     /**
-     * BGS2005
-     * Extent: Bulgaria
-     * Adopted 2010-07-29. Replaces earlier systems.
-     */
-    public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7798';
-
-    /**
-     * BH_ETRS89
-     * Extent: Bosnia and Herzegovina
-     * In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
-     */
-    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10328';
-
-    /**
      * Barbados 1938
      * Extent: Barbados - onshore.
      */
@@ -428,12 +414,6 @@ class Geographic2D extends Geographic
     public const EPSG_CH1903_PLUS = 'urn:ogc:def:crs:EPSG::4150';
 
     /**
-     * CHTRS95
-     * Extent: Liechtenstein; Switzerland.
-     */
-    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4151';
-
-    /**
      * CIGD11
      * Extent: Cayman Islands. Includes Grand Cayman, Little Cayman and Cayman Brac.
      */
@@ -443,8 +423,8 @@ class Geographic2D extends Geographic
      * CNH22-IRF
      * Extent: UK - on or related to the rail route from Crewe via Chester to Holyhead
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CNH22 SnakeGrid projected CRS through
-     * transformation ETRS89 to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map projection (code
-     * 10193).
+     * transformation ETRS89-GBR [OSNet v2009] to CNH22-IRF (1) (code 10192) used in conjunction with the CNH22-LCC map
+     * projection (code 10193).
      */
     public const EPSG_CNH22_IRF = 'urn:ogc:def:crs:EPSG::10191';
 
@@ -452,23 +432,29 @@ class Geographic2D extends Geographic
      * COV23-IRF
      * Extent: UK - in and around the area of Coventry city centre and the route to Birmingham airport
      * Intermediate CRS created in 2023 to assist the emulation of the ETRS89 / COV23 SnakeGrid projected CRS through
-     * transformation ETRS89 to COV23 (1) (code 10469) used in conjunction with the COV23-TM map projection (code
-     * 10470).
+     * transformation ETRS89-GBR [OSNet v2009] to COV23 (1) (code 10469) used in conjunction with the COV23-TM map
+     * projection (code 10470).
      */
     public const EPSG_COV23_IRF = 'urn:ogc:def:crs:EPSG::10468';
 
     /**
-     * CR-SIRGAS
+     * CR-SIRGAS epoch 2014.59
      * Extent: Costa Rica
      * Replaces CR05 (CRS code 5365) from April 2018.
      */
-    public const EPSG_CR_SIRGAS = 'urn:ogc:def:crs:EPSG::8907';
+    public const EPSG_CR_SIRGAS_EPOCH_2014_59 = 'urn:ogc:def:crs:EPSG::8907';
+
+    /**
+     * CR-SIRGAS epoch 2019.24
+     * Extent: Costa Rica.
+     */
+    public const EPSG_CR_SIRGAS_EPOCH_2019_24 = 'urn:ogc:def:crs:EPSG::11043';
 
     /**
      * CR05
      * Extent: Costa Rica
-     * Replaces Ocotepeque (CRS code 5451) in Costa Rica from March 2007. Replaced by CR-SIRGAS (CRS code 8907) from
-     * April 2018.
+     * Replaces Ocotepeque (CRS code 5451) in Costa Rica from March 2007. Replaced by CR-SIRGAS epoch 2014.59 (CRS code
+     * 8907) from April 2018.
      */
     public const EPSG_CR05 = 'urn:ogc:def:crs:EPSG::5365';
 
@@ -497,8 +483,8 @@ class Geographic2D extends Geographic
      * CWS13-IRF
      * Extent: UK - on or related to the rail route from from Chester via Wrexham to Shrewsbury
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / CWS13 SnakeGrid projected CRS through
-     * transformation ETRS89 to CWS13-IRF (1) (code 10197) used in conjunction with the CWS13-TM map projection (code
-     * 10198).
+     * transformation ETRS89-GBR [OSNet v2009] to CWS13-IRF (1) (code 10197) used in conjunction with the CWS13-TM map
+     * projection (code 10198).
      */
     public const EPSG_CWS13_IRF = 'urn:ogc:def:crs:EPSG::10196';
 
@@ -634,8 +620,8 @@ class Geographic2D extends Geographic
 
     /**
      * Corrego Alegre 1970-72
-     * Extent: Brazil - onshore - west of 54°W and south of 18°S; also south of 15°S between 54°W and 42°W; also
-     * east of 42°W
+     * Extent: Brazil - onshore - north of 15°S and east of 42°W, between 15°S and 18°S and east of 54°W, and
+     * between 18°S and 32°45'S
      * Replaces 1961 adjustment (CRS code 5524). Replaced by SAD69 (CRS code 4291).
      */
     public const EPSG_CORREGO_ALEGRE_1970_72 = 'urn:ogc:def:crs:EPSG::4225';
@@ -670,14 +656,15 @@ class Geographic2D extends Geographic
      * DIBA15-IRF
      * Extent: UK - on or related to the rail route from Didcot to Banbury
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DIBA15 SnakeGrid projected CRS through
-     * transformation ETRS89 to DIBA15-IRF (1) (code 10205) used in conjunction with the DIBA15-TM map projection (code
-     * 10206).
+     * transformation ETRS89-GBR [OSNet v2009] to DIBA15-IRF (1) (code 10205) used in conjunction with the DIBA15-TM
+     * map projection (code 10206).
      */
     public const EPSG_DIBA15_IRF = 'urn:ogc:def:crs:EPSG::10204';
 
     /**
      * DRUKREF 03
-     * Extent: Bhutan.
+     * Extent: Bhutan
+     * Replaced by DrukRef23 (CRS code 11226).
      */
     public const EPSG_DRUKREF_03 = 'urn:ogc:def:crs:EPSG::5264';
 
@@ -687,6 +674,16 @@ class Geographic2D extends Geographic
      * Replaces Conakry 1905 (EPSG code 4315).
      */
     public const EPSG_DABOLA_1981 = 'urn:ogc:def:crs:EPSG::4155';
+
+    /**
+     * Dart+26-IRF
+     * Extent: Ireland - on or related to the DART+ rail project from Dublin city centre to Drogheda, Greystones,
+     * Hazelhatch and Kilcock
+     * Intermediate CRS created in 2026 to assist the emulation of the ETRS89 / Dart+26 SnakeGrid projected CRS through
+     * transformation ETRS89-IRE [ETRF2000] to Dart+26-IRF (1) (code 11462) used in conjunction with the Dart+26-TM map
+     * projection (code 11463).
+     */
+    public const EPSG_DART_PLUS_26_IRF = 'urn:ogc:def:crs:EPSG::11461';
 
     /**
      * Datum 73
@@ -723,8 +720,8 @@ class Geographic2D extends Geographic
      * DoPw22-IRF
      * Extent: UK - on or related to the rail route from Dovey Junction to Pwllheli
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / DoPw22 SnakeGrid projected CRS through
-     * transformation ETRS89 to DoPw22-IRF (1) (code 10181) used in conjunction with the DoPw22-TM map projection (code
-     * 10182).
+     * transformation ETRS89-GBR [OSNet v2009] to DoPw22-IRF (1) (code 10181) used in conjunction with the DoPw22-TM
+     * map projection (code 10182).
      */
     public const EPSG_DOPW22_IRF = 'urn:ogc:def:crs:EPSG::10175';
 
@@ -742,11 +739,18 @@ class Geographic2D extends Geographic
     public const EPSG_DOUALA_1948 = 'urn:ogc:def:crs:EPSG::4192';
 
     /**
+     * DrukRef23
+     * Extent: Bhutan
+     * Replaces DRUKREF 03 (CRS code 5264).
+     */
+    public const EPSG_DRUKREF23 = 'urn:ogc:def:crs:EPSG::11226';
+
+    /**
      * EBBWV14-IRF
      * Extent: UK - on or related to the rail route from Newport (Park Junction) to Ebbw Vale
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / EBBWV14 SnakeGrid projected CRS through
-     * transformation ETRS89 to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM map projection
-     * (code 9942).
+     * transformation ETRS89-GBR [OSNet v2009] to EBBWV14-IRF (1) (code 9941) used in conjunction with the EBBWV14-TM
+     * map projection (code 9942).
      */
     public const EPSG_EBBWV14_IRF = 'urn:ogc:def:crs:EPSG::9939';
 
@@ -755,8 +759,8 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to the east coast mainline rail route from London (Kings Cross) via Newcastle to
      * Edinburgh
      * Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / ECML14 SnakeGrid projected CRS through
-     * transformation ETRS89 to ECML14-IRF (1) (code 10624) used in conjunction with the ECML14-TM map projection (code
-     * 10625).
+     * transformation ETRS89-GBR [OSNet v2009] to ECML14-IRF (1) (code 10624) used in conjunction with the ECML14-TM
+     * map projection (code 10625).
      */
     public const EPSG_ECML14_IRF = 'urn:ogc:def:crs:EPSG::10623';
 
@@ -765,8 +769,8 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to rail routes from Newcastle Central to Ashington via Benton North Junction, and the
      * section from Bedlington to Morpeth
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / ECML14_NB SnakeGrid projected CRS
-     * through transformation ETRS89 to ECML14_NB-IRF (1) (code 9759) used in conjunction with the ECML14_NB-TM map
-     * projection (code 9760).
+     * through transformation ETRS89-GBR [OSNet v2009] to ECML14_NB-IRF (1) (code 9759) used in conjunction with the
+     * ECML14_NB-TM map projection (code 9760).
      */
     public const EPSG_ECML14_NB_IRF = 'urn:ogc:def:crs:EPSG::9758';
 
@@ -810,8 +814,8 @@ class Geographic2D extends Geographic
      * Tweedbank through the Borders to Edinburgh; the line from Edinburgh to Aberdeen; routes via Kirkaldy and
      * Cowdenbeath; and routes via Leuchars and Perth to Dundee
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EOS21 SnakeGrid projected CRS through
-     * transformation ETRS89 to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map projection (code
-     * 9738).
+     * transformation ETRS89-GBR [OSNet v2009] to EOS21-IRF (1) (code 9740) used in conjunction with the EOS21-TM map
+     * projection (code 9738).
      */
     public const EPSG_EOS21_IRF = 'urn:ogc:def:crs:EPSG::9739';
 
@@ -823,13 +827,6 @@ class Geographic2D extends Geographic
     public const EPSG_EST92 = 'urn:ogc:def:crs:EPSG::4133';
 
     /**
-     * EST97
-     * Extent: Estonia
-     * This name is also used for a projected CRS (see projCRS code 3301). Replaces EST92 (code 4133).
-     */
-    public const EPSG_EST97 = 'urn:ogc:def:crs:EPSG::4180';
-
-    /**
      * ETRF2000
      * Extent: Europe - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N
      * Replaces ETRF97 (code 9066). On the publication of ETRF2005 the EUREF Technical Working Group recommended
@@ -837,12 +834,6 @@ class Geographic2D extends Geographic
      * all earlier realizations of ETRS89.
      */
     public const EPSG_ETRF2000 = 'urn:ogc:def:crs:EPSG::9067';
-
-    /**
-     * ETRF2000-PL
-     * Extent: Poland.
-     */
-    public const EPSG_ETRF2000_PL = 'urn:ogc:def:crs:EPSG::9702';
 
     /**
      * ETRF2005
@@ -940,28 +931,388 @@ class Geographic2D extends Geographic
     public const EPSG_ETRS89 = 'urn:ogc:def:crs:EPSG::4258';
 
     /**
-     * ETRS89/DREF91/2016
-     * Extent: Germany
-     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2002 from 2016-12-01.
+     * ETRS89-ALB [2008]
+     * Extent: Albania
+     * Horizontal component of national realization of ETRS89 in Albania. The active GNSS network uses ETRS89-ALB
+     * [KRGJSH 2014].
      */
-    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10284';
+    public const EPSG_ETRS89_ALB_2008 = 'urn:ogc:def:crs:EPSG::11047';
 
     /**
-     * EUREF-FIN
+     * ETRS89-ALB [KRGJSH 2014]
+     * Extent: Albania
+     * Used for the coordinates of the 27 reference stations of the active ALBCORS network in Albania. Differences with
+     * the 2008 realization (CRS code 11047) used for other spatial referencing are negligible (5-7 mm for all
+     * components).
+     */
+    public const EPSG_ETRS89_ALB_KRGJSH_2014 = 'urn:ogc:def:crs:EPSG::11053';
+
+    /**
+     * ETRS89-AUT [2002]
+     * Extent: Austria
+     * Horizontal component of national realization of ETRS89 in Austria.
+     */
+    public const EPSG_ETRS89_AUT_2002 = 'urn:ogc:def:crs:EPSG::11057';
+
+    /**
+     * ETRS89-BEL [BEREF2002]
+     * Extent: Belgium
+     * Horizontal component of national realization of ETRS89 in Belgium. Replaced by BEREF2011 (CRS code 11215).
+     */
+    public const EPSG_ETRS89_BEL_BEREF2002 = 'urn:ogc:def:crs:EPSG::11063';
+
+    /**
+     * ETRS89-BEL [BEREF2011]
+     * Extent: Belgium
+     * Horizontal component of second national realization of ETRS89 in Belgium. Replaces BEREF2002 (CRS code 11063).
+     */
+    public const EPSG_ETRS89_BEL_BEREF2011 = 'urn:ogc:def:crs:EPSG::11215';
+
+    /**
+     * ETRS89-BGR [BGS2005]
+     * Extent: Bulgaria
+     * Adopted 2010-07-29. Replaces earlier systems.
+     */
+    public const EPSG_ETRS89_BGR_BGS2005 = 'urn:ogc:def:crs:EPSG::7798';
+
+    /**
+     * ETRS89-BIH [BH_ETRS89]
+     * Extent: Bosnia and Herzegovina
+     * In Bosnia and Herzegovina replaces MGI 1901 (CRS code 3906).
+     */
+    public const EPSG_ETRS89_BIH_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10328';
+
+    /**
+     * ETRS89-CHE [CHTRF95]
+     * Extent: Liechtenstein; Switzerland
+     * First realization of CHTRS95. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).
+     */
+    public const EPSG_ETRS89_CHE_CHTRF95 = 'urn:ogc:def:crs:EPSG::11307';
+
+    /**
+     * ETRS89-CHE [CHTRS95]
+     * Extent: Liechtenstein; Switzerland
+     * First realized through CHTRF95 and subsequently CHTRF98, with an aim to re-measure every 6 years. CHTRF98,
+     * CHTRF2004, CHTRF2010 and CHTRF2016 are all within 2cm of CHTRF95 and used for scientific applications, but for
+     * most practical purposes differences are considered insignificant. For CRS used for topographic and cadastral
+     * purposes see CH1903+ (CRS code 4150).
+     */
+    public const EPSG_ETRS89_CHE_CHTRS95 = 'urn:ogc:def:crs:EPSG::4151';
+
+    /**
+     * ETRS89-CZE [2007]
+     * Extent: Czechia
+     * Horizontal component of national realization of ETRS89 in Czechia.
+     */
+    public const EPSG_ETRS89_CZE_2007 = 'urn:ogc:def:crs:EPSG::11070';
+
+    /**
+     * ETRS89-DEU [ETRS89/DREF91/2016]
+     * Extent: Germany
+     * German national realization of ETRS89. Replaces ETRS89-DEU [ETRS89/DREF91/2002] from 2016-12-01. Replaced by
+     * ETRS89-DEU [ETRS89/DREF91/2025] from 2025-07-01.
+     */
+    public const EPSG_ETRS89_DEU_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10284';
+
+    /**
+     * ETRS89-DEU [ETRS89/DREF91/2025]
+     * Extent: Germany
+     * German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2025 from 2025-07-01.
+     */
+    public const EPSG_ETRS89_DEU_ETRS89_DREF91_2025 = 'urn:ogc:def:crs:EPSG::11199';
+
+    /**
+     * ETRS89-DNK
+     * Extent: Denmark
+     * Horizontal component of the national realization of ETRS89 in Denmark.
+     */
+    public const EPSG_ETRS89_DNK = 'urn:ogc:def:crs:EPSG::10892';
+
+    /**
+     * ETRS89-ESP [ERGNSS]
+     * Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+     * Horizontal component of national realization of ETRS89 in Spain. Replaces ETRS89-ESP [REGENTE] for CORS services
+     * from 2018-03-15.
+     */
+    public const EPSG_ETRS89_ESP_ERGNSS = 'urn:ogc:def:crs:EPSG::11128';
+
+    /**
+     * ETRS89-ESP [REGENTE]
+     * Extent: Spain - mainland, Balearic Islands, Ceuta and Melilla
+     * Horizontal component of national realization of ETRS89 in Spain. For GNSS CORS services, replaced by ETRS89-ESP
+     * [ERGNSS] (code 11128) from 2018-03-25. For most purposes the offset of approximately 2cm is considered
+     * insignificant.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE = 'urn:ogc:def:crs:EPSG::11134';
+
+    /**
+     * ETRS89-EST [EST97]
+     * Extent: Estonia
+     * Replaces EST92 (code 4133).
+     */
+    public const EPSG_ETRS89_EST_EST97 = 'urn:ogc:def:crs:EPSG::4180';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN]
      * Extent: Finland
      * EUREF-FIN is the national realization of ETRS89 in Finland.
      */
-    public const EPSG_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10690';
+    public const EPSG_ETRS89_FIN_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10690';
+
+    /**
+     * ETRS89-FRA [RGF93 v1]
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by ETRS89-FRA
+     * [RGF93 v2] (CRS code 9777) from 2010-06-18.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4171';
+
+    /**
+     * ETRS89-FRA [RGF93 v1] (lon-lat)
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
+     * safety of life purposes. Replaced by ETRS89-FRA [RGF93 v2] (lon-lat) (CRS code 9779) from 2010-06-18.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V1_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
+
+    /**
+     * ETRS89-FRA [RGF93 v2]
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaces ETRS89-FRA [RGF93 v1] (CRS code 4171) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] (CRS code
+     * 9782) from 2021-01-05. See CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9777';
+
+    /**
+     * ETRS89-FRA [RGF93 v2] (lon-lat)
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaces ETRS89-FRA [RGF93 v1] (lon-lat) (code 7084) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b]
+     * (lon-lat) (CRS code 9784) from 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used
+     * for air, land and sea navigation and safety of life purposes.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2_LON_LAT = 'urn:ogc:def:crs:EPSG::9779';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b]
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaces ETRS89-FRA [RGF93 v2] (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes
+     * reversed used by IGN for GIS purposes.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9782';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b] (lon-lat)
+     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
+     * Replaces ETRS89-FRA [RGF93 v2] (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in
+     * sequence lat-lon to be used for air, land and sea navigation and safety of life purposes.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B_LON_LAT = 'urn:ogc:def:crs:EPSG::9784';
+
+    /**
+     * ETRS89-FRO [2008]
+     * Extent: Faroe Islands
+     * Horizontal component of national realization of ETRS89 in the Faroe Islands.
+     */
+    public const EPSG_ETRS89_FRO_2008 = 'urn:ogc:def:crs:EPSG::11087';
+
+    /**
+     * ETRS89-GBR [OSNet v2009]
+     * Extent: UK - Great Britain - England and Wales onshore, Scotland onshore and Western Isles nearshore including
+     * Sea of the Hebrides and The Minch; Isle of Man onshore
+     * Horizontal component of second national realization of ETRS89 in Great Britain. Replaces ETRS89-GBR [OSNet
+     * v2001] from 2016.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009 = 'urn:ogc:def:crs:EPSG::11009';
+
+    /**
+     * ETRS89-GRC [HTRS07]
+     * Extent: Greece. Includes Aegean Islands, Ionian Islands, Dodecanese Islands, Crete, and Mount Athos
+     * Horizontal component of national realization of ETRS89 in Greece.
+     */
+    public const EPSG_ETRS89_GRC_HTRS07 = 'urn:ogc:def:crs:EPSG::11093';
+
+    /**
+     * ETRS89-HRV [CROPOS]
+     * Extent: Croatia
+     * ETRS89-HRV [HTRS96] (CRS code 4761) used for national spatial referencing.
+     */
+    public const EPSG_ETRS89_HRV_CROPOS = 'urn:ogc:def:crs:EPSG::11189';
+
+    /**
+     * ETRS89-HRV [HTRS96]
+     * Extent: Croatia.
+     */
+    public const EPSG_ETRS89_HRV_HTRS96 = 'urn:ogc:def:crs:EPSG::4761';
+
+    /**
+     * ETRS89-HUN [ETRF2000]
+     * Extent: Hungary
+     * Horizontal component of national realization of ETRS89 in Hungary.
+     */
+    public const EPSG_ETRS89_HUN_ETRF2000 = 'urn:ogc:def:crs:EPSG::11163';
+
+    /**
+     * ETRS89-IRE [ETRF2000]
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore.
+     */
+    public const EPSG_ETRS89_IRE_ETRF2000 = 'urn:ogc:def:crs:EPSG::4173';
+
+    /**
+     * ETRS89-ITA [IGM95]
+     * Extent: Italy; San Marino, Vatican City State
+     * Replaced by ETRS89-ITA [RDN2008] (CRS code 6706) from 2011-11-10.
+     */
+    public const EPSG_ETRS89_ITA_IGM95 = 'urn:ogc:def:crs:EPSG::4670';
+
+    /**
+     * ETRS89-ITA [RDN2008]
+     * Extent: Italy; San Marino, Vatican City State
+     * Replaces ETRS89-ITA [IGM95] (CRS code 4670) from 2011-11-10.
+     */
+    public const EPSG_ETRS89_ITA_RDN2008 = 'urn:ogc:def:crs:EPSG::6706';
+
+    /**
+     * ETRS89-LTU [LKS94]
+     * Extent: Lithuania.
+     */
+    public const EPSG_ETRS89_LTU_LKS94 = 'urn:ogc:def:crs:EPSG::4669';
+
+    /**
+     * ETRS89-LUX [2020]
+     * Extent: Luxembourg
+     * Horizontal component of national realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2013] from
+     * 2021-10-31. Replaced by ETRS89-LUX [2025] from 2026-10-31.
+     */
+    public const EPSG_ETRS89_LUX_2020 = 'urn:ogc:def:crs:EPSG::11393';
+
+    /**
+     * ETRS89-LUX [2025]
+     * Extent: Luxembourg
+     * Horizontal component of national realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2020] from
+     * 2026-10-31.
+     */
+    public const EPSG_ETRS89_LUX_2025 = 'urn:ogc:def:crs:EPSG::11547';
+
+    /**
+     * ETRS89-LVA [LKS-2020]
+     * Extent: Latvia
+     * Replaces ETRS89-LVA [LKS-92] (CRS code 4661) from 2026-10-01.
+     */
+    public const EPSG_ETRS89_LVA_LKS_2020 = 'urn:ogc:def:crs:EPSG::10305';
+
+    /**
+     * ETRS89-LVA [LKS-92]
+     * Extent: Latvia
+     * Replaced by ETRS89-LVA [LKS-2020] (CRS code 10305) from 2026-10-01.
+     */
+    public const EPSG_ETRS89_LVA_LKS_92 = 'urn:ogc:def:crs:EPSG::4661';
+
+    /**
+     * ETRS89-MDA [MOLDREF99]
+     * Extent: Moldova.
+     */
+    public const EPSG_ETRS89_MDA_MOLDREF99 = 'urn:ogc:def:crs:EPSG::4023';
+
+    /**
+     * ETRS89-MKD [EUREF-MAK2010]
+     * Extent: North Macedonia
+     * Horizontal component of national realization of ETRS89 in North Macedonia.
+     */
+    public const EPSG_ETRS89_MKD_EUREF_MAK2010 = 'urn:ogc:def:crs:EPSG::11099';
+
+    /**
+     * ETRS89-NLD [AGRS2010]
+     * Extent: Netherlands
+     * Horizontal component of national realization of ETRS89 in the Netherlands, aligned to ETRF2000.
+     */
+    public const EPSG_ETRS89_NLD_AGRS2010 = 'urn:ogc:def:crs:EPSG::11037';
+
+    /**
+     * ETRS89-NOR [EUREF89]
+     * Extent: Norway including Svalbard
+     * Horizontal component of the national realization of ETRS89 in Norway.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89 = 'urn:ogc:def:crs:EPSG::10875';
+
+    /**
+     * ETRS89-POL [PL-ETRF2000]
+     * Extent: Poland.
+     */
+    public const EPSG_ETRS89_POL_PL_ETRF2000 = 'urn:ogc:def:crs:EPSG::9702';
+
+    /**
+     * ETRS89-PRT [1995]
+     * Extent: Portugal - mainland ("continental")
+     * Horizontal component of national realization of ETRS89 in continental Portugal.
+     */
+    public const EPSG_ETRS89_PRT_1995 = 'urn:ogc:def:crs:EPSG::11108';
+
+    /**
+     * ETRS89-ROU [ETRF2000]
+     * Extent: Romania
+     * Horizontal component of national realization of ETRS89 in Romania.
+     */
+    public const EPSG_ETRS89_ROU_ETRF2000 = 'urn:ogc:def:crs:EPSG::11119';
+
+    /**
+     * ETRS89-SRB [SREF98]
+     * Extent: Serbia including Vojvodina
+     * Replaces MGI 1901 (CRS code 3906) in Serbia. Replaced by ETRS89-SRB [STRS00] (CRS code 8685).
+     */
+    public const EPSG_ETRS89_SRB_SREF98 = 'urn:ogc:def:crs:EPSG::4075';
+
+    /**
+     * ETRS89-SRB [STRS00]
+     * Extent: Serbia including Vojvodina
+     * In Serbia replaces MGI 1901 and SREF98 (CRS codes 3906 and 4075).
+     */
+    public const EPSG_ETRS89_SRB_STRS00 = 'urn:ogc:def:crs:EPSG::8685';
+
+    /**
+     * ETRS89-SVK [SKTRF09]
+     * Extent: Slovakia
+     * Horizontal component of national realization of ETRS89 in Slovakia. From 2024-04-01 replaced by ETRS89-SVK
+     * [SKTRF2022] (CRS code 11079).
+     */
+    public const EPSG_ETRS89_SVK_SKTRF09 = 'urn:ogc:def:crs:EPSG::11076';
+
+    /**
+     * ETRS89-SVK [SKTRF2022]
+     * Extent: Slovakia
+     * Horizontal component of national realization of ETRS89 in Slovakia. Replaces ETRS89-SVK [SKTRF09] (CRS code
+     * 11076) from 2024-04-01.
+     */
+    public const EPSG_ETRS89_SVK_SKTRF2022 = 'urn:ogc:def:crs:EPSG::11079';
+
+    /**
+     * ETRS89-SVN [D96]
+     * Extent: Slovenia
+     * Replaces MGI, alias D48, (CRS code 4312).
+     */
+    public const EPSG_ETRS89_SVN_D96 = 'urn:ogc:def:crs:EPSG::4765';
+
+    /**
+     * ETRS89-SWE [SWEREF 99]
+     * Extent: Sweden.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99 = 'urn:ogc:def:crs:EPSG::4619';
+
+    /**
+     * ETRS89-XKX [KOSOVAREF01]
+     * Extent: Kosovo
+     * In Kosovo replaces MGI 1901 (CRS code 3906).
+     */
+    public const EPSG_ETRS89_XKX_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9140';
 
     /**
      * EWR2-IRF
      * Extent: UK - on or related to East West Rail (Phase 2) routes from Oxford to Bicester, Bletchley and Bedford,
      * and from Claydon Junction to Aylesbury and Princes Risborough
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / EWR2 SnakeGrid projected CRS through
-     * transformation ETRS89 to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map projection (code
-     * 9765). In 2024 the EWR2 Grid (ETRS89 / EWR2 SnakeGrid) was extended eastwards as the EWR3 Grid (ETRS89 / EWR3
-     * SnakeGrid). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this extent the EWR3
-     * Grid replaces the EWR2 Grid.
+     * transformation ETRS89-GBR [OSNet v2009] to EWR2-IRF (1) (code 9764) used in conjunction with the EWR2-TM map
+     * projection (code 9765). In 2024 the EWR2 Grid (ETRS89 / EWR2 SnakeGrid) was extended eastwards as the EWR3 Grid
+     * (ETRS89 / EWR3 SnakeGrid). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this
+     * extent the EWR3 Grid replaces the EWR2 Grid.
      */
     public const EPSG_EWR2_IRF = 'urn:ogc:def:crs:EPSG::9763';
 
@@ -970,9 +1321,9 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to the East West Rail (Phases 2 and 3) route from Oxford to Cambridge via Bicester,
      * Bletchley and Bedford, including the route from Claydon Junction to Aylesbury and Princes Risborough
      * Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / EWR3 SnakeGrid projected CRS through
-     * transformation ETRS89 to EWR3-IRF (1) (code 10850) used in conjunction with the EWR3-TM map projection (code
-     * 9765). The EWR3 SnakeGrid is an extension of the EWR2 SnakeGrid, and between Oxford and Bedford the two grids
-     * are identical.
+     * transformation ETRS89-GBR [OSNet v2009] to EWR3-IRF (1) (code 10850) used in conjunction with the EWR3-TM map
+     * projection (code 9765). The EWR3 SnakeGrid is an extension of the EWR2 SnakeGrid, and between Oxford and Bedford
+     * the two grids are identical.
      */
     public const EPSG_EWR3_IRF = 'urn:ogc:def:crs:EPSG::10849';
 
@@ -1030,8 +1381,8 @@ class Geographic2D extends Geographic
      * FNL22-IRF
      * Extent: UK - on or related to the rail route from Inverness to Thurso and Wick
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / FNL22 SnakeGrid projected CRS through
-     * transformation ETRS89 to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map projection (code
-     * 9976).
+     * transformation ETRS89-GBR [OSNet v2009] to FNL22-IRF (1) (code 9975) used in conjunction with the FNL22-TM map
+     * projection (code 9976).
      */
     public const EPSG_FNL22_IRF = 'urn:ogc:def:crs:EPSG::9974';
 
@@ -1079,8 +1430,8 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to the rail route from Glasgow to Kilmarnock via Barrhead and the branch to East
      * Kilbride
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / GBK19 SnakeGrid projected CRS through
-     * transformation ETRS89 to GBK19-IRF (1) (code 9454) used in conjunction with the GBK19-TM map projection (code
-     * 9455).
+     * transformation ETRS89-GBR [OSNet v2009] to GBK19-IRF (1) (code 9454) used in conjunction with the GBK19-TM map
+     * projection (code 9455).
      */
     public const EPSG_GBK19_IRF = 'urn:ogc:def:crs:EPSG::9453';
 
@@ -1175,8 +1526,8 @@ class Geographic2D extends Geographic
      * GWPBS22-IRF
      * Extent: UK - on or related to the rail route from London (Paddington) to Swansea
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWPBS22 SnakeGrid projected CRS through
-     * transformation ETRS89 to GWPBS22-IRF (1) (code 10210) used in conjunction with the GW22-LCC map projection (code
-     * 10211).
+     * transformation ETRS89-GBR [OSNet v2009] to GWPBS22-IRF (1) (code 10210) used in conjunction with the GW22-LCC
+     * map projection (code 10211).
      */
     public const EPSG_GWPBS22_IRF = 'urn:ogc:def:crs:EPSG::10209';
 
@@ -1184,8 +1535,8 @@ class Geographic2D extends Geographic
      * GWWAB22-IRF
      * Extent: UK - on or related to the rail routes around Cardiff and the valleys
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWAB22 SnakeGrid projected CRS through
-     * transformation ETRS89 to GWWAB22-IRF (1) (code 10215) used in conjunction with the GW22-LCC map projection (code
-     * 10211).
+     * transformation ETRS89-GBR [OSNet v2009] to GWWAB22-IRF (1) (code 10215) used in conjunction with the GW22-LCC
+     * map projection (code 10211).
      */
     public const EPSG_GWWAB22_IRF = 'urn:ogc:def:crs:EPSG::10214';
 
@@ -1193,8 +1544,8 @@ class Geographic2D extends Geographic
      * GWWWA22-IRF
      * Extent: UK - on or related to the rail routes from Swansea to Pembroke Dock, Milford Haven and Fishguard
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / GWWWA22 SnakeGrid projected CRS through
-     * transformation ETRS89 to GWWWA22-IRF (1) (code 10220) used in conjunction with the GW22-LCC map projection (code
-     * 10211).
+     * transformation ETRS89-GBR [OSNet v2009] to GWWWA22-IRF (1) (code 10220) used in conjunction with the GW22-LCC
+     * map projection (code 10211).
      */
     public const EPSG_GWWWA22_IRF = 'urn:ogc:def:crs:EPSG::10219';
 
@@ -1298,17 +1649,11 @@ class Geographic2D extends Geographic
     public const EPSG_HS2_IRF = 'urn:ogc:def:crs:EPSG::9299';
 
     /**
-     * HTRS96
-     * Extent: Croatia.
-     */
-    public const EPSG_HTRS96 = 'urn:ogc:def:crs:EPSG::4761';
-
-    /**
      * HULLEE13-IRF
      * Extent: UK - on or related to the rail route from the Morley tunnel through Leeds to Hull
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / HULLEE13 SnakeGrid projected CRS
-     * through transformation ETRS89 to HULLEE13-IRF (1) (code 9965) used in conjunction with the HULLEE13-TM map
-     * projection (code 9966).
+     * through transformation ETRS89-GBR [OSNet v2009] to HULLEE13-IRF (1) (code 9965) used in conjunction with the
+     * HULLEE13-TM map projection (code 9966).
      */
     public const EPSG_HULLEE13_IRF = 'urn:ogc:def:crs:EPSG::9964';
 
@@ -1443,13 +1788,6 @@ class Geographic2D extends Geographic
     public const EPSG_IGD05_12 = 'urn:ogc:def:crs:EPSG::7139';
 
     /**
-     * IGM95
-     * Extent: Italy; San Marino, Vatican City State
-     * Replaced by RDN2008 (CRS code 6706) from 2011-11-10.
-     */
-    public const EPSG_IGM95 = 'urn:ogc:def:crs:EPSG::4670';
-
-    /**
      * IGN 1962 Kerguelen
      * Extent: French Southern Territories - Kerguelen onshore
      * Replaced by RGTAAF07 (CRS code 7073).
@@ -1542,8 +1880,11 @@ class Geographic2D extends Geographic
     /**
      * IGS20
      * Extent: World
-     * Used for products from the International GNSS Service (IGS) from 2022-11-27 to 2025-02-01. Replaces IGb14 (code
-     * 9380). Replaced by IGb20 (code 10785). For most practical purposes IGS20 is equivalent to ITRF2020.
+     * For most practical purposes IGS20 is equivalent to ITRF2020. Replaces IGb14 (code 9380). Used for products from
+     * the International GNSS Service (IGS) from 2022-11-27: IGS20 used from 2022-11-27 to 2025-02-01 (GPS weeks 2238
+     * through 2351); IGb20 (extract from ITRF2020-u2023) used from 2025-02-02 to 2026-01-10 (GPS weeks 2352 through
+     * 2400); IGc20 used from 2026-01-11 (GPS week 2401). Users referencing updates should include this information in
+     * their metadata.
      */
     public const EPSG_IGS20 = 'urn:ogc:def:crs:EPSG::10178';
 
@@ -1584,6 +1925,7 @@ class Geographic2D extends Geographic
      * Extent: World
      * Used for products from the International GNSS Service (IGS) from 2025-02-02. Replaces IGS20 (code 10178). For
      * most practical purposes IGb20 is equivalent to ITRF2020-u2023.
+     * @deprecated
      */
     public const EPSG_IGB20 = 'urn:ogc:def:crs:EPSG::10785';
 
@@ -1592,12 +1934,6 @@ class Geographic2D extends Geographic
      * Extent: Iraq - Kuwait boundary.
      */
     public const EPSG_IKBD_92 = 'urn:ogc:def:crs:EPSG::4667';
-
-    /**
-     * IRENET95
-     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore.
-     */
-    public const EPSG_IRENET95 = 'urn:ogc:def:crs:EPSG::4173';
 
     /**
      * ISN2004
@@ -1651,7 +1987,8 @@ class Geographic2D extends Geographic
     /**
      * ITRF2020
      * Extent: World
-     * Replaces ITRF2014 (code 9000).  Replaced by ITRF2020-u2023 (CRS code 10781).
+     * Replaces ITRF2014 (code 9000). Updated through ITRF2020-u2023 from December 2024 and through ITRF2020-u2024 from
+     * October 2025. Users referencing updates should include this information in their metadata.
      */
     public const EPSG_ITRF2020 = 'urn:ogc:def:crs:EPSG::9990';
 
@@ -1659,6 +1996,7 @@ class Geographic2D extends Geographic
      * ITRF2020-u2023
      * Extent: World
      * Replaces ITRF2020 (code 9990).
+     * @deprecated
      */
     public const EPSG_ITRF2020_U2023 = 'urn:ogc:def:crs:EPSG::10781';
 
@@ -1778,11 +2116,13 @@ class Geographic2D extends Geographic
     public const EPSG_JGD2000 = 'urn:ogc:def:crs:EPSG::4612';
 
     /**
-     * JGD2011
+     * JGD2024
      * Extent: Japan
-     * Replaces JGD2000 (CRS code 4612) with effect from 21st October 2011.
+     * Replaces JGD2000 (CRS code 4612) with effect from 21st October 2011. On adoption of JGD2024 (vertical) with
+     * effect from 1st April 2025, the name of this geodetic CRS was changed from JGD2011 to JGD2024; there is no
+     * change of definition or of coordinate values.
      */
-    public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6668';
+    public const EPSG_JGD2024 = 'urn:ogc:def:crs:EPSG::6668';
 
     /**
      * Jamaica 1875
@@ -1829,13 +2169,6 @@ class Geographic2D extends Geographic
      * Extent: Kuwait - onshore.
      */
     public const EPSG_KOC = 'urn:ogc:def:crs:EPSG::4246';
-
-    /**
-     * KOSOVAREF01
-     * Extent: Kosovo
-     * In Kosovo replaces MGI 1901 (CRS code 3906).
-     */
-    public const EPSG_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9140';
 
     /**
      * KSA-GRF17
@@ -1956,26 +2289,6 @@ class Geographic2D extends Geographic
      * Replaces ELD79.
      */
     public const EPSG_LGD2006 = 'urn:ogc:def:crs:EPSG::4754';
-
-    /**
-     * LKS-2020
-     * Extent: Latvia
-     * Replaces LKS-92 (CRS code 4661) from 2025-10-01.
-     */
-    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10305';
-
-    /**
-     * LKS-92
-     * Extent: Latvia
-     * Replaced by LKS-2020 (CRS code 10305) from 2025-10-01.
-     */
-    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4661';
-
-    /**
-     * LKS94
-     * Extent: Lithuania.
-     */
-    public const EPSG_LKS94 = 'urn:ogc:def:crs:EPSG::4669';
 
     /**
      * LTF2004(G)
@@ -2134,8 +2447,8 @@ class Geographic2D extends Geographic
      * MALS09-IRF
      * Extent: UK - on or related to the rail route from London (Marylebone) to Leamington Spa
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MALS09 SnakeGrid projected CRS through
-     * transformation ETRS89 to MALS09-IRF (1) (code 10225) used in conjunction with the MALS09-TM map projection (code
-     * 10226).
+     * transformation ETRS89-GBR [OSNet v2009] to MALS09-IRF (1) (code 10225) used in conjunction with the MALS09-TM
+     * map projection (code 10226).
      */
     public const EPSG_MALS09_IRF = 'urn:ogc:def:crs:EPSG::10224';
 
@@ -2175,8 +2488,8 @@ class Geographic2D extends Geographic
      * MML07-IRF
      * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / MML07 SnakeGrid projected CRS (code
-     * 9373) through transformation ETRS89 to MML07-IRF (1) (code 9369) used in conjunction with the MML07-TM map
-     * projection (code 9370).
+     * 9373) through transformation ETRS89-GBR [OSNet v2009] to MML07-IRF (1) (code 9369) used in conjunction with the
+     * MML07-TM map projection (code 9370).
      */
     public const EPSG_MML07_IRF = 'urn:ogc:def:crs:EPSG::9372';
 
@@ -2197,20 +2510,14 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore
      * Junction
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MOLDOR11 SnakeGrid projected CRS
-     * through transformation ETRS89 to MOLDOR11-IRF (1) (code 9878) used in conjunction with the MOLDOR11-TM map
-     * projection (code 9879).
+     * through transformation ETRS89-GBR [OSNet v2009] to MOLDOR11-IRF (1) (code 9878) used in conjunction with the
+     * MOLDOR11-TM map projection (code 9879).
      */
     public const EPSG_MOLDOR11_IRF = 'urn:ogc:def:crs:EPSG::9871';
 
     /**
-     * MOLDREF99
-     * Extent: Moldova.
-     */
-    public const EPSG_MOLDREF99 = 'urn:ogc:def:crs:EPSG::4023';
-
-    /**
      * MOP78
-     * Extent: Wallis and Futuna - Wallis
+     * Extent: Wallis and Futuna - Wallis - onshore
      * Replaced by RGWF96 (CRS code 8900) for geodetic survey and RGWF96 (lon-lat) (CRS code 8902) for GIS.
      */
     public const EPSG_MOP78 = 'urn:ogc:def:crs:EPSG::4639';
@@ -2220,8 +2527,8 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to Midland Rail Hub, covering routes through Cardiff, Bristol, Gloucester, Derby,
      * Birmingham, Leicester, and Lincoln
      * Intermediate CRS created in 2021 to assist the emulation of the ETRS89 / MRH21 SnakeGrid projected CRS through
-     * transformation ETRS89 to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map projection (code
-     * 9868).
+     * transformation ETRS89-GBR [OSNet v2009] to MRH21-IRF (1) (code 9867) used in conjunction with the MRH21-TM map
+     * projection (code 9868).
      */
     public const EPSG_MRH21_IRF = 'urn:ogc:def:crs:EPSG::9866';
 
@@ -2236,8 +2543,8 @@ class Geographic2D extends Geographic
      * MWC18-IRF
      * Extent: UK - on or related to the rail route from Manchester via Wigan and Liverpool to Chester
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / MWC18 SnakeGrid projected CRS through
-     * transformation ETRS89 to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map projection (code
-     * 10127).
+     * transformation ETRS89-GBR [OSNet v2009] to MWC18 (1) (code 10108) used in conjunction with the MWC18-TM map
+     * projection (code 10127).
      */
     public const EPSG_MWC18_IRF = 'urn:ogc:def:crs:EPSG::20033';
 
@@ -2442,14 +2749,11 @@ class Geographic2D extends Geographic
      * Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal
      * continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British
      * Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut,
-     * Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast. Cuba. El Salvador -
-     * onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus
-     * offshore east coast. Nicaragua - onshore. USA - Alabama, Alaska, Arizona, Arkansas, California, Colorado,
-     * Connecticut, Delaware, Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine,
-     * Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire,
-     * New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode
-     * Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,
-     * Wisconsin and Wyoming - plus offshore . US Virgin Islands - onshore
+     * Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north
+     * of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico -
+     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and
+     *
+     * . US Virgin Islands - onshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaced by NAD27(76) (code 4608) in Ontario, CGQ77
      * (code 4609) in Quebec, Mexican Datum of 1993 (code 4483) in Mexico, NAD83 (code 4269) in Canada (excl. Ontario &
      * Quebec) & USA.
@@ -2472,14 +2776,7 @@ class Geographic2D extends Geographic
 
     /**
      * NAD83
-     * Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador;
-     * Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto
-     * Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia;
-     * Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands.
-     * British Virgin Islands
+     * Extent: North America: Canada. Puerto Rico. USA. US Virgin Islands. British Virgin Islands
      * Longitude is POSITIVE EAST. The adjustment included connections to Greenland and Mexico but the system was not
      * adopted there. For applications with an accuracy of better than 1m replaced by NAD83(HARN) in the US and PRVI
      * and by NAD83(CSRS) in Canada.
@@ -2488,12 +2785,7 @@ class Geographic2D extends Geographic
 
     /**
      * NAD83(2011)
-     * Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware;
-     * Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts;
-     * Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico;
-     * New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina;
-     * South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US
-     * Virgin Islands
+     * Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaces NAD83(CORS96) and NAD83(NSRS2007) (CRS
      * codes 6783 and 4759).
      */
@@ -2501,12 +2793,7 @@ class Geographic2D extends Geographic
 
     /**
      * NAD83(CORS96)
-     * Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware;
-     * Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts;
-     * Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico;
-     * New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina;
-     * South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US
-     * Virgin Islands
+     * Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
      * Note: this CRS includes POSITIVE EAST longitudes. Replaced by NAD83(2011) (CRS code 6318) from 2011-09-06.
      */
     public const EPSG_NAD83_CORS96 = 'urn:ogc:def:crs:EPSG::6783';
@@ -2599,13 +2886,8 @@ class Geographic2D extends Geographic
     /**
      * NAD83(FBN)
      * Extent: American Samoa - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands - onshore. Guam - onshore.
-     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - CONUS - Alabama; Arizona; Arkansas; California;
-     * Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana;
-     * Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New
-     * Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania;
-     * Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West
-     * Virginia; Wisconsin; Wyoming - onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin
-     * Islands - onshore
+     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - conterminous (contiguous) lower 48 states
+     * (CONUS) onshore plus Gulf of Mexico offshore continental shelf (GoM OCS). US Virgin Islands - onshore
      * In Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Continental US, Puerto Rico and
      * US Virgin Islands replaced by NAD83(NSRS2007). In American Samoa and Hawaii replaced by NAD83(PA11). In Guam/NMI
      * replaced by NAD83(MA11).
@@ -2623,13 +2905,8 @@ class Geographic2D extends Geographic
     /**
      * NAD83(HARN)
      * Extent: American Samoa - onshore - Tutuila, Aunu'u, Ofu, Olesega, Ta'u and Rose islands. Guam - onshore.
-     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore Alabama, Alaska, Arizona, Arkansas,
-     * California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas,
-     * Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,
-     * Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma,
-     * Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia,
-     * Washington, West Virginia, Wisconsin and Wyoming; offshore Gulf of Mexico continental shelf (GoM OCS). US Virgin
-     * Islands - onshore
+     * Northern Mariana Islands - onshore. Puerto Rico - onshore. USA - onshore plus offshore Gulf of Mexico
+     * continental shelf (GoM OCS). US Virgin Islands - onshore
      * In CONUS, AK, HI and PRVI replaces NAD83 for applications with an accuracy of better than 1m. Replaced by
      * NAD83(FBN) in CONUS, American Samoa and Guam / NMI, by NAD83(NSRS2007) in Alaska, by NAD83(PA11) in Hawaii and
      * by NAD83(HARN Corrected) in PRVI.
@@ -2652,12 +2929,7 @@ class Geographic2D extends Geographic
 
     /**
      * NAD83(NSRS2007)
-     * Extent: Puerto Rico. USA - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware;
-     * Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts;
-     * Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico;
-     * New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina;
-     * South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US
-     * Virgin Islands
+     * Extent: Puerto Rico. USA - Alaska and conterminous (contiguous) lower 48 states (CONUS)
      * Note: this CRS includes POSITIVE EAST longitudes. Replaces NAD83(HARN) and NAD83(FBN). Replaced by NAD83(2011).
      */
     public const EPSG_NAD83_NSRS2007 = 'urn:ogc:def:crs:EPSG::4759';
@@ -2679,19 +2951,10 @@ class Geographic2D extends Geographic
     public const EPSG_NAD83_PACP00 = 'urn:ogc:def:crs:EPSG::9075';
 
     /**
-     * NATRF2022
-     * Extent: North America: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador;
-     * Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. USA -
-     * Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho;
-     * Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota;
-     * Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North
-     * Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming
-     * CAUTION: Preliminary data from NGS beta website (https://beta.ngs.noaa.gov/). This data has been added to the
-     * EPSG Dataset prior to official adoption to facilitate software testing and evaluation. In the unlikely event
-     * that definitions change, the record will be deprecated and replaced with a new EPSG code.
+     * NATRF2022e2020
+     * Extent: North America: Canada; USA - Alaska, conterminous (contiguous) lower 48 states (CONUS).
      */
-    public const EPSG_NATRF2022 = 'urn:ogc:def:crs:EPSG::10968';
+    public const EPSG_NATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10968';
 
     /**
      * NEA74 Noumea
@@ -2717,6 +2980,14 @@ class Geographic2D extends Geographic
      * Extent: Norway - onshore.
      */
     public const EPSG_NGO_1948_OSLO = 'urn:ogc:def:crs:EPSG::4817';
+
+    /**
+     * NKG_ETRF14
+     * Extent: Denmark, Estonia, Finland, Latvia, Lithuania, and Sweden; Norway - onshore, nearshore, and offshore
+     * southeast of a line joining Haugesund and the western limit of the Norway-Denmark maritime boundary
+     * Replaces NKG_ETRF00 (ETRF2000 at epoch 2000.0).
+     */
+    public const EPSG_NKG_ETRF14 = 'urn:ogc:def:crs:EPSG::10807';
 
     /**
      * NSIDC Authalic Sphere
@@ -2899,8 +3170,8 @@ class Geographic2D extends Geographic
      * OxWo08-IRF
      * Extent: UK - on or related to the rail route from Oxford to Worcester
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through
-     * transformation ETRS89 to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM map projection (code
-     * 10234).
+     * transformation ETRS89-GBR [OSNet v2009] to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM
+     * map projection (code 10234).
      */
     public const EPSG_OXWO08_IRF = 'urn:ogc:def:crs:EPSG::10229';
 
@@ -3023,8 +3294,8 @@ class Geographic2D extends Geographic
 
     /**
      * Pampa del Castillo
-     * Extent: Argentina - Chibut province south of approximately 42°30'S and Santa Cruz province north of
-     * approximately 50°20'S
+     * Extent: Argentina - Chibut province south of approximately 42°30'S, Santa Cruz province north of approximately
+     * 50°20'S, and offshore Golfo San Jorge
      * Replaced by Campo Inchauspe (geogCRS code 4221) for topographic mapping, use for oil exploration and production
      * in Golfo San Jorge basin (44°S to 47.5°S) continues.
      */
@@ -3187,8 +3458,8 @@ class Geographic2D extends Geographic
      * RBEPP12-IRF
      * Extent: UK - on or related to the rail route from Reading via Newbury to Penzance
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / RBEPP12 SnakeGrid projected CRS through
-     * transformation ETRS89 to RBEPP12-IRF (1) (code 10278) used in conjunction with the RBEPP12-LCC map projection
-     * (code 10279).
+     * transformation ETRS89-GBR [OSNet v2009] to RBEPP12-IRF (1) (code 10278) used in conjunction with the RBEPP12-LCC
+     * map projection (code 10279).
      */
     public const EPSG_RBEPP12_IRF = 'urn:ogc:def:crs:EPSG::10277';
 
@@ -3201,15 +3472,12 @@ class Geographic2D extends Geographic
     public const EPSG_RD_83 = 'urn:ogc:def:crs:EPSG::4745';
 
     /**
-     * RDN2008
-     * Extent: Italy; San Marino, Vatican City State
-     * Replaces IGM95 (CRS code 4670) from 2011-11-10.
-     */
-    public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6706';
-
-    /**
      * REDGEOMIN
-     * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez.
+     * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+     * REDGEOMIN coordinates are updated on a biannual basis identified using syntax "REDGEOMIN([frame]@[epoch]", e.g.
+     * REDGEOMIN(IGS20@2024.0), REDGEOMIN(IGS20@2024.5), etc. This EPSG record references any of these updates without
+     * distinction. Users should include the update used in the metadata of  their spatial data metadata. Data should
+     * be reduced to this epoch using the ADELA deformation model.
      */
     public const EPSG_REDGEOMIN = 'urn:ogc:def:crs:EPSG::9696';
 
@@ -3243,55 +3511,6 @@ class Geographic2D extends Geographic
      * navigation and safety of life purposes.
      */
     public const EPSG_RGAF09_LON_LAT = 'urn:ogc:def:crs:EPSG::7086';
-
-    /**
-     * RGF93 v1
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * See CRS code 7084 for alternate system with axes reversed used by IGN for GIS purposes. Replaced by RGF93 v2
-     * (CRS code 9777) from 2010-06-18.
-     */
-    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4171';
-
-    /**
-     * RGF93 v1 (lon-lat)
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * See CRS code 4171 for system with axes in sequence lat-lon to be used for air, land and sea navigation and
-     * safety of life purposes. Replaced by RGF93 v2 (lon-lat) (CRS code 9779) from 2010-06-18.
-     */
-    public const EPSG_RGF93_V1_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
-
-    /**
-     * RGF93 v2
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaces RGF93 v1 (CRS code 4171) from 2010-06-18. Replaced by RGF93 v2b (CRS code 9782) from 2021-01-05. See
-     * CRS code 9779 for alternate system with axes reversed used by IGN for GIS purposes.
-     */
-    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9777';
-
-    /**
-     * RGF93 v2 (lon-lat)
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaces RGF93 v1 (lon-lat) (code 7084) from 2010-06-18. Replaced by RGF93 v2b (lon-lat) (CRS code 9784) from
-     * 2021-01-05. See CRS code 9777 for system with axes in sequence lat-lon to be used for air, land and sea
-     * navigation and safety of life purposes.
-     */
-    public const EPSG_RGF93_V2_LON_LAT = 'urn:ogc:def:crs:EPSG::9779';
-
-    /**
-     * RGF93 v2b
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaces RGF93 v2 (CRS code 9777) from 2021-01-05. See CRS code 9784 for alternate system with axes reversed
-     * used by IGN for GIS purposes.
-     */
-    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9782';
-
-    /**
-     * RGF93 v2b (lon-lat)
-     * Extent: France, mainland and Corsica (France métropolitaine including Corsica)
-     * Replaces RGF93 v2 (lon-lat) (CRS code 9779) from 2021-01-05. See CRS code 9782 for system with axes in sequence
-     * lat-lon to be used for air, land and sea navigation and safety of life purposes.
-     */
-    public const EPSG_RGF93_V2B_LON_LAT = 'urn:ogc:def:crs:EPSG::9784';
 
     /**
      * RGFG95
@@ -3601,7 +3820,8 @@ class Geographic2D extends Geographic
 
     /**
      * SAD69
-     * Extent: Brazil. In rest of South America - onshore north of approximately 45°S and Tierra del Fuego
+     * Extent: Brazil. Chile - onshore south of 43°30'S including Tierra del Fuego. In rest of South America - onshore
+     * north of approximately 45°S
      * Uses GRS 1967 ellipsoid with 1/f to exactly 2 decimal places. In Brazil only, replaced by SAD69(96) (CRS code
      * 5527).
      */
@@ -3621,8 +3841,8 @@ class Geographic2D extends Geographic
      * Extent: UK - on or related to the Scottish central mainline rail route from Motherwell through Perth and
      * Pitlochry to Inverness
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SCM22 SnakeGrid projected CRS through
-     * transformation ETRS89 to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map projection (code
-     * 9971).
+     * transformation ETRS89-GBR [OSNet v2009] to SCM22-IRF (1) (code 9969) used in conjunction with the SCM22-TM map
+     * projection (code 9971).
      */
     public const EPSG_SCM22_IRF = 'urn:ogc:def:crs:EPSG::9969';
 
@@ -3770,7 +3990,7 @@ class Geographic2D extends Geographic
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
      * Densification of SIRGAS 2000 within Chile. Replaces PSAD56 (CRS code 6248) in Chile, HITO XVIII (CRS code 6254)
      * in Chilean Tierra del Fuego and Easter Island 1967 (CRS code 6719) in Easter Island. Replaced by SIRGAS-Chile
-     * 2010 (CRS code 8949).
+     * 2013 (CRS code 9148).
      */
     public const EPSG_SIRGAS_CHILE_2002 = 'urn:ogc:def:crs:EPSG::5360';
 
@@ -3779,13 +3999,14 @@ class Geographic2D extends Geographic
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
      * Densification within Chile of SIRGAS-CON at epoch 2010.00. Replaces SIRGAS-Chile 2002 (CRS code 5360) due to
      * significant tectonic deformation. Replaced by SIRGAS-Chile 2013 (CRS code 9148).
+     * @deprecated
      */
     public const EPSG_SIRGAS_CHILE_2010 = 'urn:ogc:def:crs:EPSG::8949';
 
     /**
      * SIRGAS-Chile 2013
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-     * Densification within Chile of SIRGAS-CON at epoch 2013.00. Replaces SIRGAS-Chile 2010 (CRS code 8949) due to
+     * Densification within Chile of SIRGAS-CON at epoch 2013.00. Replaces SIRGAS-Chile 2002 (CRS code 5360) due to
      * significant tectonic deformation. Replaced by SIRGAS-Chile 2016 (CRS code 9153).
      */
     public const EPSG_SIRGAS_CHILE_2013 = 'urn:ogc:def:crs:EPSG::9148';
@@ -3801,10 +4022,18 @@ class Geographic2D extends Geographic
     /**
      * SIRGAS-Chile 2021
      * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
-     * Densification within Chile of SIRGAS-CON at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9153) due to
-     * significant tectonic deformation.
+     * Densification within Chile of SIRGAS-CON at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9153) and
+     * replaced by SIRGAS-Chile 2025 (CRS code 11473) due to significant tectonic deformation.
      */
     public const EPSG_SIRGAS_CHILE_2021 = 'urn:ogc:def:crs:EPSG::20041';
+
+    /**
+     * SIRGAS-Chile 2025
+     * Extent: Chile. Includes Easter Island, Juan Fernandez Islands, San Felix, and Sala y Gomez
+     * Densification within Chile of SIRGAS-CON at epoch 2025.00. Replaces SIRGAS-Chile 2021 (CRS code 20041) due to
+     * significant tectonic deformation.
+     */
+    public const EPSG_SIRGAS_CHILE_2025 = 'urn:ogc:def:crs:EPSG::11473';
 
     /**
      * SIRGAS-ROU98
@@ -3829,32 +4058,26 @@ class Geographic2D extends Geographic
      * SMITB20-IRF
      * Extent: UK - on or related to the rail route from Okehampton to Penstone
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SMITB20 SnakeGrid projected CRS through
-     * transformation ETRS89 to SMITB20-IRF (1) (code 10273) used in conjunction with the SMITB20-TM map projection
-     * (code 10274).
+     * transformation ETRS89-GBR [OSNet v2009] to SMITB20-IRF (1) (code 10273) used in conjunction with the SMITB20-TM
+     * map projection (code 10274).
      */
     public const EPSG_SMITB20_IRF = 'urn:ogc:def:crs:EPSG::10272';
 
     /**
-     * SRB_ETRS89
-     * Extent: Serbia including Vojvodina
-     * In Serbia replaces MGI 1901 and SREF98 (CRS codes 3906 and 4075).
-     */
-    public const EPSG_SRB_ETRS89 = 'urn:ogc:def:crs:EPSG::8685';
-
-    /**
-     * SREF98
-     * Extent: Serbia including Vojvodina
-     * Replaces MGI 1901 (CRS code 3906) in Serbia. Replaced by SRB_ETRS89 (STRS00) (CRS code 8685).
-     */
-    public const EPSG_SREF98 = 'urn:ogc:def:crs:EPSG::4075';
-
-    /**
      * SRGI2013
      * Extent: Indonesia
-     * Supports horizontal component of national horizontal control network (JKHN). Adopted 2013-10-11. Replaces DGN95
-     * and all older systems.
+     * Horizontal component (JKHN) of national geodetic control network (JKG). Adopted 2013-10-11. Replaces DGN95 and
+     * all older systems.
      */
     public const EPSG_SRGI2013 = 'urn:ogc:def:crs:EPSG::9470';
+
+    /**
+     * SRGI2013 epoch 2021.0
+     * Extent: Indonesia
+     * Horizontal component of geographic 3D CRS (code 11030). Horizontal component (JKHN) of national geodetic control
+     * network (JKG).
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0 = 'urn:ogc:def:crs:EPSG::11033';
 
     /**
      * ST71 Belep
@@ -3884,19 +4107,22 @@ class Geographic2D extends Geographic
     public const EPSG_SVY21 = 'urn:ogc:def:crs:EPSG::4757';
 
     /**
-     * SWEREF99
-     * Extent: Sweden.
-     */
-    public const EPSG_SWEREF99 = 'urn:ogc:def:crs:EPSG::4619';
-
-    /**
      * SYC20-IRF
      * Extent: UK - on or related to the rail route from Shrewsbury to Crewe
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SYC20 SnakeGrid projected CRS through
-     * transformation ETRS89 to SYC20-IRF (1) (code 10238) used in conjunction with the SYC20-TM map projection (code
-     * 10239).
+     * transformation ETRS89-GBR [OSNet v2009] to SYC20-IRF (1) (code 10238) used in conjunction with the SYC20-TM map
+     * projection (code 10239).
      */
     public const EPSG_SYC20_IRF = 'urn:ogc:def:crs:EPSG::10237';
+
+    /**
+     * SZCTW-IRF
+     * Extent: UK - Sizewell power station site and  rail and road routes related to the site
+     * Intermediate CRS created in 2026 to assist the emulation of the ETRS89 / SZCTW SnakeGrid projected CRS through
+     * transformation ETRS89-GBR [OSNet v2009] to SZCTW-IRF (1) (code 11467) used in conjunction with the SZCTW-TM map
+     * projection (code 11468).
+     */
+    public const EPSG_SZCTW_IRF = 'urn:ogc:def:crs:EPSG::11466';
 
     /**
      * Saba
@@ -3972,8 +4198,8 @@ class Geographic2D extends Geographic
      * ShAb07-IRF
      * Extent: UK - on or related to the rail route from Shrewsbury to Aberystwyth
      * Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / ShAb07 SnakeGrid projected CRS through
-     * transformation ETRS89 to ShAb07-IRF (1) (code 10186) used in conjunction with the ShAb07-TM map projection (code
-     * 10187).
+     * transformation ETRS89-GBR [OSNet v2009] to ShAb07-IRF (1) (code 10186) used in conjunction with the ShAb07-TM
+     * map projection (code 10187).
      */
     public const EPSG_SHAB07_IRF = 'urn:ogc:def:crs:EPSG::10185';
 
@@ -4002,13 +4228,6 @@ class Geographic2D extends Geographic
      * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
      */
     public const EPSG_SINT_EUSTATIUS = 'urn:ogc:def:crs:EPSG::10736';
-
-    /**
-     * Slovenia 1996
-     * Extent: Slovenia
-     * Replaces MG! alias D48 (CRS code 4312).
-     */
-    public const EPSG_SLOVENIA_1996 = 'urn:ogc:def:crs:EPSG::4765';
 
     /**
      * Solomon 1968
@@ -4120,8 +4339,8 @@ class Geographic2D extends Geographic
      * TPEN11-IRF
      * Extent: UK - on or related to the Trans-Pennine rail route from Liverpool via Manchester to Bradford and Leeds
      * Intermediate CRS created in 2020 to assist the emulation of the ETRS89 / TPEN11 SnakeGrid projected CRS through
-     * transformation ETRS89 to TPEN11-IRF (1) (code 9365) used in conjunction with the TPEN11-TM map projection (code
-     * 9366).
+     * transformation ETRS89-GBR [OSNet v2009] to TPEN11-IRF (1) (code 9365) used in conjunction with the TPEN11-TM map
+     * projection (code 9366).
      */
     public const EPSG_TPEN11_IRF = 'urn:ogc:def:crs:EPSG::9364';
 
@@ -4328,8 +4547,8 @@ class Geographic2D extends Geographic
      * WC05-IRF
      * Extent: UK - on or related to the west coast mainline rail route from London (Euston) via Carlisle to Glasgow
      * Intermediate CRS created in 2024 to assist the emulation of the ETRS89 / WC05 SnakeGrid projected CRS through
-     * transformation ETRS89 to WC05-IRF (1) (code 10629) used in conjunction with the WC05-TM map projection (code
-     * 10631).
+     * transformation ETRS89-GBR [OSNet v2009] to WC05-IRF (1) (code 10629) used in conjunction with the WC05-TM map
+     * projection (code 10631).
      */
     public const EPSG_WC05_IRF = 'urn:ogc:def:crs:EPSG::10628';
 
@@ -4427,8 +4646,8 @@ class Geographic2D extends Geographic
      * Extent: UK - covering the surface level works associated with the Woodsmith mining project between Sneatonthorpe
      * and Wilton works, Redcar
      * Intermediate CRS created in 2025 to assist the emulation of the ETRS89 / WSPG SnakeGrid projected CRS through
-     * transformation ETRS89 to WSPG-IRF (1) (code 10861) used in conjunction with the WSPG-TM map projection (code
-     * 10862).
+     * transformation ETRS89-GBR [OSNet v2009] to WSPG-IRF (1) (code 10861) used in conjunction with the WSPG-TM map
+     * projection (code 10862).
      */
     public const EPSG_WSPG_IRF = 'urn:ogc:def:crs:EPSG::10860';
 
@@ -4444,6 +4663,12 @@ class Geographic2D extends Geographic
      * Replaces Beijing 1954 (CRS code 4214). Replaced by CGCS2000(CRS code 4490).
      */
     public const EPSG_XIAN_1980 = 'urn:ogc:def:crs:EPSG::4610';
+
+    /**
+     * Xrail84
+     * Extent: UK - Greater London and surrounding area.
+     */
+    public const EPSG_XRAIL84 = 'urn:ogc:def:crs:EPSG::10993';
 
     /**
      * Yacare
@@ -4480,14 +4705,159 @@ class Geographic2D extends Geographic
     public const EPSG_FK89 = 'urn:ogc:def:crs:EPSG::4753';
 
     /**
+     * @deprecated use EPSG_ETRS89_BGR_BGS2005 instead
+     */
+    public const EPSG_BGS2005 = 'urn:ogc:def:crs:EPSG::7798';
+
+    /**
+     * @deprecated use EPSG_ETRS89_BIH_BH_ETRS89 instead
+     */
+    public const EPSG_BH_ETRS89 = 'urn:ogc:def:crs:EPSG::10328';
+
+    /**
+     * @deprecated use EPSG_ETRS89_CHE_CHTRS95 instead
+     */
+    public const EPSG_CHTRS95 = 'urn:ogc:def:crs:EPSG::4151';
+
+    /**
+     * @deprecated use EPSG_CR_SIRGAS_EPOCH_2014_59 instead
+     */
+    public const EPSG_CR_SIRGAS = 'urn:ogc:def:crs:EPSG::8907';
+
+    /**
+     * @deprecated use EPSG_ETRS89_EST_EST97 instead
+     */
+    public const EPSG_EST97 = 'urn:ogc:def:crs:EPSG::4180';
+
+    /**
+     * @deprecated use EPSG_ETRS89_POL_PL_ETRF2000 instead
+     */
+    public const EPSG_ETRF2000_PL = 'urn:ogc:def:crs:EPSG::9702';
+
+    /**
+     * @deprecated use EPSG_ETRS89_DEU_ETRS89_DREF91_2016 instead
+     */
+    public const EPSG_ETRS89_DREF91_2016 = 'urn:ogc:def:crs:EPSG::10284';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN instead
+     */
+    public const EPSG_EUREF_FIN = 'urn:ogc:def:crs:EPSG::10690';
+
+    /**
+     * @deprecated use EPSG_ETRS89_HRV_HTRS96 instead
+     */
+    public const EPSG_HTRS96 = 'urn:ogc:def:crs:EPSG::4761';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_IGM95 instead
+     */
+    public const EPSG_IGM95 = 'urn:ogc:def:crs:EPSG::4670';
+
+    /**
+     * @deprecated use EPSG_ETRS89_IRE_ETRF2000 instead
+     */
+    public const EPSG_IRENET95 = 'urn:ogc:def:crs:EPSG::4173';
+
+    /**
+     * @deprecated use EPSG_JGD2024 instead
+     */
+    public const EPSG_JGD2011 = 'urn:ogc:def:crs:EPSG::6668';
+
+    /**
+     * @deprecated use EPSG_ETRS89_XKX_KOSOVAREF01 instead
+     */
+    public const EPSG_KOSOVAREF01 = 'urn:ogc:def:crs:EPSG::9140';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_2020 instead
+     */
+    public const EPSG_LKS_2020 = 'urn:ogc:def:crs:EPSG::10305';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92 instead
+     */
+    public const EPSG_LKS_92 = 'urn:ogc:def:crs:EPSG::4661';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92 instead
+     */
+    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LTU_LKS94 instead
+     */
+    public const EPSG_LKS94 = 'urn:ogc:def:crs:EPSG::4669';
+
+    /**
+     * @deprecated use EPSG_ETRS89_MDA_MOLDREF99 instead
+     */
+    public const EPSG_MOLDREF99 = 'urn:ogc:def:crs:EPSG::4023';
+
+    /**
+     * @deprecated use EPSG_NATRF2022E2020 instead
+     */
+    public const EPSG_NATRF2022 = 'urn:ogc:def:crs:EPSG::10968';
+
+    /**
+     * @deprecated use EPSG_ETRS89_ITA_RDN2008 instead
+     */
+    public const EPSG_RDN2008 = 'urn:ogc:def:crs:EPSG::6706';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1 instead
+     */
+    public const EPSG_RGF93_V1 = 'urn:ogc:def:crs:EPSG::4171';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_LON_LAT instead
+     */
+    public const EPSG_RGF93_V1_LON_LAT = 'urn:ogc:def:crs:EPSG::7084';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2 instead
+     */
+    public const EPSG_RGF93_V2 = 'urn:ogc:def:crs:EPSG::9777';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_LON_LAT instead
+     */
+    public const EPSG_RGF93_V2_LON_LAT = 'urn:ogc:def:crs:EPSG::9779';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B instead
+     */
+    public const EPSG_RGF93_V2B = 'urn:ogc:def:crs:EPSG::9782';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_LON_LAT instead
+     */
+    public const EPSG_RGF93_V2B_LON_LAT = 'urn:ogc:def:crs:EPSG::9784';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SRB_STRS00 instead
+     */
+    public const EPSG_SRB_ETRS89 = 'urn:ogc:def:crs:EPSG::8685';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SRB_SREF98 instead
+     */
+    public const EPSG_SREF98 = 'urn:ogc:def:crs:EPSG::4075';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99 instead
+     */
+    public const EPSG_SWEREF99 = 'urn:ogc:def:crs:EPSG::4619';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96 instead
+     */
+    public const EPSG_SLOVENIA_1996 = 'urn:ogc:def:crs:EPSG::4765';
+
+    /**
      * @deprecated use EPSG_LUREF instead
      */
     public const EPSG_LUXEMBOURG_1930 = 'urn:ogc:def:crs:EPSG::4181';
-
-    /**
-     * @deprecated use EPSG_LKS_92 instead
-     */
-    public const EPSG_LKS92 = 'urn:ogc:def:crs:EPSG::4661';
 
     /**
      * @deprecated use EPSG_KGD2002 instead
@@ -4574,5 +4944,14 @@ class Geographic2D extends Geographic
             'base_crs' => $baseCRSSrid,
             'help' => $help,
         ];
+    }
+
+    /**
+     * @internal CRS table row without constructing the object (avoids loading bounding polygons)
+     * @return array<string, mixed>|null
+     */
+    public static function getSRIDData(string $srid): ?array
+    {
+        return static::$sridData[$srid] ?? null;
     }
 }

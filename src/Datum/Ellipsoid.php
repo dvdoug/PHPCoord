@@ -511,7 +511,7 @@ class Ellipsoid
             'semi_major_axis' => 6378388.0,
             'semi_minor_axis' => 6356911.9461279465,
             'uom' => 'urn:ogc:def:uom:EPSG::9001',
-            'help' => 'Adopted by IUGG 1924 in Madrid. Based on Hayford 1909/1910 figures. ',
+            'help' => 'Adopted by IUGG 1924 in Madrid. Based on Hayford 1909/1910 figures.',
         ],
         'urn:ogc:def:ellipsoid:EPSG::7024' => [
             'name' => 'Krassowsky 1940',

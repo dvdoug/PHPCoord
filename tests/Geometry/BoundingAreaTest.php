@@ -21,16 +21,6 @@ use PHPUnit\Framework\TestCase;
 
 class BoundingAreaTest extends TestCase
 {
-    public function testCentreOfWorld(): void
-    {
-        $polygon = BoundingArea::createWorld();
-        [$latitude, $longitude] = $polygon->getPointInside();
-
-        self::assertEquals(0, $latitude->getValue());
-        self::assertEquals(0, $longitude->getValue());
-        self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(0), new Degree(0), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
-    }
-
     public function testGB(): void
     {
         $polygon = BoundingArea::createFromPolygons(
@@ -47,10 +37,6 @@ class BoundingAreaTest extends TestCase
             ],
             RegionMap::REGION_EUROPE
         );
-        [$latitude, $longitude] = $polygon->getPointInside();
-
-        self::assertEqualsWithDelta(55.38, $latitude->getValue(), 0.0000000000001);
-        self::assertEqualsWithDelta(-3.495, $longitude->getValue(), 0.0000000000001);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(50), new Degree(-8), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(50), new Degree(-9.1), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
@@ -71,17 +57,12 @@ class BoundingAreaTest extends TestCase
             ],
             RegionMap::REGION_OCEANIA
         );
-        [$latitude, $longitude] = $polygon->getPointInside();
-
-        self::assertEqualsWithDelta(-40.915, $latitude->getValue(), 0.0000000000001);
-        self::assertEqualsWithDelta(174.7, $longitude->getValue(), 0.0000000000001);
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(-55), new Degree(170), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(-55), new Degree(0), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
     }
 
     public function testPolygonWithHole(): void
     {
-        $this->markTestSkipped();
         $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::3914']);
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(41), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));

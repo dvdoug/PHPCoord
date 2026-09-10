@@ -9,19 +9,17 @@ declare(strict_types=1);
 
 namespace PHPCoord\EPSG\Import;
 
-use Composer\Pcre\Preg;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassLike;
+use PhpParser\Node\Stmt\TraitUse;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
 
-use function array_unshift;
 use function explode;
 use function str_replace;
-use function strtoupper;
 use function trim;
 use function wordwrap;
 use function ucfirst;
@@ -29,6 +27,11 @@ use function array_unique;
 use function array_map;
 use function rtrim;
 use function implode;
+use function preg_match;
+use function array_splice;
+use function count;
+use function ltrim;
+use function str_starts_with;
 
 class AddNewConstantsVisitor extends NodeVisitorAbstract
 {
@@ -38,11 +41,14 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
 
     private array $aliases;
 
-    public function __construct(array $constants, string $visibility, array $aliases)
+    private array $canonicalNames;
+
+    public function __construct(array $constants, string $visibility, array $canonicalNames, array $aliases)
     {
         $this->constants = $constants;
         $this->visibility = $visibility;
         $this->aliases = $aliases;
+        $this->canonicalNames = $canonicalNames;
     }
 
     public function enterNode(Node $node)
@@ -51,13 +57,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
             $commentNodes = [];
 
             foreach ($this->constants as $urn => $data) {
-                $constantName = str_replace(
-                    [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
-                    ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
-                    $data['name']
-                );
-                $constantName = Preg::replace('/_+/', '_', $constantName);
-                $constantName = trim($constantName, '_');
+                $constName = $this->canonicalNames[$urn];
                 $name = str_replace(
                     [
                         'UoM: degree',
@@ -121,10 +121,11 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                     $data['constant_help']
                 );
 
-                $comment .= "/**\n";
-                $comment .= '* ' . ucfirst(trim($name)) . "\n";
+                $helpLines = $this->parseHelpLines($data['constant_help']);
+
+                $bodyLines = [ucfirst(trim($name))];
                 if (isset($data['type']) && $data['type']) {
-                    $comment .= '* Type: ' . ucfirst(trim($data['type'])) . "\n";
+                    $bodyLines[] = 'Type: ' . ucfirst(trim($data['type']));
                 }
                 if (isset($data['extent_description']) && $data['extent_description']) {
                     $data['extent_description'] = array_unique(explode('|', $data['extent_description']));
@@ -132,19 +133,34 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                     $data['extent_description'] = implode(', ', $data['extent_description']);
                     $extentLines = explode("\n", wordwrap('Extent: ' . $data['extent_description'], 112));
                     foreach ($extentLines as $extentLine) {
-                        $comment .= '* ' . trim($extentLine) . "\n";
+                        $bodyLines[] = trim($extentLine);
                     }
                 }
-                $helpLines = explode("\n", wordwrap(trim($data['constant_help']), 112));
                 foreach ($helpLines as $helpLine) {
-                    $comment .= '* ' . trim($helpLine) . "\n";
+                    $bodyLines[] = $helpLine;
+                }
+
+                $comment .= "/**\n";
+                $lastBodyLineIndex = $this->findLastNonEmptyBodyLineIndex($bodyLines);
+                foreach ($bodyLines as $bodyLineIndex => $bodyLine) {
+                    if ($bodyLine === '') {
+                        $comment .= " *\n";
+                        continue;
+                    }
+
+                    $comment .= ' * ' . $this->formatPhpDocSummaryLine(
+                        $bodyLine,
+                        $bodyLineIndex === $lastBodyLineIndex
+                    ) . "\n";
                 }
                 if ($data['deprecated']) {
-                    $comment .= "* @deprecated\n";
+                    if ($lastBodyLineIndex !== null && $helpLines === []) {
+                        $comment .= " *\n";
+                    }
+                    $comment .= " * @deprecated\n";
                 }
-                $comment .= " */\n";
+                $comment .= ' */';
 
-                $constName = strtoupper('EPSG_' . $constantName);
                 $constValue = new Node\Scalar\String_($urn);
                 $constComment = new Doc($comment);
                 $const = new Node\Const_($constName, $constValue);
@@ -159,31 +175,25 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 $commentNodes[] = $constStmt;
             }
 
-            foreach ($this->aliases as $urn => $aliases) {
-                foreach ($aliases as $alias) {
-                    $canonicalName = str_replace(
-                        [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
-                        ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
-                        $this->constants[$urn]['name']
-                    );
-                    $canonicalName = Preg::replace('/_+/', '_', $canonicalName);
-                    $canonicalName = trim($canonicalName, '_');
-                    $name = str_replace(
-                        [' ', '-', '\'', '(', ')', '[', ']', '.', '/', '=', ',', ':', '°', '+', '&', '<>'],
-                        ['_', '_', '', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_DEG_', '_PLUS_', '_AND_', '_TO_'],
-                        $alias
-                    );
-                    $name = Preg::replace('/_+/', '_', $name);
-                    $name = trim($name, '_');
+            foreach ($this->aliases as $urn => $oldConstNames) {
+                if (!isset($this->constants[$urn]['name'])) {
+                    continue;
+                }
+                $canonicalConstName = $this->canonicalNames[$urn];
+
+                foreach ($oldConstNames as $oldConstName) {
+                    // Skip if this would duplicate the canonical
+                    if ($oldConstName === $canonicalConstName) {
+                        continue;
+                    }
 
                     $comment = "/**\n";
-                    $comment .= '* @deprecated use ' . strtoupper('EPSG_' . $canonicalName) . " instead\n";
-                    $comment .= " */\n";
+                    $comment .= ' * @deprecated use ' . $canonicalConstName . " instead\n";
+                    $comment .= ' */';
 
-                    $constName = strtoupper('EPSG_' . $name);
                     $constValue = new Node\Scalar\String_($urn);
                     $constComment = new Doc($comment);
-                    $const = new Node\Const_($constName, $constValue);
+                    $const = new Node\Const_($oldConstName, $constValue);
 
                     $flags = Class_::MODIFIER_PUBLIC;
                     if ($this->visibility === 'protected') {
@@ -196,11 +206,81 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 }
             }
 
-            array_unshift($node->stmts, ...$commentNodes);
+            $insertAt = $this->findInsertionPoint($node);
+            array_splice($node->stmts, $insertAt, 0, $commentNodes);
 
             return NodeTraverser::STOP_TRAVERSAL;
         }
 
         return null;
+    }
+
+    private function findInsertionPoint(ClassLike $class): int
+    {
+        foreach ($class->stmts as $i => $stmt) {
+            if (!$stmt instanceof TraitUse) {
+                return $i;
+            }
+        }
+
+        return count($class->stmts);
+    }
+
+    /**
+     * @return string[]
+     */
+    private function parseHelpLines(string $help): array
+    {
+        $help = str_replace("\r\n", "\n", trim($help));
+        if ($help === '') {
+            return [];
+        }
+
+        $lines = [];
+        foreach (explode("\n", $help) as $line) {
+            if (trim($line) === '') {
+                $lines[] = '';
+                continue;
+            }
+
+            foreach (explode("\n", wordwrap(trim($line), 112)) as $wrappedLine) {
+                $lines[] = str_replace("\u{00A0}", ' ', rtrim($wrappedLine));
+            }
+        }
+
+        for ($i = 0, $lineCount = count($lines); $i < $lineCount - 1; ++$i) {
+            if ($lines[$i] === '' || $lines[$i + 1] === '') {
+                continue;
+            }
+
+            if (str_starts_with(ltrim($lines[$i + 1]), '@') && !preg_match('/[.!?]$/', $lines[$i])) {
+                $lines[$i] .= '.';
+            }
+        }
+
+        return $lines;
+    }
+
+    /**
+     * @param string[] $bodyLines
+     */
+    private function findLastNonEmptyBodyLineIndex(array $bodyLines): ?int
+    {
+        for ($i = count($bodyLines) - 1; $i >= 0; --$i) {
+            if ($bodyLines[$i] !== '') {
+                return $i;
+            }
+        }
+
+        return null;
+    }
+
+    private function formatPhpDocSummaryLine(string $line, bool $ensurePeriod): string
+    {
+        if (!$ensurePeriod || preg_match('/[.!?]$/', $line)) {
+            return $line;
+        }
+
+        return $line . '.';
     }
 }

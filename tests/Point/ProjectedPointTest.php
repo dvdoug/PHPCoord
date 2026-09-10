@@ -192,6 +192,14 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(175146.067, $to->getNorthing()->asMetres()->getValue(), 0.001);
     }
 
+    public function testAffineParametricTransformReverseToClarkeFeet(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_JAD69_JAMAICA_NATIONAL_GRID), new Metre(251190.497), new Metre(175146.067));
+        $to = $from->affineParametricTransform(Projected::fromSRID(Projected::EPSG_JAMAICA_1875_JAMAICA_OLD_GRID), new Metre(82357.457), new Coefficient(0.304794369), new Coefficient(0.000015417425), new Metre(28091.324), new Coefficient(-0.000015417425), new Coefficient(0.304794369), true);
+        self::assertEqualsWithDelta(553900.000, $to->getEasting()->getValue(), 0.01);
+        self::assertEqualsWithDelta(482500.000, $to->getNorthing()->getValue(), 0.01);
+    }
+
     public function testAlbersEqualAreaNorthHemisphere(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_NAD83_GREAT_LAKES_ALBERS), new Metre(1466493.492), new Metre(702903.006));
@@ -312,12 +320,12 @@ class ProjectedPointTest extends TestCase
 
     public function testHyperbolicCassiniSoldner(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID), new Link(1601528.9), new Link(1336966.6));
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_VANUA_LEVU_1915_VANUA_LEVU_GRID), new Link(1601528.90), new Link(1336966.01));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_VANUA_LEVU_1915);
         $to = $from->hyperbolicCassiniSoldner($toCRS, new Radian(-0.283616003), new Radian(3.129957125), new Link(12513.318 * 100), new Link(16628.885 * 100));
 
-        self::assertEqualsWithDelta(-0.293938867, $to->getLatitude()->asRadians()->getValue(), 0.0001);
-        self::assertEqualsWithDelta(3.141493807, $to->getLongitude()->asRadians()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(-0.293938867, $to->getLatitude()->asRadians()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(3.141493807, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
         self::assertNull($to->getHeight());
     }
 
@@ -406,6 +414,17 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(-1.34292061, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
     }
 
+    public function testLambertConicConformalWestOrientatedScaleFactor(): void
+    {
+        $from = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_JAD69), new Radian(0.31297535), new Radian(-1.34292061), null);
+        $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_FAROE_LAMBERT);
+        $projected = $from->lambertConicConformalWestOrientated($toCRS, new Degree(18), new Degree(-77), new Coefficient(0.9996), new Metre(250000), new Metre(150000));
+        $to = $projected->lambertConicConformalWestOrientated(Geographic2D::fromSRID(Geographic2D::EPSG_JAD69), new Degree(18), new Degree(-77), new Coefficient(0.9996), new Metre(250000), new Metre(150000));
+
+        self::assertEqualsWithDelta(0.31297535, $to->getLatitude()->asRadians()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(-1.34292061, $to->getLongitude()->asRadians()->getValue(), 0.0000001);
+    }
+
     public function testLambertConicConformal2SP(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_NAD27_TEXAS_SOUTH_CENTRAL), new USSurveyFoot(2963503.95), new USSurveyFoot(254759.84));
@@ -458,7 +477,22 @@ class ProjectedPointTest extends TestCase
 
     public function testLambertCylindricalEqualAreaSpherical(): void
     {
-        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_NAD27_ALABAMA_EAST), new Metre(14943016.171313), new Metre(4224343.6292246));
+        // Inverse of Snyder 1987 p. 278, R = 1, scaled to metres with R = 6378206.4 m.
+        $fromCRS = new Projected(
+            'foo',
+            Cartesian::fromSRID(Cartesian::EPSG_2D_AXES_EASTING_NORTHING_E_N_ORIENTATIONS_EAST_NORTH_UOM_M),
+            new Datum(
+                Datum::DATUM_TYPE_GEODETIC,
+                new Ellipsoid(
+                    new Metre(6378206.4),
+                    new Metre(6378206.4)
+                ),
+                null,
+                null,
+            ),
+            BoundingArea::createWorld(),
+        );
+        $from = ProjectedPoint::createFromEastingNorthing($fromCRS, new Metre(14943016.171313), new Metre(4224343.6292246));
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD27);
         $to = $from->lambertCylindricalEqualAreaSpherical($toCRS, new Degree(30), new Degree(-75), new Metre(0), new Metre(0));
 
@@ -474,6 +508,16 @@ class ProjectedPointTest extends TestCase
 
         self::assertEqualsWithDelta(0.167490973, $to->getLatitude()->asRadians()->getValue(), 0.000000001);
         self::assertEqualsWithDelta(2.411923377, $to->getLongitude()->asRadians()->getValue(), 0.000000001);
+    }
+
+    public function testAzimuthalEquidistant(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_WGS_84_EQUI7_EUROPE), new Metre(6840895.297), new Metre(3382726.731));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->azimuthalEquidistant($toCRS, new Degree(53.0), new Degree(24.0), new Metre(5837287.820), new Metre(2121415.696));
+
+        self::assertEqualsWithDelta(63.0, $to->getLatitude()->asDegrees()->getValue(), 0.00000001);
+        self::assertEqualsWithDelta(44.0, $to->getLongitude()->asDegrees()->getValue(), 0.00000001);
     }
 
     public function testObliqueStereographic(): void
@@ -616,6 +660,16 @@ class ProjectedPointTest extends TestCase
         self::assertEqualsWithDelta(151.211111, $to->getLongitude()->getValue(), 0.00001);
     }
 
+    public function testTransverseMercatorZonedGridZone1(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_WGS_84_UTM_GRID_SYSTEM_NORTHERN_HEMISPHERE), new Metre(1500000), new Metre(0));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->transverseMercatorZonedGrid($toCRS, new Degree(0), new Degree(-180), new Degree(6), new Unity(0.9996), new Metre(500000), new Metre(0));
+
+        self::assertEqualsWithDelta(0.0, $to->getLatitude()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(-177.0, $to->getLongitude()->getValue(), 0.00001);
+    }
+
     public function testTransverseMercator3D(): void
     {
         $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_LUREF_LUXEMBOURG_TM_3D), new Metre(63444.834), new Metre(70387.372), null, new Metre(328.061));
@@ -696,7 +750,16 @@ class ProjectedPointTest extends TestCase
         $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011);
         $to = $from->localOrthographic($toCRS, new Radian(0.656749406), new Radian(-2.136177266), new Radian(0.485075480), new Unity(0.9999968), new Metre(0), new Metre(0));
 
-        self::assertEqualsWithDelta(0.656698927, $to->getLatitude()->asRadians()->getValue(), 0.0001);
-        self::assertEqualsWithDelta(-2.136014902, $to->getLongitude()->asRadians()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(0.656698927, $to->getLatitude()->asRadians()->getValue(), 0.000001);
+        self::assertEqualsWithDelta(-2.136014902, $to->getLongitude()->asRadians()->getValue(), 0.000001);
+    }
+
+    public function testLambertAzimuthalEqualAreaNorthPolar(): void
+    {
+        $from = ProjectedPoint::createFromEastingNorthing(Projected::fromSRID(Projected::EPSG_ETRS89_EXTENDED_LAEA_EUROPE), new Metre(0), new Metre(0));
+        $toCRS = Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84);
+        $to = $from->lambertAzimuthalEqualArea($toCRS, new Degree(90), new Degree(180), new Metre(0), new Metre(0));
+
+        self::assertEquals(90.0, $to->getLatitude()->getValue());
     }
 }

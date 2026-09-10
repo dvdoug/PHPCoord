@@ -10,7 +10,9 @@ coordinates in any given ``Point`` to be in a different system by calling the ``
 
     $newPoint = $point->convert(
         CoordinateReferenceSystem $to,
-        bool $ignoreBoundaryRestrictions = false
+        bool $ignoreBoundaryRestrictions = false,
+        ?DateTimeInterface $epoch = null,
+        ?int $maxChainDepth = null
     ); // returns a new Point
 
 Examples:
@@ -71,12 +73,44 @@ between almost any two CRSs is possible as long as they have a common link.
     $toCRS = Projected::fromSRID(Projected::EPSG_WGS_84_UTM_ZONE_31N);
     $to = $from->convert($toCRS);
 
+Changing epoch
+--------------
+
+``atEpoch()`` adjusts a point **inside** a CRS to the relevant coordinate at a different date.
+The point must have a coordinate epoch specified, PHPCoord cannot guess.
+
+``convert($to, epoch: $newEpoch)`` allows you to combine a change of CRS with a change of date.
+
+Be aware that some epoch-aware CRS changes only exist at a specific published date, the possible conversion routes
+that PHPCoord builds are date-aware.
+
+Example, NAD83(CSRS)v8 (Canada velocity grid v8, North America datapack):
+
+.. code-block:: php
+
+    <?php
+    use DateTime;
+    use PHPCoord\CoordinateReferenceSystem\Geographic3D;
+    use PHPCoord\Point\GeographicPoint;
+    use PHPCoord\UnitOfMeasure\Angle\Degree;
+    use PHPCoord\UnitOfMeasure\Length\Metre;
+
+    $from = GeographicPoint::create(
+        Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V8),
+        new Degree(45.4293652556),
+        new Degree(-75.7016555764),
+        new Metre(39.524),
+        new DateTime('2010-01-01')
+    );
+    $at2002 = $from->atEpoch(new DateTime('2002-01-01'));
+
 .. note::
 
     Calculating every single possible permutation of chain between two CRSs is very computationally expensive
-    and so for practicality PHPCoord limits the chain depth to 7 (i.e. the source CRS, 5 intermediate CRSs and
-    the target CRS). If you know a transformation should be possible, but PHPCoord cannot find it you may wish
-    to try an explicit 2-stage conversion (e.g. source to WGS84, WGS84 to target).
+    and so for practicality PHPCoord ordinarily limits the chain depth to 7 (i.e. the source CRS, 5 intermediate CRSs and
+    the target CRS). If the source or target is a geocentric CRS the limit is 5 (source, 3 intermediates, and
+    the target). If you know a transformation should be possible, but PHPCoord cannot find it you may wish
+    to try an explicit 2-stage conversion (e.g. NAD27 to NAD83, NAD83 to ITRF), or pass a larger ``maxChainDepth``.
 
 Boundaries
 ----------

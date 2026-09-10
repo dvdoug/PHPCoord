@@ -15,6 +15,7 @@ use DateTimeInterface;
 use PHPCoord\CoordinateOperation\AutoConversion;
 use PHPCoord\CoordinateOperation\ConvertiblePoint;
 use PHPCoord\CoordinateOperation\GeographicGeoidHeightGrid;
+use PHPCoord\CoordinateOperation\GeoTiffGrid;
 use PHPCoord\CoordinateOperation\OSTNOSGM15Grid;
 use PHPCoord\CoordinateReferenceSystem\Compound;
 use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
@@ -31,6 +32,7 @@ use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
 use Throwable;
 
@@ -132,23 +134,23 @@ class CompoundPoint extends Point implements ConvertiblePoint
         }
     }
 
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
     {
         try {
-            return $this->autoConvert($to, $ignoreBoundaryRestrictions);
+            return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
         } catch (UnknownConversionException $e) {
             // if 2D target, try again with just the horizontal component
             if ($to instanceof Geographic2D || $to instanceof Projected) {
-                return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions);
+                return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
             }
 
             // try separate horizontal + vertical conversions and stitch results together
             if ($to instanceof Compound) {
                 /** @var GeographicPoint|ProjectedPoint $newHorizontalPoint */
-                $newHorizontalPoint = $this->horizontalPoint->convert($to->getHorizontal());
+                $newHorizontalPoint = $this->horizontalPoint->convert($to->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
 
                 if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
-                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions);
+                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions, maxChainDepth: $maxChainDepth);
 
                     if ($path) {
                         $newVerticalPoint = $this->verticalPoint;
@@ -158,7 +160,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
                             $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), ['horizontalPoint' => $newHorizontalPoint]);
                         }
 
-                        return static::create($to, $newHorizontalPoint, $newVerticalPoint, $this->epoch);
+                        return static::create($to, $newHorizontalPoint, $newVerticalPoint, $epoch ?? $this->epoch);
                     }
                 }
             }
@@ -171,18 +173,18 @@ class CompoundPoint extends Point implements ConvertiblePoint
                 try {
                     if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
                         /** @var GeographicPoint|ProjectedPoint $candidateHorizontalPoint */
-                        $candidateHorizontalPoint = $this->horizontalPoint->convert($candidateIntermediate->getHorizontal());
+                        $candidateHorizontalPoint = $this->horizontalPoint->convert($candidateIntermediate->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
                         $candidateIntermediatePoint = self::create(
                             $candidateIntermediate,
                             $candidateHorizontalPoint,
                             $this->verticalPoint,
-                            $this->epoch,
+                            $epoch ?? $this->epoch,
                         );
 
                         /** @var GeographicPoint $candidateBaseCRSPoint */
-                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS());
+                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
 
-                        return $candidateBaseCRSPoint->convert($to);
+                        return $candidateBaseCRSPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
                     }
                 } catch (Throwable) {
                 }
@@ -207,7 +209,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
         Angle $longitudeOffset,
         Length $geoidHeight
     ): GeographicPoint {
-        assert($this->horizontalPoint instanceof GeographicPoint);
+        /** @var GeographicPoint $horizontalPoint */
         $horizontalPoint = $this->horizontalPoint;
         $toLatitude = $horizontalPoint->getLatitude()->add($latitudeOffset);
         $toLongitude = $horizontalPoint->getLongitude()->add($longitudeOffset);
@@ -250,7 +252,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
      */
     public function geographic3DTo2DPlusGravityHeightFromGrid(
         Geographic3D $to,
-        GeographicGeoidHeightGrid $geoidHeightCorrectionModelFile
+        GeographicGeoidHeightGrid|GeoTiffGrid $geoidHeightCorrectionModelFile
     ): GeographicPoint {
         assert($this->horizontalPoint instanceof GeographicPoint);
 
@@ -260,6 +262,92 @@ class CompoundPoint extends Point implements ConvertiblePoint
             $this->horizontalPoint->getLongitude(),
             $this->verticalPoint->getHeight()->add($geoidHeightCorrectionModelFile->getHeightAdjustment($this->horizontalPoint)),
             $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geog3D to Geog2D+Depth.
+     * GN 7-2 §4.13.2 reverse: h = ζ − D.
+     */
+    public function geographic3DTo2DPlusDepthFromGrid(
+        Geographic3D $to,
+        GeographicGeoidHeightGrid|GeoTiffGrid $geoidHeightCorrectionModelFile
+    ): GeographicPoint {
+        assert($this->horizontalPoint instanceof GeographicPoint);
+
+        return GeographicPoint::create(
+            $to,
+            $this->horizontalPoint->getLatitude(),
+            $this->horizontalPoint->getLongitude(),
+            $geoidHeightCorrectionModelFile->getHeightAdjustment($this->horizontalPoint)->subtract($this->verticalPoint->getHeight()),
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Geog3D to Geog2D+GravityRelatedHeight.
+     * Ellipsoidal height h = H + ζ where ζ is a constant geoid height.
+     */
+    public function geographic3DTo2DPlusGravityHeight(
+        Geographic3D $to,
+        Length $geoidHeight
+    ): GeographicPoint {
+        assert($this->horizontalPoint instanceof GeographicPoint);
+
+        return GeographicPoint::create(
+            $to,
+            $this->horizontalPoint->getLatitude(),
+            $this->horizontalPoint->getLongitude(),
+            $this->verticalPoint->getHeight()->add($geoidHeight),
+            $this->getCoordinateEpoch()
+        );
+    }
+
+    /**
+     * Coordinate Frame rotation (geog3D to compound)
+     * Concatenation of Coordinate Frame rotation (geog3D domain) plus Geographic3D to compound with ζ = 0 (h = H).
+     */
+    public function coordinateFrameRotation(
+        Geographic3D $to,
+        Length $xAxisTranslation,
+        Length $yAxisTranslation,
+        Length $zAxisTranslation,
+        Angle $xAxisRotation,
+        Angle $yAxisRotation,
+        Angle $zAxisRotation,
+        Scale $scaleDifference,
+        bool $inReverse = false
+    ): GeographicPoint {
+        assert($this->horizontalPoint instanceof GeographicPoint);
+        /** @var Geographic2D $horizontal */
+        $horizontal = $this->crs->getHorizontal();
+
+        $sourceGeog3D = new Geographic3D(
+            $horizontal->getName(),
+            $to->getCoordinateSystem(),
+            $horizontal->getDatum(),
+            $this->crs->getBoundingArea()
+        );
+
+        return GeographicPoint::create(
+            $sourceGeog3D,
+            $this->horizontalPoint->getLatitude(),
+            $this->horizontalPoint->getLongitude(),
+            $this->verticalPoint->getHeight(),
+            $this->getCoordinateEpoch()
+        )->coordinateFrameMolodenskyBadekas(
+            $to,
+            $xAxisTranslation,
+            $yAxisTranslation,
+            $zAxisTranslation,
+            $xAxisRotation,
+            $yAxisRotation,
+            $zAxisRotation,
+            $scaleDifference,
+            new Metre(0),
+            new Metre(0),
+            new Metre(0),
+            $inReverse
         );
     }
 }

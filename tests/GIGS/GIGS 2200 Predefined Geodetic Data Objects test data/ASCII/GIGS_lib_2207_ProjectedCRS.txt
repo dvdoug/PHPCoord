@@ -41,7 +41,7 @@
 2135	6167	NZGD2000	NZGD2000 / UTM zone 60S		New Zealand - offshore 174°E to 180°E
 2136	6168	Accra	Accra / Ghana National Grid	Accra / Gold Coast Grid; Accra / Ghana Nat. Grid	Ghana - onshore
 2137	6168	Accra	Accra / TM 1 NW	Accra / Ghana TM	Ghana - offshore
-2154	6171	RGF93 v1	RGF93 v1 / Lambert-93		France
+2154	6171	ETRS89-FRA [RGF93 v1]	ETRS89-FRA [RGF93 v1] / Lambert-93		France
 2165	6143	Abidjan 1987	Abidjan 1987 / TM 5 NW	Cote d'Ivoire / TM 5 NW; Port Bouet / TM 5 NW	Cote d'Ivoire (Ivory Coast) - offshore
 2193	6167	NZGD2000	NZGD2000 / New Zealand Transverse Mercator 2000	NZGD2000 / NZTM; NZGD2000 / New Zealand Transverse Mercator; NZGD2000 / NZTM2000	New Zealand - onshore
 2201	6189	REGVEN	REGVEN / UTM zone 18N		Venezuela - west of 72°W
@@ -296,7 +296,7 @@
 28416	6284	Pulkovo 1942	Pulkovo 1942 / Gauss-Kruger zone 16	S-42 zone 16; Pulkovo 1942 / 6-degree Gauss-Kruger zone 16	Russia - 90°E to 96°E onshore
 28424	6284	Pulkovo 1942	Pulkovo 1942 / Gauss-Kruger zone 24	S-42 zone 24; Pulkovo 1942 / 6-degree Gauss-Kruger zone 24	Russia - 138°E to 144°E onshore
 28600	6285	Qatar 1974	Qatar 1974 / Qatar National Grid	Qatar National Grid	Qatar - onshore
-28992	6289	Amersfoort	Amersfoort / RD New	Stelsel van de Rijksdriehoeksmeting	Netherlands - onshore
+28992	6289	RD	RD	Stelsel van de Rijksdriehoeksmeting	Netherlands - onshore
 29101	6618	SAD69	SAD69 / Brazil Polyconic		Brazil
 29194	6618	SAD69	SAD69 / UTM zone 24S		Brazil - 42°W to 36°W
 29333	6293	Schwarzeck	Schwarzeck / UTM zone 33S	Schwarzeck / UTM 33S	Namibia - offshore

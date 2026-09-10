@@ -13,16 +13,22 @@ use SQLite3;
 
 use function file_exists;
 use function file_get_contents;
+use function file_put_contents;
+use function json_encode;
+use function ksort;
+use function sleep;
+use function str_contains;
 use function str_starts_with;
 use function substr;
 use function unlink;
-use function sleep;
-use function str_contains;
 
-use const SQLITE3_OPEN_CREATE;
-use const SQLITE3_OPEN_READWRITE;
-use const SQLITE3_OPEN_READONLY;
+use const JSON_PRETTY_PRINT;
+use const JSON_THROW_ON_ERROR;
+use const JSON_UNESCAPED_SLASHES;
 use const SQLITE3_ASSOC;
+use const SQLITE3_OPEN_CREATE;
+use const SQLITE3_OPEN_READONLY;
+use const SQLITE3_OPEN_READWRITE;
 
 class EPSGImporter
 {
@@ -106,6 +112,18 @@ class EPSGImporter
         $sqlite->exec("INSERT INTO epsg_coordoperationparamvalue (coord_op_code, coord_op_method_code, parameter_code, param_value_file_ref) VALUES (8364, 9615, 8656, 'Slovakia_JTSK03_to_JTSK.gsb')");
 
         /*
+         * NKG_RF17vel is registered as Gravsoft three-file GRI (method 1139). The public product is one GeoTIFF;
+         * remap onto a PHPCoord GTG point-motion method. Operation 10808 is geographic 3D ETRF2014 (EPSG 8403).
+         */
+        $sqlite->exec("INSERT INTO epsg_coordoperationmethod (coord_op_method_code, coord_op_method_name, reverse_op, data_source, revision_date, deprecated, remarks) VALUES (32769, 'Point motion (geog3D domain) using NEU velocity grid (gtg)', 1, 'PHPCoord', '2026-09-13', 0, 'NKG registered Gravsoft three-file GRI; public product is one GeoTIFF')");
+        $sqlite->exec("INSERT INTO epsg_coordoperationparamusage (coord_op_method_code, parameter_code, sort_order, param_sign_reversal) VALUES (32769, 1050, 1, 'No')");
+        $sqlite->exec("INSERT INTO epsg_coordoperationparamusage (coord_op_method_code, parameter_code, sort_order, param_sign_reversal) VALUES (32769, 1048, 2, 'No')");
+        $sqlite->exec('UPDATE epsg_coordoperation SET coord_op_method_code = 32769 WHERE coord_op_code = 10808');
+        $sqlite->exec('DELETE FROM epsg_coordoperationparamvalue WHERE coord_op_code = 10808 AND parameter_code IN (1072, 1073, 1074)');
+        $sqlite->exec('UPDATE epsg_coordoperationparamvalue SET coord_op_method_code = 32769 WHERE coord_op_code = 10808');
+        $sqlite->exec("INSERT INTO epsg_coordoperationparamvalue (coord_op_code, coord_op_method_code, parameter_code, param_value_file_ref) VALUES (10808, 32769, 1050, 'eur_nkg_nkgrf17vel.tif')");
+
+        /*
          * Time-dependent transformations from/to WGS84 are only present in transforms involving specific realisations
          * so add transforms to/from the generic ensemble codes to the most recent version.
          * XXX technically, the ensemble accuracy is 2m not 0, but we're actively assuming the latest realisation
@@ -122,21 +140,24 @@ class EPSGImporter
         $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32772, 1262, 1203)");
 
         /*
-         * Time-dependent transformations from/to ETRS89 are only present in transforms involving specific realisations
-         * so add transforms to/from the generic ensemble codes to ETRF2000 (ETRF2020 is technically better, ETRF2000
-         * is still recommended by EUREF for georeferencing)
-         * XXX technically, the ensemble accuracy is 0.1m not 0, but we're actively assuming the relevant realisation
+         * Geographic 2D WGS 84 only links to geocentric via geographic 3D (two conversions). A direct
+         * geog2D↔geocentric conversion of the same ensemble datum keeps time-dependent paths within
+         * the path-finder depth.
          */
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32773, 'ETRS89 to ETRF2000 (geocen)', 'transformation', 4936, 7930, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32780, 'WGS 84 to WGS 84 (geog2D to geocen)', 'transformation', 4326, 4978, 9602, 0, 'PHPCoord', '2026-09-10', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32780, 1262, 1203)");
+
+        /*
+         * Time-dependent ETRS89 operations are on ETRF2000 geocentric. These hops reach that hub from the
+         * ensemble CRS; accuracy is the ETRS89 ensemble accuracy.
+         */
+        $etrs89EnsembleAccuracy = $sqlite->querySingle('SELECT ensemble_accuracy FROM epsg_datumensemble WHERE datum_ensemble_code = 6258');
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32773, 'ETRS89 to ETRF2000 (geocen)', 'transformation', 4936, 7930, 32768, {$etrs89EnsembleAccuracy}, 'PHPCoord', '2023-02-23', 0, 1, '')");
         $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32773, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32774, 'ETRS89 to ETRF2000 (geog2D)', 'transformation', 4258, 9067, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32774, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32775, 'ETRS89 to ETRF2000 (geog3D)', 'transformation', 4937, 7931, 32768, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32775, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32776, 'ETRS89 to ETRF2000 (geog2D to geocen)', 'transformation', 4258, 7930, 9602, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32776, 'ETRS89 to ETRF2000 (geog2D to geocen)', 'transformation', 4258, 7930, 9602, {$etrs89EnsembleAccuracy}, 'PHPCoord', '2023-02-23', 0, 1, '')");
         $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32776, 1298, 1203)");
-        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32777, 'ETRS89 to ETRF2000 (geog3D to geocen)', 'transformation', 4937, 7930, 9602, 0, 'PHPCoord', '2023-02-23', 0, 1, '')");
-        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32777, 1298, 1203)");
+        $sqlite->exec("INSERT INTO epsg_coordoperation (coord_op_code, coord_op_name, coord_op_type, source_crs_code, target_crs_code, coord_op_method_code, coord_op_accuracy, data_source, revision_date, deprecated, show_operation, remarks) VALUES (32781, 'ETRS89 ensemble member to ETRS89', 'transformation', 4258, 4258, 32768, {$etrs89EnsembleAccuracy}, 'PHPCoord', '2026-09-11', 0, 1, '')");
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordoperation', 32781, 1298, 1203)");
 
         /*
          * EPSG has a transform listed from generic ETRS89 (2D) to generic WGS84 (2D) but not the 3D for some reason
@@ -176,6 +197,21 @@ class EPSGImporter
          */
         $sqlite->exec('UPDATE epsg_coordoperationmethod SET reverse_op = 1 WHERE coord_op_method_code = 9648');
 
+        /*
+         * Helmert / Molodensky-Badekas reverse is implemented as the exact inverse
+         * (R^T / M, original parameter signs) rather than EPSG's small-angle
+         * approximation of negating T, R and dS. param_sign_reversal must be No
+         * so codegen and performOperation pass the published values into inReverse.
+         */
+        $sqlite->exec("UPDATE epsg_coordoperationparamusage SET param_sign_reversal = 'No' WHERE coord_op_method_code IN (
+            1031, 9603, 1035,
+            1032, 1033, 1037, 1038, 9606, 9607,
+            1034, 1039, 9636, 1061, 1062, 1063,
+            1053, 1054, 1055, 1056, 1057, 1058,
+            1065, 1066,
+            1132, 1133, 1140, 1149
+        )");
+
         $sqlite->close();
     }
 
@@ -187,7 +223,7 @@ class EPSGImporter
                 SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE
             );
 
-            $extentDB->exec('CREATE TABLE extent(extent_code INTEGER PRIMARY KEY, original TEXT, buffered TEXT, bbox TEXT, revision_date DATE)');
+            $extentDB->exec('CREATE TABLE extent(extent_code INTEGER PRIMARY KEY, original TEXT, buffered TEXT, bbox TEXT, revision_date DATE, interior_lat REAL, interior_lon REAL)');
         } else {
             $extentDB = new SQLite3(
                 $this->resourceDir . '/epsg/extents.sqlite',
@@ -222,7 +258,7 @@ class EPSGImporter
                 $upsertSQL = "
                     INSERT INTO extent (extent_code, original, buffered, bbox, revision_date)
                     VALUES ({$extentMetaData['extent_code']}, '{$geoJson}', NULL, NULL, '{$extentMetaData['revision_date']}')
-                    ON CONFLICT(extent_code) DO UPDATE SET original = excluded.original, revision_date=excluded.revision_date, buffered = excluded.buffered
+                    ON CONFLICT(extent_code) DO UPDATE SET original = excluded.original, revision_date=excluded.revision_date, buffered = excluded.buffered, interior_lat = NULL, interior_lon = NULL
                 ";
                 $extentDB->exec($upsertSQL);
                 sleep(2);
@@ -238,7 +274,29 @@ class EPSGImporter
                     $extentDB->exec("UPDATE extent SET bbox = '{$bbox['buffered_bbox']}' WHERE extent_code = {$bbox['extent_code']}");
                 }
             }
+
+            $extentDB->exec('UPDATE extent SET interior_lon = ST_X(ST_PointOnSurface(GeomFromGeoJSON(buffered))), interior_lat = ST_Y(ST_PointOnSurface(GeomFromGeoJSON(buffered))) WHERE interior_lat IS NULL AND extent_code=' . $extentMetaData['extent_code']);
+
+            // Area 1159 is the Mayotte maritime polygon. Its surface point is in the sea east of Grande-Terre, outside the RGM04 grid. Use the onshore area's surface point.
+            if ((int) $extentMetaData['extent_code'] === 1159) {
+                $extentDB->exec('UPDATE extent SET interior_lat = -12.82671176417377, interior_lon = 45.1804293832095 WHERE extent_code = 1159');
+            }
         }
+
+        $points = [];
+        $result = $extentDB->query('SELECT extent_code, interior_lat, interior_lon FROM extent WHERE interior_lat IS NOT NULL AND interior_lon IS NOT NULL');
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $points['urn:ogc:def:area:EPSG::' . $row['extent_code']] = [
+                (float) $row['interior_lat'],
+                (float) $row['interior_lon'],
+            ];
+        }
+        ksort($points);
+        file_put_contents(
+            $this->resourceDir . '/../tests/Geometry/extent-interior-points.json',
+            json_encode($points, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n"
+        );
+
         $extentDB->close();
         $dataDB->close();
     }

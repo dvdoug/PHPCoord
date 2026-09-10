@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4859",
+    "title": "Europe-FSU/Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [2.54, 51.335], [7.208364486531991, 51.335], [7.208364486531991, 55.7525], [2.54, 55.7525], [2.54, 51.335]
+        ]
+    ]
+}

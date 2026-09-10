@@ -42,7 +42,17 @@ return $config->setRules(
     ]
 )
     ->setRiskyAllowed(true)
-    ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
+    ->setParallelConfig(
+        (static function () {
+            $detected = PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect();
+
+            return new PhpCsFixer\Runner\Parallel\ParallelConfig(
+                $detected->getMaxProcesses(),
+                $detected->getFilesPerProcess(),
+                300   // increased timeout to avoid child process timeouts on large runs
+            );
+        })()
+    )
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->in(__DIR__ . '/resources')

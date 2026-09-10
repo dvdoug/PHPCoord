@@ -11,7 +11,7 @@ namespace PHPCoord\Point;
 
 use DateTime;
 use PHPCoord\CoordinateOperation\BEVHeightETRS89EVRF2000AustriaProvider;
-use PHPCoord\CoordinateOperation\BYNCGVD28CGG2013a2010Provider;
+use PHPCoord\CoordinateOperation\BYNCGVD28CGG2013a2010v80Provider;
 use PHPCoord\CoordinateOperation\BYNNAD83CSRSCGG2013aProvider;
 use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
 use PHPCoord\CoordinateOperation\CoordinateOperations;
@@ -32,6 +32,7 @@ use PHPCoord\CoordinateOperation\IGNESHeightETRS89REDNAPSpainProvider;
 use PHPCoord\CoordinateOperation\IGNFHeightRGF93v2bNGFIGN69FranceProvider;
 use PHPCoord\CoordinateOperation\KMSETRS89NN2000Provider;
 use PHPCoord\CoordinateOperation\KMSPOSGAR2007SRVN16Provider;
+use PHPCoord\CoordinateOperation\NTv2VelNAD83CSRSv7CanadaProvider;
 use PHPCoord\CoordinateOperation\OSGM15BelfastProvider;
 use PHPCoord\CoordinateOperation\OSTN15OSGM15Provider;
 use PHPCoord\CoordinateReferenceSystem\Compound;
@@ -41,9 +42,10 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3DSRIDData;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
-use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\ExtentInteriorPoints;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
@@ -241,14 +243,14 @@ class GeographicPoint3DTest extends TestCase
 
     public function testGravityHeightToGravityHeightBYNCanada(): void
     {
-        if (!class_exists(BYNCGVD28CGG2013a2010Provider::class)) {
+        if (!class_exists(BYNCGVD28CGG2013a2010v80Provider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-northamerica');
         }
         $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS), Degree::fromDegreeMinuteSecondHemisphere("49°53'09.293\"N"), Degree::fromDegreeMinuteSecondHemisphere("99°54'41.057\"W"), new Metre(397.140));
         $toCRS = Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT);
-        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new BYNCGVD28CGG2013a2010Provider())->provideGrid());
+        $to = $from->geographic3DToGravityHeightFromGrid($toCRS, (new BYNCGVD28CGG2013a2010v80Provider())->provideGrid());
 
-        self::assertEqualsWithDelta(396.758, $to->getHeight()->getValue(), 0.01);
+        self::assertEqualsWithDelta(396.761, $to->getHeight()->getValue(), 0.01);
     }
 
     public function testGeographic3DTo2DPlusGravityHeightKMSNorway(): void
@@ -319,14 +321,70 @@ class GeographicPoint3DTest extends TestCase
         self::assertEqualsWithDelta(135.8810, $to->getVerticalPoint()->getHeight()->getValue(), 0.001);
     }
 
+    public function testGeographic3DTo2DPlusGravityHeight(): void
+    {
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(51.986333425), new Degree(4.630200875), new Metre(36.7595));
+        $toCRS = Compound::fromSRID(Compound::EPSG_ETRS89_PLUS_NAP_HEIGHT);
+        $to = $from->geographic3DTo2DPlusGravityHeight($toCRS, new Metre(43.5395));
+
+        self::assertEqualsWithDelta(51.986333425, $to->getHorizontalPoint()->getLatitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(4.630200875, $to->getHorizontalPoint()->getLongitude()->getValue(), 0.00000000001);
+        self::assertEqualsWithDelta(-6.7800, $to->getVerticalPoint()->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testGeographic3DGravityHeight(): void
+    {
+        $from = GeographicPoint::create(Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89), new Degree(51.986333425), new Degree(4.630200875), new Metre(36.7595));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT);
+        $to = $from->geographic3DToGravityHeight($toCRS, new Metre(43.5395));
+
+        self::assertEqualsWithDelta(-6.7800, $to->getHeight()->getValue(), 0.0001);
+    }
+
+    public function testGeographic3DOffsetUsingNeuVelocityGrid(): void
+    {
+        if (!class_exists(NTv2VelNAD83CSRSv7CanadaProvider::class)) {
+            self::markTestSkipped('North America datapack not installed');
+        }
+
+        // EPSG geographic offset by velocity grid, NAD83(CSRS)v6 at its 2010 anchor to v3 at 1997.
+        $from = GeographicPoint::create(
+            Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V6),
+            Degree::fromDegreeMinuteSecondHemisphere('49°53\'09.2927"N'),
+            Degree::fromDegreeMinuteSecondHemisphere('99°54\'41.0572"W'),
+            new Metre(373.795),
+            (new Year(2010.0))->asDateTime()
+        );
+        $to = $from->geographic3DOffsetUsingNeuVelocityGrid(
+            Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V3),
+            (new NTv2VelNAD83CSRSv7CanadaProvider())->provideGrid()
+        );
+
+        $expectedLatitude = Degree::fromDegreeMinuteSecondHemisphere('49°53\'09.2931"N');
+        $expectedLongitude = Degree::fromDegreeMinuteSecondHemisphere('99°54\'41.0588"W');
+        self::assertEqualsWithDelta($expectedLatitude->asDegrees()->getValue(), $to->getLatitude()->asDegrees()->getValue(), 1e-7);
+        self::assertEqualsWithDelta($expectedLongitude->asDegrees()->getValue(), $to->getLongitude()->asDegrees()->getValue(), 1e-7);
+        self::assertEqualsWithDelta(373.819, $to->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertEquals(1997.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+
+        $back = $to->geographic3DOffsetUsingNeuVelocityGrid(
+            Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V6),
+            (new NTv2VelNAD83CSRSv7CanadaProvider())->provideGrid(),
+            true
+        );
+        self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $back->getLatitude()->asDegrees()->getValue(), 1e-9);
+        self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $back->getLongitude()->asDegrees()->getValue(), 1e-9);
+        self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $back->getHeight()->asMetres()->getValue(), 1e-4);
+        self::assertEquals(2010.0, Year::fromDateTime($back->getCoordinateEpoch())->getValue());
+    }
+
     #[DataProvider('supportedOperations')]
     #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
     {
         $operation = CoordinateOperations::getOperationData($operationSrid);
         $method = CoordinateOperationMethods::getMethodData($operation['method']);
-        $operationExtent = BoundingArea::createFromExtentCodes($operation['extent']);
-        $centre = $operationExtent->getPointInside();
+        $centre = ExtentInteriorPoints::get($operation['extent']);
 
         $sourceCRS = Geographic::fromSRID($sourceCrsSrid);
         $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
@@ -334,15 +392,22 @@ class GeographicPoint3DTest extends TestCase
         $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
 
         $epoch = new DateTime();
+        $additionalParams = [];
+        if (
+            $operation['method'] === CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_NTV2_VEL
+            || $operation['method'] === CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_GTG
+        ) {
+            $additionalParams['targetEpoch'] = Year::fromDateTime($epoch);
+        }
 
         $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $sourceHeight, $epoch);
-        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0));
+        $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0), $additionalParams);
         self::assertInstanceOf(Point::class, $newPoint);
         self::assertEquals($targetCRS, $newPoint->getCRS());
 
         if ($method['reversible']) {
             $delta = isset($operation['method']) && $operation['method'] === CoordinateOperationMethods::EPSG_REVERSIBLE_POLYNOMIAL_OF_DEGREE_13 ? 0.01 : 0.001;
-            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0));
+            $reversedPoint = $newPoint->performOperation($operationSrid, $sourceCRS, true, new Metre(0), $additionalParams);
 
             self::assertEquals($sourceCRS, $reversedPoint->getCRS());
             self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), $delta);
@@ -364,7 +429,7 @@ class GeographicPoint3DTest extends TestCase
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
-                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
+                    if (str_ends_with($paramName, 'File') && $paramValue && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

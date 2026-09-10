@@ -25,12 +25,6 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ABINVA96_2020_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::9388';
 
     /**
-     * Amersfoort / RD New + NAP height
-     * Extent: Netherlands - onshore, including Waddenzee, Dutch Wadden Islands and 12-mile offshore coastal zone.
-     */
-    public const EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::7415';
-
-    /**
      * Asse 2025 + Asse 2025 height
      * Extent: Germany - Lower Saxony - Asse mining area
      * Used in 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905) to Asse 2025 horizontal
@@ -117,11 +111,11 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_COV23_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10472';
 
     /**
-     * CR-SIRGAS / CRTM05 + DACR52 height
+     * CR-SIRGAS epoch 2014.59 / CRTM05 + DACR52 height
      * Extent: Costa Rica - onshore
      * With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.
      */
-    public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
+    public const EPSG_CR_SIRGAS_EPOCH_2014_59_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
 
     /**
      * CSRN2025 (NAD83 2011) + COH88 2025 (NAVD88) height
@@ -234,10 +228,23 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_DIBA15_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10208';
 
     /**
+     * Dart+26 Grid + Malin Head height
+     * Extent: Ireland - on or related to the DART+ rail project from Dublin city centre to Drogheda, Greystones,
+     * Hazelhatch and Kilcock.
+     */
+    public const EPSG_DART_PLUS_26_GRID_PLUS_MALIN_HEAD_HEIGHT = 'urn:ogc:def:crs:EPSG::11465';
+
+    /**
      * DoPw22 Grid + ODN height
      * Extent: UK - on or related to the rail route from Dovey Junction to Pwllheli.
      */
     public const EPSG_DOPW22_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10184';
+
+    /**
+     * DrukRef23 + Bhutan Vertical Datum 2022 height
+     * Extent: Bhutan.
+     */
+    public const EPSG_DRUKREF23_PLUS_BHUTAN_VERTICAL_DATUM_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::11383';
 
     /**
      * EBBWV14 Grid + ODN height
@@ -272,18 +279,6 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Hungary.
      */
     public const EPSG_ETRF2000_PLUS_EOMA_1980_HEIGHT = 'urn:ogc:def:crs:EPSG::10659';
-
-    /**
-     * ETRF2000-PL + Baltic 1986 height
-     * Extent: Poland - onshore.
-     */
-    public const EPSG_ETRF2000_PL_PLUS_BALTIC_1986_HEIGHT = 'urn:ogc:def:crs:EPSG::9656';
-
-    /**
-     * ETRF2000-PL + EVRF2007-PL height
-     * Extent: Poland - onshore.
-     */
-    public const EPSG_ETRF2000_PL_PLUS_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9657';
 
     /**
      * ETRS89 + Alboran height
@@ -482,10 +477,10 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::9507';
 
     /**
-     * ETRS89 + LAT NL depth
-     * Extent: Netherlands - offshore North Sea and nearshore.
+     * ETRS89 + LAT-NLD depth
+     * Extent: 4859 - Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°.
      */
-    public const EPSG_ETRS89_PLUS_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9289';
+    public const EPSG_ETRS89_PLUS_LAT_NLD_DEPTH = 'urn:ogc:def:crs:EPSG::9289';
 
     /**
      * ETRS89 + Lerwick height
@@ -494,16 +489,16 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_LERWICK_HEIGHT = 'urn:ogc:def:crs:EPSG::9427';
 
     /**
-     * ETRS89 + MSL NL depth
-     * Extent: Netherlands - offshore North Sea and nearshore.
-     */
-    public const EPSG_ETRS89_PLUS_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9290';
-
-    /**
      * ETRS89 + MSL UK & Ireland VORF08 depth
      * Extent: Ireland and UK (including Isle of Man and Channel Islands) - inshore, nearshore and offshore.
      */
     public const EPSG_ETRS89_PLUS_MSL_UK_AND_IRELAND_VORF08_DEPTH = 'urn:ogc:def:crs:EPSG::10156';
+
+    /**
+     * ETRS89 + MSL-NLD depth
+     * Extent: 4859 - Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°.
+     */
+    public const EPSG_ETRS89_PLUS_MSL_NLD_DEPTH = 'urn:ogc:def:crs:EPSG::9290';
 
     /**
      * ETRS89 + Malin Head height
@@ -536,15 +531,16 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::9286';
 
     /**
-     * ETRS89 + NN2000 height
-     * Extent: Norway - onshore.
+     * ETRS89 + NN2000:2018 height
+     * Extent: Norway - onshore
+     * Replaces ETRS89 + NN54 height. Replaced by ETRS89-NOR [EUREF89] + NN2000:2025 height.
      */
-    public const EPSG_ETRS89_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5942';
+    public const EPSG_ETRS89_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5942';
 
     /**
      * ETRS89 + NN54 height
      * Extent: Norway - onshore
-     * Replaced by ETRS89 + NN2000 height (compound CRS code 5942).
+     * Replaced by ETRS89 + NN2000:2018 height (compound CRS code 5942).
      */
     public const EPSG_ETRS89_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6144';
 
@@ -574,7 +570,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * ETRS89 + SVD2006 height
-     * Extent: Arctic (Norway (Svalbard)) - between 81°10'N and 76°10'N.
+     * Extent: 4860 - Svalbard - west of 37.91° between 76.21° and 81.12°.
      */
     public const EPSG_ETRS89_PLUS_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::20001';
 
@@ -589,12 +585,6 @@ class Compound extends CoordinateReferenceSystem
      * Extent: UK - Great Britain - Scotland - Outer Hebrides onshore.
      */
     public const EPSG_ETRS89_PLUS_STORNOWAY_HEIGHT = 'urn:ogc:def:crs:EPSG::9428';
-
-    /**
-     * ETRS89 / Belgian Lambert 2008 + Ostend height
-     * Extent: Belgium - onshore.
-     */
-    public const EPSG_ETRS89_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::8370';
 
     /**
      * ETRS89 / DKTM1 + DVR90 height
@@ -621,13 +611,6 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_DKTM4_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::4100';
 
     /**
-     * ETRS89 / Faroe TM + FVR09 height
-     * Extent: Faroe Islands - onshore
-     * Introduced in 2010.
-     */
-    public const EPSG_ETRS89_FAROE_TM_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5318';
-
-    /**
      * ETRS89 / ITM + BI height
      * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore.
      */
@@ -652,361 +635,10 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_KP2000_ZEALAND_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7419';
 
     /**
-     * ETRS89 / NTM zone 10 + NN2000 height
-     * Extent: Norway - onshore - between 10°E and 11°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5950';
-
-    /**
-     * ETRS89 / NTM zone 10 + NN54 height
-     * Extent: Norway - onshore - between 10°E and 11°E
-     * Replaced by ETRS89 / NTM zone 10 + NN2000 height (compound CRS code 5950).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6150';
-
-    /**
-     * ETRS89 / NTM zone 11 + NN2000 height
-     * Extent: Norway - onshore - between 11°E and 12°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5951';
-
-    /**
-     * ETRS89 / NTM zone 11 + NN54 height
-     * Extent: Norway - onshore - between 11°E and 12°E
-     * Replaced by ETRS89 / NTM zone 11 + NN2000 height (compound CRS code 5951).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6151';
-
-    /**
-     * ETRS89 / NTM zone 12 + NN2000 height
-     * Extent: Norway - onshore - between 12°E and 13°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5952';
-
-    /**
-     * ETRS89 / NTM zone 12 + NN54 height
-     * Extent: Norway - onshore - between 12°E and 13°E
-     * Replaced by ETRS89 / NTM zone 12 + NN2000 height (compound CRS code 5952).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6152';
-
-    /**
-     * ETRS89 / NTM zone 13 + NN2000 height
-     * Extent: Norway - onshore - between 13°E and 14°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5953';
-
-    /**
-     * ETRS89 / NTM zone 13 + NN54 height
-     * Extent: Norway - onshore - between 13°E and 14°E
-     * Replaced by ETRS89 / NTM zone 13 + NN2000 height (compound CRS code 5953).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6153';
-
-    /**
-     * ETRS89 / NTM zone 14 + NN2000 height
-     * Extent: Norway - onshore - between 14°E and 15°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5954';
-
-    /**
-     * ETRS89 / NTM zone 14 + NN54 height
-     * Extent: Norway - onshore - between 14°E and 15°E
-     * Replaced by ETRS89 / NTM zone 14 + NN2000 height (compound CRS code 5954).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6154';
-
-    /**
-     * ETRS89 / NTM zone 15 + NN2000 height
-     * Extent: Norway - onshore - between 15°E and 16°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5955';
-
-    /**
-     * ETRS89 / NTM zone 15 + NN54 height
-     * Extent: Norway - onshore - between 15°E and 16°E
-     * Replaced by ETRS89 / NTM zone 15 + NN2000 height (compound CRS code 5955).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6155';
-
-    /**
-     * ETRS89 / NTM zone 16 + NN2000 height
-     * Extent: Norway - onshore - between 16°E and 17°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5956';
-
-    /**
-     * ETRS89 / NTM zone 16 + NN54 height
-     * Extent: Norway - onshore - between 16°E and 17°E
-     * Replaced by ETRS89 / NTM zone 16 + NN2000 height (compound CRS code 5956).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6156';
-
-    /**
-     * ETRS89 / NTM zone 17 + NN2000 height
-     * Extent: Norway - onshore - between 17°E and 18°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5957';
-
-    /**
-     * ETRS89 / NTM zone 17 + NN54 height
-     * Extent: Norway - onshore - between 17°E and 18°E
-     * Replaced by ETRS89 / NTM zone 17 + NN2000 height (compound CRS code 5957).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6157';
-
-    /**
-     * ETRS89 / NTM zone 18 + NN2000 height
-     * Extent: Norway - onshore - between 18°E and 19°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5958';
-
-    /**
-     * ETRS89 / NTM zone 18 + NN54 height
-     * Extent: Norway - onshore - between 18°E and 19°E
-     * Replaced by ETRS89 / NTM zone 18 + NN2000 height (compound CRS code 5958).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6158';
-
-    /**
-     * ETRS89 / NTM zone 19 + NN2000 height
-     * Extent: Norway - onshore - between 19°E and 20°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5959';
-
-    /**
-     * ETRS89 / NTM zone 19 + NN54 height
-     * Extent: Norway - onshore - between 19°E and 20°E
-     * Replaced by ETRS89 / NTM zone 19 + NN2000 height (compound CRS code 5959).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6159';
-
-    /**
-     * ETRS89 / NTM zone 20 + NN2000 height
-     * Extent: Norway - onshore - between 20°E and 21°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5960';
-
-    /**
-     * ETRS89 / NTM zone 20 + NN54 height
-     * Extent: Norway - onshore - between 20°E and 21°E
-     * Replaced by ETRS89 / NTM zone 20 + NN2000 height (compound CRS code 5960).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6160';
-
-    /**
-     * ETRS89 / NTM zone 21 + NN2000 height
-     * Extent: Norway - onshore - between 21°E and 22°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5961';
-
-    /**
-     * ETRS89 / NTM zone 21 + NN54 height
-     * Extent: Norway - onshore - between 21°E and 22°E
-     * Replaced by ETRS89 / NTM zone 21 + NN2000 height (compound CRS code 5961).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6161';
-
-    /**
-     * ETRS89 / NTM zone 22 + NN2000 height
-     * Extent: Norway - onshore - between 22°E and 23°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5962';
-
-    /**
-     * ETRS89 / NTM zone 22 + NN54 height
-     * Extent: Norway - onshore - between 22°E and 23°E
-     * Replaced by ETRS89 / NTM zone 22 + NN2000 height (compound CRS code 5962).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6162';
-
-    /**
-     * ETRS89 / NTM zone 23 + NN2000 height
-     * Extent: Norway - onshore - between 23°E and 24°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5963';
-
-    /**
-     * ETRS89 / NTM zone 23 + NN54 height
-     * Extent: Norway - onshore - between 23°E and 24°E
-     * Replaced by ETRS89 / NTM zone 23 + NN2000 height (compound CRS code 5963).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6163';
-
-    /**
-     * ETRS89 / NTM zone 24 + NN2000 height
-     * Extent: Norway - onshore - between 24°E and 25°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5964';
-
-    /**
-     * ETRS89 / NTM zone 24 + NN54 height
-     * Extent: Norway - onshore - between 24°E and 25°E
-     * Replaced by ETRS89 / NTM zone 24 + NN2000 height (compound CRS code 5964).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6164';
-
-    /**
-     * ETRS89 / NTM zone 25 + NN2000 height
-     * Extent: Norway - onshore - between 25°E and 26°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5965';
-
-    /**
-     * ETRS89 / NTM zone 25 + NN54 height
-     * Extent: Norway - onshore - between 25°E and 26°E
-     * Replaced by ETRS89 / NTM zone 25 + NN2000 height (compound CRS code 5965).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6165';
-
-    /**
-     * ETRS89 / NTM zone 26 + NN2000 height
-     * Extent: Norway - onshore - between 26°E and 27°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5966';
-
-    /**
-     * ETRS89 / NTM zone 26 + NN54 height
-     * Extent: Norway - onshore - between 26°E and 27°E
-     * Replaced by ETRS89 / NTM zone 26 + NN2000 height (compound CRS code 5966).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6166';
-
-    /**
-     * ETRS89 / NTM zone 27 + NN2000 height
-     * Extent: Norway - onshore - between 27°E and 28°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5967';
-
-    /**
-     * ETRS89 / NTM zone 27 + NN54 height
-     * Extent: Norway - onshore - between 27°E and 28°E
-     * Replaced by ETRS89 / NTM zone 27 + NN2000 height (compound CRS code 5967).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6167';
-
-    /**
-     * ETRS89 / NTM zone 28 + NN2000 height
-     * Extent: Norway - onshore - between 28°E and 29°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5968';
-
-    /**
-     * ETRS89 / NTM zone 28 + NN54 height
-     * Extent: Norway - onshore - between 28°E and 29°E
-     * Replaced by ETRS89 / NTM zone 28 + NN2000 height (compound CRS code 5968).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6168';
-
-    /**
-     * ETRS89 / NTM zone 29 + NN2000 height
-     * Extent: Norway - onshore - between 29°E and 30°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5969';
-
-    /**
-     * ETRS89 / NTM zone 29 + NN54 height
-     * Extent: Norway - onshore - between 29°E and 30°E
-     * Replaced by ETRS89 / NTM zone 29 + NN2000 height (compound CRS code 5969).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6169';
-
-    /**
-     * ETRS89 / NTM zone 30 + NN2000 height
-     * Extent: Norway - onshore - east of 30°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5970';
-
-    /**
-     * ETRS89 / NTM zone 30 + NN54 height
-     * Extent: Norway - onshore - east of 30°E
-     * Replaced by ETRS89 / NTM zone 30 + NN2000 height (compound CRS code 5970).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6170';
-
-    /**
-     * ETRS89 / NTM zone 5 + NN2000 height
-     * Extent: Norway - onshore - west of 6°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5945';
-
-    /**
-     * ETRS89 / NTM zone 5 + NN54 height
-     * Extent: Norway - onshore - west of 6°E
-     * Replaced by ETRS89 / NTM zone 5 + NN2000 height (compound CRS code 5945).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6145';
-
-    /**
-     * ETRS89 / NTM zone 6 + NN2000 height
-     * Extent: Norway - onshore - between 6°E and 7°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5946';
-
-    /**
-     * ETRS89 / NTM zone 6 + NN54 height
-     * Extent: Norway - onshore - between 6°E and 7°E
-     * Replaced by ETRS89 / NTM zone 6 + NN2000 height (compound CRS code 5946).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6146';
-
-    /**
-     * ETRS89 / NTM zone 7 + NN2000 height
-     * Extent: Norway - onshore - between 7°E and 8°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5947';
-
-    /**
-     * ETRS89 / NTM zone 7 + NN54 height
-     * Extent: Norway - onshore - between 7°E and 8°E
-     * Replaced by ETRS89 / NTM zone 7 + NN2000 height (compound CRS code 5947).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6147';
-
-    /**
-     * ETRS89 / NTM zone 8 + NN2000 height
-     * Extent: Norway - onshore - between 8°E and 9°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5948';
-
-    /**
-     * ETRS89 / NTM zone 8 + NN54 height
-     * Extent: Norway - onshore - between 8°E and 9°E
-     * Replaced by ETRS89 / NTM zone 8 + NN2000 height (compound CRS code 5948).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6148';
-
-    /**
-     * ETRS89 / NTM zone 9 + NN2000 height
-     * Extent: Norway - onshore - between 9°E and 10°E.
-     */
-    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5949';
-
-    /**
-     * ETRS89 / NTM zone 9 + NN54 height
-     * Extent: Norway - onshore - between 9°E and 10°E
-     * Replaced by ETRS89 / NTM zone 9 + NN2000 height (compound CRS code 5949).
-     */
-    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6149';
-
-    /**
      * ETRS89 / UTM zone 31N + DHHN92 height
      * Extent: Germany - onshore west of 6°E - Nordrhein-Westfalen.
      */
     public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_DHHN92_HEIGHT = 'urn:ogc:def:crs:EPSG::5554';
-
-    /**
-     * ETRS89 / UTM zone 31N + NN2000 height
-     * Extent: Norway - onshore - west of 6°E.
-     */
-    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5971';
-
-    /**
-     * ETRS89 / UTM zone 31N + NN54 height
-     * Extent: Norway - onshore - west of 6°E
-     * Replaced by ETRS89 / UTM zone 31N + NN2000 height (compound CRS code 5971).
-     */
-    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6171';
 
     /**
      * ETRS89 / UTM zone 32N + DHHN92 height
@@ -1021,19 +653,6 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7416';
 
     /**
-     * ETRS89 / UTM zone 32N + NN2000 height
-     * Extent: Norway - onshore - between 6°E and 12°E.
-     */
-    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5972';
-
-    /**
-     * ETRS89 / UTM zone 32N + NN54 height
-     * Extent: Norway - onshore - between 6°E and 12°E
-     * Replaced by ETRS89 / UTM zone 32N + NN2000 height (compound CRS code 5972).
-     */
-    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6172';
-
-    /**
      * ETRS89 / UTM zone 33N + DHHN92 height
      * Extent: Germany - onshore east of 12°E.
      */
@@ -1046,97 +665,1274 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_DVR90_HEIGHT = 'urn:ogc:def:crs:EPSG::7417';
 
     /**
-     * ETRS89 / UTM zone 33N + NN2000 height
-     * Extent: Norway - onshore - between 12°E and 18°E.
+     * ETRS89-AUT [2002] + EVRF2000 Austria height
+     * Extent: Austria.
      */
-    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5973';
+    public const EPSG_ETRS89_AUT_2002_PLUS_EVRF2000_AUSTRIA_HEIGHT = 'urn:ogc:def:crs:EPSG::11500';
 
     /**
-     * ETRS89 / UTM zone 33N + NN54 height
-     * Extent: Norway - onshore - between 12°E and 18°E
-     * Replaced by ETRS89 / UTM zone 33N + NN2000 height (compound CRS code 5973).
+     * ETRS89-BEL [BEREF2002] / Belgian Lambert 2008 + Ostend height
+     * Extent: Belgium - onshore.
      */
-    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6173';
+    public const EPSG_ETRS89_BEL_BEREF2002_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::8370';
 
     /**
-     * ETRS89 / UTM zone 34N + NN2000 height
-     * Extent: Norway - onshore - between 18°E and 24°E.
+     * ETRS89-BEL [BEREF2011] + Ostend height
+     * Extent: Belgium - onshore.
      */
-    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5974';
+    public const EPSG_ETRS89_BEL_BEREF2011_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::11512';
 
     /**
-     * ETRS89 / UTM zone 34N + NN54 height
-     * Extent: Norway - onshore - between 18°E and 24°E
-     * Replaced by ETRS89 / UTM zone 34N + NN2000 height (compound CRS code 5974).
+     * ETRS89-BEL [BEREF2011] / Belgian Lambert 2008 + Ostend height
+     * Extent: Belgium - onshore.
      */
-    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6174';
+    public const EPSG_ETRS89_BEL_BEREF2011_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::12293';
 
     /**
-     * ETRS89 / UTM zone 35N + NN2000 height
-     * Extent: Norway - onshore - between 24°E and 30°E.
+     * ETRS89-CZE [2007] + Baltic 1957 height
+     * Extent: Czechia.
      */
-    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5975';
+    public const EPSG_ETRS89_CZE_2007_PLUS_BALTIC_1957_HEIGHT = 'urn:ogc:def:crs:EPSG::11311';
 
     /**
-     * ETRS89 / UTM zone 35N + NN54 height
-     * Extent: Norway - onshore - between 24°E and 30°E
-     * Replaced by ETRS89 / UTM zone 35N + NN2000 height (compound CRS code 5975).
-     */
-    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6175';
-
-    /**
-     * ETRS89 / UTM zone 36N + NN2000 height
-     * Extent: Norway - onshore - east of 30°E.
-     */
-    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5976';
-
-    /**
-     * ETRS89 / UTM zone 36N + NN54 height
-     * Extent: Norway - onshore - east of 30°E
-     * Replaced by ETRS89 / UTM zone 36N + NN2000 height (compound CRS code 5976).
-     */
-    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
-
-    /**
-     * ETRS89/DREF91/2016 + DHHN2016 height
+     * ETRS89-DEU [ETRS89/DREF91/2016] + DHHN2016 height
      * Extent: Germany.
      */
-    public const EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::10293';
+    public const EPSG_ETRS89_DEU_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::10293';
 
     /**
-     * EUREF-FIN + N2000 height
+     * ETRS89-ESP [REGENTE] + Alboran height
+     * Extent: Spain - Alboran island - onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_ALBORAN_HEIGHT = 'urn:ogc:def:crs:EPSG::11584';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Alicante height
+     * Extent: Gibraltar - onshore; Spain - mainland onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_ALICANTE_HEIGHT = 'urn:ogc:def:crs:EPSG::11585';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Ceuta 2 height
+     * Extent: Spain - Ceuta onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_CEUTA_2_HEIGHT = 'urn:ogc:def:crs:EPSG::11586';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Formentera height
+     * Extent: Spain - Balearic Islands - Formentera - onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_FORMENTERA_HEIGHT = 'urn:ogc:def:crs:EPSG::11587';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Ibiza height
+     * Extent: Spain - Balearic Islands - Ibiza - onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_IBIZA_HEIGHT = 'urn:ogc:def:crs:EPSG::11588';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Mallorca height
+     * Extent: Spain - Balearic Islands - Mallorca onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_MALLORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::11589';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Melilla height
+     * Extent: Spain - Melilla onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_MELILLA_HEIGHT = 'urn:ogc:def:crs:EPSG::11590';
+
+    /**
+     * ETRS89-ESP [REGENTE] + Menorca height
+     * Extent: Spain - Balearic Islands - Menorca onshore.
+     */
+    public const EPSG_ETRS89_ESP_REGENTE_PLUS_MENORCA_HEIGHT = 'urn:ogc:def:crs:EPSG::11591';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] + N2000 height
      * Extent: Finland - onshore.
      */
-    public const EPSG_EUREF_FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10692';
+    public const EPSG_ETRS89_FIN_EUREF_FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10692';
 
     /**
-     * EUREF-FIN + N60 height
+     * ETRS89-FIN [EUREF-FIN] + N60 height
      * Extent: Finland - onshore.
      */
-    public const EPSG_EUREF_FIN_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::10691';
+    public const EPSG_ETRS89_FIN_EUREF_FIN_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::10691';
 
     /**
-     * EUREF-FIN / TM35FIN(E,N) + N2000 height
-     * Extent: Finland - onshore
-     * Now used in preference to EUREF-FIN / TM35FIN(N,E) + N2000 height (CRS code 3903) in which the horizontal axis
-     * order is reversed to northing-easting.
+     * ETRS89-FIN [EUREF-FIN] / GK19FIN + N2000 height
+     * Extent: Finland - nominally onshore west of 19°30'E but may be used in adjacent areas to east if a municipality
+     * chooses to use one zone over its whole extent.
      */
-    public const EPSG_EUREF_FIN_TM35FIN_E_N_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10774';
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK19FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11169';
 
     /**
-     * EUREF-FIN / TM35FIN(N,E) + N2000 height
-     * Extent: Finland - onshore
-     * Replaces ETRS89 / TM35FIN(N,E) + N60 height (CRS code 3902). Use now generally replaced by EUREF-FIN /
-     * TM35FIN(E,N) + N2000 height (code10774) in which horizontal axis order is reversed to easting-northing.
+     * ETRS89-FIN [EUREF-FIN] / GK20FIN + N2000 height
+     * Extent: Finland - nominally onshore between 19°30'E and 20°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
      */
-    public const EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK20FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11170';
 
     /**
-     * EUREF-FIN / TM35FIN(N,E) + N60 height
-     * Extent: Finland - onshore
-     * Replaces YKJ/N60 (CRS code 3901). Replaced by EUREF-FIN-TM35FIN(N,E)/N2000 (CRS code 3903).
+     * ETRS89-FIN [EUREF-FIN] / GK21FIN + N2000 height
+     * Extent: Finland - nominally onshore between 20°30'E and 21°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
      */
-    public const EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK21FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11171';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK22FIN + N2000 height
+     * Extent: Finland - nominally onshore between 21°30'E and 22°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK22FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11172';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK23FIN + N2000 height
+     * Extent: Finland - nominally onshore between 22°30'E and 23°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK23FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11173';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK24FIN + N2000 height
+     * Extent: Finland - nominally onshore between 23°30'E and 24°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK24FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11174';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK25FIN + N2000 height
+     * Extent: Finland - nominally onshore between 24°30'E and 25°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK25FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11175';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK26FIN + N2000 height
+     * Extent: Finland - onshore between 25°30'E and 26°30'E.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK26FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11176';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK27FIN + N2000 height
+     * Extent: Finland - nominally onshore between 26°30'E and 27°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK27FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11177';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK28FIN + N2000 height
+     * Extent: Finland - nominally onshore between 27°30'E and 28°30'E but may be used in adjacent areas if a
+     * municipality chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK28FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11178';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK29FIN + N2000 height
+     * Extent: Finland - nominally between 28°30'E and 29°30'E but may be used in adjacent areas if a municipality
+     * chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK29FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11179';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK30FIN + N2000 height
+     * Extent: Finland - nominally between 29°30'E and 30°30'E but may be used in adjacent areas if a municipality
+     * chooses to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK30FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11180';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / GK31FIN + N2000 height
+     * Extent: Finland - nominally east of 30°30'E but may be used in adjacent areas to west if a municipality chooses
+     * to use one zone over its whole extent.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_GK31FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::11181';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / TM35FIN(E,N) + N2000 height
+     * Extent: Finland - onshore
+     * Now used in preference to ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N2000 height (CRS code 3903) in which the
+     * horizontal axis order is reversed to northing-easting.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_E_N_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10774';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N2000 height
+     * Extent: Finland - onshore
+     * ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N60 height (CRS code 3902). Use now generally replaced by ETRS89-FIN
+     * [EUREF-FIN / TM35FIN(E,N) + N2000 height (code10774) in which horizontal axis order is reversed to
+     * easting-northing.
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
+
+    /**
+     * ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N60 height
+     * Extent: Finland - onshore
+     * Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N2000 height (CRS code
+     * 3903).
+     */
+    public const EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
+
+    /**
+     * ETRS89-FRA [RGF93 v1] / Lambert-93 + NGF-IGN69 height
+     * Extent: France - mainland onshore
+     * Replaced by ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2010-06-18.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
+
+    /**
+     * ETRS89-FRA [RGF93 v1] / Lambert-93 + NGF-IGN78 height
+     * Extent: France - Corsica onshore
+     * Replaced by ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2010-06-18.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
+
+    /**
+     * ETRS89-FRA [RGF93 v2] + NGF-IGN69 height
+     * Extent: France - mainland onshore.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
+
+    /**
+     * ETRS89-FRA [RGF93 v2] + NGF-IGN78 height
+     * Extent: France - Corsica onshore.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
+
+    /**
+     * ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN69 height
+     * Extent: France - mainland onshore
+     * Replaces ETRS89-FRA [RGF93 v1] / Lambert-93 + NGF-IGN69 height (CRS code 5698) from 2010-06-18. Replaced by
+     * ETRS89-FRA [RGF93 v2b] / Lambert-93 + NGF-IGN69 height (CRS code 10499) from 2021-01-05.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10497';
+
+    /**
+     * ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN78 height
+     * Extent: France - Corsica onshore
+     * Replaces ETRS89-FRA [RGF93 v1] / Lambert-93 + NGF-IGN78 height (CRS code 5699) from 2010-06-18. Replaced by
+     * ETRS89-FRA [RGF93 v2b] / Lambert-93 + NGF-IGN78 height (CRS code 10500) from 2021-01-05.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10498';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b] + NGF-IGN69 height
+     * Extent: France - mainland onshore.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9785';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b] + NGF-IGN78 height
+     * Extent: France - Corsica onshore.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10507';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b] / Lambert-93 + NGF-IGN69 height
+     * Extent: France - mainland onshore
+     * Replaces ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2021-01-05.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10499';
+
+    /**
+     * ETRS89-FRA [RGF93 v2b] / Lambert-93 + NGF-IGN78 height
+     * Extent: France - Corsica onshore
+     * Replaces ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2021-01-05.
+     */
+    public const EPSG_ETRS89_FRA_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10500';
+
+    /**
+     * ETRS89-FRO [2008] + FVR09 height
+     * Extent: Faroe Islands - onshore.
+     */
+    public const EPSG_ETRS89_FRO_2008_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::11120';
+
+    /**
+     * ETRS89-FRO [2008] / Faroe TM + FVR09 height
+     * Extent: Faroe Islands - onshore
+     * Introduced in 2010.
+     */
+    public const EPSG_ETRS89_FRO_2008_FAROE_TM_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5318';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + Douglas height
+     * Extent: Isle of Man - onshore.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_DOUGLAS_HEIGHT = 'urn:ogc:def:crs:EPSG::11499';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + Lerwick height
+     * Extent: UK - Great Britain - Scotland - Shetland Islands onshore.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_LERWICK_HEIGHT = 'urn:ogc:def:crs:EPSG::11511';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + London Survey Grid height
+     * Extent: UK - Greater London and surrounding area.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_LONDON_SURVEY_GRID_HEIGHT = 'urn:ogc:def:crs:EPSG::10997';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + ODN Orkney height
+     * Extent: UK - Great Britain - Scotland - Orkney Islands onshore.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_ODN_ORKNEY_HEIGHT = 'urn:ogc:def:crs:EPSG::11820';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + ODN height
+     * Extent: UK - Great Britain onshore - England and Wales - mainland; Scotland - mainland and Inner Hebrides.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::11819';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + St. Marys height
+     * Extent: UK - Great Britain - England - Isles of Scilly onshore.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_ST_MARYS_HEIGHT = 'urn:ogc:def:crs:EPSG::11821';
+
+    /**
+     * ETRS89-GBR [OSNet v2009] + Stornoway height
+     * Extent: UK - Great Britain - Scotland - Outer Hebrides onshore.
+     */
+    public const EPSG_ETRS89_GBR_OSNET_V2009_PLUS_STORNOWAY_HEIGHT = 'urn:ogc:def:crs:EPSG::11822';
+
+    /**
+     * ETRS89-HUN [ETRF2000] + EOMA 1980 height
+     * Extent: Hungary.
+     */
+    public const EPSG_ETRS89_HUN_ETRF2000_PLUS_EOMA_1980_HEIGHT = 'urn:ogc:def:crs:EPSG::11533';
+
+    /**
+     * ETRS89-IRE [ETRF2000] + Belfast height
+     * Extent: UK - Northern Ireland (Ulster) - onshore.
+     */
+    public const EPSG_ETRS89_IRE_ETRF2000_PLUS_BELFAST_HEIGHT = 'urn:ogc:def:crs:EPSG::12230';
+
+    /**
+     * ETRS89-IRE [ETRF2000] + Malin Head height
+     * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore.
+     */
+    public const EPSG_ETRS89_IRE_ETRF2000_PLUS_MALIN_HEAD_HEIGHT = 'urn:ogc:def:crs:EPSG::12229';
+
+    /**
+     * ETRS89-ITA [RDN2008] + Cagliari 1956 height
+     * Extent: Italy - Sardinia onshore.
+     */
+    public const EPSG_ETRS89_ITA_RDN2008_PLUS_CAGLIARI_1956_HEIGHT = 'urn:ogc:def:crs:EPSG::12248';
+
+    /**
+     * ETRS89-ITA [RDN2008] + Genoa 1942 height
+     * Extent: Italy - mainland (including San Marino and Vatican City State) and Sicily.
+     */
+    public const EPSG_ETRS89_ITA_RDN2008_PLUS_GENOA_1942_HEIGHT = 'urn:ogc:def:crs:EPSG::12245';
+
+    /**
+     * ETRS89-LVA [LKS-2020] + Latvia 2000 height
+     * Extent: Latvia - onshore
+     * Replaces ETRS89-LVA [LKS-92] + Latvia 2000 height (CRS code 10826) from 2026-10-01.
+     */
+    public const EPSG_ETRS89_LVA_LKS_2020_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10839';
+
+    /**
+     * ETRS89-LVA [LKS-92] + Latvia 2000 height
+     * Extent: Latvia - onshore
+     * Replaced by ETRS89-LVA [LKS-2020] + Latvia 2000 height (CRS code 10839) from 2026-10-01.
+     */
+    public const EPSG_ETRS89_LVA_LKS_92_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10826';
+
+    /**
+     * ETRS89-NLD [AGRS2010] + LAT-NLD depth
+     * Extent: 4859 - Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°.
+     */
+    public const EPSG_ETRS89_NLD_AGRS2010_PLUS_LAT_NLD_DEPTH = 'urn:ogc:def:crs:EPSG::12215';
+
+    /**
+     * ETRS89-NLD [AGRS2010] + MSL-NLD depth
+     * Extent: 4859 - Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°.
+     */
+    public const EPSG_ETRS89_NLD_AGRS2010_PLUS_MSL_NLD_DEPTH = 'urn:ogc:def:crs:EPSG::12216';
+
+    /**
+     * ETRS89-NLD [AGRS2010] + NAP height
+     * Extent: Netherlands.
+     */
+    public const EPSG_ETRS89_NLD_AGRS2010_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::11484';
+
+    /**
+     * ETRS89-NOR [EUREF89] + CD Norway depth
+     * Extent: Norway - inshore and nearshore.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_PLUS_CD_NORWAY_DEPTH = 'urn:ogc:def:crs:EPSG::11565';
+
+    /**
+     * ETRS89-NOR [EUREF89] + NN2000:2018 height
+     * Extent: Norway - onshore
+     * Replaces ETRS89-NOR [EUREF89] + NN54 height. Replaced by ETRS89-NOR [EUREF89] + NN2000:2025 height.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::11558';
+
+    /**
+     * ETRS89-NOR [EUREF89] + NN2000:2025 height
+     * Extent: Norway - onshore
+     * Replaces ETRS89-NOR [EUREF89] + NN2000:2018 height.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11399';
+
+    /**
+     * ETRS89-NOR [EUREF89] + NN54 height
+     * Extent: Norway - onshore
+     * Replaced by ETRS89-NOR [EUREF89] + NN2000:2018 height (compound CRS code 5942).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::11560';
+
+    /**
+     * ETRS89-NOR [EUREF89] + SVD2006 height
+     * Extent: 4860 - Svalbard - west of 37.91° between 76.21° and 81.12°.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_PLUS_SVD2006_HEIGHT = 'urn:ogc:def:crs:EPSG::11563';
+
+    /**
+     * ETRS89-NOR [EUREF89] + SVD2024 height
+     * Extent: Svalbard including Bear Island.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_PLUS_SVD2024_HEIGHT = 'urn:ogc:def:crs:EPSG::11000';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000:2018 height
+     * Extent: Norway - onshore - between 10°E and 11°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 10 + NN54 height (compound CRS code 6150). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 10 + NN2000:2025 height (compound CRS code 11410).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_10_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5950';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000:2025 height
+     * Extent: Norway - onshore - between 10°E and 11°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000:2018 height (compound CRS code 5950).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_10_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11410';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 10 + NN54 height
+     * Extent: Norway - onshore - between 10°E and 11°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000 height (compound CRS code 5950).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_10_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6150';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000:2018 height
+     * Extent: Norway - onshore - between 11°E and 12°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 11 + NN54 height (compound CRS code 6151). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 11 + NN2000:2025 height (compound CRS code 11411).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_11_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5951';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000:2025 height
+     * Extent: Norway - onshore - between 11°E and 12°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000:2018 height (compound CRS code 6151).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_11_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11411';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 11 + NN54 height
+     * Extent: Norway - onshore - between 11°E and 12°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000 height (compound CRS code 5951).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_11_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6151';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000:2018 height
+     * Extent: Norway - onshore - between 12°E and 13°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 12 + NN54 height (compound CRS code 6152). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 12 + NN2000:2025 height (compound CRS code 11412).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_12_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5952';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000:2025 height
+     * Extent: Norway - onshore - between 12°E and 13°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000:2018 height (compound CRS code 5952).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_12_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11412';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 12 + NN54 height
+     * Extent: Norway - onshore - between 12°E and 13°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000 height (compound CRS code 5952).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_12_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6152';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000:2018 height
+     * Extent: Norway - onshore - between 13°E and 14°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 13 + NN54 height (compound CRS code 6153). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 13 + NN2000:2025 height (compound CRS code 11413).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_13_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5953';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000:2025 height
+     * Extent: Norway - onshore - between 13°E and 14°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000:2018 height (compound CRS code 5953).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_13_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11413';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 13 + NN54 height
+     * Extent: Norway - onshore - between 13°E and 14°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000 height (compound CRS code 5953).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_13_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6153';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000:2018 height
+     * Extent: Norway - onshore - between 14°E and 15°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 14 + NN54 height (compound CRS code 6154). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 14 + NN2000:2025 height (compound CRS code 11414).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_14_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5954';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000:2025 height
+     * Extent: Norway - onshore - between 14°E and 15°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000:2018 height (compound CRS code 5954).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_14_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11414';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 14 + NN54 height
+     * Extent: Norway - onshore - between 14°E and 15°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000 height (compound CRS code 5954).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_14_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6154';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000:2018 height
+     * Extent: Norway - onshore - between 15°E and 16°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 15 + NN54 height (compound CRS code 6155). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 15 + NN2000:2025 height (compound CRS code 11415).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_15_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5955';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000:2025 height
+     * Extent: Norway - onshore - between 15°E and 16°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000:2018 height (compound CRS code 5955).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_15_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11415';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 15 + NN54 height
+     * Extent: Norway - onshore - between 15°E and 16°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000 height (compound CRS code 5955).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_15_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6155';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000:2018 height
+     * Extent: Norway - onshore - between 16°E and 17°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 16 + NN54 height (compound CRS code 6156). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 16 + NN2000:2025 height (compound CRS code 11416).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_16_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5956';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000:2025 height
+     * Extent: Norway - onshore - between 16°E and 17°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000:2018 height (compound CRS code 5956).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_16_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11416';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 16 + NN54 height
+     * Extent: Norway - onshore - between 16°E and 17°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000 height (compound CRS code 5956).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_16_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6156';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000:2018 height
+     * Extent: Norway - onshore - between 17°E and 18°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 17 + NN54 height (compound CRS code 6157). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 17 + NN2000:2025 height (compound CRS code 11417).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_17_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5957';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000:2025 height
+     * Extent: Norway - onshore - between 17°E and 18°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000:2018 height (compound CRS code 5957).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_17_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11417';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 17 + NN54 height
+     * Extent: Norway - onshore - between 17°E and 18°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000 height (compound CRS code 5957).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_17_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6157';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000:2018 height
+     * Extent: Norway - onshore - between 18°E and 19°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 18 + NN54 height (compound CRS code 6158). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 18 + NN2000:2025 height (compound CRS code 11418).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_18_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5958';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000:2025 height
+     * Extent: Norway - onshore - between 18°E and 19°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000:2018 height (compound CRS code 5958).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_18_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11418';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 18 + NN54 height
+     * Extent: Norway - onshore - between 18°E and 19°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000 height (compound CRS code 5958).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_18_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6158';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000:2018 height
+     * Extent: Norway - onshore - between 19°E and 20°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 19 + NN54 height (compound CRS code 6159). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 19 + NN2000:2025 height (compound CRS code 11419).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_19_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5959';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000:2025 height
+     * Extent: Norway - onshore - between 19°E and 20°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000:2018 height (compound CRS code 5959).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_19_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11419';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 19 + NN54 height
+     * Extent: Norway - onshore - between 19°E and 20°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000 height (compound CRS code 5959).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_19_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6159';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000:2018 height
+     * Extent: Norway - onshore - between 20°E and 21°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 20 + NN54 height (compound CRS code 6160). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 20 + NN2000:2025 height (compound CRS code 11420).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_20_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5960';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000:2025 height
+     * Extent: Norway - onshore - between 20°E and 21°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000:2018 height (compound CRS code 5960).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_20_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11420';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 20 + NN54 height
+     * Extent: Norway - onshore - between 20°E and 21°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000 height (compound CRS code 5960).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_20_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6160';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000:2018 height
+     * Extent: Norway - onshore - between 21°E and 22°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 21 + NN54 height (compound CRS code 6161). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 21 + NN2000:2025 height (compound CRS code 11421).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_21_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5961';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000:2025 height
+     * Extent: Norway - onshore - between 21°E and 22°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000:2018 height (compound CRS code 5961).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_21_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11421';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 21 + NN54 height
+     * Extent: Norway - onshore - between 21°E and 22°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000 height (compound CRS code 5961).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_21_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6161';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000:2018 height
+     * Extent: Norway - onshore - between 22°E and 23°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 22 + NN54 height (compound CRS code 6162). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 22 + NN2000:2025 height (compound CRS code 11422).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_22_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5962';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000:2025 height
+     * Extent: Norway - onshore - between 22°E and 23°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000:2018 height (compound CRS code 5962).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_22_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11422';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 22 + NN54 height
+     * Extent: Norway - onshore - between 22°E and 23°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000 height (compound CRS code 5962).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_22_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6162';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000:2018 height
+     * Extent: Norway - onshore - between 23°E and 24°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 23 + NN54 height (compound CRS code 6163). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 23 + NN2000:2025 height (compound CRS code 11423).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_23_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5963';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000:2025 height
+     * Extent: Norway - onshore - between 23°E and 24°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000:2018 height (compound CRS code 5963).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_23_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11423';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 23 + NN54 height
+     * Extent: Norway - onshore - between 23°E and 24°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000 height (compound CRS code 5963).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_23_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6163';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000:2018 height
+     * Extent: Norway - onshore - between 24°E and 25°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 24 + NN54 height (compound CRS code 6164). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 24 + NN2000:2025 height (compound CRS code 11424).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_24_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5964';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000:2025 height
+     * Extent: Norway - onshore - between 24°E and 25°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000:2018 height (compound CRS code 5964).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_24_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11424';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 24 + NN54 height
+     * Extent: Norway - onshore - between 24°E and 25°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000 height (compound CRS code 5964).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_24_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6164';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000:2018 height
+     * Extent: Norway - onshore - between 25°E and 26°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 25 + NN54 height (compound CRS code 6165). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 25 + NN2000:2025 height (compound CRS code 11425).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_25_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5965';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000:2025 height
+     * Extent: Norway - onshore - between 25°E and 26°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000:2018 height (compound CRS code 5965).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_25_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11425';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 25 + NN54 height
+     * Extent: Norway - onshore - between 25°E and 26°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000 height (compound CRS code 5965).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_25_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6165';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000:2018 height
+     * Extent: Norway - onshore - between 26°E and 27°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 26 + NN54 height (compound CRS code 6166). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 26 + NN2000:2025 height (compound CRS code 11426).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_26_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5966';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000:2025 height
+     * Extent: Norway - onshore - between 26°E and 27°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000:2018 height (compound CRS code 5966).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_26_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11426';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 26 + NN54 height
+     * Extent: Norway - onshore - between 26°E and 27°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000 height (compound CRS code 5966).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_26_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6166';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000:2018 height
+     * Extent: Norway - onshore - between 27°E and 28°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 27 + NN54 height (compound CRS code 6167). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 27 + NN2000:2025 height (compound CRS code 11427).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_27_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5967';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000:2025 height
+     * Extent: Norway - onshore - between 27°E and 28°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000:2018 height (compound CRS code 5967).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_27_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11427';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 27 + NN54 height
+     * Extent: Norway - onshore - between 27°E and 28°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000 height (compound CRS code 5967).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_27_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6167';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000:2018 height
+     * Extent: Norway - onshore - between 28°E and 29°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 28 + NN54 height (compound CRS code 6168). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 28 + NN2000:2025 height (compound CRS code 11428).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_28_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5968';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000:2025 height
+     * Extent: Norway - onshore - between 28°E and 29°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000:2018 height (compound CRS code 5968).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_28_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11428';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 28 + NN54 height
+     * Extent: Norway - onshore - between 28°E and 29°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000 height (compound CRS code 5968).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_28_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6168';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000:2018 height
+     * Extent: Norway - onshore - between 29°E and 30°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 29 + NN54 height (compound CRS code 6169). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 29 + NN2000:2025 height (compound CRS code 11429).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_29_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5969';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000:2025 height
+     * Extent: Norway - onshore - between 29°E and 30°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000:2018 height (compound CRS code 5969).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_29_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11429';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 29 + NN54 height
+     * Extent: Norway - onshore - between 29°E and 30°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000 height (compound CRS code 5969).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_29_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6169';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000:2018 height
+     * Extent: Norway - onshore - east of 30°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 30 + NN54 height (compound CRS code 6170). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 30 + NN2000:2025 height (compound CRS code 11430).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_30_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5970';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000:2025 height
+     * Extent: Norway - onshore - east of 30°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000:2018 height (compound CRS code 5970).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_30_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11430';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 30 + NN54 height
+     * Extent: Norway - onshore - east of 30°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000 height (compound CRS code 5970).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_30_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6170';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000:2018 height
+     * Extent: Norway - onshore - west of 6°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 5 + NN54 height (compound CRS code 6145). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 5 + NN2000:2025 height (compound CRS code 11435).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_5_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5945';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000:2025 height
+     * Extent: Norway - onshore - west of 6°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000:2018 height (compound CRS code 5945).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_5_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11435';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 5 + NN54 height
+     * Extent: Norway - onshore - west of 6°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000 height (compound CRS code 5945).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_5_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6145';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000:2018 height
+     * Extent: Norway - onshore - between 6°E and 7°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 6 + NN54 height (compound CRS code 6146). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 6 + NN2000:2025 height (compound CRS code 11436).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_6_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5946';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000:2025 height
+     * Extent: Norway - onshore - between 6°E and 7°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000:2018 height (compound CRS code 5946).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_6_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11436';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 6 + NN54 height
+     * Extent: Norway - onshore - between 6°E and 7°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000 height (compound CRS code 5946).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_6_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6146';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000:2018 height
+     * Extent: Norway - onshore - between 7°E and 8°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 7 + NN54 height (compound CRS code 6147). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 7 + NN2000:2025 height (compound CRS code 11437).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_7_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5947';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000:2025 height
+     * Extent: Norway - onshore - between 7°E and 8°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000:2018 height (compound CRS code 5947).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_7_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11437';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 7 + NN54 height
+     * Extent: Norway - onshore - between 7°E and 8°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000 height (compound CRS code 5947).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_7_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6147';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000:2018 height
+     * Extent: Norway - onshore - between 8°E and 9°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 8 + NN54 height (compound CRS code 6148). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 8 + NN2000:2025 height (compound CRS code 11408).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_8_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5948';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000:2025 height
+     * Extent: Norway - onshore - between 8°E and 9°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000:2018 height (compound CRS code 5948).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_8_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11408';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 8 + NN54 height
+     * Extent: Norway - onshore - between 8°E and 9°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000 height (compound CRS code 5948).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_8_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6148';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000:2018 height
+     * Extent: Norway - onshore - between 9°E and 10°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 9 + NN54 height (compound CRS code 6149). Replaced by ETRS89-NOR
+     * [EUREF89] / NTM zone 9 + NN2000:2025 height (compound CRS code 11409).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_9_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5949';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000:2025 height
+     * Extent: Norway - onshore - between 9°E and 10°E
+     * Replaces ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000:2018 height (compound CRS code 5949).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_9_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11409';
+
+    /**
+     * ETRS89-NOR [EUREF89] / NTM zone 9 + NN54 height
+     * Extent: Norway - onshore - between 9°E and 10°E
+     * Replaced by ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000 height (compound CRS code 5949).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6149';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 31N + NN2000:2018 height
+     * Extent: Norway - onshore - west of 6°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_31N_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5971';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 31N + NN2000:2025 height
+     * Extent: Norway - onshore - west of 6°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_31N_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11400';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 31N + NN54 height
+     * Extent: Norway - onshore - west of 6°E
+     * Replaced by ETRS89-NOR [EUREF89] / UTM zone 31N + NN2000 height (compound CRS code 5971).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_31N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6171';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 32N + NN2000:2018 height
+     * Extent: Norway - onshore - between 6°E and 12°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5972';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 32N + NN2000:2025 height
+     * Extent: Norway - onshore - between 6°E and 12°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11403';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 32N + NN54 height
+     * Extent: Norway - onshore - between 6°E and 12°E
+     * Replaced by ETRS89-NOR [EUREF89] / UTM zone 32N + NN2000 height (compound CRS code 5972).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6172';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 33N + NN2000:2018 height
+     * Extent: Norway - onshore - between 12°E and 18°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_33N_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5973';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 33N + NN2000:2025 height
+     * Extent: Norway - onshore - between 12°E and 18°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_33N_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11404';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 33N + NN54 height
+     * Extent: Norway - onshore - between 12°E and 18°E
+     * Replaced by ETRS89-NOR [EUREF89] / UTM zone 33N + NN2000 height (compound CRS code 5973).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_33N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6173';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 34N + NN2000:2018 height
+     * Extent: Norway - onshore - between 18°E and 24°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_34N_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5974';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 34N + NN2000:2025 height
+     * Extent: Norway - onshore - between 18°E and 24°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_34N_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11405';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 34N + NN54 height
+     * Extent: Norway - onshore - between 18°E and 24°E
+     * Replaced by ETRS89-NOR [EUREF89] / UTM zone 34N + NN2000 height (compound CRS code 5974).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_34N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6174';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 35N + NN2000:2018 height
+     * Extent: Norway - onshore - between 24°E and 30°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_35N_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5975';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 35N + NN2000:2025 height
+     * Extent: Norway - onshore - between 24°E and 30°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_35N_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11406';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 35N + NN54 height
+     * Extent: Norway - onshore - between 24°E and 30°E
+     * Replaced by ETRS89-NOR [EUREF89] / UTM zone 35N + NN2000 height (compound CRS code 5975).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_35N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6175';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 36N + NN2000:2018 height
+     * Extent: Norway - onshore - east of 30°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_36N_PLUS_NN2000_2018_HEIGHT = 'urn:ogc:def:crs:EPSG::5976';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 36N + NN2000:2025 height
+     * Extent: Norway - onshore - east of 30°E.
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_36N_PLUS_NN2000_2025_HEIGHT = 'urn:ogc:def:crs:EPSG::11407';
+
+    /**
+     * ETRS89-NOR [EUREF89] / UTM zone 36N + NN54 height
+     * Extent: Norway - onshore - east of 30°E
+     * Replaced by ETRS89-NOR [EUREF89] / UTM zone 36N + NN2000 height (compound CRS code 5976).
+     */
+    public const EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
+
+    /**
+     * ETRS89-POL [PL-ETRF2000] + Baltic 1986 height
+     * Extent: Poland - onshore.
+     */
+    public const EPSG_ETRS89_POL_PL_ETRF2000_PLUS_BALTIC_1986_HEIGHT = 'urn:ogc:def:crs:EPSG::9656';
+
+    /**
+     * ETRS89-POL [PL-ETRF2000] + PL-EVRF2007 height
+     * Extent: Poland - onshore.
+     */
+    public const EPSG_ETRS89_POL_PL_ETRF2000_PLUS_PL_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::9657';
+
+    /**
+     * ETRS89-PRT [1995] + Cascais height
+     * Extent: Portugal - mainland - onshore.
+     */
+    public const EPSG_ETRS89_PRT_1995_PLUS_CASCAIS_HEIGHT = 'urn:ogc:def:crs:EPSG::11579';
+
+    /**
+     * ETRS89-SVK [SKTRF09] + Baltic 1957 height
+     * Extent: Slovakia.
+     */
+    public const EPSG_ETRS89_SVK_SKTRF09_PLUS_BALTIC_1957_HEIGHT = 'urn:ogc:def:crs:EPSG::11312';
+
+    /**
+     * ETRS89-SVK [SKTRF09] + EVRF2007 height
+     * Extent: Slovakia.
+     */
+    public const EPSG_ETRS89_SVK_SKTRF09_PLUS_EVRF2007_HEIGHT = 'urn:ogc:def:crs:EPSG::11314';
+
+    /**
+     * ETRS89-SVN [D96] + SVS2000 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_ETRS89_SVN_D96_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10686';
+
+    /**
+     * ETRS89-SVN [D96] + SVS2010 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_ETRS89_SVN_D96_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10245';
+
+    /**
+     * ETRS89-SVN [D96] / Slovene National Grid + SVS2000 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_ETRS89_SVN_D96_SLOVENE_NATIONAL_GRID_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10687';
+
+    /**
+     * ETRS89-SVN [D96] / Slovene National Grid + SVS2010 height
+     * Extent: Slovenia - onshore.
+     */
+    public const EPSG_ETRS89_SVN_D96_SLOVENE_NATIONAL_GRID_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10246';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 12 00] + RH2000 height
+     * Extent: Sweden - communes west of approximately 12°45'E and south of approximately 60°N. See information
+     * source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_12_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5846';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 13 30] + RH2000 height
+     * Extent: Sweden - communes between approximately 12°45'E and 14°15'E and south of approximately 62°10'N. See
+     * information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_13_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5847';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 14 15] + RH2000 height
+     * Extent: Sweden - communes west of approximately 15°E and between approximately 61°35'N and 64°25'N. See
+     * information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_14_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5851';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 15 00] + RH2000 height
+     * Extent: Sweden - communes between approximately 14°15'E and 15°45'E and south of approximately 61°30'N. See
+     * information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_15_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5848';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 15 45] + RH2000 height
+     * Extent: Sweden - communes between approximately 15°E and 16°30'E and between approximately 60°30'N and 65°N.
+     * See information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_15_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5852';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 16 30] + RH2000 height
+     * Extent: Sweden - communes between approximately 15°45'E and 17°15'E and south of approximately 62°20'N. See
+     * information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_16_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5849';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 17 15] + RH2000 height
+     * Extent: Sweden - communes between approximately 14°20'E and 18°50'E and between approximately 67°10'N and
+     * 62°05'N. See information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_17_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5853';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 18 00] + RH2000 height
+     * Extent: Sweden - communes east of approximately 17°15'E between approximately 60°40'N and 58°50'N. See
+     * information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_18_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5850';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 18 45] + RH2000 height
+     * Extent: Sweden - mainland communes between approximately 18°E and 19°30'E and between approximately 62°50'N
+     * and 66°N. Also Gotland. See information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_18_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5854';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 20 15] + RH2000 height
+     * Extent: Sweden - communes in Vaasterbotten east of approximately 19°30'E and (i) north of 63°30'N and (ii)
+     * south of approximately 65°05'N. Also Norbotten west of approximately 23°20'E. See information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_20_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5855';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 21 45] + RH2000 height
+     * Extent: Sweden - communes in Norbotten east of approximately 19°30'E and south of approximately 65°50'N. See
+     * information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_21_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5856';
+
+    /**
+     * ETRS89-SWE [SWEREF 99 23 15] + RH2000 height
+     * Extent: Sweden - communes east of approximately 21°50'E. See information source for map.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_23_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5857';
+
+    /**
+     * ETRS89-SWE [SWEREF 99] + RH2000 height
+     * Extent: Sweden - onshore.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5628';
+
+    /**
+     * ETRS89-SWE [SWEREF 99] TM + RH2000 height
+     * Extent: Sweden - onshore.
+     */
+    public const EPSG_ETRS89_SWE_SWEREF_99_TM_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5845';
 
     /**
      * EWR2 Grid + ODN height
@@ -1213,10 +2009,22 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_GR96_PLUS_GLLAT_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10652';
 
     /**
+     * GR96 + GLLAT(2025) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GR96_PLUS_GLLAT_2025_DEPTH = 'urn:ogc:def:crs:EPSG::11452';
+
+    /**
      * GR96 + GLMSL(2023) depth
      * Extent: Greenland - offshore.
      */
     public const EPSG_GR96_PLUS_GLMSL_2023_DEPTH = 'urn:ogc:def:crs:EPSG::10651';
+
+    /**
+     * GR96 + GLMSL(2025) depth
+     * Extent: Greenland - offshore.
+     */
+    public const EPSG_GR96_PLUS_GLMSL_2025_DEPTH = 'urn:ogc:def:crs:EPSG::11453';
 
     /**
      * GR96 + GVR2000 height
@@ -1327,87 +2135,206 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_JGD2000_PLUS_JGD2000_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6696';
 
     /**
-     * JGD2011 + JGD2011 (vertical) height
+     * JGD2024 + JGD2011 (vertical) height
      * Extent: Japan - onshore mainland - Hokkaido, Honshu, Shikoku, Kyushu
-     * Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21st October 2011.
+     * Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21st October 2011. With the
+     * introduction of JGD2024 (vertical) with effect from 1st April 2025 the JGD2011 geometric CRS was renamed as
+     * JGD2024; JGD2011 (vertical) CRS is unchanged.
      */
-    public const EPSG_JGD2011_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6697';
+    public const EPSG_JGD2024_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6697';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS I + JGD2011 (vertical) height
-     * Extent: Japan - onshore - Kyushu west of approximately 130°E - Nagasaki-ken.
+     * JGD2024 + JGD2024 (vertical) height
+     * Extent: Japan
+     * Replaces JGD2011 + JGD2011 (vertical) height (CRS code 6696) with effect from 1st April 2025.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_I_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10162';
+    public const EPSG_JGD2024_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11318';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS II + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS I + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Kyushu west of approximately 130°E - Nagasaki-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_I_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10162';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS I + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Kyushu west of approximately 130°E - Nagasaki-ken; islands of Kagoshima-ken between
+     * 27°N and 32°N and between 128°18'E and 130°E (between 128°18'E and 30°13'E for Amami islands).
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_I_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11319';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS II + JGD2011 (vertical) height
      * Extent: Japan - onshore - Kyushu east of approximately 130°E - Fukuoka-ken; Saga-ken; Kumamoto-ken; Oita-ken;
-     * Miyazaki-ken; Kagoshima-ken on Kyushu (except for area within Japan Plane Rectangular Coordinate System zone I).
+     * Miyazaki-ken; Kagoshima-ken on Kyushu (except for area within Japan Plane Rectangular Coordinate System zone I)
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_II_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10163';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_II_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10163';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS III + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS II + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Kyushu east of approximately 130°E - Fukuoka-ken; Saga-ken; Kumamoto-ken; Oita-ken;
+     * Miyazaki-ken; Kagoshima-ken (except for area within Japan Plane Rectangular Coordinate System zone I).
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_II_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11320';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS III + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu west of approximately 133°15'E - Yamaguchi-ken; Shimane-ken; Hiroshima-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_III_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10164';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS III + JGD2024 (vertical) height
      * Extent: Japan - onshore - Honshu west of approximately 133°15'E - Yamaguchi-ken; Shimane-ken; Hiroshima-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_III_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10164';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_III_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11321';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS IV + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS IV + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Shikoku - Kagawa-ken; Ehime-ken; Tokushima-ken; Kochi-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_IV_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10165';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS IV + JGD2024 (vertical) height
      * Extent: Japan - onshore - Shikoku - Kagawa-ken; Ehime-ken; Tokushima-ken; Kochi-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_IV_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10165';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_IV_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11322';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS IX + JGD2011 (vertical) height
-     * Extent: Japan - onshore - Honshu - Tokyo-to. (Excludes offshore island areas of Tokyo-to).
+     * JGD2024 / Japan Plane Rectangular CS IX + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu - Tokyo-to. (Excludes offshore island areas of Tokyo-to)
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_IX_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10170';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_IX_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10170';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS V + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS IX + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Honshu - Tokyo-to. (Excludes offshore island areas of Tokyo-to covered by Japan Plane
+     * Rectangular Coordinate System zones XIV, XVIII and XIX).
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_IX_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11327';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS V + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 133°15'E and 135°10'E - Hyogo-ken; Tottori-ken;
+     * Okayama-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_V_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10166';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS V + JGD2024 (vertical) height
      * Extent: Japan - onshore - Honshu between approximately 133°15'E and 135°10'E - Hyogo-ken; Tottori-ken;
      * Okayama-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_V_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10166';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_V_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11323';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS VI + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS VI + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 135°10'E and 136°45'E - Kyoto-fu; Osaka-fu; Fukui-ken;
+     * Shiga-ken; Mie-ken; Nara-ken; Wakayama-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10167';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS VI + JGD2024 (vertical) height
      * Extent: Japan - onshore - Honshu between approximately 135°10'E and 136°45'E - Kyoto-fu; Osaka-fu; Fukui-ken;
      * Shiga-ken; Mie-ken; Nara-ken; Wakayama-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10167';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VI_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11324';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS VII + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS VII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 136°15'E and 137°45'E - Ishikawa-ken; Toyama-ken;
+     * Gifu-ken; Aichi-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10168';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS VII + JGD2024 (vertical) height
      * Extent: Japan - onshore - Honshu between approximately 136°15'E and 137°45'E - Ishikawa-ken; Toyama-ken;
      * Gifu-ken; Aichi-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10168';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VII_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11325';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS VIII + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS VIII + JGD2011 (vertical) height
      * Extent: Japan - onshore - Honshu between approximately 137°45'E and 139°E - Niigata-ken on Honshu; Nagano-ken;
+     * Yamanashi-ken; Shizuoka-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10169';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS VIII + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Honshu between approximately 137°45'E and 139°E - Niigata-ken; Nagano-ken;
      * Yamanashi-ken; Shizuoka-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10169';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VIII_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11326';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS X + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS X + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Honshu north of 38°N approximately - Aomori-ken; Akita-ken; Yamagata-ken; Iwate-ken;
+     * Miyagi-ken
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_X_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10171';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS X + JGD2024 (vertical) height
      * Extent: Japan - onshore - Honshu north of 38°N approximately - Aomori-ken; Akita-ken; Yamagata-ken; Iwate-ken;
      * Miyagi-ken.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_X_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10171';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_X_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11328';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS XI + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS XI + JGD2011 (vertical) height
      * Extent: Japan - onshore - Hokkaido west of approximately 141°E - Otaru city; Usu-gun and Abuta-gun of
-     * Iburi-shicho; Hiyama-shicho; Shiribeshi-shicho; Oshima-shicho.
+     * Iburi-shicho; Hiyama-shicho; Shiribeshi-shicho; Oshima-shicho
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10172';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10172';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS XII + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS XI + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Hokkaido west of approximately 141°E - Otaru city; Hakodate city; Date city; Usu-gun
+     * and Abuta-gun of Iburi-shicho; Hiyama-shicho; Shiribeshi-shicho; Oshima-shicho.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XI_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11329';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Hokkaido between approximately 141°E and 143°E - Sapporo city; Asahikawa city;
+     * Wakkanai city; Rumoi city; Bibai city; Yubari city; Iwamizawa city; Tomakomai city; Muroran city; Shibetsu city;
+     * Nayoro city; Ashibetsu city; Akabira city; Mikasa city; Takikawa city; Sunagawa city; Ebetsu city; Chitose city;
+     * Utashinai city; Fukagawa city; Monbetsu city; Furano city; Noboribetsu city; Eniwa city; Ishikari-shicho;
+     * Monbetsu-gun of Abashiri-shicho; Kamikawa-shicho; Soya-shicho; Hidaka-shicho; Iburi-shicho (except Usu-gun and
+     * Abuta-gun); Sorachi-shicho; Rumoi-shicho
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10173';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XII + JGD2024 (vertical) height
      * Extent: Japan - onshore - Hokkaido between approximately 141°E and 143°E - Sapporo city; Asahikawa city;
      * Wakkanai city; Rumoi city; Bibai city; Yubari city; Iwamizawa city; Tomakomai city; Muroran city; Shibetsu city;
      * Nayoro city; Ashibetsu city; Akabira city; Mikasa city; Takikawa city; Sunagawa city; Ebetsu city; Chitose city;
@@ -1415,14 +2342,59 @@ class Compound extends CoordinateReferenceSystem
      * Monbetsu-gun of Abashiri-shicho; Kamikawa-shicho; Soya-shicho; Hidaka-shicho; Iburi-shicho (except Usu-gun and
      * Abuta-gun); Sorachi-shicho; Rumoi-shicho.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10173';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XII_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11330';
 
     /**
-     * JGD2011 / Japan Plane Rectangular CS XIII + JGD2011 (vertical) height
+     * JGD2024 / Japan Plane Rectangular CS XIII + JGD2011 (vertical) height
+     * Extent: Japan - onshore - Hokkaido east of approximately 143°E - Kitami city; Obihiro city; Kushiro city;
+     * Abashiri city; Nemuro city; Nemuro-shicho; Kushiro-shicho; Abashiri-shicho (except Monbetsu-gun); Tokachi-shicho
+     * On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from
+     * JGD2011... to JGD2024...; there is no change of definition or of coordinate values.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10174';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XIII + JGD2024 (vertical) height
      * Extent: Japan - onshore - Hokkaido east of approximately 143°E - Kitami city; Obihiro city; Kushiro city;
      * Abashiri city; Nemuro city; Nemuro-shicho; Kushiro-shicho; Abashiri-shicho (except Monbetsu-gun); Tokachi-shicho.
      */
-    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10174';
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11333';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XIV + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Tokyo-to south of 28°N and between 140°30'E and 143°E.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XIV_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11336';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XIX + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Tokyo-to south of 28°N and east of 143°E - Minamitori-shima (Marcus Island).
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XIX_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11445';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XV + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Okinawa-ken between 126°E and 130°E.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XV_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11434';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XVI + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Okinawa-ken west of 126°E.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XVI_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11442';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XVII + JGD2024 (vertical) height
+     * Extent: Japan - onshore Okinawa-ken east of 130°E.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XVII_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11443';
+
+    /**
+     * JGD2024 / Japan Plane Rectangular CS XVIII + JGD2024 (vertical) height
+     * Extent: Japan - onshore - Tokyo-to south of 28°N and west of 140°30'E.
+     */
+    public const EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XVIII_PLUS_JGD2024_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::11444';
 
     /**
      * KGD2002 + KVD1964 height
@@ -1444,26 +2416,32 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_KSA_GRF17_PLUS_KSA_VRF14_HEIGHT = 'urn:ogc:def:crs:EPSG::9520';
 
     /**
-     * LKS-2020 + Latvia 2000 height
-     * Extent: Latvia - onshore
-     * Replaces LKS-92 (CRS code 4949) from 2025-10-01.
-     */
-    public const EPSG_LKS_2020_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10839';
-
-    /**
-     * LKS-92 + Latvia 2000 height
-     * Extent: Latvia - onshore
-     * Replaced by LKS-2020 + Latvia 2000 height (CRS code 10839) from 2025-10-01.
-     */
-    public const EPSG_LKS_92_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10826';
-
-    /**
      * LUREF / Luxembourg TM + NG95 height
      * Extent: Luxembourg
      * For purposes with lower height accuracy requirements, may be approximated (to 5-15cm in height) by projected 3D
      * CRS code 9895.
      */
     public const EPSG_LUREF_LUXEMBOURG_TM_PLUS_NG95_HEIGHT = 'urn:ogc:def:crs:EPSG::9897';
+
+    /**
+     * London Survey Grid 2025
+     * Extent: UK - Greater London and surrounding area
+     * Replaces the London Survey Grid (LSG), which was formerly also known as the LU Grid, the LUL Grid or the
+     * Crossrail Grid. The LSG2025 is a re-baselined definition of LSG which recognises the CORS network revision from
+     * OSNet v2001 to OSNet v2009 made in 2016 but maintains the original map projection and transformation parameter
+     * values. Due to the differences in coordinate values derived from the original Xrail84 control network, through
+     * OSNet v2001 or through OSNet v2009, horizontal positions of old data may differ from LSG2025 by up to 12mm in
+     * Eastings and 2mm in Northings. Vertically, LSG2025 maintains LSG heights (derived by applying the OSGM02 geoid
+     * model to OSNet v2001 ellipsoidal coordinates) through use of the LGGM2025 geoid model applied to ETRS89-GBR
+     * [OSNet v2009].
+     */
+    public const EPSG_LONDON_SURVEY_GRID_2025 = 'urn:ogc:def:crs:EPSG::11006';
+
+    /**
+     * MAGNA-SIRGAS 2018 + COLGVD2023 height
+     * Extent: Colombia - mainland onshore.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_PLUS_COLGVD2023_HEIGHT = 'urn:ogc:def:crs:EPSG::11895';
 
     /**
      * MALS09 Grid + ODN height
@@ -1504,12 +2482,14 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_MWC18_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::20003';
 
     /**
+     * Mexico ITRF2008 + NAVD88 height
+     * Extent: Mexico - onshore.
+     */
+    public const EPSG_MEXICO_ITRF2008_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::11385';
+
+    /**
      * NAD27 + NGVD29 height (ftUS)
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore.
      */
     public const EPSG_NAD27_PLUS_NGVD29_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::7406';
 
@@ -1523,12 +2503,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 + NAVD88 height
-     * Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado;
-     * Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine;
-     * Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire;
-     * New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode
-     * Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia;
-     * Wisconsin; Wyoming.
+     * Extent: USA - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore.
      */
     public const EPSG_NAD83_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5498';
 
@@ -1631,7 +2606,7 @@ class Compound extends CoordinateReferenceSystem
      * NAD83 / Arkansas North (ftUS) + NAVD88 height (ftUS)
      * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
      * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
-     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Randolph; Scott; Searcy;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
      * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell.
      */
     public const EPSG_NAD83_ARKANSAS_NORTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8712';
@@ -1640,8 +2615,8 @@ class Compound extends CoordinateReferenceSystem
      * NAD83 / Arkansas South (ftUS) + NAVD88 height (ftUS)
      * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
      * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
-     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Pulaski; Saline;
-     * Sevier; Union.
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union.
      */
     public const EPSG_NAD83_ARKANSAS_SOUTH_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8713';
 
@@ -1747,10 +2722,9 @@ class Compound extends CoordinateReferenceSystem
      * NAD83 / Georgia East (ftUS) + NAVD88 height (ftUS)
      * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
      * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
-     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Lanier; Laurens;
-     * Liberty; Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven;
-     * Stephens; Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes;
-     * Wilkinson.
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson.
      */
     public const EPSG_NAD83_GEORGIA_EAST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8728';
 
@@ -1760,11 +2734,11 @@ class Compound extends CoordinateReferenceSystem
      * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
      * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
      * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
-     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether; Miller;
-     * Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk; Pulaski;
-     * Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot; Taylor;
-     * Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White; Whitfield;
-     * Wilcox; Worth.
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth.
      */
     public const EPSG_NAD83_GEORGIA_WEST_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8729';
 
@@ -1923,7 +2897,7 @@ class Compound extends CoordinateReferenceSystem
      * NAD83 / Maryland (ftUS) + NAVD88 height (ftUS)
      * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
      * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
-     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester.
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC).
      */
     public const EPSG_NAD83_MARYLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8747';
 
@@ -2463,12 +3437,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(2011) + NAVD88 height
-     * Extent: USA - CONUS and Alaska - onshore - Alabama; Alaska mainland; Arizona; Arkansas; California; Colorado;
-     * Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine;
-     * Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire;
-     * New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode
-     * Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia;
-     * Wisconsin; Wyoming
+     * Extent: USA - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore
      * Replaces NAD83(NSRS2007) + NAVD88 height.
      */
     public const EPSG_NAD83_2011_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::6349';
@@ -2631,11 +3600,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(HARN) + NAVD88 height
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore.
      */
     public const EPSG_NAD83_HARN_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5499';
 
@@ -2647,17 +3612,13 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(MA11) + NMVD03 height
-     * Extent: Northern Mariana Islands - onshore.
+     * Extent: Northern Mariana Islands - onshore - Rota, Saipan and Tinian.
      */
     public const EPSG_NAD83_MA11_PLUS_NMVD03_HEIGHT = 'urn:ogc:def:crs:EPSG::9525';
 
     /**
      * NAD83(NSRS2007) + NAVD88 height
-     * Extent: USA - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida;
-     * Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan;
-     * Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York;
-     * North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota;
-     * Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore.
      */
     public const EPSG_NAD83_NSRS2007_PLUS_NAVD88_HEIGHT = 'urn:ogc:def:crs:EPSG::5500';
 
@@ -2718,6 +3679,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_NZGD2000_PLUS_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::9528';
 
     /**
+     * NZGD2000 / New Zealand Transverse Mercator 2000 + NZVD2016 height
+     * Extent: New Zealand - North Island, South Island, Stewart Island - onshore.
+     */
+    public const EPSG_NZGD2000_NEW_ZEALAND_TRANSVERSE_MERCATOR_2000_PLUS_NZVD2016_HEIGHT = 'urn:ogc:def:crs:EPSG::11460';
+
+    /**
      * OSGB36 / British National Grid + BI height
      * Extent: UK - offshore to boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E; onshore Great Britain
      * (England, Wales and Scotland). Isle of Man onshore
@@ -2754,6 +3721,14 @@ class Compound extends CoordinateReferenceSystem
      * Extent: UK - on or related to the rail route from Reading via Newbury to Penzance.
      */
     public const EPSG_RBEPP12_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10281';
+
+    /**
+     * RD + NAP height
+     * Extent: Netherlands
+     * From 2008, use of RD extended offshore. From 2018, use of NAP extended offshore through application of the
+     * official transformation RDNAPTRANS(TM).
+     */
+    public const EPSG_RD_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::7415';
 
     /**
      * REGCAN95 + El Hierro height
@@ -2846,78 +3821,22 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RGAF09_UTM_ZONE_20N_PLUS_MARTINIQUE_1987_HEIGHT = 'urn:ogc:def:crs:EPSG::10633';
 
     /**
-     * RGF93 v1 / Lambert-93 + NGF-IGN69 height
-     * Extent: France - mainland onshore
-     * Replaced by RGF93 v2 / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2010-06-18.
-     */
-    public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
-
-    /**
-     * RGF93 v1 / Lambert-93 + NGF-IGN78 height
-     * Extent: France - Corsica onshore
-     * Replaced by RGF93 v2 / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2010-06-18.
-     */
-    public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
-
-    /**
-     * RGF93 v2 + NGF-IGN69 height
-     * Extent: France - mainland onshore.
-     */
-    public const EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
-
-    /**
-     * RGF93 v2 + NGF-IGN78 height
-     * Extent: France - Corsica onshore.
-     */
-    public const EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
-
-    /**
-     * RGF93 v2 / Lambert-93 + NGF-IGN69 height
-     * Extent: France - mainland onshore
-     * Replaces RGF93 v1 / Lambert-93 + NGF-IGN69 height (CRS code 5698) from 2010-06-18. Replaced by RGF93 v2b /
-     * Lambert-93 + NGF-IGN69 height (CRS code 10499) from 2021-01-05.
-     */
-    public const EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10497';
-
-    /**
-     * RGF93 v2 / Lambert-93 + NGF-IGN78 height
-     * Extent: France - Corsica onshore
-     * Replaces RGF93 v1 / Lambert-93 + NGF-IGN78 height (CRS code 5699) from 2010-06-18. Replaced by RGF93 v2b /
-     * Lambert-93 + NGF-IGN78 height (CRS code 10500) from 2021-01-05.
-     */
-    public const EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10498';
-
-    /**
-     * RGF93 v2b + NGF-IGN69 height
-     * Extent: France - mainland onshore.
-     */
-    public const EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9785';
-
-    /**
-     * RGF93 v2b + NGF-IGN78 height
-     * Extent: France - Corsica onshore.
-     */
-    public const EPSG_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10507';
-
-    /**
-     * RGF93 v2b / Lambert-93 + NGF-IGN69 height
-     * Extent: France - mainland onshore
-     * Replaces RGF93 v2 / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2021-01-05.
-     */
-    public const EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10499';
-
-    /**
-     * RGF93 v2b / Lambert-93 + NGF-IGN78 height
-     * Extent: France - Corsica onshore
-     * Replaces RGF93 v2 / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2021-01-05.
-     */
-    public const EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10500';
-
-    /**
      * RGFG95 + NGG1977 height
      * Extent: French Guiana - onshore.
      */
     public const EPSG_RGFG95_PLUS_NGG1977_HEIGHT = 'urn:ogc:def:crs:EPSG::9530';
+
+    /**
+     * RGM23 + IGN 2023 Mayotte height
+     * Extent: Mayotte - onshore.
+     */
+    public const EPSG_RGM23_PLUS_IGN_2023_MAYOTTE_HEIGHT = 'urn:ogc:def:crs:EPSG::11158';
+
+    /**
+     * RGM23 / UTM zone 38S + IGN 2023 Mayotte height
+     * Extent: Mayotte - onshore.
+     */
+    public const EPSG_RGM23_UTM_ZONE_38S_PLUS_IGN_2023_MAYOTTE_HEIGHT = 'urn:ogc:def:crs:EPSG::12209';
 
     /**
      * RGNC15 (lon-lat) + NGNC08 height
@@ -2936,6 +3855,12 @@ class Compound extends CoordinateReferenceSystem
      * Extent: St Pierre and Miquelon - onshore.
      */
     public const EPSG_RGSPM06_PLUS_DANGER_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::9541';
+
+    /**
+     * RGWF96 + NGFA 2022 height
+     * Extent: Wallis and Futuna - Futuna and Alofi - onshore.
+     */
+    public const EPSG_RGWF96_PLUS_NGFA_2022_HEIGHT = 'urn:ogc:def:crs:EPSG::11447';
 
     /**
      * RRAF 1991 + IGN 2008 LD height
@@ -2988,6 +3913,12 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_SRGI2013_PLUS_INAGEOID2020_V2_HEIGHT = 'urn:ogc:def:crs:EPSG::20043';
 
     /**
+     * SRGI2013 epoch 2021.0 + INAGeoid2020 v2 height
+     * Extent: Indonesia.
+     */
+    public const EPSG_SRGI2013_EPOCH_2021_0_PLUS_INAGEOID2020_V2_HEIGHT = 'urn:ogc:def:crs:EPSG::11274';
+
+    /**
      * SVY21 + SHD height
      * Extent: Singapore.
      */
@@ -3000,105 +3931,16 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_SVY21_SINGAPORE_TM_PLUS_SHD_HEIGHT = 'urn:ogc:def:crs:EPSG::6927';
 
     /**
-     * SWEREF99 + RH2000 height
-     * Extent: Sweden - onshore.
-     */
-    public const EPSG_SWEREF99_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5628';
-
-    /**
-     * SWEREF99 12 00 + RH2000 height
-     * Extent: Sweden - communes west of approximately 12°45'E and south of approximately 60°N. See information
-     * source for map.
-     */
-    public const EPSG_SWEREF99_12_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5846';
-
-    /**
-     * SWEREF99 13 30 + RH2000 height
-     * Extent: Sweden - communes between approximately 12°45'E and 14°15'E and south of approximately 62°10'N. See
-     * information source for map.
-     */
-    public const EPSG_SWEREF99_13_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5847';
-
-    /**
-     * SWEREF99 14 15 + RH2000 height
-     * Extent: Sweden - communes west of approximately 15°E and between approximately 61°35'N and 64°25'N. See
-     * information source for map.
-     */
-    public const EPSG_SWEREF99_14_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5851';
-
-    /**
-     * SWEREF99 15 00 + RH2000 height
-     * Extent: Sweden - communes between approximately 14°15'E and 15°45'E and south of approximately 61°30'N. See
-     * information source for map.
-     */
-    public const EPSG_SWEREF99_15_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5848';
-
-    /**
-     * SWEREF99 15 45 + RH2000 height
-     * Extent: Sweden - communes between approximately 15°E and 16°30'E and between approximately 60°30'N and 65°N.
-     * See information source for map.
-     */
-    public const EPSG_SWEREF99_15_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5852';
-
-    /**
-     * SWEREF99 16 30 + RH2000 height
-     * Extent: Sweden - communes between approximately 15°45'E and 17°15'E and south of approximately 62°20'N. See
-     * information source for map.
-     */
-    public const EPSG_SWEREF99_16_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5849';
-
-    /**
-     * SWEREF99 17 15 + RH2000 height
-     * Extent: Sweden - communes between approximately 14°20'E and 18°50'E and between approximately 67°10'N and
-     * 62°05'N. See information source for map.
-     */
-    public const EPSG_SWEREF99_17_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5853';
-
-    /**
-     * SWEREF99 18 00 + RH2000 height
-     * Extent: Sweden - communes east of approximately 17°15'E between approximately 60°40'N and 58°50'N. See
-     * information source for map.
-     */
-    public const EPSG_SWEREF99_18_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5850';
-
-    /**
-     * SWEREF99 18 45 + RH2000 height
-     * Extent: Sweden - mainland communes between approximately 18°E and 19°30'E and between approximately 62°50'N
-     * and 66°N. Also Gotland. See information source for map.
-     */
-    public const EPSG_SWEREF99_18_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5854';
-
-    /**
-     * SWEREF99 20 15 + RH2000 height
-     * Extent: Sweden - communes in Vaasterbotten east of approximately 19°30'E and (i) north of 63°30'N and (ii)
-     * south of approximately 65°05'N. Also Norbotten west of approximately 23°20'E. See information source for map.
-     */
-    public const EPSG_SWEREF99_20_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5855';
-
-    /**
-     * SWEREF99 21 45 + RH2000 height
-     * Extent: Sweden - communes in Norbotten east of approximately 19°30'E and south of approximately 65°50'N. See
-     * information source for map.
-     */
-    public const EPSG_SWEREF99_21_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5856';
-
-    /**
-     * SWEREF99 23 15 + RH2000 height
-     * Extent: Sweden - communes east of approximately 21°50'E. See information source for map.
-     */
-    public const EPSG_SWEREF99_23_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5857';
-
-    /**
-     * SWEREF99 TM + RH2000 height
-     * Extent: Sweden - onshore.
-     */
-    public const EPSG_SWEREF99_TM_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5845';
-
-    /**
      * SYC20 Grid + ODN height
      * Extent: UK - on or related to the rail route from Shrewsbury to Crewe.
      */
     public const EPSG_SYC20_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10241';
+
+    /**
+     * SZCTW Grid + ODN height
+     * Extent: UK - Sizewell power station site and  rail and road routes related to the site.
+     */
+    public const EPSG_SZCTW_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::11470';
 
     /**
      * Saba + Saba height
@@ -3135,30 +3977,6 @@ class Compound extends CoordinateReferenceSystem
      * Extent: Bonaire, Sint Eustatius and Saba (BES Islands or Caribbean Netherlands) - Sint Eustatius - onshore.
      */
     public const EPSG_SINT_EUSTATIUS_DPNET_SHORT_PLUS_SINT_EUSTATIUS_HEIGHT = 'urn:ogc:def:crs:EPSG::10746';
-
-    /**
-     * Slovenia 1996 + SVS2000 height
-     * Extent: Slovenia - onshore.
-     */
-    public const EPSG_SLOVENIA_1996_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10686';
-
-    /**
-     * Slovenia 1996 + SVS2010 height
-     * Extent: Slovenia - onshore.
-     */
-    public const EPSG_SLOVENIA_1996_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10245';
-
-    /**
-     * Slovenia 1996 / Slovene National Grid + SVS2000 height
-     * Extent: Slovenia - onshore.
-     */
-    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10687';
-
-    /**
-     * Slovenia 1996 / Slovene National Grid + SVS2010 height
-     * Extent: Slovenia - onshore.
-     */
-    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10246';
 
     /**
      * St. Helena Tritan / UTM zone 30S + Tritan 2011 height
@@ -3207,7 +4025,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * WGS 84 / World Mercator + EGM2008 height
-     * Extent: World
+     * Extent: World between 80°S and 84°N
      * Note: for preliminary concept visualisation only. Detailed design will require use of appropriate low-distortion
      * local projected and vertical CRSs.
      */
@@ -3219,6 +4037,631 @@ class Compound extends CoordinateReferenceSystem
      * and Wilton works, Redcar.
      */
     public const EPSG_WSPG_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::10864';
+
+    /**
+     * @deprecated use EPSG_RD_PLUS_NAP_HEIGHT instead
+     */
+    public const EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT = 'urn:ogc:def:crs:EPSG::7415';
+
+    /**
+     * @deprecated use EPSG_CR_SIRGAS_EPOCH_2014_59_CRTM05_PLUS_DACR52_HEIGHT instead
+     */
+    public const EPSG_CR_SIRGAS_CRTM05_PLUS_DACR52_HEIGHT = 'urn:ogc:def:crs:EPSG::8912';
+
+    /**
+     * @deprecated use EPSG_ETRS89_POL_PL_ETRF2000_PLUS_BALTIC_1986_HEIGHT instead
+     */
+    public const EPSG_ETRF2000_PL_PLUS_BALTIC_1986_HEIGHT = 'urn:ogc:def:crs:EPSG::9656';
+
+    /**
+     * @deprecated use EPSG_ETRS89_POL_PL_ETRF2000_PLUS_PL_EVRF2007_HEIGHT instead
+     */
+    public const EPSG_ETRF2000_PL_PLUS_EVRF2007_PL_HEIGHT = 'urn:ogc:def:crs:EPSG::9657';
+
+    /**
+     * @deprecated use EPSG_ETRS89_PLUS_LAT_NLD_DEPTH instead
+     */
+    public const EPSG_ETRS89_PLUS_LAT_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9289';
+
+    /**
+     * @deprecated use EPSG_ETRS89_PLUS_MSL_NLD_DEPTH instead
+     */
+    public const EPSG_ETRS89_PLUS_MSL_NL_DEPTH = 'urn:ogc:def:crs:EPSG::9290';
+
+    /**
+     * @deprecated use EPSG_ETRS89_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5942';
+
+    /**
+     * @deprecated use EPSG_ETRS89_BEL_BEREF2002_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT instead
+     */
+    public const EPSG_ETRS89_BELGIAN_LAMBERT_2008_PLUS_OSTEND_HEIGHT = 'urn:ogc:def:crs:EPSG::8370';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRO_2008_FAROE_TM_PLUS_FVR09_HEIGHT instead
+     */
+    public const EPSG_ETRS89_FAROE_TM_PLUS_FVR09_HEIGHT = 'urn:ogc:def:crs:EPSG::5318';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_10_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5950';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_10_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_10_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6150';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_11_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5951';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_11_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_11_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6151';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_12_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5952';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_12_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_12_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6152';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_13_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5953';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_13_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_13_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6153';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_14_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5954';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_14_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_14_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6154';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_15_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5955';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_15_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_15_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6155';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_16_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5956';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_16_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_16_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6156';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_17_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5957';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_17_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_17_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6157';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_18_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5958';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_18_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_18_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6158';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_19_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5959';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_19_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_19_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6159';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_20_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5960';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_20_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_20_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6160';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_21_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5961';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_21_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_21_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6161';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_22_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5962';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_22_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_22_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6162';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_23_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5963';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_23_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_23_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6163';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_24_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5964';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_24_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_24_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6164';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_25_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5965';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_25_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_25_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6165';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_26_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5966';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_26_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_26_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6166';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_27_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5967';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_27_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_27_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6167';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_28_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5968';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_28_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_28_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6168';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_29_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5969';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_29_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_29_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6169';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_30_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5970';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_30_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_30_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6170';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_5_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5945';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_5_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_5_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6145';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_6_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5946';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_6_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_6_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6146';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_7_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5947';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_7_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_7_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6147';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_8_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5948';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_8_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_8_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6148';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_9_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5949';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_NTM_ZONE_9_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_NTM_ZONE_9_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6149';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_31N_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5971';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_31N_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_31N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6171';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5972';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_32N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6172';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_33N_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5973';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_33N_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_33N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6173';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_34N_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5974';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_34N_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_34N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6174';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_35N_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5975';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_35N_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_35N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6175';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_36N_PLUS_NN2000_2018_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5976';
+
+    /**
+     * @deprecated use EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_36N_PLUS_NN54_HEIGHT instead
+     */
+    public const EPSG_ETRS89_UTM_ZONE_36N_PLUS_NN54_HEIGHT = 'urn:ogc:def:crs:EPSG::6176';
+
+    /**
+     * @deprecated use EPSG_ETRS89_DEU_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT instead
+     */
+    public const EPSG_ETRS89_DREF91_2016_PLUS_DHHN2016_HEIGHT = 'urn:ogc:def:crs:EPSG::10293';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_PLUS_N2000_HEIGHT instead
+     */
+    public const EPSG_EUREF_FIN_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10692';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_PLUS_N60_HEIGHT instead
+     */
+    public const EPSG_EUREF_FIN_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::10691';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_E_N_PLUS_N2000_HEIGHT instead
+     */
+    public const EPSG_EUREF_FIN_TM35FIN_E_N_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10774';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT instead
+     */
+    public const EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT instead
+     */
+    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT instead
+     */
+    public const EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FIN_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT instead
+     */
+    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
+
+    /**
+     * @deprecated use EPSG_JGD2024_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::6697';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_I_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_I_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10162';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_II_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_II_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10163';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_III_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_III_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10164';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_IV_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_IV_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10165';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_IX_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_IX_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10170';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_V_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_V_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10166';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VI_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10167';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VII_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10168';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_VIII_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_VIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10169';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_X_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_X_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10171';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XI_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XI_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10172';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XII_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10173';
+
+    /**
+     * @deprecated use EPSG_JGD2024_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT instead
+     */
+    public const EPSG_JGD2011_JAPAN_PLANE_RECTANGULAR_CS_XIII_PLUS_JGD2011_VERTICAL_HEIGHT = 'urn:ogc:def:crs:EPSG::10174';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_2020_PLUS_LATVIA_2000_HEIGHT instead
+     */
+    public const EPSG_LKS_2020_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10839';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92_PLUS_LATVIA_2000_HEIGHT instead
+     */
+    public const EPSG_LKS_92_PLUS_LATVIA_2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10826';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::5698';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_V1_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::5699';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9538';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::9539';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10497';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10498';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2B_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::9785';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2B_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10507';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN69_HEIGHT = 'urn:ogc:def:crs:EPSG::10499';
+
+    /**
+     * @deprecated use EPSG_ETRS89_FRA_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT instead
+     */
+    public const EPSG_RGF93_V2B_LAMBERT_93_PLUS_NGF_IGN78_HEIGHT = 'urn:ogc:def:crs:EPSG::10500';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5628';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_12_00_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_12_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5846';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_13_30_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_13_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5847';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_14_15_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_14_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5851';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_15_00_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_15_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5848';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_15_45_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_15_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5852';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_16_30_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_16_30_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5849';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_17_15_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_17_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5853';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_18_00_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_18_00_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5850';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_18_45_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_18_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5854';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_20_15_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_20_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5855';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_21_45_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_21_45_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5856';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_23_15_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_23_15_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5857';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SWE_SWEREF_99_TM_PLUS_RH2000_HEIGHT instead
+     */
+    public const EPSG_SWEREF99_TM_PLUS_RH2000_HEIGHT = 'urn:ogc:def:crs:EPSG::5845';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96_PLUS_SVS2000_HEIGHT instead
+     */
+    public const EPSG_SLOVENIA_1996_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10686';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96_PLUS_SVS2010_HEIGHT instead
+     */
+    public const EPSG_SLOVENIA_1996_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10245';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96_SLOVENE_NATIONAL_GRID_PLUS_SVS2000_HEIGHT instead
+     */
+    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID_PLUS_SVS2000_HEIGHT = 'urn:ogc:def:crs:EPSG::10687';
+
+    /**
+     * @deprecated use EPSG_ETRS89_SVN_D96_SLOVENE_NATIONAL_GRID_PLUS_SVS2010_HEIGHT instead
+     */
+    public const EPSG_SLOVENIA_1996_SLOVENE_NATIONAL_GRID_PLUS_SVS2010_HEIGHT = 'urn:ogc:def:crs:EPSG::10246';
 
     /**
      * @deprecated use EPSG_NAD83_CSRS_PLUS_CGVD2013_CGG2013_HEIGHT instead
@@ -3239,16 +4682,6 @@ class Compound extends CoordinateReferenceSystem
      * @deprecated use EPSG_SRGI2013_PLUS_INAGEOID2020_V1_HEIGHT instead
      */
     public const EPSG_SRGI2013_PLUS_INAGEOID2020_HEIGHT = 'urn:ogc:def:crs:EPSG::9529';
-
-    /**
-     * @deprecated use EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N60_HEIGHT instead
-     */
-    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N60_HEIGHT = 'urn:ogc:def:crs:EPSG::3902';
-
-    /**
-     * @deprecated use EPSG_EUREF_FIN_TM35FIN_N_E_PLUS_N2000_HEIGHT instead
-     */
-    public const EPSG_ETRS89_TM35FIN_N_E_PLUS_N2000_HEIGHT = 'urn:ogc:def:crs:EPSG::3903';
     /**
      * @var array<string, self>
      */
@@ -3311,6 +4744,34 @@ class Compound extends CoordinateReferenceSystem
             'extent_description' => $data['name'],
             'help' => $data['help'],
         ], static::$sridData);
+    }
+
+    /**
+     * @internal CRS table row without constructing the object (avoids loading bounding polygons)
+     * @return array<string, mixed>|null
+     */
+    public static function getSRIDData(string $srid): ?array
+    {
+        return static::$sridData[$srid] ?? null;
+    }
+
+    /**
+     * Compound CRS with this horizontal + vertical pair (e.g. ETRS89 + NAP after rewriting NLD+NAP).
+     *
+     * @internal
+     */
+    public static function findSRIDByHorizontalAndVertical(string $horizontalSrid, string $verticalSrid): ?string
+    {
+        static $index = null;
+        if ($index === null) {
+            $index = [
+            ];
+            foreach (static::$sridData as $srid => $data) {
+                $index[$data['horizontal_crs'] . '|' . $data['vertical_crs']] ??= $srid;
+            }
+        }
+
+        return $index[$horizontalSrid . '|' . $verticalSrid] ?? null;
     }
 
     /**

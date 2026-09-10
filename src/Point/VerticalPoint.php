@@ -13,7 +13,10 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use PHPCoord\CoordinateOperation\GeographicGeoidHeightGrid;
+use PHPCoord\CoordinateOperation\GeoTiffGrid;
+use PHPCoord\CoordinateOperation\NTv2VelGrid;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -198,7 +201,7 @@ class VerticalPoint extends Point
      */
     public function offsetFromGrid(
         Vertical $to,
-        GeographicGeoidHeightGrid $offsetsFile,
+        GeographicGeoidHeightGrid|GeoTiffGrid $offsetsFile,
         bool $inReverse,
         GeographicPoint $horizontalPoint
     ): self {
@@ -209,5 +212,34 @@ class VerticalPoint extends Point
         }
 
         return static::create($to, $this->height->add($offset));
+    }
+
+    /**
+     * Vertical offset by an NEU velocity grid.
+     * The interval is the two datums' anchor epochs. Only the up velocity is applied.
+     */
+    public function verticalOffsetUsingNeuVelocityGrid(
+        Vertical $to,
+        NTv2VelGrid $pointMotionVelocityGridFile,
+        GeographicPoint $horizontalPoint
+    ): self {
+        $sourceAnchor = $this->crs->getDatum()->getAnchorEpoch();
+        $targetAnchor = $to->getDatum()->getAnchorEpoch();
+        if (!$sourceAnchor || !$targetAnchor) {
+            throw new InvalidCoordinateException('This CRS has no anchor epoch');
+        }
+
+        /** @var array{0: Length, 1: Length, 2: Length} $velocities */
+        $velocities = $pointMotionVelocityGridFile->getValues(
+            $horizontalPoint->getLongitude()->asDegrees()->getValue(),
+            $horizontalPoint->getLatitude()->asDegrees()->getValue()
+        );
+        $dt = $targetAnchor->subtract($sourceAnchor)->getValue();
+
+        return static::create(
+            $to,
+            $this->height->add(new Metre($velocities[2]->asMetres()->getValue() * $dt)),
+            $targetAnchor->asDateTime()
+        );
     }
 }

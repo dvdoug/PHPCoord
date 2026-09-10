@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4843",
+    "title": "North America/USA - Montana - Flathead",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-115.39, 47.7], [-112.91, 47.7], [-112.91, 49.09], [-115.39, 49.09], [-115.39, 47.7]
+        ]
+    ]
+}

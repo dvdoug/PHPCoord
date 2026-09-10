@@ -22,17 +22,21 @@ use PHPCoord\CoordinateOperation\CRSTransformationsGlobal;
 use PHPCoord\CoordinateOperation\CRSTransformationsNorthAmerica;
 use PHPCoord\CoordinateOperation\CRSTransformationsOceania;
 use PHPCoord\CoordinateOperation\CRSTransformationsSouthAmerica;
+use PHPCoord\CoordinateOperation\GURSHeightSVS2000SVS2010SloveniaProvider;
+use PHPCoord\CoordinateOperation\PatchJGDHeightJGD2011JGD2024JapanProvider;
 use PHPCoord\CoordinateOperation\GTXDunedin1958NZVD2016Provider;
 use PHPCoord\CoordinateOperation\GTXNGVD29NAVD88CONUSCentralProvider;
+use PHPCoord\CoordinateOperation\NTv2VelNAD83CSRSv7CanadaProvider;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
 use PHPCoord\CoordinateReferenceSystem\VerticalSRIDData;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
-use PHPCoord\Geometry\BoundingArea;
+use PHPCoord\Geometry\ExtentInteriorPoints;
 use PHPCoord\UnitOfMeasure\Angle\Degree;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
+use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
@@ -190,6 +194,133 @@ class VerticalPointTest extends TestCase
         self::assertEqualsWithDelta(247.599, $to->getHeight()->getValue(), 0.001);
     }
 
+    public function testVerticalOffsetGURSForward(): void
+    {
+        if (!class_exists(GURSHeightSVS2000SVS2010SloveniaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        // Node at 13°E, 47°N stores -0.1285 m (SVS2010 - SVS2000).
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SVN_D96), new Degree(47.0), new Degree(13.0), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT), new Metre(100));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_SVS2010_HEIGHT);
+        $to = $from->offsetFromGrid($toCRS, (new GURSHeightSVS2000SVS2010SloveniaProvider())->provideGrid(), false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(99.8715, $to->getHeight()->getValue(), 0.0000001);
+    }
+
+    public function testVerticalOffsetGURSReverse(): void
+    {
+        if (!class_exists(GURSHeightSVS2000SVS2010SloveniaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SVN_D96), new Degree(47.0), new Degree(13.0), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_SVS2010_HEIGHT), new Metre(99.8715));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT);
+        $to = $from->offsetFromGrid($toCRS, (new GURSHeightSVS2000SVS2010SloveniaProvider())->provideGrid(), true, $horizontalPoint);
+
+        self::assertEqualsWithDelta(100.0, $to->getHeight()->getValue(), 0.0000001);
+    }
+
+    public function testVerticalOffsetGURSInterpolated(): void
+    {
+        if (!class_exists(GURSHeightSVS2000SVS2010SloveniaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+        // Interpolated at the centre of the cell whose nodes are -0.1347, -0.1329, -0.1337 and -0.1318 m.
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_SVN_D96), new Degree(46.05416666666667), new Degree(14.50625), null);
+        $grid = (new GURSHeightSVS2000SVS2010SloveniaProvider())->provideGrid();
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT), new Metre(50));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_SVS2010_HEIGHT);
+        $to = $from->offsetFromGrid($toCRS, $grid, false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(49.866725, $to->getHeight()->getValue(), 0.0000001);
+
+        $back = $to->offsetFromGrid(Vertical::fromSRID(Vertical::EPSG_SVS2000_HEIGHT), $grid, true, $horizontalPoint);
+        self::assertEqualsWithDelta(50.0, $back->getHeight()->getValue(), 0.0000001);
+    }
+
+    public function testVerticalOffsetPatchJGDForward(): void
+    {
+        if (!class_exists(PatchJGDHeightJGD2011JGD2024JapanProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-asia');
+        }
+        // Node 36224780 stores -0.00265 m at 24.4°N, 122.875°E.
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_JGD2024), new Degree(24.4), new Degree(122.875), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT), new Metre(100));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_JGD2024_VERTICAL_HEIGHT);
+        $to = $from->offsetFromGrid($toCRS, (new PatchJGDHeightJGD2011JGD2024JapanProvider())->provideGrid(), false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(99.99735, $to->getHeight()->getValue(), 0.0000001);
+    }
+
+    public function testVerticalOffsetPatchJGDReverse(): void
+    {
+        if (!class_exists(PatchJGDHeightJGD2011JGD2024JapanProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-asia');
+        }
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_JGD2024), new Degree(24.4), new Degree(122.875), null);
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_JGD2024_VERTICAL_HEIGHT), new Metre(99.99735));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT);
+        $to = $from->offsetFromGrid($toCRS, (new PatchJGDHeightJGD2011JGD2024JapanProvider())->provideGrid(), true, $horizontalPoint);
+
+        self::assertEqualsWithDelta(100.0, $to->getHeight()->getValue(), 0.0000001);
+    }
+
+    public function testVerticalOffsetPatchJGDInterpolated(): void
+    {
+        if (!class_exists(PatchJGDHeightJGD2011JGD2024JapanProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-asia');
+        }
+        // Centre of the cell whose nodes are -0.00265, -0.00194, -0.00336 and -0.00271 m.
+        $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_JGD2024), new Degree(24.4 + 15 / 3600), new Degree(122.875 + 22.5 / 3600), null);
+        $grid = (new PatchJGDHeightJGD2011JGD2024JapanProvider())->provideGrid();
+        $from = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT), new Metre(100));
+        $toCRS = Vertical::fromSRID(Vertical::EPSG_JGD2024_VERTICAL_HEIGHT);
+        $to = $from->offsetFromGrid($toCRS, $grid, false, $horizontalPoint);
+
+        self::assertEqualsWithDelta(99.997335, $to->getHeight()->getValue(), 0.0000001);
+
+        $back = $to->offsetFromGrid(Vertical::fromSRID(Vertical::EPSG_JGD2011_VERTICAL_HEIGHT), $grid, true, $horizontalPoint);
+        self::assertEqualsWithDelta(100.0, $back->getHeight()->getValue(), 0.0000001);
+    }
+
+    public function testVerticalOffsetUsingNeuVelocityGrid(): void
+    {
+        if (!class_exists(NTv2VelNAD83CSRSv7CanadaProvider::class)) {
+            self::markTestSkipped('North America datapack not installed');
+        }
+
+        // EPSG vertical offset by velocity grid: CGVD2013a(2010) 396.737 m to the 1997 snapshot.
+        $horizontal = GeographicPoint::create(
+            Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_CSRS_V6),
+            Degree::fromDegreeMinuteSecondHemisphere('49°53\'09.293"N'),
+            Degree::fromDegreeMinuteSecondHemisphere('99°54\'41.057"W'),
+            null
+        );
+        $grid = (new NTv2VelNAD83CSRSv7CanadaProvider())->provideGrid();
+        $from = VerticalPoint::create(
+            Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT),
+            new Metre(396.737),
+            (new Year(2010.0))->asDateTime()
+        );
+        $to = $from->verticalOffsetUsingNeuVelocityGrid(
+            Vertical::fromSRID(Vertical::EPSG_CGVD2013A_1997_HEIGHT),
+            $grid,
+            $horizontal
+        );
+
+        self::assertEqualsWithDelta(396.761, $to->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertEquals(1997.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
+
+        $back = $to->verticalOffsetUsingNeuVelocityGrid(
+            Vertical::fromSRID(Vertical::EPSG_CGVD2013A_2010_HEIGHT),
+            $grid,
+            $horizontal
+        );
+        self::assertEqualsWithDelta(396.737, $back->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertEquals(2010.0, Year::fromDateTime($back->getCoordinateEpoch())->getValue());
+    }
+
     #[DataProvider('supportedOperations')]
     #[Group('integration')]
     public function testOperations(string $sourceCrsSrid, string $targetCrsSrid, string $operationSrid): void
@@ -199,12 +330,11 @@ class VerticalPointTest extends TestCase
 
         $operation = CoordinateOperations::getOperationData($operationSrid);
         $method = CoordinateOperationMethods::getMethodData($operation['method']);
-        $operationExtent = BoundingArea::createFromExtentCodes(CoordinateOperations::getOperationData($operationSrid)['extent']);
 
         $epoch = new DateTime();
 
         $originalPoint = VerticalPoint::create($sourceCRS, new Metre(0), $epoch);
-        $horizontalCentre = $operationExtent->getPointInside();
+        $horizontalCentre = ExtentInteriorPoints::get($operation['extent']);
         $horizontalPoint = GeographicPoint::create(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84), $horizontalCentre[0], $horizontalCentre[1], null);
 
         $newPoint = $originalPoint->performOperation($operationSrid, $targetCRS, false, new Metre(0), ['horizontalPoint' => $horizontalPoint]);
@@ -228,7 +358,7 @@ class VerticalPointTest extends TestCase
             if (isset(static::$sridData[$transformation['source_crs']])) {
                 // filter out operations that require a grid file that we don't have
                 foreach (CoordinateOperations::getParamData($transformation['operation']) as $paramName => $paramValue) {
-                    if (str_ends_with($paramName, 'File') && $paramValue !== null && !class_exists($paramValue)) {
+                    if (str_ends_with($paramName, 'File') && $paramValue && !class_exists($paramValue)) {
                         $needsNonExistentFile = true;
                     }
                 }

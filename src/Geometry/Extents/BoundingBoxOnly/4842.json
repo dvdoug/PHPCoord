@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4842",
+    "title": "North America/USA - Montana - Canyon Ferry",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-112.67, 45.96], [-110.14, 45.96], [-110.14, 47.18], [-112.67, 47.18], [-112.67, 45.96]
+        ]
+    ]
+}
