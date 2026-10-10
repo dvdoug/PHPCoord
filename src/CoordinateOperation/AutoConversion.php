@@ -527,11 +527,9 @@ trait AutoConversion
 
         $iterations = 0;
         $previousSimplePaths = [[$sourceSRID]];
-        $paths = [];
-        while ($iterations <= $maxChainDepth) {
-            $completePaths = [];
+        $completePaths = [];
+        while ($iterations < $maxChainDepth) {
             $simplePaths = [];
-
             foreach ($previousSimplePaths as $simplePath) {
                 $current = $simplePath[$iterations];
                 if ($current === $targetSRID) {
@@ -545,20 +543,26 @@ trait AutoConversion
                 }
             }
 
-            // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
-            $fullPaths = $this->expandSimplePaths($transformationsByCRSPair, $completePaths, $sourceSRID, $targetSRID);
-            foreach ($fullPaths as $fullPath) {
-                $paths[] = [
-                    'path' => $fullPath,
-                    'accuracy' => sqrt(array_sum(array_map(
-                        static fn (float $accuracy): float => $accuracy ** 2,
-                        array_column($fullPath, 'accuracy'),
-                    ))),
-                ];
-            }
-
             $previousSimplePaths = $simplePaths;
             ++$iterations;
+        }
+        foreach ($previousSimplePaths as $simplePath) {
+            if ($simplePath[$iterations] === $targetSRID) {
+                $completePaths[] = $simplePath;
+            }
+        }
+
+        // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
+        $paths = [];
+        $fullPaths = $this->expandSimplePaths($transformationsByCRSPair, $completePaths, $sourceSRID, $targetSRID);
+        foreach ($fullPaths as $fullPath) {
+            $paths[] = [
+                'path' => $fullPath,
+                'accuracy' => sqrt(array_sum(array_map(
+                    static fn (float $accuracy): float => $accuracy ** 2,
+                    array_column($fullPath, 'accuracy'),
+                ))),
+            ];
         }
 
         AutoConversionCache::setCachedPaths($pathKey, $paths);
