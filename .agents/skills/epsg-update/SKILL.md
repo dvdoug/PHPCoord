@@ -23,10 +23,12 @@ EPSG SQL is imported with `src/EPSG/Import/importSQL.php`
 (`EPSGImporter::dataFromSQLFiles()`, then `dataFromGeoRepository()`).
 That step loads Spatialite (`mod_spatialite.so`). On Windows that import is run
 under WSL. It rebuilds `resources/epsg/epsg.sqlite`. `extents.sqlite` is updated
-in place: a polygon is downloaded again only when that extent’s `revision_date`
-has changed or `original` is empty, and buffer, bbox, and interior point are
-filled only where those columns are still null. Leave the file in place.
-Deleting it rebuilds every extent from the EPSG polygon service.
+in place. A polygon is downloaded again only when that extent’s `revision_date`
+has changed or `original` is empty. Buffer and interior point are filled only
+where those columns are still null. `bbox` is a GeoJSON rectangle rewritten from
+the four `epsg_extent` bounds on every import, including extents whose polygon
+was not downloaded again. Leave the file in place. Deleting it rebuilds every
+polygon from the EPSG polygon service.
 
 `generateDataCoordinateOperations()` does `require 'FilenameToProviderMap.php'`
 from the process working directory. Run codegen with the working directory set

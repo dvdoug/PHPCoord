@@ -17,7 +17,6 @@ use function file_put_contents;
 use function json_encode;
 use function ksort;
 use function sleep;
-use function str_contains;
 use function str_starts_with;
 use function substr;
 use function unlink;
@@ -240,7 +239,7 @@ class EPSGImporter
         );
         $dataDB->enableExceptions(true);
 
-        $extents = $dataDB->query('SELECT extent_code, extent_name, revision_date FROM epsg_extent e WHERE deprecated = 0');
+        $extents = $dataDB->query('SELECT extent_code, revision_date, bbox_south_bound_lat, bbox_west_bound_lon, bbox_north_bound_lat, bbox_east_bound_lon FROM epsg_extent e WHERE deprecated = 0');
 
         while ($extentMetaData = $extents->fetchArray(SQLITE3_ASSOC)) {
             $existingExtentSQL = "
@@ -265,14 +264,29 @@ class EPSGImporter
             }
             $extentDB->exec('UPDATE extent SET buffered = CASE WHEN ST_NPoints(GeomFromGeoJSON(original)) > ' . self::BUFFER_THRESHOLD . ' THEN AsGeoJSON(ST_Buffer(GeomFromGeoJSON(original), ' . self::BUFFER_SIZE . ')) ELSE original END WHERE buffered IS NULL AND extent_code=' . $extentMetaData['extent_code']);
 
-            // Bounding box calc + update have to be done in 2 parts as the SQL function is defined as aggregate and needs a GROUP BY even though just a single row
-            $bboxes = $extentDB->query("SELECT extent_code, AsGeoJSON(Extent(GeomFromGeoJSON(original))) AS original_bbox, AsGeoJSON(Extent(GeomFromGeoJSON(buffered))) AS buffered_bbox FROM extent WHERE bbox IS NULL AND extent_code = {$extentMetaData['extent_code']} GROUP BY extent_code");
-            while ($bbox = $bboxes->fetchArray(SQLITE3_ASSOC)) {
-                if (str_contains($extentMetaData['extent_name'], '°')) { // if defined degree extent in name, assume original is accurate at extremities
-                    $extentDB->exec("UPDATE extent SET bbox = '{$bbox['original_bbox']}' WHERE extent_code = {$bbox['extent_code']}");
-                } else {
-                    $extentDB->exec("UPDATE extent SET bbox = '{$bbox['buffered_bbox']}' WHERE extent_code = {$bbox['extent_code']}");
+            if ($extentMetaData['bbox_west_bound_lon'] !== null && $extentMetaData['bbox_east_bound_lon'] !== null && $extentMetaData['bbox_south_bound_lat'] !== null && $extentMetaData['bbox_north_bound_lat'] !== null) {
+                $west = $extentMetaData['bbox_west_bound_lon'];
+                $east = $extentMetaData['bbox_east_bound_lon'];
+                $south = $extentMetaData['bbox_south_bound_lat'];
+                $north = $extentMetaData['bbox_north_bound_lat'];
+                // EPSG records an antimeridian crossing as west > east. BoundingArea retries the point at longitude +/- 360 only when a vertex is outside +/-180.
+                if ($west > $east) {
+                    $east += 360;
                 }
+                $bbox = json_encode(
+                    [
+                        'type' => 'Polygon',
+                        'coordinates' => [[
+                            [$west, $south],
+                            [$east, $south],
+                            [$east, $north],
+                            [$west, $north],
+                            [$west, $south],
+                        ]],
+                    ],
+                    JSON_THROW_ON_ERROR
+                );
+                $extentDB->exec("UPDATE extent SET bbox = '{$bbox}' WHERE extent_code = {$extentMetaData['extent_code']}");
             }
 
             $extentDB->exec('UPDATE extent SET interior_lon = ST_X(ST_PointOnSurface(GeomFromGeoJSON(buffered))), interior_lat = ST_Y(ST_PointOnSurface(GeomFromGeoJSON(buffered))) WHERE interior_lat IS NULL AND extent_code=' . $extentMetaData['extent_code']);
