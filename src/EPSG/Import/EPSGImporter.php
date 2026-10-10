@@ -37,6 +37,7 @@ class EPSGImporter
 
     private const BUFFER_THRESHOLD = 150; // rough guess at where map maker got bored adding vertices for complex shapes
     private const BUFFER_SIZE = 0.1; // approx 10km
+    private const BBOX_MARGIN = 0.01; // degrees, so the fast-reject box is not tighter than the published bounds
 
     public function __construct()
     {
@@ -269,10 +270,14 @@ class EPSGImporter
                 $east = $extentMetaData['bbox_east_bound_lon'];
                 $south = $extentMetaData['bbox_south_bound_lat'];
                 $north = $extentMetaData['bbox_north_bound_lat'];
-                // EPSG records an antimeridian crossing as west > east. BoundingArea retries the point at longitude +/- 360 only when a vertex is outside +/-180.
+                // EPSG records an antimeridian crossing as west > east. Shift before the margin: expanding first can close the gap and hide the crossing. BoundingArea retries the point at longitude +/- 360 only when a vertex is outside +/-180.
                 if ($west > $east) {
                     $east += 360;
                 }
+                $west -= self::BBOX_MARGIN;
+                $east += self::BBOX_MARGIN;
+                $south -= self::BBOX_MARGIN;
+                $north += self::BBOX_MARGIN;
                 $bbox = json_encode(
                     [
                         'type' => 'Polygon',

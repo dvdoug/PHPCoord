@@ -26,8 +26,8 @@ under WSL. It rebuilds `resources/epsg/epsg.sqlite`. `extents.sqlite` is updated
 in place. A polygon is downloaded again only when that extent’s `revision_date`
 has changed or `original` is empty. Buffer and interior point are filled only
 where those columns are still null. `bbox` is a GeoJSON rectangle rewritten from
-the four `epsg_extent` bounds on every import, including extents whose polygon
-was not downloaded again. Leave the file in place. Deleting it rebuilds every
+the four `epsg_extent` bounds, expanded by 0.01° on each side, on every import,
+including extents whose polygon was not downloaded again. Leave the file in place. Deleting it rebuilds every
 polygon from the EPSG polygon service.
 
 `generateDataCoordinateOperations()` does `require 'FilenameToProviderMap.php'`
