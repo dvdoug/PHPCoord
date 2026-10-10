@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6403",
+    "title": "North America/USA - Ohio - Noble",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.8, 39.48], [-81.13000000000001, 39.48], [-81.13000000000001, 40.06], [-81.8, 40.06], [-81.8, 39.48]
+        ]
+    ]
+}

@@ -12,6 +12,1010 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk4
 {
     /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 27E
+     * Extent: Belarus, Estonia, Latvia, Lithuania, Moldova, Russia and Ukraine - onshore between 25°30'E and 28°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 9 (code 2525).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_27E = 'urn:ogc:def:crs:EPSG::2584';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 30E
+     * Extent: Belarus, Moldova, Russia and Ukraine - onshore between 28°30'E and 31°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 10 (code 2526).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_30E = 'urn:ogc:def:crs:EPSG::2585';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 33E
+     * Extent: Belarus, Russia and Ukraine - onshore between 31°30'E and 34°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 11 (code 2527).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_33E = 'urn:ogc:def:crs:EPSG::2586';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 36E
+     * Extent: Russia and Ukraine - onshore between 34°30'E and 37°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 12 (code 2528).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_36E = 'urn:ogc:def:crs:EPSG::2587';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 39E
+     * Extent: Georgia, Russia and Ukraine - onshore between 37°30'E and 40°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 13 (code 2529).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_39E = 'urn:ogc:def:crs:EPSG::2588';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 42E
+     * Extent: Georgia, Russia - onshore between 40°30'E and 43°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 14 (code 2530).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_42E = 'urn:ogc:def:crs:EPSG::2589';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 45E
+     * Extent: Armenia, Azerbaijan, Georgia and Russia onshore - between 43°30'E and 46°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 15 (code 2531).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_45E = 'urn:ogc:def:crs:EPSG::2590';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 48E
+     * Extent: Azerbaijan, Georgia, Kazakhstan and Russia onshore - between 46°30'E and 49°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 16 (code 2532).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_48E = 'urn:ogc:def:crs:EPSG::2591';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 51E
+     * Extent: Azerbaijan, Kazakhstan and Russia onshore - between 49°30'E and 52°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 17 (code 2533).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_51E = 'urn:ogc:def:crs:EPSG::2592';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 54E
+     * Extent: Kazakhstan, Russia onshore and Turkmenistan - between 52°30'E and 55°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 18 (code 2534).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_54E = 'urn:ogc:def:crs:EPSG::2593';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 57E
+     * Extent: Kazakhstan, Russia onshore, Turkmenistan and Uzbekistan - between 55°30'E and 58°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 19 (code 2535).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_57E = 'urn:ogc:def:crs:EPSG::2594';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 60E
+     * Extent: Kazakhstan, Russia onshore, Turkmenistan and Uzbekistan - between 58°30'E and 61°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 20 (code 2536).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_60E = 'urn:ogc:def:crs:EPSG::2595';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 63E
+     * Extent: Kazakhstan, Russia onshore, Turkmenistan and Uzbekistan - between 61°30'E and 64°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 21 (code 2537).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_63E = 'urn:ogc:def:crs:EPSG::2596';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 66E
+     * Extent: Kazakhstan, Russia onshore, Tajikistan, Turkmenistan and Uzbekistan - between 64°30'E and 67°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 22 (code 2538).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_66E = 'urn:ogc:def:crs:EPSG::2597';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 69E
+     * Extent: Kazakhstan, Kyrgyzstan, Russia onshore, Tajikistan and Uzbekistan - between 67°30'E and 70°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 23 (code 2539).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_69E = 'urn:ogc:def:crs:EPSG::2598';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 72E
+     * Extent: Kazakhstan, Kyrgyzstan, Russia onshore, Tajikistan and Uzbekistan - between 70°30'E and 73°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 24 (code 2540).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_72E = 'urn:ogc:def:crs:EPSG::2599';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 75E
+     * Extent: Kazakhstan, Kyrgyzstan, Russia onshore and Tajikistan - between 73°30'E and 76°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 25 (code 2541).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_75E = 'urn:ogc:def:crs:EPSG::2601';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 78E
+     * Extent: Kazakhstan, Kyrgyzstan and Russia onshore - between 76°30'E and 79°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 26 (code 2542).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_78E = 'urn:ogc:def:crs:EPSG::2602';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 81E
+     * Extent: Kazakhstan, Kyrgyzstan and Russia onshore - between 79°30'E and 82°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 27 (code 2543).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_81E = 'urn:ogc:def:crs:EPSG::2603';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 84E
+     * Extent: Kazakhstan and Russia onshore - between 82°30'E and 85°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 28 (code 2544).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_84E = 'urn:ogc:def:crs:EPSG::2604';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 87E
+     * Extent: Kazakhstan and Russia onshore - between 85°30'E and 88°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 29 (code 2545).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_87E = 'urn:ogc:def:crs:EPSG::2605';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 90E
+     * Extent: Russia - onshore between 88°30'E and 91°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 30 (code 2546).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_90E = 'urn:ogc:def:crs:EPSG::2606';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 93E
+     * Extent: Russia - onshore between 91°30'E and 94°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 31 (code 2547).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_93E = 'urn:ogc:def:crs:EPSG::2607';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 96E
+     * Extent: Russia - onshore between 94°30'E and 97°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 32 (code 2548).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_96E = 'urn:ogc:def:crs:EPSG::2608';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 99E
+     * Extent: Russia - onshore between 97°30'E and 100°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 33 (code 2549).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_99E = 'urn:ogc:def:crs:EPSG::2609';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 10
+     * Extent: Belarus, Moldova, Russia and Ukraine - onshore between 28°30'E and 31°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 30E (code 2585).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::2526';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 11
+     * Extent: Belarus, Russia and Ukraine - onshore between 31°30'E and 34°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 33E (code 2586).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_11 = 'urn:ogc:def:crs:EPSG::2527';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 12
+     * Extent: Russia and Ukraine - onshore between 34°30'E and 37°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 36E (code 2587).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_12 = 'urn:ogc:def:crs:EPSG::2528';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 13
+     * Extent: Georgia, Russia and Ukraine - onshore between 37°30'E and 40°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 39E (code 2588).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_13 = 'urn:ogc:def:crs:EPSG::2529';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 14
+     * Extent: Georgia, Russia - onshore between 40°30'E and 43°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 42E (code 2589).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_14 = 'urn:ogc:def:crs:EPSG::2530';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 15
+     * Extent: Armenia, Azerbaijan, Georgia and Russia onshore - between 43°30'E and 46°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 45E (code 2590).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_15 = 'urn:ogc:def:crs:EPSG::2531';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 16
+     * Extent: Azerbaijan, Georgia, Kazakhstan and Russia onshore - between 46°30'E and 49°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 48E (code 2591).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_16 = 'urn:ogc:def:crs:EPSG::2532';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 17
+     * Extent: Azerbaijan, Kazakhstan and Russia onshore - between 49°30'E and 52°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 51E (code 2592).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_17 = 'urn:ogc:def:crs:EPSG::2533';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 18
+     * Extent: Kazakhstan, Russia onshore and Turkmenistan - between 52°30'E and 55°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 54E (code 2593).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_18 = 'urn:ogc:def:crs:EPSG::2534';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 19
+     * Extent: Kazakhstan, Russia onshore, Turkmenistan and Uzbekistan - between 55°30'E and 58°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 57E (code 2594).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_19 = 'urn:ogc:def:crs:EPSG::2535';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 20
+     * Extent: Kazakhstan, Russia onshore, Turkmenistan and Uzbekistan - between 58°30'E and 61°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 60E (code 2595).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_20 = 'urn:ogc:def:crs:EPSG::2536';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 21
+     * Extent: Kazakhstan, Russia onshore, Turkmenistan and Uzbekistan - between 61°30'E and 64°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 63E (code 2596).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_21 = 'urn:ogc:def:crs:EPSG::2537';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 22
+     * Extent: Kazakhstan, Russia onshore, Tajikistan, Turkmenistan and Uzbekistan - between 64°30'E and 67°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 66E (code 2597).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_22 = 'urn:ogc:def:crs:EPSG::2538';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 23
+     * Extent: Kazakhstan, Kyrgyzstan, Russia onshore, Tajikistan and Uzbekistan - between 67°30'E and 70°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 69E (code 2598).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_23 = 'urn:ogc:def:crs:EPSG::2539';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 24
+     * Extent: Kazakhstan, Kyrgyzstan, Russia onshore, Tajikistan and Uzbekistan - between 70°30'E and 73°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 72E (code 2599).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_24 = 'urn:ogc:def:crs:EPSG::2540';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 25
+     * Extent: Kazakhstan, Kyrgyzstan, Russia onshore and Tajikistan - between 73°30'E and 76°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 75E (code 2601).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_25 = 'urn:ogc:def:crs:EPSG::2541';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 26
+     * Extent: Kazakhstan, Kyrgyzstan and Russia onshore - between 76°30'E and 79°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 78E (code 2602).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_26 = 'urn:ogc:def:crs:EPSG::2542';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 27
+     * Extent: Kazakhstan, Kyrgyzstan and Russia onshore - between 79°30'E and 82°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 81E (code 2603).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_27 = 'urn:ogc:def:crs:EPSG::2543';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 28
+     * Extent: Kazakhstan and Russia onshore - between 82°30'E and 85°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 84E (code 2604).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_28 = 'urn:ogc:def:crs:EPSG::2544';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 29
+     * Extent: Kazakhstan and Russia onshore - between 85°30'E and 88°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 87E (code 2605).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_29 = 'urn:ogc:def:crs:EPSG::2545';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 30
+     * Extent: Russia - onshore between 88°30'E and 91°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 90E (code 2606).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_30 = 'urn:ogc:def:crs:EPSG::2546';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 31
+     * Extent: Russia - onshore between 91°30'E and 94°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 93E (code 2607).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_31 = 'urn:ogc:def:crs:EPSG::2547';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 32
+     * Extent: Russia - onshore between 94°30'E and 97°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 96E (code 2608).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_32 = 'urn:ogc:def:crs:EPSG::2548';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 33
+     * Extent: Russia - onshore between 97°30'E and 100°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 99E (code 2609).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_33 = 'urn:ogc:def:crs:EPSG::2549';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 34
+     * Extent: Russia - onshore between 100°30'E and 103°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 102E (code 2610).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_34 = 'urn:ogc:def:crs:EPSG::2551';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 35
+     * Extent: Russia - onshore between 103°30'E and 106°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 105E (code 2611).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_35 = 'urn:ogc:def:crs:EPSG::2552';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 36
+     * Extent: Russia - onshore between 106°30'E and 109°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 108E (code 2612).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_36 = 'urn:ogc:def:crs:EPSG::2553';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 37
+     * Extent: Russia - onshore between 109°30'E and 112°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 111E (code 2613).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_37 = 'urn:ogc:def:crs:EPSG::2554';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 38
+     * Extent: Russia - onshore between 112°30'E and 115°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 114E (code 2614).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_38 = 'urn:ogc:def:crs:EPSG::2555';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 39
+     * Extent: Russia - onshore between 115°30'E and 118°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 117E (code 2615).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_39 = 'urn:ogc:def:crs:EPSG::2556';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 40
+     * Extent: Russia - onshore between 118°30'E and 121°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 120E (code 2616).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_40 = 'urn:ogc:def:crs:EPSG::2557';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 41
+     * Extent: Russia - onshore between 121°30'E and 124°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 123E (code 2617).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_41 = 'urn:ogc:def:crs:EPSG::2558';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 42
+     * Extent: Russia - onshore between 124°30'E and 127°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 126E (code 2618).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_42 = 'urn:ogc:def:crs:EPSG::2559';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 43
+     * Extent: Russia - onshore between 127°30'E and 130°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 129E (code 2619).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_43 = 'urn:ogc:def:crs:EPSG::2560';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 44
+     * Extent: Russia - onshore between 130°30'E and 133°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 132E (code 2620).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_44 = 'urn:ogc:def:crs:EPSG::2561';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 45
+     * Extent: Russia - onshore between 133°30'E and 136°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 135E (code 2621).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_45 = 'urn:ogc:def:crs:EPSG::2562';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 46
+     * Extent: Russia - onshore between 136°30'E and 139°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 138E (code 2622).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_46 = 'urn:ogc:def:crs:EPSG::2563';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 47
+     * Extent: Russia - onshore between 139°30'E and 142°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 141E (code 2623).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_47 = 'urn:ogc:def:crs:EPSG::2564';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 48
+     * Extent: Russia - onshore between 142°30'E and 145°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 144E (code 2624).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_48 = 'urn:ogc:def:crs:EPSG::2565';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 49
+     * Extent: Russia - onshore between 145°30'E and 148°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 147E (code 2625).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_49 = 'urn:ogc:def:crs:EPSG::2566';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 50
+     * Extent: Russia - onshore between 148°30'E and 151°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 150E (code 2626).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_50 = 'urn:ogc:def:crs:EPSG::2567';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 51
+     * Extent: Russia - onshore between 151°30'E and 154°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 153E (code 2627).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_51 = 'urn:ogc:def:crs:EPSG::2568';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 52
+     * Extent: Russia - onshore between 154°30'E and 157°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 156E (code 2628).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_52 = 'urn:ogc:def:crs:EPSG::2569';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 53
+     * Extent: Russia - onshore between 157°30'E and 160°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 159E (code 2629).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_53 = 'urn:ogc:def:crs:EPSG::2570';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 54
+     * Extent: Russia - onshore between 160°30'E and 163°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 162E (code 2630).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_54 = 'urn:ogc:def:crs:EPSG::2571';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 55
+     * Extent: Russia - onshore between 163°30'E and 166°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 165E (code 2631).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_55 = 'urn:ogc:def:crs:EPSG::2572';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 56
+     * Extent: Russia - onshore between 166°30'E and 169°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 168E (code 2632).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_56 = 'urn:ogc:def:crs:EPSG::2573';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 57
+     * Extent: Russia - onshore between 169°30'E and 172°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 171E (code 2633).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_57 = 'urn:ogc:def:crs:EPSG::2574';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 58
+     * Extent: Russia - onshore between 172°30'E and 175°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 174E (code 2634).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_58 = 'urn:ogc:def:crs:EPSG::2575';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 59
+     * Extent: Russia - onshore between 175°30'E and 178°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 177E (code 2635).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_59 = 'urn:ogc:def:crs:EPSG::2576';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 60
+     * Extent: Russia - onshore between 178°30'E and 178°30'W
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 180E (code 2636).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_60 = 'urn:ogc:def:crs:EPSG::3389';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 61
+     * Extent: Russia - onshore between 178°30'W and 175°30'W
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 177W (code 2637).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_61 = 'urn:ogc:def:crs:EPSG::2578';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 62
+     * Extent: Russia - onshore between 175°30'W and 172°30'W
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 174W (code 2638).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_62 = 'urn:ogc:def:crs:EPSG::2579';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 63
+     * Extent: Russia - onshore between 172°30'W and 169°30'W
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 171W (code 2639).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_63 = 'urn:ogc:def:crs:EPSG::2580';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 64
+     * Extent: Russia - onshore between 169°30'W and 166°30'W
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 168W (code 2640).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_64 = 'urn:ogc:def:crs:EPSG::2581';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 7
+     * Extent: Estonia, Latvia, Lithuania, Russia (Kaliningrad) and Ukraine - onshore between 19°30'E and 22°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 21E (code 2582).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::2523';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 8
+     * Extent: Belarus, Estonia, Latvia, Lithuania, Russia (Kaliningrad) and Ukraine - onshore between 22°30'E and
+     * 25°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 24E (code 2583).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::2524';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger zone 9
+     * Extent: Belarus, Estonia, Latvia, Lithuania, Moldova, Russia and Ukraine - onshore between 25°30'E and 28°30'E
+     * Also found with truncated false easting - see Pulkovo 1942 / 3-degree Gauss-Kruger CM 27E (code 2584).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::2525';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 10
+     * Extent: Bulgaria and Romania - onshore east of 28°30'E.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_10 = 'urn:ogc:def:crs:EPSG::3840';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 3
+     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
+     * Replaced by Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (CRS code 2397). See CRS code 5670 for variant with
+     * axes order reversed to easting before northing for use in GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::3837';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 3 (E-N)
+     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 3 (CRS code 3837) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5670';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 4
+     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
+     * Replaced by Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (CRS code 2398). See CRS code 5671 for variant with
+     * axes order reversed to easting before northing for use in GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::3838';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 4 (E-N)
+     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 4 (CRS code 3838) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::5671';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5
+     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore - east of
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary and Poland - onshore west of 16°30'E
+     * In Czech Republic, Germany and Hungary, replaced by Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (CRS code
+     * 2399). See CRS code 5672 for variant with axes order reversed to easting before northing for use in GIS
+     * applications.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::3329';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (E-N)
+     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore - east of
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary and Poland - onshore west of 16°30'E
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3329) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N = 'urn:ogc:def:crs:EPSG::5672';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 6
+     * Extent: Albania - onshore west of 19°30'E. Czechia - east of 16°30'E. Hungary and Poland - onshore between
+     * 16°30'E and 19°30'E. Slovakia - west of 19°30'E
+     * In Czech Republic, Hungary and Slovakia, replaced by Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 6 (CRS code
+     * 3841).
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::3330';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 7
+     * Extent: Albania - east of 19°30'E. Bulgaria and Romania - west of 22°30'E. Hungary, Poland and Slovakia -
+     * between 19°30'E and 22°30'E
+     * In Hungary and Slovakia, replaced by Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 7 (CRS code 4417).
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::3331';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 8
+     * Extent: Bulgaria and Romania - between 22°30'E and 25°30'E. Hungary, Poland and Slovakia - east of 22°30'E
+     * In Hungary and Slovakia, replaced by Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 8 (CRS code 4434).
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::3332';
+
+    /**
+     * Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 9
+     * Extent: Bulgaria and Romania - onshore between 25°30'E and 28°30'E.
+     */
+    public const EPSG_PULKOVO_1942_58_3_DEGREE_GAUSS_KRUGER_ZONE_9 = 'urn:ogc:def:crs:EPSG::3839';
+
+    /**
+     * Pulkovo 1942(58) / Gauss-Kruger zone 2
+     * Extent: Germany - states of former East Germany - west of 12°E
+     * Replaced by Pulkovo 1942(83) / Gauss-Kruger zone 2 (CRS code 3834). See CRS code 5631 for variant with axes
+     * order reversed to easting before northing for use in GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_2 = 'urn:ogc:def:crs:EPSG::3833';
+
+    /**
+     * Pulkovo 1942(58) / Gauss-Kruger zone 2 (E-N)
+     * Extent: Germany - states of former East Germany - west of 12°E
+     * Pulkovo 1942(58) / Gauss-Kruger zone 2 (CRS code 3833) but with axis order reversed (and axis abbreviations
+     * changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_2_E_N = 'urn:ogc:def:crs:EPSG::5631';
+
+    /**
+     * Pulkovo 1942(58) / Gauss-Kruger zone 3
+     * Extent: Germany (former DDR) - onshore east of 12°E. Poland - onshore west of 18°E. Czechia, Hungary and
+     * Slovakia - west of 18°E
+     * In Germany, Czech Republic, Hungary and Slovakia, replaced by Pulkovo 1942(83) / Gauss-Kruger zone 3 (CRS code
+     * 3835). See CRS code 5663 for variant with axes order reversed to easting before northing for use in GIS
+     * applications.
+     */
+    public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::3333';
+
+    /**
+     * Pulkovo 1942(58) / Gauss-Kruger zone 3 (E-N)
+     * Extent: Germany (former DDR) - onshore east of 12°E. Poland - onshore west of 18°E. Czechia, Hungary and
+     * Slovakia - west of 18°E
+     * Pulkovo 1942(58) / Gauss-Kruger zone 3 (CRS code 3333) but with axis order reversed (and axis abbreviations
+     * changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5663';
+
+    /**
+     * Pulkovo 1942(58) / Gauss-Kruger zone 4
+     * Extent: Albania - onshore east of 18°E. Czechia, Hungary and Slovakia - east of 18°E. Poland - onshore between
+     * 18°E and 24°E. Bulgaria and Romania - onshore west of 24°E
+     * In Czech Republic, Hungary and Slovakia, replaced by Pulkovo 1942(83) / Gauss-Kruger zone 4 (CRS code3836).
+     */
+    public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::3334';
+
+    /**
+     * Pulkovo 1942(58) / Gauss-Kruger zone 5
+     * Extent: Bulgaria, Poland and Romania - onshore east of 24°E.
+     */
+    public const EPSG_PULKOVO_1942_58_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::3335';
+
+    /**
+     * Pulkovo 1942(58) / GUGiK-80
+     * Extent: Poland - onshore.
+     */
+    public const EPSG_PULKOVO_1942_58_GUGIK_80 = 'urn:ogc:def:crs:EPSG::3328';
+
+    /**
+     * Pulkovo 1942(58) / Poland zone I
+     * Extent: Poland - southeast - south of 52°20'N and east of 18°E
+     * To be phased out after 2009. Replaced by ETRS89 / Poland CS2000 zones 7 and 8 (codes 2178-79).
+     */
+    public const EPSG_PULKOVO_1942_58_POLAND_ZONE_I = 'urn:ogc:def:crs:EPSG::3120';
+
+    /**
+     * Pulkovo 1942(58) / Poland zone II
+     * Extent: Poland - northeast - onshore north of 51°20'N and east of 19°E
+     * To be phased out after 2009. Replaced by ETRS89 / Poland CS2000 zones 7 and 8 (codes 2178-79).
+     */
+    public const EPSG_PULKOVO_1942_58_POLAND_ZONE_II = 'urn:ogc:def:crs:EPSG::2172';
+
+    /**
+     * Pulkovo 1942(58) / Poland zone III
+     * Extent: Poland - northwest - onshore north of 52°10'N and west of 20°E
+     * To be phased out after 2009. Replaced by ETRS89 / Poland CS2000 zones 5 and 6 (codes 2176-77).
+     */
+    public const EPSG_PULKOVO_1942_58_POLAND_ZONE_III = 'urn:ogc:def:crs:EPSG::2173';
+
+    /**
+     * Pulkovo 1942(58) / Poland zone IV
+     * Extent: Poland - southwest - south of 53°20'N and west of 19°05'E
+     * To be phased out after 2009. Replaced by ETRS89 / Poland CS2000 zones 5 and 6 (codes 2176-77).
+     */
+    public const EPSG_PULKOVO_1942_58_POLAND_ZONE_IV = 'urn:ogc:def:crs:EPSG::2174';
+
+    /**
+     * Pulkovo 1942(58) / Poland zone V
+     * Extent: Poland - south central - between 49°20'N and 51°20'N, 18°20'E and 19°40'E
+     * To be phased out after 2009. Replaced by ETRS89 / Poland CS2000 zone 6 (code 2177).
+     */
+    public const EPSG_PULKOVO_1942_58_POLAND_ZONE_V = 'urn:ogc:def:crs:EPSG::2175';
+
+    /**
+     * Pulkovo 1942(58) / Stereo70
+     * Extent: Romania.
+     */
+    public const EPSG_PULKOVO_1942_58_STEREO70 = 'urn:ogc:def:crs:EPSG::3844';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3
+     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3837). In Thuringen replaced by PD/83 / Gauss
+     * Kruger zone 3. See CRS code 5673 for variant with axes order reversed to easting before northing for use in GIS
+     * applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::2397';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (E-N)
+     * Extent: Germany - states of former East Germany - west of 10°30'E - Thuringen
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 3 (CRS code 2397) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5673';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4
+     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3838). In Brandenburg replaced by ETRS89 /
+     * UTM zone 33N. In Sachsen replaced by CRS 3398. In Thuringen replaced by CRS 3397. See CRS code 5674 for variant
+     * with axes order reversed.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::2398';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (E-N)
+     * Extent: Czechia - west of 13°30'E. Germany - states of former East Germany onshore - between 10°30'E and
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen; Sachsen-Anhalt; Thuringen
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 4 (CRS code 2398) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_4_E_N = 'urn:ogc:def:crs:EPSG::5674';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5
+     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore east of
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary - west of 16°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 5 (CRS code 3329). In Brandenburg replaced by ETRS89 /
+     * UTM zone 33N. In Sachsen replaced by RD/83 / Gauss Kruger zone 5. See CRS code 5675 for variant with axes order
+     * reversed.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_5 = 'urn:ogc:def:crs:EPSG::2399';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (E-N)
+     * Extent: Czechia - between 13°30'E and 16°30'E. Germany - states of former East Germany onshore east of
+     * 13°30'E - Brandenburg; Mecklenburg-Vorpommern; Sachsen. Hungary - west of 16°30'E
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 5 (CRS code 2399) but with axis order reversed (and axis
+     * abbreviations changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_5_E_N = 'urn:ogc:def:crs:EPSG::5675';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 6
+     * Extent: Czechia - east of 16°30'E. Hungary - between 16°30'E and 19°30'E. Slovakia - west of 19°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 6 (CRS code 3330).
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_6 = 'urn:ogc:def:crs:EPSG::3841';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 7
+     * Extent: Hungary and Slovakia - between 19°30'E and 22°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 7 (CRS code 3331).
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_7 = 'urn:ogc:def:crs:EPSG::4417';
+
+    /**
+     * Pulkovo 1942(83) / 3-degree Gauss-Kruger zone 8
+     * Extent: Hungary and Slovakia - east of 22°30'E
+     * Replaces Pulkovo 1942(58) / 3-degree Gauss-Kruger zone 8 (CRS code 3332).
+     */
+    public const EPSG_PULKOVO_1942_83_3_DEGREE_GAUSS_KRUGER_ZONE_8 = 'urn:ogc:def:crs:EPSG::4434';
+
+    /**
+     * Pulkovo 1942(83) / Gauss-Kruger zone 2
+     * Extent: Germany - states of former East Germany - west of 12°E
+     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 2 (CRS code 3833). See CRS code 5664 for variant with axes order
+     * reversed to easting before northing for use in GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_2 = 'urn:ogc:def:crs:EPSG::3834';
+
+    /**
+     * Pulkovo 1942(83) / Gauss-Kruger zone 2 (E-N)
+     * Extent: Germany - states of former East Germany - west of 12°E
+     * Pulkovo 1942(83) / Gauss-Kruger zone 2 (CRS code 3834) but with axis order reversed (and axis abbreviations
+     * changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_2_E_N = 'urn:ogc:def:crs:EPSG::5664';
+
+    /**
+     * Pulkovo 1942(83) / Gauss-Kruger zone 3
+     * Extent: Germany (former DDR) - onshore east of 12°E. Czechia, Hungary and Slovakia - west of 18°E
+     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 3 (CRS code 3333). See CRS code 5665 for variant with axes order
+     * reversed to easting before northing for use in GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_3 = 'urn:ogc:def:crs:EPSG::3835';
+
+    /**
+     * Pulkovo 1942(83) / Gauss-Kruger zone 3 (E-N)
+     * Extent: Germany (former DDR) - onshore east of 12°E. Czechia, Hungary and Slovakia - west of 18°E
+     * Pulkovo 1942(83) / Gauss-Kruger zone 3 (CRS code 3835) but with axis order reversed (and axis abbreviations
+     * changed) for GIS applications.
+     */
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_3_E_N = 'urn:ogc:def:crs:EPSG::5665';
+
+    /**
+     * Pulkovo 1942(83) / Gauss-Kruger zone 4
+     * Extent: Czechia, Hungary and Slovakia - east of 18°E
+     * Replaces Pulkovo 1942(58) / Gauss-Kruger zone 4 (CRS code 3334).
+     */
+    public const EPSG_PULKOVO_1942_83_GAUSS_KRUGER_ZONE_4 = 'urn:ogc:def:crs:EPSG::3836';
+
+    /**
+     * Pulkovo 1942 / Caspian Sea Mercator
+     * Extent: Azerbaijan - offshore; Kazakhstan - offshore; Russia - Caspian Sea; Turkmenistan - offshore.
+     */
+    public const EPSG_PULKOVO_1942_CASPIAN_SEA_MERCATOR = 'urn:ogc:def:crs:EPSG::3388';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A1
+     * Extent: Armenia and Georgia onshore west of 43°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A1 = 'urn:ogc:def:crs:EPSG::2935';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A2
+     * Extent: Armenia and Georgia between 43°02'E and 46°02'E; Azerbaijan west of 46°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A2 = 'urn:ogc:def:crs:EPSG::2936';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A3
+     * Extent: Armenia and Georgia east of 46°02'E; Azerbaijan between 46°02' and 49°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A3 = 'urn:ogc:def:crs:EPSG::2937';
+
+    /**
+     * Pulkovo 1942 / CS63 zone A4
+     * Extent: Azerbaijan east of 49°02'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_A4 = 'urn:ogc:def:crs:EPSG::2938';
+
+    /**
+     * Pulkovo 1942 / CS63 zone C0
+     * Extent: Estonia, Latvia and Lithuania - onshore west of 23°27'E. Russia - Kaliningrad onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_C0 = 'urn:ogc:def:crs:EPSG::3350';
+
+    /**
+     * Pulkovo 1942 / CS63 zone C1
+     * Extent: Estonia, Latvia and Lithuania - onshore between 23°27'E and 26°27'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_C1 = 'urn:ogc:def:crs:EPSG::3351';
+
+    /**
+     * Pulkovo 1942 / CS63 zone C2
+     * Extent: Estonia, Latvia and Lithuania - onshore east of 26°27'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_C2 = 'urn:ogc:def:crs:EPSG::3352';
+
+    /**
+     * Pulkovo 1942 / CS63 zone K2
+     * Extent: Kazakhstan between 49°16'E and 52°16'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_K2 = 'urn:ogc:def:crs:EPSG::2939';
+
+    /**
+     * Pulkovo 1942 / CS63 zone K3
+     * Extent: Kazakhstan between 52°16'E and 55°16'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_K3 = 'urn:ogc:def:crs:EPSG::2940';
+
+    /**
+     * Pulkovo 1942 / CS63 zone K4
+     * Extent: Kazakhstan between 55°16'E and 58°16'E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_K4 = 'urn:ogc:def:crs:EPSG::2941';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X1
+     * Extent: Ukraine - west of 25°E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X1 = 'urn:ogc:def:crs:EPSG::7825';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X2
+     * Extent: Ukraine - between 25°E and 28°E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X2 = 'urn:ogc:def:crs:EPSG::7826';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X3
+     * Extent: Ukraine - between 28°E and 31°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X3 = 'urn:ogc:def:crs:EPSG::7827';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X4
+     * Extent: Ukraine - between 31°E and 34°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X4 = 'urn:ogc:def:crs:EPSG::7828';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X5
+     * Extent: Ukraine - between 34°E and 37°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X5 = 'urn:ogc:def:crs:EPSG::7829';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X6
+     * Extent: Ukraine - between 37°E and 40°E, onshore.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X6 = 'urn:ogc:def:crs:EPSG::7830';
+
+    /**
+     * Pulkovo 1942 / CS63 zone X7
+     * Extent: Ukraine - east of 40°E.
+     */
+    public const EPSG_PULKOVO_1942_CS63_ZONE_X7 = 'urn:ogc:def:crs:EPSG::7831';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 105E
+     * Extent: Russia - onshore between 102°E and 108°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 18 (code 28418).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_105E = 'urn:ogc:def:crs:EPSG::2508';
+
+    /**
+     * Pulkovo 1942 / Gauss-Kruger CM 111E
+     * Extent: Russia - onshore between 108°E and 114°E
+     * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 19 (code 28419).
+     */
+    public const EPSG_PULKOVO_1942_GAUSS_KRUGER_CM_111E = 'urn:ogc:def:crs:EPSG::2509';
+
+    /**
      * Pulkovo 1942 / Gauss-Kruger CM 117E
      * Extent: Russia - onshore between 114°E and 120°E
      * Truncated form of Pulkovo 1942 / Gauss-Kruger zone 20 (code 28420).
@@ -4152,7 +5156,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * Timbalai 1948 / RSO Borneo (ch)
-     * Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
+     * Extent: Brunei; Malaysia - Sabah and Sarawak
      * Adopts ellipsoid metric conversion of 39.370147 inches per metre. Replaced by metric projection version (CRS
      * code 29873). See also foot version (CRS code 29872) for Shell ops in E Malaysia.
      */
@@ -4160,7 +5164,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * Timbalai 1948 / RSO Borneo (ftSe)
-     * Extent: Malaysia - East Malaysia (Sabah; Sarawak)
+     * Extent: Malaysia - Sabah and Sarawak
      * Used by Shell in East Malaysia. Original projection definition in chains (1 chain = 66 feet) - see CRS code
      * 29871. See also CRS code 29873 for metric version.
      */
@@ -4168,7 +5172,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * Timbalai 1948 / RSO Borneo (m)
-     * Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
+     * Extent: Brunei; Malaysia - Sabah and Sarawak
      * Originally defined in chains of 792 inches, see CRS 29871 and 29872. Adopts Sears 1922 conversion of 39.370147
      * inches per metre. Replaced by CRS 3376 in East Malaysia and CRS 5247 in Brunei. See also CRS 29874 used by the
      * Sarawak Land and Survey Dept.
@@ -4177,7 +5181,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * Timbalai 1948 / RSO Sarawak LSD (m)
-     * Extent: Malaysia - East Malaysia - Sarawak onshore
+     * Extent: Malaysia - Sarawak - onshore
      * Used by the Land and Survey Department, Sarawak, Malaysia. Modified from Timbalai 1948 / RSO Borneo (m) CRS code
      * 29873 by adding 2 million to the false easting and 5 million to the false northing.
      */
@@ -4185,13 +5189,13 @@ trait ProjectedConstantsChunk4
 
     /**
      * Timbalai 1948 / UTM zone 49N
-     * Extent: Brunei - offshore west of 114°E; Malaysia - East Malaysia (Sarawak) west of 114°E).
+     * Extent: Brunei - offshore west of 114°E; Malaysia - Sarawak west of 114°E.
      */
     public const EPSG_TIMBALAI_1948_UTM_ZONE_49N = 'urn:ogc:def:crs:EPSG::29849';
 
     /**
      * Timbalai 1948 / UTM zone 50N
-     * Extent: Brunei east of 114°E; Malaysia - East Malaysia (Sabah, Sarawak) east of 114°E).
+     * Extent: Brunei east of 114°E; Malaysia - Sabah and  Sarawak east of 114°E.
      */
     public const EPSG_TIMBALAI_1948_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::29850';
 
@@ -8089,14 +9093,14 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / TM Zone 20N (ftUS)
      * Extent: Trinidad and Tobago - offshore west of 60°W
-     * Note: this CRS uses US survet feet, not international feet.
+     * Note: this CRS uses US survey feet, not international feet.
      */
     public const EPSG_WGS_84_TM_ZONE_20N_FTUS = 'urn:ogc:def:crs:EPSG::8035';
 
     /**
      * WGS 84 / TM Zone 21N (ftUS)
      * Extent: Trinidad and Tobago - offshore east of 60°W
-     * Note: this CRS uses US survet feet, not international feet.
+     * Note: this CRS uses US survey feet, not international feet.
      */
     public const EPSG_WGS_84_TM_ZONE_21N_FTUS = 'urn:ogc:def:crs:EPSG::8036';
 
@@ -8702,7 +9706,7 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / UTM zone 47N
      * Extent: Between 96°E and 102°E, northern hemisphere between equator and 84°N. China. Indonesia. Laos.
-     * Malaysia - West Malaysia. Mongolia. Myanmar (Burma). Russia. Thailand.
+     * Malaysia - Peninsular Malaysia. Mongolia. Myanmar (Burma). Russia. Thailand.
      */
     public const EPSG_WGS_84_UTM_ZONE_47N = 'urn:ogc:def:crs:EPSG::32647';
 
@@ -8715,7 +9719,7 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / UTM zone 48N
      * Extent: Between 102°E and 108°E, northern hemisphere between equator and 84°N. Cambodia. China. Indonesia.
-     * Laos. Malaysia - West Malaysia. Mongolia. Russia. Singapore. Thailand. Vietnam.
+     * Laos. Malaysia - Peninsular Malaysia. Mongolia. Russia. Singapore. Thailand. Vietnam.
      */
     public const EPSG_WGS_84_UTM_ZONE_48N = 'urn:ogc:def:crs:EPSG::32648';
 
@@ -8728,7 +9732,7 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / UTM zone 49N
      * Extent: Between 108°E and 114°E, northern hemisphere between equator and 84°N. China. Hong Kong. Indonesia.
-     * Macao. Malaysia - East Malaysia - Sarawak. Mongolia. Russia. Vietnam.
+     * Macao. Malaysia - Sarawak. Mongolia. Russia. Vietnam.
      */
     public const EPSG_WGS_84_UTM_ZONE_49N = 'urn:ogc:def:crs:EPSG::32649';
 
@@ -8753,7 +9757,7 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / UTM zone 50N
      * Extent: Between 114°E and 120°E, northern hemisphere between equator and 84°N. Brunei. China. Hong Kong.
-     * Indonesia. Malaysia - East Malaysia - Sarawak. Mongolia. Philippines. Russia. Taiwan.
+     * Indonesia. Malaysia - Sabah, Sarawak. Mongolia. Philippines. Russia. Taiwan.
      */
     public const EPSG_WGS_84_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::32650';
 

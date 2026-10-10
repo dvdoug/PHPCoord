@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6376",
+    "title": "North America/USA - Ohio - Harrison",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.44, 40.05], [-80.76, 40.05], [-80.76, 40.54], [-81.44, 40.54], [-81.44, 40.05]
+        ]
+    ]
+}

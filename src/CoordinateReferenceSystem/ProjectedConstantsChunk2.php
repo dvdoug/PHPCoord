@@ -12,690 +12,6 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk2
 {
     /**
-     * Kyrg-06 / zone 5
-     * Extent: Kyrgyzstan - east of 79°01'E
-     * In use from October 2010.
-     */
-    public const EPSG_KYRG_06_ZONE_5 = 'urn:ogc:def:crs:EPSG::7696';
-
-    /**
-     * Lake / Maracaibo Grid
-     * Extent: Venezuela - Maracaibo area,  in lake
-     * Grid coordinates are (200000 200000) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used
-     * for Lake triangulation coordinate listing.
-     */
-    public const EPSG_LAKE_MARACAIBO_GRID = 'urn:ogc:def:crs:EPSG::2102';
-
-    /**
-     * Lake / Maracaibo Grid M1
-     * Extent: Venezuela - Maracaibo area,  in lake
-     * Grid coordinates are (0 0) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used by
-     * Creole; MGO and Sun.
-     */
-    public const EPSG_LAKE_MARACAIBO_GRID_M1 = 'urn:ogc:def:crs:EPSG::2101';
-
-    /**
-     * Lake / Maracaibo Grid M3
-     * Extent: Venezuela - Maracaibo area,  in lake
-     * Grid coordinates are (500000 500000) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used
-     * by Varco.
-     */
-    public const EPSG_LAKE_MARACAIBO_GRID_M3 = 'urn:ogc:def:crs:EPSG::2103';
-
-    /**
-     * Lake / Maracaibo La Rosa Grid
-     * Extent: Venezuela - Maracaibo area offshore blocks I, II and III
-     * Grid coordinates are (X=-17044 Y=29545) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum).
-     * Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).
-     */
-    public const EPSG_LAKE_MARACAIBO_LA_ROSA_GRID = 'urn:ogc:def:crs:EPSG::2104';
-
-    /**
-     * La Canoa / UTM zone 18N
-     * Extent: Venezuela - west of 72°W
-     * Sometimes referred to as PSAD56 / UTM zone 18N.
-     */
-    public const EPSG_LA_CANOA_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::24718';
-
-    /**
-     * La Canoa / UTM zone 19N
-     * Extent: Venezuela - between 72°W and 66°W, onshore
-     * Sometimes referred to as PSAD56 / UTM zone 19N.
-     */
-    public const EPSG_LA_CANOA_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::24719';
-
-    /**
-     * La Canoa / UTM zone 20N
-     * Extent: Venezuela - onshore east of 66°W
-     * Sometimes referred to as PSAD56 / UTM zone 20N.
-     */
-    public const EPSG_LA_CANOA_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::24720';
-
-    /**
-     * Leigon / Ghana Metre Grid
-     * Extent: Ghana
-     * Replaced Accra / Ghana National Grid (code 2136) in 1978.
-     */
-    public const EPSG_LEIGON_GHANA_METRE_GRID = 'urn:ogc:def:crs:EPSG::25000';
-
-    /**
-     * Le Pouce 1934 / Mauritius Grid
-     * Extent: Mauritius - mainland onshore.
-     */
-    public const EPSG_LE_POUCE_1934_MAURITIUS_GRID = 'urn:ogc:def:crs:EPSG::3337';
-
-    /**
-     * LGD2006 / Libya TM
-     * Extent: Libya.
-     */
-    public const EPSG_LGD2006_LIBYA_TM = 'urn:ogc:def:crs:EPSG::3177';
-
-    /**
-     * LGD2006 / Libya TM zone 10
-     * Extent: Libya - onshore between 18°E and 20°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_10 = 'urn:ogc:def:crs:EPSG::3195';
-
-    /**
-     * LGD2006 / Libya TM zone 11
-     * Extent: Libya - onshore between 20°E and 22°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_11 = 'urn:ogc:def:crs:EPSG::3196';
-
-    /**
-     * LGD2006 / Libya TM zone 12
-     * Extent: Libya - onshore between 22°E and 24°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_12 = 'urn:ogc:def:crs:EPSG::3197';
-
-    /**
-     * LGD2006 / Libya TM zone 13
-     * Extent: Libya - onshore east of 24°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_13 = 'urn:ogc:def:crs:EPSG::3198';
-
-    /**
-     * LGD2006 / Libya TM zone 5
-     * Extent: Libya - west of 10°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_5 = 'urn:ogc:def:crs:EPSG::3190';
-
-    /**
-     * LGD2006 / Libya TM zone 6
-     * Extent: Libya - onshore between 10°E and 12°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_6 = 'urn:ogc:def:crs:EPSG::3191';
-
-    /**
-     * LGD2006 / Libya TM zone 7
-     * Extent: Libya - onshore between 12°E and 14°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_7 = 'urn:ogc:def:crs:EPSG::3192';
-
-    /**
-     * LGD2006 / Libya TM zone 8
-     * Extent: Libya - onshore between 14°E and 16°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_8 = 'urn:ogc:def:crs:EPSG::3193';
-
-    /**
-     * LGD2006 / Libya TM zone 9
-     * Extent: Libya - onshore between 16°E and 18°E.
-     */
-    public const EPSG_LGD2006_LIBYA_TM_ZONE_9 = 'urn:ogc:def:crs:EPSG::3194';
-
-    /**
-     * LGD2006 / UTM zone 32N
-     * Extent: Libya - west of 12°E.
-     */
-    public const EPSG_LGD2006_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::3199';
-
-    /**
-     * LGD2006 / UTM zone 33N
-     * Extent: Libya - between 12°E and 18°E.
-     */
-    public const EPSG_LGD2006_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::3201';
-
-    /**
-     * LGD2006 / UTM zone 34N
-     * Extent: Libya - between 18°E and 24°E.
-     */
-    public const EPSG_LGD2006_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::3202';
-
-    /**
-     * LGD2006 / UTM zone 35N
-     * Extent: Libya - east of 24°E.
-     */
-    public const EPSG_LGD2006_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::3203';
-
-    /**
-     * LibRef21 / UTM zone 28N
-     * Extent: Liberia - offshore west of 12°W.
-     */
-    public const EPSG_LIBREF21_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::10801';
-
-    /**
-     * LibRef21 / UTM zone 29N
-     * Extent: Liberia - onshore, and offshore east of 12°W.
-     */
-    public const EPSG_LIBREF21_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::10802';
-
-    /**
-     * Lisbon 1890 (Lisbon) / Portugal Bonne
-     * Extent: Portugal - mainland - onshore
-     * Replaced by definition using Greenwich meridian, CRS code 5017.
-     */
-    public const EPSG_LISBON_1890_LISBON_PORTUGAL_BONNE = 'urn:ogc:def:crs:EPSG::2963';
-
-    /**
-     * Lisbon 1890 / Portugal Bonne New
-     * Extent: Portugal - mainland - onshore
-     * Replaces original definition using Lisbon meridian, CRS code 2963.
-     */
-    public const EPSG_LISBON_1890_PORTUGAL_BONNE_NEW = 'urn:ogc:def:crs:EPSG::5017';
-
-    /**
-     * Lisbon (Lisbon) / Portuguese Grid
-     * Extent: Portugal - mainland - onshore
-     * Replaced by definition using Greenwich meridian, CRS code 5018.
-     */
-    public const EPSG_LISBON_LISBON_PORTUGUESE_GRID = 'urn:ogc:def:crs:EPSG::20791';
-
-    /**
-     * Lisbon (Lisbon) / Portuguese National Grid
-     * Extent: Portugal - mainland - onshore.
-     */
-    public const EPSG_LISBON_LISBON_PORTUGUESE_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::20790';
-
-    /**
-     * Lisbon / Portuguese Grid New
-     * Extent: Portugal - mainland - onshore
-     * Replaces original definition using Lisbon meridian, CRS code 20791.
-     */
-    public const EPSG_LISBON_PORTUGUESE_GRID_NEW = 'urn:ogc:def:crs:EPSG::5018';
-
-    /**
-     * @deprecated use EPSG_ETRS89_LVA_LKS_92_LATVIA_TM instead
-     */
-    public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
-
-    /**
-     * @deprecated use EPSG_ETRS89_LTU_LKS94_LITHUANIA_TM instead
-     */
-    public const EPSG_LKS94_LITHUANIA_TM = 'urn:ogc:def:crs:EPSG::3346';
-
-    /**
-     * @deprecated use EPSG_ETRS89_LVA_LKS_2020_LATVIA_TM instead
-     */
-    public const EPSG_LKS_2020_LATVIA_TM = 'urn:ogc:def:crs:EPSG::10306';
-
-    /**
-     * @deprecated use EPSG_ETRS89_LVA_LKS_92_LATVIA_TM instead
-     */
-    public const EPSG_LKS_92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
-
-    /**
-     * Locodjo 1965 / TM 5 NW
-     * Extent: Côte d'Ivoire (Ivory Coast) - offshore.
-     */
-    public const EPSG_LOCODJO_1965_TM_5_NW = 'urn:ogc:def:crs:EPSG::2164';
-
-    /**
-     * Locodjo 1965 / UTM zone 29N
-     * Extent: Côte d'Ivoire (Ivory Coast) west of 6°W
-     * Replaced by Abidjan 87 / UTM 29N (EPSG code 2043).
-     */
-    public const EPSG_LOCODJO_1965_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::2042';
-
-    /**
-     * Locodjo 1965 / UTM zone 30N
-     * Extent: Côte d'Ivoire (Ivory Coast) east of 6°W
-     * Replaced by Abidjan 87 / UTM 30N (EPSG code 2041).
-     */
-    public const EPSG_LOCODJO_1965_UTM_ZONE_30N = 'urn:ogc:def:crs:EPSG::2040';
-
-    /**
-     * Lome / UTM zone 31N
-     * Extent: Togo.
-     */
-    public const EPSG_LOME_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::25231';
-
-    /**
-     * LTF2004(C)
-     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
-     */
-    public const EPSG_LTF2004_C = 'urn:ogc:def:crs:EPSG::9549';
-
-    /**
-     * LUREF / Luxembourg TM
-     * Extent: Luxembourg.
-     */
-    public const EPSG_LUREF_LUXEMBOURG_TM = 'urn:ogc:def:crs:EPSG::2169';
-
-    /**
-     * LUREF / Luxembourg TM (3D)
-     * Extent: Luxembourg
-     * The height error in assuming that the CS is Cartesian never exceeds 2mm per 100m height in Luxembourg. The
-     * ellipsoidal height approximates NG95 height to 5-15cm. For engineering and other applications requiring physical
-     * height use compound CRS code 9897.
-     */
-    public const EPSG_LUREF_LUXEMBOURG_TM_3D = 'urn:ogc:def:crs:EPSG::9895';
-
-    /**
-     * @deprecated use EPSG_LUREF_LUXEMBOURG_TM instead
-     */
-    public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
-
-    /**
-     * Luzon 1911 / Philippines zone I
-     * Extent: Philippines - onshore west of 118°E
-     * Replaced by PRS92 / Philippines zone 1 (CRS code 3121).
-     */
-    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_I = 'urn:ogc:def:crs:EPSG::25391';
-
-    /**
-     * Luzon 1911 / Philippines zone II
-     * Extent: Philippines - onshore approximately between 118°E and 120°E - Palawan; Calamian Islands
-     * Replaced by PRS92 / Philippines zone 2 (CRS code 3122).
-     */
-    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_II = 'urn:ogc:def:crs:EPSG::25392';
-
-    /**
-     * Luzon 1911 / Philippines zone III
-     * Extent: Philippines - onshore approximately between 120°E and 122°E. Luzon (west of 122°E); Mindoro
-     * Replaced by PRS92 / Philippines zone 3 (CRS code 3123).
-     */
-    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_III = 'urn:ogc:def:crs:EPSG::25393';
-
-    /**
-     * Luzon 1911 / Philippines zone IV
-     * Extent: Philippines - onshore approximately between 122°E and 124°E - southeast Luzon (east of 122°E);
-     * Tablas; Masbate; Panay; Cebu; Negros; northwest Mindanao (west of 124°E)
-     * Replaced by PRS92 / Philippines zone 4 (CRS code 3124).
-     */
-    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_IV = 'urn:ogc:def:crs:EPSG::25394';
-
-    /**
-     * Luzon 1911 / Philippines zone V
-     * Extent: Philippines - onshore approximately between 124°E and 126°E - east Mindanao (east of 124°E); Bohol;
-     * Samar
-     * Replaced by PRS92 / Philippines zone 5 (CRS code 3125).
-     */
-    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_V = 'urn:ogc:def:crs:EPSG::25395';
-
-    /**
-     * Macao 1920 / Macao Grid
-     * Extent: Macao.
-     */
-    public const EPSG_MACAO_1920_MACAO_GRID = 'urn:ogc:def:crs:EPSG::8433';
-
-    /**
-     * Macedonia State Coordinate System
-     * Extent: North Macedonia
-     * Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing MGI 1901 / Balkans
-     * zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. Further truncated in CRS 9945 which with
-     * CRS code 6316 used for cadastre.
-     */
-    public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM = 'urn:ogc:def:crs:EPSG::6204';
-
-    /**
-     * Macedonia State Coordinate System truncated
-     * Extent: North Macedonia
-     * Macedonia State Coordinate System (CRS code 6204) with northing reduced by 4 million. Cadastral data from AREC
-     * may be delivered in this CRS.
-     */
-    public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM_TRUNCATED = 'urn:ogc:def:crs:EPSG::9945';
-
-    /**
-     * Madrid 1870 (Madrid) / Spain LCC
-     * Extent: Spain - mainland onshore
-     * Polyhedral projection used for large and medium scale topographic mapping and engineering survey. Replaced by
-     * ED50 / UTM after 1970.
-     */
-    public const EPSG_MADRID_1870_MADRID_SPAIN_LCC = 'urn:ogc:def:crs:EPSG::2062';
-
-    /**
-     * MAGNA-SIRGAS 2018 / Colombia Bogota zone
-     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
-     * Greenwich)
-     * Replaces MAGNA-SIRGAS / Colombia Bogota zone (CRS code 3116). MAGNA-SIRGAS 2018 / Origen-Nacional should be used
-     * for national topographic mapping.
-     */
-    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::11116';
-
-    /**
-     * MAGNA-SIRGAS 2018 / Colombia East Central zone
-     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
-     * Greenwich)
-     * Replaces MAGNA-SIRGAS / Colombia East Central zone (CRS code 3117).
-     */
-    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::11117';
-
-    /**
-     * MAGNA-SIRGAS 2018 / Colombia East zone
-     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich)
-     * Replaces MAGNA-SIRGAS / Colombia East zone (CRS code 3118).
-     */
-    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::11118';
-
-    /**
-     * MAGNA-SIRGAS 2018 / Colombia Far West zone
-     * Extent: Colombia - mainland onshore west of 4°30'W of Bogota (approximately 78°35'W of Greenwich)
-     * Replaces MAGNA-SIRGAS / Colombia Far West zone (CRS code 3114).
-     */
-    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_FAR_WEST_ZONE = 'urn:ogc:def:crs:EPSG::11114';
-
-    /**
-     * MAGNA-SIRGAS 2018 / Colombia West zone
-     * Extent: Colombia - onshore between 4°30'W and 1°30'W of Bogota (approximately 78°35'W and 75°35'W of
-     * Greenwich)
-     * Replaces MAGNA-SIRGAS / Colombia West zone (CRS code 3115).
-     */
-    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::11115';
-
-    /**
-     * MAGNA-SIRGAS 2018 / Origen-Nacional
-     * Extent: Colombia. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla
-     * Bank
-     * Used for the Multipurpose Cadastre and to support GIS-based land administration. Originally described using
-     * "MAGNA-SIRGAS" as base CRS, but redefined by IGAC using "MAGNA-SIRGAS 2018". 0.3m difference not significant for
-     * quoted usage.
-     */
-    public const EPSG_MAGNA_SIRGAS_2018_ORIGEN_NACIONAL = 'urn:ogc:def:crs:EPSG::9377';
-
-    /**
-     * MAGNA-SIRGAS / Arauca urban grid
-     * Extent: Colombia - Arauca city.
-     */
-    public const EPSG_MAGNA_SIRGAS_ARAUCA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6244';
-
-    /**
-     * MAGNA-SIRGAS / Armenia urban grid
-     * Extent: Colombia - Armenia city.
-     */
-    public const EPSG_MAGNA_SIRGAS_ARMENIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6245';
-
-    /**
-     * MAGNA-SIRGAS / Barranquilla urban grid
-     * Extent: Colombia - Barranquilla city.
-     */
-    public const EPSG_MAGNA_SIRGAS_BARRANQUILLA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6246';
-
-    /**
-     * MAGNA-SIRGAS / Bogota urban grid
-     * Extent: Colombia - Bogota DC city.
-     */
-    public const EPSG_MAGNA_SIRGAS_BOGOTA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6247';
-
-    /**
-     * MAGNA-SIRGAS / Bucaramanga urban grid
-     * Extent: Colombia - Bucaramanga city.
-     */
-    public const EPSG_MAGNA_SIRGAS_BUCARAMANGA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6248';
-
-    /**
-     * MAGNA-SIRGAS / Cali urban grid
-     * Extent: Colombia - Cali city.
-     */
-    public const EPSG_MAGNA_SIRGAS_CALI_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6249';
-
-    /**
-     * MAGNA-SIRGAS / Cartagena urban grid
-     * Extent: Colombia - Cartagena city.
-     */
-    public const EPSG_MAGNA_SIRGAS_CARTAGENA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6250';
-
-    /**
-     * MAGNA-SIRGAS / Colombia Bogota zone
-     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
-     * Greenwich)
-     * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897). Replaced by MAGNA-SIRGAS 2018 / Colombia Bogota
-     * zone (CRS code 11116). MAGNA-SIRGAS 2018 / Origen-Nacional should be used for national topographic mapping.
-     */
-    public const EPSG_MAGNA_SIRGAS_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::3116';
-
-    /**
-     * MAGNA-SIRGAS / Colombia East Central zone
-     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
-     * Greenwich)
-     * Replaces Bogota 1975 / Colombia East Central zone (CRS code 21898). Replaced by MAGNA-SIRGAS 2018 / Colombia
-     * East Central zone (CRS code 11117).
-     */
-    public const EPSG_MAGNA_SIRGAS_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::3117';
-
-    /**
-     * MAGNA-SIRGAS / Colombia East zone
-     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich)
-     * Replaces Bogota 1975 / Colombia East zone (CRS code 21899). Replaced by MAGNA-SIRGAS 2018 / Colombia East zone
-     * (CRS code 11118).
-     */
-    public const EPSG_MAGNA_SIRGAS_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::3118';
-
-    /**
-     * MAGNA-SIRGAS / Colombia Far West zone
-     * Extent: Colombia - mainland onshore west of 4°30'W of Bogota (approximately 78°35'W of Greenwich)
-     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896). Replaced by MAGNA-SIRGAS 2018 / Colombia
-     * Far West zone (CRS code 11114).
-     */
-    public const EPSG_MAGNA_SIRGAS_COLOMBIA_FAR_WEST_ZONE = 'urn:ogc:def:crs:EPSG::3114';
-
-    /**
-     * MAGNA-SIRGAS / Colombia West zone
-     * Extent: Colombia - onshore between 4°30'W and 1°30'W of Bogota (approximately 78°35'W and 75°35'W of
-     * Greenwich)
-     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896). Replaced by MAGNA-SIRGAS 2018 / Colombia
-     * West zone (CRS code 11115).
-     */
-    public const EPSG_MAGNA_SIRGAS_COLOMBIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::3115';
-
-    /**
-     * MAGNA-SIRGAS / Cucuta urban grid
-     * Extent: Colombia - Cucuta city.
-     */
-    public const EPSG_MAGNA_SIRGAS_CUCUTA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6251';
-
-    /**
-     * MAGNA-SIRGAS / Florencia urban grid
-     * Extent: Colombia - Florencia city.
-     */
-    public const EPSG_MAGNA_SIRGAS_FLORENCIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6252';
-
-    /**
-     * MAGNA-SIRGAS / Ibague urban grid
-     * Extent: Colombia - Ibague city.
-     */
-    public const EPSG_MAGNA_SIRGAS_IBAGUE_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6253';
-
-    /**
-     * MAGNA-SIRGAS / Inirida urban grid
-     * Extent: Colombia - Inirida city.
-     */
-    public const EPSG_MAGNA_SIRGAS_INIRIDA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6254';
-
-    /**
-     * MAGNA-SIRGAS / Leticia urban grid
-     * Extent: Colombia - Leticia city.
-     */
-    public const EPSG_MAGNA_SIRGAS_LETICIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6255';
-
-    /**
-     * MAGNA-SIRGAS / Manizales urban grid
-     * Extent: Colombia - Manizales city.
-     */
-    public const EPSG_MAGNA_SIRGAS_MANIZALES_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6256';
-
-    /**
-     * MAGNA-SIRGAS / Medellin urban grid
-     * Extent: Colombia - Medellin city.
-     */
-    public const EPSG_MAGNA_SIRGAS_MEDELLIN_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6257';
-
-    /**
-     * MAGNA-SIRGAS / Mitu urban grid
-     * Extent: Colombia - Mitu city.
-     */
-    public const EPSG_MAGNA_SIRGAS_MITU_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6258';
-
-    /**
-     * MAGNA-SIRGAS / Mocoa urban grid
-     * Extent: Colombia - Mocoa city.
-     */
-    public const EPSG_MAGNA_SIRGAS_MOCOA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6259';
-
-    /**
-     * MAGNA-SIRGAS / Monteria urban grid
-     * Extent: Colombia - Monteria city.
-     */
-    public const EPSG_MAGNA_SIRGAS_MONTERIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6260';
-
-    /**
-     * MAGNA-SIRGAS / Neiva urban grid
-     * Extent: Colombia - Neiva city.
-     */
-    public const EPSG_MAGNA_SIRGAS_NEIVA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6261';
-
-    /**
-     * MAGNA-SIRGAS / Pasto urban grid
-     * Extent: Colombia - Pasto city.
-     */
-    public const EPSG_MAGNA_SIRGAS_PASTO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6262';
-
-    /**
-     * MAGNA-SIRGAS / Pereira urban grid
-     * Extent: Colombia - Pereira city.
-     */
-    public const EPSG_MAGNA_SIRGAS_PEREIRA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6263';
-
-    /**
-     * MAGNA-SIRGAS / Popayan urban grid
-     * Extent: Colombia - Popayan city.
-     */
-    public const EPSG_MAGNA_SIRGAS_POPAYAN_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6264';
-
-    /**
-     * MAGNA-SIRGAS / Puerto Carreno urban grid
-     * Extent: Colombia - Puerto Carreno city.
-     */
-    public const EPSG_MAGNA_SIRGAS_PUERTO_CARRENO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6265';
-
-    /**
-     * MAGNA-SIRGAS / Quibdo urban grid
-     * Extent: Colombia - Quibdo city.
-     */
-    public const EPSG_MAGNA_SIRGAS_QUIBDO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6266';
-
-    /**
-     * MAGNA-SIRGAS / Riohacha urban grid
-     * Extent: Colombia - Riohacha city.
-     */
-    public const EPSG_MAGNA_SIRGAS_RIOHACHA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6267';
-
-    /**
-     * MAGNA-SIRGAS / Santa Marta urban grid
-     * Extent: Colombia - Santa Marta city.
-     */
-    public const EPSG_MAGNA_SIRGAS_SANTA_MARTA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6270';
-
-    /**
-     * MAGNA-SIRGAS / San Andres urban grid
-     * Extent: Colombia - San Andres city.
-     */
-    public const EPSG_MAGNA_SIRGAS_SAN_ANDRES_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6268';
-
-    /**
-     * MAGNA-SIRGAS / San Jose del Guaviare urban grid
-     * Extent: Colombia - San Jose del Guaviare city.
-     */
-    public const EPSG_MAGNA_SIRGAS_SAN_JOSE_DEL_GUAVIARE_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6269';
-
-    /**
-     * MAGNA-SIRGAS / Sucre urban grid
-     * Extent: Colombia - Sucre city.
-     */
-    public const EPSG_MAGNA_SIRGAS_SUCRE_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6271';
-
-    /**
-     * MAGNA-SIRGAS / Tunja urban grid
-     * Extent: Colombia - Tunja city.
-     */
-    public const EPSG_MAGNA_SIRGAS_TUNJA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6272';
-
-    /**
-     * MAGNA-SIRGAS / Valledupar urban grid
-     * Extent: Colombia - Valledupar city.
-     */
-    public const EPSG_MAGNA_SIRGAS_VALLEDUPAR_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6273';
-
-    /**
-     * MAGNA-SIRGAS / Villavicencio urban grid
-     * Extent: Colombia - Villavicencio city.
-     */
-    public const EPSG_MAGNA_SIRGAS_VILLAVICENCIO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6274';
-
-    /**
-     * MAGNA-SIRGAS / Yopal urban grid
-     * Extent: Colombia - Yopal city.
-     */
-    public const EPSG_MAGNA_SIRGAS_YOPAL_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6275';
-
-    /**
-     * Makassar (Jakarta) / NEIEZ
-     * Extent: Indonesia - south west Sulawesi
-     * Replaced by Greenwich-based Makassar / NEIEZ (CRS code 3002).
-     */
-    public const EPSG_MAKASSAR_JAKARTA_NEIEZ = 'urn:ogc:def:crs:EPSG::5331';
-
-    /**
-     * Makassar / NEIEZ
-     * Extent: Indonesia - south west Sulawesi.
-     */
-    public const EPSG_MAKASSAR_NEIEZ = 'urn:ogc:def:crs:EPSG::3002';
-
-    /**
-     * Malongo 1987 / UTM zone 32S
-     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
-     * Replaced Mhast (offshore) / UTM zone 32S (CRS code 3354) in 1987. References to "Mhast" since 1987 often should
-     * have stated "Malongo 1987".
-     */
-    public const EPSG_MALONGO_1987_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::25932';
-
-    /**
-     * Malongo 1987 / UTM zone 33S
-     * Extent: The Democratic Republic of the Congo (Zaire) - offshore.
-     */
-    public const EPSG_MALONGO_1987_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::7992';
-
-    /**
-     * MALS09 Grid
-     * Extent: UK - on or related to the rail route from London (Marylebone) to Leamington Spa
-     * Defined through transformation ETRS89-GBR [OSNet v2009] to MALS09-IRF (1) (code 10225) and map projection
-     * MALS09-TM (code 10226). Emulates the MALS09 Snake projection applied to ETRS89 as realized through OSNet v2009.
-     */
-    public const EPSG_MALS09_GRID = 'urn:ogc:def:crs:EPSG::10227';
-
-    /**
-     * Manoca 1962 / UTM zone 32N
-     * Extent: Cameroon - coastal area
-     * Replaces Douala 1948 / AOF west (code 2214). The intent of the Bukavu 1953 conference was to adopt the Clarke
-     * 1880 (RGN) ellipsoid (code 7012) but in practice this CRS has used the IGN version.
-     */
-    public const EPSG_MANOCA_1962_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::2215';
-
-    /**
-     * MARGEN / UTM zone 19S
-     * Extent: Bolivia - west of 66°W
-     * Replaces PSAD56 / UTM zone 19S (CRS code 24879) in Bolivia.
-     */
-    public const EPSG_MARGEN_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5356';
-
-    /**
-     * MARGEN / UTM zone 20S
-     * Extent: Bolivia between 66°W and 60°W
-     * Replaces PSAD56 / UTM zone 20S (CRS code 24880) in Bolivia.
-     */
-    public const EPSG_MARGEN_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::5355';
-
-    /**
      * MARGEN / UTM zone 21S
      * Extent: Bolivia - east of 60°W
      * Replaces PSAD56 / UTM zone 21S (CRS code 24881) in Bolivia.
@@ -714,6 +30,20 @@ trait ProjectedConstantsChunk2
      * Extent: Eritrea.
      */
     public const EPSG_MASSAWA_UTM_ZONE_37N = 'urn:ogc:def:crs:EPSG::26237';
+
+    /**
+     * MATRF2022e2020 / Guam and Northern Mariana Islands
+     * Extent: Guam - onshore. Northern Mariana Islands - onshore
+     * See code 24308 for equivalent CRS in (international) feet.
+     */
+    public const EPSG_MATRF2022E2020_GUAM_AND_NORTHERN_MARIANA_ISLANDS = 'urn:ogc:def:crs:EPSG::24307';
+
+    /**
+     * MATRF2022e2020 / Guam and Northern Mariana Islands (ft)
+     * Extent: Guam - onshore. Northern Mariana Islands - onshore
+     * See code 24307 for equivalent CRS in meters.
+     */
+    public const EPSG_MATRF2022E2020_GUAM_AND_NORTHERN_MARIANA_ISLANDS_FT = 'urn:ogc:def:crs:EPSG::24308';
 
     /**
      * Maupiti 83 / UTM zone 5S
@@ -1692,7 +1022,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / California zone I
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity.
      */
     public const EPSG_NAD27_CALIFORNIA_ZONE_I = 'urn:ogc:def:crs:EPSG::26741';
@@ -1706,14 +1036,14 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / California zone III
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
      */
     public const EPSG_NAD27_CALIFORNIA_ZONE_III = 'urn:ogc:def:crs:EPSG::26743';
 
     /**
      * NAD27 / California zone IV
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
      */
     public const EPSG_NAD27_CALIFORNIA_ZONE_IV = 'urn:ogc:def:crs:EPSG::26744';
 
@@ -1725,7 +1055,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / California zone VI
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego.
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego.
      */
     public const EPSG_NAD27_CALIFORNIA_ZONE_VI = 'urn:ogc:def:crs:EPSG::26746';
 
@@ -1850,8 +1180,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / Connecticut
-     * Extent: USA - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London;
-     * Tolland; Windham.
+     * Extent: USA - Connecticut.
      */
     public const EPSG_NAD27_CONNECTICUT = 'urn:ogc:def:crs:EPSG::26756';
 
@@ -1876,7 +1205,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / Delaware
-     * Extent: USA - Delaware - counties of Kent; New Castle; Sussex.
+     * Extent: USA - Delaware.
      */
     public const EPSG_NAD27_DELAWARE = 'urn:ogc:def:crs:EPSG::26757';
 
@@ -2362,16 +1691,13 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / New Hampshire
-     * Extent: USA - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack;
-     * Rockingham; Strafford; Sullivan.
+     * Extent: USA - New Hampshire.
      */
     public const EPSG_NAD27_NEW_HAMPSHIRE = 'urn:ogc:def:crs:EPSG::32010';
 
     /**
      * NAD27 / New Jersey
-     * Extent: USA - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex;
-     * Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex;
-     * Union; Warren.
+     * Extent: USA - New Jersey.
      */
     public const EPSG_NAD27_NEW_JERSEY = 'urn:ogc:def:crs:EPSG::32011';
 
@@ -2426,15 +1752,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / North Carolina
-     * Extent: USA - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie;
-     * Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee;
-     * Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham;
-     * Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood;
-     * Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison;
-     * Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange;
-     * Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan;
-     * Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren;
-     * Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey.
+     * Extent: USA - North Carolina.
      */
     public const EPSG_NAD27_NORTH_CAROLINA = 'urn:ogc:def:crs:EPSG::32019';
 
@@ -2532,7 +1850,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / Rhode Island
-     * Extent: USA - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington.
+     * Extent: USA - Rhode Island.
      */
     public const EPSG_NAD27_RHODE_ISLAND = 'urn:ogc:def:crs:EPSG::32030';
 
@@ -2579,14 +1897,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / Tennessee
-     * Extent: USA - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon;
-     * Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb;
-     * Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton;
-     * Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson;
-     * Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury;
-     * McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea;
-     * Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton;
-     * Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson.
+     * Extent: USA - Tennessee.
      */
     public const EPSG_NAD27_TENNESSEE = 'urn:ogc:def:crs:EPSG::2204';
 
@@ -2865,8 +2176,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD27 / Vermont
-     * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
-     * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor.
+     * Extent: USA - Vermont.
      */
     public const EPSG_NAD27_VERMONT = 'urn:ogc:def:crs:EPSG::32045';
 
@@ -3215,7 +2525,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 1
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity
      * State law defines use of US survey feet. See code 6416 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / California zone 1 (CRS code 3489).
@@ -3224,7 +2534,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 1 (ftUS)
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity
      * State law defines use of US survey feet. Federal definition is metric - see code 6415. Replaces NAD83(NSRS2007)
      * / California zone 1 (ftUS) (CRS code 3490).
@@ -3251,8 +2561,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 3
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
      * State law defines use of US survey feet. See code 6420 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / California zone 3 (CRS code 3493).
      */
@@ -3260,8 +2570,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 3 (ftUS)
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
      * State law defines use of US survey feet. Federal definition is metric - see code 6419. Replaces NAD83(NSRS2007)
      * / California zone 3 (ftUS) (CRS code 3494).
      */
@@ -3269,7 +2579,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 4
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
      * State law defines use of US survey feet. See code 6422 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / California zone 4 (CRS code 3495).
      */
@@ -3277,7 +2587,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 4 (ftUS)
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
      * State law defines use of US survey feet. Federal definition is metric - see code 6421. Replaces NAD83(NSRS2007)
      * / California zone 4 (ftUS) (CRS code 3496).
      */
@@ -3285,7 +2595,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 5
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
      * State law defines use of US survey feet. See code 6424 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / California zone 5 (CRS code 3497).
      */
@@ -3293,7 +2604,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 5 (ftUS)
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
      * State law defines use of US survey feet. Federal definition is metric - see code 6423. Replaces NAD83(NSRS2007)
      * / California zone 5 (ftUS) (CRS code 3498).
      */
@@ -3301,7 +2613,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 6
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
      * State law defines use of US survey feet. See code 6426 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / California zone 6 (CRS code 3499).
      */
@@ -3309,7 +2621,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / California zone 6 (ftUS)
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
      * State law defines use of US survey feet. Federal definition is metric - see code 6425. Replaces NAD83(NSRS2007)
      * / California zone 6 (ftUS) (CRS code 3500).
      */
@@ -3375,8 +2687,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Connecticut
-     * Extent: USA - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London;
-     * Tolland; Windham
+     * Extent: USA - Connecticut
      * State law defines use of US survey feet. See code 6434 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / Connecticut (CRS code 3507).
      */
@@ -3384,8 +2695,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Connecticut (ftUS)
-     * Extent: USA - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London;
-     * Tolland; Windham
+     * Extent: USA - Connecticut
      * State law defines use of US survey feet. Federal definition is metric - see code 6433. Replaces NAD83(NSRS2007)
      * / Connecticut (ftUS) (CRS code 3508).
      */
@@ -3400,7 +2710,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Delaware
-     * Extent: USA - Delaware - counties of Kent; New Castle; Sussex
+     * Extent: USA - Delaware
      * State law defines use of US survey feet. See code 6436 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / Delaware (CRS code 3509).
      */
@@ -3408,7 +2718,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Delaware (ftUS)
-     * Extent: USA - Delaware - counties of Kent; New Castle; Sussex
+     * Extent: USA - Delaware
      * State law defines use of US survey feet. Federal definition is metric - see code 6435. Replaces NAD83(NSRS2007)
      * / Delaware (ftUS) (CRS code 3510).
      */
@@ -5716,12 +5026,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Montana
-     * Extent: USA - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau;
-     * Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley;
-     * Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher;
-     * Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli;
-     * Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure;
-     * Valley; Wheatland; Wibaux; Yellowstone
+     * Extent: USA - Montana
      * State law defines use of International feet (note: not US survey feet). See code 6515 for equivalent non-metric
      * definition. Replaces NAD83(NSRS2007) / Montana (CRS code 3604).
      */
@@ -5729,12 +5034,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Montana (ft)
-     * Extent: USA - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau;
-     * Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley;
-     * Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher;
-     * Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli;
-     * Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure;
-     * Valley; Wheatland; Wibaux; Yellowstone
+     * Extent: USA - Montana
      * State law defines use of International feet (note: not US survey feet). Federal definition is metric - see code
      * 6514. Replaces NAD83(NSRS2007) / Montana (ft) (CRS code 3605).
      */
@@ -5774,14 +5074,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Nebraska
-     * Extent: USA - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown;
-     * Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes;
-     * Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield;
-     * Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson;
-     * Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill;
-     * Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock;
-     * Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston;
-     * Valley; Washington; Wayne; Webster; Wheeler; York
+     * Extent: USA - Nebraska
      * State law defines system in US survey feet. See CRS code 6517 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / Nebraska (CRS code 3606).
      */
@@ -5789,14 +5082,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Nebraska (ftUS)
-     * Extent: USA - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown;
-     * Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes;
-     * Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield;
-     * Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson;
-     * Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill;
-     * Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock;
-     * Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston;
-     * Valley; Washington; Wayne; Webster; Wheeler; York
+     * Extent: USA - Nebraska
      * State law defines use of US survey feet. Federal definition is metric - see code 6516. Replaces NAD83(NSRS2007)
      * / Nebraska (ftUS) (CRS code 26868).
      */
@@ -5854,8 +5140,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / New Hampshire
-     * Extent: USA - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack;
-     * Rockingham; Strafford; Sullivan
+     * Extent: USA - New Hampshire
      * State law defines use of US survey feet. See code 6525 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / New Hampshire (CRS code 3613).
      */
@@ -5863,8 +5148,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / New Hampshire (ftUS)
-     * Extent: USA - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack;
-     * Rockingham; Strafford; Sullivan
+     * Extent: USA - New Hampshire
      * State law defines use of US survey feet. Federal definition is metric - see code 6524. Replaces NAD83(NSRS2007)
      * / New Hampshire (ftUS) (CRS code 3614).
      */
@@ -5872,9 +5156,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / New Jersey
-     * Extent: USA - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex;
-     * Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex;
-     * Union; Warren
+     * Extent: USA - New Jersey
      * State law defines use of US survey feet. See code 6527 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / New Jersey (CRS code 3615).
      */
@@ -5882,9 +5164,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / New Jersey (ftUS)
-     * Extent: USA - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex;
-     * Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex;
-     * Union; Warren
+     * Extent: USA - New Jersey
      * State law defines use of US survey feet. Federal definition is metric - see code 6526. Replaces NAD83(NSRS2007)
      * / New Jersey (ftUS) (CRS code 3616).
      */
@@ -6016,15 +5296,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / North Carolina
-     * Extent: USA - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie;
-     * Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee;
-     * Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham;
-     * Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood;
-     * Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison;
-     * Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange;
-     * Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan;
-     * Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren;
-     * Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey
+     * Extent: USA - North Carolina
      * State law defines use of US survey feet. See CRS code 6543 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / North Carolina (CRS code 3631).
      */
@@ -6032,15 +5304,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / North Carolina (ftUS)
-     * Extent: USA - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie;
-     * Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee;
-     * Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham;
-     * Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood;
-     * Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison;
-     * Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange;
-     * Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan;
-     * Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren;
-     * Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey
+     * Extent: USA - North Carolina
      * State law defines use of US survey feet. Federal definition is metric - see CRS code 6542. Replaces
      * NAD83(NSRS2007) / North Carolina (ftUS) (CRS code 3632).
      */
@@ -6936,7 +6200,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Rhode Island
-     * Extent: USA - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington
+     * Extent: USA - Rhode Island
      * State law defines use of US survey feet. See code 6568 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / Rhode Island (CRS code 3653).
      */
@@ -6944,7 +6208,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Rhode Island (ftUS)
-     * Extent: USA - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington
+     * Extent: USA - Rhode Island
      * State law defines use of US survey feet. Federal definition is metric - see code 6567. Replaces NAD83(NSRS2007)
      * / Rhode Island (ftUS) (CRS code 3654).
      */
@@ -7294,11 +6558,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / South Carolina
-     * Extent: USA - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort;
-     * Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon;
-     * Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw;
-     * Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens;
-     * Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York
+     * Extent: USA - South Carolina
      * State law defines use of International feet (note: not US survey feet). See code 6570 for equivalent non-metric
      * definition. Replaces NAD83(NSRS2007) / South Carolina (CRS code 3655).
      */
@@ -7306,11 +6566,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / South Carolina (ft)
-     * Extent: USA - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort;
-     * Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon;
-     * Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw;
-     * Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens;
-     * Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York
+     * Extent: USA - South Carolina
      * State law defines use of International feet (note: not US survey feet). Federal definition is metric - see code
      * 6569. Replaces NAD83(NSRS2007) / South Carolina (ft) (CRS code 3656).
      */
@@ -7360,14 +6616,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Tennessee
-     * Extent: USA - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon;
-     * Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb;
-     * Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton;
-     * Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson;
-     * Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury;
-     * McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea;
-     * Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton;
-     * Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson
+     * Extent: USA - Tennessee
      * State law defines use of US survey feet. See code 6576 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / Tennessee (CRS code 3661).
      */
@@ -7375,14 +6624,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Tennessee (ftUS)
-     * Extent: USA - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon;
-     * Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb;
-     * Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton;
-     * Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson;
-     * Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury;
-     * McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea;
-     * Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton;
-     * Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson
+     * Extent: USA - Tennessee
      * State law defines use of US survey feet. Federal definition is metric - see code 6575. Replaces NAD83(NSRS2007)
      * / Tennessee (ftUS) (CRS code 3662).
      */
@@ -7732,8 +6974,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Vermont
-     * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
-     * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor
+     * Extent: USA - Vermont
      * State law defines use of US survey feet. See code 6590 for equivalent non-metric definition. Replaces
      * NAD83(NSRS2007) / Vermont (CRS code 3684).
      */
@@ -7741,8 +6982,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / Vermont (ftUS)
-     * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
-     * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor
+     * Extent: USA - Vermont
      * State law defines use of US survey feet. Federal definition is metric - see code 6589. Replaces NAD83(NSRS2007)
      * / Vermont (ftUS) (CRS code 5655).
      */
@@ -9373,7 +8613,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 1
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity
      * State law defines system in US survey feet. See code 2225 for equivalent non-metric definition. For applications
      * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
@@ -9382,7 +8622,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 1 (ftUS)
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity
      * State law defines system in US survey feet. Federal definition is metric - see code 26941. For applications with
      * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
@@ -9409,8 +8649,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 3
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
      * State law defines system in US survey feet. See code 2227 for equivalent non-metric definition. For applications
      * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
@@ -9418,8 +8658,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 3 (ftUS)
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
      * State law defines system in US survey feet. Federal definition is metric - see code 26943. For applications with
      * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
@@ -9427,7 +8667,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 4
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
      * State law defines system in US survey feet. See code 2228 for equivalent non-metric definition. For applications
      * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
@@ -9435,7 +8675,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 4 (ftUS)
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
      * State law defines system in US survey feet. Federal definition is metric - see code 26944. For applications with
      * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
@@ -9443,7 +8683,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 5
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
      * State law defines system in US survey feet. See code 2229 for equivalent non-metric definition. For applications
      * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
@@ -9451,7 +8692,8 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 5 (ftUS)
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
      * State law defines system in US survey feet. Federal definition is metric - see code 26945. For applications with
      * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
@@ -9459,7 +8701,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 6
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
      * State law defines system in US survey feet. See code 2230 for equivalent non-metric definition. For applications
      * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
@@ -9467,7 +8709,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / California zone 6 (ftUS)
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
      * State law defines system in US survey feet. Federal definition is metric - see code 26946. For applications with
      * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
@@ -9543,8 +8785,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / Connecticut
-     * Extent: USA - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London;
-     * Tolland; Windham
+     * Extent: USA - Connecticut
      * State law defines system in US survey feet. See code 2234 for equivalent non-metric definition. For applications
      * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
      */
@@ -9552,8 +8793,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83 / Connecticut (ftUS)
-     * Extent: USA - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London;
-     * Tolland; Windham
+     * Extent: USA - Connecticut
      * State law defines system in US survey feet. Federal definition is metric - see code 26956. For applications with
      * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
      */
@@ -11284,4 +10524,2317 @@ trait ProjectedConstantsChunk2
      * UTM zone 11N (CRS code 22711) is encouraged in these rural areas.
      */
     public const EPSG_NAD83_CSRS_V7_ALBERTA_3TM_REF_MERID_120_W = 'urn:ogc:def:crs:EPSG::22765';
+
+    /**
+     * NAD83(CSRS)v7 / PEI Stereographic
+     * Extent: Canada - Prince Edward Island.
+     */
+    public const EPSG_NAD83_CSRS_V7_PEI_STEREOGRAPHIC = 'urn:ogc:def:crs:EPSG::22739';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22710';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
+     * Adopted by the Canadian federal government in 2017 and the provincial government of Alberta in 2021.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22711';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2017 and the provincial government of Alberta in 2021.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22712';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22713';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22714';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22715';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22716';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22717';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22718';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22719';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
+     * Quebec
+     * Adopted by the Canadian federal government in 2017 and the provincial government of Prince Edward Island in
+     * 2020.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22720';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22721';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22722';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 7N
+     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22707';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22708';
+
+    /**
+     * NAD83(CSRS)v7 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Adopted by the Canadian federal government in 2017.
+     */
+    public const EPSG_NAD83_CSRS_V7_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22709';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 10N
+     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22810';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 11N
+     * Extent: Canada between 120°W and 114°W - Alberta, British Columbia, Northwest Territories, Nunavut
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::22811';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 12N
+     * Extent: Canada between 114°W and 108°W - Alberta, Northwest Territories, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::22812';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 13N
+     * Extent: Canada between 108°W and 102°W - Northwest Territories, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::22813';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 14N
+     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22814';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 15N
+     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22815';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 16N
+     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22816';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 17N
+     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22817';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 18N
+     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22818';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 19N
+     * Extent: Canada between 72°W and 66°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::22819';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 20N
+     * Extent: Canada between 66°W and 60°W - New Brunswick, Labrador, Nova Scotia, Nunavut, Prince Edward Island,
+     * Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::22820';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 21N
+     * Extent: Canada between 60°W and 54°W - Newfoundland and Labrador; Nunavut; Quebec
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::22821';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 22N
+     * Extent: Canada between 54°W and 48°W - Newfoundland and Labrador
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::22822';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 7N
+     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22807';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 8N
+     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22808';
+
+    /**
+     * NAD83(CSRS)v8 / UTM zone 9N
+     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Adopted by the Canadian federal government in 2023.
+     */
+    public const EPSG_NAD83_CSRS_V8_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22809';
+
+    /**
+     * NAD83(CSRS) / Yukon Albers
+     * Extent: Canada - Yukon
+     * This CRS may sometimes be called "NAD83 / Yukon Albers". That is the name of a different system (see CRS code
+     * 3578) but at the scales involved the positional difference of under 2 metres may not be significant.
+     */
+    public const EPSG_NAD83_CSRS_YUKON_ALBERS = 'urn:ogc:def:crs:EPSG::3579';
+
+    /**
+     * NAD83 / Delaware
+     * Extent: USA - Delaware
+     * State law defines system in US survey feet. See code 2235 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_DELAWARE = 'urn:ogc:def:crs:EPSG::26957';
+
+    /**
+     * NAD83 / Delaware (ftUS)
+     * Extent: USA - Delaware
+     * State law defines system in US survey feet. Federal definition is metric - see code 26957. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_DELAWARE_FTUS = 'urn:ogc:def:crs:EPSG::2235';
+
+    /**
+     * NAD83 / Florida East
+     * Extent: USA - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry;
+     * Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam;
+     * Seminole; St Johns; St Lucie; Volusia
+     * State law defines system in US survey feet. See code 2236 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_EAST = 'urn:ogc:def:crs:EPSG::26958';
+
+    /**
+     * NAD83 / Florida East (ftUS)
+     * Extent: USA - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry;
+     * Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam;
+     * Seminole; St Johns; St Lucie; Volusia
+     * State law defines system in US survey feet. Federal definition is metric - see code 26958. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2236';
+
+    /**
+     * NAD83 / Florida GDL Albers
+     * Extent: USA - Florida
+     * For applications with an accuracy of better than 1m, replaced by NAD83(HARN) / Florida GDL Albers.
+     */
+    public const EPSG_NAD83_FLORIDA_GDL_ALBERS = 'urn:ogc:def:crs:EPSG::3086';
+
+    /**
+     * NAD83 / Florida North
+     * Extent: USA - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin;
+     * Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa;
+     * Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington
+     * State law defines system in US survey feet. See code 2238 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_NORTH = 'urn:ogc:def:crs:EPSG::26960';
+
+    /**
+     * NAD83 / Florida North (ftUS)
+     * Extent: USA - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin;
+     * Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa;
+     * Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 26960. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2238';
+
+    /**
+     * NAD83 / Florida West
+     * Extent: USA - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy;
+     * Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter
+     * State law defines system in US survey feet. See code 2237 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_WEST = 'urn:ogc:def:crs:EPSG::26959';
+
+    /**
+     * NAD83 / Florida West (ftUS)
+     * Extent: USA - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy;
+     * Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter
+     * State law defines system in US survey feet. Federal definition is metric - see code 26959. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_FLORIDA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2237';
+
+    /**
+     * NAD83 / Georgia East
+     * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
+     * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
+     * State law defines system in US survey feet. See code 2239 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_EAST = 'urn:ogc:def:crs:EPSG::26966';
+
+    /**
+     * NAD83 / Georgia East (ftUS)
+     * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
+     * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
+     * State law defines system in US survey feet. Federal definition is metric - see code 26966. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2239';
+
+    /**
+     * NAD83 / Georgia West
+     * Extent: USA - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks;
+     * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
+     * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
+     * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
+     * State law defines system in US survey feet. See code 2240 for equivalent non-metric definition. For applications
+     * with an accuracy of better than 1m, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_WEST = 'urn:ogc:def:crs:EPSG::26967';
+
+    /**
+     * NAD83 / Georgia West (ftUS)
+     * Extent: USA - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks;
+     * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
+     * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
+     * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
+     * State law defines system in US survey feet. Federal definition is metric - see code 26967. For applications with
+     * an accuracy of better than 3 feet, replaced by NAD83(HARN) / SPCS.
+     */
+    public const EPSG_NAD83_GEORGIA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2240';
+
+    /**
+     * NAD83 / Great Lakes Albers
+     * Extent: Canada and USA - Great Lakes basin.
+     */
+    public const EPSG_NAD83_GREAT_LAKES_ALBERS = 'urn:ogc:def:crs:EPSG::3174';
+
+    /**
+     * NAD83 / Great Lakes and St Lawrence Albers
+     * Extent: Canada and USA - Great Lakes basin and St Lawrence Seaway.
+     */
+    public const EPSG_NAD83_GREAT_LAKES_AND_ST_LAWRENCE_ALBERS = 'urn:ogc:def:crs:EPSG::3175';
+
+    /**
+     * NAD83(HARN) / Alabama East
+     * Extent: USA - Alabama east of approximately 86°37'W - counties Barbour; Bullock; Calhoun; Chambers; Cherokee;
+     * Clay; Cleburne; Coffee; Coosa; Covington; Crenshaw; Dale; De Kalb; Elmore; Etowah; Geneva; Henry; Houston;
+     * Jackson; Lee; Macon; Madison; Marshall; Montgomery; Pike; Randolph; Russell; St Clair; Talladega; Tallapoosa
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ALABAMA_EAST = 'urn:ogc:def:crs:EPSG::2759';
+
+    /**
+     * NAD83(HARN) / Alabama West
+     * Extent: USA - Alabama west of approximately 86°37'W - counties Autauga; Baldwin; Bibb; Blount; Butler; Chilton;
+     * Choctaw; Clarke; Colbert; Conecuh; Cullman; Dallas; Escambia; Fayette; Franklin; Greene; Hale; Jefferson; Lamar;
+     * Lauderdale; Lawrence; Limestone; Lowndes; Marengo; Marion; Mobile; Monroe; Morgan; Perry; Pickens; Shelby;
+     * Sumter; Tuscaloosa; Walker; Washington; Wilcox; Winston
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ALABAMA_WEST = 'urn:ogc:def:crs:EPSG::2760';
+
+    /**
+     * NAD83(HARN) / Arizona Central
+     * Extent: USA - Arizona - counties Coconino; Maricopa; Pima; Pinal; Santa Cruz; Yavapai
+     * State law defines system in International feet (note: not US survey feet). See code 2868 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARIZONA_CENTRAL = 'urn:ogc:def:crs:EPSG::2762';
+
+    /**
+     * NAD83(HARN) / Arizona Central (ft)
+     * Extent: USA - Arizona - counties Coconino; Maricopa; Pima; Pinal; Santa Cruz; Yavapai
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2762. Replaces NAD83 / SPCS for applications with an accuracy of better than 3ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARIZONA_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::2868';
+
+    /**
+     * NAD83(HARN) / Arizona East
+     * Extent: USA - Arizona - counties Apache; Cochise; Gila; Graham; Greenlee; Navajo
+     * State law defines system in International feet (note: not US survey feet). See code 2867 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARIZONA_EAST = 'urn:ogc:def:crs:EPSG::2761';
+
+    /**
+     * NAD83(HARN) / Arizona East (ft)
+     * Extent: USA - Arizona - counties Apache; Cochise; Gila; Graham; Greenlee; Navajo
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2761. Replaces NAD83 / SPCS for applications with an accuracy of better than 3ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARIZONA_EAST_FT = 'urn:ogc:def:crs:EPSG::2867';
+
+    /**
+     * NAD83(HARN) / Arizona West
+     * Extent: USA - Arizona - counties of La Paz; Mohave; Yuma
+     * State law defines system in International feet (note: not US survey feet). See code 2869 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARIZONA_WEST = 'urn:ogc:def:crs:EPSG::2763';
+
+    /**
+     * NAD83(HARN) / Arizona West (ft)
+     * Extent: USA - Arizona - counties of La Paz; Mohave; Yuma
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2763. Replaces NAD83 / SPCS for applications with an accuracy of better than 3ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARIZONA_WEST_FT = 'urn:ogc:def:crs:EPSG::2869';
+
+    /**
+     * NAD83(HARN) / Arkansas North
+     * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
+     * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
+     * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell
+     * State law defines system in US survey feet. See code 3441 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARKANSAS_NORTH = 'urn:ogc:def:crs:EPSG::2764';
+
+    /**
+     * NAD83(HARN) / Arkansas North (ftUS)
+     * Extent: USA - Arkansas - counties of Baxter; Benton; Boone; Carroll; Clay; Cleburne; Conway; Craighead;
+     * Crawford; Crittenden; Cross; Faulkner; Franklin; Fulton; Greene; Independence; Izard; Jackson; Johnson;
+     * Lawrence; Logan; Madison; Marion; Mississippi; Newton; Perry; Poinsett; Pope; Pulaski; Randolph; Scott; Searcy;
+     * Sebastian; Sharp; St Francis; Stone; Van Buren; Washington; White; Woodruff; Yell
+     * State law defines system in US survey feet. Federal definition is metric - see code 2764. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARKANSAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3441';
+
+    /**
+     * NAD83(HARN) / Arkansas South
+     * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
+     * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union
+     * State law defines system in US survey feet. See code 3442 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARKANSAS_SOUTH = 'urn:ogc:def:crs:EPSG::2765';
+
+    /**
+     * NAD83(HARN) / Arkansas South (ftUS)
+     * Extent: USA - Arkansas - counties Arkansas; Ashley; Bradley; Calhoun; Chicot; Clark; Cleveland; Columbia;
+     * Dallas; Desha; Drew; Garland; Grant; Hempstead; Hot Spring; Howard; Jefferson; Lafayette; Lee; Lincoln; Little
+     * River; Lonoke; Miller; Monroe; Montgomery; Nevada; Ouachita; Phillips; Pike; Polk; Prairie; Saline; Sevier;
+     * Union
+     * State law defines system in US survey feet. Federal definition is metric - see code 2765. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ARKANSAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3442';
+
+    /**
+     * NAD83(HARN) / California Albers
+     * Extent: USA - California
+     * Replaces NAD83 / California Albers for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / California Albers.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ALBERS = 'urn:ogc:def:crs:EPSG::3311';
+
+    /**
+     * NAD83(HARN) / California zone 1
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Trinity
+     * State law defines system in US survey feet. See code 2870 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_1 = 'urn:ogc:def:crs:EPSG::2766';
+
+    /**
+     * NAD83(HARN) / California zone 1 (ftUS)
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Trinity
+     * State law defines system in US survey feet. Federal definition is metric - see code 2766. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_1_FTUS = 'urn:ogc:def:crs:EPSG::2870';
+
+    /**
+     * NAD83(HARN) / California zone 2
+     * Extent: USA - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa;
+     * Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba
+     * State law defines system in US survey feet. See code 2871 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_2 = 'urn:ogc:def:crs:EPSG::2767';
+
+    /**
+     * NAD83(HARN) / California zone 2 (ftUS)
+     * Extent: USA - California - counties of Alpine; Amador; Butte; Colusa; El Dorado; Glenn; Lake; Mendocino; Napa;
+     * Nevada; Placer; Sacramento; Sierra; Solano; Sonoma; Sutter; Yolo; Yuba
+     * State law defines system in US survey feet. Federal definition is metric - see code 2767. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_2_FTUS = 'urn:ogc:def:crs:EPSG::2871';
+
+    /**
+     * NAD83(HARN) / California zone 3
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * State law defines system in US survey feet. See code 2872 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_3 = 'urn:ogc:def:crs:EPSG::2768';
+
+    /**
+     * NAD83(HARN) / California zone 3 (ftUS)
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * State law defines system in US survey feet. Federal definition is metric - see code 2768. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_3_FTUS = 'urn:ogc:def:crs:EPSG::2872';
+
+    /**
+     * NAD83(HARN) / California zone 4
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * State law defines system in US survey feet. See code 2873 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_4 = 'urn:ogc:def:crs:EPSG::2769';
+
+    /**
+     * NAD83(HARN) / California zone 4 (ftUS)
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * State law defines system in US survey feet. Federal definition is metric - see code 2769. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_4_FTUS = 'urn:ogc:def:crs:EPSG::2873';
+
+    /**
+     * NAD83(HARN) / California zone 5
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
+     * State law defines system in US survey feet. See code 2874 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_5 = 'urn:ogc:def:crs:EPSG::2770';
+
+    /**
+     * NAD83(HARN) / California zone 5 (ftUS)
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
+     * State law defines system in US survey feet. Federal definition is metric - see code 2770. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_5_FTUS = 'urn:ogc:def:crs:EPSG::2874';
+
+    /**
+     * NAD83(HARN) / California zone 6
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
+     * State law defines system in US survey feet. See code 2875 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_6 = 'urn:ogc:def:crs:EPSG::2771';
+
+    /**
+     * NAD83(HARN) / California zone 6 (ftUS)
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
+     * State law defines system in US survey feet. Federal definition is metric - see code 2771. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CALIFORNIA_ZONE_6_FTUS = 'urn:ogc:def:crs:EPSG::2875';
+
+    /**
+     * NAD83(HARN) / Colorado Central
+     * Extent: USA - Colorado - counties Arapahoe; Chaffee; Cheyenne; Clear Creek; Delta; Denver; Douglas; Eagle; El
+     * Paso; Elbert; Fremont; Garfield; Gunnison; Jefferson; Kit Carson; Lake; Lincoln; Mesa; Park; Pitkin; Summit;
+     * Teller
+     * State law defines system in US survey feet. See code 2877 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_COLORADO_CENTRAL = 'urn:ogc:def:crs:EPSG::2773';
+
+    /**
+     * NAD83(HARN) / Colorado Central (ftUS)
+     * Extent: USA - Colorado - counties Arapahoe; Chaffee; Cheyenne; Clear Creek; Delta; Denver; Douglas; Eagle; El
+     * Paso; Elbert; Fremont; Garfield; Gunnison; Jefferson; Kit Carson; Lake; Lincoln; Mesa; Park; Pitkin; Summit;
+     * Teller
+     * State law defines system in US survey feet. Federal definition is metric - see code 2773. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_COLORADO_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2877';
+
+    /**
+     * NAD83(HARN) / Colorado North
+     * Extent: USA - Colorado - counties Adams; Boulder; Gilpin; Grand; Jackson; Larimer; Logan; Moffat; Morgan;
+     * Phillips; Rio Blanco; Routt; Sedgwick; Washington; Weld; Yuma
+     * State law defines system in US survey feet. See code 2876 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_COLORADO_NORTH = 'urn:ogc:def:crs:EPSG::2772';
+
+    /**
+     * NAD83(HARN) / Colorado North (ftUS)
+     * Extent: USA - Colorado - counties Adams; Boulder; Gilpin; Grand; Jackson; Larimer; Logan; Moffat; Morgan;
+     * Phillips; Rio Blanco; Routt; Sedgwick; Washington; Weld; Yuma
+     * State law defines system in US survey feet. Federal definition is metric - see code 2772. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_COLORADO_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2876';
+
+    /**
+     * NAD83(HARN) / Colorado South
+     * Extent: USA - Colorado - counties Alamosa; Archuleta; Baca; Bent; Conejos; Costilla; Crowley; Custer; Dolores;
+     * Hinsdale; Huerfano; Kiowa; La Plata; Las Animas; Mineral; Montezuma; Montrose; Otero; Ouray; Prowers; Pueblo;
+     * Rio Grande; Saguache; San Juan; San Miguel
+     * State law defines system in US survey feet. See code 2878 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_COLORADO_SOUTH = 'urn:ogc:def:crs:EPSG::2774';
+
+    /**
+     * NAD83(HARN) / Colorado South (ftUS)
+     * Extent: USA - Colorado - counties Alamosa; Archuleta; Baca; Bent; Conejos; Costilla; Crowley; Custer; Dolores;
+     * Hinsdale; Huerfano; Kiowa; La Plata; Las Animas; Mineral; Montezuma; Montrose; Otero; Ouray; Prowers; Pueblo;
+     * Rio Grande; Saguache; San Juan; San Miguel
+     * State law defines system in US survey feet. Federal definition is metric - see code 2774. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_COLORADO_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2878';
+
+    /**
+     * NAD83(HARN) / Connecticut
+     * Extent: USA - Connecticut
+     * State law defines system in US survey feet. See code 2879 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CONNECTICUT = 'urn:ogc:def:crs:EPSG::2775';
+
+    /**
+     * NAD83(HARN) / Connecticut (ftUS)
+     * Extent: USA - Connecticut
+     * State law defines system in US survey feet. Federal definition is metric - see code 2775. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_CONNECTICUT_FTUS = 'urn:ogc:def:crs:EPSG::2879';
+
+    /**
+     * NAD83(HARN) / Conus Albers
+     * Extent: USA - conterminous (contiguous) lower 48 states (CONUS) - onshore
+     * Replaces NAD83 / Conus Albers (CRS code 5070) for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / Conus Albers (CRS code 5072).
+     */
+    public const EPSG_NAD83_HARN_CONUS_ALBERS = 'urn:ogc:def:crs:EPSG::5071';
+
+    /**
+     * NAD83(HARN) / Delaware
+     * Extent: USA - Delaware
+     * State law defines system in US survey feet. See code 2880 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_DELAWARE = 'urn:ogc:def:crs:EPSG::2776';
+
+    /**
+     * NAD83(HARN) / Delaware (ftUS)
+     * Extent: USA - Delaware
+     * State law defines system in US survey feet. Federal definition is metric - see code 2776. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_DELAWARE_FTUS = 'urn:ogc:def:crs:EPSG::2880';
+
+    /**
+     * NAD83(HARN) / Florida East
+     * Extent: USA - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry;
+     * Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam;
+     * Seminole; St Johns; St Lucie; Volusia
+     * State law defines system in US survey feet. See code 2881 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_EAST = 'urn:ogc:def:crs:EPSG::2777';
+
+    /**
+     * NAD83(HARN) / Florida East (ftUS)
+     * Extent: USA - Florida - counties of Brevard; Broward; Clay; Collier; Dade; Duval; Flagler; Glades; Hendry;
+     * Highlands; Indian River; Lake; Martin; Monroe; Nassau; Okeechobee; Orange; Osceola; Palm Beach; Putnam;
+     * Seminole; St Johns; St Lucie; Volusia
+     * State law defines system in US survey feet. Federal definition is metric - see code 2777. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2881';
+
+    /**
+     * NAD83(HARN) / Florida GDL Albers
+     * Extent: USA - Florida
+     * Replaces NAD83 / Florida GDL Albers for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / Florida GDL Albers.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_GDL_ALBERS = 'urn:ogc:def:crs:EPSG::3087';
+
+    /**
+     * NAD83(HARN) / Florida North
+     * Extent: USA - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin;
+     * Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa;
+     * Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington
+     * State law defines system in US survey feet. See code 2883 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_NORTH = 'urn:ogc:def:crs:EPSG::2779';
+
+    /**
+     * NAD83(HARN) / Florida North (ftUS)
+     * Extent: USA - Florida - counties of Alachua; Baker; Bay; Bradford; Calhoun; Columbia; Dixie; Escambia; Franklin;
+     * Gadsden; Gilchrist; Gulf; Hamilton; Holmes; Jackson; Jefferson; Lafayette; Leon; Liberty; Madison; Okaloosa;
+     * Santa Rosa; Suwannee; Taylor; Union; Wakulla; Walton; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 2779. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2883';
+
+    /**
+     * NAD83(HARN) / Florida West
+     * Extent: USA - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy;
+     * Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter
+     * State law defines system in US survey feet. See code 2882 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_WEST = 'urn:ogc:def:crs:EPSG::2778';
+
+    /**
+     * NAD83(HARN) / Florida West (ftUS)
+     * Extent: USA - Florida - counties of Charlotte; Citrus; De Soto; Hardee; Hernando; Hillsborough; Lee; Levy;
+     * Manatee; Marion; Pasco; Pinellas; Polk; Sarasota; Sumter
+     * State law defines system in US survey feet. Federal definition is metric - see code 2778. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_FLORIDA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2882';
+
+    /**
+     * NAD83(HARN) / Georgia East
+     * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
+     * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
+     * State law defines system in US survey feet. See code 2884 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_GEORGIA_EAST = 'urn:ogc:def:crs:EPSG::2780';
+
+    /**
+     * NAD83(HARN) / Georgia East (ftUS)
+     * Extent: USA - Georgia - counties of Appling; Atkinson; Bacon; Baldwin; Brantley; Bryan; Bulloch; Burke; Camden;
+     * Candler; Charlton; Chatham; Clinch; Coffee; Columbia; Dodge; Echols; Effingham; Elbert; Emanuel; Evans;
+     * Franklin; Glascock; Glynn; Greene; Hancock; Hart; Jeff Davis; Jefferson; Jenkins; Johnson; Laurens; Liberty;
+     * Lincoln; Long; Madison; McDuffie; McIntosh; Montgomery; Oglethorpe; Pierce; Richmond; Screven; Stephens;
+     * Taliaferro; Tattnall; Telfair; Toombs; Treutlen; Ware; Warren; Washington; Wayne; Wheeler; Wilkes; Wilkinson
+     * State law defines system in US survey feet. Federal definition is metric - see code 2780. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_GEORGIA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2884';
+
+    /**
+     * NAD83(HARN) / Georgia West
+     * Extent: USA - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks;
+     * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
+     * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
+     * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
+     * State law defines system in US survey feet. See code 2885 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_GEORGIA_WEST = 'urn:ogc:def:crs:EPSG::2781';
+
+    /**
+     * NAD83(HARN) / Georgia West (ftUS)
+     * Extent: USA - Georgia - counties of Baker; Banks; Barrow; Bartow; Ben Hill; Berrien; Bibb; Bleckley; Brooks;
+     * Butts; Calhoun; Carroll; Catoosa; Chattahoochee; Chattooga; Cherokee; Clarke; Clay; Clayton; Cobb; Colquitt;
+     * Cook; Coweta; Crawford; Crisp; Dade; Dawson; De Kalb; Decatur; Dooly; Dougherty; Douglas; Early; Fannin;
+     * Fayette; Floyd; Forsyth; Fulton; Gilmer; Gordon; Grady; Gwinnett; Habersham; Hall; Haralson; Harris; Heard;
+     * Henry; Houston; Irwin; Jackson; Jasper; Jones; Lamar; Lanier; Lee; Lowndes; Lumpkin; Macon; Marion; Meriwether;
+     * Miller; Mitchell; Monroe; Morgan; Murray; Muscogee; Newton; Oconee; Paulding; Peach; Pickens; Pike; Polk;
+     * Pulaski; Putnam; Quitman; Rabun; Randolph; Rockdale; Schley; Seminole; Spalding; Stewart; Sumter; Talbot;
+     * Taylor; Terrell; Thomas; Tift; Towns; Troup; Turner; Twiggs; Union; Upson; Walker; Walton; Webster; White;
+     * Whitfield; Wilcox; Worth
+     * State law defines system in US survey feet. Federal definition is metric - see code 2781. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_GEORGIA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2885';
+
+    /**
+     * NAD83(HARN) / Guam Map Grid
+     * Extent: Guam - onshore
+     * Replaces Guam 1963 / SPCS (CRS code 3993) from 1995. Guam Public Law 23-31 uses the name "NAD83" for
+     * NAD83(HARN). NAD83 is a system realized only in North America and different to NAD83(HARN).
+     */
+    public const EPSG_NAD83_HARN_GUAM_MAP_GRID = 'urn:ogc:def:crs:EPSG::4414';
+
+    /**
+     * NAD83(HARN) / Hawaii zone 1
+     * Extent: USA - Hawaii - island of Hawaii - onshore
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m.
+     */
+    public const EPSG_NAD83_HARN_HAWAII_ZONE_1 = 'urn:ogc:def:crs:EPSG::2782';
+
+    /**
+     * NAD83(HARN) / Hawaii zone 2
+     * Extent: USA - Hawaii - Maui; Kahoolawe; Lanai; Molokai - onshore
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m.
+     */
+    public const EPSG_NAD83_HARN_HAWAII_ZONE_2 = 'urn:ogc:def:crs:EPSG::2783';
+
+    /**
+     * NAD83(HARN) / Hawaii zone 3
+     * Extent: USA - Hawaii - Oahu - onshore
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m.
+     */
+    public const EPSG_NAD83_HARN_HAWAII_ZONE_3 = 'urn:ogc:def:crs:EPSG::2784';
+
+    /**
+     * NAD83(HARN) / Hawaii zone 3 (ftUS)
+     * Extent: USA - Hawaii - Oahu - onshore
+     * State has no law defining grid unit; system therefore not recognised by Federal authorities. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 3ft.
+     */
+    public const EPSG_NAD83_HARN_HAWAII_ZONE_3_FTUS = 'urn:ogc:def:crs:EPSG::3760';
+
+    /**
+     * NAD83(HARN) / Hawaii zone 4
+     * Extent: USA - Hawaii - Kauai - onshore
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m.
+     */
+    public const EPSG_NAD83_HARN_HAWAII_ZONE_4 = 'urn:ogc:def:crs:EPSG::2785';
+
+    /**
+     * NAD83(HARN) / Hawaii zone 5
+     * Extent: USA - Hawaii - Niihau - onshore
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m.
+     */
+    public const EPSG_NAD83_HARN_HAWAII_ZONE_5 = 'urn:ogc:def:crs:EPSG::2786';
+
+    /**
+     * NAD83(HARN) / Idaho Central
+     * Extent: USA - Idaho - counties of Blaine; Butte; Camas; Cassia; Custer; Gooding; Jerome; Lemhi; Lincoln;
+     * Minidoka; Twin Falls
+     * State law defines system in US survey feet. See code 2887 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IDAHO_CENTRAL = 'urn:ogc:def:crs:EPSG::2788';
+
+    /**
+     * NAD83(HARN) / Idaho Central (ftUS)
+     * Extent: USA - Idaho - counties of Blaine; Butte; Camas; Cassia; Custer; Gooding; Jerome; Lemhi; Lincoln;
+     * Minidoka; Twin Falls
+     * State law defines system in US survey feet. Federal definition is metric - see code 2788. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IDAHO_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2887';
+
+    /**
+     * NAD83(HARN) / Idaho East
+     * Extent: USA - Idaho - counties of Bannock; Bear Lake; Bingham; Bonneville; Caribou; Clark; Franklin; Fremont;
+     * Jefferson; Madison; Oneida; Power; Teton
+     * State law defines system in US survey feet. See code 2886 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IDAHO_EAST = 'urn:ogc:def:crs:EPSG::2787';
+
+    /**
+     * NAD83(HARN) / Idaho East (ftUS)
+     * Extent: USA - Idaho - counties of Bannock; Bear Lake; Bingham; Bonneville; Caribou; Clark; Franklin; Fremont;
+     * Jefferson; Madison; Oneida; Power; Teton
+     * State law defines system in US survey feet. Federal definition is metric - see code 2787. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IDAHO_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2886';
+
+    /**
+     * NAD83(HARN) / Idaho West
+     * Extent: USA - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon; Clearwater; Elmore; Gem;
+     * Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington
+     * State law defines system in US survey feet. See code 2888 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IDAHO_WEST = 'urn:ogc:def:crs:EPSG::2789';
+
+    /**
+     * NAD83(HARN) / Idaho West (ftUS)
+     * Extent: USA - Idaho - counties of Ada; Adams; Benewah; Boise; Bonner; Boundary; Canyon; Clearwater; Elmore; Gem;
+     * Idaho; Kootenai; Latah; Lewis; Nez Perce; Owyhee; Payette; Shoshone; Valley; Washington
+     * State law defines system in US survey feet. Federal definition is metric - see code 2789. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IDAHO_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2888';
+
+    /**
+     * NAD83(HARN) / Illinois East
+     * Extent: USA - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb;
+     * De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton;
+     * Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston;
+     * Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash;
+     * Wayne; White; Will; Williamson
+     * State law defines system in US survey feet. See code 3443 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ILLINOIS_EAST = 'urn:ogc:def:crs:EPSG::2790';
+
+    /**
+     * NAD83(HARN) / Illinois East (ftUS)
+     * Extent: USA - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb;
+     * De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton;
+     * Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston;
+     * Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash;
+     * Wayne; White; Will; Williamson
+     * State law defines system in US survey feet. Federal definition is metric - see code 2790. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ILLINOIS_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3443';
+
+    /**
+     * NAD83(HARN) / Illinois West
+     * Extent: USA - Illinois - counties of Adams; Alexander; Bond; Brown; Bureau; Calhoun; Carroll; Cass; Christian;
+     * Clinton; Fulton; Greene; Hancock; Henderson; Henry; Jackson; Jersey; Jo Daviess; Knox; Lee; Logan; Macoupin;
+     * Madison; Marshall; Mason; McDonough; Menard; Mercer; Monroe; Montgomery; Morgan; Ogle; Peoria; Perry; Pike;
+     * Pulaski; Putnam; Randolph; Rock Island; Sangamon; Schuyler; Scott; St Clair; Stark; Stephenson; Tazewell; Union;
+     * Warren; Washington; Whiteside; Winnebago; Woodford
+     * State law defines system in US survey feet. See code 3444 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ILLINOIS_WEST = 'urn:ogc:def:crs:EPSG::2791';
+
+    /**
+     * NAD83(HARN) / Illinois West (ftUS)
+     * Extent: USA - Illinois - counties of Adams; Alexander; Bond; Brown; Bureau; Calhoun; Carroll; Cass; Christian;
+     * Clinton; Fulton; Greene; Hancock; Henderson; Henry; Jackson; Jersey; Jo Daviess; Knox; Lee; Logan; Macoupin;
+     * Madison; Marshall; Mason; McDonough; Menard; Mercer; Monroe; Montgomery; Morgan; Ogle; Peoria; Perry; Pike;
+     * Pulaski; Putnam; Randolph; Rock Island; Sangamon; Schuyler; Scott; St Clair; Stark; Stephenson; Tazewell; Union;
+     * Warren; Washington; Whiteside; Winnebago; Woodford
+     * State law defines system in US survey feet. Federal definition is metric - see code 2791. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_ILLINOIS_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3444';
+
+    /**
+     * NAD83(HARN) / Indiana East
+     * Extent: USA - Indiana - counties of Adams; Allen; Bartholomew; Blackford; Brown; Cass; Clark; De Kalb; Dearborn;
+     * Decatur; Delaware; Elkhart; Fayette; Floyd; Franklin; Fulton; Grant; Hamilton; Hancock; Harrison; Henry; Howard;
+     * Huntington; Jackson; Jay; Jefferson; Jennings; Johnson; Kosciusko; Lagrange; Madison; Marion; Marshall; Miami;
+     * Noble; Ohio; Randolph; Ripley; Rush; Scott; Shelby; St Joseph; Steuben; Switzerland; Tipton; Union; Wabash;
+     * Washington; Wayne; Wells; Whitley
+     * State law defines system in US survey feet. See code 2967 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_INDIANA_EAST = 'urn:ogc:def:crs:EPSG::2792';
+
+    /**
+     * NAD83(HARN) / Indiana East (ftUS)
+     * Extent: USA - Indiana - counties of Adams; Allen; Bartholomew; Blackford; Brown; Cass; Clark; De Kalb; Dearborn;
+     * Decatur; Delaware; Elkhart; Fayette; Floyd; Franklin; Fulton; Grant; Hamilton; Hancock; Harrison; Henry; Howard;
+     * Huntington; Jackson; Jay; Jefferson; Jennings; Johnson; Kosciusko; Lagrange; Madison; Marion; Marshall; Miami;
+     * Noble; Ohio; Randolph; Ripley; Rush; Scott; Shelby; St Joseph; Steuben; Switzerland; Tipton; Union; Wabash;
+     * Washington; Wayne; Wells; Whitley
+     * State law defines system in US survey feet. Federal definition is metric - see code 2792. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_INDIANA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2967';
+
+    /**
+     * NAD83(HARN) / Indiana West
+     * Extent: USA - Indiana - counties of Benton; Boone; Carroll; Clay; Clinton; Crawford; Daviess; Dubois; Fountain;
+     * Gibson; Greene; Hendricks; Jasper; Knox; La Porte; Lake; Lawrence; Martin; Monroe; Montgomery; Morgan; Newton;
+     * Orange; Owen; Parke; Perry; Pike; Porter; Posey; Pulaski; Putnam; Spencer; Starke; Sullivan; Tippecanoe;
+     * Vanderburgh; Vermillion; Vigo; Warren; Warrick; White
+     * State law defines system in US survey feet. See code 2968 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_INDIANA_WEST = 'urn:ogc:def:crs:EPSG::2793';
+
+    /**
+     * NAD83(HARN) / Indiana West (ftUS)
+     * Extent: USA - Indiana - counties of Benton; Boone; Carroll; Clay; Clinton; Crawford; Daviess; Dubois; Fountain;
+     * Gibson; Greene; Hendricks; Jasper; Knox; La Porte; Lake; Lawrence; Martin; Monroe; Montgomery; Morgan; Newton;
+     * Orange; Owen; Parke; Perry; Pike; Porter; Posey; Pulaski; Putnam; Spencer; Starke; Sullivan; Tippecanoe;
+     * Vanderburgh; Vermillion; Vigo; Warren; Warrick; White
+     * State law defines system in US survey feet. Federal definition is metric - see code 2793. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_INDIANA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2968';
+
+    /**
+     * NAD83(HARN) / Iowa North
+     * Extent: USA - Iowa - counties of Allamakee; Benton; Black Hawk; Boone; Bremer; Buchanan; Buena Vista; Butler;
+     * Calhoun; Carroll; Cerro Gordo; Cherokee; Chickasaw; Clay; Clayton; Crawford; Delaware; Dickinson; Dubuque;
+     * Emmet; Fayette; Floyd; Franklin; Greene; Grundy; Hamilton; Hancock; Hardin; Howard; Humboldt; Ida; Jackson;
+     * Jones; Kossuth; Linn; Lyon; Marshall; Mitchell; Monona; O'Brien; Osceola; Palo Alto; Plymouth; Pocahontas; Sac;
+     * Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright
+     * State law defines system in US survey feet. See code 3425 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IOWA_NORTH = 'urn:ogc:def:crs:EPSG::2794';
+
+    /**
+     * NAD83(HARN) / Iowa North (ftUS)
+     * Extent: USA - Iowa - counties of Allamakee; Benton; Black Hawk; Boone; Bremer; Buchanan; Buena Vista; Butler;
+     * Calhoun; Carroll; Cerro Gordo; Cherokee; Chickasaw; Clay; Clayton; Crawford; Delaware; Dickinson; Dubuque;
+     * Emmet; Fayette; Floyd; Franklin; Greene; Grundy; Hamilton; Hancock; Hardin; Howard; Humboldt; Ida; Jackson;
+     * Jones; Kossuth; Linn; Lyon; Marshall; Mitchell; Monona; O'Brien; Osceola; Palo Alto; Plymouth; Pocahontas; Sac;
+     * Sioux; Story; Tama; Webster; Winnebago; Winneshiek; Woodbury; Worth; Wright
+     * State law defines system in US survey feet. Federal definition is metric - see code 2794. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IOWA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3425';
+
+    /**
+     * NAD83(HARN) / Iowa South
+     * Extent: USA - Iowa - counties of Adair; Adams; Appanoose; Audubon; Cass; Cedar; Clarke; Clinton; Dallas; Davis;
+     * Decatur; Des Moines; Fremont; Guthrie; Harrison; Henry; Iowa; Jasper; Jefferson; Johnson; Keokuk; Lee; Louisa;
+     * Lucas; Madison; Mahaska; Marion; Mills; Monroe; Montgomery; Muscatine; Page; Polk; Pottawattamie; Poweshiek;
+     * Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne
+     * State law defines system in US survey feet. See code 3426 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IOWA_SOUTH = 'urn:ogc:def:crs:EPSG::2795';
+
+    /**
+     * NAD83(HARN) / Iowa South (ftUS)
+     * Extent: USA - Iowa - counties of Adair; Adams; Appanoose; Audubon; Cass; Cedar; Clarke; Clinton; Dallas; Davis;
+     * Decatur; Des Moines; Fremont; Guthrie; Harrison; Henry; Iowa; Jasper; Jefferson; Johnson; Keokuk; Lee; Louisa;
+     * Lucas; Madison; Mahaska; Marion; Mills; Monroe; Montgomery; Muscatine; Page; Polk; Pottawattamie; Poweshiek;
+     * Ringgold; Scott; Shelby; Taylor; Union; Van Buren; Wapello; Warren; Washington; Wayne
+     * State law defines system in US survey feet. Federal definition is metric - see code 2795. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_IOWA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3426';
+
+    /**
+     * NAD83(HARN) / Kansas North
+     * Extent: USA - Kansas - counties of Atchison; Brown; Cheyenne; Clay; Cloud; Decatur; Dickinson; Doniphan;
+     * Douglas; Ellis; Ellsworth; Geary; Gove; Graham; Jackson; Jefferson; Jewell; Johnson; Leavenworth; Lincoln;
+     * Logan; Marshall; Mitchell; Morris; Nemaha; Norton; Osborne; Ottawa; Phillips; Pottawatomie; Rawlins; Republic;
+     * Riley; Rooks; Russell; Saline; Shawnee; Sheridan; Sherman; Smith; Thomas; Trego; Wabaunsee; Wallace; Washington;
+     * Wyandotte
+     * State law defines system in US survey feet. See code 3427 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KANSAS_NORTH = 'urn:ogc:def:crs:EPSG::2796';
+
+    /**
+     * NAD83(HARN) / Kansas North (ftUS)
+     * Extent: USA - Kansas - counties of Atchison; Brown; Cheyenne; Clay; Cloud; Decatur; Dickinson; Doniphan;
+     * Douglas; Ellis; Ellsworth; Geary; Gove; Graham; Jackson; Jefferson; Jewell; Johnson; Leavenworth; Lincoln;
+     * Logan; Marshall; Mitchell; Morris; Nemaha; Norton; Osborne; Ottawa; Phillips; Pottawatomie; Rawlins; Republic;
+     * Riley; Rooks; Russell; Saline; Shawnee; Sheridan; Sherman; Smith; Thomas; Trego; Wabaunsee; Wallace; Washington;
+     * Wyandotte
+     * State law defines system in US survey feet. Federal definition is metric - see code 2796. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KANSAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3427';
+
+    /**
+     * NAD83(HARN) / Kansas South
+     * Extent: USA - Kansas - counties of Allen; Anderson; Barber; Barton; Bourbon; Butler; Chase; Chautauqua;
+     * Cherokee; Clark; Coffey; Comanche; Cowley; Crawford; Edwards; Elk; Finney; Ford; Franklin; Grant; Gray; Greeley;
+     * Greenwood; Hamilton; Harper; Harvey; Haskell; Hodgeman; Kearny; Kingman; Kiowa; Labette; Lane; Linn; Lyon;
+     * Marion; McPherson; Meade; Miami; Montgomery; Morton; Neosho; Ness; Osage; Pawnee; Pratt; Reno; Rice; Rush;
+     * Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson
+     * State law defines system in US survey feet. See code 3428 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KANSAS_SOUTH = 'urn:ogc:def:crs:EPSG::2797';
+
+    /**
+     * NAD83(HARN) / Kansas South (ftUS)
+     * Extent: USA - Kansas - counties of Allen; Anderson; Barber; Barton; Bourbon; Butler; Chase; Chautauqua;
+     * Cherokee; Clark; Coffey; Comanche; Cowley; Crawford; Edwards; Elk; Finney; Ford; Franklin; Grant; Gray; Greeley;
+     * Greenwood; Hamilton; Harper; Harvey; Haskell; Hodgeman; Kearny; Kingman; Kiowa; Labette; Lane; Linn; Lyon;
+     * Marion; McPherson; Meade; Miami; Montgomery; Morton; Neosho; Ness; Osage; Pawnee; Pratt; Reno; Rice; Rush;
+     * Scott; Sedgwick; Seward; Stafford; Stanton; Stevens; Sumner; Wichita; Wilson; Woodson
+     * State law defines system in US survey feet. Federal definition is metric - see code 2797. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KANSAS_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3428';
+
+    /**
+     * NAD83(HARN) / Kentucky North
+     * Extent: USA - Kentucky - counties of Anderson; Bath; Boone; Bourbon; Boyd; Bracken; Bullitt; Campbell; Carroll;
+     * Carter; Clark; Elliott; Fayette; Fleming; Franklin; Gallatin; Grant; Greenup; Harrison; Henry; Jefferson;
+     * Jessamine; Kenton; Lawrence; Lewis; Mason; Menifee; Montgomery; Morgan; Nicholas; Oldham; Owen; Pendleton;
+     * Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford
+     * State law defines system in US survey feet. See code 2891 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KENTUCKY_NORTH = 'urn:ogc:def:crs:EPSG::2798';
+
+    /**
+     * NAD83(HARN) / Kentucky North (ftUS)
+     * Extent: USA - Kentucky - counties of Anderson; Bath; Boone; Bourbon; Boyd; Bracken; Bullitt; Campbell; Carroll;
+     * Carter; Clark; Elliott; Fayette; Fleming; Franklin; Gallatin; Grant; Greenup; Harrison; Henry; Jefferson;
+     * Jessamine; Kenton; Lawrence; Lewis; Mason; Menifee; Montgomery; Morgan; Nicholas; Oldham; Owen; Pendleton;
+     * Robertson; Rowan; Scott; Shelby; Spencer; Trimble; Woodford
+     * State law defines system in US survey feet. Federal definition is metric - see code 2798. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KENTUCKY_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2891';
+
+    /**
+     * NAD83(HARN) / Kentucky Single Zone
+     * Extent: USA - Kentucky
+     * State law defines system in US survey feet. See code 3091 for equivalent non-metric definition. Replaces NAD83 /
+     * KY1Z for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / KY1Z.
+     */
+    public const EPSG_NAD83_HARN_KENTUCKY_SINGLE_ZONE = 'urn:ogc:def:crs:EPSG::3090';
+
+    /**
+     * NAD83(HARN) / Kentucky Single Zone (ftUS)
+     * Extent: USA - Kentucky
+     * State law defines system in US survey feet. See code 3090 for equivalent metric definition. Replaces NAD83 /
+     * KY1Z (ft) for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / KY1Z(ft).
+     */
+    public const EPSG_NAD83_HARN_KENTUCKY_SINGLE_ZONE_FTUS = 'urn:ogc:def:crs:EPSG::3091';
+
+    /**
+     * NAD83(HARN) / Kentucky South
+     * Extent: USA - Kentucky - counties of Adair; Allen; Ballard; Barren; Bell; Boyle; Breathitt; Breckinridge;
+     * Butler; Caldwell; Calloway; Carlisle; Casey; Christian; Clay; Clinton; Crittenden; Cumberland; Daviess;
+     * Edmonson; Estill; Floyd; Fulton; Garrard; Graves; Grayson; Green; Hancock; Hardin; Harlan; Hart; Henderson;
+     * Hickman; Hopkins; Jackson; Johnson; Knott; Knox; Larue; Laurel; Lee; Leslie; Letcher; Lincoln; Livingston;
+     * Logan; Lyon; Madison; Magoffin; Marion; Marshall; Martin; McCracken; McCreary; McLean; Meade; Mercer; Metcalfe;
+     * Monroe; Muhlenberg; Nelson; Ohio; Owsley; Perry; Pike; Powell; Pulaski; Rockcastle; Russell; Simpson; Taylor;
+     * Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe
+     * State law defines system in US survey feet. See code 2892 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KENTUCKY_SOUTH = 'urn:ogc:def:crs:EPSG::2799';
+
+    /**
+     * NAD83(HARN) / Kentucky South (ftUS)
+     * Extent: USA - Kentucky - counties of Adair; Allen; Ballard; Barren; Bell; Boyle; Breathitt; Breckinridge;
+     * Butler; Caldwell; Calloway; Carlisle; Casey; Christian; Clay; Clinton; Crittenden; Cumberland; Daviess;
+     * Edmonson; Estill; Floyd; Fulton; Garrard; Graves; Grayson; Green; Hancock; Hardin; Harlan; Hart; Henderson;
+     * Hickman; Hopkins; Jackson; Johnson; Knott; Knox; Larue; Laurel; Lee; Leslie; Letcher; Lincoln; Livingston;
+     * Logan; Lyon; Madison; Magoffin; Marion; Marshall; Martin; McCracken; McCreary; McLean; Meade; Mercer; Metcalfe;
+     * Monroe; Muhlenberg; Nelson; Ohio; Owsley; Perry; Pike; Powell; Pulaski; Rockcastle; Russell; Simpson; Taylor;
+     * Todd; Trigg; Union; Warren; Washington; Wayne; Webster; Whitley; Wolfe
+     * State law defines system in US survey feet. Federal definition is metric - see code 2799. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_KENTUCKY_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2892';
+
+    /**
+     * NAD83(HARN) / Louisiana North
+     * Extent: USA - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne;
+     * Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches;
+     * Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn
+     * State law defines system in US survey feet. See code 3456 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_LOUISIANA_NORTH = 'urn:ogc:def:crs:EPSG::2800';
+
+    /**
+     * NAD83(HARN) / Louisiana North (ftUS)
+     * Extent: USA - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne;
+     * Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches;
+     * Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn
+     * State law defines system in US survey feet. Federal definition is metric - see code 2800. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_LOUISIANA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3456';
+
+    /**
+     * NAD83(HARN) / Louisiana South
+     * Extent: USA - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East
+     * Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche;
+     * Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the
+     * Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton
+     * Rouge; West Feliciana
+     * Not applicable to offshore areas. State law defines system in US survey feet. See code 3457 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_LOUISIANA_SOUTH = 'urn:ogc:def:crs:EPSG::2801';
+
+    /**
+     * NAD83(HARN) / Louisiana South (ftUS)
+     * Extent: USA - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East
+     * Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche;
+     * Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the
+     * Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton
+     * Rouge; West Feliciana
+     * Not applicable to offshore areas. State law defines system in US survey feet. Federal definition is metric - see
+     * code 2801. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 feet. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_LOUISIANA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3457';
+
+    /**
+     * NAD83(HARN) / Maine CS2000 Central
+     * Extent: USA - Maine between approximately 69°40'W and 68°25'W. The area is bounded by the following: Beginning
+     * at the point determined by the intersection of the Maine State line and the County Line between Aroostook and
+     * Somerset Counties, thence northeasterly along the state line to the intersection of the Fort Kent - Frenchville
+     * town line, thence southerly along this town line to the intersection with the New Canada Plantation - T17 R5
+     * WELS town line, thence continuing southerly along town lines to the northeast corner of Penobscot County, thence
+     * continuing southerly along the Penobscot County line to the intersection of the Woodville - Mattawamkeag town
+     * line (being determined by the Penobscot River), thence along the Penobscot River to the Enfield - Lincoln town
+     * line, thence southeasterly along the Enfield - Lincoln town line and the Enfield - Lowell town line to the
+     * Passadumkeag - Edinburg town line, thence south-southeasterly along town lines to the intersection of the
+     * Hancock County line, thence southerly along the county line to the intersection of the Otis - Mariaville town
+     * line, thence southerly along the Otis - Mariaville town line to the Ellsworth city line, thence southerly along
+     * the Ellsworth city line to the intersection of the Surry - Trenton town line, thence southerly along the
+     * easterly town lines of Surry, Blue Hill, Brooklin, Deer Isle, and Stonington to the Knox County line, thence
+     * following the Knox County line to the boundary of the State of Maine as determined by Maritime law, thence
+     * following the State boundary westerly to the intersection of the Sagadahoc - Lincoln county line, thence
+     * northerly along the easterly boundary of the Maine 2000 West Zone, as defined, to the point of beginning
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_CS2000_CENTRAL = 'urn:ogc:def:crs:EPSG::3464';
+
+    /**
+     * NAD83(HARN) / Maine CS2000 East
+     * Extent: USA - Maine east of approximately 68°25'W. The area is bounded by the following: Beginning at the point
+     * determined by the intersection of the Maine State line and the Fort Kent - Frenchville town line, thence
+     * continuing easterly and then southerly along the state line to the boundary of the State of Maine as determined
+     * by Maritime law, thence following the State boundary westerly to the intersection of the Knox and Hancock County
+     * line, thence northerly along the easterly boundary of the Maine 2000 Central Zone, as defined, to the point of
+     * beginning
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_CS2000_EAST = 'urn:ogc:def:crs:EPSG::3075';
+
+    /**
+     * NAD83(HARN) / Maine CS2000 West
+     * Extent: USA - Maine west of approximately 69°40'W. The area is bounded by the following: Beginning at the point
+     * determined by the intersection of the Maine State line and the County Line between Aroostook and Somerset
+     * Counties, thence following the Somerset County line Easterly to the Northwest corner of the Somerset and
+     * Piscataquis county line, thence Southerly along this county line to the northeast corner of the Athens town
+     * line, thence westerly along the town line between Brighton Plantation and Athens to the westerly corner of
+     * Athens, and continuing southerly to the southwest corner of the town of Athens where it meets the Cornville town
+     * line, thence westerly along the Cornville - Solon town line to the intersection of the Cornville - Madison town
+     * line, thence southerly and westerly following the Madison town line to the intersection of the Norridgewock -
+     * Skowhegan town line, thence southerly along the Skowhegan town line to the Fairfield town line, thence easterly
+     * along the Fairfield town line to the Clinton town line (being determined by the Kennebec River), thence
+     * southerly along the Kennebec River to the Augusta city line, thence easterly along the city line to the Windsor
+     * town line, thence southerly along the Augusta - Windsor town line to the northwest corner of the Lincoln County
+     * line, thence southerly along the westerly Lincoln county line to the boundary of the State of Maine as
+     * determined by Maritime law, thence following the State boundary on the westerly side of the state to the point
+     * of beginning
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_CS2000_WEST = 'urn:ogc:def:crs:EPSG::3077';
+
+    /**
+     * NAD83(HARN) / Maine East
+     * Extent: USA - Maine - counties of Aroostook; Hancock; Knox; Penobscot; Piscataquis; Waldo; Washington
+     * State law defines system in US survey feet. See code 26855 for equivalent non-metric definition. Replaces NAD83
+     * / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_EAST = 'urn:ogc:def:crs:EPSG::2802';
+
+    /**
+     * NAD83(HARN) / Maine East (ftUS)
+     * Extent: USA - Maine - counties of Aroostook; Hancock; Knox; Penobscot; Piscataquis; Waldo; Washington
+     * State law defines use of US survey feet. Federal definition is metric - see code 2802. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_EAST_FTUS = 'urn:ogc:def:crs:EPSG::26855';
+
+    /**
+     * NAD83(HARN) / Maine West
+     * Extent: USA - Maine - counties of Androscoggin; Cumberland; Franklin; Kennebec; Lincoln; Oxford; Sagadahoc;
+     * Somerset; York
+     * State law defines system in US survey feet. See code 26856 for equivalent non-metric definition. Replaces NAD83
+     * / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_WEST = 'urn:ogc:def:crs:EPSG::2803';
+
+    /**
+     * NAD83(HARN) / Maine West (ftUS)
+     * Extent: USA - Maine - counties of Androscoggin; Cumberland; Franklin; Kennebec; Lincoln; Oxford; Sagadahoc;
+     * Somerset; York
+     * State law defines use of US survey feet. Federal definition is metric - see code 2803. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MAINE_WEST_FTUS = 'urn:ogc:def:crs:EPSG::26856';
+
+    /**
+     * NAD83(HARN) / Maryland
+     * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
+     * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
+     * State law defines system in US survey feet. See code 2893 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MARYLAND = 'urn:ogc:def:crs:EPSG::2804';
+
+    /**
+     * NAD83(HARN) / Maryland (ftUS)
+     * Extent: USA - Maryland - counties of Allegany; Anne Arundel; Baltimore; Calvert; Caroline; Carroll; Cecil;
+     * Charles; Dorchester; Frederick; Garrett; Harford; Howard; Kent; Montgomery; Prince Georges; Queen Annes;
+     * Somerset; St Marys; Talbot; Washington; Wicomico; Worcester. District of Columbia (DC)
+     * State law defines system in US survey feet. Federal definition is metric - see code 2804. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MARYLAND_FTUS = 'urn:ogc:def:crs:EPSG::2893';
+
+    /**
+     * NAD83(HARN) / Massachusetts Island
+     * Extent: USA - Massachusetts offshore - counties of Dukes; Nantucket
+     * State law defines system in US survey feet. See code 2895 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MASSACHUSETTS_ISLAND = 'urn:ogc:def:crs:EPSG::2806';
+
+    /**
+     * NAD83(HARN) / Massachusetts Island (ftUS)
+     * Extent: USA - Massachusetts offshore - counties of Dukes; Nantucket
+     * State law defines system in US survey feet. Federal definition is metric - see code 2806. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MASSACHUSETTS_ISLAND_FTUS = 'urn:ogc:def:crs:EPSG::2895';
+
+    /**
+     * NAD83(HARN) / Massachusetts Mainland
+     * Extent: USA - Massachusetts onshore - counties of Barnstable; Berkshire; Bristol; Essex; Franklin; Hampden;
+     * Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester
+     * State law defines system in US survey feet. See code 2894 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MASSACHUSETTS_MAINLAND = 'urn:ogc:def:crs:EPSG::2805';
+
+    /**
+     * NAD83(HARN) / Massachusetts Mainland (ftUS)
+     * Extent: USA - Massachusetts onshore - counties of Barnstable; Berkshire; Bristol; Essex; Franklin; Hampden;
+     * Hampshire; Middlesex; Norfolk; Plymouth; Suffolk; Worcester
+     * State law defines system in US survey feet. Federal definition is metric - see code 2805. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MASSACHUSETTS_MAINLAND_FTUS = 'urn:ogc:def:crs:EPSG::2894';
+
+    /**
+     * NAD83(HARN) / Michigan Central
+     * Extent: USA - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix; Cheboygan; Clare;
+     * Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason; Missaukee;
+     * Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford
+     * State law defines system in International feet (note: not US survey feet). See code 2897 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_CENTRAL = 'urn:ogc:def:crs:EPSG::2808';
+
+    /**
+     * NAD83(HARN) / Michigan Central (ft)
+     * Extent: USA - Michigan - counties of Alcona; Alpena; Antrim; Arenac; Benzie; Charlevoix; Cheboygan; Clare;
+     * Crawford; Emmet; Gladwin; Grand Traverse; Iosco; Kalkaska; Lake; Leelanau; Manistee; Mason; Missaukee;
+     * Montmorency; Ogemaw; Osceola; Oscoda; Otsego; Presque Isle; Roscommon; Wexford
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2808. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_CENTRAL_FT = 'urn:ogc:def:crs:EPSG::2897';
+
+    /**
+     * NAD83(HARN) / Michigan North
+     * Extent: USA - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa; Delta; Dickinson;
+     * Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon; Schoolcraft
+     * State law defines system in International feet (note: not US survey feet). See code 2896 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_NORTH = 'urn:ogc:def:crs:EPSG::2807';
+
+    /**
+     * NAD83(HARN) / Michigan North (ft)
+     * Extent: USA - Michigan north of approximately 45°45'N - counties of Alger; Baraga; Chippewa; Delta; Dickinson;
+     * Gogebic; Houghton; Iron; Keweenaw; Luce; Mackinac; Marquette; Menominee; Ontonagon; Schoolcraft
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2807. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_NORTH_FT = 'urn:ogc:def:crs:EPSG::2896';
+
+    /**
+     * NAD83(HARN) / Michigan Oblique Mercator
+     * Extent: USA - Michigan
+     * Replaces NAD83 / Michigan Oblique Mercator for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / Michigan Oblique Mercator.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_OBLIQUE_MERCATOR = 'urn:ogc:def:crs:EPSG::3079';
+
+    /**
+     * NAD83(HARN) / Michigan South
+     * Extent: USA - Michigan - counties of Allegan; Barry; Bay; Berrien; Branch; Calhoun; Cass; Clinton; Eaton;
+     * Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer; Lenawee;
+     * Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa; Saginaw;
+     * Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne
+     * State law defines system in International feet (note: not US survey feet). See code 2898 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_SOUTH = 'urn:ogc:def:crs:EPSG::2809';
+
+    /**
+     * NAD83(HARN) / Michigan South (ft)
+     * Extent: USA - Michigan - counties of Allegan; Barry; Bay; Berrien; Branch; Calhoun; Cass; Clinton; Eaton;
+     * Genesee; Gratiot; Hillsdale; Huron; Ingham; Ionia; Isabella; Jackson; Kalamazoo; Kent; Lapeer; Lenawee;
+     * Livingston; Macomb; Mecosta; Midland; Monroe; Montcalm; Muskegon; Newaygo; Oakland; Oceana; Ottawa; Saginaw;
+     * Sanilac; Shiawassee; St Clair; St Joseph; Tuscola; Van Buren; Washtenaw; Wayne
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2809. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 feet. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MICHIGAN_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2898';
+
+    /**
+     * NAD83(HARN) / Minnesota Central
+     * Extent: USA - Minnesota - counties of Aitkin; Becker; Benton; Carlton; Cass; Chisago; Clay; Crow Wing; Douglas;
+     * Grant; Hubbard; Isanti; Kanabec; Mille Lacs; Morrison; Otter Tail; Pine; Pope; Stearns; Stevens; Todd; Traverse;
+     * Wadena; Wilkin
+     * State law defines system in US survey feet. See code 26858 for equivalent non-metric definition. Replaces NAD83
+     * / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MINNESOTA_CENTRAL = 'urn:ogc:def:crs:EPSG::2811';
+
+    /**
+     * NAD83(HARN) / Minnesota Central (ftUS)
+     * Extent: USA - Minnesota - counties of Aitkin; Becker; Benton; Carlton; Cass; Chisago; Clay; Crow Wing; Douglas;
+     * Grant; Hubbard; Isanti; Kanabec; Mille Lacs; Morrison; Otter Tail; Pine; Pope; Stearns; Stevens; Todd; Traverse;
+     * Wadena; Wilkin
+     * State law defines use of US survey feet. Federal definition is metric - see code 2811. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MINNESOTA_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::26858';
+
+    /**
+     * NAD83(HARN) / Minnesota North
+     * Extent: USA - Minnesota - counties of Beltrami; Clearwater; Cook; Itasca; Kittson; Koochiching; Lake; Lake of
+     * the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis
+     * State law defines system in US survey feet. See code 26857 for equivalent non-metric definition. Replaces NAD83
+     * / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MINNESOTA_NORTH = 'urn:ogc:def:crs:EPSG::2810';
+
+    /**
+     * NAD83(HARN) / Minnesota North (ftUS)
+     * Extent: USA - Minnesota - counties of Beltrami; Clearwater; Cook; Itasca; Kittson; Koochiching; Lake; Lake of
+     * the Woods; Mahnomen; Marshall; Norman; Pennington; Polk; Red Lake; Roseau; St Louis
+     * State law defines use of US survey feet. Federal definition is metric - see code 2810. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MINNESOTA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::26857';
+
+    /**
+     * NAD83(HARN) / Minnesota South
+     * Extent: USA - Minnesota - counties of Anoka; Big Stone; Blue Earth; Brown; Carver; Chippewa; Cottonwood; Dakota;
+     * Dodge; Faribault; Fillmore; Freeborn; Goodhue; Hennepin; Houston; Jackson; Kandiyohi; Lac Qui Parle; Le Sueur;
+     * Lincoln; Lyon; Martin; McLeod; Meeker; Mower; Murray; Nicollet; Nobles; Olmsted; Pipestone; Ramsey; Redwood;
+     * Renville; Rice; Rock; Scott; Sherburne; Sibley; Steele; Swift; Wabasha; Waseca; Washington; Watonwan; Winona;
+     * Wright; Yellow Medicine
+     * State law defines system in US survey feet. See code 26859 for equivalent non-metric definition. Replaces NAD83
+     * / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MINNESOTA_SOUTH = 'urn:ogc:def:crs:EPSG::2812';
+
+    /**
+     * NAD83(HARN) / Minnesota South (ftUS)
+     * Extent: USA - Minnesota - counties of Anoka; Big Stone; Blue Earth; Brown; Carver; Chippewa; Cottonwood; Dakota;
+     * Dodge; Faribault; Fillmore; Freeborn; Goodhue; Hennepin; Houston; Jackson; Kandiyohi; Lac Qui Parle; Le Sueur;
+     * Lincoln; Lyon; Martin; McLeod; Meeker; Mower; Murray; Nicollet; Nobles; Olmsted; Pipestone; Ramsey; Redwood;
+     * Renville; Rice; Rock; Scott; Sherburne; Sibley; Steele; Swift; Wabasha; Waseca; Washington; Watonwan; Winona;
+     * Wright; Yellow Medicine
+     * State law defines use of US survey feet. Federal definition is metric - see code 2812. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MINNESOTA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::26859';
+
+    /**
+     * NAD83(HARN) / Mississippi East
+     * Extent: USA - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay;
+     * Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette;
+     * Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River;
+     * Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston
+     * State law defines system in US survey feet. See code 2899 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSISSIPPI_EAST = 'urn:ogc:def:crs:EPSG::2813';
+
+    /**
+     * NAD83(HARN) / Mississippi East (ftUS)
+     * Extent: USA - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay;
+     * Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette;
+     * Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River;
+     * Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston
+     * State law defines system in US survey feet. Federal definition is metric - see code 2813. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSISSIPPI_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2899';
+
+    /**
+     * NAD83(HARN) / Mississippi TM
+     * Extent: USA - Mississippi
+     * For applications with an accuracy of better than 1m, replaced by NAD83 / Mississippi TM (code 3814). Replaced by
+     * NAD83(CSRS2007) / Mississippi TM (CRS code 3816).
+     */
+    public const EPSG_NAD83_HARN_MISSISSIPPI_TM = 'urn:ogc:def:crs:EPSG::3815';
+
+    /**
+     * NAD83(HARN) / Mississippi West
+     * Extent: USA - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto;
+     * Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln;
+     * Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate;
+     * Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo
+     * State law defines system in US survey feet. See code 2900 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSISSIPPI_WEST = 'urn:ogc:def:crs:EPSG::2814';
+
+    /**
+     * NAD83(HARN) / Mississippi West (ftUS)
+     * Extent: USA - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto;
+     * Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln;
+     * Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate;
+     * Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo
+     * State law defines system in US survey feet. Federal definition is metric - see code 2814. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSISSIPPI_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2900';
+
+    /**
+     * NAD83(HARN) / Missouri Central
+     * Extent: USA - Missouri - counties of Adair; Audrain; Benton; Boone; Callaway; Camden; Carroll; Chariton;
+     * Christian; Cole; Cooper; Dallas; Douglas; Greene; Grundy; Hickory; Howard; Howell; Knox; Laclede; Linn;
+     * Livingston; Macon; Maries; Mercer; Miller; Moniteau; Monroe; Morgan; Osage; Ozark; Pettis; Phelps; Polk;
+     * Pulaski; Putnam; Randolph; Saline; Schuyler; Scotland; Shelby; Stone; Sullivan; Taney; Texas; Webster; Wright
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSOURI_CENTRAL = 'urn:ogc:def:crs:EPSG::2816';
+
+    /**
+     * NAD83(HARN) / Missouri East
+     * Extent: USA - Missouri - counties of Bollinger; Butler; Cape Girardeau; Carter; Clark; Crawford; Dent; Dunklin;
+     * Franklin; Gasconade; Iron; Jefferson; Lewis; Lincoln; Madison; Marion; Mississippi; Montgomery; New Madrid;
+     * Oregon; Pemiscot; Perry; Pike; Ralls; Reynolds; Ripley; Scott; Shannon; St Charles; St Francois; St Louis; Ste.
+     * Genevieve; Stoddard; Warren; Washington; Wayne
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSOURI_EAST = 'urn:ogc:def:crs:EPSG::2815';
+
+    /**
+     * NAD83(HARN) / Missouri West
+     * Extent: USA - Missouri - counties of Andrew; Atchison; Barry; Barton; Bates; Buchanan; Caldwell; Cass; Cedar;
+     * Clay; Clinton; Dade; Daviess; De Kalb; Gentry; Harrison; Henry; Holt; Jackson; Jasper; Johnson; Lafayette;
+     * Lawrence; McDonald; Newton; Nodaway; Platte; Ray; St Clair; Vernon; Worth
+     * Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MISSOURI_WEST = 'urn:ogc:def:crs:EPSG::2817';
+
+    /**
+     * NAD83(HARN) / Montana
+     * Extent: USA - Montana
+     * State law defines system in International feet (note: not US survey feet). See code 2901 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MONTANA = 'urn:ogc:def:crs:EPSG::2818';
+
+    /**
+     * NAD83(HARN) / Montana (ft)
+     * Extent: USA - Montana
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2818. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 feet. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_MONTANA_FT = 'urn:ogc:def:crs:EPSG::2901';
+
+    /**
+     * NAD83(HARN) / Nebraska
+     * Extent: USA - Nebraska
+     * State law defines system in US survey feet. See CRS code 26860 for equivalent non-metric definition. Replaces
+     * NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEBRASKA = 'urn:ogc:def:crs:EPSG::2819';
+
+    /**
+     * NAD83(HARN) / Nebraska (ftUS)
+     * Extent: USA - Nebraska
+     * State law defines use of US survey feet. Federal definition is metric - see code 2819. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3ft. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEBRASKA_FTUS = 'urn:ogc:def:crs:EPSG::26860';
+
+    /**
+     * NAD83(HARN) / Nevada Central
+     * Extent: USA - Nevada - counties of Lander; Nye
+     * State law defines system in US survey feet. See code 3430 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEVADA_CENTRAL = 'urn:ogc:def:crs:EPSG::2821';
+
+    /**
+     * NAD83(HARN) / Nevada Central (ftUS)
+     * Extent: USA - Nevada - counties of Lander; Nye
+     * State law defines system in US survey feet. Federal definition is metric - see code 2821. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEVADA_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::3430';
+
+    /**
+     * NAD83(HARN) / Nevada East
+     * Extent: USA - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine
+     * State law defines system in US survey feet. See code 3429 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEVADA_EAST = 'urn:ogc:def:crs:EPSG::2820';
+
+    /**
+     * NAD83(HARN) / Nevada East (ftUS)
+     * Extent: USA - Nevada - counties of Clark; Elko; Eureka; Lincoln; White Pine
+     * State law defines system in US survey feet. Federal definition is metric - see code 2820. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEVADA_EAST_FTUS = 'urn:ogc:def:crs:EPSG::3429';
+
+    /**
+     * NAD83(HARN) / Nevada West
+     * Extent: USA - Nevada - counties of Churchill; Douglas; Esmeralda; Humboldt; Lyon; Mineral; Pershing; Storey;
+     * Washoe
+     * State law defines system in US survey feet. See code 3431 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEVADA_WEST = 'urn:ogc:def:crs:EPSG::2822';
+
+    /**
+     * NAD83(HARN) / Nevada West (ftUS)
+     * Extent: USA - Nevada - counties of Churchill; Douglas; Esmeralda; Humboldt; Lyon; Mineral; Pershing; Storey;
+     * Washoe
+     * State law defines system in US survey feet. Federal definition is metric - see code 2822. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEVADA_WEST_FTUS = 'urn:ogc:def:crs:EPSG::3431';
+
+    /**
+     * NAD83(HARN) / New Hampshire
+     * Extent: USA - New Hampshire
+     * State law defines system in US survey feet. See code 3445 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_HAMPSHIRE = 'urn:ogc:def:crs:EPSG::2823';
+
+    /**
+     * NAD83(HARN) / New Hampshire (ftUS)
+     * Extent: USA - New Hampshire
+     * State law defines system in US survey feet. Federal definition is metric - see code 2823. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_HAMPSHIRE_FTUS = 'urn:ogc:def:crs:EPSG::3445';
+
+    /**
+     * NAD83(HARN) / New Jersey
+     * Extent: USA - New Jersey
+     * State law defines system in US survey feet. See code 3432 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_JERSEY = 'urn:ogc:def:crs:EPSG::2824';
+
+    /**
+     * NAD83(HARN) / New Jersey (ftUS)
+     * Extent: USA - New Jersey
+     * State law defines system in US survey feet. Federal definition is metric - see code 2824. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_JERSEY_FTUS = 'urn:ogc:def:crs:EPSG::3432';
+
+    /**
+     * NAD83(HARN) / New Mexico Central
+     * Extent: USA - New Mexico - counties of Bernalillo; Dona Ana; Lincoln; Los Alamos; Otero; Rio Arriba; Sandoval;
+     * Santa Fe; Socorro; Taos; Torrance; Valencia
+     * State law defines system in US survey feet. See code 2903 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_MEXICO_CENTRAL = 'urn:ogc:def:crs:EPSG::2826';
+
+    /**
+     * NAD83(HARN) / New Mexico Central (ftUS)
+     * Extent: USA - New Mexico - counties of Bernalillo; Dona Ana; Lincoln; Los Alamos; Otero; Rio Arriba; Sandoval;
+     * Santa Fe; Socorro; Taos; Torrance; Valencia
+     * State law defines system in US survey feet. Federal definition is metric - see code 2826. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_MEXICO_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2903';
+
+    /**
+     * NAD83(HARN) / New Mexico East
+     * Extent: USA - New Mexico - counties of Chaves; Colfax; Curry; De Baca; Eddy; Guadalupe; Harding; Lea; Mora;
+     * Quay; Roosevelt; San Miguel; Union
+     * State law defines system in US survey feet. See code 2902 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_MEXICO_EAST = 'urn:ogc:def:crs:EPSG::2825';
+
+    /**
+     * NAD83(HARN) / New Mexico East (ftUS)
+     * Extent: USA - New Mexico - counties of Chaves; Colfax; Curry; De Baca; Eddy; Guadalupe; Harding; Lea; Mora;
+     * Quay; Roosevelt; San Miguel; Union
+     * State law defines system in US survey feet. Federal definition is metric - see code 2825. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_MEXICO_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2902';
+
+    /**
+     * NAD83(HARN) / New Mexico West
+     * Extent: USA - New Mexico - counties of Catron; Cibola; Grant; Hidalgo; Luna; McKinley; San Juan; Sierra
+     * State law defines system in US survey feet. See code 2904 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_MEXICO_WEST = 'urn:ogc:def:crs:EPSG::2827';
+
+    /**
+     * NAD83(HARN) / New Mexico West (ftUS)
+     * Extent: USA - New Mexico - counties of Catron; Cibola; Grant; Hidalgo; Luna; McKinley; San Juan; Sierra
+     * State law defines system in US survey feet. Federal definition is metric - see code 2827. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_MEXICO_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2904';
+
+    /**
+     * NAD83(HARN) / New York Central
+     * Extent: USA - New York - counties of Broome; Cayuga; Chemung; Chenango; Cortland; Jefferson; Lewis; Madison;
+     * Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates
+     * State law defines system in US survey feet. See code 2906 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_CENTRAL = 'urn:ogc:def:crs:EPSG::2829';
+
+    /**
+     * NAD83(HARN) / New York Central (ftUS)
+     * Extent: USA - New York - counties of Broome; Cayuga; Chemung; Chenango; Cortland; Jefferson; Lewis; Madison;
+     * Oneida; Onondaga; Ontario; Oswego; Schuyler; Seneca; Steuben; Tioga; Tompkins; Wayne; Yates
+     * State law defines system in US survey feet. Federal definition is metric - see code 2829. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2906';
+
+    /**
+     * NAD83(HARN) / New York East
+     * Extent: USA - New York mainland - counties of Albany; Clinton; Columbia; Delaware; Dutchess; Essex; Franklin;
+     * Fulton; Greene; Hamilton; Herkimer; Montgomery; Orange; Otsego; Putnam; Rensselaer; Rockland; Saratoga;
+     * Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester
+     * State law defines system in US survey feet. See code 2905 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_EAST = 'urn:ogc:def:crs:EPSG::2828';
+
+    /**
+     * NAD83(HARN) / New York East (ftUS)
+     * Extent: USA - New York mainland - counties of Albany; Clinton; Columbia; Delaware; Dutchess; Essex; Franklin;
+     * Fulton; Greene; Hamilton; Herkimer; Montgomery; Orange; Otsego; Putnam; Rensselaer; Rockland; Saratoga;
+     * Schenectady; Schoharie; St Lawrence; Sullivan; Ulster; Warren; Washington; Westchester
+     * State law defines system in US survey feet. Federal definition is metric - see code 2828. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_EAST_FTUS = 'urn:ogc:def:crs:EPSG::2905';
+
+    /**
+     * NAD83(HARN) / New York Long Island
+     * Extent: USA - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk
+     * State law defines system in US survey feet. See code 2908 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_LONG_ISLAND = 'urn:ogc:def:crs:EPSG::2831';
+
+    /**
+     * NAD83(HARN) / New York Long Island (ftUS)
+     * Extent: USA - New York - counties of Bronx; Kings; Nassau; New York; Queens; Richmond; Suffolk
+     * State law defines system in US survey feet. Federal definition is metric - see code 2831. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_LONG_ISLAND_FTUS = 'urn:ogc:def:crs:EPSG::2908';
+
+    /**
+     * NAD83(HARN) / New York West
+     * Extent: USA - New York - counties of Allegany; Cattaraugus; Chautauqua; Erie; Genesee; Livingston; Monroe;
+     * Niagara; Orleans; Wyoming
+     * State law defines system in US survey feet. See code 2907 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_WEST = 'urn:ogc:def:crs:EPSG::2830';
+
+    /**
+     * NAD83(HARN) / New York West (ftUS)
+     * Extent: USA - New York - counties of Allegany; Cattaraugus; Chautauqua; Erie; Genesee; Livingston; Monroe;
+     * Niagara; Orleans; Wyoming
+     * State law defines system in US survey feet. Federal definition is metric - see code 2830. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NEW_YORK_WEST_FTUS = 'urn:ogc:def:crs:EPSG::2907';
+
+    /**
+     * NAD83(HARN) / North Carolina
+     * Extent: USA - North Carolina
+     * State law defines system in US survey feet. See CRS code 3404 for equivalent non-metric definition. Replaces
+     * NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NORTH_CAROLINA = 'urn:ogc:def:crs:EPSG::3358';
+
+    /**
+     * NAD83(HARN) / North Carolina (ftUS)
+     * Extent: USA - North Carolina
+     * State law defines system in US survey feet. Federal definition is metric - see CRS code 3358. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NORTH_CAROLINA_FTUS = 'urn:ogc:def:crs:EPSG::3404';
+
+    /**
+     * NAD83(HARN) / North Dakota North
+     * Extent: USA - North Dakota - counties of Benson; Bottineau; Burke; Cavalier; Divide; Eddy; Foster; Grand Forks;
+     * Griggs; McHenry; McKenzie; McLean; Mountrial; Nelson; Pembina; Pierce; Ramsey; Renville; Rolette; Sheridan;
+     * Steele; Towner; Traill; Walsh; Ward; Wells; Williams
+     * State law defines system in International feet (note: not US survey feet). See code 2909 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NORTH_DAKOTA_NORTH = 'urn:ogc:def:crs:EPSG::2832';
+
+    /**
+     * NAD83(HARN) / North Dakota North (ft)
+     * Extent: USA - North Dakota - counties of Benson; Bottineau; Burke; Cavalier; Divide; Eddy; Foster; Grand Forks;
+     * Griggs; McHenry; McKenzie; McLean; Mountrial; Nelson; Pembina; Pierce; Ramsey; Renville; Rolette; Sheridan;
+     * Steele; Towner; Traill; Walsh; Ward; Wells; Williams
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2832. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 feet. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NORTH_DAKOTA_NORTH_FT = 'urn:ogc:def:crs:EPSG::2909';
+
+    /**
+     * NAD83(HARN) / North Dakota South
+     * Extent: USA - North Dakota - counties of Adams; Barnes; Billings; Bowman; Burleigh; Cass; Dickey; Dunn; Emmons;
+     * Golden Valley; Grant; Hettinger; Kidder; La Moure; Logan; McIntosh; Mercer; Morton; Oliver; Ransom; Richland;
+     * Sargent; Sioux; Slope; Stark; Stutsman
+     * State law defines system in International feet (note: not US survey feet). See code 2910 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NORTH_DAKOTA_SOUTH = 'urn:ogc:def:crs:EPSG::2833';
+
+    /**
+     * NAD83(HARN) / North Dakota South (ft)
+     * Extent: USA - North Dakota - counties of Adams; Barnes; Billings; Bowman; Burleigh; Cass; Dickey; Dunn; Emmons;
+     * Golden Valley; Grant; Hettinger; Kidder; La Moure; Logan; McIntosh; Mercer; Morton; Oliver; Ransom; Richland;
+     * Sargent; Sioux; Slope; Stark; Stutsman
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2833. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 feet. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_NORTH_DAKOTA_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2910';
+
+    /**
+     * NAD83(HARN) / Ohio North
+     * Extent: USA - Ohio - counties of Allen;Ashland; Ashtabula; Auglaize; Carroll; Columbiana; Coshocton; Crawford;
+     * Cuyahoga; Defiance; Delaware; Erie; Fulton; Geauga; Hancock; Hardin; Harrison; Henry; Holmes; Huron; Jefferson;
+     * Knox; Lake; Logan; Lorain; Lucas; Mahoning; Marion; Medina; Mercer; Morrow; Ottawa; Paulding; Portage; Putnam;
+     * Richland; Sandusky; Seneca; Shelby; Stark; Summit; Trumbull; Tuscarawas; Union; Van Wert; Wayne; Williams; Wood;
+     * Wyandot
+     * State law defines use of US survey feet. See code 3753 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OHIO_NORTH = 'urn:ogc:def:crs:EPSG::2834';
+
+    /**
+     * NAD83(HARN) / Ohio North (ftUS)
+     * Extent: USA - Ohio - counties of Allen;Ashland; Ashtabula; Auglaize; Carroll; Columbiana; Coshocton; Crawford;
+     * Cuyahoga; Defiance; Delaware; Erie; Fulton; Geauga; Hancock; Hardin; Harrison; Henry; Holmes; Huron; Jefferson;
+     * Knox; Lake; Logan; Lorain; Lucas; Mahoning; Marion; Medina; Mercer; Morrow; Ottawa; Paulding; Portage; Putnam;
+     * Richland; Sandusky; Seneca; Shelby; Stark; Summit; Trumbull; Tuscarawas; Union; Van Wert; Wayne; Williams; Wood;
+     * Wyandot
+     * State law defines use of US survey feet. Federal definition is metric - see code 2834. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OHIO_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3753';
+
+    /**
+     * NAD83(HARN) / Ohio South
+     * Extent: USA - Ohio - counties of Adams; Athens; Belmont; Brown; Butler; Champaign; Clark; Clermont; Clinton;
+     * Darke; Fairfield; Fayette; Franklin; Gallia; Greene; Guernsey; Hamilton; Highland; Hocking; Jackson; Lawrence;
+     * Licking; Madison; Meigs; Miami; Monroe; Montgomery; Morgan; Muskingum; Noble; Perry; Pickaway; Pike; Preble;
+     * Ross; Scioto; Vinton; Warren; Washington
+     * State law defines use of US survey feet. See code 3754 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OHIO_SOUTH = 'urn:ogc:def:crs:EPSG::2835';
+
+    /**
+     * NAD83(HARN) / Ohio South (ftUS)
+     * Extent: USA - Ohio - counties of Adams; Athens; Belmont; Brown; Butler; Champaign; Clark; Clermont; Clinton;
+     * Darke; Fairfield; Fayette; Franklin; Gallia; Greene; Guernsey; Hamilton; Highland; Hocking; Jackson; Lawrence;
+     * Licking; Madison; Meigs; Miami; Monroe; Montgomery; Morgan; Muskingum; Noble; Perry; Pickaway; Pike; Preble;
+     * Ross; Scioto; Vinton; Warren; Washington
+     * State law defines use of US survey feet. Federal definition is metric - see code 2835. Replaces NAD83 / SPCS for
+     * applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OHIO_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3754';
+
+    /**
+     * NAD83(HARN) / Oklahoma North
+     * Extent: USA - Oklahoma - counties of Adair; Alfalfa; Beaver; Blaine; Canadian; Cherokee; Cimarron; Craig; Creek;
+     * Custer; Delaware; Dewey; Ellis; Garfield; Grant; Harper; Kay; Kingfisher; Lincoln; Logan; Major; Mayes;
+     * Muskogee; Noble; Nowata; Okfuskee; Oklahoma; Okmulgee; Osage; Ottawa; Pawnee; Payne; Roger Mills; Rogers;
+     * Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward
+     * State law defines system in US survey feet. See code 2911 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OKLAHOMA_NORTH = 'urn:ogc:def:crs:EPSG::2836';
+
+    /**
+     * NAD83(HARN) / Oklahoma North (ftUS)
+     * Extent: USA - Oklahoma - counties of Adair; Alfalfa; Beaver; Blaine; Canadian; Cherokee; Cimarron; Craig; Creek;
+     * Custer; Delaware; Dewey; Ellis; Garfield; Grant; Harper; Kay; Kingfisher; Lincoln; Logan; Major; Mayes;
+     * Muskogee; Noble; Nowata; Okfuskee; Oklahoma; Okmulgee; Osage; Ottawa; Pawnee; Payne; Roger Mills; Rogers;
+     * Sequoyah; Texas; Tulsa; Wagoner; Washington; Woods; Woodward
+     * State law defines system in US survey feet. Federal definition is metric - see code 2836. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OKLAHOMA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2911';
+
+    /**
+     * NAD83(HARN) / Oklahoma South
+     * Extent: USA - Oklahoma - counties of Atoka; Beckham; Bryan; Caddo; Carter; Choctaw; Cleveland; Coal; Comanche;
+     * Cotton; Garvin; Grady; Greer; Harmon; Haskell; Hughes; Jackson; Jefferson; Johnston; Kiowa; Latimer; Le Flore;
+     * Love; Marshall; McClain; McCurtain; McIntosh; Murray; Pittsburg; Pontotoc; Pottawatomie; Pushmataha; Seminole;
+     * Stephens; Tillman; Washita
+     * State law defines system in US survey feet. See code 2912 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OKLAHOMA_SOUTH = 'urn:ogc:def:crs:EPSG::2837';
+
+    /**
+     * NAD83(HARN) / Oklahoma South (ftUS)
+     * Extent: USA - Oklahoma - counties of Atoka; Beckham; Bryan; Caddo; Carter; Choctaw; Cleveland; Coal; Comanche;
+     * Cotton; Garvin; Grady; Greer; Harmon; Haskell; Hughes; Jackson; Jefferson; Johnston; Kiowa; Latimer; Le Flore;
+     * Love; Marshall; McClain; McCurtain; McIntosh; Murray; Pittsburg; Pontotoc; Pottawatomie; Pushmataha; Seminole;
+     * Stephens; Tillman; Washita
+     * State law defines system in US survey feet. Federal definition is metric - see code 2837. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OKLAHOMA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::2912';
+
+    /**
+     * NAD83(HARN) / Oregon GIC Lambert (ft)
+     * Extent: USA - Oregon
+     * State law defines use of International feet (note: not US survey feet). Replaces NAD83 / Oregon GIC Lambert (ft)
+     * (CRS code 2992) for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / Oregon
+     * GIC Lambert (ft) (code 3644).
+     */
+    public const EPSG_NAD83_HARN_OREGON_GIC_LAMBERT_FT = 'urn:ogc:def:crs:EPSG::2994';
+
+    /**
+     * NAD83(HARN) / Oregon LCC (m)
+     * Extent: USA - Oregon
+     * See CRS code 2994 for non-metric definition used by state agencies. Replaces NAD83 / Oregon LCC (m) (CRS code
+     * 2991) for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / Oregon LCC (m) (CRS
+     * code 3643).
+     */
+    public const EPSG_NAD83_HARN_OREGON_LCC_M = 'urn:ogc:def:crs:EPSG::2993';
+
+    /**
+     * NAD83(HARN) / Oregon North
+     * Extent: USA - Oregon - counties of Baker; Benton; Clackamas; Clatsop; Columbia; Gilliam; Grant; Hood River;
+     * Jefferson; Lincoln; Linn; Marion; Morrow; Multnomah; Polk; Sherman; Tillamook; Umatilla; Union; Wallowa; Wasco;
+     * Washington; Wheeler; Yamhill
+     * State law defines system in International feet (note: not US survey feet). See code 2913 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OREGON_NORTH = 'urn:ogc:def:crs:EPSG::2838';
+
+    /**
+     * NAD83(HARN) / Oregon North (ft)
+     * Extent: USA - Oregon - counties of Baker; Benton; Clackamas; Clatsop; Columbia; Gilliam; Grant; Hood River;
+     * Jefferson; Lincoln; Linn; Marion; Morrow; Multnomah; Polk; Sherman; Tillamook; Umatilla; Union; Wallowa; Wasco;
+     * Washington; Wheeler; Yamhill
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2838. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OREGON_NORTH_FT = 'urn:ogc:def:crs:EPSG::2913';
+
+    /**
+     * NAD83(HARN) / Oregon South
+     * Extent: USA - Oregon - counties of Coos; Crook; Curry; Deschutes; Douglas; Harney; Jackson; Josephine; Klamath;
+     * Lake; Lane; Malheur
+     * State law defines system in International feet (note: not US survey feet). See code 2914 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OREGON_SOUTH = 'urn:ogc:def:crs:EPSG::2839';
+
+    /**
+     * NAD83(HARN) / Oregon South (ft)
+     * Extent: USA - Oregon - counties of Coos; Crook; Curry; Deschutes; Douglas; Harney; Jackson; Josephine; Klamath;
+     * Lake; Lane; Malheur
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 2839. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 ft. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_OREGON_SOUTH_FT = 'urn:ogc:def:crs:EPSG::2914';
+
+    /**
+     * NAD83(HARN) / Pennsylvania North
+     * Extent: USA - Pennsylvania - counties of Bradford; Cameron; Carbon; Centre; Clarion; Clearfield; Clinton;
+     * Columbia; Crawford; Elk; Erie; Forest; Jefferson; Lackawanna; Luzerne; Lycoming; McKean; Mercer; Monroe;
+     * Montour; Northumberland; Pike; Potter; Sullivan; Susquehanna; Tioga; Union; Venango; Warren; Wayne; Wyoming
+     * State law defines system in US survey feet. See code 3363 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_PENNSYLVANIA_NORTH = 'urn:ogc:def:crs:EPSG::3362';
+
+    /**
+     * NAD83(HARN) / Pennsylvania North (ftUS)
+     * Extent: USA - Pennsylvania - counties of Bradford; Cameron; Carbon; Centre; Clarion; Clearfield; Clinton;
+     * Columbia; Crawford; Elk; Erie; Forest; Jefferson; Lackawanna; Luzerne; Lycoming; McKean; Mercer; Monroe;
+     * Montour; Northumberland; Pike; Potter; Sullivan; Susquehanna; Tioga; Union; Venango; Warren; Wayne; Wyoming
+     * State law defines system in US survey feet. Federal definition is metric - see code 3362. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_PENNSYLVANIA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3363';
+
+    /**
+     * NAD83(HARN) / Pennsylvania South
+     * Extent: USA - Pennsylvania - counties of Adams; Allegheny; Armstrong; Beaver; Bedford; Berks; Blair; Bucks;
+     * Butler; Cambria; Chester; Cumberland; Dauphin; Delaware; Fayette; Franklin; Fulton; Greene; Huntingdon; Indiana;
+     * Juniata; Lancaster; Lawrence; Lebanon; Lehigh; Mifflin; Montgomery; Northampton; Perry; Philadelphia;
+     * Schuylkill; Snyder; Somerset; Washington; Westmoreland; York
+     * State law defines system in US survey feet. See code 3365 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_PENNSYLVANIA_SOUTH = 'urn:ogc:def:crs:EPSG::3364';
+
+    /**
+     * NAD83(HARN) / Pennsylvania South (ftUS)
+     * Extent: USA - Pennsylvania - counties of Adams; Allegheny; Armstrong; Beaver; Bedford; Berks; Blair; Bucks;
+     * Butler; Cambria; Chester; Cumberland; Dauphin; Delaware; Fayette; Franklin; Fulton; Greene; Huntingdon; Indiana;
+     * Juniata; Lancaster; Lawrence; Lebanon; Lehigh; Mifflin; Montgomery; Northampton; Perry; Philadelphia;
+     * Schuylkill; Snyder; Somerset; Washington; Westmoreland; York
+     * State law defines system in US survey feet. Federal definition is metric - see code 3364. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_PENNSYLVANIA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3365';
+
+    /**
+     * NAD83(HARN) / Puerto Rico and Virgin Is.
+     * Extent: Puerto Rico and US Virgin Islands - onshore
+     * Replaces NAD83 / SPCS (CRS code 32161) for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS (CRS code 4437).
+     */
+    public const EPSG_NAD83_HARN_PUERTO_RICO_AND_VIRGIN_IS = 'urn:ogc:def:crs:EPSG::2866';
+
+    /**
+     * NAD83(HARN) / Rhode Island
+     * Extent: USA - Rhode Island
+     * State law defines system in US survey feet. See code 3446 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_RHODE_ISLAND = 'urn:ogc:def:crs:EPSG::2840';
+
+    /**
+     * NAD83(HARN) / Rhode Island (ftUS)
+     * Extent: USA - Rhode Island
+     * State law defines system in US survey feet. Federal definition is metric - see code 2840. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_RHODE_ISLAND_FTUS = 'urn:ogc:def:crs:EPSG::3446';
+
+    /**
+     * NAD83(HARN) / South Carolina
+     * Extent: USA - South Carolina
+     * State law defines system in International feet (note: not US survey feet). See code 3361 for equivalent
+     * non-metric definition. Replaces NAD83 / SPCS for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_SOUTH_CAROLINA = 'urn:ogc:def:crs:EPSG::3360';
+
+    /**
+     * NAD83(HARN) / South Carolina (ft)
+     * Extent: USA - South Carolina
+     * State law defines system in International feet (note: not US survey feet). Federal definition is metric - see
+     * code 3360. Replaces NAD83 / SPCS for applications with an accuracy of better than 3 feet. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_SOUTH_CAROLINA_FT = 'urn:ogc:def:crs:EPSG::3361';
+
+    /**
+     * NAD83(HARN) / South Dakota North
+     * Extent: USA - South Dakota - counties of Beadle; Brookings; Brown; Butte; Campbell; Clark; Codington; Corson;
+     * Day; Deuel; Dewey; Edmunds; Faulk; Grant; Hamlin; Hand; Harding; Hyde; Kingsbury; Lawrence; Marshall; McPherson;
+     * Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach
+     * State law defines system in US survey feet. See code 3458 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_SOUTH_DAKOTA_NORTH = 'urn:ogc:def:crs:EPSG::2841';
+
+    /**
+     * NAD83(HARN) / South Dakota North (ftUS)
+     * Extent: USA - South Dakota - counties of Beadle; Brookings; Brown; Butte; Campbell; Clark; Codington; Corson;
+     * Day; Deuel; Dewey; Edmunds; Faulk; Grant; Hamlin; Hand; Harding; Hyde; Kingsbury; Lawrence; Marshall; McPherson;
+     * Meade; Perkins; Potter; Roberts; Spink; Sully; Walworth; Ziebach
+     * State law defines system in US survey feet. Federal definition is metric - see code 2841. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_SOUTH_DAKOTA_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::3458';
+
+    /**
+     * NAD83(HARN) / South Dakota South
+     * Extent: USA - South Dakota - counties of Aurora; Bennett; Bon Homme; Brule; Buffalo; Charles Mix; Clay; Custer;
+     * Davison; Douglas; Fall River; Gregory; Haakon; Hanson; Hughes; Hutchinson; Jackson; Jerauld; Jones; Lake;
+     * Lincoln; Lyman; McCook; Mellette; Miner; Minnehaha; Moody; Pennington; Sanborn; Shannon; Stanley; Todd; Tripp;
+     * Turner; Union; Yankton
+     * State law defines system in US survey feet. See code 3459 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_SOUTH_DAKOTA_SOUTH = 'urn:ogc:def:crs:EPSG::2842';
+
+    /**
+     * NAD83(HARN) / South Dakota South (ftUS)
+     * Extent: USA - South Dakota - counties of Aurora; Bennett; Bon Homme; Brule; Buffalo; Charles Mix; Clay; Custer;
+     * Davison; Douglas; Fall River; Gregory; Haakon; Hanson; Hughes; Hutchinson; Jackson; Jerauld; Jones; Lake;
+     * Lincoln; Lyman; McCook; Mellette; Miner; Minnehaha; Moody; Pennington; Sanborn; Shannon; Stanley; Todd; Tripp;
+     * Turner; Union; Yankton
+     * State law defines system in US survey feet. Federal definition is metric - see code 2842. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_SOUTH_DAKOTA_SOUTH_FTUS = 'urn:ogc:def:crs:EPSG::3459';
+
+    /**
+     * NAD83(HARN) / Tennessee
+     * Extent: USA - Tennessee
+     * State law defines system in US survey feet. See code 2915 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TENNESSEE = 'urn:ogc:def:crs:EPSG::2843';
+
+    /**
+     * NAD83(HARN) / Tennessee (ftUS)
+     * Extent: USA - Tennessee
+     * State law defines system in US survey feet. Federal definition is metric - see code 2843. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TENNESSEE_FTUS = 'urn:ogc:def:crs:EPSG::2915';
+
+    /**
+     * NAD83(HARN) / Texas Central
+     * Extent: USA - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson;
+     * Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls;
+     * Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble;
+     * Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland;
+     * Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine;
+     * San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler;
+     * Upton; Walker; Ward; Washington; Williamson; Winkler
+     * State law defines system in US survey feet. See code 2918 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_CENTRAL = 'urn:ogc:def:crs:EPSG::2846';
+
+    /**
+     * NAD83(HARN) / Texas Central (ftUS)
+     * Extent: USA - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson;
+     * Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls;
+     * Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble;
+     * Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland;
+     * Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine;
+     * San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler;
+     * Upton; Walker; Ward; Washington; Williamson; Winkler
+     * State law defines system in US survey feet. Federal definition is metric - see code 2846. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2918';
+
+    /**
+     * NAD83(HARN) / Texas Centric Albers Equal Area
+     * Extent: USA - Texas
+     * Replaces NAD83 / TX Albers (code 3083) for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / TX Albers (code 3665). For state-wide spatial data presentation requiring shape preservation
+     * use NAD83(HARN) / TX LC (code 3084).
+     */
+    public const EPSG_NAD83_HARN_TEXAS_CENTRIC_ALBERS_EQUAL_AREA = 'urn:ogc:def:crs:EPSG::3085';
+
+    /**
+     * NAD83(HARN) / Texas Centric Lambert Conformal
+     * Extent: USA - Texas
+     * Replaces NAD83 / TX LC (code 3082) for applications with an accuracy of better than 1m. Replaced by
+     * NAD83(NSRS2007) / TX  LC (code 3666). For state-wide spatial data presentation requiring true area measurements
+     * use NAD83(HARN) / TX Albers (code 3085).
+     */
+    public const EPSG_NAD83_HARN_TEXAS_CENTRIC_LAMBERT_CONFORMAL = 'urn:ogc:def:crs:EPSG::3084';
+
+    /**
+     * NAD83(HARN) / Texas North
+     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
+     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
+     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+     * State law defines system in US survey feet. See code 2916 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_NORTH = 'urn:ogc:def:crs:EPSG::2844';
+
+    /**
+     * NAD83(HARN) / Texas North Central
+     * Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay;
+     * Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin;
+     * Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson;
+     * Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb;
+     * Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker;
+     * Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor;
+     * Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young
+     * State law defines system in US survey feet. See code 2917 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_NORTH_CENTRAL = 'urn:ogc:def:crs:EPSG::2845';
+
+    /**
+     * NAD83(HARN) / Texas North Central (ftUS)
+     * Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay;
+     * Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin;
+     * Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson;
+     * Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb;
+     * Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker;
+     * Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor;
+     * Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young
+     * State law defines system in US survey feet. Federal definition is metric - see code 2845. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_NORTH_CENTRAL_FTUS = 'urn:ogc:def:crs:EPSG::2917';
+
+    /**
+     * NAD83(HARN) / Texas North (ftUS)
+     * Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf
+     * Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer;
+     * Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+     * State law defines system in US survey feet. Federal definition is metric - see code 2844. Replaces NAD83 / SPCS
+     * for applications with an accuracy of better than 3 feet. Replaced by NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_NORTH_FTUS = 'urn:ogc:def:crs:EPSG::2916';
+
+    /**
+     * NAD83(HARN) / Texas South
+     * Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces;
+     * San Patricio; Starr; Webb; Willacy; Zapata
+     * State law defines system in US survey feet. See code 2920 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Not applicable to offshore areas. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_SOUTH = 'urn:ogc:def:crs:EPSG::2848';
+
+    /**
+     * NAD83(HARN) / Texas South Central
+     * Extent: USA - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell;
+     * Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad;
+     * Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live
+     * Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria;
+     * Waller; Wharton; Wilson; Zavala
+     * State law defines system in US survey feet. See code 2919 for equivalent non-metric definition. Replaces NAD83 /
+     * SPCS for applications with an accuracy of better than 1m. Not applicable to offshore areas. Replaced by
+     * NAD83(NSRS2007) / SPCS.
+     */
+    public const EPSG_NAD83_HARN_TEXAS_SOUTH_CENTRAL = 'urn:ogc:def:crs:EPSG::2847';
 }

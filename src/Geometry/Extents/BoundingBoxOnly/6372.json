@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6372",
+    "title": "North America/USA - Ohio - Guernsey",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.83, 39.73], [-81.12, 39.73], [-81.12, 40.33], [-81.83, 40.33], [-81.83, 39.73]
+        ]
+    ]
+}

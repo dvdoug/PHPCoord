@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1372",
+    "title": "North America/USA - Alabama",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-88.58, 30.04], [-84.78, 30.04], [-84.78, 35.11], [-88.58, 35.11], [-88.58, 30.04]
+        ]
+    ]
+}

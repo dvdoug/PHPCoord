@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6374",
+    "title": "North America/USA - Ohio - Hancock",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.99, 40.71], [-83.32000000000001, 40.71], [-83.32000000000001, 41.27], [-83.99, 41.27], [-83.99, 40.71]
+        ]
+    ]
+}

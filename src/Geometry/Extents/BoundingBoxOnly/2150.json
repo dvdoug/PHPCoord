@@ -1,6 +1,6 @@
 {
     "id": "urn:ogc:def:area:EPSG::2150",
-    "title": "North America/North America - 66°W to 60°W and NAD27 by country",
+    "title": "North America/North America - 66°W to 60°W by country",
     "type": "Polygon",
     "coordinates": [
         [

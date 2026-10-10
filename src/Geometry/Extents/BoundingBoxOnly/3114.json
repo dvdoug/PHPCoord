@@ -1,6 +1,6 @@
 {
     "id": "urn:ogc:def:area:EPSG::3114",
-    "title": "North America/North America - 96°W to 90°W and NAD83 by country",
+    "title": "North America/North America - 96°W to 90°W by country",
     "type": "Polygon",
     "coordinates": [
         [

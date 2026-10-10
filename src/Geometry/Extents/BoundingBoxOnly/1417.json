@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1417",
+    "title": "North America/USA - West Virginia",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.75, 37.1], [-77.61, 37.1], [-77.61, 40.74], [-82.75, 40.74], [-82.75, 37.1]
+        ]
+    ]
+}

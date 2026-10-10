@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6396",
+    "title": "North America/USA - Ohio - Mercer",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.91, 40.25], [-84.33000000000001, 40.25], [-84.33000000000001, 40.83], [-84.91, 40.83], [-84.91, 40.25]
+        ]
+    ]
+}

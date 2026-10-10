@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6344",
+    "title": "North America/USA - Ohio - Allen",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.5, 40.54], [-83.77000000000001, 40.54], [-83.77000000000001, 41.03], [-84.5, 41.03], [-84.5, 40.54]
+        ]
+    ]
+}

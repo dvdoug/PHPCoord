@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6422",
+    "title": "North America/USA - Ohio - Union",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.66, 40], [-83.06, 40], [-83.06, 40.61], [-83.66, 40.61], [-83.66, 40]
+        ]
+    ]
+}

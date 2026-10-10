@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6353",
+    "title": "North America/USA - Ohio - Champaign",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.14, 39.91], [-83.39, 39.91], [-83.39, 40.38], [-84.14, 40.38], [-84.14, 39.91]
+        ]
+    ]
+}

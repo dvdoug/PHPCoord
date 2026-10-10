@@ -1,6 +1,6 @@
 {
     "id": "urn:ogc:def:area:EPSG::3117",
-    "title": "North America/North America - 78°W to 72°W and NAD83 by country",
+    "title": "North America/North America - 78°W to 72°W by country",
     "type": "Polygon",
     "coordinates": [
         [

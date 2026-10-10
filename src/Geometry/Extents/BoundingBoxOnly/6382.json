@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6382",
+    "title": "North America/USA - Ohio - Jackson",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.91, 38.74], [-82.32000000000001, 38.74], [-82.32000000000001, 39.31], [-82.91, 39.31], [-82.91, 38.74]
+        ]
+    ]
+}

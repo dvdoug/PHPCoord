@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6421",
+    "title": "North America/USA - Ohio - Tuscarawas",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.82, 40.11], [-81.16000000000001, 40.11], [-81.16000000000001, 40.77], [-81.82, 40.77], [-81.82, 40.11]
+        ]
+    ]
+}

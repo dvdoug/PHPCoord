@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6356",
+    "title": "North America/USA - Ohio - Clinton",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.11, 39.12], [-83.47, 39.12], [-83.47, 39.67], [-84.11, 39.67], [-84.11, 39.12]
+        ]
+    ]
+}

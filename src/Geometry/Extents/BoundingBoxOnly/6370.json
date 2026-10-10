@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6370",
+    "title": "North America/USA - Ohio - Geauga",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.5, 41.24], [-80.9, 41.24], [-80.9, 41.82], [-81.5, 41.82], [-81.5, 41.24]
+        ]
+    ]
+}

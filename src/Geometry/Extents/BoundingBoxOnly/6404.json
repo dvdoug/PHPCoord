@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6404",
+    "title": "North America/USA - Ohio - Ottawa",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.52, 41.35], [-82.51, 41.35], [-82.51, 41.93], [-83.52, 41.93], [-83.52, 41.35]
+        ]
+    ]
+}

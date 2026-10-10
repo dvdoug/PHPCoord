@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6420",
+    "title": "North America/USA - Ohio - Trumbull",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.11, 41.03], [-80.41000000000001, 41.03], [-80.41000000000001, 41.61], [-81.11, 41.61], [-81.11, 41.03]
+        ]
+    ]
+}

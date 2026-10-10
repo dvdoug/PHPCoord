@@ -1635,7 +1635,7 @@ class Vertical extends CoordinateReferenceSystem
      * NAVD88 height (ft)
      * Extent: USA - onshore - Arizona; Michigan; Montana; North Dakota; Oregon; South Carolina
      * Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed
-     * State Plane legislation in International feet (note: not US survet feet).
+     * State Plane legislation in International feet (note: not US survey feet).
      */
     public const EPSG_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8228';
 

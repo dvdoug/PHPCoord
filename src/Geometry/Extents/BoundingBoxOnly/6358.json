@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6358",
+    "title": "North America/USA - Ohio - Coshocton",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.3, 40.05], [-81.51, 40.05], [-81.51, 40.56], [-82.3, 40.56], [-82.3, 40.05]
+        ]
+    ]
+}

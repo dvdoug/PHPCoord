@@ -1521,6 +1521,20 @@ Cape Canaveral
 
 Fundamental point: Central 1950.  Latitude: 28°29'32.36555"N, longitude 80°34'38.77362"W (of Greenwich)
 
+Caribbean Terrestrial Reference Frame of 2022 epoch 2020.00
+-----------------------------------------------------------
+| Type: Geodetic
+| Extent: Puerto Rico and US Virgin Islands
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_CARIBBEAN_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1409')
+
+Static "snapshot" of dynamic, plate-fixed CATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the Caribbean tectonic plate using three Euler pole geocentric Cartesian rotation rates.
+
+CATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(2011) in Puerto Rico and the US Virgin Islands.
+
 Carthage
 --------
 | Type: Geodetic
@@ -3713,6 +3727,76 @@ Geocentric Datum of Australia 2020
 
 ITRF2014 at epoch 2020.0.
 
+Geocentric Datum of Malaysia 2000
+---------------------------------
+| Type: Geodetic
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::6742')
+
+ITRF2000, epoch 2000.0.
+
+Adopted 2003-08-23. Replaces all older Malaysian datums. Used for MyRTKnet from 2003-08-23 to 2007-06-30 then replaced by GDM2000 (2006).
+
+Geocentric Datum of Malaysia 2000 (Revision 2006)
+-------------------------------------------------
+| Type: Geodetic
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000_REVISION_2006)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1468')
+
+Aligned with ITRF2000 at epoch 2000.0.
+
+Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh, Indonesia) earthquakes, also including additional MyRTK stations. In Peninsular Malaysia coordinate displacements caused by the earthquakes vary, between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. Used for the MyRTK active GNSS network from 2007-07-01 to 2016-11-01, replacing GDM2000, replaced by GDM2000 (2016). Used for the National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.
+
+Geocentric Datum of Malaysia 2000 (Revision 2009)
+-------------------------------------------------
+| Type: Geodetic
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000_REVISION_2009)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1469')
+
+Aligned with ITRF2000 at epoch 2000.0.
+
+Update of GDM2000 (2006) station coordinates for effects of September 2007 Sumatra earthquake. Not adopted for MyRTKnet because the National Digital Cadastral Survey Database (NDCDB) was based on the GDM2000 (2006) adjustment.
+
+Geocentric Datum of Malaysia 2000 (Revision 2016)
+-------------------------------------------------
+| Type: Geodetic
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000_REVISION_2016)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1470')
+
+Aligned with ITRF2000 at epoch 2000.0.
+
+Update to GDM2000 (2009) coordinates for effects of April 2012 Indian Ocean earthquakes. Used for the MyRTK active GNSS network from 2016-11-01 to 2021-10-14, replacing GDM2000 (2006), replaced by GDM2020.
+
+Geocentric Datum of Malaysia 2020
+---------------------------------
+| Type: Geodetic
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2020)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1471')
+
+Aligned with ITRF2014 at epoch 2020.0.
+
+Static snapshot at epoch 2020.0 of dynamic CRS GDM2020. Adopted 2021-10-15. Replaces GDM2000, GDM2000 (2006) and GDM2000 (2016).
+
 Geodetic Datum of 1965
 ----------------------
 | Type: Geodetic
@@ -3726,20 +3810,6 @@ Geodetic Datum of 1965
 Adjusted to best mean fit 9 stations of the OSNI 1952 primary adjustment in Northern Ireland plus the 1965 values of 3 stations in the Republic of Ireland.
 
 Differences from the 1965 adjustment (datum code 6299) are: average difference in Eastings 0.092m; average difference in Northings 0.108m; maximum vector difference 0.548m.
-
-Geodetic Datum of Malaysia 2000
--------------------------------
-| Type: Geodetic
-| Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak
-
-.. code-block:: php
-
-    Datum::fromSRID(Datum::EPSG_GEODETIC_DATUM_OF_MALAYSIA_2000)
-    Datum::fromSRID('urn:ogc:def:datum:EPSG::6742')
-
-ITRF2000, epoch 2000.0.
-
-Replaces all older Malaysian datums.
 
 Geodezicheskaya Sistema Koordinat 2011
 --------------------------------------
@@ -5606,7 +5676,7 @@ Normal-orthometric heights. Replaced by JGD2000 (vertical) (datum code 1130) wit
 Johnston Island 1961
 --------------------
 | Type: Geodetic
-| Extent: United States Minor Outlying Islands - Johnston Island
+| Extent: United States Minor Outlying Islands - Johnston Atoll
 
 .. code-block:: php
 
@@ -5789,7 +5859,7 @@ Aligned to ITRF2014 at epoch 2022.328. Realized through the stations of the acti
 Kertau (RSO)
 ------------
 | Type: Geodetic
-| Extent: Malaysia - West Malaysia; Singapore
+| Extent: Malaysia - Peninsular Malaysia; Singapore
 
 .. code-block:: php
 
@@ -5801,7 +5871,7 @@ Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncati
 Kertau 1968
 -----------
 | Type: Geodetic
-| Extent: Malaysia - West Malaysia east coast; Singapore
+| Extent: Malaysia - Peninsular Malaysia east coast; Singapore
 
 .. code-block:: php
 
@@ -6910,6 +6980,20 @@ Marcus Island 1952
     Datum::fromSRID('urn:ogc:def:datum:EPSG::6711')
 
 Marcus Island Astronomic Station.
+
+Mariana Terrestrial Reference Frame of 2022 epoch 2020.00
+---------------------------------------------------------
+| Type: Geodetic
+| Extent: Guam; Northern Mariana Islands
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_MARIANA_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1411')
+
+Static "snapshot" of dynamic, plate-fixed MATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the Mariana tectonic plate using three Euler pole geocentric Cartesian rotation rates.
+
+MATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(MA11).
 
 Marshall Islands 1960
 ---------------------
@@ -9177,6 +9261,20 @@ PNG08
     Datum::fromSRID('urn:ogc:def:datum:EPSG::1149')
 
 Mean sea level at 8 tide gauges around PNG, defined through application of PNG08 geoid model (transformation code 7655) to PNG94 (CRS code 5545).
+
+Pacific Terrestrial Reference Frame of 2022 epoch 2020.00
+---------------------------------------------------------
+| Type: Geodetic
+| Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+
+.. code-block:: php
+
+    Datum::fromSRID(Datum::EPSG_PACIFIC_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00)
+    Datum::fromSRID('urn:ogc:def:datum:EPSG::1410')
+
+Static "snapshot" of dynamic, plate-fixed PATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the Pacific tectonic plate using three Euler pole geocentric Cartesian rotation rates.
+
+PATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(PA11).
 
 Palestine 1923
 --------------
@@ -11834,7 +11932,7 @@ Fundamental point: Tete.
 Timbalai 1948
 -------------
 | Type: Geodetic
-| Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
+| Extent: Brunei; Malaysia - Sabah and Sarawak
 
 .. code-block:: php
 

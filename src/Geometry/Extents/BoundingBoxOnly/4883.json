@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4883",
+    "title": "Australasia and Oceania/Pacific - Guam and NMI",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [141.09, 10.85], [149.65, 10.85], [149.65, 24], [141.09, 24], [141.09, 10.85]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6359",
+    "title": "North America/USA - Ohio - Crawford",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.22, 40.6], [-82.62, 40.6], [-82.62, 41.1], [-83.22, 41.1], [-83.22, 40.6]
+        ]
+    ]
+}

@@ -68,6 +68,41 @@ class CRSTransformationsOceania
             'accuracy' => 0.03,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14299',
+            'name' => 'SPCS2022 American Samoa zone (meter)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::24299',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14300',
+            'name' => 'SPCS2022 American Samoa zone (foot)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::24300',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14307',
+            'name' => 'SPCS2022 Guam and Northern Mariana Islands zone (meter)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10883',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::24307',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::14308',
+            'name' => 'SPCS2022 Guam and Northern Mariana Islands zone (foot)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10883',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::24308',
+            'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10938',
+            'name' => 'MATRF2022e2020 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10883',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 2.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7654',
             'name' => 'EGM2008 height to Kiunga height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::3855',
@@ -1895,6 +1930,13 @@ class CRSTransformationsOceania
             'accuracy' => 0.06,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9077',
+            'name' => 'ITRF2000 to NAD83(MARP00) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4919',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::9070',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::9686',
             'name' => 'GDA94 to WGS 84 (G1762) (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4938',
@@ -1949,6 +1991,13 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.03,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7809',
+            'name' => 'ITRF2008 to NAD83(MA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::5332',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6323',
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::5553',
@@ -2082,6 +2131,13 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
             'target_crs' => 'urn:ogc:def:crs:EPSG::4938',
             'accuracy' => 0.035,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10337',
+            'name' => 'ITRF2014 to NAD83(MA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::7789',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6323',
+            'accuracy' => 0.0,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::8049',
@@ -2567,11 +2623,25 @@ class CRSTransformationsOceania
             'accuracy' => 0.03,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10876',
+            'name' => 'ITRF2020 to MATRF2022e2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10881',
+            'accuracy' => 0.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10853',
             'name' => 'ITRF2020 to PNG94 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
             'target_crs' => 'urn:ogc:def:crs:EPSG::5544',
             'accuracy' => 0.15,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::10338',
+            'name' => 'ITRF2020 to NAD83(MA11) (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::9988',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::6323',
+            'accuracy' => 0.0,
         ],
     ];
 

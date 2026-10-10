@@ -1386,6 +1386,20 @@ trait ProjectedConstantsChunk1
     public const EPSG_CARTHAGE_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::22332';
 
     /**
+     * CATRF2022e2020 / Puerto Rico and US Virgin Islands
+     * Extent: Puerto Rico and US Virgin Islands - onshore
+     * See code 24310 for equivalent CRS in (international) feet.
+     */
+    public const EPSG_CATRF2022E2020_PUERTO_RICO_AND_US_VIRGIN_ISLANDS = 'urn:ogc:def:crs:EPSG::24309';
+
+    /**
+     * CATRF2022e2020 / Puerto Rico and US Virgin Islands (ft)
+     * Extent: Puerto Rico and US Virgin Islands - onshore
+     * See code 24309 for equivalent CRS in meters.
+     */
+    public const EPSG_CATRF2022E2020_PUERTO_RICO_AND_US_VIRGIN_ISLANDS_FT = 'urn:ogc:def:crs:EPSG::24310';
+
+    /**
      * Cayman Islands National Grid 2011
      * Extent: Cayman Islands. Includes Grand Cayman, Little Cayman and Cayman Brac.
      */
@@ -2083,7 +2097,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 1
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet: see CRS code 10911.
@@ -2092,7 +2106,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 1 (ftUS)
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet (this CRS): see CRS 10921 for metric definition.
@@ -2119,8 +2133,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 3
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet: see CRS code 10913.
      */
@@ -2128,8 +2142,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 3 (ftUS)
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet (this CRS): see CRS 10923 for metric definition.
      */
@@ -2137,7 +2151,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 4
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet: see CRS code 10914.
      */
@@ -2145,7 +2159,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 4 (ftUS)
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet (this CRS): see CRS 10924 for metric definition.
      */
@@ -2153,7 +2167,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 5
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet: see CRS code 10915.
      */
@@ -2161,7 +2176,8 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 5 (ftUS)
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet (this CRS): see CRS 10925 for metric definition.
      */
@@ -2169,7 +2185,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 6
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet: see CRS code 10916.
      */
@@ -2177,7 +2193,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * CSRN2025 (NAD83 2011) / California zone 6 (ftUS)
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego
      * Replaces NAD83(2011) / SPCS83 in California. Supersedes CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15. State
      * law defines use of US survey feet (this CRS): see CRS 10926 for metric definition.
      */
@@ -6266,81 +6282,349 @@ trait ProjectedConstantsChunk1
     public const EPSG_GDBD2009_BRUNEI_BRSO = 'urn:ogc:def:crs:EPSG::5247';
 
     /**
+     * GDM2000 (2006) / Johor Grid
+     * Extent: Malaysia - Peninsular Malaysia - Johor
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Johor Grid. Replaced by
+     * GDM2020 / Johor Grid.
+     */
+    public const EPSG_GDM2000_2006_JOHOR_GRID = 'urn:ogc:def:crs:EPSG::25299';
+
+    /**
+     * GDM2000 (2006) / Kedah and Perlis Grid
+     * Extent: Malaysia - Peninsular Malaysia - Kedah and Perlis
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Kedah and Perlis Grid.
+     * Replaced by GDM2020 / Kedah and Perlis Grid.
+     */
+    public const EPSG_GDM2000_2006_KEDAH_AND_PERLIS_GRID = 'urn:ogc:def:crs:EPSG::25311';
+
+    /**
+     * GDM2000 (2006) / Kelantan Grid
+     * Extent: Malaysia - Peninsular Malaysia - Kelantan
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Kelantan Grid. Replaced by
+     * GDM2020 / Kelantan Grid.
+     */
+    public const EPSG_GDM2000_2006_KELANTAN_GRID = 'urn:ogc:def:crs:EPSG::25313';
+
+    /**
+     * GDM2000 (2006) / Pahang Grid
+     * Extent: Malaysia - Peninsular Malaysia - Pahang
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Pahang Grid. Replaced by
+     * GDM2020 / Pahang Grid.
+     */
+    public const EPSG_GDM2000_2006_PAHANG_GRID = 'urn:ogc:def:crs:EPSG::25307';
+
+    /**
+     * GDM2000 (2006) / Perak Grid
+     * Extent: Malaysia - Peninsular Malaysia - Perak
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Perak Revised Grid. Replaced
+     * by GDM2020 / Perak Grid.
+     */
+    public const EPSG_GDM2000_2006_PERAK_GRID = 'urn:ogc:def:crs:EPSG::25312';
+
+    /**
+     * GDM2000 (2006) / Pinang Grid
+     * Extent: Malaysia - Peninsular Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province
+     * Wellesley)
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Pinang Grid). Replaced by
+     * GDM2020 / Pinang Grid.
+     */
+    public const EPSG_GDM2000_2006_PINANG_GRID = 'urn:ogc:def:crs:EPSG::25310';
+
+    /**
+     * GDM2000 (2006) / Selangor Grid
+     * Extent: Malaysia - Peninsular Malaysia - Selangor
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Selangor Grid. Replaced by
+     * GDM2020 / Selangor Grid.
+     */
+    public const EPSG_GDM2000_2006_SELANGOR_GRID = 'urn:ogc:def:crs:EPSG::25308';
+
+    /**
+     * GDM2000 (2006) / Sembilan and Melaka Grid
+     * Extent: Malaysia - Peninsular Malaysia - Negeri Sembilan and Melaka
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Sembilan and Melaka Grid.
+     * Replaced by GDM2020 / Sembilan and Melaka Grid.
+     */
+    public const EPSG_GDM2000_2006_SEMBILAN_AND_MELAKA_GRID = 'urn:ogc:def:crs:EPSG::25300';
+
+    /**
+     * GDM2000 (2006) / Terengganu Grid
+     * Extent: Malaysia - Peninsular Malaysia - Terengganu
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 / Terengganu Grid. Replaced by
+     * GDM2020 / Terengganu Grid.
+     */
+    public const EPSG_GDM2000_2006_TERENGGANU_GRID = 'urn:ogc:def:crs:EPSG::25309';
+
+    /**
      * GDM2000 / East Malaysia BRSO
-     * Extent: Malaysia - East Malaysia (Sabah; Sarawak)
+     * Extent: Malaysia - Sabah and Sarawak
      * Replaces Timbalai 1948 / RSO Borneo (CRS codes 29871-73).
      */
     public const EPSG_GDM2000_EAST_MALAYSIA_BRSO = 'urn:ogc:def:crs:EPSG::3376';
 
     /**
-     * GDM2000 / Johor Grid
-     * Extent: Malaysia - West Malaysia - Johor
-     * Replaces Kertau 1968 / Johor Grid (CRS code 4390).
+     * @deprecated use EPSG_GDM2000_JOHOR_GRID_E_N instead
      */
     public const EPSG_GDM2000_JOHOR_GRID = 'urn:ogc:def:crs:EPSG::3377';
 
     /**
-     * GDM2000 / Kedah and Perlis Grid
-     * Extent: Malaysia - West Malaysia - Kedah and Perlis
-     * Replaces Kertau 1968 / Kedah and Perlis Grid (CRS code 4396).
+     * GDM2000 / Johor Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Johor
+     * Replaces Kertau 1968 / Johor Grid (CRS code 4390). Replaced by GDM2000 (2006) / Johor Grid. See GDM2000 / Johor
+     * Grid (N-E) (CRS code 12461) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_JOHOR_GRID_E_N = 'urn:ogc:def:crs:EPSG::3377';
+
+    /**
+     * GDM2000 / Johor Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Johor
+     * Replaces Kertau 1968 / Johor Grid (CRS code 4390). Replaced by GDM2000 (2006) / Johor Grid. See GDM2000 / Johor
+     * Grid (CRS code 3377) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_JOHOR_GRID_N_E = 'urn:ogc:def:crs:EPSG::12461';
+
+    /**
+     * @deprecated use EPSG_GDM2000_KEDAH_AND_PERLIS_GRID_E_N instead
      */
     public const EPSG_GDM2000_KEDAH_AND_PERLIS_GRID = 'urn:ogc:def:crs:EPSG::3383';
 
     /**
-     * GDM2000 / Kelantan Grid
-     * Extent: Malaysia - West Malaysia - Kelantan
-     * Replaces Kertau 1968 / Kelantan Grid (CRS code 4398).
+     * GDM2000 / Kedah and Perlis Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Kedah and Perlis
+     * Replaces Kertau 1968 / Kedah and Perlis Grid (CRS code 4396). Replaced by GDM2000 (2006) / Kedah and Perlis
+     * Grid. See GDM2000 / Kedah and Perlis Grid (N-E) (CRS code 12499) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_KEDAH_AND_PERLIS_GRID_E_N = 'urn:ogc:def:crs:EPSG::3383';
+
+    /**
+     * GDM2000 / Kedah and Perlis Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Kedah and Perlis
+     * Replaces Kertau 1968 / Kedah and Perlis Grid (CRS code 4396). Replaced by GDM2000 (2006) / Kedah and Perlis
+     * Grid. See GDM2000 / Kedah and Perlis Grid (E-N) (CRS code 3383) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_KEDAH_AND_PERLIS_GRID_N_E = 'urn:ogc:def:crs:EPSG::12499';
+
+    /**
+     * @deprecated use EPSG_GDM2000_KELANTAN_GRID_E_N instead
      */
     public const EPSG_GDM2000_KELANTAN_GRID = 'urn:ogc:def:crs:EPSG::3385';
 
     /**
-     * GDM2000 / Pahang Grid
-     * Extent: Malaysia - West Malaysia - Pahang
-     * Replaces Kertau 1968 / Pahang Grid (CRS code 4392).
+     * GDM2000 / Kelantan Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Kelantan
+     * Replaces Kertau 1968 / Kelantan Grid (CRS code 4398). Replaced by GDM2000 (2006) / Kelantan Grid. See GDM2000 /
+     * Kelantan Grid (N-E) (CRS code 12504) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_KELANTAN_GRID_E_N = 'urn:ogc:def:crs:EPSG::3385';
+
+    /**
+     * GDM2000 / Kelantan Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Kelantan
+     * Replaces Kertau 1968 / Kelantan Grid (CRS code 4398). Replaced by GDM2000 (2006) / Kelantan Grid. See GDM2000 /
+     * Kelantan Grid (E-N) (CRS code 3385) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_KELANTAN_GRID_N_E = 'urn:ogc:def:crs:EPSG::12504';
+
+    /**
+     * @deprecated use EPSG_GDM2000_PAHANG_GRID_E_N instead
      */
     public const EPSG_GDM2000_PAHANG_GRID = 'urn:ogc:def:crs:EPSG::3379';
 
     /**
+     * GDM2000 / Pahang Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Pahang
+     * Replaces Kertau 1968 / Pahang Grid (CRS code 4392). Replaced by GDM2000 (2006) / Pahang Grid. See GDM2000 /
+     * Pahang Grid (N-E) (CRS code 12463) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_PAHANG_GRID_E_N = 'urn:ogc:def:crs:EPSG::3379';
+
+    /**
+     * GDM2000 / Pahang Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Pahang
+     * Replaces Kertau 1968 / Pahang Grid (CRS code 4392). Replaced by GDM2000 (2006) / Pahang Grid. See GDM2000 /
+     * Pahang Grid (CRS code 3379) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_PAHANG_GRID_N_E = 'urn:ogc:def:crs:EPSG::12463';
+
+    /**
      * GDM2000 / Peninsula RSO
-     * Extent: Malaysia - West Malaysia
+     * Extent: Malaysia - Peninsular Malaysia
      * Replaces Kertau (RSO) / RSO Malaya (CRS codes 3167-68).
      */
     public const EPSG_GDM2000_PENINSULA_RSO = 'urn:ogc:def:crs:EPSG::3375';
 
     /**
-     * GDM2000 / Perak Grid
-     * Extent: Malaysia - West Malaysia - Perak
-     * Replaces Kertau 1968 / Perak Revised Grid (CRS code 4397).
+     * @deprecated use EPSG_GDM2000_PERAK_GRID_E_N instead
      */
     public const EPSG_GDM2000_PERAK_GRID = 'urn:ogc:def:crs:EPSG::3384';
 
     /**
-     * GDM2000 / Pinang Grid
-     * Extent: Malaysia - West Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province Wellesley)
-     * Replaces Kertau 1968 / Pinang Grid (CRS code 4395).
+     * GDM2000 / Perak Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Perak
+     * Replaces Kertau 1968 / Perak Revised Grid (CRS code 4397). Replaced by GDM2000 (2006) / Perak Grid. See GDM2000
+     * / Perak Grid (N-E) (CRS code 12500) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_PERAK_GRID_E_N = 'urn:ogc:def:crs:EPSG::3384';
+
+    /**
+     * GDM2000 / Perak Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Perak
+     * Replaces Kertau 1968 / Perak Revised Grid (CRS code 4397). Replaced by GDM2000 (2006) / Perak Grid. See GDM2000
+     * / Perak Grid (E-N) (CRS code 3384) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_PERAK_GRID_N_E = 'urn:ogc:def:crs:EPSG::12500';
+
+    /**
+     * @deprecated use EPSG_GDM2000_PINANG_GRID_E_N instead
      */
     public const EPSG_GDM2000_PINANG_GRID = 'urn:ogc:def:crs:EPSG::3382';
 
     /**
-     * GDM2000 / Selangor Grid
-     * Extent: Malaysia - West Malaysia - Selangor
-     * Replaces Kertau 1968 / Selangor Grid (CRS code 4393).
+     * GDM2000 / Pinang Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province
+     * Wellesley)
+     * Replaces Kertau 1968 / Pinang Grid (CRS code 4395). Replaced by GDM2000 (2006) / Pinang Grid. See GDM2000 /
+     * Pinang Grid (N-E) (CRS code 12466) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_PINANG_GRID_E_N = 'urn:ogc:def:crs:EPSG::3382';
+
+    /**
+     * GDM2000 / Pinang Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province
+     * Wellesley)
+     * Replaces Kertau 1968 / Pinang Grid (CRS code 4395). Replaced by GDM2000 (2006) / Pinang Grid. See GDM2000 /
+     * Pinang Grid (E-N) (CRS code 3382) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_PINANG_GRID_N_E = 'urn:ogc:def:crs:EPSG::12466';
+
+    /**
+     * @deprecated use EPSG_GDM2000_SELANGOR_GRID_E_N instead
      */
     public const EPSG_GDM2000_SELANGOR_GRID = 'urn:ogc:def:crs:EPSG::3380';
 
     /**
-     * GDM2000 / Sembilan and Melaka Grid
-     * Extent: Malaysia - West Malaysia - Negeri Sembilan and Melaka
-     * Replaces Kertau 1968 / Sembilan and Melaka Grid (CRS code 4391).
+     * GDM2000 / Selangor Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Selangor
+     * Replaces Kertau 1968 / Selangor Grid (CRS code 4393). Replaced by GDM2000 (2006) / Selangor Grid. See GDM2000 /
+     * Selangor Grid (N-E) (CRS code 12464) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_SELANGOR_GRID_E_N = 'urn:ogc:def:crs:EPSG::3380';
+
+    /**
+     * GDM2000 / Selangor Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Selangor
+     * Replaces Kertau 1968 / Selangor Grid (CRS code 4393). Replaced by GDM2000 (2006) / Selangor Grid. See GDM2000 /
+     * Selangor Grid (E-N) (CRS code 3380) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_SELANGOR_GRID_N_E = 'urn:ogc:def:crs:EPSG::12464';
+
+    /**
+     * @deprecated use EPSG_GDM2000_SEMBILAN_AND_MELAKA_GRID_E_N instead
      */
     public const EPSG_GDM2000_SEMBILAN_AND_MELAKA_GRID = 'urn:ogc:def:crs:EPSG::3378';
 
     /**
-     * GDM2000 / Terengganu Grid
-     * Extent: Malaysia - West Malaysia - Terengganu
-     * Replaces Kertau 1968 / Terengganu Grid (CRS code 4394).
+     * GDM2000 / Sembilan and Melaka Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Negeri Sembilan and Melaka
+     * Replaces Kertau 1968 / Sembilan and Melaka Grid (CRS code 4391). Replaced by GDM2000 (2006) / Sembilan and
+     * Melaka Grid. See GDM2000 / Sembilan and Melaka Grid (N-E) (CRS code 12462) for alternative CRS with north-east
+     * axis order.
+     */
+    public const EPSG_GDM2000_SEMBILAN_AND_MELAKA_GRID_E_N = 'urn:ogc:def:crs:EPSG::3378';
+
+    /**
+     * GDM2000 / Sembilan and Melaka Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Negeri Sembilan and Melaka
+     * Replaces Kertau 1968 / Sembilan and Melaka Grid (CRS code 4391). Replaced by GDM2000 (2006) / Sembilan and
+     * Melaka Grid. See GDM2000 / Sembilan and Melaka Grid (CRS code 3378) for alternative CRS with east-north axis
+     * order.
+     */
+    public const EPSG_GDM2000_SEMBILAN_AND_MELAKA_GRID_N_E = 'urn:ogc:def:crs:EPSG::12462';
+
+    /**
+     * @deprecated use EPSG_GDM2000_TERENGGANU_GRID_E_N instead
      */
     public const EPSG_GDM2000_TERENGGANU_GRID = 'urn:ogc:def:crs:EPSG::3381';
+
+    /**
+     * GDM2000 / Terengganu Grid (E-N)
+     * Extent: Malaysia - Peninsular Malaysia - Terengganu
+     * Replaces Kertau 1968 / Terengganu Grid (CRS code 4394). Replaced by GDM2000 (2006) / Terengganu Grid. See
+     * GDM2000 / Terengganu Grid (N-E) (CRS code 12465) for alternative CRS with north-east axis order.
+     */
+    public const EPSG_GDM2000_TERENGGANU_GRID_E_N = 'urn:ogc:def:crs:EPSG::3381';
+
+    /**
+     * GDM2000 / Terengganu Grid (N-E)
+     * Extent: Malaysia - Peninsular Malaysia - Terengganu
+     * Replaces Kertau 1968 / Terengganu Grid (CRS code 4394). Replaced by GDM2000 (2006) / Terengganu Grid. See
+     * GDM2000 / Terengganu Grid (E-N) (CRS code 3381) for alternative CRS with east-north axis order.
+     */
+    public const EPSG_GDM2000_TERENGGANU_GRID_N_E = 'urn:ogc:def:crs:EPSG::12465';
+
+    /**
+     * GDM2020 / Johor Grid
+     * Extent: Malaysia - Peninsular Malaysia - Johor
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Johor Grid.
+     */
+    public const EPSG_GDM2020_JOHOR_GRID = 'urn:ogc:def:crs:EPSG::25314';
+
+    /**
+     * GDM2020 / Kedah and Perlis Grid
+     * Extent: Malaysia - Peninsular Malaysia - Kedah and Perlis
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Kedah and Perlis Grid.
+     */
+    public const EPSG_GDM2020_KEDAH_AND_PERLIS_GRID = 'urn:ogc:def:crs:EPSG::25320';
+
+    /**
+     * GDM2020 / Kelantan Grid
+     * Extent: Malaysia - Peninsular Malaysia - Kelantan
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Kelantan Grid.
+     */
+    public const EPSG_GDM2020_KELANTAN_GRID = 'urn:ogc:def:crs:EPSG::25322';
+
+    /**
+     * GDM2020 / Pahang Grid
+     * Extent: Malaysia - Peninsular Malaysia - Pahang
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Pahang Grid.
+     */
+    public const EPSG_GDM2020_PAHANG_GRID = 'urn:ogc:def:crs:EPSG::25316';
+
+    /**
+     * GDM2020 / Perak Grid
+     * Extent: Malaysia - Peninsular Malaysia - Perak
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Perak Grid.
+     */
+    public const EPSG_GDM2020_PERAK_GRID = 'urn:ogc:def:crs:EPSG::25321';
+
+    /**
+     * GDM2020 / Pinang Grid
+     * Extent: Malaysia - Peninsular Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province
+     * Wellesley)
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Pinang Grid.
+     */
+    public const EPSG_GDM2020_PINANG_GRID = 'urn:ogc:def:crs:EPSG::25319';
+
+    /**
+     * GDM2020 / Selangor Grid
+     * Extent: Malaysia - Peninsular Malaysia - Selangor
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Selangor Grid.
+     */
+    public const EPSG_GDM2020_SELANGOR_GRID = 'urn:ogc:def:crs:EPSG::25317';
+
+    /**
+     * GDM2020 / Sembilan and Melaka Grid
+     * Extent: Malaysia - Peninsular Malaysia - Negeri Sembilan and Melaka
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Sembilan and Melaka
+     * Grid.
+     */
+    public const EPSG_GDM2020_SEMBILAN_AND_MELAKA_GRID = 'urn:ogc:def:crs:EPSG::25315';
+
+    /**
+     * GDM2020 / Terengganu Grid
+     * Extent: Malaysia - Peninsular Malaysia - Terengganu
+     * Used in the National Digital Cadastral Survey Database (NDCDB). Replaces GDM2000 (2006) / Terengganu Grid.
+     */
+    public const EPSG_GDM2020_TERENGGANU_GRID = 'urn:ogc:def:crs:EPSG::25318';
 
     /**
      * Georgia Geodetic Datum / Lambert
@@ -9582,56 +9866,57 @@ trait ProjectedConstantsChunk1
 
     /**
      * Kertau 1968 / Johor Grid
-     * Extent: Malaysia - West Malaysia - Johor
+     * Extent: Malaysia - Peninsular Malaysia - Johor
      * Replaced by GDM2000 / Johor Grid (CRS code 3377).
      */
     public const EPSG_KERTAU_1968_JOHOR_GRID = 'urn:ogc:def:crs:EPSG::4390';
 
     /**
      * Kertau 1968 / Kedah and Perlis Grid
-     * Extent: Malaysia - West Malaysia - Kedah and Perlis
+     * Extent: Malaysia - Peninsular Malaysia - Kedah and Perlis
      * Replaced by GDM2000 / Kedah and Perlis Grid (CRS code 3383).
      */
     public const EPSG_KERTAU_1968_KEDAH_AND_PERLIS_GRID = 'urn:ogc:def:crs:EPSG::4396';
 
     /**
      * Kertau 1968 / Kelantan Grid
-     * Extent: Malaysia - West Malaysia - Kelantan
+     * Extent: Malaysia - Peninsular Malaysia - Kelantan
      * Replaced by GDM2000 / Kelantan Grid (CRS code 3385).
      */
     public const EPSG_KERTAU_1968_KELANTAN_GRID = 'urn:ogc:def:crs:EPSG::4398';
 
     /**
      * Kertau 1968 / Pahang Grid
-     * Extent: Malaysia - West Malaysia - Pahang
+     * Extent: Malaysia - Peninsular Malaysia - Pahang
      * Replaced by GDM2000 / Pahang Grid (CRS code 3379).
      */
     public const EPSG_KERTAU_1968_PAHANG_GRID = 'urn:ogc:def:crs:EPSG::4392';
 
     /**
      * Kertau 1968 / Perak Revised Grid
-     * Extent: Malaysia - West Malaysia - Perak
+     * Extent: Malaysia - Peninsular Malaysia - Perak
      * Replaces Kertau 1968 / Perak Grid. Replaced by GDM2000 / Perak Grid (CRS code 3384).
      */
     public const EPSG_KERTAU_1968_PERAK_REVISED_GRID = 'urn:ogc:def:crs:EPSG::4397';
 
     /**
      * Kertau 1968 / Pinang Grid
-     * Extent: Malaysia - West Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province Wellesley)
+     * Extent: Malaysia - Peninsular Malaysia - Pulau Pinang - Pinang (Penang) Island and Seberang Perai (Province
+     * Wellesley)
      * Replaced by GDM2000 / Pinang Grid (CRS code 3382).
      */
     public const EPSG_KERTAU_1968_PINANG_GRID = 'urn:ogc:def:crs:EPSG::4395';
 
     /**
      * Kertau 1968 / Selangor Grid
-     * Extent: Malaysia - West Malaysia - Selangor
+     * Extent: Malaysia - Peninsular Malaysia - Selangor
      * Replaced by GDM2000 / Selangor Grid (CRS code 3380).
      */
     public const EPSG_KERTAU_1968_SELANGOR_GRID = 'urn:ogc:def:crs:EPSG::4393';
 
     /**
      * Kertau 1968 / Sembilan and Melaka Grid
-     * Extent: Malaysia - West Malaysia - Negeri Sembilan and Melaka
+     * Extent: Malaysia - Peninsular Malaysia - Negeri Sembilan and Melaka
      * Replaced by GDM2000 / Sembilan and Melaka Grid (CRS code 3378).
      */
     public const EPSG_KERTAU_1968_SEMBILAN_AND_MELAKA_GRID = 'urn:ogc:def:crs:EPSG::4391';
@@ -9645,26 +9930,26 @@ trait ProjectedConstantsChunk1
 
     /**
      * Kertau 1968 / Terengganu Grid
-     * Extent: Malaysia - West Malaysia - Terengganu
+     * Extent: Malaysia - Peninsular Malaysia - Terengganu
      * Replaced by GDM2000 / Terengganu Grid (CRS code 3381).
      */
     public const EPSG_KERTAU_1968_TERENGGANU_GRID = 'urn:ogc:def:crs:EPSG::4394';
 
     /**
      * Kertau 1968 / UTM zone 47N
-     * Extent: Malaysia - West Malaysia onshore west of 102°E.
+     * Extent: Malaysia - Peninsular Malaysia - onshore west of 102°E.
      */
     public const EPSG_KERTAU_1968_UTM_ZONE_47N = 'urn:ogc:def:crs:EPSG::24547';
 
     /**
      * Kertau 1968 / UTM zone 48N
-     * Extent: Malaysia - onshore West Malaysia east of 102°E and offshore east coast.
+     * Extent: Malaysia - onshore Peninsular Malaysia east of 102°E and offshore east coast.
      */
     public const EPSG_KERTAU_1968_UTM_ZONE_48N = 'urn:ogc:def:crs:EPSG::24548';
 
     /**
      * Kertau (RSO) / RSO Malaya (ch)
-     * Extent: Malaysia - West Malaysia onshore
+     * Extent: Malaysia - Peninsular Malaysia - onshore
      * See Kertau (RSO) / RSO Malaya (m) (CRS code 3168) for metric equivalent. Replaced by GDM2000 / Peninsula RSO
      * (CRS code 3375).
      */
@@ -9672,7 +9957,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Kertau (RSO) / RSO Malaya (m)
-     * Extent: Malaysia - West Malaysia onshore
+     * Extent: Malaysia - Peninsular Malaysia - onshore
      * Adopts metric conversion of 0.914398 metres per yard. See Kertau (RSO) / RSO Malaya (ch) (CRS code 3168) for
      * Imperial version. Replaced by GDM2000 / Peninsula RSO (CRS code 3375).
      */
@@ -10041,4 +10326,688 @@ trait ProjectedConstantsChunk1
      * In use from October 2010.
      */
     public const EPSG_KYRG_06_ZONE_4 = 'urn:ogc:def:crs:EPSG::7695';
+
+    /**
+     * Kyrg-06 / zone 5
+     * Extent: Kyrgyzstan - east of 79°01'E
+     * In use from October 2010.
+     */
+    public const EPSG_KYRG_06_ZONE_5 = 'urn:ogc:def:crs:EPSG::7696';
+
+    /**
+     * Lake / Maracaibo Grid
+     * Extent: Venezuela - Maracaibo area,  in lake
+     * Grid coordinates are (200000 200000) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used
+     * for Lake triangulation coordinate listing.
+     */
+    public const EPSG_LAKE_MARACAIBO_GRID = 'urn:ogc:def:crs:EPSG::2102';
+
+    /**
+     * Lake / Maracaibo Grid M1
+     * Extent: Venezuela - Maracaibo area,  in lake
+     * Grid coordinates are (0 0) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used by
+     * Creole; MGO and Sun.
+     */
+    public const EPSG_LAKE_MARACAIBO_GRID_M1 = 'urn:ogc:def:crs:EPSG::2101';
+
+    /**
+     * Lake / Maracaibo Grid M3
+     * Extent: Venezuela - Maracaibo area,  in lake
+     * Grid coordinates are (500000 500000) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used
+     * by Varco.
+     */
+    public const EPSG_LAKE_MARACAIBO_GRID_M3 = 'urn:ogc:def:crs:EPSG::2103';
+
+    /**
+     * Lake / Maracaibo La Rosa Grid
+     * Extent: Venezuela - Maracaibo area offshore blocks I, II and III
+     * Grid coordinates are (X=-17044 Y=29545) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum).
+     * Do not confuse with the La Rosa grid used in the Cabinas area (code 5810).
+     */
+    public const EPSG_LAKE_MARACAIBO_LA_ROSA_GRID = 'urn:ogc:def:crs:EPSG::2104';
+
+    /**
+     * La Canoa / UTM zone 18N
+     * Extent: Venezuela - west of 72°W
+     * Sometimes referred to as PSAD56 / UTM zone 18N.
+     */
+    public const EPSG_LA_CANOA_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::24718';
+
+    /**
+     * La Canoa / UTM zone 19N
+     * Extent: Venezuela - between 72°W and 66°W, onshore
+     * Sometimes referred to as PSAD56 / UTM zone 19N.
+     */
+    public const EPSG_LA_CANOA_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::24719';
+
+    /**
+     * La Canoa / UTM zone 20N
+     * Extent: Venezuela - onshore east of 66°W
+     * Sometimes referred to as PSAD56 / UTM zone 20N.
+     */
+    public const EPSG_LA_CANOA_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::24720';
+
+    /**
+     * Leigon / Ghana Metre Grid
+     * Extent: Ghana
+     * Replaced Accra / Ghana National Grid (code 2136) in 1978.
+     */
+    public const EPSG_LEIGON_GHANA_METRE_GRID = 'urn:ogc:def:crs:EPSG::25000';
+
+    /**
+     * Le Pouce 1934 / Mauritius Grid
+     * Extent: Mauritius - mainland onshore.
+     */
+    public const EPSG_LE_POUCE_1934_MAURITIUS_GRID = 'urn:ogc:def:crs:EPSG::3337';
+
+    /**
+     * LGD2006 / Libya TM
+     * Extent: Libya.
+     */
+    public const EPSG_LGD2006_LIBYA_TM = 'urn:ogc:def:crs:EPSG::3177';
+
+    /**
+     * LGD2006 / Libya TM zone 10
+     * Extent: Libya - onshore between 18°E and 20°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_10 = 'urn:ogc:def:crs:EPSG::3195';
+
+    /**
+     * LGD2006 / Libya TM zone 11
+     * Extent: Libya - onshore between 20°E and 22°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_11 = 'urn:ogc:def:crs:EPSG::3196';
+
+    /**
+     * LGD2006 / Libya TM zone 12
+     * Extent: Libya - onshore between 22°E and 24°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_12 = 'urn:ogc:def:crs:EPSG::3197';
+
+    /**
+     * LGD2006 / Libya TM zone 13
+     * Extent: Libya - onshore east of 24°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_13 = 'urn:ogc:def:crs:EPSG::3198';
+
+    /**
+     * LGD2006 / Libya TM zone 5
+     * Extent: Libya - west of 10°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_5 = 'urn:ogc:def:crs:EPSG::3190';
+
+    /**
+     * LGD2006 / Libya TM zone 6
+     * Extent: Libya - onshore between 10°E and 12°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_6 = 'urn:ogc:def:crs:EPSG::3191';
+
+    /**
+     * LGD2006 / Libya TM zone 7
+     * Extent: Libya - onshore between 12°E and 14°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_7 = 'urn:ogc:def:crs:EPSG::3192';
+
+    /**
+     * LGD2006 / Libya TM zone 8
+     * Extent: Libya - onshore between 14°E and 16°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_8 = 'urn:ogc:def:crs:EPSG::3193';
+
+    /**
+     * LGD2006 / Libya TM zone 9
+     * Extent: Libya - onshore between 16°E and 18°E.
+     */
+    public const EPSG_LGD2006_LIBYA_TM_ZONE_9 = 'urn:ogc:def:crs:EPSG::3194';
+
+    /**
+     * LGD2006 / UTM zone 32N
+     * Extent: Libya - west of 12°E.
+     */
+    public const EPSG_LGD2006_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::3199';
+
+    /**
+     * LGD2006 / UTM zone 33N
+     * Extent: Libya - between 12°E and 18°E.
+     */
+    public const EPSG_LGD2006_UTM_ZONE_33N = 'urn:ogc:def:crs:EPSG::3201';
+
+    /**
+     * LGD2006 / UTM zone 34N
+     * Extent: Libya - between 18°E and 24°E.
+     */
+    public const EPSG_LGD2006_UTM_ZONE_34N = 'urn:ogc:def:crs:EPSG::3202';
+
+    /**
+     * LGD2006 / UTM zone 35N
+     * Extent: Libya - east of 24°E.
+     */
+    public const EPSG_LGD2006_UTM_ZONE_35N = 'urn:ogc:def:crs:EPSG::3203';
+
+    /**
+     * LibRef21 / UTM zone 28N
+     * Extent: Liberia - offshore west of 12°W.
+     */
+    public const EPSG_LIBREF21_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::10801';
+
+    /**
+     * LibRef21 / UTM zone 29N
+     * Extent: Liberia - onshore, and offshore east of 12°W.
+     */
+    public const EPSG_LIBREF21_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::10802';
+
+    /**
+     * Lisbon 1890 (Lisbon) / Portugal Bonne
+     * Extent: Portugal - mainland - onshore
+     * Replaced by definition using Greenwich meridian, CRS code 5017.
+     */
+    public const EPSG_LISBON_1890_LISBON_PORTUGAL_BONNE = 'urn:ogc:def:crs:EPSG::2963';
+
+    /**
+     * Lisbon 1890 / Portugal Bonne New
+     * Extent: Portugal - mainland - onshore
+     * Replaces original definition using Lisbon meridian, CRS code 2963.
+     */
+    public const EPSG_LISBON_1890_PORTUGAL_BONNE_NEW = 'urn:ogc:def:crs:EPSG::5017';
+
+    /**
+     * Lisbon (Lisbon) / Portuguese Grid
+     * Extent: Portugal - mainland - onshore
+     * Replaced by definition using Greenwich meridian, CRS code 5018.
+     */
+    public const EPSG_LISBON_LISBON_PORTUGUESE_GRID = 'urn:ogc:def:crs:EPSG::20791';
+
+    /**
+     * Lisbon (Lisbon) / Portuguese National Grid
+     * Extent: Portugal - mainland - onshore.
+     */
+    public const EPSG_LISBON_LISBON_PORTUGUESE_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::20790';
+
+    /**
+     * Lisbon / Portuguese Grid New
+     * Extent: Portugal - mainland - onshore
+     * Replaces original definition using Lisbon meridian, CRS code 20791.
+     */
+    public const EPSG_LISBON_PORTUGUESE_GRID_NEW = 'urn:ogc:def:crs:EPSG::5018';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92_LATVIA_TM instead
+     */
+    public const EPSG_LKS92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LTU_LKS94_LITHUANIA_TM instead
+     */
+    public const EPSG_LKS94_LITHUANIA_TM = 'urn:ogc:def:crs:EPSG::3346';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_2020_LATVIA_TM instead
+     */
+    public const EPSG_LKS_2020_LATVIA_TM = 'urn:ogc:def:crs:EPSG::10306';
+
+    /**
+     * @deprecated use EPSG_ETRS89_LVA_LKS_92_LATVIA_TM instead
+     */
+    public const EPSG_LKS_92_LATVIA_TM = 'urn:ogc:def:crs:EPSG::3059';
+
+    /**
+     * Locodjo 1965 / TM 5 NW
+     * Extent: Côte d'Ivoire (Ivory Coast) - offshore.
+     */
+    public const EPSG_LOCODJO_1965_TM_5_NW = 'urn:ogc:def:crs:EPSG::2164';
+
+    /**
+     * Locodjo 1965 / UTM zone 29N
+     * Extent: Côte d'Ivoire (Ivory Coast) west of 6°W
+     * Replaced by Abidjan 87 / UTM 29N (EPSG code 2043).
+     */
+    public const EPSG_LOCODJO_1965_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::2042';
+
+    /**
+     * Locodjo 1965 / UTM zone 30N
+     * Extent: Côte d'Ivoire (Ivory Coast) east of 6°W
+     * Replaced by Abidjan 87 / UTM 30N (EPSG code 2041).
+     */
+    public const EPSG_LOCODJO_1965_UTM_ZONE_30N = 'urn:ogc:def:crs:EPSG::2040';
+
+    /**
+     * Lome / UTM zone 31N
+     * Extent: Togo.
+     */
+    public const EPSG_LOME_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::25231';
+
+    /**
+     * LTF2004(C)
+     * Extent: France and Italy - on or related to the rail route from Lyon to Turin.
+     */
+    public const EPSG_LTF2004_C = 'urn:ogc:def:crs:EPSG::9549';
+
+    /**
+     * LUREF / Luxembourg TM
+     * Extent: Luxembourg.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM = 'urn:ogc:def:crs:EPSG::2169';
+
+    /**
+     * LUREF / Luxembourg TM (3D)
+     * Extent: Luxembourg
+     * The height error in assuming that the CS is Cartesian never exceeds 2mm per 100m height in Luxembourg. The
+     * ellipsoidal height approximates NG95 height to 5-15cm. For engineering and other applications requiring physical
+     * height use compound CRS code 9897.
+     */
+    public const EPSG_LUREF_LUXEMBOURG_TM_3D = 'urn:ogc:def:crs:EPSG::9895';
+
+    /**
+     * @deprecated use EPSG_LUREF_LUXEMBOURG_TM instead
+     */
+    public const EPSG_LUXEMBOURG_1930_GAUSS = 'urn:ogc:def:crs:EPSG::2169';
+
+    /**
+     * Luzon 1911 / Philippines zone I
+     * Extent: Philippines - onshore west of 118°E
+     * Replaced by PRS92 / Philippines zone 1 (CRS code 3121).
+     */
+    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_I = 'urn:ogc:def:crs:EPSG::25391';
+
+    /**
+     * Luzon 1911 / Philippines zone II
+     * Extent: Philippines - onshore approximately between 118°E and 120°E - Palawan; Calamian Islands
+     * Replaced by PRS92 / Philippines zone 2 (CRS code 3122).
+     */
+    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_II = 'urn:ogc:def:crs:EPSG::25392';
+
+    /**
+     * Luzon 1911 / Philippines zone III
+     * Extent: Philippines - onshore approximately between 120°E and 122°E. Luzon (west of 122°E); Mindoro
+     * Replaced by PRS92 / Philippines zone 3 (CRS code 3123).
+     */
+    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_III = 'urn:ogc:def:crs:EPSG::25393';
+
+    /**
+     * Luzon 1911 / Philippines zone IV
+     * Extent: Philippines - onshore approximately between 122°E and 124°E - southeast Luzon (east of 122°E);
+     * Tablas; Masbate; Panay; Cebu; Negros; northwest Mindanao (west of 124°E)
+     * Replaced by PRS92 / Philippines zone 4 (CRS code 3124).
+     */
+    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_IV = 'urn:ogc:def:crs:EPSG::25394';
+
+    /**
+     * Luzon 1911 / Philippines zone V
+     * Extent: Philippines - onshore approximately between 124°E and 126°E - east Mindanao (east of 124°E); Bohol;
+     * Samar
+     * Replaced by PRS92 / Philippines zone 5 (CRS code 3125).
+     */
+    public const EPSG_LUZON_1911_PHILIPPINES_ZONE_V = 'urn:ogc:def:crs:EPSG::25395';
+
+    /**
+     * Macao 1920 / Macao Grid
+     * Extent: Macao.
+     */
+    public const EPSG_MACAO_1920_MACAO_GRID = 'urn:ogc:def:crs:EPSG::8433';
+
+    /**
+     * Macedonia State Coordinate System
+     * Extent: North Macedonia
+     * Truncated form of MGI 1901 / Balkans zones 7, CRS code 6316. Introduced in 2008, replacing MGI 1901 / Balkans
+     * zones 7 and 8 (CRS codes 6316 and 8679) for use across whole country. Further truncated in CRS 9945 which with
+     * CRS code 6316 used for cadastre.
+     */
+    public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM = 'urn:ogc:def:crs:EPSG::6204';
+
+    /**
+     * Macedonia State Coordinate System truncated
+     * Extent: North Macedonia
+     * Macedonia State Coordinate System (CRS code 6204) with northing reduced by 4 million. Cadastral data from AREC
+     * may be delivered in this CRS.
+     */
+    public const EPSG_MACEDONIA_STATE_COORDINATE_SYSTEM_TRUNCATED = 'urn:ogc:def:crs:EPSG::9945';
+
+    /**
+     * Madrid 1870 (Madrid) / Spain LCC
+     * Extent: Spain - mainland onshore
+     * Polyhedral projection used for large and medium scale topographic mapping and engineering survey. Replaced by
+     * ED50 / UTM after 1970.
+     */
+    public const EPSG_MADRID_1870_MADRID_SPAIN_LCC = 'urn:ogc:def:crs:EPSG::2062';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia Bogota zone
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
+     * Greenwich)
+     * Replaces MAGNA-SIRGAS / Colombia Bogota zone (CRS code 3116). MAGNA-SIRGAS 2018 / Origen-Nacional should be used
+     * for national topographic mapping.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::11116';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia East Central zone
+     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
+     * Greenwich)
+     * Replaces MAGNA-SIRGAS / Colombia East Central zone (CRS code 3117).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::11117';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia East zone
+     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich)
+     * Replaces MAGNA-SIRGAS / Colombia East zone (CRS code 3118).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::11118';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia Far West zone
+     * Extent: Colombia - mainland onshore west of 4°30'W of Bogota (approximately 78°35'W of Greenwich)
+     * Replaces MAGNA-SIRGAS / Colombia Far West zone (CRS code 3114).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_FAR_WEST_ZONE = 'urn:ogc:def:crs:EPSG::11114';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Colombia West zone
+     * Extent: Colombia - onshore between 4°30'W and 1°30'W of Bogota (approximately 78°35'W and 75°35'W of
+     * Greenwich)
+     * Replaces MAGNA-SIRGAS / Colombia West zone (CRS code 3115).
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_COLOMBIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::11115';
+
+    /**
+     * MAGNA-SIRGAS 2018 / Origen-Nacional
+     * Extent: Colombia. Includes San Andres y Providencia, Malpelo Islands, Roncador Bank, Serrana Bank and Serranilla
+     * Bank
+     * Used for the Multipurpose Cadastre and to support GIS-based land administration. Originally described using
+     * "MAGNA-SIRGAS" as base CRS, but redefined by IGAC using "MAGNA-SIRGAS 2018". 0.3m difference not significant for
+     * quoted usage.
+     */
+    public const EPSG_MAGNA_SIRGAS_2018_ORIGEN_NACIONAL = 'urn:ogc:def:crs:EPSG::9377';
+
+    /**
+     * MAGNA-SIRGAS / Arauca urban grid
+     * Extent: Colombia - Arauca city.
+     */
+    public const EPSG_MAGNA_SIRGAS_ARAUCA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6244';
+
+    /**
+     * MAGNA-SIRGAS / Armenia urban grid
+     * Extent: Colombia - Armenia city.
+     */
+    public const EPSG_MAGNA_SIRGAS_ARMENIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6245';
+
+    /**
+     * MAGNA-SIRGAS / Barranquilla urban grid
+     * Extent: Colombia - Barranquilla city.
+     */
+    public const EPSG_MAGNA_SIRGAS_BARRANQUILLA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6246';
+
+    /**
+     * MAGNA-SIRGAS / Bogota urban grid
+     * Extent: Colombia - Bogota DC city.
+     */
+    public const EPSG_MAGNA_SIRGAS_BOGOTA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6247';
+
+    /**
+     * MAGNA-SIRGAS / Bucaramanga urban grid
+     * Extent: Colombia - Bucaramanga city.
+     */
+    public const EPSG_MAGNA_SIRGAS_BUCARAMANGA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6248';
+
+    /**
+     * MAGNA-SIRGAS / Cali urban grid
+     * Extent: Colombia - Cali city.
+     */
+    public const EPSG_MAGNA_SIRGAS_CALI_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6249';
+
+    /**
+     * MAGNA-SIRGAS / Cartagena urban grid
+     * Extent: Colombia - Cartagena city.
+     */
+    public const EPSG_MAGNA_SIRGAS_CARTAGENA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6250';
+
+    /**
+     * MAGNA-SIRGAS / Colombia Bogota zone
+     * Extent: Colombia - onshore between 1°30'W and 1°30'E of Bogota (approximately 75°35'W and 72°35'W of
+     * Greenwich)
+     * Replaces Bogota 1975 / Colombia Bogota zone (CRS code 21897). Replaced by MAGNA-SIRGAS 2018 / Colombia Bogota
+     * zone (CRS code 11116). MAGNA-SIRGAS 2018 / Origen-Nacional should be used for national topographic mapping.
+     */
+    public const EPSG_MAGNA_SIRGAS_COLOMBIA_BOGOTA_ZONE = 'urn:ogc:def:crs:EPSG::3116';
+
+    /**
+     * MAGNA-SIRGAS / Colombia East Central zone
+     * Extent: Colombia - onshore between 1°30'E and 4°30'E of Bogota (approximately 72°35'W and 69°35'W of
+     * Greenwich)
+     * Replaces Bogota 1975 / Colombia East Central zone (CRS code 21898). Replaced by MAGNA-SIRGAS 2018 / Colombia
+     * East Central zone (CRS code 11117).
+     */
+    public const EPSG_MAGNA_SIRGAS_COLOMBIA_EAST_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::3117';
+
+    /**
+     * MAGNA-SIRGAS / Colombia East zone
+     * Extent: Colombia - east of 4°30'E of Bogota (approximately 69°35'W of Greenwich)
+     * Replaces Bogota 1975 / Colombia East zone (CRS code 21899). Replaced by MAGNA-SIRGAS 2018 / Colombia East zone
+     * (CRS code 11118).
+     */
+    public const EPSG_MAGNA_SIRGAS_COLOMBIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::3118';
+
+    /**
+     * MAGNA-SIRGAS / Colombia Far West zone
+     * Extent: Colombia - mainland onshore west of 4°30'W of Bogota (approximately 78°35'W of Greenwich)
+     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896). Replaced by MAGNA-SIRGAS 2018 / Colombia
+     * Far West zone (CRS code 11114).
+     */
+    public const EPSG_MAGNA_SIRGAS_COLOMBIA_FAR_WEST_ZONE = 'urn:ogc:def:crs:EPSG::3114';
+
+    /**
+     * MAGNA-SIRGAS / Colombia West zone
+     * Extent: Colombia - onshore between 4°30'W and 1°30'W of Bogota (approximately 78°35'W and 75°35'W of
+     * Greenwich)
+     * Partially replaces Bogota 1975 / Colombia West zone (CRS code 21896). Replaced by MAGNA-SIRGAS 2018 / Colombia
+     * West zone (CRS code 11115).
+     */
+    public const EPSG_MAGNA_SIRGAS_COLOMBIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::3115';
+
+    /**
+     * MAGNA-SIRGAS / Cucuta urban grid
+     * Extent: Colombia - Cucuta city.
+     */
+    public const EPSG_MAGNA_SIRGAS_CUCUTA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6251';
+
+    /**
+     * MAGNA-SIRGAS / Florencia urban grid
+     * Extent: Colombia - Florencia city.
+     */
+    public const EPSG_MAGNA_SIRGAS_FLORENCIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6252';
+
+    /**
+     * MAGNA-SIRGAS / Ibague urban grid
+     * Extent: Colombia - Ibague city.
+     */
+    public const EPSG_MAGNA_SIRGAS_IBAGUE_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6253';
+
+    /**
+     * MAGNA-SIRGAS / Inirida urban grid
+     * Extent: Colombia - Inirida city.
+     */
+    public const EPSG_MAGNA_SIRGAS_INIRIDA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6254';
+
+    /**
+     * MAGNA-SIRGAS / Leticia urban grid
+     * Extent: Colombia - Leticia city.
+     */
+    public const EPSG_MAGNA_SIRGAS_LETICIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6255';
+
+    /**
+     * MAGNA-SIRGAS / Manizales urban grid
+     * Extent: Colombia - Manizales city.
+     */
+    public const EPSG_MAGNA_SIRGAS_MANIZALES_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6256';
+
+    /**
+     * MAGNA-SIRGAS / Medellin urban grid
+     * Extent: Colombia - Medellin city.
+     */
+    public const EPSG_MAGNA_SIRGAS_MEDELLIN_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6257';
+
+    /**
+     * MAGNA-SIRGAS / Mitu urban grid
+     * Extent: Colombia - Mitu city.
+     */
+    public const EPSG_MAGNA_SIRGAS_MITU_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6258';
+
+    /**
+     * MAGNA-SIRGAS / Mocoa urban grid
+     * Extent: Colombia - Mocoa city.
+     */
+    public const EPSG_MAGNA_SIRGAS_MOCOA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6259';
+
+    /**
+     * MAGNA-SIRGAS / Monteria urban grid
+     * Extent: Colombia - Monteria city.
+     */
+    public const EPSG_MAGNA_SIRGAS_MONTERIA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6260';
+
+    /**
+     * MAGNA-SIRGAS / Neiva urban grid
+     * Extent: Colombia - Neiva city.
+     */
+    public const EPSG_MAGNA_SIRGAS_NEIVA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6261';
+
+    /**
+     * MAGNA-SIRGAS / Pasto urban grid
+     * Extent: Colombia - Pasto city.
+     */
+    public const EPSG_MAGNA_SIRGAS_PASTO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6262';
+
+    /**
+     * MAGNA-SIRGAS / Pereira urban grid
+     * Extent: Colombia - Pereira city.
+     */
+    public const EPSG_MAGNA_SIRGAS_PEREIRA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6263';
+
+    /**
+     * MAGNA-SIRGAS / Popayan urban grid
+     * Extent: Colombia - Popayan city.
+     */
+    public const EPSG_MAGNA_SIRGAS_POPAYAN_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6264';
+
+    /**
+     * MAGNA-SIRGAS / Puerto Carreno urban grid
+     * Extent: Colombia - Puerto Carreno city.
+     */
+    public const EPSG_MAGNA_SIRGAS_PUERTO_CARRENO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6265';
+
+    /**
+     * MAGNA-SIRGAS / Quibdo urban grid
+     * Extent: Colombia - Quibdo city.
+     */
+    public const EPSG_MAGNA_SIRGAS_QUIBDO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6266';
+
+    /**
+     * MAGNA-SIRGAS / Riohacha urban grid
+     * Extent: Colombia - Riohacha city.
+     */
+    public const EPSG_MAGNA_SIRGAS_RIOHACHA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6267';
+
+    /**
+     * MAGNA-SIRGAS / Santa Marta urban grid
+     * Extent: Colombia - Santa Marta city.
+     */
+    public const EPSG_MAGNA_SIRGAS_SANTA_MARTA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6270';
+
+    /**
+     * MAGNA-SIRGAS / San Andres urban grid
+     * Extent: Colombia - San Andres city.
+     */
+    public const EPSG_MAGNA_SIRGAS_SAN_ANDRES_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6268';
+
+    /**
+     * MAGNA-SIRGAS / San Jose del Guaviare urban grid
+     * Extent: Colombia - San Jose del Guaviare city.
+     */
+    public const EPSG_MAGNA_SIRGAS_SAN_JOSE_DEL_GUAVIARE_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6269';
+
+    /**
+     * MAGNA-SIRGAS / Sucre urban grid
+     * Extent: Colombia - Sucre city.
+     */
+    public const EPSG_MAGNA_SIRGAS_SUCRE_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6271';
+
+    /**
+     * MAGNA-SIRGAS / Tunja urban grid
+     * Extent: Colombia - Tunja city.
+     */
+    public const EPSG_MAGNA_SIRGAS_TUNJA_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6272';
+
+    /**
+     * MAGNA-SIRGAS / Valledupar urban grid
+     * Extent: Colombia - Valledupar city.
+     */
+    public const EPSG_MAGNA_SIRGAS_VALLEDUPAR_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6273';
+
+    /**
+     * MAGNA-SIRGAS / Villavicencio urban grid
+     * Extent: Colombia - Villavicencio city.
+     */
+    public const EPSG_MAGNA_SIRGAS_VILLAVICENCIO_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6274';
+
+    /**
+     * MAGNA-SIRGAS / Yopal urban grid
+     * Extent: Colombia - Yopal city.
+     */
+    public const EPSG_MAGNA_SIRGAS_YOPAL_URBAN_GRID = 'urn:ogc:def:crs:EPSG::6275';
+
+    /**
+     * Makassar (Jakarta) / NEIEZ
+     * Extent: Indonesia - south west Sulawesi
+     * Replaced by Greenwich-based Makassar / NEIEZ (CRS code 3002).
+     */
+    public const EPSG_MAKASSAR_JAKARTA_NEIEZ = 'urn:ogc:def:crs:EPSG::5331';
+
+    /**
+     * Makassar / NEIEZ
+     * Extent: Indonesia - south west Sulawesi.
+     */
+    public const EPSG_MAKASSAR_NEIEZ = 'urn:ogc:def:crs:EPSG::3002';
+
+    /**
+     * Malongo 1987 / UTM zone 32S
+     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
+     * Replaced Mhast (offshore) / UTM zone 32S (CRS code 3354) in 1987. References to "Mhast" since 1987 often should
+     * have stated "Malongo 1987".
+     */
+    public const EPSG_MALONGO_1987_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::25932';
+
+    /**
+     * Malongo 1987 / UTM zone 33S
+     * Extent: The Democratic Republic of the Congo (Zaire) - offshore.
+     */
+    public const EPSG_MALONGO_1987_UTM_ZONE_33S = 'urn:ogc:def:crs:EPSG::7992';
+
+    /**
+     * MALS09 Grid
+     * Extent: UK - on or related to the rail route from London (Marylebone) to Leamington Spa
+     * Defined through transformation ETRS89-GBR [OSNet v2009] to MALS09-IRF (1) (code 10225) and map projection
+     * MALS09-TM (code 10226). Emulates the MALS09 Snake projection applied to ETRS89 as realized through OSNet v2009.
+     */
+    public const EPSG_MALS09_GRID = 'urn:ogc:def:crs:EPSG::10227';
+
+    /**
+     * Manoca 1962 / UTM zone 32N
+     * Extent: Cameroon - coastal area
+     * Replaces Douala 1948 / AOF west (code 2214). The intent of the Bukavu 1953 conference was to adopt the Clarke
+     * 1880 (RGN) ellipsoid (code 7012) but in practice this CRS has used the IGN version.
+     */
+    public const EPSG_MANOCA_1962_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::2215';
+
+    /**
+     * MARGEN / UTM zone 19S
+     * Extent: Bolivia - west of 66°W
+     * Replaces PSAD56 / UTM zone 19S (CRS code 24879) in Bolivia.
+     */
+    public const EPSG_MARGEN_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::5356';
+
+    /**
+     * MARGEN / UTM zone 20S
+     * Extent: Bolivia between 66°W and 60°W
+     * Replaces PSAD56 / UTM zone 20S (CRS code 24880) in Bolivia.
+     */
+    public const EPSG_MARGEN_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::5355';
 }

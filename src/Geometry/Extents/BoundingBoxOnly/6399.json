@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6399",
+    "title": "North America/USA - Ohio - Montgomery",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.58999999999999, 39.47], [-83.95, 39.47], [-83.95, 40.03], [-84.58999999999999, 40.03], [-84.58999999999999, 39.47]
+        ]
+    ]
+}

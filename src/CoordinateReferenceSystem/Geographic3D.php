@@ -67,6 +67,13 @@ class Geographic3D extends Geographic
     public const EPSG_BONAIRE_2004 = 'urn:ogc:def:crs:EPSG::10761';
 
     /**
+     * CATRF2022e2020
+     * Extent: Puerto Rico and US Virgin Islands
+     * Replaces NAD83(2011) in Puerto Rico and US Virgin Islands.
+     */
+    public const EPSG_CATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10885';
+
+    /**
      * CGRS93
      * Extent: Cyprus - onshore.
      */
@@ -656,9 +663,39 @@ class Geographic3D extends Geographic
 
     /**
      * GDM2000
-     * Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak.
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Replaced by GDM2000 (2006).
      */
     public const EPSG_GDM2000 = 'urn:ogc:def:crs:EPSG::4921';
+
+    /**
+     * GDM2000 (2006)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh,
+     * Indonesia) earthquakes. In Peninsular Malaysia coordinate displacements caused by the earthquakes vary, between
+     * 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and
+     * GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. Used for the National Digital
+     * Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.
+     */
+    public const EPSG_GDM2000_2006 = 'urn:ogc:def:crs:EPSG::12277';
+
+    /**
+     * GDM2000 (2009)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak.
+     */
+    public const EPSG_GDM2000_2009 = 'urn:ogc:def:crs:EPSG::12280';
+
+    /**
+     * GDM2000 (2016)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak.
+     */
+    public const EPSG_GDM2000_2016 = 'urn:ogc:def:crs:EPSG::12283';
+
+    /**
+     * GDM2020
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak.
+     */
+    public const EPSG_GDM2020 = 'urn:ogc:def:crs:EPSG::12286';
 
     /**
      * GR96
@@ -1059,6 +1096,13 @@ class Geographic3D extends Geographic
     public const EPSG_MARGEN = 'urn:ogc:def:crs:EPSG::5353';
 
     /**
+     * MATRF2022e2020
+     * Extent: Guam; Northern Mariana Islands
+     * Replaces NAD83(MA11).
+     */
+    public const EPSG_MATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10882';
+
+    /**
      * MGI
      * Extent: Austria
      * Created retrospectively to support geoid model based on Bessel ellipsoid.
@@ -1305,6 +1349,14 @@ class Geographic3D extends Geographic
      * Replaces ONGD14 (CRS code 7372) from March 2019.
      */
     public const EPSG_ONGD17 = 'urn:ogc:def:crs:EPSG::9293';
+
+    /**
+     * PATRF2022e2020
+     * Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island,
+     * Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+     * Replaces NAD83(PA11) in Hawaii and American Samoa.
+     */
+    public const EPSG_PATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10879';
 
     /**
      * PNG94

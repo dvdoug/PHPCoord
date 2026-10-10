@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6416",
+    "title": "North America/USA - Ohio - Seneca",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.53, 40.89], [-82.72, 40.89], [-82.72, 41.36], [-83.53, 41.36], [-83.53, 40.89]
+        ]
+    ]
+}

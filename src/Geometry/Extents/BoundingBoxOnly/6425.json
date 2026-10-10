@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6425",
+    "title": "North America/USA - Ohio - Warren",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.47, 39.15], [-83.87, 39.15], [-83.87, 39.690000000000005], [-84.47, 39.690000000000005], [-84.47, 39.15]
+        ]
+    ]
+}

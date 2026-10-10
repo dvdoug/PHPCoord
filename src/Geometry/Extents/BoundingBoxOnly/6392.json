@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6392",
+    "title": "North America/USA - Ohio - Mahoning",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.19, 40.79], [-80.41000000000001, 40.79], [-80.41000000000001, 41.24], [-81.19, 41.24], [-81.19, 40.79]
+        ]
+    ]
+}
