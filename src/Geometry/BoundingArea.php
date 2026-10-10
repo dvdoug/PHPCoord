@@ -139,27 +139,27 @@ class BoundingArea
             $this->checkLongitudeWrapAround();
         }
 
-        $latitude = $point->getLongitude()->asDegrees()->getValue();
-        $longitude = $point->getLatitude()->asDegrees()->getValue();
+        $longitude = $point->getLongitude()->asDegrees()->getValue();
+        $latitude = $point->getLatitude()->asDegrees()->getValue();
 
         $pointsToCheck = [
             [
-                $latitude,
                 $longitude,
+                $latitude,
             ],
         ];
 
         if ($this->longitudeExtendsFurtherThanMinus180) {
             $pointsToCheck[] = [
-                $latitude - 360,
-                $longitude,
+                $longitude - 360,
+                $latitude,
             ];
         }
 
         if ($this->longitudeExtendsFurtherThanPlus180) {
             $pointsToCheck[] = [
-                $latitude + 360,
-                $longitude,
+                $longitude + 360,
+                $latitude,
             ];
         }
 
