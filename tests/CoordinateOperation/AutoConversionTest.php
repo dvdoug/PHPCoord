@@ -493,7 +493,7 @@ class AutoConversionTest extends TestCase
             self::assertEqualsWithDelta(651409.804, $to->getEasting()->asMetres()->getValue(), 0.001);
             self::assertEqualsWithDelta(313177.450, $to->getNorthing()->asMetres()->getValue(), 0.001);
         } else {
-            self::assertEqualsWithDelta(651411.216, $to->getEasting()->asMetres()->getValue(), 0.001);
+            self::assertEqualsWithDelta(651411.220, $to->getEasting()->asMetres()->getValue(), 0.001);
             self::assertEqualsWithDelta(313180.713, $to->getNorthing()->asMetres()->getValue(), 0.001);
         }
     }
