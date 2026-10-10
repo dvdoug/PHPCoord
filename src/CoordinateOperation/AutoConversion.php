@@ -55,6 +55,7 @@ use function usort;
 use function is_array;
 use function implode;
 use function array_key_last;
+use function array_keys;
 
 /**
  * @internal
@@ -259,10 +260,10 @@ trait AutoConversion
         static $byDatum = [];
         $key = $datum->getSRID();
         if (!isset($byDatum[$key])) {
-            foreach (Geographic3D::getSupportedSRIDs() as $srid => $name) {
-                $crs = Geographic3D::fromSRID($srid);
-                if ($crs->getDatum()->getSRID() === $key) {
-                    $byDatum[$key] = $crs;
+            foreach (array_keys(Geographic3D::getSupportedSRIDs()) as $srid) {
+                $row = Geographic3D::getSRIDData($srid);
+                if ($row !== null && $row['datum'] === $key) {
+                    $byDatum[$key] = Geographic3D::fromSRID($srid);
                     break;
                 }
             }
