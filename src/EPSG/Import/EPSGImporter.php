@@ -299,6 +299,11 @@ class EPSGImporter
             if ((int) $extentMetaData['extent_code'] === 1159) {
                 $extentDB->exec('UPDATE extent SET interior_lat = -12.82671176417377, interior_lon = 45.1804293832095 WHERE extent_code = 1159');
             }
+
+            // Area 2706 straddles the antimeridian, so its surface point lands exactly on 180°, which tests cannot compare across the wraparound. Use an onshore point in Chukotka east of 178.5°E instead.
+            if ((int) $extentMetaData['extent_code'] === 2706) {
+                $extentDB->exec('UPDATE extent SET interior_lat = 67.035885, interior_lon = 179.25 WHERE extent_code = 2706');
+            }
         }
 
         $points = [];

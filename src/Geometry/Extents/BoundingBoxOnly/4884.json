@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4884",
+    "title": "North America/Pacific - American Samoa, US (Hawaii), US outlying islands",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [162.97, -17.66], [208.82999999999998, -17.66], [208.82999999999998, 31.900000000000002], [162.97, 31.900000000000002], [162.97, -17.66]
+        ]
+    ]
+}

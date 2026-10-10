@@ -385,6 +385,13 @@ class Geographic2D extends Geographic
     public const EPSG_BUKIT_RIMPAH = 'urn:ogc:def:crs:EPSG::4219';
 
     /**
+     * CATRF2022e2020
+     * Extent: Puerto Rico and US Virgin Islands
+     * Replaces NAD83(2011) in Puerto Rico and US Virgin Islands.
+     */
+    public const EPSG_CATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10886';
+
+    /**
      * CGRS93
      * Extent: Cyprus - onshore
      * Adopted by DLS in 1993 for new survey plans and maps.
@@ -1464,10 +1471,39 @@ class Geographic2D extends Geographic
 
     /**
      * GDM2000
-     * Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak
-     * Replaces all earlier Malaysian geographic CRSs.
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Replaces all earlier Malaysian geographic CRSs. Replaced by GDM2000 (2006).
      */
     public const EPSG_GDM2000 = 'urn:ogc:def:crs:EPSG::4742';
+
+    /**
+     * GDM2000 (2006)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh,
+     * Indonesia) earthquakes. In Peninsular Malaysia coordinate displacements caused by the earthquakes vary, between
+     * 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and
+     * GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. Used for the National Digital
+     * Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.
+     */
+    public const EPSG_GDM2000_2006 = 'urn:ogc:def:crs:EPSG::12278';
+
+    /**
+     * GDM2000 (2009)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak.
+     */
+    public const EPSG_GDM2000_2009 = 'urn:ogc:def:crs:EPSG::12281';
+
+    /**
+     * GDM2000 (2016)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak.
+     */
+    public const EPSG_GDM2000_2016 = 'urn:ogc:def:crs:EPSG::12284';
+
+    /**
+     * GDM2020
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak.
+     */
+    public const EPSG_GDM2020 = 'urn:ogc:def:crs:EPSG::12287';
 
     /**
      * GGRS87
@@ -2131,7 +2167,7 @@ class Geographic2D extends Geographic
 
     /**
      * Johnston Island 1961
-     * Extent: United States Minor Outlying Islands - Johnston Island.
+     * Extent: United States Minor Outlying Islands - Johnston Atoll.
      */
     public const EPSG_JOHNSTON_ISLAND_1961 = 'urn:ogc:def:crs:EPSG::4725';
 
@@ -2237,7 +2273,7 @@ class Geographic2D extends Geographic
 
     /**
      * Kertau (RSO)
-     * Extent: Malaysia - West Malaysia; Singapore
+     * Extent: Malaysia - Peninsular Malaysia; Singapore
      * Used only for metrication of RSO grid. See Kertau 1968 (CRS code 4245) for other purposes. Replaced by GDM2000
      * (CRS code 4742).
      */
@@ -2245,7 +2281,7 @@ class Geographic2D extends Geographic
 
     /**
      * Kertau 1968
-     * Extent: Malaysia - West Malaysia east coast; Singapore
+     * Extent: Malaysia - Peninsular Malaysia east coast; Singapore
      * Not used for metrication of RSO grid - see Kertau (RSO) (CRS code 4751). Replaced by GDM2000 (CRS code 4742).
      */
     public const EPSG_KERTAU_1968 = 'urn:ogc:def:crs:EPSG::4245';
@@ -2457,6 +2493,13 @@ class Geographic2D extends Geographic
      * Replaces PSAD56 (CRS code 4248) in Bolivia.
      */
     public const EPSG_MARGEN = 'urn:ogc:def:crs:EPSG::5354';
+
+    /**
+     * MATRF2022e2020
+     * Extent: Guam; Northern Mariana Islands
+     * Replaces NAD83(MA11).
+     */
+    public const EPSG_MATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10883';
 
     /**
      * MGI
@@ -3173,6 +3216,14 @@ class Geographic2D extends Geographic
      * map projection (code 10234).
      */
     public const EPSG_OXWO08_IRF = 'urn:ogc:def:crs:EPSG::10229';
+
+    /**
+     * PATRF2022e2020
+     * Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island,
+     * Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+     * Replaces NAD83(PA11).
+     */
+    public const EPSG_PATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10880';
 
     /**
      * PD/83
@@ -4418,7 +4469,7 @@ class Geographic2D extends Geographic
 
     /**
      * Timbalai 1948
-     * Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
+     * Extent: Brunei; Malaysia - Sabah and Sarawak
      * Adopts metric conversion of 39.370147 inches per metre. Replaced by GDM2000 (CRS code 4742) in East Malaysia and
      * by GDBD2009 (CRS code 5247) in Brunei.
      */

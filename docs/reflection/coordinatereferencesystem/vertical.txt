@@ -2798,7 +2798,7 @@ NAVD88 height (ft)
     CoordinateReferenceSystem::fromSRID(Vertical::EPSG_NAVD88_HEIGHT_FT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::8228')
 
-Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed State Plane legislation in International feet (note: not US survet feet).
+Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed State Plane legislation in International feet (note: not US survey feet).
 
 NAVD88 height (ftUS)
 --------------------

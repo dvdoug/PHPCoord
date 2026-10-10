@@ -222,6 +222,26 @@ to Bonaire height (Vertical)
 
     "
 
+CATRF2022e2020
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_CATRF2022E2020)``
+
+to CATRF2022e2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_CATRF2022E2020)
+        )
+
+    "
+
 CGRS93
 ------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_CGRS93)``
@@ -3663,6 +3683,86 @@ to GDM2000 (Geographic2D)
 
     "
 
+GDM2000 (2006)
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_GDM2000_2006)``
+
+to GDM2000 (2006) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_GDM2000_2006)
+        )
+
+    "
+
+GDM2000 (2009)
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_GDM2000_2009)``
+
+to GDM2000 (2009) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_GDM2000_2009)
+        )
+
+    "
+
+GDM2000 (2016)
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_GDM2000_2016)``
+
+to GDM2000 (2016) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_GDM2000_2016)
+        )
+
+    "
+
+GDM2020
+-------
+``Geographic3D::fromSRID(Geographic3D::EPSG_GDM2020)``
+
+to GDM2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_GDM2020)
+        )
+
+    "
+
 GR96
 ----
 ``Geographic3D::fromSRID(Geographic3D::EPSG_GR96)``
@@ -5053,6 +5153,26 @@ to MARGEN (Geographic2D)
 
         $point->threeDToTwoD(
             to: Geographic2D::fromSRID(Geographic2D::EPSG_MARGEN)
+        )
+
+    "
+
+MATRF2022e2020
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_MATRF2022E2020)``
+
+to MATRF2022e2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_MATRF2022E2020)
         )
 
     "
@@ -6838,6 +6958,26 @@ to ONGD17 (Geographic2D)
 
         $point->threeDToTwoD(
             to: Geographic2D::fromSRID(Geographic2D::EPSG_ONGD17)
+        )
+
+    "
+
+PATRF2022e2020
+--------------
+``Geographic3D::fromSRID(Geographic3D::EPSG_PATRF2022E2020)``
+
+to PATRF2022e2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: geographic3D to geographic2D
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::15593``
+    | Extent: World",".. code-block:: php
+
+        $point->threeDToTwoD(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020)
         )
 
     "

@@ -96,6 +96,21 @@ Bonaire 2004
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10761')
 
 
+CATRF2022e2020
+--------------
+| Extent: Puerto Rico and US Virgin Islands
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_CATRF2022E2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10885')
+    Geographic::fromSRID(Geographic3D::EPSG_CATRF2022E2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10885')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_CATRF2022E2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10885')
+
+Replaces NAD83(2011) in Puerto Rico and US Virgin Islands.
+
 CGRS93
 ------
 | Extent: Cyprus - onshore
@@ -1295,7 +1310,7 @@ GDBD2009
 
 GDM2000
 -------
-| Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
 
 .. code-block:: php
 
@@ -1305,6 +1320,64 @@ GDM2000
     Geographic::fromSRID('urn:ogc:def:crs:EPSG::4921')
     CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GDM2000)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4921')
+
+Replaced by GDM2000 (2006).
+
+GDM2000 (2006)
+--------------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GDM2000_2006)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::12277')
+    Geographic::fromSRID(Geographic3D::EPSG_GDM2000_2006)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12277')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GDM2000_2006)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12277')
+
+Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh, Indonesia) earthquakes. In Peninsular Malaysia coordinate displacements caused by the earthquakes vary, between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. Used for the National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.
+
+GDM2000 (2009)
+--------------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GDM2000_2009)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::12280')
+    Geographic::fromSRID(Geographic3D::EPSG_GDM2000_2009)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12280')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GDM2000_2009)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12280')
+
+
+GDM2000 (2016)
+--------------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GDM2000_2016)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::12283')
+    Geographic::fromSRID(Geographic3D::EPSG_GDM2000_2016)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12283')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GDM2000_2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12283')
+
+
+GDM2020
+-------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_GDM2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::12286')
+    Geographic::fromSRID(Geographic3D::EPSG_GDM2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12286')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_GDM2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12286')
 
 
 GR96
@@ -2131,6 +2204,21 @@ MARGEN
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5353')
 
 
+MATRF2022e2020
+--------------
+| Extent: Guam; Northern Mariana Islands
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_MATRF2022E2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10882')
+    Geographic::fromSRID(Geographic3D::EPSG_MATRF2022E2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10882')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_MATRF2022E2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10882')
+
+Replaces NAD83(MA11).
+
 MGI
 ---
 | Extent: Austria
@@ -2590,6 +2678,21 @@ ONGD17
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9293')
 
 Replaces ONGD14 (CRS code 7372) from March 2019.
+
+PATRF2022e2020
+--------------
+| Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+
+.. code-block:: php
+
+    Geographic3D::fromSRID(Geographic3D::EPSG_PATRF2022E2020)
+    Geographic3D::fromSRID('urn:ogc:def:crs:EPSG::10879')
+    Geographic::fromSRID(Geographic3D::EPSG_PATRF2022E2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10879')
+    CoordinateReferenceSystem::fromSRID(Geographic3D::EPSG_PATRF2022E2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10879')
+
+Replaces NAD83(PA11) in Hawaii and American Samoa.
 
 PNG94
 -----

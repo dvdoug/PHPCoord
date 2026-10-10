@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6354",
+    "title": "North America/USA - Ohio - Clark",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.16, 39.66], [-83.41000000000001, 39.66], [-83.41000000000001, 40.15], [-84.16, 40.15], [-84.16, 39.66]
+        ]
+    ]
+}

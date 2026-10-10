@@ -790,6 +790,21 @@ Bukit Rimpah
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4219')
 
 
+CATRF2022e2020
+--------------
+| Extent: Puerto Rico and US Virgin Islands
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_CATRF2022E2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10886')
+    Geographic::fromSRID(Geographic2D::EPSG_CATRF2022E2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10886')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_CATRF2022E2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10886')
+
+Replaces NAD83(2011) in Puerto Rico and US Virgin Islands.
+
 CGRS93
 ------
 | Extent: Cyprus - onshore
@@ -2909,7 +2924,7 @@ Introduced from July 2009 to replace Timbalai 1948 (CRS code 4298) for governmen
 
 GDM2000
 -------
-| Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
 
 .. code-block:: php
 
@@ -2920,7 +2935,64 @@ GDM2000
     CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GDM2000)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::4742')
 
-Replaces all earlier Malaysian geographic CRSs.
+Replaces all earlier Malaysian geographic CRSs. Replaced by GDM2000 (2006).
+
+GDM2000 (2006)
+--------------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GDM2000_2006)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::12278')
+    Geographic::fromSRID(Geographic2D::EPSG_GDM2000_2006)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12278')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GDM2000_2006)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12278')
+
+Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh, Indonesia) earthquakes. In Peninsular Malaysia coordinate displacements caused by the earthquakes vary, between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. Used for the National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.
+
+GDM2000 (2009)
+--------------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GDM2000_2009)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::12281')
+    Geographic::fromSRID(Geographic2D::EPSG_GDM2000_2009)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12281')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GDM2000_2009)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12281')
+
+
+GDM2000 (2016)
+--------------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GDM2000_2016)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::12284')
+    Geographic::fromSRID(Geographic2D::EPSG_GDM2000_2016)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12284')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GDM2000_2016)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12284')
+
+
+GDM2020
+-------
+| Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_GDM2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::12287')
+    Geographic::fromSRID(Geographic2D::EPSG_GDM2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::12287')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_GDM2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12287')
+
 
 GGRS87
 ------
@@ -4281,7 +4353,7 @@ Jamaica 1875
 
 Johnston Island 1961
 --------------------
-| Extent: United States Minor Outlying Islands - Johnston Island
+| Extent: United States Minor Outlying Islands - Johnston Atoll
 
 .. code-block:: php
 
@@ -4511,7 +4583,7 @@ Katanga 1955
 
 Kertau (RSO)
 ------------
-| Extent: Malaysia - West Malaysia; Singapore
+| Extent: Malaysia - Peninsular Malaysia; Singapore
 
 .. code-block:: php
 
@@ -4526,7 +4598,7 @@ Used only for metrication of RSO grid. See Kertau 1968 (CRS code 4245) for other
 
 Kertau 1968
 -----------
-| Extent: Malaysia - West Malaysia east coast; Singapore
+| Extent: Malaysia - Peninsular Malaysia east coast; Singapore
 
 .. code-block:: php
 
@@ -4978,6 +5050,21 @@ MARGEN
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::5354')
 
 Replaces PSAD56 (CRS code 4248) in Bolivia
+
+MATRF2022e2020
+--------------
+| Extent: Guam; Northern Mariana Islands
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_MATRF2022E2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10883')
+    Geographic::fromSRID(Geographic2D::EPSG_MATRF2022E2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10883')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_MATRF2022E2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10883')
+
+Replaces NAD83(MA11).
 
 MGI
 ---
@@ -6377,6 +6464,21 @@ OxWo08-IRF
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10229')
 
 Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / OxWo08 SnakeGrid projected CRS through transformation ETRS89-GBR [OSNet v2009] to OxWo08-IRF (1) (code 10230) used in conjunction with the OxWo08-TM map projection (code 10234).
+
+PATRF2022e2020
+--------------
+| Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+
+.. code-block:: php
+
+    Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020)
+    Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::10880')
+    Geographic::fromSRID(Geographic2D::EPSG_PATRF2022E2020)
+    Geographic::fromSRID('urn:ogc:def:crs:EPSG::10880')
+    CoordinateReferenceSystem::fromSRID(Geographic2D::EPSG_PATRF2022E2020)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::10880')
+
+Replaces NAD83(PA11).
 
 PD/83
 -----
@@ -8852,7 +8954,7 @@ Tete
 
 Timbalai 1948
 -------------
-| Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
+| Extent: Brunei; Malaysia - Sabah and Sarawak
 
 .. code-block:: php
 

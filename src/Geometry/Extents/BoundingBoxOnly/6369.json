@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6369",
+    "title": "North America/USA - Ohio - Gallia",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.69, 38.48], [-81.99000000000001, 38.48], [-81.99000000000001, 39.14], [-82.69, 39.14], [-82.69, 38.48]
+        ]
+    ]
+}

@@ -1629,7 +1629,7 @@ trait VerticalSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::5103',
             'extent' => ['urn:ogc:def:area:EPSG::4464'],
             'extent_name' => 'USA - onshore - AZ MI MT ND OR SC',
-            'help' => 'Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed State Plane legislation in International feet (note: not US survet feet).',
+            'help' => 'Care: only for use as part of a compound CRS in conjunction with State Plane CS in States which have passed State Plane legislation in International feet (note: not US survey feet).',
         ],
         'urn:ogc:def:crs:EPSG::8266' => [
             'name' => 'GVR2000 height',

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6360",
+    "title": "North America/USA - Ohio - Cuyahoga",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.08, 41.17], [-81.27000000000001, 41.17], [-81.27000000000001, 42.2], [-82.08, 42.2], [-82.08, 41.17]
+        ]
+    ]
+}

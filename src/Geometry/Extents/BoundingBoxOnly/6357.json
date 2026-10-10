@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6357",
+    "title": "North America/USA - Ohio - Columbiana",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.19, 40.48], [-80.41000000000001, 40.48], [-80.41000000000001, 41.04], [-81.19, 41.04], [-81.19, 40.48]
+        ]
+    ]
+}

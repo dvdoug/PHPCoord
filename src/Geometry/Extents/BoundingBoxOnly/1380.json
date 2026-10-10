@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1380",
+    "title": "North America/USA - Georgia",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-85.71, 30.25], [-80.68, 30.25], [-80.68, 35.11], [-85.71, 35.11], [-85.71, 30.25]
+        ]
+    ]
+}

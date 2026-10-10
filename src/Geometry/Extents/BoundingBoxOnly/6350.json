@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6350",
+    "title": "North America/USA - Ohio - Brown",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.16, 38.53], [-83.57000000000001, 38.53], [-83.57000000000001, 39.36], [-84.16, 39.36], [-84.16, 38.53]
+        ]
+    ]
+}

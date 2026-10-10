@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6401",
+    "title": "North America/USA - Ohio - Morrow",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.13, 40.24], [-82.52000000000001, 40.24], [-82.52000000000001, 40.82], [-83.13, 40.82], [-83.13, 40.24]
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6423",
+    "title": "North America/USA - Ohio - Van Wert",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.91, 40.58], [-84.24000000000001, 40.58], [-84.24000000000001, 41.1], [-84.91, 41.1], [-84.91, 40.58]
+        ]
+    ]
+}

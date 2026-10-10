@@ -2621,7 +2621,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / California zone 1 (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - California - counties Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
+     * Extent: USA - California - counties of Del Norte; Humboldt; Lassen; Modoc; Plumas; Shasta; Siskiyou; Tehama;
      * Trinity.
      */
     public const EPSG_NAD83_CALIFORNIA_ZONE_1_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8714';
@@ -2635,26 +2635,27 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / California zone 3 (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San
-     * Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
+     * Extent: USA - California - counties of Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono;
+     * San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne.
      */
     public const EPSG_NAD83_CALIFORNIA_ZONE_3_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8716';
 
     /**
      * NAD83 / California zone 4 (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - California - counties Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
+     * Extent: USA - California - counties of Fresno; Inyo; Kings; Monterey; San Benito; Tulare.
      */
     public const EPSG_NAD83_CALIFORNIA_ZONE_4_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8717';
 
     /**
      * NAD83 / California zone 5 (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - California - counties Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara; Ventura.
+     * Extent: USA - California - counties of Kern; Los Angeles; San Bernardino; San Luis Obispo; Santa Barbara;
+     * Ventura.
      */
     public const EPSG_NAD83_CALIFORNIA_ZONE_5_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8718';
 
     /**
      * NAD83 / California zone 6 (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - California - counties Imperial; Orange; Riverside; San Diego.
+     * Extent: USA - California - counties of Imperial; Orange; Riverside; San Diego.
      */
     public const EPSG_NAD83_CALIFORNIA_ZONE_6_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8719';
 
@@ -2683,14 +2684,13 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / Connecticut (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - Connecticut - counties of Fairfield; Hartford; Litchfield; Middlesex; New Haven; New London;
-     * Tolland; Windham.
+     * Extent: USA - Connecticut.
      */
     public const EPSG_NAD83_CONNECTICUT_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8723';
 
     /**
      * NAD83 / Delaware (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - Delaware - counties of Kent; New Castle; Sussex.
+     * Extent: USA - Delaware.
      */
     public const EPSG_NAD83_DELAWARE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8724';
 
@@ -3008,25 +3008,13 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / Montana (ft) + NAVD88 height (ft)
-     * Extent: USA - Montana - counties of Beaverhead; Big Horn; Blaine; Broadwater; Carbon; Carter; Cascade; Chouteau;
-     * Custer; Daniels; Dawson; Deer Lodge; Fallon; Fergus; Flathead; Gallatin; Garfield; Glacier; Golden Valley;
-     * Granite; Hill; Jefferson; Judith Basin; Lake; Lewis and Clark; Liberty; Lincoln; Madison; McCone; Meagher;
-     * Mineral; Missoula; Musselshell; Park; Petroleum; Phillips; Pondera; Powder River; Powell; Prairie; Ravalli;
-     * Richland; Roosevelt; Rosebud; Sanders; Sheridan; Silver Bow; Stillwater; Sweet Grass; Teton; Toole; Treasure;
-     * Valley; Wheatland; Wibaux; Yellowstone.
+     * Extent: USA - Montana.
      */
     public const EPSG_NAD83_MONTANA_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8706';
 
     /**
      * NAD83 / Nebraska (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - Nebraska - counties of Adams; Antelope; Arthur; Banner; Blaine; Boone; Box Butte; Boyd; Brown;
-     * Buffalo; Burt; Butler; Cass; Cedar; Chase; Cherry; Cheyenne; Clay; Colfax; Cuming; Custer; Dakota; Dawes;
-     * Dawson; Deuel; Dixon; Dodge; Douglas; Dundy; Fillmore; Franklin; Frontier; Furnas; Gage; Garden; Garfield;
-     * Gosper; Grant; Greeley; Hall; Hamilton; Harlan; Hayes; Hitchcock; Holt; Hooker; Howard; Jefferson; Johnson;
-     * Kearney; Keith; Keya Paha; Kimball; Knox; Lancaster; Lincoln; Logan; Loup; Madison; McPherson; Merrick; Morrill;
-     * Nance; Nemaha; Nuckolls; Otoe; Pawnee; Perkins; Phelps; Pierce; Platte; Polk; Red Willow; Richardson; Rock;
-     * Saline; Sarpy; Saunders; Scotts Bluff; Seward; Sheridan; Sherman; Sioux; Stanton; Thayer; Thomas; Thurston;
-     * Valley; Washington; Wayne; Webster; Wheeler; York.
+     * Extent: USA - Nebraska.
      */
     public const EPSG_NAD83_NEBRASKA_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8755';
 
@@ -3051,16 +3039,13 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / New Hampshire (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - New Hampshire - counties of Belknap; Carroll; Cheshire; Coos; Grafton; Hillsborough; Merrimack;
-     * Rockingham; Strafford; Sullivan.
+     * Extent: USA - New Hampshire.
      */
     public const EPSG_NAD83_NEW_HAMPSHIRE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8759';
 
     /**
      * NAD83 / New Jersey (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - New Jersey - counties of Atlantic; Bergen; Burlington; Camden; Cape May; Cumberland; Essex;
-     * Gloucester; Hudson; Hunterdon; Mercer; Middlesex; Monmouth; Morris; Ocean; Passaic; Salem; Somerset; Sussex;
-     * Union; Warren.
+     * Extent: USA - New Jersey.
      */
     public const EPSG_NAD83_NEW_JERSEY_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8760';
 
@@ -3114,15 +3099,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / North Carolina (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - North Carolina - counties of Alamance; Alexander; Alleghany; Anson; Ashe; Avery; Beaufort; Bertie;
-     * Bladen; Brunswick; Buncombe; Burke; Cabarrus; Caldwell; Camden; Carteret; Caswell; Catawba; Chatham; Cherokee;
-     * Chowan; Clay; Cleveland; Columbus; Craven; Cumberland; Currituck; Dare; Davidson; Davie; Duplin; Durham;
-     * Edgecombe; Forsyth; Franklin; Gaston; Gates; Graham; Granville; Greene; Guilford; Halifax; Harnett; Haywood;
-     * Henderson; Hertford; Hoke; Hyde; Iredell; Jackson; Johnston; Jones; Lee; Lenoir; Lincoln; Macon; Madison;
-     * Martin; McDowell; Mecklenburg; Mitchell; Montgomery; Moore; Nash; New Hanover; Northampton; Onslow; Orange;
-     * Pamlico; Pasquotank; Pender; Perquimans; Person; Pitt; Polk; Randolph; Richmond; Robeson; Rockingham; Rowan;
-     * Rutherford; Sampson; Scotland; Stanly; Stokes; Surry; Swain; Transylvania; Tyrrell; Union; Vance; Wake; Warren;
-     * Washington; Watauga; Wayne; Wilkes; Wilson; Yadkin; Yancey.
+     * Extent: USA - North Carolina.
      */
     public const EPSG_NAD83_NORTH_CAROLINA_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8768';
 
@@ -3213,17 +3190,13 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / Rhode Island (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - Rhode Island - counties of Bristol; Kent; Newport; Providence; Washington.
+     * Extent: USA - Rhode Island.
      */
     public const EPSG_NAD83_RHODE_ISLAND_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8775';
 
     /**
      * NAD83 / South Carolina (ft) + NAVD88 height (ft)
-     * Extent: USA - South Carolina - counties of Abbeville; Aiken; Allendale; Anderson; Bamberg; Barnwell; Beaufort;
-     * Berkeley; Calhoun; Charleston; Cherokee; Chester; Chesterfield; Clarendon; Colleton; Darlington; Dillon;
-     * Dorchester; Edgefield; Fairfield; Florence; Georgetown; Greenville; Greenwood; Hampton; Horry; Jasper; Kershaw;
-     * Lancaster; Laurens; Lee; Lexington; Marion; Marlboro; McCormick; Newberry; Oconee; Orangeburg; Pickens;
-     * Richland; Saluda; Spartanburg; Sumter; Union; Williamsburg; York.
+     * Extent: USA - South Carolina.
      */
     public const EPSG_NAD83_SOUTH_CAROLINA_FT_PLUS_NAVD88_HEIGHT_FT = 'urn:ogc:def:crs:EPSG::8711';
 
@@ -3246,14 +3219,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / Tennessee (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon;
-     * Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb;
-     * Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton;
-     * Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson;
-     * Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury;
-     * McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea;
-     * Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton;
-     * Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson.
+     * Extent: USA - Tennessee.
      */
     public const EPSG_NAD83_TENNESSEE_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8778';
 
@@ -3327,8 +3293,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83 / Vermont (ftUS) + NAVD88 height (ftUS)
-     * Extent: USA - Vermont - counties of Addison; Bennington; Caledonia; Chittenden; Essex; Franklin; Grand Isle;
-     * Lamoille; Orange; Orleans; Rutland; Washington; Windham; Windsor.
+     * Extent: USA - Vermont.
      */
     public const EPSG_NAD83_VERMONT_FTUS_PLUS_NAVD88_HEIGHT_FTUS = 'urn:ogc:def:crs:EPSG::8787';
 

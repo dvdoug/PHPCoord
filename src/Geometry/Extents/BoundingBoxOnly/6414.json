@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6414",
+    "title": "North America/USA - Ohio - Sandusky",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.52, 41.15], [-82.74000000000001, 41.15], [-82.74000000000001, 41.61], [-83.52, 41.61], [-83.52, 41.15]
+        ]
+    ]
+}

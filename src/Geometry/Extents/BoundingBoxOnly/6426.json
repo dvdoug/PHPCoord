@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6426",
+    "title": "North America/USA - Ohio - Washington",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.96, 39.11], [-80.93, 39.11], [-80.93, 39.75], [-81.96, 39.75], [-81.96, 39.11]
+        ]
+    ]
+}

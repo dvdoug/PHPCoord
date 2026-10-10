@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6428",
+    "title": "North America/USA - Ohio - Williams",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.91, 41.32], [-84.24000000000001, 41.32], [-84.24000000000001, 41.81], [-84.91, 41.81], [-84.91, 41.32]
+        ]
+    ]
+}

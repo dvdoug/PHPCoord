@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6412",
+    "title": "North America/USA - Ohio - Richland",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-82.83, 40.44], [-82.23, 40.44], [-82.23, 41.1], [-82.83, 41.1], [-82.83, 40.44]
+        ]
+    ]
+}

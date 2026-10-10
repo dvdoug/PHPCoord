@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6375",
+    "title": "North America/USA - Ohio - Hardin",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.99, 40.4], [-83.31, 40.4], [-83.31, 40.92], [-83.99, 40.92], [-83.99, 40.4]
+        ]
+    ]
+}

@@ -66,6 +66,13 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_BONAIRE_2004 = 'urn:ogc:def:crs:EPSG::10760';
 
     /**
+     * CATRF2022e2020
+     * Extent: Puerto Rico and US Virgin Islands
+     * Replaces NAD83(2011) in Puerto Rico and US Virgin Islands.
+     */
+    public const EPSG_CATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10884';
+
+    /**
      * CGRS93
      * Extent: Cyprus - onshore.
      */
@@ -641,9 +648,46 @@ class Geocentric extends CoordinateReferenceSystem
 
     /**
      * GDM2000
-     * Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak.
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Replaced by GDM2000 (2006).
      */
     public const EPSG_GDM2000 = 'urn:ogc:def:crs:EPSG::4920';
+
+    /**
+     * GDM2000 (2006)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Update to GDM2000 coordinates for effects of the December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh,
+     * Indonesia) earthquakes. In Peninsular Malaysia coordinate displacements caused by the two earthquakes vary,
+     * between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant
+     * and GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. For the MyRTK active GNSS
+     * network used from 2007-07-01, replacing GDM2000, to 2016-11-01 when replaced by GDM2000 (2016). Used for the
+     * National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.
+     */
+    public const EPSG_GDM2000_2006 = 'urn:ogc:def:crs:EPSG::12276';
+
+    /**
+     * GDM2000 (2009)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Update of GDM2000 (2006) station coordinates for effects of September 2007 Sumatra earthquake. Not adopted for
+     * MyRTKnet because National Digital Cadastral Survey Database (NDCDB) based on previous adjustment GDM2000 (2006).
+     */
+    public const EPSG_GDM2000_2009 = 'urn:ogc:def:crs:EPSG::12279';
+
+    /**
+     * GDM2000 (2016)
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Update to GDM2000 (2009) coordinates for effects of April 2012 Indian Ocean earthquakes. Used for the MyRTK
+     * active GNSS network from 2016-11-01 to 2021-10-15, replacing GDM2000 (2006), replaced by GDM2020.
+     */
+    public const EPSG_GDM2000_2016 = 'urn:ogc:def:crs:EPSG::12282';
+
+    /**
+     * GDM2020
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Static snapshot at epoch 2020.0 of dynamic CRS GDM2020. Adopted 2021-10-15. Replaces GDM2000, GDM2000 (2006) and
+     * GDM2000 (2016).
+     */
+    public const EPSG_GDM2020 = 'urn:ogc:def:crs:EPSG::12285';
 
     /**
      * GR96
@@ -1042,6 +1086,13 @@ class Geocentric extends CoordinateReferenceSystem
     public const EPSG_MARGEN = 'urn:ogc:def:crs:EPSG::5352';
 
     /**
+     * MATRF2022e2020
+     * Extent: Guam; Northern Mariana Islands
+     * Replaces NAD83(MA11).
+     */
+    public const EPSG_MATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10881';
+
+    /**
      * MGI
      * Extent: Austria.
      */
@@ -1280,6 +1331,14 @@ class Geocentric extends CoordinateReferenceSystem
      * Replaces ONGD14 (CRS code 7371) from March 2019.
      */
     public const EPSG_ONGD17 = 'urn:ogc:def:crs:EPSG::9292';
+
+    /**
+     * PATRF2022e2020
+     * Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island,
+     * Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+     * Replaces NAD83(PA11).
+     */
+    public const EPSG_PATRF2022E2020 = 'urn:ogc:def:crs:EPSG::10878';
 
     /**
      * PNG94

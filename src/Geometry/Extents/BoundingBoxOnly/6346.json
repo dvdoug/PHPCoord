@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6346",
+    "title": "North America/USA - Ohio - Ashtabula",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.11, 41.39], [-80.41000000000001, 41.39], [-80.41000000000001, 42.43], [-81.11, 42.43], [-81.11, 41.39]
+        ]
+    ]
+}

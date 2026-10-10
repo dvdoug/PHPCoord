@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1390",
+    "title": "North America/USA - Massachusetts",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-73.61, 41.08], [-69.75, 41.08], [-69.75, 42.99], [-73.61, 42.99], [-73.61, 41.08]
+        ]
+    ]
+}

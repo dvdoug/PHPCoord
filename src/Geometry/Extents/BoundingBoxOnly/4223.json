@@ -1,6 +1,6 @@
 {
     "id": "urn:ogc:def:area:EPSG::4223",
-    "title": "Asia-ExFSU/Asia - Malaysia (west including SCS) and Singapore",
+    "title": "Asia-ExFSU/Asia - Malaysia (Peninsular including SCS) and Singapore",
     "type": "Polygon",
     "coordinates": [
         [

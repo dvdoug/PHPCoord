@@ -1092,6 +1092,18 @@ class Datum
     public const EPSG_CAPE_CANAVERAL = 'urn:ogc:def:datum:EPSG::6717';
 
     /**
+     * Caribbean Terrestrial Reference Frame of 2022 epoch 2020.00
+     * Type: Geodetic
+     * Extent: Puerto Rico and US Virgin Islands
+     * Static "snapshot" of dynamic, plate-fixed CATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20
+     * at epoch 2020.00 and fixed to the Caribbean tectonic plate using three Euler pole geocentric Cartesian rotation
+     * rates.
+     * CATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(2011) in Puerto Rico
+     * and the US Virgin Islands.
+     */
+    public const EPSG_CARIBBEAN_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00 = 'urn:ogc:def:datum:EPSG::1409';
+
+    /**
      * Carthage
      * Type: Geodetic
      * Extent: Tunisia
@@ -2700,6 +2712,62 @@ class Datum
     public const EPSG_GEOCENTRIC_DATUM_OF_AUSTRALIA_2020 = 'urn:ogc:def:datum:EPSG::1168';
 
     /**
+     * Geocentric Datum of Malaysia 2000
+     * Type: Geodetic
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * ITRF2000, epoch 2000.0.
+     * Adopted 2003-08-23. Replaces all older Malaysian datums. Used for MyRTKnet from 2003-08-23 to 2007-06-30 then
+     * replaced by GDM2000 (2006).
+     */
+    public const EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000 = 'urn:ogc:def:datum:EPSG::6742';
+
+    /**
+     * Geocentric Datum of Malaysia 2000 (Revision 2006)
+     * Type: Geodetic
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Aligned with ITRF2000 at epoch 2000.0.
+     * Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh,
+     * Indonesia) earthquakes, also including additional MyRTK stations. In Peninsular Malaysia coordinate
+     * displacements caused by the earthquakes vary, between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah
+     * and Sarawak displacements were insignificant and GDM2000 (2006) coordinates were constrained to previous GDM2000
+     * coordinate values. Used for the MyRTK active GNSS network from 2007-07-01 to 2016-11-01, replacing GDM2000,
+     * replaced by GDM2000 (2016). Used for the National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to
+     * 2021-10-14 when replaced by GDM2020.
+     */
+    public const EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000_REVISION_2006 = 'urn:ogc:def:datum:EPSG::1468';
+
+    /**
+     * Geocentric Datum of Malaysia 2000 (Revision 2009)
+     * Type: Geodetic
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Aligned with ITRF2000 at epoch 2000.0.
+     * Update of GDM2000 (2006) station coordinates for effects of September 2007 Sumatra earthquake. Not adopted for
+     * MyRTKnet because the National Digital Cadastral Survey Database (NDCDB) was based on the GDM2000 (2006)
+     * adjustment.
+     */
+    public const EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000_REVISION_2009 = 'urn:ogc:def:datum:EPSG::1469';
+
+    /**
+     * Geocentric Datum of Malaysia 2000 (Revision 2016)
+     * Type: Geodetic
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Aligned with ITRF2000 at epoch 2000.0.
+     * Update to GDM2000 (2009) coordinates for effects of April 2012 Indian Ocean earthquakes. Used for the MyRTK
+     * active GNSS network from 2016-11-01 to 2021-10-14, replacing GDM2000 (2006), replaced by GDM2020.
+     */
+    public const EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000_REVISION_2016 = 'urn:ogc:def:datum:EPSG::1470';
+
+    /**
+     * Geocentric Datum of Malaysia 2020
+     * Type: Geodetic
+     * Extent: Malaysia. Includes Peninsular Malaysia, Sabah and Sarawak
+     * Aligned with ITRF2014 at epoch 2020.0.
+     * Static snapshot at epoch 2020.0 of dynamic CRS GDM2020. Adopted 2021-10-15. Replaces GDM2000, GDM2000 (2006) and
+     * GDM2000 (2016).
+     */
+    public const EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2020 = 'urn:ogc:def:datum:EPSG::1471';
+
+    /**
      * Geodetic Datum of 1965
      * Type: Geodetic
      * Extent: Ireland - onshore. UK - Northern Ireland (Ulster) - onshore
@@ -2709,15 +2777,6 @@ class Datum
      * difference in Northings 0.108m; maximum vector difference 0.548m.
      */
     public const EPSG_GEODETIC_DATUM_OF_1965 = 'urn:ogc:def:datum:EPSG::6300';
-
-    /**
-     * Geodetic Datum of Malaysia 2000
-     * Type: Geodetic
-     * Extent: Malaysia. Includes peninsular Malayasia, Sabah and Sarawak
-     * ITRF2000, epoch 2000.0.
-     * Replaces all older Malaysian datums.
-     */
-    public const EPSG_GEODETIC_DATUM_OF_MALAYSIA_2000 = 'urn:ogc:def:datum:EPSG::6742';
 
     /**
      * Geodezicheskaya Sistema Koordinat 2011
@@ -4059,7 +4118,7 @@ class Datum
     /**
      * Johnston Island 1961
      * Type: Geodetic
-     * Extent: United States Minor Outlying Islands - Johnston Island.
+     * Extent: United States Minor Outlying Islands - Johnston Atoll.
      */
     public const EPSG_JOHNSTON_ISLAND_1961 = 'urn:ogc:def:datum:EPSG::6725';
 
@@ -4182,7 +4241,7 @@ class Datum
     /**
      * Kertau (RSO)
      * Type: Geodetic
-     * Extent: Malaysia - West Malaysia; Singapore
+     * Extent: Malaysia - Peninsular Malaysia; Singapore
      * Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncation of the Sears 1922 ratio.
      */
     public const EPSG_KERTAU_RSO = 'urn:ogc:def:datum:EPSG::6751';
@@ -4190,7 +4249,7 @@ class Datum
     /**
      * Kertau 1968
      * Type: Geodetic
-     * Extent: Malaysia - West Malaysia east coast; Singapore
+     * Extent: Malaysia - Peninsular Malaysia east coast; Singapore
      * Fundamental point: Kertau. Latitude: 3°27'50.710"N, longitude: 102°37'24.550"E (of Greenwich).
      * Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 inches per metre. Not used for
      * 1969 metrication of RSO grid - see Kertau (RSO) (code 6751).
@@ -4962,6 +5021,17 @@ class Datum
      * Marcus Island Astronomic Station.
      */
     public const EPSG_MARCUS_ISLAND_1952 = 'urn:ogc:def:datum:EPSG::6711';
+
+    /**
+     * Mariana Terrestrial Reference Frame of 2022 epoch 2020.00
+     * Type: Geodetic
+     * Extent: Guam; Northern Mariana Islands
+     * Static "snapshot" of dynamic, plate-fixed MATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20
+     * at epoch 2020.00 and fixed to the Mariana tectonic plate using three Euler pole geocentric Cartesian rotation
+     * rates.
+     * MATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(MA11).
+     */
+    public const EPSG_MARIANA_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00 = 'urn:ogc:def:datum:EPSG::1411';
 
     /**
      * Marshall Islands 1960
@@ -6623,6 +6693,18 @@ class Datum
      * code 7655) to PNG94 (CRS code 5545).
      */
     public const EPSG_PNG08 = 'urn:ogc:def:datum:EPSG::1149';
+
+    /**
+     * Pacific Terrestrial Reference Frame of 2022 epoch 2020.00
+     * Type: Geodetic
+     * Extent: American Samoa. USA - Hawaii. United States Minor Outlying Islands - Pacific territories (Baker Island,
+     * Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Palmyra Atoll, Wake Island)
+     * Static "snapshot" of dynamic, plate-fixed PATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20
+     * at epoch 2020.00 and fixed to the Pacific tectonic plate using three Euler pole geocentric Cartesian rotation
+     * rates.
+     * PATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(PA11).
+     */
+    public const EPSG_PACIFIC_TERRESTRIAL_REFERENCE_FRAME_OF_2022_EPOCH_2020_00 = 'urn:ogc:def:datum:EPSG::1410';
 
     /**
      * Palestine 1923
@@ -8544,7 +8626,7 @@ class Datum
     /**
      * Timbalai 1948
      * Type: Geodetic
-     * Extent: Brunei; Malaysia - East Malaysia (Sabah; Sarawak)
+     * Extent: Brunei; Malaysia - Sabah and Sarawak
      * Fundamental point: Station P85 at Timbalai. Latitude: 5°17' 3.548"N, longitude: 115°10'56.409"E (of
      * Greenwich).
      * In 1968, the original adjustment was densified in Sarawak and extended to Sabah.
@@ -9012,6 +9094,11 @@ class Datum
      * Replaces FD54 for cadastre.
      */
     public const EPSG_FK89 = 'urn:ogc:def:datum:EPSG::6753';
+
+    /**
+     * @deprecated use EPSG_GEOCENTRIC_DATUM_OF_MALAYSIA_2000 instead
+     */
+    public const EPSG_GEODETIC_DATUM_OF_MALAYSIA_2000 = 'urn:ogc:def:datum:EPSG::6742';
 
     /**
      * @deprecated use EPSG_ALBANIAN_GEODETIC_REFERENCE_FRAME_2008 instead
@@ -14018,6 +14105,45 @@ EUREF89 is the Norwegian realization of ETRS89. It was realized with GPS campaig
             'ensemble_accuracy' => null,
             'help' => 'Network of 21 first order control stations established for Crossrail in 1984.',
         ],
+        'urn:ogc:def:datum:EPSG::1409' => [
+            'name' => 'Caribbean Terrestrial Reference Frame of 2022 epoch 2020.00',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2020.0,
+            'extent_name' => 'Caribbean - Puerto Rico and US Virgin Islands',
+            'ensemble_accuracy' => null,
+            'help' => 'Static "snapshot" of dynamic, plate-fixed CATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the Caribbean tectonic plate using three Euler pole geocentric Cartesian rotation rates.
+CATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(2011) in Puerto Rico and the US Virgin Islands.',
+        ],
+        'urn:ogc:def:datum:EPSG::1410' => [
+            'name' => 'Pacific Terrestrial Reference Frame of 2022 epoch 2020.00',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2020.0,
+            'extent_name' => 'Pacific - American Samoa, US (Hawaii), US outlying islands',
+            'ensemble_accuracy' => null,
+            'help' => 'Static "snapshot" of dynamic, plate-fixed PATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the Pacific tectonic plate using three Euler pole geocentric Cartesian rotation rates.
+PATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(PA11).',
+        ],
+        'urn:ogc:def:datum:EPSG::1411' => [
+            'name' => 'Mariana Terrestrial Reference Frame of 2022 epoch 2020.00',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2020.0,
+            'extent_name' => 'Pacific - Guam and NMI',
+            'ensemble_accuracy' => null,
+            'help' => 'Static "snapshot" of dynamic, plate-fixed MATRF2022 reference frame at epoch 2020.00. Aligned to ITRF2020/IGS20 at epoch 2020.00 and fixed to the Mariana tectonic plate using three Euler pole geocentric Cartesian rotation rates.
+MATRF2022e2020 is considered equivalent to ITRF2020/IGS20 at epoch 2020.00. Replaces NAD83(MA11).',
+        ],
         'urn:ogc:def:datum:EPSG::1412' => [
             'name' => 'ETRS89-DNK',
             'type' => 'geodetic',
@@ -14691,6 +14817,58 @@ Replaces ETRS89-LUX [2020] from 2026-10-31.',
             'help' => 'Defined by the equipotential surface W0 = 62,636,853.4 m^2s^-2, as the conventional reference potential value adopted for the IHRS (IAG Resolution 1, Drewes et al. (2016)).
 COLGVD2023(QgeoidCOL2023) height is realized by quasigeoid model QgeoidCOL2023. Further information is available in IGAC Resolution 515 of 2026: 
 https://www.igac.gov.co/transparencia-y-acceso-a-la-informacion-publica/normograma/resolucion-515-de-2026',
+        ],
+        'urn:ogc:def:datum:EPSG::1468' => [
+            'name' => 'Geocentric Datum of Malaysia 2000 (Revision 2006)',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Malaysia',
+            'ensemble_accuracy' => null,
+            'help' => 'Aligned with ITRF2000 at epoch 2000.0.
+Update to GDM2000 coordinates for effects of December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh, Indonesia) earthquakes, also including additional MyRTK stations. In Peninsular Malaysia coordinate displacements caused by the earthquakes vary, between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. Used for the MyRTK active GNSS network from 2007-07-01 to 2016-11-01, replacing GDM2000, replaced by GDM2000 (2016). Used for the National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.',
+        ],
+        'urn:ogc:def:datum:EPSG::1469' => [
+            'name' => 'Geocentric Datum of Malaysia 2000 (Revision 2009)',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Malaysia',
+            'ensemble_accuracy' => null,
+            'help' => 'Aligned with ITRF2000 at epoch 2000.0.
+Update of GDM2000 (2006) station coordinates for effects of September 2007 Sumatra earthquake. Not adopted for MyRTKnet because the National Digital Cadastral Survey Database (NDCDB) was based on the GDM2000 (2006) adjustment.',
+        ],
+        'urn:ogc:def:datum:EPSG::1470' => [
+            'name' => 'Geocentric Datum of Malaysia 2000 (Revision 2016)',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => null,
+            'extent_name' => 'Malaysia',
+            'ensemble_accuracy' => null,
+            'help' => 'Aligned with ITRF2000 at epoch 2000.0.
+Update to GDM2000 (2009) coordinates for effects of April 2012 Indian Ocean earthquakes. Used for the MyRTK active GNSS network from 2016-11-01 to 2021-10-14, replacing GDM2000 (2006), replaced by GDM2020.',
+        ],
+        'urn:ogc:def:datum:EPSG::1471' => [
+            'name' => 'Geocentric Datum of Malaysia 2020',
+            'type' => 'geodetic',
+            'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
+            'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
+            'conventional_rs' => null,
+            'frame_reference_epoch' => null,
+            'anchor_epoch' => 2020.0,
+            'extent_name' => 'Malaysia',
+            'ensemble_accuracy' => null,
+            'help' => 'Aligned with ITRF2014 at epoch 2020.0.
+Static snapshot at epoch 2020.0 of dynamic CRS GDM2020. Adopted 2021-10-15. Replaces GDM2000, GDM2000 (2006) and GDM2000 (2016).',
         ],
         'urn:ogc:def:datum:EPSG::5100' => [
             'name' => 'Mean Sea Level',
@@ -18037,7 +18215,7 @@ Includes 1916 extension into Burma (Myanmar). Replaced by 1937 adjustment.',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Asia - Malaysia (west including SCS) and Singapore',
+            'extent_name' => 'Asia - Malaysia (Peninsular including SCS) and Singapore',
             'ensemble_accuracy' => null,
             'help' => 'Fundamental point: Kertau. Latitude: 3°27\'50.710"N, longitude: 102°37\'24.550"E (of Greenwich).
 Replaces MRT48 and earlier adjustments. Adopts metric conversion of 39.370113 inches per metre. Not used for 1969 metrication of RSO grid - see Kertau (RSO) (code 6751).',
@@ -18643,7 +18821,7 @@ Since 2008 extended offshore through the RDNAPTRANS(TM) transformation.',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Asia - Brunei and East Malaysia',
+            'extent_name' => 'Asia - Brunei and Malaysia (Sabah and Sarawak)',
             'ensemble_accuracy' => null,
             'help' => 'Fundamental point: Station P85 at Timbalai. Latitude: 5°17\' 3.548"N, longitude: 115°10\'56.409"E (of Greenwich).
 In 1968, the original adjustment was densified in Sarawak and extended to Sabah.',
@@ -20399,7 +20577,7 @@ Replaced by CIGD11 (datum code 1100).',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Johnston Island',
+            'extent_name' => 'Pacific - Johnston Atoll',
             'ensemble_accuracy' => null,
             'help' => '',
         ],
@@ -20592,7 +20770,7 @@ Replaced by PZ-90.02 from 2007-09-20.',
 Replaced by ED50 in late 1970\'s for all purposes other than cadastre. Replaced by fk89 for cadastre.',
         ],
         'urn:ogc:def:datum:EPSG::6742' => [
-            'name' => 'Geodetic Datum of Malaysia 2000',
+            'name' => 'Geocentric Datum of Malaysia 2000',
             'type' => 'geodetic',
             'ellipsoid' => 'urn:ogc:def:ellipsoid:EPSG::7019',
             'prime_meridian' => 'urn:ogc:def:meridian:EPSG::8901',
@@ -20602,7 +20780,7 @@ Replaced by ED50 in late 1970\'s for all purposes other than cadastre. Replaced 
             'extent_name' => 'Malaysia',
             'ensemble_accuracy' => null,
             'help' => 'ITRF2000, epoch 2000.0.
-Replaces all older Malaysian datums.',
+Adopted 2003-08-23. Replaces all older Malaysian datums. Used for MyRTKnet from 2003-08-23 to 2007-06-30 then replaced by GDM2000 (2006).',
         ],
         'urn:ogc:def:datum:EPSG::6743' => [
             'name' => 'Karbala 1979',
@@ -20715,7 +20893,7 @@ Replaced by RGNC15 (datum code 1357).',
             'conventional_rs' => null,
             'frame_reference_epoch' => null,
             'anchor_epoch' => null,
-            'extent_name' => 'Asia - Malaysia (west) and Singapore',
+            'extent_name' => 'Asia - Malaysia (Peninsular) and Singapore',
             'ensemble_accuracy' => null,
             'help' => 'Adopts metric conversion of 0.914398 metres per yard exactly. This is a truncation of the Sears 1922 ratio.',
         ],

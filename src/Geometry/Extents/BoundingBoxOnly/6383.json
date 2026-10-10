@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6383",
+    "title": "North America/USA - Ohio - Jefferson",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-81.05, 40.05], [-80.49000000000001, 40.05], [-80.49000000000001, 40.7], [-81.05, 40.7], [-81.05, 40.05]
+        ]
+    ]
+}

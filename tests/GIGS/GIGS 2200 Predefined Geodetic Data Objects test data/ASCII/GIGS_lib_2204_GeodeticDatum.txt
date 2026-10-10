@@ -320,7 +320,7 @@
 6739	Hong Kong 1963(67)	HK63(67)	International 1924	Greenwich	China - Hong Kong
 6740	Parametry Zemli 1990	PZ-90	PZ-90	Greenwich	World
 6741	Faroe Datum 1954	FD54	International 1924	Greenwich	Faroe Islands - onshore
-6742	Geodetic Datum of Malaysia 2000	GDM2000	GRS 1980	Greenwich	Malaysia
+6742	Geocentric Datum of Malaysia 2000	GDM2000	GRS 1980	Greenwich	Malaysia
 6743	Karbala 1979	Karbala 1979 (Polservice)	Clarke 1880 (RGS)	Greenwich	Iraq - onshore
 6744	Nahrwan 1934		Clarke 1880 (RGS)	Greenwich	Asia - Middle East - Iraq and SW Iran
 6745	Rauenberg Datum/83	RD/83	Bessel 1841	Greenwich	Germany - Saxony

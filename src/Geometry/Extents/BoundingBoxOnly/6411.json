@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6411",
+    "title": "North America/USA - Ohio - Putnam",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-84.5, 40.75], [-83.78, 40.75], [-83.78, 41.27], [-84.5, 41.27], [-84.5, 40.75]
+        ]
+    ]
+}

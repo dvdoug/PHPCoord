@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::6393",
+    "title": "North America/USA - Ohio - Marion",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-83.53, 40.33], [-82.75, 40.33], [-82.75, 40.81], [-83.53, 40.81], [-83.53, 40.33]
+        ]
+    ]
+}
