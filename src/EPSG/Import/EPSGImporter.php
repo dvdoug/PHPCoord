@@ -258,7 +258,7 @@ class EPSGImporter
                 $upsertSQL = "
                     INSERT INTO extent (extent_code, original, buffered, bbox, revision_date)
                     VALUES ({$extentMetaData['extent_code']}, '{$geoJson}', NULL, NULL, '{$extentMetaData['revision_date']}')
-                    ON CONFLICT(extent_code) DO UPDATE SET original = excluded.original, revision_date=excluded.revision_date, buffered = excluded.buffered, interior_lat = NULL, interior_lon = NULL
+                    ON CONFLICT(extent_code) DO UPDATE SET original = excluded.original, revision_date=excluded.revision_date, buffered = excluded.buffered, bbox = NULL, interior_lat = NULL, interior_lon = NULL
                 ";
                 $extentDB->exec($upsertSQL);
                 sleep(2);
