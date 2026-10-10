@@ -36,6 +36,7 @@ use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPCoord\Point\VerticalPoint;
 
 use function array_column;
+use function array_key_exists;
 use function array_map;
 use function array_shift;
 use function array_sum;
@@ -48,6 +49,7 @@ use function count;
 use function in_array;
 use function is_string;
 use function sort;
+use function spl_object_id;
 use function str_ends_with;
 use function usort;
 use function is_array;
@@ -291,13 +293,17 @@ trait AutoConversion
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
         $extentPoint = $boundaryCheckPoint ?? $this->getApproximatePointForExtentCheck();
 
+        // One geographic value. A nested convert() builds its own map.
+        /** @var array<int, bool> $extentContainsCache */
+        $extentContainsCache = [];
+
         // Iteratively calculate permutations of intermediate CRSs
-        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target, $extentPoint, $maxChainDepth);
+        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target, $extentPoint, $extentContainsCache, $maxChainDepth);
         usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy'] ?: count($a['path']) <=> count($b['path']));
 
         $publishedYears = [];
         foreach ($candidatePaths as $candidatePath) {
-            $result = $this->validatePathForPoint($candidatePath['path'], $source, $target, $boundaryCheckPoint, $targetEpoch);
+            $result = $this->validatePathForPoint($candidatePath['path'], $source, $target, $boundaryCheckPoint, $targetEpoch, $extentContainsCache);
             if (is_array($result)) {
                 return $result;
             }
@@ -319,6 +325,26 @@ trait AutoConversion
     }
 
     /**
+     * Extent id only: this map belongs to one geographic value. False is an answer, so not ??=.
+     *
+     * @param array<int, bool> $extentContainsCache
+     */
+    private function extentContainsPoint(BoundingArea $area, GeographicValue $point, array &$extentContainsCache): bool
+    {
+        $id = spl_object_id($area);
+        if (array_key_exists($id, $extentContainsCache)) {
+            return $extentContainsCache[$id];
+        }
+
+        $contains = $area->containsPoint($point);
+        $extentContainsCache[$id] = $contains;
+
+        return $contains;
+    }
+
+    /**
+     * @param array<int, bool> $extentContainsCache
+     *
      * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool, slideBefore: Year|null, slideAfter: Year|null}>|Year|null
      */
     protected function validatePathForPoint(
@@ -327,6 +353,7 @@ trait AutoConversion
         Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target,
         ?GeographicValue $boundaryCheckPoint,
         ?Time $targetEpoch,
+        array &$extentContainsCache,
     ): array|Year|null {
         $currentCRS = $source;
         $currentEpoch = $this->getCoordinateEpoch() ? Year::fromDateTime($this->getCoordinateEpoch()) : null;
@@ -348,14 +375,14 @@ trait AutoConversion
                 // First, eliminate based on bounding box if possible, that's quicker as only 4 corners
                 if (!$operation['extent'] instanceof BoundingArea) {
                     $bbox = BoundingArea::createFromExtentCodes($operation['extent'], true);
-                    if (!$bbox->containsPoint($boundaryCheckPoint)) {
+                    if (!$this->extentContainsPoint($bbox, $boundaryCheckPoint, $extentContainsCache)) {
                         return null;
                     }
                 }
 
                 // Then (or only) check the point is inside the full, complex shape
                 $polygon = $operation['extent'] instanceof BoundingArea ? $operation['extent'] : BoundingArea::createFromExtentCodes($operation['extent']);
-                if ((!isset($bbox) || $polygon !== $bbox) && !$polygon->containsPoint($boundaryCheckPoint)) {
+                if ((!isset($bbox) || $polygon !== $bbox) && !$this->extentContainsPoint($polygon, $boundaryCheckPoint, $extentContainsCache)) {
                     return null;
                 }
             }
@@ -468,9 +495,12 @@ trait AutoConversion
 
     /**
      * Build the set of possible paths that lead from the current CRS to the target CRS.
+     *
+     * @param array<int, bool> $extentContainsCache
+     *
      * @return array<int, array{path: array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>, accuracy: float}>
      */
-    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, GeographicValue $extentPoint, ?int $maxChainDepth = null): array
+    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, GeographicValue $extentPoint, array &$extentContainsCache, ?int $maxChainDepth = null): array
     {
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
@@ -483,7 +513,7 @@ trait AutoConversion
         if (in_array(RegionMap::REGION_EUROPE, $regions, true)) {
             // Fingerprint only — do not copy/index the graph until we know this is a path-cache miss
             foreach (AutoConversionCache::getETRS89EnsembleCandidates() as $candidate) {
-                if (!$candidate['extent']->containsPoint($extentPoint)) {
+                if (!$this->extentContainsPoint($candidate['extent'], $extentPoint, $extentContainsCache)) {
                     continue;
                 }
                 $overlayIds[] = $candidate['id'];
