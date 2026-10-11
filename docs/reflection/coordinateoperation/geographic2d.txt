@@ -6575,6 +6575,26 @@ to CATRF2022e2020 / Puerto Rico and US Virgin Islands (ft) (Projected)
     "
 
 
+to NAD83(2011) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(2011) to CATRF2022e2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12392``
+    | Extent: Caribbean - Puerto Rico and US Virgin Islands",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011),
+            latitudeDifferenceFile: NADCON5NAD832011CATRF20222020PRVILatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD832011CATRF20222020PRVILongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD832011CATRF20222020PRVIHeightProvider->provideGrid()
+        )
+
+    "
+
+
 to WGS 84 (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -46877,6 +46897,26 @@ to MATRF2022e2020 / Guam and Northern Mariana Islands (ft) (Projected)
     "
 
 
+to NAD83(MA11) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(MA11) to MATRF2022e2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12393``
+    | Extent: Pacific - Guam and NMI",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_MA11),
+            latitudeDifferenceFile: NADCON5NAD83MA11MATRF20222020GuamCnMILatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83MA11MATRF20222020GuamCnMILongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83MA11MATRF20222020GuamCnMIHeightProvider->provideGrid()
+        )
+
+    "
+
+
 to WGS 84 (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -64565,6 +64605,26 @@ to WGS 84 (Geographic2D)
 NAD83(2011)
 -----------
 ``Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011)``
+
+to CATRF2022e2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(2011) to CATRF2022e2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12392``
+    | Extent: Caribbean - Puerto Rico and US Virgin Islands",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_CATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD832011CATRF20222020PRVILatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD832011CATRF20222020PRVILongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD832011CATRF20222020PRVIHeightProvider->provideGrid()
+        )
+
+    "
+
 
 to NAD83 (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -95396,6 +95456,26 @@ NAD83(MA11)
 -----------
 ``Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_MA11)``
 
+to MATRF2022e2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(MA11) to MATRF2022e2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12393``
+    | Extent: Pacific - Guam and NMI",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_MATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD83MA11MATRF20222020GuamCnMILatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83MA11MATRF20222020GuamCnMILongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83MA11MATRF20222020GuamCnMIHeightProvider->provideGrid()
+        )
+
+    "
+
+
 to NAD83(FBN) (Geographic2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
@@ -101860,6 +101940,74 @@ to NAD83(PA11) / UTM zone 5N (Projected)
             scaleFactorAtNaturalOrigin: new Unity(0.9996),
             falseEasting: new Metre(500000),
             falseNorthing: new Metre(0)
+        )
+
+    "
+
+
+to PATRF2022e2020 (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(PA11) to PATRF2022e2020 (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12395``
+    | Extent: USA - Hawaii - main islands",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12396``
+    | Extent: USA - Hawaii - Tern Island and Sorel Atoll",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiNWLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiNWLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiNWHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12394``
+    | Extent: American Samoa",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020ASLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020ASLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020ASHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (4)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12404``
+    | Extent: Pacific - Johnston Atoll",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020JohnstonLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020JohnstonLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020JohnstonHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (5)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12407``
+    | Extent: Pacific - Midway Islands - Sand and Eastern Islands, Kure Atoll",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020MidwayKureLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020MidwayKureLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020MidwayKureHeightProvider->provideGrid()
         )
 
     "
@@ -119450,6 +119598,74 @@ to OxWo08 Grid (Projected)
 PATRF2022e2020
 --------------
 ``Geographic2D::fromSRID(Geographic2D::EPSG_PATRF2022E2020)``
+
+to NAD83(PA11) (Geographic2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: NAD83(PA11) to PATRF2022e2020 (2)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12395``
+    | Extent: USA - Hawaii - main islands",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_PA11),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (3)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12396``
+    | Extent: USA - Hawaii - Tern Island and Sorel Atoll",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_PA11),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiNWLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiNWLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020HawaiiNWHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12394``
+    | Extent: American Samoa",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_PA11),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020ASLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020ASLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020ASHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (4)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12404``
+    | Extent: Pacific - Johnston Atoll",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_PA11),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020JohnstonLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020JohnstonLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020JohnstonHeightProvider->provideGrid()
+        )
+
+    "
+    "| Name: NAD83(PA11) to PATRF2022e2020 (5)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::12407``
+    | Extent: Pacific - Midway Islands - Sand and Eastern Islands, Kure Atoll",".. code-block:: php
+
+        $point->offsetsFromGridNADCON5(
+            to: Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_PA11),
+            latitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020MidwayKureLatitudeProvider->provideGrid(),
+            longitudeDifferenceFile: NADCON5NAD83PA11PATRF20222020MidwayKureLongitudeProvider->provideGrid(),
+            ellipsoidalHeightDifferenceFile: NADCON5NAD83PA11PATRF20222020MidwayKureHeightProvider->provideGrid()
+        )
+
+    "
+
 
 to PATRF2022e2020 (Geographic3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
