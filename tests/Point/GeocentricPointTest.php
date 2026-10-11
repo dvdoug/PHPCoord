@@ -51,6 +51,8 @@ use function class_exists;
 use function in_array;
 use function str_ends_with;
 
+require_once __DIR__ . '/../Geometry/ExtentInteriorPoints.php';
+
 class GeocentricPointTest extends TestCase
 {
     use GeocentricSRIDData;

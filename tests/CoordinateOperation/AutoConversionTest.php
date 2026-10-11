@@ -46,6 +46,8 @@ use function fgetcsv;
 use function fopen;
 use function array_map;
 
+require_once __DIR__ . '/../Geometry/ExtentInteriorPoints.php';
+
 class AutoConversionTest extends TestCase
 {
     public function testWGS72ToWGS84(): void

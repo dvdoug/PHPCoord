@@ -53,6 +53,8 @@ use PHPUnit\Framework\TestCase;
 use function class_exists;
 use function str_ends_with;
 
+require_once __DIR__ . '/../Geometry/ExtentInteriorPoints.php';
+
 class GeographicPoint3DTest extends TestCase
 {
     use Geographic3DSRIDData;
