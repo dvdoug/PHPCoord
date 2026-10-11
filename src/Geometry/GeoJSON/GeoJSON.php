@@ -29,7 +29,6 @@ use UnhandledMatchError;
 use function json_decode;
 use function json_encode;
 use function file_get_contents;
-use function array_map;
 
 use const JSON_PRETTY_PRINT;
 use const JSON_THROW_ON_ERROR;
@@ -101,9 +100,7 @@ class GeoJSON
      */
     private static function createLineString(array $lineString): LineString
     {
-        $positions = array_map(static fn (array $point) => new Position(...$point), $lineString);
-
-        return new LineString(...$positions);
+        return new LineString(...self::positions($lineString));
     }
 
     /**
@@ -111,10 +108,10 @@ class GeoJSON
      */
     private static function createPolygon(array $polygon): Polygon
     {
-        $rings = array_map(
-            static fn (array $ring) => new LinearRing(...array_map(static fn (array $point) => new Position(...$point), $ring)),
-            $polygon
-        );
+        $rings = [];
+        foreach ($polygon as $ring) {
+            $rings[] = new LinearRing(...self::positions($ring));
+        }
 
         return new Polygon(...$rings);
     }
@@ -124,9 +121,7 @@ class GeoJSON
      */
     private static function createMultiPoint(array $multiPoint): MultiPoint
     {
-        $positions = array_map(static fn (array $point) => new Position(...$point), $multiPoint);
-
-        return new MultiPoint(...$positions);
+        return new MultiPoint(...self::positions($multiPoint));
     }
 
     /**
@@ -134,7 +129,10 @@ class GeoJSON
      */
     private static function createMultiLineString(array $multiLineString): MultiLineString
     {
-        $strings = array_map(static fn (array $lineString) => self::createLineString($lineString), $multiLineString);
+        $strings = [];
+        foreach ($multiLineString as $lineString) {
+            $strings[] = self::createLineString($lineString);
+        }
 
         return new MultiLineString(...$strings);
     }
@@ -144,7 +142,10 @@ class GeoJSON
      */
     private static function createMultiPolygon(array $multiPolygon): MultiPolygon
     {
-        $polygons = array_map(static fn (array $polygon) => self::createPolygon($polygon), $multiPolygon);
+        $polygons = [];
+        foreach ($multiPolygon as $polygon) {
+            $polygons[] = self::createPolygon($polygon);
+        }
 
         return new MultiPolygon(...$polygons);
     }
@@ -154,9 +155,26 @@ class GeoJSON
      */
     private static function createGeometryCollection(array $geometryCollection): GeometryCollection
     {
-        $geometries = array_map(static fn (stdClass $geometry) => self::createFromObject($geometry), $geometryCollection);
+        $geometries = [];
+        foreach ($geometryCollection as $geometry) {
+            $geometries[] = self::createFromObject($geometry);
+        }
 
         return new GeometryCollection(...$geometries);
+    }
+
+    /**
+     * @param  array<float[]> $coordinates
+     * @return list<Position>
+     */
+    private static function positions(array $coordinates): array
+    {
+        $positions = [];
+        foreach ($coordinates as $point) {
+            $positions[] = new Position(...$point);
+        }
+
+        return $positions;
     }
 
     public static function format(string $input): string

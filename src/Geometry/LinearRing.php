@@ -22,7 +22,7 @@ class LinearRing extends LineString
 {
     public function __construct(Position ...$coordinates)
     {
-        parent::__construct(...$coordinates);
+        $this->coordinates = $coordinates;
         if (count($this->coordinates) < 4) {
             throw new InvalidGeometryException('Linear Rings must have 4 or more elements');
         }
