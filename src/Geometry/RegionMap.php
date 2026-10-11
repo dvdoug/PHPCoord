@@ -2122,7 +2122,7 @@ class RegionMap
         'urn:ogc:def:area:EPSG::3178' => self::REGION_SOUTHAMERICA,
         'urn:ogc:def:area:EPSG::3179' => self::REGION_AFRICA,
         'urn:ogc:def:area:EPSG::3180' => self::REGION_AFRICA,
-        'urn:ogc:def:area:EPSG::3181' => self::REGION_OCEANIA,
+        'urn:ogc:def:area:EPSG::3181' => self::REGION_NORTHAMERICA,
         'urn:ogc:def:area:EPSG::3182' => self::REGION_AFRICA,
         'urn:ogc:def:area:EPSG::3183' => self::REGION_AFRICA,
         'urn:ogc:def:area:EPSG::3184' => self::REGION_AFRICA,

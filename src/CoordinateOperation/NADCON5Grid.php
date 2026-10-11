@@ -11,15 +11,20 @@ namespace PHPCoord\CoordinateOperation;
 
 use UnexpectedValueException;
 
+use function str_ends_with;
+
 class NADCON5Grid extends Grid
 {
     use BiquadraticInterpolation;
 
     private string $gridDataType;
 
+    private bool $littleEndian;
+
     public function __construct(string $filename)
     {
         $this->gridFile = new GridFile($filename);
+        $this->littleEndian = str_ends_with($filename, '.le.b'); // NGS convention, .be.b and plain .b are big endian
 
         $header = $this->getHeader();
         $this->startX = $header['xlonsw'];
@@ -30,7 +35,7 @@ class NADCON5Grid extends Grid
         $this->numberOfRows = $header['nlat'];
 
         $this->gridDataType = match ($header['ikind']) {
-            1 => 'G',
+            1 => $this->littleEndian ? 'g' : 'G',
             default => throw new UnexpectedValueException("Unknown ikind: {$header['ikind']}"),
         };
     }
@@ -61,9 +66,13 @@ class NADCON5Grid extends Grid
     {
         $this->gridFile->fseek(0);
         $rawData = $this->gridFile->fread(52);
-        /** @var array{xlatsw: float, xlonsw: float, dlat: float, dlon: float, nlat: int, nlon: int, ikind: int} $data */
-        $data = $this->unpack('Gstartbuffer/Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon/Nikind/Gendbuffer/', $rawData);
+        if ($this->littleEndian) {
+            $data = $this->unpack('Vstartbuffer/exlatsw/exlonsw/edlat/edlon/Vnlat/Vnlon/Vikind/Vendbuffer/', $rawData);
+        } else {
+            $data = $this->unpack('Gstartbuffer/Exlatsw/Exlonsw/Edlat/Edlon/Nnlat/Nnlon/Nikind/Gendbuffer/', $rawData);
+        }
 
+        /** @var array{xlatsw: float, xlonsw: float, dlat: float, dlon: float, nlat: int, nlon: int, ikind: int} */
         return $data;
     }
 

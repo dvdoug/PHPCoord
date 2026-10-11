@@ -1678,13 +1678,6 @@ class CRSTransformationsOceania
             'accuracy' => 0.5,
         ],
         [
-            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15795',
-            'name' => 'Tern Island 1961 to WGS 84 (1)',
-            'source_crs' => 'urn:ogc:def:crs:EPSG::4707',
-            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
-            'accuracy' => 44.0,
-        ],
-        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15794',
             'name' => 'Cocos Islands 1965 to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4708',
@@ -2084,6 +2077,27 @@ class CRSTransformationsOceania
             'accuracy' => 0.02,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12394',
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12404',
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (4)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12407',
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (5)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'accuracy' => 0.05,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::7649',
             'name' => 'NAD83(MA11) to NMVD03 height (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
@@ -2110,6 +2124,13 @@ class CRSTransformationsOceania
             'source_crs' => 'urn:ogc:def:crs:EPSG::6324',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9525',
             'accuracy' => 0.02,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12393',
+            'name' => 'NAD83(MA11) to MATRF2022e2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6325',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10883',
+            'accuracy' => 0.05,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::4325',

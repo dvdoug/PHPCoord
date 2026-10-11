@@ -328,15 +328,6 @@ class EPSGCodegenFromDataImport
         10153, // TXT VORF-UK08_ETRF_to_CD.vrf
         10154, // TXT VORF-UK08_ETRF_to_MSL.vrf
         10155, // TXT VORF-UK08_ETRF_to_CD.vrf
-
-        // Grid files not tracked down yet
-        12392, // NADCON5 nad83_2011.natrf2022_2020.prvi.lats.trn.20260731.b
-        12393, // NADCON5 nad83_ma11.matrf2022_2020.guamcnmi.lats.trn.20260731.b
-        12394, // NADCON5 nad83_pa11.patrf2022_2020.as.lats.trn.20260731.b
-        12395, // NADCON5 nad83_pa11.patrf2022_2020.hawaii.lats.trn.20260731.b
-        12396, // NADCON5 nad83_pa11.patrf2022_2020.hawaiinw.lats.trn.20260731.b
-        12404, // NADCON5 nad83_pa11.patrf2022_2020.johnston.lats.trn.20260731.b
-        12407, // NADCON5 nad83_pa11.patrf2022_2020.midwaykure.lats.trn.20260731.b
     ];
 
     private const BLACKLISTED_OPERATION_SCOPES = [

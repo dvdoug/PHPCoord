@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::1027",
+    "title": "Australasia and Oceania/American Samoa",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-173.85, -17.66], [-165.1, -17.66], [-165.1, -9.92], [-173.85, -9.92], [-173.85, -17.66]
+        ]
+    ]
+}

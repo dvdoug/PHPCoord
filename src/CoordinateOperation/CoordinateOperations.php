@@ -17342,6 +17342,36 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::4260'],
             'extent_name' => 'USA - Indiana - Clinton',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::12392' => [
+            'name' => 'NAD83(2011) to CATRF2022e2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::2251'],
+            'extent_name' => 'Caribbean - Puerto Rico and US Virgin Islands',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::12393' => [
+            'name' => 'NAD83(MA11) to MATRF2022e2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::4883'],
+            'extent_name' => 'Pacific - Guam and NMI',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::12394' => [
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (1)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::1027'],
+            'extent_name' => 'American Samoa',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::12395' => [
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (2)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::3883'],
+            'extent_name' => 'USA - Hawaii - main islands',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::12396' => [
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (3)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::3181'],
+            'extent_name' => 'USA - Hawaii - Tern Island and Sorel Atoll',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::12397' => [
             'name' => 'SPCS2022 Indiana Boone-Hendricks zone (meter)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -17384,6 +17414,12 @@ class CoordinateOperations
             'extent' => ['urn:ogc:def:area:EPSG::2220'],
             'extent_name' => 'USA - Missouri - SPCS - W',
         ],
+        'urn:ogc:def:coordinateOperation:EPSG::12404' => [
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (4)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::3201'],
+            'extent_name' => 'Pacific - Johnston Atoll',
+        ],
         'urn:ogc:def:coordinateOperation:EPSG::12405' => [
             'name' => 'SPCS2022 Indiana Crawford-Lawrence-Orange zone (meter)',
             'method' => 'urn:ogc:def:method:EPSG::9807',
@@ -17395,6 +17431,12 @@ class CoordinateOperations
             'method' => 'urn:ogc:def:method:EPSG::9807',
             'extent' => ['urn:ogc:def:area:EPSG::4272'],
             'extent_name' => 'USA - Indiana - Crawford, Lawrence, Orange',
+        ],
+        'urn:ogc:def:coordinateOperation:EPSG::12407' => [
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (5)',
+            'method' => 'urn:ogc:def:method:EPSG::1075',
+            'extent' => ['urn:ogc:def:area:EPSG::4887'],
+            'extent_name' => 'Pacific - Midway Islands - Sand and Eastern Islands, Kure Atoll',
         ],
         'urn:ogc:def:coordinateOperation:EPSG::12423' => [
             'name' => 'SPCS2022 Indiana Perry zone (meter)',

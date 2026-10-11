@@ -1,0 +1,10 @@
+{
+    "id": "urn:ogc:def:area:EPSG::4887",
+    "title": "Australasia and Oceania/Pacific - Midway Islands - Sand and Eastern Islands, Kure Atoll",
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [-178.48999999999998, 28.029999999999998], [-177.21, 28.029999999999998], [-177.21, 28.57], [-178.48999999999998, 28.57], [-178.48999999999998, 28.029999999999998]
+        ]
+    ]
+}

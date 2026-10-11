@@ -11303,6 +11303,13 @@ class CRSTransformationsNorthAmerica
             'accuracy' => 1.0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15795',
+            'name' => 'Tern Island 1961 to WGS 84 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::4707',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::4326',
+            'accuracy' => 44.0,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15804',
             'name' => 'Cape Canaveral to WGS 84 (1)',
             'source_crs' => 'urn:ogc:def:crs:EPSG::4717',
@@ -13478,6 +13485,13 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
             'target_crs' => 'urn:ogc:def:crs:EPSG::10622',
             'accuracy' => 0,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12392',
+            'name' => 'NAD83(2011) to CATRF2022e2020 (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6318',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10886',
+            'accuracy' => 0.05,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::11342',
@@ -18259,6 +18273,20 @@ class CRSTransformationsNorthAmerica
             'source_crs' => 'urn:ogc:def:crs:EPSG::6319',
             'target_crs' => 'urn:ogc:def:crs:EPSG::9523',
             'accuracy' => 0.015,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12395',
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (2)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'accuracy' => 0.05,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::12396',
+            'name' => 'NAD83(PA11) to PATRF2022e2020 (3)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::6322',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10880',
+            'accuracy' => 0.05,
         ],
         [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::15131',

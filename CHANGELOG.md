@@ -6,13 +6,14 @@
 - Optional `epoch:` argument on `Point::convert()` to change CRS and epoch together when a velocity model exists
 - Optional `maxChainDepth` argument on `Point::convert()` to raise (or lower) the automatic chain search limit
 - Support for GeoTIFF (GTG) grids
+- Support for little-endian NADCON5 grid files
 ### Changed
-- Updates to data for Albania, American Samoa, Argentina, Austria, Belgium, Bhutan, Bosnia and Herzegovina,
-  Bulgaria, Canada, Chile, Colombia, Costa Rica, Croatia, Czechia, Denmark, Estonia, Faroe Islands, Finland,
-  France, Germany, Greece, Greenland, Guam, Hungary, Indonesia, Ireland, Italy, Japan, Kosovo, Latvia,
-  Lithuania, Luxembourg, Malaysia, Mayotte, Mexico, Moldova, Mozambique, Netherlands, New Zealand,
-  North Macedonia, Northern Mariana Islands, Norway, Poland, Portugal, Puerto Rico, Romania, Serbia, Slovakia,
-  Slovenia, South Africa, Spain, Switzerland, Svalbard, Sweden, UK, US Virgin Islands, USA and Wallis and Futuna.
+- Updates to data for Albania, American Samoa, Argentina, Austria, Belgium, Bhutan, Bosnia and Herzegovina, Bulgaria,
+  Canada, Chile, Colombia, Costa Rica, Croatia, Czechia, Denmark, Estonia, Faroe Islands, Finland, France, Germany,
+  Greece, Greenland, Guam, Hungary, Indonesia, Ireland, Italy, Japan, Kosovo, Latvia, Lithuania, Luxembourg, Malaysia,
+  Mayotte, Mexico, Moldova, Mozambique, Netherlands, New Zealand, North Macedonia, Northern Mariana Islands, Norway,
+  Poland, Portugal, Puerto Rico, Romania, Serbia, Slovakia, Slovenia, South Africa, Spain, Switzerland, Svalbard,
+  Sweden, UK, US Minor Outlying Islands, US Virgin Islands, USA and Wallis and Futuna.
 
 ## [5.11.1] - 2025-08-14
 ### Changed
