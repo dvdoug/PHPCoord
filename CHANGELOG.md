@@ -384,8 +384,9 @@ Initial release of this fork (based off of v2.3 of original)
  - Eastings and northings are rounded to 1m, and lat/long to 5dp (approx 1m) to avoid any misconceptions that precision is the same thing as accuracy.
  - When calculating surface distances, a more accurate mean radius is now used rather than that derived from historical definitions of a nautical mile
 
-[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.11.0..master
+[Unreleased]: https://github.com/dvdoug/PHPCoord/compare/v5.11.1..master
 
+[5.11.1]: https://github.com/dvdoug/PHPCoord/compare/v5.11.0..v5.11.1
 [5.11.0]: https://github.com/dvdoug/PHPCoord/compare/v5.10.3..v5.11.0
 [5.10.3]: https://github.com/dvdoug/PHPCoord/compare/v5.10.2..v5.10.3
 [5.10.2]: https://github.com/dvdoug/PHPCoord/compare/v5.10.1..v5.10.2
