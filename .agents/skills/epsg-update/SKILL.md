@@ -17,6 +17,21 @@ is the decisions those comments do not spell out. A method code can collide
 with an operation or area code (method 1139 vs the Fehmarnbelt operation,
 method 1150 vs the GDA94 shortcut operation 1150, method 1159 vs an area code).
 
+## Update loop
+
+1. Source the data. epsg.org: EPSG Dataset > Download dataset > PostgreSQL scripts
+   (needs a login). Unzip over `resources/epsg`. The download is a full dataset, so
+   skipping versions is fine. Until NGS declares the NSRS 2022 grids officially final,
+   also check NCAT (https://beta.ngs.noaa.gov/NCAT/index.xhtml, "Nadcon6 grids") for
+   updated grids.
+2. Run `importSQL.php`, then add a `RegionMap` line for every new extent (see below),
+   then run `generateData.php`.
+3. Run the tests (`vendor/bin/phpunit`).
+4. Changelogs and PRs: the main repository plus every datapack with changed files.
+   Then watch CI.
+
+Anything unfamiliar at any step: stop and ask rather than improvising.
+
 ## Import and codegen
 
 EPSG SQL is imported with `src/EPSG/Import/importSQL.php`
@@ -60,6 +75,25 @@ a test point per operation, only per method.
 You may implement methods that are pure maths autonomously, do not implement
 a file parser for a new grid file format without user permission.
 
+## RegionMap
+
+`src/Geometry/RegionMap.php` `EXTENTS` decides which regional `CRSTransformations*`
+file an operation goes in and which datapack holds an extent's polygon. Add it after
+`importSQL.php` and before `generateData.php`.
+
+- Find new extents by comparing the extent codes in the old and new
+  `PostgreSQL_Data_Script.sql`, not just codes above the old maximum.
+- Only USED extents get exported. Unmapped older extents just weren't used before.
+  Adding them anyway is harmless.
+- Region test: which datapack would a human pick? Hawaii is North America. Be
+  consistent, even if that means fixing older mappings.
+- Grids and providers must live in the same datapack as their operations' extents.
+  When an extent moves region, move any provider classes and grid files that go with it.
+- When a region moves, the legacy-extent cleanup at the end of `generateExtents()`
+  ("Remove unused extents") does not remove the old datapack's copy of the extent
+  JSON. It only deletes codes that are no longer used anywhere. Delete the old copy by
+  hand, and check every datapack's `src/Geometry/Extents/*.json` against `RegionMap`.
+
 ## Method blacklist vs operation blacklist
 
 `BLACKLISTED_METHODS` removes the method and every operation that uses it.
@@ -83,6 +117,35 @@ we abstract that away via the provider classes.
 `generateDataCoordinateOperations()` deletes a datapack `resources/` file, its provider
 class, and the `FilenameToProviderMap` line when no generated operation, other library
 code, or test still names that provider. Extent JSON is not part of that pass.
+
+The only expected `generateData.php` failure is `X has no entry in
+FilenameToProviderMap (op)`. Prefer sourcing the grid: download it, add a provider
+in the right datapack with the right parser, and add a `FilenameToProviderMap` entry.
+If the grid can't be sourced, blacklist the operation under
+`// Grid files not tracked down yet` with a `// METHOD filename` comment, and rerun
+until codegen passes. Never abandon the update over a missing grid. Any other
+codegen failure: stop and ask.
+
+Provider classes copy their neighbours exactly: same namespace
+(`PHPCoord\CoordinateOperation`), name derived mechanically from the file name, and
+the grid/parser class that existing providers for that format use.
+
+EPSG filenames can differ from the real files. For example, the NSRS 2022 PRVI grids
+are `natrf2022` in EPSG but `catrf2022` from NGS. The map keys absorb that: the key
+is the EPSG name and the value is the provider for the real file.
+
+NGS NADCON 6 files ending `.le.b` are little-endian (`.be.b` is big-endian).
+`NADCON5Grid` detects the byte order from the filename, and plain `.b` stays
+big-endian, so keep NGS's original filename in `resources/`.
+
+Licence attribution is part of adding grids. If the provider isn't already credited,
+add its section to that datapack's `license.txt` (copy the wording from a datapack
+that already has it) and its SPDX id to the `composer.json` licence expression. Then
+run `composer validate --strict`. Not every government licence has an SPDX id.
+
+After moving or adding provider classes in a local `vendor/` checkout, run
+`composer dump-autoload`. The optimised classmap still points at the old paths
+otherwise.
 
 ## WGS 84 hub
 
@@ -109,7 +172,39 @@ hard-code the operation codes the scan happens to emit, fix the scan.
   for help in retrieving them.
 - Anything that is already blacklisted without explicit user instruction
 
+## Test failures
+
+Report them, don't auto-patch. Known fixes:
+
+- EPSG renamed something used in a GIGS fixture (e.g. a datum name): update the
+  name in the fixture under `tests/GIGS/`. The files are tab-separated, so edit the
+  bytes.
+- An extent whose surface point lands exactly on the antimeridian, where the test
+  tolerance has no wraparound: add an interior-point override in `EPSGImporter` next
+  to the Mayotte (1159) one, then rerun both scripts.
+- Datapack-based tests skipping with "datapack not installed" usually mean the
+  installed datapacks are behind master. Update them before trusting the run.
+
 ## Changelog
 - This section applies both to this project but also the datapacks
 - Update (or create if not present) a new changelog entry under "Unreleased" noting which countries have updated data
   according to existing style. Keep the changelog at country level, don't specify which new grid files specifically.
+- Main repository: `Updates to data for <countries>` under `## [Unreleased]` /
+  `### Changed`. Always add newly affected countries to the existing line.
+- Datapacks: `Updates to extents for <countries>` under `### Changed`, and
+  `Grid files for <countries>` under `### Added`. Grid files moved out to another
+  datapack go under `### Removed`. A datapack whose only changes are floating-point
+  noise from rebuilding polygons gets plain `Updates to extents`, with no country list.
+- Country names only, no technical detail. Rename-only (title-only) extent changes
+  don't count. Territories are listed separately (e.g. Puerto Rico, Guam, Mayotte,
+  US Minor Outlying Islands).
+- Wrap list lines at 80–120 characters, and never split a country name across lines.
+- A good source for affected countries is the new rows in `epsg_change` (diff the old
+  and new `PostgreSQL_Data_Script.sql`), cross-checked against the generated source.
+
+## Pull requests
+
+- Main repository: branch `epsg-<version>` off master. PR title
+  `Update to EPSG dataset <version>`. The generated changes are the PR.
+- Every datapack with changed files gets a matching branch and PR with the same title.
+  Link each one to the main PR.
