@@ -17,7 +17,6 @@ use PHPCoord\Geometry\BoundingArea;
 
 use function assert;
 use function count;
-use function array_map;
 
 class Geographic2D extends Geographic
 {
@@ -4918,7 +4917,7 @@ class Geographic2D extends Geographic
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -4926,11 +4925,7 @@ class Geographic2D extends Geographic
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'extent_description' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::helpWithExtent(self::class, self::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, ?string $baseCRSSrid = null, string $help = ''): void
@@ -4944,6 +4939,7 @@ class Geographic2D extends Geographic
             'base_crs' => $baseCRSSrid,
             'help' => $help,
         ];
+        SupportedSRIDCache::forget(self::class);
     }
 
     /**

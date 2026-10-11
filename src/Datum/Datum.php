@@ -10,12 +10,12 @@ declare(strict_types=1);
 namespace PHPCoord\Datum;
 
 use DateTimeInterface;
+use PHPCoord\CoordinateReferenceSystem\SupportedSRIDCache;
 use PHPCoord\Exception\UnknownDatumException;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
-use function end;
-use function array_map;
 use function assert;
+use function end;
 
 class Datum
 {
@@ -21285,7 +21285,7 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -21293,10 +21293,7 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::help(self::class, self::$sridData);
     }
 
     public static function registerCustomDatum(string $srid, string $name, string $type, ?string $ellipsoidSrid, ?string $primeMeridianSrid, ?DateTimeInterface $frameReferenceEpoch, string $help = ''): void
@@ -21309,6 +21306,7 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
             'frame_reference_epoch' => $frameReferenceEpoch,
             'help' => $help,
         ];
+        SupportedSRIDCache::forget(self::class);
     }
 
     /**

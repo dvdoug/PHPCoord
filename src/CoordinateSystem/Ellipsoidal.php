@@ -9,9 +9,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateSystem;
 
+use PHPCoord\CoordinateReferenceSystem\SupportedSRIDCache;
 use PHPCoord\Exception\UnknownCoordinateSystemException;
-
-use function array_map;
 
 class Ellipsoidal extends CoordinateSystem
 {
@@ -190,7 +189,7 @@ class Ellipsoidal extends CoordinateSystem
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -198,9 +197,6 @@ class Ellipsoidal extends CoordinateSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::help(self::class, self::$sridData);
     }
 }

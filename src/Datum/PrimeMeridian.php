@@ -9,10 +9,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+use PHPCoord\CoordinateReferenceSystem\SupportedSRIDCache;
 use PHPCoord\Exception\UnknownPrimeMeridianException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
-
-use function array_map;
 
 class PrimeMeridian
 {
@@ -257,7 +256,7 @@ class PrimeMeridian
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -265,10 +264,7 @@ class PrimeMeridian
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::help(self::class, self::$sridData);
     }
 
     public static function registerCustomMeridian(string $srid, string $name, Angle $longitudeFromGreenwich, string $help = ''): void
@@ -279,5 +275,6 @@ class PrimeMeridian
             'uom' => '',
             'help' => $help,
         ];
+        SupportedSRIDCache::forget(self::class);
     }
 }

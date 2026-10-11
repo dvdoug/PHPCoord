@@ -19,38 +19,25 @@ use function array_merge;
 
 class UnitOfMeasureFactory
 {
-    /**
-     * @var array<string, array<string, string>>
-     */
-    private static array $sridCache = [];
-
     public static function makeUnit(float|string $measurement, string $srid): UnitOfMeasure
     {
-        if (!self::$sridCache) {
-            self::$sridCache['angle'] = Angle::getSupportedSRIDs();
-            self::$sridCache['length'] = Length::getSupportedSRIDs();
-            self::$sridCache['scale'] = Scale::getSupportedSRIDs();
-            self::$sridCache['time'] = Time::getSupportedSRIDs();
-            self::$sridCache['rate'] = Rate::getSupportedSRIDs();
-        }
-
-        if (isset(self::$sridCache['angle'][$srid])) {
+        if (isset(Angle::getSupportedSRIDs()[$srid])) {
             return Angle::makeUnit($measurement, $srid);
         }
 
-        if (isset(self::$sridCache['length'][$srid])) {
+        if (isset(Length::getSupportedSRIDs()[$srid])) {
             return Length::makeUnit((float) $measurement, $srid);
         }
 
-        if (isset(self::$sridCache['scale'][$srid])) {
+        if (isset(Scale::getSupportedSRIDs()[$srid])) {
             return Scale::makeUnit((float) $measurement, $srid);
         }
 
-        if (isset(self::$sridCache['time'][$srid])) {
+        if (isset(Time::getSupportedSRIDs()[$srid])) {
             return Time::makeUnit((float) $measurement, $srid);
         }
 
-        if (isset(self::$sridCache['rate'][$srid])) {
+        if (isset(Rate::getSupportedSRIDs()[$srid])) {
             return Rate::makeUnit((float) $measurement, $srid);
         }
 

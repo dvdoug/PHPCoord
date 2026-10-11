@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure;
 
+use PHPCoord\CoordinateReferenceSystem\SupportedSRIDCache;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
@@ -21,8 +22,6 @@ use PHPCoord\UnitOfMeasure\Scale\PartsPerMillion;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
-
-use function array_map;
 
 /**
  * @template-covariant T of Angle|Length|Scale = Angle|Length|Scale
@@ -200,7 +199,7 @@ class Rate implements UnitOfMeasure
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -208,9 +207,6 @@ class Rate implements UnitOfMeasure
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::help(self::class, self::$sridData);
     }
 }

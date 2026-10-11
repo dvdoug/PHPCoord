@@ -9,11 +9,11 @@ declare(strict_types=1);
 
 namespace PHPCoord\Datum;
 
+use PHPCoord\CoordinateReferenceSystem\SupportedSRIDCache;
 use PHPCoord\Exception\UnknownEllipsoidException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 
 use function sqrt;
-use function array_map;
 
 class Ellipsoid
 {
@@ -793,7 +793,7 @@ class Ellipsoid
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -801,10 +801,7 @@ class Ellipsoid
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::help(self::class, self::$sridData);
     }
 
     public static function registerCustomEllipsoid(string $srid, string $name, Length $semiMajorAxis, Length $semiMinorAxis, string $help = ''): void
@@ -816,5 +813,6 @@ class Ellipsoid
             'uom' => '',
             'help' => $help,
         ];
+        SupportedSRIDCache::forget(self::class);
     }
 }

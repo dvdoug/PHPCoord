@@ -9,10 +9,9 @@ declare(strict_types=1);
 
 namespace PHPCoord\UnitOfMeasure\Length;
 
+use PHPCoord\CoordinateReferenceSystem\SupportedSRIDCache;
 use PHPCoord\Exception\UnknownUnitOfMeasureException;
 use PHPCoord\UnitOfMeasure\UnitOfMeasure;
-
-use function array_map;
 
 abstract class Length implements UnitOfMeasure
 {
@@ -311,7 +310,7 @@ abstract class Length implements UnitOfMeasure
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn ($supportedSrid) => $supportedSrid['name'], self::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -319,10 +318,7 @@ abstract class Length implements UnitOfMeasure
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::help(self::class, self::$sridData);
     }
 
     /**
@@ -335,6 +331,7 @@ abstract class Length implements UnitOfMeasure
             'fqcn' => $implementingClassFQCN,
             'help' => $help,
         ];
+        SupportedSRIDCache::forget(self::class);
     }
 
     public function __toString(): string

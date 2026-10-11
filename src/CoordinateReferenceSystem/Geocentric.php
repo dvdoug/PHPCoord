@@ -17,7 +17,6 @@ use PHPCoord\Geometry\BoundingArea;
 
 use function assert;
 use function count;
-use function array_map;
 
 class Geocentric extends CoordinateReferenceSystem
 {
@@ -2035,7 +2034,7 @@ class Geocentric extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -2043,11 +2042,7 @@ class Geocentric extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'extent_description' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::helpWithExtent(self::class, self::$sridData);
     }
 
     public static function registerCustomCRS(string $srid, string $name, string $coordinateSystemSrid, string $datumSrid, BoundingArea $extent, string $help = ''): void
@@ -2060,6 +2055,7 @@ class Geocentric extends CoordinateReferenceSystem
             'extent_description' => '',
             'help' => $help,
         ];
+        SupportedSRIDCache::forget(self::class);
     }
 
     /**

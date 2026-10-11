@@ -12,7 +12,6 @@ namespace PHPCoord\CoordinateReferenceSystem;
 use PHPCoord\Exception\UnknownCoordinateReferenceSystemException;
 use PHPCoord\Geometry\BoundingArea;
 
-use function array_map;
 use function assert;
 
 class Compound extends CoordinateReferenceSystem
@@ -4731,7 +4730,7 @@ class Compound extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDs(): array
     {
-        return array_map(static fn (array $data) => $data['name'], static::$sridData);
+        return SupportedSRIDCache::names(self::class, self::$sridData);
     }
 
     /**
@@ -4739,11 +4738,7 @@ class Compound extends CoordinateReferenceSystem
      */
     public static function getSupportedSRIDsWithHelp(): array
     {
-        return array_map(static fn (array $data) => [
-            'name' => $data['name'],
-            'extent_description' => $data['name'],
-            'help' => $data['help'],
-        ], static::$sridData);
+        return SupportedSRIDCache::helpWithExtent(self::class, self::$sridData);
     }
 
     /**
