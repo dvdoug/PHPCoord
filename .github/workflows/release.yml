@@ -1,0 +1,129 @@
+name: Release
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled, closed]
+
+jobs:
+  preview:
+    if: >-
+      github.event.pull_request.state == 'open' &&
+      (
+        contains(github.event.pull_request.labels.*.name, 'EPSG dataset update') ||
+        (github.event.action == 'unlabeled' && github.event.label.name == 'EPSG dataset update')
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Write the preview
+        env:
+          REMOVED: ${{ github.event.action == 'unlabeled' && github.event.label.name == 'EPSG dataset update' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${REMOVED}" = "true" ]; then
+            python3 .github/scripts/release_changelog.py comment --removed > "$RUNNER_TEMP/comment.md"
+          else
+            python3 .github/scripts/release_changelog.py comment CHANGELOG.md > "$RUNNER_TEMP/comment.md"
+          fi
+
+      - name: Post or update the preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          existing="$(
+            gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" \
+              --jq '.[] | select((.body // "") | contains("<!-- phpcoord-release-preview -->")) | .id' \
+              | awk 'NR == 1 { id = $0 } END { print id }'
+          )"
+          if [ -n "${existing}" ] && [[ ! "${existing}" =~ ^[0-9]+$ ]]; then
+            echo "Unexpected comment id: ${existing}"
+            exit 1
+          fi
+          jq -n --rawfile body "$RUNNER_TEMP/comment.md" '{body:$body}' > "$RUNNER_TEMP/payload.json"
+          if [ -n "${existing}" ]; then
+            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${existing}" --input "$RUNNER_TEMP/payload.json"
+          else
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" --input "$RUNNER_TEMP/payload.json"
+          fi
+
+  promote:
+    if: >-
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'master' &&
+      contains(github.event.pull_request.labels.*.name, 'EPSG dataset update')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    concurrency:
+      group: phpcoord-release
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Refuse an overlapping release
+        shell: bash
+        run: |
+          set -euo pipefail
+          latest_tag="$(git describe --tags --abbrev=0)"
+          overlap="$(git log --format=%s "${latest_tag}..HEAD" | grep -E '^Release v[0-9]+\.[0-9]+\.[0-9]+$' || true)"
+          if [ -n "${overlap}" ]; then
+            echo "An untagged release commit already exists after ${latest_tag}:"
+            echo "${overlap}"
+            echo "Re-run the CI workflow on master to publish it. This pull request was not released."
+            exit 1
+          fi
+
+      - name: London date
+        id: date
+        shell: bash
+        run: |
+          set -euo pipefail
+          zone="$(TZ=Europe/London date +%Z)"
+          case "${zone}" in
+            GMT|BST) ;;
+            *)
+              echo "Expected London time, got ${zone}."
+              exit 1
+              ;;
+          esac
+          echo "date=$(TZ=Europe/London date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Promote the changelog
+        id: promote
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/release_changelog.py promote CHANGELOG.md --date "${{ steps.date.outputs.date }}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md
+          git commit -m "Release v${{ steps.promote.outputs.version }}"
+          git switch -c release-promote
+          git push origin HEAD:master
+
+      # A push made with GITHUB_TOKEN does not start the push trigger.
+      # workflow_dispatch does, including when sent with that token.
+      - name: Start CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: gh workflow run ci.yml --ref master
