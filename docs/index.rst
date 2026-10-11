@@ -9,7 +9,7 @@ to another and also calculate distance between points.
 |numOfCRS| different coordinate systems are supported, covering the entire globe. Common systems supported include:
  - WGS84 (GPS)
  - OSGB36 (Great Britain)
- - NAD27 and NAD83 (North America)
+ - NAD27, NAD83 and NATRF2022 (North America)
  - UTM (Universal Transverse Mercator)
  - ED50 and ETRS89 (Europe)
  - GDA94 and GDA2020 (Australia)
