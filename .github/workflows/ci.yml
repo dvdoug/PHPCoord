@@ -3,6 +3,7 @@ name: CI
 on:
   push: ~
   pull_request: ~
+  workflow_dispatch:
   schedule:
     - cron: '44 15 * * *'
 
@@ -136,3 +137,66 @@ jobs:
     - name: Check code style
       if: matrix.php-version == '8.2' && matrix.dependencies == 'highest' && matrix.datapack == ''
       run: vendor/bin/php-cs-fixer fix --verbose --dry-run --diff --allow-risky=yes
+
+  changelog:
+    name: Changelog script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Test the release script
+        run: python3 .github/scripts/test_release_changelog.py
+
+  # workflow_run does not start after a workflow_dispatch sent with
+  # GITHUB_TOKEN, so the release is published from this run.
+  publish:
+    name: Publish release
+    needs: [tests, changelog]
+    if: >-
+      github.event_name == 'workflow_dispatch' &&
+      github.ref == 'refs/heads/master' &&
+      success()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: phpcoord-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Decide whether to publish
+        id: decide
+        shell: bash
+        run: |
+          set -euo pipefail
+          message="$(git log -1 --format=%s)"
+          if [[ ! "${message}" =~ ^Release\ v([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "HEAD is not a release commit."
+            exit 0
+          fi
+          version="${BASH_REMATCH[1]}"
+          if git rev-parse -q --verify "refs/tags/v${version}" >/dev/null; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "Tag v${version} already exists."
+            exit 0
+          fi
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+
+      - name: Extract release notes
+        if: steps.decide.outputs.publish == 'true'
+        shell: bash
+        run: python3 .github/scripts/release_changelog.py notes CHANGELOG.md "${{ steps.decide.outputs.version }}" > "$RUNNER_TEMP/notes.md"
+
+      - name: Publish the GitHub release
+        if: steps.decide.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: gh release create "v${{ steps.decide.outputs.version }}" --target "${{ github.sha }}" --title "v${{ steps.decide.outputs.version }}" --notes-file "$RUNNER_TEMP/notes.md"
