@@ -56,6 +56,7 @@ use function is_array;
 use function implode;
 use function array_key_last;
 use function array_keys;
+use function sha1;
 
 /**
  * @internal
@@ -299,7 +300,7 @@ trait AutoConversion
         $extentContainsCache = [];
 
         // Iteratively calculate permutations of intermediate CRSs
-        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target, $extentPoint, $extentContainsCache, $maxChainDepth);
+        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target, $extentPoint, $boundaryCheckPoint, $extentContainsCache, $maxChainDepth);
         usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy'] ?: count($a['path']) <=> count($b['path']));
 
         $publishedYears = [];
@@ -497,11 +498,12 @@ trait AutoConversion
     /**
      * Build the set of possible paths that lead from the current CRS to the target CRS.
      *
-     * @param array<int, bool> $extentContainsCache
+     * @param array<int, bool>     $extentContainsCache
+     * @param GeographicValue|null $boundaryCheckPoint  null leaves every catalogue neighbour in the graph
      *
      * @return array<int, array{path: array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>, accuracy: float}>
      */
-    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, GeographicValue $extentPoint, array &$extentContainsCache, ?int $maxChainDepth = null): array
+    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, GeographicValue $extentPoint, ?GeographicValue $boundaryCheckPoint, array &$extentContainsCache, ?int $maxChainDepth = null): array
     {
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
@@ -526,10 +528,13 @@ trait AutoConversion
         // starting or finishing at one, that budget is not needed.
         $maxChainDepth ??= ($source instanceof Geocentric || $target instanceof Geocentric) ? 4 : 6;
 
-        $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth);
-        $cached = AutoConversionCache::getCachedPaths($pathKey);
-        if ($cached !== null) {
-            return $cached;
+        // No point: the key does not depend on a filtered copy, so a hit returns before the graph is built.
+        if ($boundaryCheckPoint === null) {
+            $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth, 'off');
+            $cached = AutoConversionCache::getCachedPaths($pathKey);
+            if ($cached !== null) {
+                return $cached;
+            }
         }
 
         [$baseByCRS, $baseByCRSPair] = AutoConversionCache::getBaseGraph($regions);
@@ -554,6 +559,16 @@ trait AutoConversion
                 ],
                 $candidate['reversible'],
             );
+        }
+
+        // The remaining neighbours are part of the cache key, so filter this copy before the lookup.
+        if ($boundaryCheckPoint !== null) {
+            $boundaryFingerprint = $this->removeNeighboursOutsideBoundingBox($transformationsByCRS, $transformationsByCRSPair, $boundaryCheckPoint, $extentContainsCache);
+            $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth, $boundaryFingerprint);
+            $cached = AutoConversionCache::getCachedPaths($pathKey);
+            if ($cached !== null) {
+                return $cached;
+            }
         }
 
         $iterations = 0;
@@ -599,6 +614,60 @@ trait AutoConversion
         AutoConversionCache::setCachedPaths($pathKey, $paths);
 
         return $paths;
+    }
+
+    /**
+     * Drop a neighbour when every operation on it has a bounding box that misses $point.
+     * A neighbour that survives keeps every operation. Expansion and validatePathForPoint still see that full list.
+     * An operation whose extent is already a BoundingArea has no box shortcut and keeps its neighbour.
+     *
+     * @param array<string, array<string, string>>                                                                                                    $byCRS
+     * @param array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $byCRSPair
+     * @param array<int, bool>                                                                                                                        $extentContainsCache
+     *
+     * @return string sha1 of the neighbours that remain, with no coordinates in it
+     */
+    private function removeNeighboursOutsideBoundingBox(array &$byCRS, array $byCRSPair, GeographicValue $point, array &$extentContainsCache): string
+    {
+        $drop = [];
+        $kept = [];
+        foreach ($byCRS as $from => $neighbours) {
+            foreach ($neighbours as $to) {
+                $inside = false;
+                foreach ($byCRSPair[$from . '|' . $to] ?? [] as $row) {
+                    if ($this->boundingBoxAllowsOperation($row['operation'], $point, $extentContainsCache)) {
+                        $inside = true;
+                        break;
+                    }
+                }
+                if ($inside) {
+                    $kept[] = $from . '|' . $to;
+                } else {
+                    $drop[] = [$from, $to];
+                }
+            }
+        }
+        foreach ($drop as [$from, $to]) {
+            unset($byCRS[$from][$to]);
+        }
+        sort($kept);
+
+        return sha1(implode("\n", $kept));
+    }
+
+    /**
+     * True when validatePathForPoint would not reject this operation on its bounding box.
+     *
+     * @param array<int, bool> $extentContainsCache
+     */
+    private function boundingBoxAllowsOperation(string $operationSrid, GeographicValue $point, array &$extentContainsCache): bool
+    {
+        $extent = CoordinateOperations::getOperationData($operationSrid)['extent'];
+        if ($extent instanceof BoundingArea) {
+            return true;
+        }
+
+        return $this->extentContainsPoint(BoundingArea::createFromExtentCodes($extent, true), $point, $extentContainsCache);
     }
 
     /**
