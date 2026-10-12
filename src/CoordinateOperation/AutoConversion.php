@@ -38,7 +38,6 @@ use PHPCoord\Point\VerticalPoint;
 use function array_column;
 use function array_key_exists;
 use function array_map;
-use function array_shift;
 use function array_sum;
 use function sqrt;
 use function array_unique;
@@ -56,6 +55,9 @@ use function is_array;
 use function implode;
 use function array_key_last;
 use function array_keys;
+use function explode;
+use function sha1;
+use function array_pop;
 
 /**
  * @internal
@@ -298,8 +300,8 @@ trait AutoConversion
         /** @var array<int, bool> $extentContainsCache */
         $extentContainsCache = [];
 
-        // Iteratively calculate permutations of intermediate CRSs
-        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target, $extentPoint, $extentContainsCache, $maxChainDepth);
+        // Chain catalogue operations from the source CRS to the target.
+        $candidatePaths = $this->buildTransformationPathsToCRS($source, $target, $extentPoint, $boundaryCheckPoint, $extentContainsCache, $maxChainDepth);
         usort($candidatePaths, static fn (array $a, array $b) => $a['accuracy'] <=> $b['accuracy'] ?: count($a['path']) <=> count($b['path']));
 
         $publishedYears = [];
@@ -497,11 +499,12 @@ trait AutoConversion
     /**
      * Build the set of possible paths that lead from the current CRS to the target CRS.
      *
-     * @param array<int, bool> $extentContainsCache
+     * @param array<int, bool>     $extentContainsCache
+     * @param GeographicValue|null $boundaryCheckPoint  null leaves every operation in the search
      *
      * @return array<int, array{path: array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>, accuracy: float}>
      */
-    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, GeographicValue $extentPoint, array &$extentContainsCache, ?int $maxChainDepth = null): array
+    protected function buildTransformationPathsToCRS(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, GeographicValue $extentPoint, ?GeographicValue $boundaryCheckPoint, array &$extentContainsCache, ?int $maxChainDepth = null): array
     {
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
@@ -526,10 +529,13 @@ trait AutoConversion
         // starting or finishing at one, that budget is not needed.
         $maxChainDepth ??= ($source instanceof Geocentric || $target instanceof Geocentric) ? 4 : 6;
 
-        $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth);
-        $cached = AutoConversionCache::getCachedPaths($pathKey);
-        if ($cached !== null) {
-            return $cached;
+        // No point: the key does not depend on a filtered copy, so a hit returns before the graph is built.
+        if ($boundaryCheckPoint === null) {
+            $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth, 'off');
+            $cached = AutoConversionCache::getCachedPaths($pathKey);
+            if ($cached !== null) {
+                return $cached;
+            }
         }
 
         [$baseByCRS, $baseByCRSPair] = AutoConversionCache::getBaseGraph($regions);
@@ -556,37 +562,18 @@ trait AutoConversion
             );
         }
 
-        $iterations = 0;
-        $previousSimplePaths = [[$sourceSRID]];
-        $completePaths = [];
-        while ($iterations < $maxChainDepth) {
-            $simplePaths = [];
-            foreach ($previousSimplePaths as $simplePath) {
-                $current = $simplePath[$iterations];
-                if ($current === $targetSRID) {
-                    $completePaths[] = $simplePath;
-                } elseif (isset($transformationsByCRS[$current])) {
-                    foreach ($transformationsByCRS[$current] as $next) {
-                        if (!in_array($next, $simplePath, true)) {
-                            $simplePaths[] = [...$simplePath, $next];
-                        }
-                    }
-                }
-            }
-
-            $previousSimplePaths = $simplePaths;
-            ++$iterations;
-        }
-        foreach ($previousSimplePaths as $simplePath) {
-            if ($simplePath[$iterations] === $targetSRID) {
-                $completePaths[] = $simplePath;
+        // The kept operations are part of the cache key, so filter this copy before the lookup.
+        if ($boundaryCheckPoint !== null) {
+            $boundaryFingerprint = $this->removeOperationsOutsideBoundingBox($transformationsByCRSPair, $boundaryCheckPoint, $extentContainsCache);
+            $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth, $boundaryFingerprint);
+            $cached = AutoConversionCache::getCachedPaths($pathKey);
+            if ($cached !== null) {
+                return $cached;
             }
         }
 
-        // Then expand each CRS->CRS permutation with the various ways of achieving that (can be lots :/)
         $paths = [];
-        $fullPaths = $this->expandSimplePaths($transformationsByCRSPair, $completePaths, $sourceSRID, $targetSRID);
-        foreach ($fullPaths as $fullPath) {
+        foreach ($this->chainOperations($transformationsByCRSPair, $sourceSRID, $targetSRID, $maxChainDepth) as $fullPath) {
             $paths[] = [
                 'path' => $fullPath,
                 'accuracy' => sqrt(array_sum(array_map(
@@ -602,35 +589,127 @@ trait AutoConversion
     }
 
     /**
-     * @param  array<string, array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $transformationsByCRSPair
-     * @param  array<int, array<int, string>>                                                                                                               $simplePaths
+     * Keep only operations whose bounding box contains $point.
+     * The hash is those operations, so two points that share a neighbour but sit in different tiles do not share a cache entry.
+     * An operation whose extent is already a BoundingArea has no box shortcut and stays.
+     *
+     * @param array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $byCRSPair
+     * @param array<int, bool>                                                                                                                        $extentContainsCache
+     *
+     * @return string sha1 of the operations that remain, with no coordinates in it
+     */
+    private function removeOperationsOutsideBoundingBox(array &$byCRSPair, GeographicValue $point, array &$extentContainsCache): string
+    {
+        $dropPairs = [];
+        $kept = [];
+        foreach ($byCRSPair as $pairKey => $rows) {
+            $dropOps = [];
+            foreach ($rows as $opKey => $row) {
+                if ($this->boundingBoxAllowsOperation($row['operation'], $point, $extentContainsCache)) {
+                    $kept[] = $pairKey . '|' . (string) $opKey;
+                } else {
+                    $dropOps[] = $opKey;
+                }
+            }
+            foreach ($dropOps as $opKey) {
+                unset($byCRSPair[$pairKey][$opKey]);
+            }
+            if ($byCRSPair[$pairKey] === []) {
+                $dropPairs[] = $pairKey;
+            }
+        }
+        foreach ($dropPairs as $pairKey) {
+            unset($byCRSPair[$pairKey]);
+        }
+        sort($kept);
+
+        return sha1(implode("\n", $kept));
+    }
+
+    /**
+     * True when validatePathForPoint would not reject this operation on its bounding box.
+     *
+     * @param array<int, bool> $extentContainsCache
+     */
+    private function boundingBoxAllowsOperation(string $operationSrid, GeographicValue $point, array &$extentContainsCache): bool
+    {
+        $extent = CoordinateOperations::getOperationData($operationSrid)['extent'];
+        if ($extent instanceof BoundingArea) {
+            return true;
+        }
+
+        return $this->extentContainsPoint(BoundingArea::createFromExtentCodes($extent, true), $point, $extentContainsCache);
+    }
+
+    /**
+     * One search. Each step appends an operation. The chain is copied only when its tip CRS is the target.
+     * $seen is backtracked: a CRS already on the chain is skipped, and every parallel operation to the same CRS is tried.
+     *
+     * @param array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $byCRSPair
+     *
      * @return array<int, array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>
      */
-    protected function expandSimplePaths(array $transformationsByCRSPair, array $simplePaths, string $fromSRID, string $toSRID): array
+    private function chainOperations(array $byCRSPair, string $sourceSRID, string $targetSRID, int $maxChainDepth): array
     {
-        $fullPaths = [];
-        foreach ($simplePaths as $simplePath) {
-            $transformationsToMakePath = [[]];
-            $from = array_shift($simplePath);
-            do {
-                $to = array_shift($simplePath);
-                $wipTransformationsInPath = [];
-                foreach ($transformationsByCRSPair[$from . '|' . $to] ?? [] as $transformation) {
-                    foreach ($transformationsToMakePath as $transformationToMakePath) {
-                        $wipTransformationsInPath[] = [...$transformationToMakePath, $transformation];
-                    }
-                }
+        if ($sourceSRID === $targetSRID) {
+            return [[]];
+        }
+        if ($maxChainDepth === 0) {
+            return [];
+        }
 
-                $transformationsToMakePath = $wipTransformationsInPath;
-                $from = $to;
-            } while (count($simplePath) > 0);
-
-            foreach ($transformationsToMakePath as $transformationToMakePath) {
-                $fullPaths[] = $transformationToMakePath;
+        $catalog = [];
+        $outgoing = [];
+        foreach ($byCRSPair as $pairKey => $rows) {
+            [$from, $to] = explode('|', $pairKey, 2);
+            foreach ($rows as $row) {
+                $outgoing[$from][] = [count($catalog), $to];
+                $catalog[] = $row;
             }
         }
 
-        return $fullPaths;
+        $complete = [];
+        $opPath = [];
+        $seen = [$sourceSRID => true];
+        $stack = [[$sourceSRID, 0]];
+        while ($stack !== []) {
+            $top = count($stack) - 1;
+            $crs = $stack[$top][0];
+            $child = $stack[$top][1];
+            $children = $outgoing[$crs] ?? [];
+            if ($child >= count($children)) {
+                array_pop($stack);
+                if ($top > 0) {
+                    array_pop($opPath);
+                    unset($seen[$crs]);
+                }
+                continue;
+            }
+
+            $stack[$top][1] = $child + 1;
+            [$index, $next] = $children[$child];
+            if (isset($seen[$next])) {
+                continue;
+            }
+            if ($next === $targetSRID) {
+                $opPath[] = $index;
+                $steps = [];
+                foreach ($opPath as $step) {
+                    $steps[] = $catalog[$step];
+                }
+                $complete[] = $steps;
+                array_pop($opPath);
+                continue;
+            }
+            if ($top + 1 >= $maxChainDepth) {
+                continue;
+            }
+            $seen[$next] = true;
+            $opPath[] = $index;
+            $stack[] = [$next, 0];
+        }
+
+        return $complete;
     }
 
     private function isUserDefinedEpoch(Time $epoch): bool
