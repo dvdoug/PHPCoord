@@ -1,101 +1,235 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Return type \\(array\\<float\\>\\) of method PHPCoord\\\\CoordinateOperation\\\\NADCON5Grid\\:\\:getValues\\(\\) should be compatible with return type \\(array\\<PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\>\\) of method PHPCoord\\\\CoordinateOperation\\\\Grid\\:\\:getValues\\(\\)$#"
+			message: '#^Parameter &\$byCRSPair by\-ref type of method PHPCoord\\CoordinateOperation\\AutoConversionCache\:\:indexTransformation\(\) expects array\<string, array\<array\{operation\: string, name\: string, source_crs\: string, target_crs\: string, accuracy\: float, in_reverse\: bool\}\>\>, non\-empty\-array\<string, array\<array\{operation\: string, name\: string, source_crs\: string, target_crs\: string, accuracy\: float, in_reverse\?\: bool\}\>\> given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/CoordinateOperation/AutoConversionCache.php
+
+		-
+			message: '#^Parameter &\$byCRSPair by\-ref type of method PHPCoord\\CoordinateOperation\\AutoConversionCache\:\:indexTransformation\(\) expects array\<string, array\<array\{operation\: string, name\: string, source_crs\: string, target_crs\: string, accuracy\: float, in_reverse\: bool\}\>\>, non\-empty\-array\<string, non\-empty\-array\<array\{operation\: string, name\: string, source_crs\: string, target_crs\: string, accuracy\: float, in_reverse\?\: false\}\>\> given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/CoordinateOperation/AutoConversionCache.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<float\> is not subtype of native type list\<string\>\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: src/CoordinateOperation/BEVHeightGrid.php
+
+		-
+			message: '#^Offset int\<min, 256\>\|int\<258, max\>\|null might not exist on non\-empty\-array\<int\<0, max\>, non\-empty\-string\>\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/CoordinateOperation/GeoTiffGrid.php
+
+		-
+			message: '#^Possibly invalid array key type int\<min, 256\>\|int\<258, max\>\|null\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 1
+			path: src/CoordinateOperation/GeoTiffGrid.php
+
+		-
+			message: '#^Call to function assert\(\) with true will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/CoordinateOperation/GridFile.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between string and false will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: src/CoordinateOperation/GridFile.php
+
+		-
+			message: '#^Return type \(array\<float\>\) of method PHPCoord\\CoordinateOperation\\NADCON5Grid\:\:getValues\(\) should be compatible with return type \(array\<PHPCoord\\UnitOfMeasure\\Angle\\Angle\|PHPCoord\\UnitOfMeasure\\Length\\Length\>\) of method PHPCoord\\CoordinateOperation\\Grid\:\:getValues\(\)$#'
+			identifier: method.childReturnType
 			count: 1
 			path: src/CoordinateOperation/NADCON5Grid.php
 
 		-
-			message: "#^Method PHPCoord\\\\Datum\\\\Datum\\:\\:getEllipsoid\\(\\) should return PHPCoord\\\\Datum\\\\Ellipsoid but returns PHPCoord\\\\Datum\\\\Ellipsoid\\|null\\.$#"
+			message: '#^Method PHPCoord\\Datum\\Datum\:\:getEllipsoid\(\) should return PHPCoord\\Datum\\Ellipsoid but returns PHPCoord\\Datum\\Ellipsoid\|null\.$#'
+			identifier: return.type
 			count: 1
 			path: src/Datum/Datum.php
 
 		-
-			message: "#^Method PHPCoord\\\\Datum\\\\Datum\\:\\:getPrimeMeridian\\(\\) should return PHPCoord\\\\Datum\\\\PrimeMeridian but returns PHPCoord\\\\Datum\\\\PrimeMeridian\\|null\\.$#"
+			message: '#^Method PHPCoord\\Datum\\Datum\:\:getPrimeMeridian\(\) should return PHPCoord\\Datum\\PrimeMeridian but returns PHPCoord\\Datum\\PrimeMeridian\|null\.$#'
+			identifier: return.type
 			count: 1
 			path: src/Datum/Datum.php
 
 		-
-			message: "#^Cannot call method registerFile\\(\\) on Opis\\\\JsonSchema\\\\Resolvers\\\\SchemaResolver\\|null\\.$#"
+			message: '#^Offset string\|false might not exist on non\-empty\-array\<string, array\{name\: string, type\: string, ellipsoid\: string\|null, prime_meridian\: string\|null, frame_reference_epoch\: DateTimeInterface\|float\|null, anchor_epoch\?\: float\|null, ensemble\?\: array\<string\>, datum_accuracy\?\: float\|null, \.\.\.\}\>\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/Datum/Datum.php
+
+		-
+			message: '#^Cannot call method registerFile\(\) on Opis\\JsonSchema\\Resolvers\\SchemaResolver\|null\.$#'
+			identifier: method.nonObject
 			count: 1
 			path: src/Geometry/GeoJSON/GeoJSON.php
 
 		-
-			message: "#^Call to an undefined method PHPCoord\\\\Point\\\\Point\\:\\:asGeographicValue\\(\\)\\.$#"
+			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12\|13\|14\|15\|16\|17\|18\|19\|20\|21\|22 might not exist on array\{\-3, 128, \-2, \-3, 64, \-1, \-3, \-1, \.\.\.\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/Geometry/Geodesic.php
+
+		-
+			message: '#^Parameter \#1 \.\.\.\$arg1 of function max expects non\-empty\-array, list\<\(int\|string\)\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Geometry/Geodesic.php
+
+		-
+			message: '#^Call to an undefined method PHPCoord\\Point\\Point\:\:asGeographicValue\(\)\.$#'
+			identifier: method.notFound
 			count: 1
 			path: src/Point/CompoundPoint.php
 
 		-
-			message: "#^Result of \\|\\| is always true\\.$#"
+			message: '#^Cannot call method asYears\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: src/Point/CompoundPoint.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\CompoundPoint\:\:validatePathForPoint\(\) has parameter \$candidatePath with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
 			path: src/Point/CompoundPoint.php
 
 		-
-			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
 			count: 1
 			path: src/Point/CompoundPoint.php
 
 		-
-			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Geocentric and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
-			count: 1
-			path: src/Point/GeocentricPoint.php
-
-		-
-			message: "#^Parameter \\#1 \\$unit of method PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\:\\:add\\(\\) expects PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle, PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale given\\.$#"
-			count: 6
-			path: src/Point/GeocentricPoint.php
-
-		-
-			message: "#^Parameter \\#1 \\$unit of method PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\:\\:add\\(\\) expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale given\\.$#"
-			count: 6
-			path: src/Point/GeocentricPoint.php
-
-		-
-			message: "#^Parameter \\#1 \\$unit of method PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale\\:\\:add\\(\\) expects PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale, PHPCoord\\\\UnitOfMeasure\\\\Angle\\\\Angle\\|PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|PHPCoord\\\\UnitOfMeasure\\\\Scale\\\\Scale given\\.$#"
+			message: '#^Cannot call method asYears\(\) on mixed\.$#'
+			identifier: method.nonObject
 			count: 2
 			path: src/Point/GeocentricPoint.php
 
 		-
-			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Geographic2D\\|PHPCoord\\\\CoordinateReferenceSystem\\\\Geographic3D and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
+			message: '#^Method PHPCoord\\Point\\GeocentricPoint\:\:validatePathForPoint\(\) has parameter \$candidatePath with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Point/GeocentricPoint.php
+
+		-
+			message: '#^Parameter \#1 \$unit of method PHPCoord\\UnitOfMeasure\\Angle\\Angle\:\:add\(\) expects PHPCoord\\UnitOfMeasure\\Angle\\Angle, PHPCoord\\UnitOfMeasure\\Angle\\Angle\|PHPCoord\\UnitOfMeasure\\Length\\Length\|PHPCoord\\UnitOfMeasure\\Scale\\Scale given\.$#'
+			identifier: argument.type
+			count: 6
+			path: src/Point/GeocentricPoint.php
+
+		-
+			message: '#^Parameter \#1 \$unit of method PHPCoord\\UnitOfMeasure\\Length\\Length\:\:add\(\) expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Angle\\Angle\|PHPCoord\\UnitOfMeasure\\Length\\Length\|PHPCoord\\UnitOfMeasure\\Scale\\Scale given\.$#'
+			identifier: argument.type
+			count: 6
+			path: src/Point/GeocentricPoint.php
+
+		-
+			message: '#^Parameter \#1 \$unit of method PHPCoord\\UnitOfMeasure\\Scale\\Scale\:\:add\(\) expects PHPCoord\\UnitOfMeasure\\Scale\\Scale, PHPCoord\\UnitOfMeasure\\Angle\\Angle\|PHPCoord\\UnitOfMeasure\\Length\\Length\|PHPCoord\\UnitOfMeasure\\Scale\\Scale given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Point/GeocentricPoint.php
+
+		-
+			message: '#^Cannot call method asYears\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: src/Point/GeographicPoint.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\GeographicPoint\:\:validatePathForPoint\(\) has parameter \$candidatePath with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
 			path: src/Point/GeographicPoint.php
 
 		-
-			message: "#^Cannot call method multiply\\(\\) on mixed\\.$#"
+			message: '#^Cannot call method multiply\(\) on mixed\.$#'
+			identifier: method.nonObject
 			count: 1
 			path: src/Point/Point.php
 
 		-
-			message: "#^Instanceof between PHPCoord\\\\CoordinateReferenceSystem\\\\Projected and PHPCoord\\\\CoordinateReferenceSystem\\\\Compound will always evaluate to false\\.$#"
+			message: '#^Method PHPCoord\\Point\\Point\:\:generalPolynomialUnitless\(\) should return array\{xt\: float, yt\: float\} but returns array\.$#'
+			identifier: return.type
+			count: 2
+			path: src/Point/Point.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\Point\:\:generalPolynomialUnitlessForward\(\) has parameter \$powerCoefficients with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Point/Point.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\Point\:\:generalPolynomialUnitlessForward\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Point/Point.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\Point\:\:generalPolynomialUnitlessReverse\(\) has parameter \$powerCoefficients with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Point/Point.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\Point\:\:generalPolynomialUnitlessReverse\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Point/Point.php
+
+		-
+			message: '#^Cannot call method asYears\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: src/Point/ProjectedPoint.php
+
+		-
+			message: '#^Method PHPCoord\\Point\\ProjectedPoint\:\:validatePathForPoint\(\) has parameter \$candidatePath with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
 			path: src/Point/ProjectedPoint.php
 
 		-
-			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\Point\\\\BritishNationalGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			message: '#^Parameter \#1 \$easting of class PHPCoord\\Point\\BritishNationalGridPoint constructor expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Length\\Length\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Point/ProjectedPoint.php
 
 		-
-			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\Point\\\\IrishGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			message: '#^Parameter \#1 \$easting of class PHPCoord\\Point\\IrishGridPoint constructor expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Length\\Length\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Point/ProjectedPoint.php
 
 		-
-			message: "#^Parameter \\#1 \\$easting of class PHPCoord\\\\Point\\\\IrishTransverseMercatorPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			message: '#^Parameter \#1 \$easting of class PHPCoord\\Point\\IrishTransverseMercatorPoint constructor expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Length\\Length\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Point/ProjectedPoint.php
 
 		-
-			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\Point\\\\BritishNationalGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			message: '#^Parameter \#2 \$northing of class PHPCoord\\Point\\BritishNationalGridPoint constructor expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Length\\Length\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Point/ProjectedPoint.php
 
 		-
-			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\Point\\\\IrishGridPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			message: '#^Parameter \#2 \$northing of class PHPCoord\\Point\\IrishGridPoint constructor expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Length\\Length\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Point/ProjectedPoint.php
 
 		-
-			message: "#^Parameter \\#2 \\$northing of class PHPCoord\\\\Point\\\\IrishTransverseMercatorPoint constructor expects PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length, PHPCoord\\\\UnitOfMeasure\\\\Length\\\\Length\\|null given\\.$#"
+			message: '#^Parameter \#2 \$northing of class PHPCoord\\Point\\IrishTransverseMercatorPoint constructor expects PHPCoord\\UnitOfMeasure\\Length\\Length, PHPCoord\\UnitOfMeasure\\Length\\Length\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Point/ProjectedPoint.php

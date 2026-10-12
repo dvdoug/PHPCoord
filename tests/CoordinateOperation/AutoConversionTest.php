@@ -203,23 +203,6 @@ class AutoConversionTest extends TestCase
         self::assertSame(Geocentric::EPSG_ETRS89, $sweden[0]['source_crs']);
         self::assertSame(Geocentric::EPSG_ETRS89_SWE_SWEREF_99, $sweden[0]['target_crs']);
         self::assertFalse($sweden[0]['reversible']);
-
-        $velocity = $byOperation['urn:ogc:def:coordinateOperation:EPSG::10809'] ?? [];
-        self::assertCount(1, $velocity);
-        self::assertSame(Geocentric::EPSG_ETRS89, $velocity[0]['source_crs']);
-        self::assertSame(Geocentric::EPSG_NKG_ETRF14, $velocity[0]['target_crs']);
-        self::assertTrue($velocity[0]['reversible']);
-
-        $definitional = $byOperation['urn:ogc:def:coordinateOperation:EPSG::8366'] ?? [];
-        $renamedOutput = null;
-        foreach ($definitional as $candidate) {
-            if ($candidate['target_crs'] === Geocentric::EPSG_ETRS89) {
-                $renamedOutput = $candidate;
-            }
-        }
-        self::assertNotNull($renamedOutput);
-        self::assertTrue($renamedOutput['reversible']);
-        self::assertEquals(0.0, $renamedOutput['accuracy']);
     }
 
     public function testDatelessEtrf2014ToNkgDoesNotCrashOnSentinel(): void
@@ -668,9 +651,9 @@ class AutoConversionTest extends TestCase
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(51.728601272807154, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(4.712120126103863, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
-        self::assertEqualsWithDelta(301.79806918185204, $to->getHeight()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(51.728601874288934, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(4.712119439826868, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(301.797544112429023, $to->getHeight()->asMetres()->getValue(), 0.00001);
     }
 
     public function testRDNAPToWGS84Geocentric(): void
@@ -695,9 +678,9 @@ class AutoConversionTest extends TestCase
         $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(3945517.9766846797, $to->getX()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(325220.9009296166, $to->getY()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(4984392.793156222, $to->getZ()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(3945517.9278914458, $to->getX()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(325220.84932800132, $to->getY()->asMetres()->getValue(), 0.00001);
+        self::assertEqualsWithDelta(4984392.8341967016, $to->getZ()->asMetres()->getValue(), 0.00001);
     }
 
     public function testNAD83NAD27SouthCarolina(): void
@@ -776,9 +759,9 @@ class AutoConversionTest extends TestCase
         $toCRS = Projected::fromSRID(Projected::EPSG_ETRS89_TM35FIN_E_N);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(195731.1961, $to->getEasting()->getValue(), 0.001);
-        self::assertEqualsWithDelta(6753576.4440, $to->getNorthing()->getValue(), 0.001);
-        self::assertEquals(0.01, $to->getAccuracy()->getValue());
+        self::assertEqualsWithDelta(195731.210727205, $to->getEasting()->getValue(), 0.001);
+        self::assertEqualsWithDelta(6753576.360760270, $to->getNorthing()->getValue(), 0.001);
+        self::assertEqualsWithDelta(0.100498756211, $to->getAccuracy()->getValue(), 0.000000001);
     }
 
     public function testRDNAPToITRF2014(): void
@@ -803,9 +786,9 @@ class AutoConversionTest extends TestCase
         $toCRS = Geographic3D::fromSRID(Geographic3D::EPSG_ITRF2014);
         $to = $from->convert($toCRS);
 
-        self::assertEqualsWithDelta(52.0000049184207, $to->getLatitude()->asDegrees()->getValue(), 0.000000001);
-        self::assertEqualsWithDelta(5.00000884411454, $to->getLongitude()->asDegrees()->getValue(), 0.000000001);
-        self::assertEqualsWithDelta(43.001783709041774, $to->getHeight()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta(52.000005512028139, $to->getLatitude()->asDegrees()->getValue(), 0.000000001);
+        self::assertEqualsWithDelta(5.000008256176621, $to->getLongitude()->asDegrees()->getValue(), 0.000000001);
+        self::assertEqualsWithDelta(43.019688556902111, $to->getHeight()->asMetres()->getValue(), 0.0001);
     }
 
     /**

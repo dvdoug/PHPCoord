@@ -122,7 +122,8 @@ abstract class CoordinateReferenceSystem
 
     /**
      * If $crsSrid is an ETRS89 national realization (OSNet, AGRS2010, …), the generic ETRS89 CRS of the same type
-     * (4258 / 4937 / 4936). Compounds keep the same vertical (e.g. NLD+NAP → ETRS89+NAP).
+     * (4258 / 4937 / 4936). A dynamic geodetic member is an ETRF frame and is left as itself.
+     * Compounds keep the same vertical (e.g. NLD+NAP → ETRS89+NAP).
      * Reads sridData rather than fromSRID() so we don't load bounding polygons for every CRS in the graph.
      *
      * @internal
@@ -166,7 +167,16 @@ abstract class CoordinateReferenceSystem
                 continue;
             }
 
-            return in_array($data['datum'], $etrs89Members, true) ? $ensembleCrs : null;
+            $datum = $data['datum'];
+            if (!in_array($datum, $etrs89Members, true)) {
+                return null;
+            }
+            // ETRF frames are dynamic geodetic. Only a static national realization is rewritten onto generic ETRS89.
+            if (Datum::getDatumTypeForSRID($datum) === Datum::DATUM_TYPE_DYNAMIC_GEODETIC) {
+                return null;
+            }
+
+            return $ensembleCrs;
         }
 
         return null;

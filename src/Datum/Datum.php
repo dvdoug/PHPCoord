@@ -21355,9 +21355,9 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
 
     public const DATUM_TYPE_VERTICAL = 'vertical';
 
-    public const DATUM_TYPE_DYNAMIC_GEODETIC = 'dynamic_geodetic';
+    public const DATUM_TYPE_DYNAMIC_GEODETIC = 'dynamic geodetic';
 
-    public const DATUM_TYPE_DYNAMIC_VERTICAL = 'dynamic_vertical';
+    public const DATUM_TYPE_DYNAMIC_VERTICAL = 'dynamic vertical';
 
     public const DATUM_TYPE_ENGINEERING = 'engineering';
 
@@ -21496,5 +21496,14 @@ Replaced by Lisbon 1937 adjustment (which uses International 1924 ellipsoid).',
     {
         return self::$sridData[$this->srid]['ensemble'] ?? [
         ];
+    }
+
+    /**
+     * Catalogue datum type. Null when $srid is not in the catalogue.
+     * Reads the record rather than fromSRID() so a membership check does not construct a datum.
+     */
+    public static function getDatumTypeForSRID(string $srid): ?string
+    {
+        return self::$sridData[$srid]['type'] ?? null;
     }
 }

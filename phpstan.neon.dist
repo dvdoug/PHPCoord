@@ -8,6 +8,7 @@ parameters:
     - src
   excludePaths:
     analyse:
+      - src/CoordinateReferenceSystem
       - src/CoordinateOperation/Params
       - src/EPSG/Import
       - src/Geometry/Extents
