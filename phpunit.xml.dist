@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          colors="true"
          bootstrap="vendor/autoload.php"
-         cacheResultFile="build/phpunit-cache/test-results"
          cacheDirectory="build/phpunit-cache"
          displayDetailsOnIncompleteTests="true"
          displayDetailsOnSkippedTests="true"
@@ -14,33 +12,28 @@
          displayDetailsOnTestsThatTriggerWarnings="true"
          displayDetailsOnTestsThatTriggerNotices="true"
 >
-
-    <testsuites>
-        <testsuite name="PHPCoord">
-            <directory>tests</directory>
-        </testsuite>
-    </testsuites>
-
-    <php>
-        <ini name="error_logging" value="-1"/>
-    </php>
-
-    <source>
-        <include>
-            <directory suffix=".php">src</directory>
-        </include>
-        <exclude>
-            <directory suffix=".php">src/EPSG/Import</directory>
-            <directory suffix=".php">src/CoordinateOperation/Params</directory>
-            <directory suffix=".php">src/Geometry/Extents</directory>
-        </exclude>
-    </source>
-
-    <coverage pathCoverage="true" cacheDirectory="build/php-code-coverage-cache">
-        <report>
-            <text outputFile="php://stdout" showOnlySummary="true"/>
-            <html outputDirectory="build/coverage-phpunit"/>
-        </report>
-    </coverage>
-
+  <testsuites>
+    <testsuite name="PHPCoord">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <ini name="error_reporting" value="-1"/>
+  </php>
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <exclude>
+      <directory suffix=".php">src/EPSG/Import</directory>
+      <directory suffix=".php">src/CoordinateOperation/Params</directory>
+      <directory suffix=".php">src/Geometry/Extents</directory>
+    </exclude>
+  </source>
+  <coverage pathCoverage="true">
+    <report>
+      <text outputFile="php://stdout" showOnlySummary="true"/>
+      <html outputDirectory="build/coverage-phpunit"/>
+    </report>
+  </coverage>
 </phpunit>
