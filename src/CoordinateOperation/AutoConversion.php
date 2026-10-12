@@ -612,7 +612,6 @@ trait AutoConversion
         foreach ($simplePaths as $simplePath) {
             $transformationsToMakePath = [[]];
             $from = array_shift($simplePath);
-            assert($from === $fromSRID);
             do {
                 $to = array_shift($simplePath);
                 $wipTransformationsInPath = [];
@@ -625,7 +624,6 @@ trait AutoConversion
                 $transformationsToMakePath = $wipTransformationsInPath;
                 $from = $to;
             } while (count($simplePath) > 0);
-            assert($to === $toSRID);
 
             foreach ($transformationsToMakePath as $transformationToMakePath) {
                 $fullPaths[] = $transformationToMakePath;
@@ -700,8 +698,6 @@ trait AutoConversion
         if ($point instanceof ProjectedPoint) {
             $point = $point->asGeographicPoint();
         }
-
-        assert($point instanceof GeographicPoint);
 
         return new GeographicValue($point->getLatitude(), $point->getLongitude()->subtract($point->getCRS()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()), null, $point->getCRS()->getDatum());
     }
