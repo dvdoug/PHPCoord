@@ -216,16 +216,17 @@ final class AutoConversionCache
 
     /**
      * Path-cache key. Overlay ids are which ETRS89 copies were applied; empty overlay (e.g. NAD83) is just source|target.
+     * $boundaryFingerprint is `off` when the graph is not filtered, otherwise a sha1 of what the point kept.
      * Coordinates are not included — a 1km grid of US points must not each get their own BFS result.
      * Depth is included — a longer chain can be more accurate, so a deeper search must not satisfy a shallower one.
      *
      * @param string[] $overlayIds
      */
-    public static function pathCacheKey(string $sourceSRID, string $targetSRID, array $overlayIds, int $customCount, int $maxChainDepth): string
+    public static function pathCacheKey(string $sourceSRID, string $targetSRID, array $overlayIds, int $customCount, int $maxChainDepth, string $boundaryFingerprint): string
     {
         sort($overlayIds);
 
-        return $sourceSRID . '|' . $targetSRID . '|' . sha1(implode("\n", $overlayIds)) . '|' . $customCount . '|' . $maxChainDepth;
+        return $sourceSRID . '|' . $targetSRID . '|' . sha1(implode("\n", $overlayIds)) . '|' . $boundaryFingerprint . '|' . $customCount . '|' . $maxChainDepth;
     }
 
     /**
