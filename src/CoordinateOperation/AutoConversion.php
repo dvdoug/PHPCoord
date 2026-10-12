@@ -561,9 +561,9 @@ trait AutoConversion
             );
         }
 
-        // The remaining neighbours are part of the cache key, so filter this copy before the lookup.
+        // The remaining operations are part of the cache key, so filter this copy before the lookup.
         if ($boundaryCheckPoint !== null) {
-            $boundaryFingerprint = $this->removeNeighboursOutsideBoundingBox($transformationsByCRS, $transformationsByCRSPair, $boundaryCheckPoint, $extentContainsCache);
+            $boundaryFingerprint = $this->removeOperationsOutsideBoundingBox($transformationsByCRS, $transformationsByCRSPair, $boundaryCheckPoint, $extentContainsCache);
             $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth, $boundaryFingerprint);
             $cached = AutoConversionCache::getCachedPaths($pathKey);
             if ($cached !== null) {
@@ -617,37 +617,43 @@ trait AutoConversion
     }
 
     /**
-     * Drop a neighbour when every operation on it has a bounding box that misses $point.
-     * A neighbour that survives keeps every operation. Expansion and validatePathForPoint still see that full list.
-     * An operation whose extent is already a BoundingArea has no box shortcut and keeps its neighbour.
+     * Keep, on each neighbour, only the operations whose bounding box contains $point.
+     * Remove the neighbour when none remain. The hash is those operations, so two points that share a neighbour but sit in different tiles do not share a cache entry.
+     * An operation whose extent is already a BoundingArea has no box shortcut and stays.
      *
      * @param array<string, array<string, string>>                                                                                                    $byCRS
      * @param array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $byCRSPair
      * @param array<int, bool>                                                                                                                        $extentContainsCache
      *
-     * @return string sha1 of the neighbours that remain, with no coordinates in it
+     * @return string sha1 of the operations that remain, with no coordinates in it
      */
-    private function removeNeighboursOutsideBoundingBox(array &$byCRS, array $byCRSPair, GeographicValue $point, array &$extentContainsCache): string
+    private function removeOperationsOutsideBoundingBox(array &$byCRS, array &$byCRSPair, GeographicValue $point, array &$extentContainsCache): string
     {
-        $drop = [];
+        $dropNeighbours = [];
         $kept = [];
         foreach ($byCRS as $from => $neighbours) {
             foreach ($neighbours as $to) {
-                $inside = false;
-                foreach ($byCRSPair[$from . '|' . $to] ?? [] as $row) {
+                $pairKey = $from . '|' . $to;
+                $dropOps = [];
+                $any = false;
+                foreach ($byCRSPair[$pairKey] ?? [] as $opKey => $row) {
                     if ($this->boundingBoxAllowsOperation($row['operation'], $point, $extentContainsCache)) {
-                        $inside = true;
-                        break;
+                        $any = true;
+                        $kept[] = $pairKey . '|' . (string) $opKey;
+                    } else {
+                        $dropOps[] = $opKey;
                     }
                 }
-                if ($inside) {
-                    $kept[] = $from . '|' . $to;
-                } else {
-                    $drop[] = [$from, $to];
+                foreach ($dropOps as $opKey) {
+                    unset($byCRSPair[$pairKey][$opKey]);
+                }
+                if (!$any) {
+                    $dropNeighbours[] = [$from, $to];
+                    unset($byCRSPair[$pairKey]);
                 }
             }
         }
-        foreach ($drop as [$from, $to]) {
+        foreach ($dropNeighbours as [$from, $to]) {
             unset($byCRS[$from][$to]);
         }
         sort($kept);
