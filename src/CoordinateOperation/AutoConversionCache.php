@@ -24,7 +24,7 @@ use function sort;
  *
  * Base graph: region files only, keyed by the set of regions (no point).
  * ETRS89 copies: Europe ops reused on generic ETRS89, bbox-filtered per point.
- * Path cache: BFS results keyed by CRS pair + which copies applied, not by coordinates.
+ * Path cache: chains keyed by CRS pair, applied copies, and the operations a point kept. No coordinates.
  *
  * @internal
  */
@@ -46,7 +46,7 @@ final class AutoConversionCache
     public const ETRS89_ENSEMBLE_MEMBER_ALIAS_OPERATION = 'urn:ogc:def:coordinateOperation:EPSG::32781';
 
     /**
-     * @var array<string, array{0: array<string, array<string, string>>, 1: array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>}>
+     * @var array<string, array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>>
      */
     private static array $baseGraphs = [];
 
@@ -64,23 +64,22 @@ final class AutoConversionCache
      * Transformations from the region files (no customs, no ETRS89 copies).
      * $regions must already be sorted so the cache key does not depend on source vs target order.
      *
-     * @param  string[]                                                                                                                                                                                   $regions
-     * @return array{0: array<string, array<string, string>>, 1: array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>}
+     * @param  string[]                                                                                                                                $regions
+     * @return array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>>
      */
     public static function getBaseGraph(array $regions): array
     {
         $key = implode('|', $regions);
         if (!isset(self::$baseGraphs[$key])) {
-            $rows = [];
-            foreach ($regions as $region) {
-                $rows = [...$rows, ...self::loadRegion($region)];
-            }
-            $byCRS = [];
             $byCRSPair = [];
-            foreach ($rows as $rowKey => $transformation) {
-                self::indexTransformation($byCRS, $byCRSPair, (string) $rowKey, $transformation);
+            $index = 0;
+            foreach ($regions as $region) {
+                foreach (self::loadRegion($region) as $transformation) {
+                    self::indexTransformation($byCRSPair, (string) $index, $transformation);
+                    ++$index;
+                }
             }
-            self::$baseGraphs[$key] = [$byCRS, $byCRSPair];
+            self::$baseGraphs[$key] = $byCRSPair;
         }
 
         return self::$baseGraphs[$key];
@@ -184,14 +183,13 @@ final class AutoConversionCache
     }
 
     /**
-     * Add a transformation to the CRS adjacency list and the per-pair operation list.
+     * Add a transformation to the per-pair operation list.
      * ETRS89 member→ensemble aliases (32781) are one-way; everything else follows the method's reversible flag.
      *
-     * @param array<string, array<string, string>>                                                                                                    $byCRS
      * @param array<string, array<array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool}>> $byCRSPair
      * @param array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float}                                         $transformation
      */
-    public static function indexTransformation(array &$byCRS, array &$byCRSPair, string $key, array $transformation, ?bool $reversible = null): void
+    public static function indexTransformation(array &$byCRSPair, string $key, array $transformation, ?bool $reversible = null): void
     {
         $oneWay = $transformation['operation'] === self::ETRS89_ENSEMBLE_MEMBER_ALIAS_OPERATION;
         if ($oneWay) {
@@ -201,7 +199,6 @@ final class AutoConversionCache
             $reversible = CoordinateOperationMethods::getMethodData($operation['method'])['reversible'];
         }
 
-        $byCRS[$transformation['source_crs']][$transformation['target_crs']] ??= $transformation['target_crs'];
         $byCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key] = $transformation;
         $byCRSPair[$transformation['source_crs'] . '|' . $transformation['target_crs']][$key]['in_reverse'] = false;
 
@@ -209,7 +206,6 @@ final class AutoConversionCache
             return;
         }
 
-        $byCRS[$transformation['target_crs']][$transformation['source_crs']] ??= $transformation['source_crs'];
         $byCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key] = $transformation;
         $byCRSPair[$transformation['target_crs'] . '|' . $transformation['source_crs']][$key]['in_reverse'] = true;
     }

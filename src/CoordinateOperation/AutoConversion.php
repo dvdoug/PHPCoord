@@ -538,17 +538,17 @@ trait AutoConversion
             }
         }
 
-        [$baseByCRS, $baseByCRSPair] = AutoConversionCache::getBaseGraph($regions);
-        $transformationsByCRS = [...$baseByCRS]; // copy so overlays cannot pollute the cached graph
-        $transformationsByCRSPair = [...$baseByCRSPair];
+        $baseByCRSPair = AutoConversionCache::getBaseGraph($regions);
+        // Copy only when this search will write. Customs, ensemble rows, and the box filter must not touch the cached graph.
+        $copied = $customTransformations !== [] || $appliedCandidates !== [];
+        $transformationsByCRSPair = $copied ? [...$baseByCRSPair] : $baseByCRSPair;
 
         // Customs are not stored in the base graph — GIGS registers them immediately before convert()
         foreach ($customTransformations as $customKey => $transformation) {
-            AutoConversionCache::indexTransformation($transformationsByCRS, $transformationsByCRSPair, 'custom-' . $customKey, $transformation);
+            AutoConversionCache::indexTransformation($transformationsByCRSPair, 'custom-' . $customKey, $transformation);
         }
         foreach ($appliedCandidates as $candidate) {
             AutoConversionCache::indexTransformation(
-                $transformationsByCRS,
                 $transformationsByCRSPair,
                 $candidate['id'],
                 [
@@ -564,6 +564,9 @@ trait AutoConversion
 
         // The kept operations are part of the cache key, so filter this copy before the lookup.
         if ($boundaryCheckPoint !== null) {
+            if (!$copied) {
+                $transformationsByCRSPair = [...$baseByCRSPair];
+            }
             $boundaryFingerprint = $this->removeOperationsOutsideBoundingBox($transformationsByCRSPair, $boundaryCheckPoint, $extentContainsCache);
             $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth, $boundaryFingerprint);
             $cached = AutoConversionCache::getCachedPaths($pathKey);
