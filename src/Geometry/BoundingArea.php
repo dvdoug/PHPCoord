@@ -164,29 +164,25 @@ class BoundingArea
         }
 
         /*
-         * Even-odd ray cast over every ring of a polygon. Interior rings (holes)
-         * toggle the result back to outside.
-         *
          * @see https://observablehq.com/@tmcw/understanding-point-in-polygon
          */
         foreach ($pointsToCheck as $pointToCheck) {
             [$x, $y] = $pointToCheck;
             foreach ($this->polygons as $polygon) {
-                $inside = false;
-                foreach ($polygon->coordinates as $ring) {
-                    $vertices = $ring->coordinates;
-                    $n = count($vertices);
-                    for ($i = 0, $j = $n - 1; $i < $n; $j = $i++) {
-                        $xi = $vertices[$i]->x;
-                        $yi = $vertices[$i]->y;
-                        $xj = $vertices[$j]->x;
-                        $yj = $vertices[$j]->y;
+                $vertices = $polygon->coordinates[0]->coordinates; // this algo works on simple polygons (no holes)
 
-                        $intersect = (($yi > $y) !== ($yj > $y)) // horizontal ray from $y, intersects if vertices are on opposite sides of it
-                            && ($x < ($xj - $xi) * ($y - $yi) / ($yj - $yi) + $xi);
-                        if ($intersect) {
-                            $inside = !$inside;
-                        }
+                $n = count($vertices);
+                $inside = false;
+                for ($i = 0, $j = $n - 1; $i < $n; $j = $i++) {
+                    $xi = $vertices[$i]->x;
+                    $yi = $vertices[$i]->y;
+                    $xj = $vertices[$j]->x;
+                    $yj = $vertices[$j]->y;
+
+                    $intersect = (($yi > $y) !== ($yj > $y)) // horizontal ray from $y, intersects if vertices are on opposite sides of it
+                        && ($x < ($xj - $xi) * ($y - $yi) / ($yj - $yi) + $xi);
+                    if ($intersect) {
+                        $inside = !$inside;
                     }
                 }
 

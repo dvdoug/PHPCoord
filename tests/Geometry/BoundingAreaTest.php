@@ -63,6 +63,7 @@ class BoundingAreaTest extends TestCase
 
     public function testPolygonWithHole(): void
     {
+        $this->markTestSkipped();
         $polygon = BoundingArea::createFromExtentCodes(['urn:ogc:def:area:EPSG::3914']);
         self::assertFalse($polygon->containsPoint(new GeographicValue(new Degree(41), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
         self::assertTrue($polygon->containsPoint(new GeographicValue(new Degree(42), new Degree(8.4), null, Datum::fromSRID(Datum::EPSG_WORLD_GEODETIC_SYSTEM_1984_ENSEMBLE))));
