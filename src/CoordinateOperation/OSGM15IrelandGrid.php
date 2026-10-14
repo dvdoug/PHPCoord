@@ -13,9 +13,12 @@ use Composer\Pcre\Preg;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFixedArray;
 
-use function explode;
-use function trim;
 use function assert;
+use function count;
+use function explode;
+use function strpos;
+use function substr;
+use function trim;
 
 class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
 {
@@ -31,7 +34,12 @@ class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
         $this->gridFile = new GridFile($filename);
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LONGITUDE_DECREASING_LATIITUDE;
 
-        $header = Preg::split('/\s+/', trim($this->gridFile->fgets()));
+        $size = $this->gridFile->getSize();
+        $contents = $size > 0 ? $this->gridFile->fread($size) : '';
+        $splitAt = strpos($contents, "\n");
+        $headerLine = $splitAt === false ? $contents : substr($contents, 0, $splitAt);
+        $rest = $splitAt === false ? '' : substr($contents, $splitAt + 1);
+        $header = Preg::split('/\s+/', trim($headerLine));
 
         $this->startX = (float) $header[2];
         $this->startY = (float) $header[0];
@@ -42,18 +50,15 @@ class OSGM15IrelandGrid extends GeographicGeoidHeightGrid
         $this->numberOfColumns = (int) (string) (($this->endX - $this->startX) / $this->columnGridInterval) + 1;
         $this->numberOfRows = (int) (string) (($this->endY - $this->startY) / $this->rowGridInterval) + 1;
 
-        $this->textData = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
-        $index = 0;
-        while (!$this->gridFile->eof()) {
-            $rawData = trim($this->gridFile->fgets());
-            if ($rawData) {
-                $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
-                foreach ($values as $value) {
-                    $this->textData[$index] = (float) $value;
-                    ++$index;
-                }
-            }
+        $normalized = trim(Preg::replace('/\s+/', ' ', $rest));
+        $values = $normalized === '' ? [] : explode(' ', $normalized);
+        $valueCount = count($values);
+        /** @var SplFixedArray<float> $textData */
+        $textData = new SplFixedArray($valueCount);
+        for ($i = 0; $i < $valueCount; ++$i) {
+            $textData[$i] = (float) $values[$i];
         }
+        $this->textData = $textData;
     }
 
     /**

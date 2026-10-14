@@ -13,11 +13,9 @@ use Composer\Pcre\Preg;
 use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
-use function ctype_digit;
+use function count;
 use function floor;
 use function intdiv;
-use function strlen;
-use function trim;
 
 /**
  * PatchJGD height file: third-order mesh code and a height offset in metres.
@@ -39,23 +37,24 @@ class PatchJGDHeightGrid extends GeographicGeoidHeightGrid
     {
         $this->gridFile = new GridFile($filename);
 
-        while (!$this->gridFile->eof()) {
-            $row = trim($this->gridFile->fgets());
-            if ($row === '' || $row[0] < '0' || $row[0] > '9') {
-                continue;
-            }
-
-            $columns = Preg::split('/\s+/', $row);
-            if (!isset($columns[1]) || strlen($columns[0]) !== 8 || !ctype_digit($columns[0])) {
-                continue;
-            }
-
-            $this->offsets[(int) $columns[0]] = (float) $columns[1];
-        }
-
-        if ($this->offsets === []) {
+        $size = $this->gridFile->getSize();
+        $contents = $size > 0 ? $this->gridFile->fread($size) : '';
+        Preg::matchAll('/^(\d{8})[ \t]+(\S+)/m', $contents, $matches);
+        if (!isset($matches[1], $matches[2]) || $matches[1] === []) {
             throw new UnknownConversionException('No height records in ' . $filename);
         }
+
+        /** @var list<string> $meshCodes */
+        $meshCodes = $matches[1];
+        /** @var list<string> $heights */
+        $heights = $matches[2];
+        // Numeric-string keys are stored as ints, which is what meshCode() looks up.
+        $offsets = [];
+        $recordCount = count($meshCodes);
+        for ($i = 0; $i < $recordCount; ++$i) {
+            $offsets[(int) $meshCodes[$i]] = (float) $heights[$i];
+        }
+        $this->offsets = $offsets;
     }
 
     /**

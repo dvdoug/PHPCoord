@@ -14,8 +14,11 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFixedArray;
 
 use function assert;
+use function count;
 use function explode;
 use function intdiv;
+use function strpos;
+use function substr;
 use function trim;
 
 /**
@@ -46,7 +49,14 @@ class KMSGrid extends GeographicGeoidHeightGrid
         if ($firstChar === ' ') {
             $this->isBinary = false;
 
-            $header = Preg::split('/\s+/', trim($this->gridFile->fgets()));
+            // A leading space selects this text layout. It is not a header field.
+            $this->gridFile->fseek(0);
+            $size = $this->gridFile->getSize();
+            $contents = $size > 0 ? $this->gridFile->fread($size) : '';
+            $splitAt = strpos($contents, "\n");
+            $headerLine = $splitAt === false ? $contents : substr($contents, 0, $splitAt);
+            $rest = $splitAt === false ? '' : substr($contents, $splitAt + 1);
+            $header = Preg::split('/\s+/', trim($headerLine));
 
             $this->startX = (float) $header[2];
             $this->startY = (float) $header[0];
@@ -57,18 +67,15 @@ class KMSGrid extends GeographicGeoidHeightGrid
             $this->numberOfColumns = (int) (string) (($this->endX - $this->startX) / $this->columnGridInterval) + 1;
             $this->numberOfRows = (int) (string) (($this->endY - $this->startY) / $this->rowGridInterval) + 1;
 
-            $this->textData = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
-            $index = 0;
-            while (!$this->gridFile->eof()) {
-                $rawData = trim($this->gridFile->fgets());
-                if ($rawData) {
-                    $values = explode(' ', trim(Preg::replace('/\s+/', ' ', $rawData)));
-                    foreach ($values as $value) {
-                        $this->textData[$index] = (float) $value;
-                        ++$index;
-                    }
-                }
+            $normalized = trim(Preg::replace('/\s+/', ' ', $rest));
+            $values = $normalized === '' ? [] : explode(' ', $normalized);
+            $valueCount = count($values);
+            /** @var SplFixedArray<float> $textData */
+            $textData = new SplFixedArray($valueCount);
+            for ($i = 0; $i < $valueCount; ++$i) {
+                $textData[$i] = (float) $values[$i];
             }
+            $this->textData = $textData;
         } else {
             $this->isBinary = true;
 
