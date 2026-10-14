@@ -9,19 +9,22 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use Composer\Pcre\Preg;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use SplFixedArray;
 
+use function array_fill;
+use function array_pop;
+use function array_slice;
+use function assert;
+use function count;
 use function explode;
+use function implode;
 use function max;
 use function min;
 use function round;
+use function str_ends_with;
 use function str_replace;
-use function trim;
-use function assert;
-
-use const PHP_FLOAT_MAX;
-use const PHP_FLOAT_MIN;
 
 class GUGiKHeightGrid extends GeographicGeoidHeightGrid
 {
@@ -39,43 +42,58 @@ class GUGiKHeightGrid extends GeographicGeoidHeightGrid
         $this->columnGridInterval = 0.01; // always
         $this->rowGridInterval = 0.01; // always
 
-        // these files have variable length headers, and then are not rectangular!!
-        do {
-            $headerLine = str_replace(self::BOM, '', $this->gridFile->fgets());
-        } while ($headerLine && $headerLine[0] === '#');
-
-        $firstDataRowIndex = $this->gridFile->key() + 1;
-
-        $startX = PHP_FLOAT_MAX;
-        $endX = PHP_FLOAT_MIN;
-        $startY = PHP_FLOAT_MAX;
-        $endY = PHP_FLOAT_MIN;
-        while ($row = $this->gridFile->fgets()) {
-            $data = explode("\t", trim($row));
-            $startX = min($startX, (float) $data[1]);
-            $endX = max($endX, (float) $data[1]);
-            $startY = min($startY, (float) $data[0]);
-            $endY = max($endY, (float) $data[0]);
+        $size = $this->gridFile->getSize();
+        $contents = $size > 0 ? $this->gridFile->fread($size) : '';
+        $lines = $contents === '' ? [] : explode("\n", $contents);
+        if ($lines !== [] && str_ends_with($contents, "\n")) {
+            array_pop($lines);
         }
+
+        $i = 0;
+        $lineCount = count($lines);
+        do {
+            $headerLine = str_replace(self::BOM, '', $lines[$i] ?? '');
+            ++$i;
+        } while ($headerLine !== '' && ($headerLine[0] ?? '') === '#' && $i < $lineCount);
+
+        Preg::matchAll('/^([^\t\r\n]*)\t([^\t\r\n]*)\t([^\t\r\n]*)/m', implode("\n", array_slice($lines, $i)), $matches);
+        /** @var list<string> $latitudeStrings */
+        $latitudeStrings = $matches[1];
+        /** @var list<string> $longitudeStrings */
+        $longitudeStrings = $matches[2];
+        /** @var list<string> $heightStrings */
+        $heightStrings = $matches[3];
+        /** @var non-empty-list<float> $latitudes */
+        $latitudes = [];
+        /** @var non-empty-list<float> $longitudes */
+        $longitudes = [];
+        $heights = [];
+        $recordCount = count($latitudeStrings);
+        for ($k = 0; $k < $recordCount; ++$k) {
+            $latitudes[] = (float) $latitudeStrings[$k];
+            $longitudes[] = (float) $longitudeStrings[$k];
+            $heights[] = (float) $heightStrings[$k];
+        }
+
+        $startX = min($longitudes);
+        $endX = max($longitudes);
+        $startY = min($latitudes);
+        $endY = max($latitudes);
 
         $this->startX = $startX;
         $this->startY = $startY;
         $this->numberOfColumns = (int) (string) (($endX - $startX) / $this->columnGridInterval) + 1;
         $this->numberOfRows = (int) (string) (($endY - $startY) / $this->rowGridInterval) + 1;
 
-        // init with 0
-        $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
-        for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
-            $this->data[$i] = 0.0;
-        }
-
-        // fill in with actual values
-        $this->gridFile->seek($firstDataRowIndex);
-        while ($row = $this->gridFile->fgets()) {
-            $rowData = explode("\t", trim($row));
-
-            $index = (int) round((((float) $rowData[0] - $this->startY) / $this->rowGridInterval) * $this->numberOfColumns + ((float) $rowData[1] - $this->startX) / $this->columnGridInterval);
-            $this->data[$index] = (float) $rowData[2];
+        // Not every node of the rectangle is in the file, so a gap stays 0.
+        /** @var SplFixedArray<float> $data */
+        $data = SplFixedArray::fromArray(array_fill(0, $this->numberOfColumns * $this->numberOfRows, 0.0));
+        $this->data = $data;
+        $records = count($latitudes);
+        // The first data line is included in the extent above and left at 0.
+        for ($k = 1; $k < $records; ++$k) {
+            $index = (int) round((($latitudes[$k] - $this->startY) / $this->rowGridInterval) * $this->numberOfColumns + ($longitudes[$k] - $this->startX) / $this->columnGridInterval);
+            $this->data[$index] = $heights[$k];
         }
     }
 

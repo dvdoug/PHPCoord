@@ -13,13 +13,15 @@ use Composer\Pcre\Preg;
 use PHPCoord\Exception\UnknownConversionException;
 use SplFixedArray;
 
-use function array_map;
+use function array_pop;
 use function array_slice;
 use function assert;
 use function count;
 use function explode;
+use function implode;
 use function max;
 use function min;
+use function str_ends_with;
 use function str_repeat;
 use function str_replace;
 use function str_starts_with;
@@ -71,10 +73,15 @@ trait IGNFGrid
     {
         $this->valuesPerCoordinate = 3;
 
-        $header0 = $this->gridFile->fgets();
-        $header1 = $this->gridFile->fgets();
-        $header2 = $this->gridFile->fgets();
-        $header3 = $this->gridFile->fgets();
+        $size = $this->gridFile->getSize();
+        $contents = $size > 0 ? $this->gridFile->fread($size) : '';
+        $lines = $contents === '' ? [] : explode("\n", $contents);
+        if ($lines !== [] && str_ends_with($contents, "\n")) {
+            array_pop($lines);
+        }
+
+        $header1 = $lines[1] ?? '';
+        $header2 = $lines[2] ?? '';
 
         $interpolationMethod = trim(str_replace('GR3D2', '', $header2));
         assert($interpolationMethod === 'INTERPOLATION BILINEAIRE');
@@ -90,19 +97,34 @@ trait IGNFGrid
         $this->numberOfRows = (int) (string) (($this->endY - $this->startY) / $this->rowGridInterval) + 1;
         $this->storageOrder = self::STORAGE_ORDER_INCREASING_LATITUDE_INCREASING_LONGITUDE;
 
-        $this->data = new SplFixedArray($this->numberOfColumns * $this->numberOfRows);
-        for ($i = 0, $numValues = $this->numberOfColumns * $this->numberOfRows; $i < $numValues; ++$i) {
-            $rowData = explode(' ', trim(Preg::replace('/ +/', ' ', $this->gridFile->fgets())));
-            // Records are sheet code, longitude, latitude, three translations, precision, map sheet.
-            // The RGM04 publication has no sheet code, so the translations start one field earlier.
-            $translationOffset = count($rowData) > 6 ? 3 : 2;
-            $wantedData = array_slice($rowData, $translationOffset, 3);
-            $wantedData = array_map(static fn (string $value) => (float) $value, $wantedData);
-            $this->data[$i] = $wantedData;
+        $recordCount = $this->numberOfColumns * $this->numberOfRows;
+        $this->data = new SplFixedArray($recordCount);
+        // Records are sheet code, longitude, latitude, three translations, precision, map sheet.
+        // The RGM04 publication has no sheet code, so the translations start one field earlier.
+        $blob = implode("\n", array_slice($lines, 4, $recordCount));
+        Preg::matchAll('/^ *(\S+) +(\S+) +(\S+) +(\S+) +(\S+) +(\S+)(?: +(\S+))?/m', $blob, $matches);
+        if (isset($matches[3], $matches[4], $matches[5], $matches[6], $matches[7])) {
+            /** @var list<string> $token3 */
+            $token3 = $matches[3];
+            /** @var list<string> $token4 */
+            $token4 = $matches[4];
+            /** @var list<string> $token5 */
+            $token5 = $matches[5];
+            /** @var list<string> $token6 */
+            $token6 = $matches[6];
+            /** @var list<string|null> $token7 */
+            $token7 = $matches[7];
+            for ($i = 0, $matched = count($token3); $i < $matched; ++$i) {
+                if ($token7[$i] !== null) {
+                    $this->data[$i] = [(float) $token4[$i], (float) $token5[$i], (float) $token6[$i]];
+                } else {
+                    $this->data[$i] = [(float) $token3[$i], (float) $token4[$i], (float) $token5[$i]];
+                }
+            }
         }
 
-        $this->gridFile->fgets();
-        assert($this->gridFile->eof());
+        // At most one line may follow the nodes.
+        assert(count($lines) <= 4 + $recordCount + 1);
     }
 
     private function initMntOrTac(): void
