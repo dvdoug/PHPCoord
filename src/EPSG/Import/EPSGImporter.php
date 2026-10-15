@@ -111,6 +111,13 @@ class EPSGImporter
         $sqlite->exec("INSERT INTO epsg_coordoperationparamvalue (coord_op_code, coord_op_method_code, parameter_code, param_value_file_ref) VALUES (8364, 9615, 8656, 'Slovakia_JTSK03_to_JTSK.gsb')");
 
         /*
+         * EPSG 13.106 registers LV14_2020 (26004, 26005) with source ETRS89-LVA [LKS-2020] geographic 2D (10305), but the
+         * method is Geographic3D to GravityRelatedHeight, so it must be the geographic 3D CRS (10304), as LKS-92 (10827/10828) uses 4949.
+         * Re-check on every import and remove once EPSG corrects it.
+         */
+        $sqlite->exec('UPDATE epsg_coordoperation SET source_crs_code = 10304 WHERE coord_op_code IN (26004, 26005) AND source_crs_code = 10305');
+
+        /*
          * NKG_RF17vel is registered as Gravsoft three-file GRI (method 1139). The public product is one GeoTIFF;
          * remap onto a PHPCoord GTG point-motion method. Operation 10808 is geographic 3D ETRF2014 (EPSG 8403).
          */

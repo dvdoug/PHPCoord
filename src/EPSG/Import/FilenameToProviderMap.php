@@ -119,6 +119,7 @@ return [
     'gr2000g.gri' => CoordinateOperation\GeoTiffGVR2000GreenlandProvider::class,
     'ggeoid16.gri' => CoordinateOperation\GeoTiffGVR2016GreenlandProvider::class,
     'LV\'14.gri' => CoordinateOperation\GeoTiffLV14LatviaProvider::class,
+    'LV14_2020.gri' => CoordinateOperation\KMSLV142020LatviaProvider::class,
     'fo_geoid2012a.gri' => CoordinateOperation\GeoTiffFVR09FaroeProvider::class,
     'HeTa2010.gsb' => CoordinateOperation\GeoTiffHeTA2010HessenProvider::class,
     'RAC09.mnt' => CoordinateOperation\GeoTiffRAC09CorsicaProvider::class,

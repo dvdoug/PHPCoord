@@ -236,6 +236,20 @@ class CRSTransformationsEurope
             'accuracy' => 0,
         ],
         [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::26005',
+            'name' => 'ETRS89-LVA [LKS-2020] to ETRS89-LVA [LKS-2020] + Latvia 2000 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10304',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::10839',
+            'accuracy' => 0.04,
+        ],
+        [
+            'operation' => 'urn:ogc:def:coordinateOperation:EPSG::26004',
+            'name' => 'ETRS89-LVA [LKS-2020] to Latvia 2000 height (1)',
+            'source_crs' => 'urn:ogc:def:crs:EPSG::10304',
+            'target_crs' => 'urn:ogc:def:crs:EPSG::7700',
+            'accuracy' => 0.04,
+        ],
+        [
             'operation' => 'urn:ogc:def:coordinateOperation:EPSG::19990',
             'name' => 'Latvian Transverse Mercator',
             'source_crs' => 'urn:ogc:def:crs:EPSG::10305',

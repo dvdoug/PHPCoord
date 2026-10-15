@@ -6664,6 +6664,19 @@ RGFG95 + NGG1977 height
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::9530')
 
 
+RGM04 / UTM zone 38S + Mayotte 1950 height
+------------------------------------------
+| Extent: Mayotte - onshore
+
+.. code-block:: php
+
+    Compound::fromSRID(Compound::EPSG_RGM04_UTM_ZONE_38S_PLUS_MAYOTTE_1950_HEIGHT)
+    Compound::fromSRID('urn:ogc:def:crs:EPSG::26006')
+    CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGM04_UTM_ZONE_38S_PLUS_MAYOTTE_1950_HEIGHT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::26006')
+
+Replaced by RGM23 / UTM zone 38S + IGN 2023 Mayotte height (code 12209) on 2025-03-15.
+
 RGM23 + IGN 2023 Mayotte height
 -------------------------------
 | Extent: Mayotte - onshore
@@ -6687,6 +6700,7 @@ RGM23 / UTM zone 38S + IGN 2023 Mayotte height
     CoordinateReferenceSystem::fromSRID(Compound::EPSG_RGM23_UTM_ZONE_38S_PLUS_IGN_2023_MAYOTTE_HEIGHT)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::12209')
 
+Replaces RGM04 / UTM zone 38S + Mayotte 1950 height (code 26006).
 
 RGNC15 (lon-lat) + NGNC08 height
 --------------------------------
