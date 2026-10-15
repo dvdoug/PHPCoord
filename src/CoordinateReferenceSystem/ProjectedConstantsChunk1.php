@@ -6818,55 +6818,55 @@ trait ProjectedConstantsChunk1
 
     /**
      * GR96 / UTM zone 21N
-     * Extent: Greenland - between 60°W and 54°W,  south of 84°N.
+     * Extent: Greenland - between 60°W and 54°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::3181';
 
     /**
      * GR96 / UTM zone 22N
-     * Extent: Greenland - between 54°W and 48°W,  south of 84°N.
+     * Extent: Greenland - between 54°W and 48°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::3182';
 
     /**
      * GR96 / UTM zone 23N
-     * Extent: Greenland - between 48°W and 42°W,  south of 84°N.
+     * Extent: Greenland - between 48°W and 42°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_23N = 'urn:ogc:def:crs:EPSG::3183';
 
     /**
      * GR96 / UTM zone 24N
-     * Extent: Greenland - between 42°W and 36°W,  south of 84°N.
+     * Extent: Greenland - between 42°W and 36°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_24N = 'urn:ogc:def:crs:EPSG::3184';
 
     /**
      * GR96 / UTM zone 25N
-     * Extent: Greenland - between 36°W and 30°W,  south of 84°N.
+     * Extent: Greenland - between 36°W and 30°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_25N = 'urn:ogc:def:crs:EPSG::3185';
 
     /**
      * GR96 / UTM zone 26N
-     * Extent: Greenland - between 30°W and 24°W,  south of 84°N.
+     * Extent: Greenland - between 30°W and 24°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::3186';
 
     /**
      * GR96 / UTM zone 27N
-     * Extent: Greenland - between 24°W and 18°W,  south of 84°N.
+     * Extent: Greenland - between 24°W and 18°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_27N = 'urn:ogc:def:crs:EPSG::3187';
 
     /**
      * GR96 / UTM zone 28N
-     * Extent: Greenland - between 18°W and 12°W,  south of 84°N.
+     * Extent: Greenland - between 18°W and 12°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::3188';
 
     /**
      * GR96 / UTM zone 29N
-     * Extent: Greenland - 12°W to 6°W,  south of 84°N.
+     * Extent: Greenland - 12°W to 6°W, south of 84°N.
      */
     public const EPSG_GR96_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::3189';
 
@@ -10336,7 +10336,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Lake / Maracaibo Grid
-     * Extent: Venezuela - Maracaibo area,  in lake
+     * Extent: Venezuela - Maracaibo area, in lake
      * Grid coordinates are (200000 200000) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used
      * for Lake triangulation coordinate listing.
      */
@@ -10344,7 +10344,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Lake / Maracaibo Grid M1
-     * Extent: Venezuela - Maracaibo area,  in lake
+     * Extent: Venezuela - Maracaibo area, in lake
      * Grid coordinates are (0 0) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used by
      * Creole; MGO and Sun.
      */
@@ -10352,7 +10352,7 @@ trait ProjectedConstantsChunk1
 
     /**
      * Lake / Maracaibo Grid M3
-     * Extent: Venezuela - Maracaibo area,  in lake
+     * Extent: Venezuela - Maracaibo area, in lake
      * Grid coordinates are (500000 500000) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.224"W; Lake datum). Used
      * by Varco.
      */
@@ -11440,13 +11440,13 @@ trait ProjectedConstantsChunk1
 
     /**
      * Minna / Nigeria Mid Belt
-     * Extent: Nigeria between 6°30'E and 10°30'E,  shelf.
+     * Extent: Nigeria between 6°30'E and 10°30'E, shelf.
      */
     public const EPSG_MINNA_NIGERIA_MID_BELT = 'urn:ogc:def:crs:EPSG::26392';
 
     /**
      * Minna / Nigeria West Belt
-     * Extent: Nigeria - onshore west of 6°30'E,  shelf.
+     * Extent: Nigeria - onshore west of 6°30'E, shelf.
      */
     public const EPSG_MINNA_NIGERIA_WEST_BELT = 'urn:ogc:def:crs:EPSG::26391';
 

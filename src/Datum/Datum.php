@@ -3223,7 +3223,7 @@ class Datum
     /**
      * Hito XVIII 1963
      * Type: Geodetic
-     * Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego,  Atlantic west of 66°W
+     * Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, Atlantic west of 66°W
      * Chile-Argentina boundary survey.
      * Used in Tierra del Fuego.
      */
@@ -4424,7 +4424,7 @@ class Datum
     /**
      * Lake
      * Type: Geodetic
-     * Extent: Venezuela - Lake Maracaibo area,  in lake
+     * Extent: Venezuela - Lake Maracaibo area, in lake
      * Fundamental point: Maracaibo Cathedral. Latitude: 10°38'34.678"N, longitude: 71°36'20.224"W (of Greenwich).
      */
     public const EPSG_LAKE = 'urn:ogc:def:datum:EPSG::6249';
@@ -5861,9 +5861,8 @@ class Datum
      * Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut,
      * Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north
      * of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico -
-     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and
-     *
-     * . US Virgin Islands - onshore
+     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and. US Virgin Islands -
+     * onshore
      * Fundamental point: Meade's Ranch. Latitude: 39°13'26.686"N, longitude: 98°32'30.506"W (of Greenwich).
      * In United States (USA) and Canada, replaced by North American Datum 1983 (NAD83) (code 6269) ; in Mexico,
      * replaced by Mexican Datum of 1993 (code 1042).
@@ -7776,7 +7775,7 @@ class Datum
     /**
      * SZCTW Intermediate Reference Frame
      * Type: Geodetic
-     * Extent: UK - Sizewell power station site and  rail and road routes related to the site
+     * Extent: UK - Sizewell power station site and rail and road routes related to the site
      * Defined through the application of the SZCTW NTv2 transformation (code 11467) to ETRS89 as realized through
      * OSNet v2009 CORS.
      * Created in 2026 to support intermediate CRS "SZCTW-IRF" in the emulation of the SZCTW Snake map projection.

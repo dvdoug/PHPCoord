@@ -53,6 +53,7 @@ use function str_ends_with;
 use function array_unique;
 use function explode;
 use function array_map;
+use function preg_replace;
 use function rtrim;
 use function array_values;
 use function strtoupper;
@@ -247,7 +248,7 @@ class Codegen
             }
             if (isset($row['extent_description']) && $row['extent_description']) {
                 $row['extent_description'] = array_unique(explode('|', $row['extent_description']));
-                $row['extent_description'] = array_map(static fn (string $extentDescription) => rtrim($extentDescription, '.'), $row['extent_description']);
+                $row['extent_description'] = array_map(static fn (string $extentDescription) => rtrim(preg_replace(['/\s+/u', '/\s+([.,;])/u'], [' ', '$1'], $extentDescription), '. '), $row['extent_description']);
                 $row['extent_description'] = implode(', ', $row['extent_description']);
                 $subhead .= '| Extent: ' . trim($row['extent_description']) . "\n";
             }

@@ -3434,7 +3434,7 @@ Herat North
 
 Hito XVIII 1963
 ---------------
-| Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego,  Atlantic west of 66°W
+| Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, Atlantic west of 66°W
 
 .. code-block:: php
 
@@ -4743,7 +4743,7 @@ This CRS is incorporated within PSAD56. See CRS code 4248.
 
 Lake
 ----
-| Extent: Venezuela - Lake Maracaibo area,  in lake
+| Extent: Venezuela - Lake Maracaibo area, in lake
 
 .. code-block:: php
 
@@ -5652,9 +5652,7 @@ Moznet
 
 NAD27
 -----
-| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and 
-
-. US Virgin Islands - onshore
+| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and. US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -8307,7 +8305,7 @@ Intermediate CRS created in 2022 to assist the emulation of the ETRS89 / SYC20 S
 
 SZCTW-IRF
 ---------
-| Extent: UK - Sizewell power station site and  rail and road routes related to the site
+| Extent: UK - Sizewell power station site and rail and road routes related to the site
 
 .. code-block:: php
 

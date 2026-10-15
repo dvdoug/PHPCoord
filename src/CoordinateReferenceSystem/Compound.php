@@ -3427,7 +3427,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(CSRS) / UTM zone 10N + CGVD2013 height
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_10N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6653';
 
@@ -3451,38 +3451,38 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(CSRS) / UTM zone 14N + CGVD2013 height
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_14N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6657';
 
     /**
      * NAD83(CSRS) / UTM zone 15N + CGVD2013 height
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario.
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6658';
 
     /**
      * NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_15N_PLUS_CGVD2013A_2010_HEIGHT = 'urn:ogc:def:crs:EPSG::9715';
 
     /**
      * NAD83(CSRS) / UTM zone 16N + CGVD2013 height
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario.
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_16N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6659';
 
     /**
      * NAD83(CSRS) / UTM zone 17N + CGVD2013 height
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec.
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_17N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6660';
 
     /**
      * NAD83(CSRS) / UTM zone 18N + CGVD2013 height
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec.
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_18N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6661';
 
@@ -3525,19 +3525,19 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * NAD83(CSRS) / UTM zone 7N + CGVD2013 height
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon.
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_7N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6650';
 
     /**
      * NAD83(CSRS) / UTM zone 8N + CGVD2013 height
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_8N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6651';
 
     /**
      * NAD83(CSRS) / UTM zone 9N + CGVD2013 height
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_9N_PLUS_CGVD2013_HEIGHT = 'urn:ogc:def:crs:EPSG::6652';
 
@@ -3910,7 +3910,7 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * SZCTW Grid + ODN height
-     * Extent: UK - Sizewell power station site and  rail and road routes related to the site.
+     * Extent: UK - Sizewell power station site and rail and road routes related to the site.
      */
     public const EPSG_SZCTW_GRID_PLUS_ODN_HEIGHT = 'urn:ogc:def:crs:EPSG::11470';
 

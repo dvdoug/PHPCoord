@@ -4880,7 +4880,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * SIRGAS 2000 / UTM zone 22N
-     * Extent: South America between 54°W and 48°W, northern hemisphere,  except Brazil where offshore only
+     * Extent: South America between 54°W and 48°W, northern hemisphere, except Brazil where offshore only
      * Replaces SIRGAS 1995 system.
      */
     public const EPSG_SIRGAS_2000_UTM_ZONE_22N = 'urn:ogc:def:crs:EPSG::31976';
@@ -5499,7 +5499,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * SZCTW Grid
-     * Extent: UK - Sizewell power station site and  rail and road routes related to the site
+     * Extent: UK - Sizewell power station site and rail and road routes related to the site
      * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to SZCTW-IRF (1) (code 11467) and map
      * projection SZCTW-TM (code 11468) emulates the SZCTW Snake projection applied to ETRS89 as realized through OSNet
      * v2009. Snake Grid initially designed to cover the rail corridor to the site along with a section of the
@@ -5732,7 +5732,7 @@ trait ProjectedConstantsChunk4
 
     /**
      * Timbalai 1948 / UTM zone 50N
-     * Extent: Brunei east of 114°E; Malaysia - Sabah and  Sarawak east of 114°E.
+     * Extent: Brunei east of 114°E; Malaysia - Sabah and Sarawak east of 114°E.
      */
     public const EPSG_TIMBALAI_1948_UTM_ZONE_50N = 'urn:ogc:def:crs:EPSG::29850';
 
@@ -8198,8 +8198,7 @@ trait ProjectedConstantsChunk4
      * areas Brazos, Galveston, High Island; Sabine Pass; West Cameron, East Cameron, Vermilion, South Marsh Island,
      * Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle; protraction areas East
      * Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker
-     * Ridge, Amery Terrace.
-     *
+     * Ridge, Amery Terrace
      * See WGS 84 / UTM zone 15N (code 32615) for metric equivalent. See NAD27 / BLM 15N (ftUS) (code 32065) for system
      * used in US Gulf of Mexico oil operations.
      */
@@ -8208,7 +8207,7 @@ trait ProjectedConstantsChunk4
     /**
      * WGS 84 / BLM 16N (ftUS)
      * Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing
-     * areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca
+     * areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass, Chandeleur; protraction areas Mobile, Viosca
      * Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd
      * Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon
      * Basin, Howell Hook, Rankin

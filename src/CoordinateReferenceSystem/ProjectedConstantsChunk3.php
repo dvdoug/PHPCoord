@@ -5514,7 +5514,7 @@ trait ProjectedConstantsChunk3
 
     /**
      * NATRF2022e2020 / Gulf West (ft)
-     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W  - protraction areas
+     * Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W - protraction areas
      * Corpus Christi, Port Isabel
      * Emulates offshore deep water area of NAD27 / BLM 14N (ftUS) (CRS code 32064) to better than 6 ft. Emulation
      * embeds change of ellipsoid and of unit (ftUS to ft). Notes: (i) NGS gives an equivalent definition in meters
@@ -5592,7 +5592,7 @@ trait ProjectedConstantsChunk3
 
     /**
      * NATRF2022e2020 / Illinois Carbondale
-     * Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph, Saline, White and
+     * Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry, Randolph, Saline, White and
      * Williamson
      * Part of the Illinois Coordinate System of 2022 33-zone system. See code 22256 for equivalent CRS in
      * (international) feet.
@@ -5601,7 +5601,7 @@ trait ProjectedConstantsChunk3
 
     /**
      * NATRF2022e2020 / Illinois Carbondale (ft)
-     * Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph, Saline, White and
+     * Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry, Randolph, Saline, White and
      * Williamson
      * Part of the Illinois Coordinate System of 2022 33-zone system. See code 22255 for equivalent CRS in meters.
      */

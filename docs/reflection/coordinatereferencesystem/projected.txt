@@ -10648,7 +10648,7 @@ GR96 / UTM zone 20N
 
 GR96 / UTM zone 21N
 -------------------
-| Extent: Greenland - between 60°W and 54°W,  south of 84°N
+| Extent: Greenland - between 60°W and 54°W, south of 84°N
 
 .. code-block:: php
 
@@ -10660,7 +10660,7 @@ GR96 / UTM zone 21N
 
 GR96 / UTM zone 22N
 -------------------
-| Extent: Greenland - between 54°W and 48°W,  south of 84°N
+| Extent: Greenland - between 54°W and 48°W, south of 84°N
 
 .. code-block:: php
 
@@ -10672,7 +10672,7 @@ GR96 / UTM zone 22N
 
 GR96 / UTM zone 23N
 -------------------
-| Extent: Greenland - between 48°W and 42°W,  south of 84°N
+| Extent: Greenland - between 48°W and 42°W, south of 84°N
 
 .. code-block:: php
 
@@ -10684,7 +10684,7 @@ GR96 / UTM zone 23N
 
 GR96 / UTM zone 24N
 -------------------
-| Extent: Greenland - between 42°W and 36°W,  south of 84°N
+| Extent: Greenland - between 42°W and 36°W, south of 84°N
 
 .. code-block:: php
 
@@ -10696,7 +10696,7 @@ GR96 / UTM zone 24N
 
 GR96 / UTM zone 25N
 -------------------
-| Extent: Greenland - between 36°W and 30°W,  south of 84°N
+| Extent: Greenland - between 36°W and 30°W, south of 84°N
 
 .. code-block:: php
 
@@ -10708,7 +10708,7 @@ GR96 / UTM zone 25N
 
 GR96 / UTM zone 26N
 -------------------
-| Extent: Greenland - between 30°W and 24°W,  south of 84°N
+| Extent: Greenland - between 30°W and 24°W, south of 84°N
 
 .. code-block:: php
 
@@ -10720,7 +10720,7 @@ GR96 / UTM zone 26N
 
 GR96 / UTM zone 27N
 -------------------
-| Extent: Greenland - between 24°W and 18°W,  south of 84°N
+| Extent: Greenland - between 24°W and 18°W, south of 84°N
 
 .. code-block:: php
 
@@ -10732,7 +10732,7 @@ GR96 / UTM zone 27N
 
 GR96 / UTM zone 28N
 -------------------
-| Extent: Greenland - between 18°W and 12°W,  south of 84°N
+| Extent: Greenland - between 18°W and 12°W, south of 84°N
 
 .. code-block:: php
 
@@ -10744,7 +10744,7 @@ GR96 / UTM zone 28N
 
 GR96 / UTM zone 29N
 -------------------
-| Extent: Greenland - 12°W to 6°W,  south of 84°N
+| Extent: Greenland - 12°W to 6°W, south of 84°N
 
 .. code-block:: php
 
@@ -16575,7 +16575,7 @@ Sometimes referred to as PSAD56 / UTM zone 20N.
 
 Lake / Maracaibo Grid
 ---------------------
-| Extent: Venezuela - Maracaibo area,  in lake
+| Extent: Venezuela - Maracaibo area, in lake
 
 .. code-block:: php
 
@@ -16588,7 +16588,7 @@ Grid coordinates are (200000 200000) at Maracaibo Cathedral (10°38'34.678"N, 71
 
 Lake / Maracaibo Grid M1
 ------------------------
-| Extent: Venezuela - Maracaibo area,  in lake
+| Extent: Venezuela - Maracaibo area, in lake
 
 .. code-block:: php
 
@@ -16601,7 +16601,7 @@ Grid coordinates are (0 0) at Maracaibo Cathedral (10°38'34.678"N, 71°36'20.22
 
 Lake / Maracaibo Grid M3
 ------------------------
-| Extent: Venezuela - Maracaibo area,  in lake
+| Extent: Venezuela - Maracaibo area, in lake
 
 .. code-block:: php
 
@@ -18458,7 +18458,7 @@ Minna / Nigeria East Belt
 
 Minna / Nigeria Mid Belt
 ------------------------
-| Extent: Nigeria between 6°30'E and 10°30'E,  shelf
+| Extent: Nigeria between 6°30'E and 10°30'E, shelf
 
 .. code-block:: php
 
@@ -18470,7 +18470,7 @@ Minna / Nigeria Mid Belt
 
 Minna / Nigeria West Belt
 -------------------------
-| Extent: Nigeria - onshore west of 6°30'E,  shelf
+| Extent: Nigeria - onshore west of 6°30'E, shelf
 
 .. code-block:: php
 
@@ -18957,7 +18957,7 @@ NAD27 / BLM 15N (ftUS)
 
 NAD27 / BLM 16N (ftUS)
 ----------------------
-| Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
+| Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass, Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
 
 .. code-block:: php
 
@@ -20501,7 +20501,7 @@ See NAD27 / BLM 14N (ftUS) (code 32064) for non-metric equivalent used in US Gul
 
 NAD27 / UTM zone 15N
 --------------------
-| Extent: North America - between 96°W and 90°W. Canada - Manitoba; Nunavut; Ontario. Guatemala. Mexico. USA - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota; Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin. Onshore for Canadian Arctic and Central America,  for Gulf of Mexico (both US and Mexican sectors)
+| Extent: North America - between 96°W and 90°W. Canada - Manitoba; Nunavut; Ontario. Guatemala. Mexico. USA - Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota; Mississippi; Missouri; Nebraska; Oklahoma; Tennessee; Texas; Wisconsin. Onshore for Canadian Arctic and Central America, for Gulf of Mexico (both US and Mexican sectors)
 
 .. code-block:: php
 
@@ -20514,7 +20514,7 @@ Replaced by NAD27(76) / UTM 15N (code 2027) in Ontario, by NAD83 / UTM 15N (code
 
 NAD27 / UTM zone 16N
 --------------------
-| Extent: North America - between 90°W and 84°W. Belize. Canada - Manitoba; Nunavut; Ontario. Costa Rica. Cuba. El Salvador. Guatemala. Honduras. Mexico. Nicaragua. USA - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin. Onshore for Canadian Arctic and Central America,  for Cuba and Gulf of Mexico (both US and Mexican sectors)
+| Extent: North America - between 90°W and 84°W. Belize. Canada - Manitoba; Nunavut; Ontario. Costa Rica. Cuba. El Salvador. Guatemala. Honduras. Mexico. Nicaragua. USA - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin. Onshore for Canadian Arctic and Central America, for Cuba and Gulf of Mexico (both US and Mexican sectors)
 
 .. code-block:: php
 
@@ -21752,7 +21752,7 @@ See NAD83 / UTM zone 15N (code 26915) for metric equivalent. See NAD27 / BLM 14N
 
 NAD83 / BLM 16N (ftUS)
 ----------------------
-| Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
+| Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass, Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
 
 .. code-block:: php
 
@@ -26594,7 +26594,7 @@ Part of the Illinois Coordinate System of 1983 9-zone system. State law for SPCS
 
 NAD83(2011) / ICS83-Carbondale (ftUS)
 -------------------------------------
-| Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph, Saline, White and Williamson
+| Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry, Randolph, Saline, White and Williamson
 
 .. code-block:: php
 
@@ -35969,7 +35969,7 @@ This CRS may sometimes be called "NAD83 / Teranet Ontario Lambert". That is the 
 
 NAD83(CSRS) / UTM zone 10N
 --------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36020,7 +36020,7 @@ In use from 2000.
 
 NAD83(CSRS) / UTM zone 14N
 --------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -36032,7 +36032,7 @@ NAD83(CSRS) / UTM zone 14N
 
 NAD83(CSRS) / UTM zone 15N
 --------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -36044,7 +36044,7 @@ NAD83(CSRS) / UTM zone 15N
 
 NAD83(CSRS) / UTM zone 16N
 --------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -36056,7 +36056,7 @@ NAD83(CSRS) / UTM zone 16N
 
 NAD83(CSRS) / UTM zone 17N
 --------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -36069,7 +36069,7 @@ In use from 2000.
 
 NAD83(CSRS) / UTM zone 18N
 --------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -36157,7 +36157,7 @@ NAD83(CSRS) / UTM zone 24N
 
 NAD83(CSRS) / UTM zone 7N
 -------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -36169,7 +36169,7 @@ NAD83(CSRS) / UTM zone 7N
 
 NAD83(CSRS) / UTM zone 8N
 -------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36181,7 +36181,7 @@ NAD83(CSRS) / UTM zone 8N
 
 NAD83(CSRS) / UTM zone 9N
 -------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36403,7 +36403,7 @@ NAD83(CSRS)v2 / SCoPQ zone 9
 
 NAD83(CSRS)v2 / UTM zone 10N
 ----------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36455,7 +36455,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 14N
 ----------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -36468,7 +36468,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 15N
 ----------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -36481,7 +36481,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 16N
 ----------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -36494,7 +36494,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 17N
 ----------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -36507,7 +36507,7 @@ Adopted by the Canadian federal government in 1998 and the provincial government
 
 NAD83(CSRS)v2 / UTM zone 18N
 ----------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -36572,7 +36572,7 @@ Adopted by the Canadian federal government in 1998.
 
 NAD83(CSRS)v2 / UTM zone 7N
 ---------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -36585,7 +36585,7 @@ Adopted by the Canadian federal government in 1998.
 
 NAD83(CSRS)v2 / UTM zone 8N
 ---------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36598,7 +36598,7 @@ Adopted by the Canadian federal government in 1998.
 
 NAD83(CSRS)v2 / UTM zone 9N
 ---------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36757,7 +36757,7 @@ NAD83(CSRS)v3 / MTM zone 9
 
 NAD83(CSRS)v3 / UTM zone 10N
 ----------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36809,7 +36809,7 @@ Adopted by the Canadian federal government in 2000.
 
 NAD83(CSRS)v3 / UTM zone 14N
 ----------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -36822,7 +36822,7 @@ Adopted by the Canadian federal government in 2000.
 
 NAD83(CSRS)v3 / UTM zone 15N
 ----------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -36835,7 +36835,7 @@ Adopted by the Canadian federal government in 2000 and the provincial government
 
 NAD83(CSRS)v3 / UTM zone 16N
 ----------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -36848,7 +36848,7 @@ Adopted by the Canadian federal government in 2000 and the provincial government
 
 NAD83(CSRS)v3 / UTM zone 17N
 ----------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -36861,7 +36861,7 @@ Adopted by the Canadian federal government in 2000 and the provincial government
 
 NAD83(CSRS)v3 / UTM zone 18N
 ----------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -36926,7 +36926,7 @@ Adopted by the Canadian federal government in 2000.
 
 NAD83(CSRS)v3 / UTM zone 7N
 ---------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -36939,7 +36939,7 @@ Adopted by the Canadian federal government in 2000.
 
 NAD83(CSRS)v3 / UTM zone 8N
 ---------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -36952,7 +36952,7 @@ Adopted by the Canadian federal government in 2000.
 
 NAD83(CSRS)v3 / UTM zone 9N
 ---------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37017,7 +37017,7 @@ If used for rural area control markers, area of use is amended to west of 118°W
 
 NAD83(CSRS)v4 / UTM zone 10N
 ----------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37069,7 +37069,7 @@ Adopted by the Canadian federal government in 2002.
 
 NAD83(CSRS)v4 / UTM zone 14N
 ----------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -37082,7 +37082,7 @@ Adopted by the Canadian federal government in 2002.
 
 NAD83(CSRS)v4 / UTM zone 15N
 ----------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -37095,7 +37095,7 @@ Adopted by the Canadian federal government in 2002.
 
 NAD83(CSRS)v4 / UTM zone 16N
 ----------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -37108,7 +37108,7 @@ Adopted by the Canadian federal government in 2002.
 
 NAD83(CSRS)v4 / UTM zone 17N
 ----------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -37121,7 +37121,7 @@ Adopted by the Canadian federal government in 2002.
 
 NAD83(CSRS)v4 / UTM zone 18N
 ----------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -37186,7 +37186,7 @@ Adopted by the Canadian federal government in 2002.
 
 NAD83(CSRS)v4 / UTM zone 7N
 ---------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -37199,7 +37199,7 @@ Adopted by the Canadian federal government in 2002 and the provincial government
 
 NAD83(CSRS)v4 / UTM zone 8N
 ---------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37212,7 +37212,7 @@ Adopted by the Canadian federal government in 2002 and the provincial government
 
 NAD83(CSRS)v4 / UTM zone 9N
 ---------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37455,7 +37455,7 @@ NAD83(CSRS)v6 / PEI Stereographic
 
 NAD83(CSRS)v6 / UTM zone 10N
 ----------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37507,7 +37507,7 @@ Adopted by the Canadian federal government in 2012.
 
 NAD83(CSRS)v6 / UTM zone 14N
 ----------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -37520,7 +37520,7 @@ Adopted by the Canadian federal government in 2012 and the provincial government
 
 NAD83(CSRS)v6 / UTM zone 15N
 ----------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -37533,7 +37533,7 @@ Adopted by the Canadian federal government in 2012 and the provincial government
 
 NAD83(CSRS)v6 / UTM zone 16N
 ----------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -37546,7 +37546,7 @@ Adopted by the Canadian federal government in 2012 and the provincial government
 
 NAD83(CSRS)v6 / UTM zone 17N
 ----------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -37559,7 +37559,7 @@ Adopted by the Canadian federal government in 2012 and the provincial government
 
 NAD83(CSRS)v6 / UTM zone 18N
 ----------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -37624,7 +37624,7 @@ Adopted by the Canadian federal government in 2012 and the provincial government
 
 NAD83(CSRS)v6 / UTM zone 7N
 ---------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -37637,7 +37637,7 @@ Adopted by the Canadian federal government in 2012.
 
 NAD83(CSRS)v6 / UTM zone 8N
 ---------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37650,7 +37650,7 @@ Adopted by the Canadian federal government in 2012.
 
 NAD83(CSRS)v6 / UTM zone 9N
 ---------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37727,7 +37727,7 @@ NAD83(CSRS)v7 / PEI Stereographic
 
 NAD83(CSRS)v7 / UTM zone 10N
 ----------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37779,7 +37779,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 14N
 ----------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -37792,7 +37792,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 15N
 ----------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -37805,7 +37805,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 16N
 ----------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -37818,7 +37818,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 17N
 ----------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -37831,7 +37831,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 18N
 ----------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -37896,7 +37896,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 7N
 ---------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -37909,7 +37909,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 8N
 ---------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37922,7 +37922,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v7 / UTM zone 9N
 ---------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37935,7 +37935,7 @@ Adopted by the Canadian federal government in 2017.
 
 NAD83(CSRS)v8 / UTM zone 10N
 ----------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -37987,7 +37987,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 14N
 ----------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -38000,7 +38000,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 15N
 ----------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -38013,7 +38013,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 16N
 ----------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -38026,7 +38026,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 17N
 ----------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -38039,7 +38039,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 18N
 ----------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -38104,7 +38104,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 7N
 ---------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -38117,7 +38117,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 8N
 ---------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -38130,7 +38130,7 @@ Adopted by the Canadian federal government in 2023.
 
 NAD83(CSRS)v8 / UTM zone 9N
 ---------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -47016,7 +47016,7 @@ Emulates offshore area of NAD27 / Texas South (CRS code 32041) to better than 6 
 
 NATRF2022e2020 / Gulf West (ft)
 -------------------------------
-| Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W  - protraction areas Corpus Christi, Port Isabel
+| Extent: USA - Gulf outer continental shelf (GoM OCS) deep water west of approxinately 96°W - protraction areas Corpus Christi, Port Isabel
 
 .. code-block:: php
 
@@ -47172,7 +47172,7 @@ Part of the Illinois Coordinate System of 2022 33-zone system. See code 22155 fo
 
 NATRF2022e2020 / Illinois Carbondale
 ------------------------------------
-| Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph, Saline, White and Williamson
+| Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry, Randolph, Saline, White and Williamson
 
 .. code-block:: php
 
@@ -47185,7 +47185,7 @@ Part of the Illinois Coordinate System of 2022 33-zone system. See code 22256 fo
 
 NATRF2022e2020 / Illinois Carbondale (ft)
 -----------------------------------------
-| Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph, Saline, White and Williamson
+| Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry, Randolph, Saline, White and Williamson
 
 .. code-block:: php
 
@@ -68544,7 +68544,7 @@ Replaces SIRGAS 1995 system.
 
 SIRGAS 2000 / UTM zone 22N
 --------------------------
-| Extent: South America between 54°W and 48°W, northern hemisphere,  except Brazil where offshore only
+| Extent: South America between 54°W and 48°W, northern hemisphere, except Brazil where offshore only
 
 .. code-block:: php
 
@@ -69346,7 +69346,7 @@ The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to SYC20-IR
 
 SZCTW Grid
 ----------
-| Extent: UK - Sizewell power station site and  rail and road routes related to the site
+| Extent: UK - Sizewell power station site and rail and road routes related to the site
 
 .. code-block:: php
 
@@ -70367,7 +70367,7 @@ Timbalai 1948 / UTM zone 49N
 
 Timbalai 1948 / UTM zone 50N
 ----------------------------
-| Extent: Brunei east of 114°E; Malaysia - Sabah and  Sarawak east of 114°E
+| Extent: Brunei east of 114°E; Malaysia - Sabah and Sarawak east of 114°E
 
 .. code-block:: php
 
@@ -74761,7 +74761,7 @@ See WGS 84 / UTM zone 14N (code 32614) for metric equivalent. See NAD27 / BLM 14
 
 WGS 84 / BLM 15N (ftUS)
 -----------------------
-| Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and 90°W - leasing areas Brazos, Galveston, High Island; Sabine Pass; West Cameron, East Cameron, Vermilion, South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle; protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker Ridge, Amery Terrace.
+| Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 96°W and 90°W - leasing areas Brazos, Galveston, High Island; Sabine Pass; West Cameron, East Cameron, Vermilion, South Marsh Island, Eugene Island, Ship Shoal, South Pelto, Bay Marchand, South Timbalier, Grand Isle; protraction areas East Breaks, Alaminos Canyon, Garden Banks, Keathley Canyon, Sigsbee Escarpment, Ewing Bank, Green Canyon, Walker Ridge, Amery Terrace
 
 .. code-block:: php
 
@@ -74774,7 +74774,7 @@ See WGS 84 / UTM zone 15N (code 32615) for metric equivalent. See NAD27 / BLM 15
 
 WGS 84 / BLM 16N (ftUS)
 -----------------------
-| Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
+| Extent: USA - Gulf of Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West Delta, South Pass, Breton Sound, Main Pass, Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson, Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook, Rankin
 
 .. code-block:: php
 

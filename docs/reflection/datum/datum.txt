@@ -4442,7 +4442,7 @@ The highest tide level which can be predicted to occur under average meteorologi
 Hito XVIII 1963
 ---------------
 | Type: Geodetic
-| Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego,  Atlantic west of 66°W
+| Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, Atlantic west of 66°W
 
 .. code-block:: php
 
@@ -6128,7 +6128,7 @@ Mean sea level at Lagos, 1912-1928.
 Lake
 ----
 | Type: Geodetic
-| Extent: Venezuela - Lake Maracaibo area,  in lake
+| Extent: Venezuela - Lake Maracaibo area, in lake
 
 .. code-block:: php
 
@@ -8169,9 +8169,7 @@ Orthometric heights. From 2018, use has been extended from Netherlands onshore t
 North American Datum 1927
 -------------------------
 | Type: Geodetic
-| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and 
-
-. US Virgin Islands - onshore
+| Extent: North and central America: Antigua and Barbuda - onshore. Bahamas - onshore plus offshore over internal continental shelf only. Belize - onshore. British Virgin Islands - onshore. Canada onshore - Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico - onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and. US Virgin Islands - onshore
 
 .. code-block:: php
 
@@ -10737,7 +10735,7 @@ Created in 2022 to support intermediate CRS SYC20-IRF in the emulation of the SY
 SZCTW Intermediate Reference Frame
 ----------------------------------
 | Type: Geodetic
-| Extent: UK - Sizewell power station site and  rail and road routes related to the site
+| Extent: UK - Sizewell power station site and rail and road routes related to the site
 
 .. code-block:: php
 
