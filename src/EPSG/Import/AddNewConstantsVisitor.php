@@ -25,6 +25,7 @@ use function wordwrap;
 use function ucfirst;
 use function array_unique;
 use function array_map;
+use function preg_replace;
 use function rtrim;
 use function implode;
 use function preg_match;
@@ -129,7 +130,7 @@ class AddNewConstantsVisitor extends NodeVisitorAbstract
                 }
                 if (isset($data['extent_description']) && $data['extent_description']) {
                     $data['extent_description'] = array_unique(explode('|', $data['extent_description']));
-                    $data['extent_description'] = array_map(static fn (string $extentDescription) => rtrim($extentDescription, '.'), $data['extent_description']);
+                    $data['extent_description'] = array_map(static fn (string $extentDescription) => rtrim(preg_replace(['/\s+/u', '/\s+([.,;])/u'], [' ', '$1'], $extentDescription), '. '), $data['extent_description']);
                     $data['extent_description'] = implode(', ', $data['extent_description']);
                     $extentLines = explode("\n", wordwrap('Extent: ' . $data['extent_description'], 112));
                     foreach ($extentLines as $extentLine) {

@@ -1720,7 +1720,7 @@ class Geographic2D extends Geographic
 
     /**
      * Hito XVIII 1963
-     * Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego,  Atlantic west of 66°W.
+     * Extent: Chile - Tierra del Fuego, onshore; Argentina - Tierra del Fuego, Atlantic west of 66°W.
      */
     public const EPSG_HITO_XVIII_1963 = 'urn:ogc:def:crs:EPSG::4254';
 
@@ -2346,7 +2346,7 @@ class Geographic2D extends Geographic
 
     /**
      * Lake
-     * Extent: Venezuela - Lake Maracaibo area,  in lake.
+     * Extent: Venezuela - Lake Maracaibo area, in lake.
      */
     public const EPSG_LAKE = 'urn:ogc:def:crs:EPSG::4249';
 
@@ -2793,9 +2793,8 @@ class Geographic2D extends Geographic
      * Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut,
      * Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north
      * of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico -
-     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and
-     *
-     * . US Virgin Islands - onshore
+     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and. US Virgin Islands -
+     * onshore
      * Note: this CRS includes longitudes which are POSITIVE EAST. Replaced by NAD27(76) (code 4608) in Ontario, CGQ77
      * (code 4609) in Quebec, Mexican Datum of 1993 (code 4483) in Mexico, NAD83 (code 4269) in Canada (excl. Ontario &
      * Quebec) & USA.
@@ -4167,7 +4166,7 @@ class Geographic2D extends Geographic
 
     /**
      * SZCTW-IRF
-     * Extent: UK - Sizewell power station site and  rail and road routes related to the site
+     * Extent: UK - Sizewell power station site and rail and road routes related to the site
      * Intermediate CRS created in 2026 to assist the emulation of the ETRS89 / SZCTW SnakeGrid projected CRS through
      * transformation ETRS89-GBR [OSNet v2009] to SZCTW-IRF (1) (code 11467) used in conjunction with the SZCTW-TM map
      * projection (code 11468).

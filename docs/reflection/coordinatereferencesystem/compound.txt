@@ -5955,7 +5955,7 @@ NAD83(CSRS) + CGVD2013(CGG2013) height
 
 NAD83(CSRS) / UTM zone 10N + CGVD2013 height
 --------------------------------------------
-| Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -6003,7 +6003,7 @@ NAD83(CSRS) / UTM zone 13N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 14N + CGVD2013 height
 --------------------------------------------
-| Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+| Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
 
 .. code-block:: php
 
@@ -6015,7 +6015,7 @@ NAD83(CSRS) / UTM zone 14N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 15N + CGVD2013 height
 --------------------------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -6027,7 +6027,7 @@ NAD83(CSRS) / UTM zone 15N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 15N + CGVD2013a(2010) height
 ---------------------------------------------------
-| Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -6040,7 +6040,7 @@ Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).
 
 NAD83(CSRS) / UTM zone 16N + CGVD2013 height
 --------------------------------------------
-| Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+| Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
 
 .. code-block:: php
 
@@ -6052,7 +6052,7 @@ NAD83(CSRS) / UTM zone 16N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 17N + CGVD2013 height
 --------------------------------------------
-| Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -6064,7 +6064,7 @@ NAD83(CSRS) / UTM zone 17N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 18N + CGVD2013 height
 --------------------------------------------
-| Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+| Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
 
 .. code-block:: php
 
@@ -6148,7 +6148,7 @@ NAD83(CSRS) / UTM zone 24N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 7N + CGVD2013 height
 -------------------------------------------
-| Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+| Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
 
 .. code-block:: php
 
@@ -6160,7 +6160,7 @@ NAD83(CSRS) / UTM zone 7N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 8N + CGVD2013 height
 -------------------------------------------
-| Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -6172,7 +6172,7 @@ NAD83(CSRS) / UTM zone 8N + CGVD2013 height
 
 NAD83(CSRS) / UTM zone 9N + CGVD2013 height
 -------------------------------------------
-| Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+| Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
 
 .. code-block:: php
 
@@ -6897,7 +6897,7 @@ SYC20 Grid + ODN height
 
 SZCTW Grid + ODN height
 -----------------------
-| Extent: UK - Sizewell power station site and  rail and road routes related to the site
+| Extent: UK - Sizewell power station site and rail and road routes related to the site
 
 .. code-block:: php
 

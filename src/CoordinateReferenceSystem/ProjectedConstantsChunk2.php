@@ -378,7 +378,7 @@ trait ProjectedConstantsChunk2
      * Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky;
      * Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of
      * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West
-     * Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
+     * Delta, South Pass, Breton Sound, Main Pass, Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
      * Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson,
      * Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook,
      * Rankin.
@@ -1490,7 +1490,7 @@ trait ProjectedConstantsChunk2
      * NAD27 / UTM zone 15N
      * Extent: North America - between 96°W and 90°W. Canada - Manitoba; Nunavut; Ontario. Guatemala. Mexico. USA -
      * Arkansas; Illinois; Iowa; Kansas; Louisiana; Michigan; Minnesota; Mississippi; Missouri; Nebraska; Oklahoma;
-     * Tennessee; Texas; Wisconsin. Onshore for Canadian Arctic and Central America,  for Gulf of Mexico (both US and
+     * Tennessee; Texas; Wisconsin. Onshore for Canadian Arctic and Central America, for Gulf of Mexico (both US and
      * Mexican sectors)
      * Replaced by NAD27(76) / UTM 15N (code 2027) in Ontario, by NAD83 / UTM 15N (code 26915) elsewhere in Canada &
      * USA, & by Mexican Datum of 1993 / UTM 15N (code 4488) in Mexico. See NAD27 / BLM 15N (ftUS) (code 32065) for
@@ -1503,7 +1503,7 @@ trait ProjectedConstantsChunk2
      * Extent: North America - between 90°W and 84°W. Belize. Canada - Manitoba; Nunavut; Ontario. Costa Rica. Cuba.
      * El Salvador. Guatemala. Honduras. Mexico. Nicaragua. USA - Alabama; Arkansas; Florida; Georgia; Indiana;
      * Illinois; Kentucky; Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee;
-     * Wisconsin. Onshore for Canadian Arctic and Central America,  for Cuba and Gulf of Mexico (both US and Mexican
+     * Wisconsin. Onshore for Canadian Arctic and Central America, for Cuba and Gulf of Mexico (both US and Mexican
      * sectors)
      * Replaced by NAD27(76) / UTM 16N (code 2028) in Ontario, by NAD83 / UTM 16N (code 26916) elsewhere in Canada and
      * USA, and by Mexican Datum of 1993 / UTM 16N (code 4489) in Mexico. See NAD27 / BLM 16N (ftUS) (code 32066) for
@@ -2465,7 +2465,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(2011) / ICS83-Carbondale (ftUS)
-     * Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry,  Randolph, Saline, White and
+     * Extent: USA - Illinois - counties of Franklin, Gallatin, Hamilton, Jackson, Perry, Randolph, Saline, White and
      * Williamson
      * Part of the Illinois Coordinate System of 1983 33-zone system. State law for SPCS83 defines use of US survey
      * feet. This CRS was designed in NAD 83 ftUS but is otherwise based on the NGS guidelines for the NATRF2022
@@ -7964,7 +7964,7 @@ trait ProjectedConstantsChunk2
      * Extent: USA - between 90°W and 84°W - Alabama; Arkansas; Florida; Georgia; Indiana; Illinois; Kentucky;
      * Louisiana; Michigan; Minnesota; Mississippi; Missouri; North Carolina; Ohio; Tennessee; Wisconsin; Gulf of
      * Mexico outer continental shelf (GoM OCS) between approximately 90°W and 84°W - leasing areas Grand Isle, West
-     * Delta, South Pass, Breton Sound, Main Pass,  Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
+     * Delta, South Pass, Breton Sound, Main Pass, Chandeleur; protraction areas Mobile, Viosca Knoll, Mississippi
      * Canyon, Atwater Valley, Lund, Lund South, Pensacola, Destin Dome, De Soto Canyon, Lloyd Ridge, Henderson,
      * Florida Plain, Campeche Escarpment, Apalachicola, Florida Middle Ground, The Elbow, Vernon Basin, Howell Hook,
      * Rankin
@@ -9028,7 +9028,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS) / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::3157';
 
@@ -9055,32 +9055,32 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS) / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan.
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::3158';
 
     /**
      * NAD83(CSRS) / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario.
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::3159';
 
     /**
      * NAD83(CSRS) / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario.
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::3160';
 
     /**
      * NAD83(CSRS) / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * In use from 2000.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::2958';
 
     /**
      * NAD83(CSRS) / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * In use from 2000.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::2959';
@@ -9127,19 +9127,19 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS) / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon.
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::3154';
 
     /**
      * NAD83(CSRS) / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::3155';
 
     /**
      * NAD83(CSRS) / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon.
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon.
      */
     public const EPSG_NAD83_CSRS_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::3156';
 
@@ -9250,7 +9250,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v2 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 1998.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22210';
@@ -9280,7 +9280,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v2 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 1998 and the provincial governments of Saskatchewan in 2000 and
      * Manitoba in 2001. Note: SK uses zone 13 (CRS code 22213) for province-wide mapping and spatial referencing.
      */
@@ -9288,28 +9288,28 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v2 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 1998 and the provincial government of Manitoba in 2001.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22215';
 
     /**
      * NAD83(CSRS)v2 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 1998 and the provincial government of Manitoba in 2001.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22216';
 
     /**
      * NAD83(CSRS)v2 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22217';
 
     /**
      * NAD83(CSRS)v2 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 1998 and the provincial government of Quebec in 2004.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22218';
@@ -9347,21 +9347,21 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v2 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
      * Adopted by the Canadian federal government in 1998.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22207';
 
     /**
      * NAD83(CSRS)v2 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 1998.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22208';
 
     /**
      * NAD83(CSRS)v2 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 1998.
      */
     public const EPSG_NAD83_CSRS_V2_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22209';
@@ -9444,7 +9444,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v3 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2000 and the provincial government of British Columbia for CRD
      * only in 2000 and all Victoria Island in 2005.
      */
@@ -9473,35 +9473,35 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v3 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 2000.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22314';
 
     /**
      * NAD83(CSRS)v3 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22315';
 
     /**
      * NAD83(CSRS)v3 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22316';
 
     /**
      * NAD83(CSRS)v3 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22317';
 
     /**
      * NAD83(CSRS)v3 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2000 and the provincial government of Ontario in 2008.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22318';
@@ -9537,21 +9537,21 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v3 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
      * Adopted by the Canadian federal government in 2000.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22307';
 
     /**
      * NAD83(CSRS)v3 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2000.
      */
     public const EPSG_NAD83_CSRS_V3_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22308';
 
     /**
      * NAD83(CSRS)v3 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2000 and the provincial government of British Columbia for
      * Victoria Island (but not mainland) in 2005.
      */
@@ -9591,7 +9591,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v4 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
      * mainland only (not Victoria Island) in 2005.
      */
@@ -9621,35 +9621,35 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v4 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 2002.
      */
     public const EPSG_NAD83_CSRS_V4_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22414';
 
     /**
      * NAD83(CSRS)v4 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2002.
      */
     public const EPSG_NAD83_CSRS_V4_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22415';
 
     /**
      * NAD83(CSRS)v4 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2002.
      */
     public const EPSG_NAD83_CSRS_V4_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22416';
 
     /**
      * NAD83(CSRS)v4 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2002.
      */
     public const EPSG_NAD83_CSRS_V4_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22417';
 
     /**
      * NAD83(CSRS)v4 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2002.
      */
     public const EPSG_NAD83_CSRS_V4_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22418';
@@ -9685,7 +9685,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v4 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
      * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
      * mainland only (not Victoria Island) in 2005.
      */
@@ -9693,7 +9693,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v4 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
      * mainland only (not Victoria Island) in 2005.
      */
@@ -9701,7 +9701,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v4 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2002 and the provincial government of British Columbia for
      * mainland only (not Victoria Island) in 2005.
      */
@@ -9837,7 +9837,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v6 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2012.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22610';
@@ -9865,14 +9865,14 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v6 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 2012 and the provincial government of Manitoba in 2014.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22614';
 
     /**
      * NAD83(CSRS)v6 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2012 and the provincial governments of Manitoba in 2014 and
      * Ontario in 2013.
      */
@@ -9880,7 +9880,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v6 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2012 and the provincial governments of Manitoba in 2014 and
      * Ontario in 2013.
      */
@@ -9888,14 +9888,14 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v6 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2012 and the provincial government of Ontario in 2013.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22617';
 
     /**
      * NAD83(CSRS)v6 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2012 and the provincial government of Ontario in 2013.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22618';
@@ -9934,21 +9934,21 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v6 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
      * Adopted by the Canadian federal government in 2012.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22607';
 
     /**
      * NAD83(CSRS)v6 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2012.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22608';
 
     /**
      * NAD83(CSRS)v6 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2012.
      */
     public const EPSG_NAD83_CSRS_V6_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22609';
@@ -9993,7 +9993,7 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v7 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22710';
@@ -10021,35 +10021,35 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v7 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22714';
 
     /**
      * NAD83(CSRS)v7 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22715';
 
     /**
      * NAD83(CSRS)v7 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22716';
 
     /**
      * NAD83(CSRS)v7 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22717';
 
     /**
      * NAD83(CSRS)v7 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22718';
@@ -10086,28 +10086,28 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v7 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22707';
 
     /**
      * NAD83(CSRS)v7 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22708';
 
     /**
      * NAD83(CSRS)v7 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2017.
      */
     public const EPSG_NAD83_CSRS_V7_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22709';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 10N
-     * Extent: Canada between 126°W and 120°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 126°W and 120°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_10N = 'urn:ogc:def:crs:EPSG::22810';
@@ -10135,35 +10135,35 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v8 / UTM zone 14N
-     * Extent: Canada between 102°W and 96°W,  south of 84°N - Manitoba, Nunavut, Saskatchewan
+     * Extent: Canada between 102°W and 96°W, south of 84°N - Manitoba, Nunavut, Saskatchewan
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::22814';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 15N
-     * Extent: Canada between 96°W and 90°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 96°W and 90°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::22815';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 16N
-     * Extent: Canada between 90°W and 84°W,  south of 84°N - Manitoba, Nunavut, Ontario
+     * Extent: Canada between 90°W and 84°W, south of 84°N - Manitoba, Nunavut, Ontario
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::22816';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 17N
-     * Extent: Canada between 84°W and 78°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 84°W and 78°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::22817';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 18N
-     * Extent: Canada between 78°W and 72°W,  south of 84°N - Nunavut, Ontario and Quebec
+     * Extent: Canada between 78°W and 72°W, south of 84°N - Nunavut, Ontario and Quebec
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::22818';
@@ -10199,21 +10199,21 @@ trait ProjectedConstantsChunk2
 
     /**
      * NAD83(CSRS)v8 / UTM zone 7N
-     * Extent: Canada west of 138°W,  south of 84°N - British Columbia, Yukon
+     * Extent: Canada west of 138°W, south of 84°N - British Columbia, Yukon
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_7N = 'urn:ogc:def:crs:EPSG::22807';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 8N
-     * Extent: Canada between 138°W and 132°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada between 138°W and 132°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_8N = 'urn:ogc:def:crs:EPSG::22808';
 
     /**
      * NAD83(CSRS)v8 / UTM zone 9N
-     * Extent: Canada - between 132°W and 126°W,  south of 84°N - British Columbia, Northwest Territories, Yukon
+     * Extent: Canada - between 132°W and 126°W, south of 84°N - British Columbia, Northwest Territories, Yukon
      * Adopted by the Canadian federal government in 2023.
      */
     public const EPSG_NAD83_CSRS_V8_UTM_ZONE_9N = 'urn:ogc:def:crs:EPSG::22809';
