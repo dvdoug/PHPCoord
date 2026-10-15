@@ -3791,6 +3791,13 @@ class Compound extends CoordinateReferenceSystem
     public const EPSG_RGFG95_PLUS_NGG1977_HEIGHT = 'urn:ogc:def:crs:EPSG::9530';
 
     /**
+     * RGM04 / UTM zone 38S + Mayotte 1950 height
+     * Extent: Mayotte - onshore
+     * Replaced by RGM23 / UTM zone 38S + IGN 2023 Mayotte height (code 12209) on 2025-03-15.
+     */
+    public const EPSG_RGM04_UTM_ZONE_38S_PLUS_MAYOTTE_1950_HEIGHT = 'urn:ogc:def:crs:EPSG::26006';
+
+    /**
      * RGM23 + IGN 2023 Mayotte height
      * Extent: Mayotte - onshore.
      */
@@ -3798,7 +3805,8 @@ class Compound extends CoordinateReferenceSystem
 
     /**
      * RGM23 / UTM zone 38S + IGN 2023 Mayotte height
-     * Extent: Mayotte - onshore.
+     * Extent: Mayotte - onshore
+     * Replaces RGM04 / UTM zone 38S + Mayotte 1950 height (code 26006).
      */
     public const EPSG_RGM23_UTM_ZONE_38S_PLUS_IGN_2023_MAYOTTE_HEIGHT = 'urn:ogc:def:crs:EPSG::12209';
 

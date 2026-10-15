@@ -5104,7 +5104,7 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11157',
             'extent' => ['urn:ogc:def:area:EPSG::3340'],
             'extent_name' => 'Mayotte - onshore',
-            'help' => '',
+            'help' => 'Replaces RGM04 / UTM zone 38S + Mayotte 1950 height (code 26006).',
         ],
         'urn:ogc:def:crs:EPSG::12215' => [
             'name' => 'ETRS89-NLD [AGRS2010] + LAT-NLD depth',
@@ -5213,6 +5213,15 @@ trait CompoundSRIDData
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
             'help' => '',
+        ],
+        'urn:ogc:def:crs:EPSG::26006' => [
+            'name' => 'RGM04 / UTM zone 38S + Mayotte 1950 height',
+            'horizontal_crs' => 'urn:ogc:def:crs:EPSG::4471',
+            'horizontal_crs_type' => 'projected',
+            'vertical_crs' => 'urn:ogc:def:crs:EPSG::5793',
+            'extent' => ['urn:ogc:def:area:EPSG::3340'],
+            'extent_name' => 'Mayotte - onshore',
+            'help' => 'Replaced by RGM23 / UTM zone 38S + IGN 2023 Mayotte height (code 12209) on 2025-03-15.',
         ],
     ];
 }

@@ -11010,4 +11010,544 @@ trait ProjectedConstantsChunk1
      * Replaces PSAD56 / UTM zone 20S (CRS code 24880) in Bolivia.
      */
     public const EPSG_MARGEN_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::5355';
+
+    /**
+     * MARGEN / UTM zone 21S
+     * Extent: Bolivia - east of 60°W
+     * Replaces PSAD56 / UTM zone 21S (CRS code 24881) in Bolivia.
+     */
+    public const EPSG_MARGEN_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::5357';
+
+    /**
+     * Martinique 1938 / UTM zone 20N
+     * Extent: Martinique - onshore
+     * Replaced by RRAF 1991 / UTM zone 20N (CRS code 4559).
+     */
+    public const EPSG_MARTINIQUE_1938_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::2973';
+
+    /**
+     * Massawa / UTM zone 37N
+     * Extent: Eritrea.
+     */
+    public const EPSG_MASSAWA_UTM_ZONE_37N = 'urn:ogc:def:crs:EPSG::26237';
+
+    /**
+     * MATRF2022e2020 / Guam and Northern Mariana Islands
+     * Extent: Guam - onshore. Northern Mariana Islands - onshore
+     * See code 24308 for equivalent CRS in (international) feet.
+     */
+    public const EPSG_MATRF2022E2020_GUAM_AND_NORTHERN_MARIANA_ISLANDS = 'urn:ogc:def:crs:EPSG::24307';
+
+    /**
+     * MATRF2022e2020 / Guam and Northern Mariana Islands (ft)
+     * Extent: Guam - onshore. Northern Mariana Islands - onshore
+     * See code 24307 for equivalent CRS in meters.
+     */
+    public const EPSG_MATRF2022E2020_GUAM_AND_NORTHERN_MARIANA_ISLANDS_FT = 'urn:ogc:def:crs:EPSG::24308';
+
+    /**
+     * Maupiti 83 / UTM zone 5S
+     * Extent: French Polynesia - Society Islands - Maupiti
+     * Replaced by RGPF / UTM zone 5S, CRS code 3296.
+     */
+    public const EPSG_MAUPITI_83_UTM_ZONE_5S = 'urn:ogc:def:crs:EPSG::3306';
+
+    /**
+     * Mauritania 1999 / UTM zone 28N
+     * Extent: Mauritania - 18°W to 12°W.
+     */
+    public const EPSG_MAURITANIA_1999_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::3343';
+
+    /**
+     * Mauritania 1999 / UTM zone 29N
+     * Extent: Mauritania - between 12°W and 6°W.
+     */
+    public const EPSG_MAURITANIA_1999_UTM_ZONE_29N = 'urn:ogc:def:crs:EPSG::3344';
+
+    /**
+     * Mauritania 1999 / UTM zone 30N
+     * Extent: Mauritania - east of 6°W.
+     */
+    public const EPSG_MAURITANIA_1999_UTM_ZONE_30N = 'urn:ogc:def:crs:EPSG::3345';
+
+    /**
+     * Merchich / Nord Maroc
+     * Extent: Morocco onshore north of 35 grads North (31°30'N).
+     */
+    public const EPSG_MERCHICH_NORD_MAROC = 'urn:ogc:def:crs:EPSG::26191';
+
+    /**
+     * Merchich / Sahara Nord
+     * Extent: Western Sahara - onshore north of 27grads North (24°18'N).
+     */
+    public const EPSG_MERCHICH_SAHARA_NORD = 'urn:ogc:def:crs:EPSG::26194';
+
+    /**
+     * Merchich / Sahara Sud
+     * Extent: Western Sahara - onshore south of 27grads North (24°18'N).
+     */
+    public const EPSG_MERCHICH_SAHARA_SUD = 'urn:ogc:def:crs:EPSG::26195';
+
+    /**
+     * Merchich / Sud Maroc
+     * Extent: Morocco onshore south of 35 grads North (31°30'N).
+     */
+    public const EPSG_MERCHICH_SUD_MAROC = 'urn:ogc:def:crs:EPSG::26192';
+
+    /**
+     * Mexico ITRF2008 / LCC
+     * Extent: Mexico
+     * Replaces Mexico ITRF92 / LCC (CRS code 6362) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_LCC = 'urn:ogc:def:crs:EPSG::6372';
+
+    /**
+     * Mexico ITRF2008 / UTM zone 11N
+     * Extent: Mexico west of 114°W
+     * Replaces Mexico ITRF92 / UTM zone 11N (CRS code 4484) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::6366';
+
+    /**
+     * Mexico ITRF2008 / UTM zone 12N
+     * Extent: Mexico between 114°W and 108°W
+     * Replaces Mexico ITRF92 / UTM zone 12N (CRS code 4485) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::6367';
+
+    /**
+     * Mexico ITRF2008 / UTM zone 13N
+     * Extent: Mexico between 108°W and 102°W
+     * Replaces Mexico ITRF92 / UTM zone 13N (CRS code 4486) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::6368';
+
+    /**
+     * Mexico ITRF2008 / UTM zone 14N
+     * Extent: Mexico between 102°W and 96°W
+     * Replaces Mexico ITRF92 / UTM zone 14N (CRS code 4487) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::6369';
+
+    /**
+     * Mexico ITRF2008 / UTM zone 15N
+     * Extent: Mexico between 96°W and 90°W
+     * Replaces Mexico ITRF92 / UTM zone 15N (CRS code 4488) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::6370';
+
+    /**
+     * Mexico ITRF2008 / UTM zone 16N
+     * Extent: Mexico east of 90°W
+     * Replaces Mexico ITRF92 / UTM zone 16N (CRS code 4489) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF2008_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::6371';
+
+    /**
+     * Mexico ITRF92 / LCC
+     * Extent: Mexico
+     * Replaced by Mexico ITRF2008 / LCC (CRS code 6372) from December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_LCC = 'urn:ogc:def:crs:EPSG::6362';
+
+    /**
+     * Mexico ITRF92 / UTM zone 11N
+     * Extent: Mexico west of 114°W
+     * Replaces NAD27 / UTM zone 11N (CRS code 26711). Replaced by Mexico ITRF2008 / UTM zone 11N (CRS code 6366) from
+     * December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_UTM_ZONE_11N = 'urn:ogc:def:crs:EPSG::4484';
+
+    /**
+     * Mexico ITRF92 / UTM zone 12N
+     * Extent: Mexico between 114°W and 108°W
+     * Replaces NAD27 / UTM zone 12N (CRS code 26712). Replaced by Mexico ITRF2008 / UTM zone 12N (CRS code 6367) from
+     * December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_UTM_ZONE_12N = 'urn:ogc:def:crs:EPSG::4485';
+
+    /**
+     * Mexico ITRF92 / UTM zone 13N
+     * Extent: Mexico between 108°W and 102°W
+     * Replaces NAD27 / UTM zone 13N (CRS code 26713). Replaced by Mexico ITRF2008 / UTM zone 13N (CRS code 6368) from
+     * December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_UTM_ZONE_13N = 'urn:ogc:def:crs:EPSG::4486';
+
+    /**
+     * Mexico ITRF92 / UTM zone 14N
+     * Extent: Mexico between 102°W and 96°W
+     * Replaces NAD27 / UTM zone 14N (CRS code 26714). Replaced by Mexico ITRF2008 / UTM zone 14N (CRS code 6369) from
+     * December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_UTM_ZONE_14N = 'urn:ogc:def:crs:EPSG::4487';
+
+    /**
+     * Mexico ITRF92 / UTM zone 15N
+     * Extent: Mexico between 96°W and 90°W
+     * Replaces NAD27 / UTM zone 15N (CRS code 26715). Replaced by Mexico ITRF2008 / UTM zone 15N (CRS code 6370) from
+     * December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_UTM_ZONE_15N = 'urn:ogc:def:crs:EPSG::4488';
+
+    /**
+     * Mexico ITRF92 / UTM zone 16N
+     * Extent: Mexico east of 90°W
+     * Replaces NAD27 / UTM zone 16N (CRS code 26716). Replaced by Mexico ITRF2008 / UTM zone 16N (CRS code 6371) from
+     * December 2010.
+     */
+    public const EPSG_MEXICO_ITRF92_UTM_ZONE_16N = 'urn:ogc:def:crs:EPSG::4489';
+
+    /**
+     * MGI 1901 / Balkans zone 5
+     * Extent: Bosnia and Herzegovina - west of 16°30'E; Croatia - onshore west of 16°30'E; Slovenia - onshore
+     * Introduced in 1924. In Slovenia replaced by D48 / GK (CRS code 3912). In Croatia replaced by HTRS96 / Croatia TM
+     * (CRS code 3765). In Bosnia and Herzegovina replaced by BH_ETRS89 / TM (CRS code 10329).
+     */
+    public const EPSG_MGI_1901_BALKANS_ZONE_5 = 'urn:ogc:def:crs:EPSG::8677';
+
+    /**
+     * MGI 1901 / Balkans zone 6
+     * Extent: Bosnia and Herzegovina - between 16°30'E and 19°30'E; Croatia - onshore east of 16°30'E; Montenegro -
+     * onshore west of 19°30'E; Serbia - west of 19°30'E
+     * Introduced in 1924. In Croatia replaced by HTRS96 / Croatia TM (CRS code 3765). In Bosnia and Herzegovina
+     * replaced by BH_ETRS89 / TM (CRS code 10329).
+     */
+    public const EPSG_MGI_1901_BALKANS_ZONE_6 = 'urn:ogc:def:crs:EPSG::8678';
+
+    /**
+     * MGI 1901 / Balkans zone 7
+     * Extent: Bosnia and Herzegovina - east of 19°30'E; Kosovo; Montenegro - east of 19°30'E; Serbia - between
+     * 19°30'E and 22°30'E, North Macedonia
+     * Introduced in 1924. In Macedonia replaced by MSCS (CRS code 6204) from 2008 but from 2013 this CRS used for AREC
+     * electronic cadastral database (E-kat) across whole country. In Bosnia and Herzegovina replaced by BH_ETRS89 / TM
+     * (CRS code 10329).
+     */
+    public const EPSG_MGI_1901_BALKANS_ZONE_7 = 'urn:ogc:def:crs:EPSG::6316';
+
+    /**
+     * MGI 1901 / Balkans zone 8
+     * Extent: North Macedonia - east of 22°30'E; Serbia - east of 22°30'E
+     * Introduced in 1924. In Macedonia replaced by MSCS (CRS codes 6204 and 6316) from 2008.
+     */
+    public const EPSG_MGI_1901_BALKANS_ZONE_8 = 'urn:ogc:def:crs:EPSG::8679';
+
+    /**
+     * MGI 1901 / Slovene National Grid
+     * Extent: Slovenia
+     * In Slovenia replaces MGI 1901 / Balkans zone 5 (D48 zone 5) (CRS code 8677) and MGI 1901 / Slovenia Grid (CRS
+     * code 8686). Replaced by D96/TM (CRS code 3794) although old cadastral records still related to D48/GK.
+     */
+    public const EPSG_MGI_1901_SLOVENE_NATIONAL_GRID = 'urn:ogc:def:crs:EPSG::3912';
+
+    /**
+     * MGI 1901 / Slovenia Grid
+     * Extent: Slovenia
+     * Truncated form of MGI 1901 / Balkans zone 5 (CRS code 8677). Replaced by D48/GK (CRS code 3912) soon after
+     * Slovenian independence.
+     */
+    public const EPSG_MGI_1901_SLOVENIA_GRID = 'urn:ogc:def:crs:EPSG::8686';
+
+    /**
+     * MGI / Austria Central
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * Greenwich equivalent of MGI (Ferro) / Austria Central Zone (alias Gebrauchsnetz) (EPSG code 31282).
+     */
+    public const EPSG_MGI_AUSTRIA_CENTRAL = 'urn:ogc:def:crs:EPSG::9272';
+
+    /**
+     * MGI / Austria East
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * Greenwich equivalent of MGI (Ferro) / Austria East Zone (alias Gebrauchsnetz) (EPSG code 31283).
+     */
+    public const EPSG_MGI_AUSTRIA_EAST = 'urn:ogc:def:crs:EPSG::9273';
+
+    /**
+     * MGI / Austria GK Central
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * Used as default CRS for digital data distribution through the BEV Geoportal. See CRS code 31252 for equivalent
+     * CRS referenced to Ferro meridian.
+     */
+    public const EPSG_MGI_AUSTRIA_GK_CENTRAL = 'urn:ogc:def:crs:EPSG::31255';
+
+    /**
+     * MGI / Austria GK East
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * Used as default CRS for digital data distribution through the BEV Geoportal. See CRS code 31253 for equivalent
+     * CRS referenced to Ferro meridian.
+     */
+    public const EPSG_MGI_AUSTRIA_GK_EAST = 'urn:ogc:def:crs:EPSG::31256';
+
+    /**
+     * MGI / Austria GK M28
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * MGI / Austria M28 (CRS code 31284) with reduced northing.
+     */
+    public const EPSG_MGI_AUSTRIA_GK_M28 = 'urn:ogc:def:crs:EPSG::31257';
+
+    /**
+     * MGI / Austria GK M31
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * MGI / Austria M31 (CRS code 31285) with reduced northing.
+     */
+    public const EPSG_MGI_AUSTRIA_GK_M31 = 'urn:ogc:def:crs:EPSG::31258';
+
+    /**
+     * MGI / Austria GK M34
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * MGI / Austria M34 (CRS code 31286) with reduced northing.
+     */
+    public const EPSG_MGI_AUSTRIA_GK_M34 = 'urn:ogc:def:crs:EPSG::31259';
+
+    /**
+     * MGI / Austria GK West
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * Used as default CRS for digital data distribution through the BEV Geoportal. See CRS code 31251 for equivalent
+     * CRS referenced to Ferro meridian.
+     */
+    public const EPSG_MGI_AUSTRIA_GK_WEST = 'urn:ogc:def:crs:EPSG::31254';
+
+    /**
+     * MGI / Austria Lambert
+     * Extent: Austria
+     * Replaced by ETRS89 / Austria Lambert (CRS code 3416).
+     */
+    public const EPSG_MGI_AUSTRIA_LAMBERT = 'urn:ogc:def:crs:EPSG::31287';
+
+    /**
+     * MGI / Austria M28
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * Greenwich equivalent of MGI (Ferro) / M28 (alias Bundesmeldenetz M28) (EPSG code 31288).
+     */
+    public const EPSG_MGI_AUSTRIA_M28 = 'urn:ogc:def:crs:EPSG::31284';
+
+    /**
+     * MGI / Austria M31
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * Greenwich equivalent of MGI (Ferro) / M31 (alias Bundesmeldenetz M31) (EPSG code 31289).
+     */
+    public const EPSG_MGI_AUSTRIA_M31 = 'urn:ogc:def:crs:EPSG::31285';
+
+    /**
+     * MGI / Austria M34
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * Greenwich equivalent of MGI (Ferro) / M34 (alias Bundesmeldenetz M34) (EPSG code 31290).
+     */
+    public const EPSG_MGI_AUSTRIA_M34 = 'urn:ogc:def:crs:EPSG::31286';
+
+    /**
+     * MGI / Austria West
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * Greenwich equivalent of MGI (Ferro) / Austria West Zone (alias Gebrauchsnetz) (EPSG code 31281).
+     */
+    public const EPSG_MGI_AUSTRIA_WEST = 'urn:ogc:def:crs:EPSG::9271';
+
+    /**
+     * MGI (Ferro) / Austria Central Zone
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * Also known as "Gebrauchsnetz M31". See MGI / Austria Central (CRS code 9272) for equivalent Greenwich-based
+     * system used for BEV Geoportal. For other uses see MGI (Ferro) / M31 (alias Bundesmeldenetz M31) (CRS code
+     * 31289).
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::31282';
+
+    /**
+     * MGI (Ferro) / Austria East Zone
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * Also known as "Gebrauchsnetz M34". See MGI / Austria East (CRS code 9273) for equivalent Greenwich-based system
+     * used for BEV Geoportal. For other uses see MGI (Ferro) / M34 (alias Bundesmeldenetz M34) (CRS code 31290).
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_EAST_ZONE = 'urn:ogc:def:crs:EPSG::31283';
+
+    /**
+     * MGI (Ferro) / Austria GK Central Zone
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * MGI (Ferro) / Austria Central Zone (CRS code 31282) with reduced northing. See CRS code 31255 for equivalent
+     * referenced to Greenwich meridian.
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_GK_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::31252';
+
+    /**
+     * MGI (Ferro) / Austria GK East Zone
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * MGI (Ferro) / Austria East Zone (CRS code 31283) with reduced northing. See CRS code 31256 for equivalent
+     * referenced to Greenwich meridian.
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_GK_EAST_ZONE = 'urn:ogc:def:crs:EPSG::31253';
+
+    /**
+     * MGI (Ferro) / Austria GK West Zone
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * MGI (Ferro) / Austria West Zone (CRS code 31281) with reduced northing. See CRS code 31254 for equivalent
+     * referenced to Greenwich meridian.
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_GK_WEST_ZONE = 'urn:ogc:def:crs:EPSG::31251';
+
+    /**
+     * MGI (Ferro) / Austria West Zone
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * Also known as "Gebrauchsnetz M28". See MGI / Austria West (CRS code 9271) for equivalent Greenwich-based system
+     * used for BEV Geoportal. For other uses see MGI (Ferro) / Austria zone M28 (alias Bundesmeldenetz M28) (CRS code
+     * 31288).
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_WEST_ZONE = 'urn:ogc:def:crs:EPSG::31281';
+
+    /**
+     * MGI (Ferro) / Austria zone M28
+     * Extent: Austria west of 11°50'E of Greenwich (29°30'E of Ferro)
+     * Also known as Bundesmeldenetz. For equivalent using Greenwich meridian see MGI / Austria M28 (code 31284). For
+     * cadastral survey see MGI (Ferro) / Austria West Zone (alias Gebrauchsnetz M28) (EPSG code 31281).
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_ZONE_M28 = 'urn:ogc:def:crs:EPSG::31288';
+
+    /**
+     * MGI (Ferro) / Austria zone M31
+     * Extent: Austria between 11°50'E and 14°50'E of Greenwich (29°30'E and 32°30'E of Ferro)
+     * Also known as Bundesmeldenetz. For equivalent using Greenwich meridian see MGI / Austria M31 (code 31285). For
+     * cadastral survey see MGI (Ferro) / Austria Central Zone (alias Gebrauchsnetz M31) (EPSG code 31282).
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_ZONE_M31 = 'urn:ogc:def:crs:EPSG::31289';
+
+    /**
+     * MGI (Ferro) / Austria zone M34
+     * Extent: Austria east of 14°50'E of Greenwich (32°30'E of Ferro)
+     * Also known as Bundesmeldenetz. For equivalent using Greenwich meridian see MGI / Austria M34 (code 31286). For
+     * cadastral survey see MGI (Ferro) / Austria East Zone (alias Gebrauchsnetz M34) (EPSG code 31283).
+     */
+    public const EPSG_MGI_FERRO_AUSTRIA_ZONE_M34 = 'urn:ogc:def:crs:EPSG::31290';
+
+    /**
+     * Mhast (offshore) / UTM zone 32S
+     * Extent: Angola (Cabinda) - offshore; The Democratic Republic of the Congo (Zaire) - offshore
+     * Used by CABGOC for offshore areas between 1979 and 1987. Differs from Mhast (onshore) / UTM zone 32S by
+     * approximately 10m. Replaced by Malongo 1987 / UTM zone 32S (CRS code 25932) in 1987.
+     */
+    public const EPSG_MHAST_OFFSHORE_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::3354';
+
+    /**
+     * Mhast (onshore) / UTM zone 32S
+     * Extent: Angola (Cabinda); The Democratic Republic of the Congo (Zaire) - onshore coastal area and offshore
+     * Used by CABGOC. For offshore areas, in 1979 replaced by Mhast (offshore) / UTM zone 32S (CRS code 3354), from
+     * which this CRS differs by approximately 10m.
+     */
+    public const EPSG_MHAST_ONSHORE_UTM_ZONE_32S = 'urn:ogc:def:crs:EPSG::3353';
+
+    /**
+     * Minna / Nigeria East Belt
+     * Extent: Nigeria east of 10°30'E.
+     */
+    public const EPSG_MINNA_NIGERIA_EAST_BELT = 'urn:ogc:def:crs:EPSG::26393';
+
+    /**
+     * Minna / Nigeria Mid Belt
+     * Extent: Nigeria between 6°30'E and 10°30'E,  shelf.
+     */
+    public const EPSG_MINNA_NIGERIA_MID_BELT = 'urn:ogc:def:crs:EPSG::26392';
+
+    /**
+     * Minna / Nigeria West Belt
+     * Extent: Nigeria - onshore west of 6°30'E,  shelf.
+     */
+    public const EPSG_MINNA_NIGERIA_WEST_BELT = 'urn:ogc:def:crs:EPSG::26391';
+
+    /**
+     * Minna / UTM zone 31N
+     * Extent: Nigeria - offshore beyond continental shelf west of 6°E.
+     */
+    public const EPSG_MINNA_UTM_ZONE_31N = 'urn:ogc:def:crs:EPSG::26331';
+
+    /**
+     * Minna / UTM zone 32N
+     * Extent: Nigeria - offshore deep water - east of 6°E
+     * There is some use of this projected CRS in E&P to facilitate area calculations of those offshore deepwater
+     * Nigerian blocks falling mainly within zone 32N but with some portion of the block west of 6°E longitude.
+     */
+    public const EPSG_MINNA_UTM_ZONE_32N = 'urn:ogc:def:crs:EPSG::26332';
+
+    /**
+     * MML07 Grid
+     * Extent: UK - on or related to the Midland Mainline rail route from Sheffield to London
+     * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to MML07-IRF (1) (code 9369) as applied to
+     * ETRS89 realized through OSNet v2009 and map projection MML07-TM (code 9370) emulates the MML07 Snake projection
+     * applied to ETRS89 as realized through OSNet v2001.
+     */
+    public const EPSG_MML07_GRID = 'urn:ogc:def:crs:EPSG::9373';
+
+    /**
+     * MMN / Argentina 2
+     * Extent: Argentina - Tierra del Fuego onshore.
+     */
+    public const EPSG_MMN_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::9252';
+
+    /**
+     * MMS / Argentina 2
+     * Extent: Argentina - Tierra del Fuego onshore.
+     */
+    public const EPSG_MMS_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::9254';
+
+    /**
+     * MOLDOR11 Grid
+     * Extent: UK - on or related to the rail route from Manchester via Ordsall Lane and the Hope Valley to Dore
+     * Junction
+     * The CRS's definition through transformation ETRS89-GBR [OSNet v2009] to MOLDOR11-IRF (1) (code 9878) and map
+     * projection MOLDOR11-TM (code 9879) emulates the MOLDOR11 Snake projection applied to ETRS89 as realized through
+     * OSNet v2009.
+     */
+    public const EPSG_MOLDOR11_GRID = 'urn:ogc:def:crs:EPSG::9880';
+
+    /**
+     * @deprecated use EPSG_ETRS89_MDA_MOLDREF99_MOLDOVA_TM instead
+     */
+    public const EPSG_MOLDREF99_MOLDOVA_TM = 'urn:ogc:def:crs:EPSG::4026';
+
+    /**
+     * Monte Mario / Italy zone 1
+     * Extent: Italy - west of 12°E.
+     */
+    public const EPSG_MONTE_MARIO_ITALY_ZONE_1 = 'urn:ogc:def:crs:EPSG::3003';
+
+    /**
+     * Monte Mario / Italy zone 2
+     * Extent: Italy - east of 12°E including San Marino and Vatican City State.
+     */
+    public const EPSG_MONTE_MARIO_ITALY_ZONE_2 = 'urn:ogc:def:crs:EPSG::3004';
+
+    /**
+     * Monte Mario / TM Emilia-Romagna
+     * Extent: Italy - Emilia-Romagna region
+     * Replaces previous regional CRS ED50 / UTMA.
+     */
+    public const EPSG_MONTE_MARIO_TM_EMILIA_ROMAGNA = 'urn:ogc:def:crs:EPSG::5659';
+
+    /**
+     * Montserrat 1958 / British West Indies Grid
+     * Extent: Montserrat - onshore.
+     */
+    public const EPSG_MONTSERRAT_1958_BRITISH_WEST_INDIES_GRID = 'urn:ogc:def:crs:EPSG::2004';
+
+    /**
+     * Moorea 87 / UTM zone 6S
+     * Extent: French Polynesia - Society Islands - Moorea
+     * Replaces Tahiti 52 / UTM zone 6S (CRS code 2976) in Moorea. Replaced by RGPF / UTM zone 6S, CRS code 3297.
+     */
+    public const EPSG_MOOREA_87_UTM_ZONE_6S = 'urn:ogc:def:crs:EPSG::3305';
+
+    /**
+     * MOP78 / UTM zone 1S
+     * Extent: Wallis and Futuna - Wallis - onshore
+     * Replaced by RGWF96 / UTM zone 1S (CRS code 8903).
+     */
+    public const EPSG_MOP78_UTM_ZONE_1S = 'urn:ogc:def:crs:EPSG::2988';
+
+    /**
+     * Mount Dillon / Tobago Grid
+     * Extent: Trinidad and Tobago - Tobago - onshore.
+     */
+    public const EPSG_MOUNT_DILLON_TOBAGO_GRID = 'urn:ogc:def:crs:EPSG::2066';
+
+    /**
+     * Moznet / UTM zone 36S
+     * Extent: Mozambique - west of 36°E.
+     */
+    public const EPSG_MOZNET_UTM_ZONE_36S = 'urn:ogc:def:crs:EPSG::3036';
 }

@@ -166,7 +166,6 @@ abstract class CoordinateReferenceSystem
             if (!$data) {
                 continue;
             }
-
             $datum = $data['datum'];
             if (!in_array($datum, $etrs89Members, true)) {
                 return null;

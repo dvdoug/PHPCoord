@@ -2761,6 +2761,42 @@ to ETRS89-LVA [LKS-2020] (Geographic2D)
 
     "
 
+
+to ETRS89-LVA [LKS-2020] + Latvia 2000 height (Compound)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89-LVA [LKS-2020] to ETRS89-LVA [LKS-2020] + Latvia 2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::26005``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->geographic3DTo2DPlusGravityHeightFromGrid(
+            to: Compound::fromSRID(Compound::EPSG_ETRS89_LVA_LKS_2020_PLUS_LATVIA_2000_HEIGHT),
+            geoidHeightCorrectionModelFile: KMSLV142020LatviaProvider->provideGrid()
+        )
+
+    "
+
+
+to Latvia 2000 height (Vertical)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table::
+    :header: "EPSG", "PHPCoord"
+    :widths: 40, 60
+
+    "| Name: ETRS89-LVA [LKS-2020] to Latvia 2000 height (1)
+    | Code: ``urn:ogc:def:coordinateOperation:EPSG::26004``
+    | Extent: Latvia - onshore",".. code-block:: php
+
+        $point->geographic3DToGravityHeightFromGrid(
+            to: Vertical::fromSRID(Vertical::EPSG_LATVIA_2000_HEIGHT),
+            geoidHeightCorrectionModelFile: KMSLV142020LatviaProvider->provideGrid()
+        )
+
+    "
+
 ETRS89-LVA [LKS-92]
 -------------------
 ``Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_LVA_LKS_92)``

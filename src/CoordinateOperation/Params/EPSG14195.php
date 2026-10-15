@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * PHPCoord.
+ *
+ * @author Doug Wright
+ */
+declare(strict_types=1);
+use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
+
+/** @internal */ return [
+    'latitudeOfNaturalOrigin' => UnitOfMeasureFactory::makeUnit(44.381013594, 'urn:ogc:def:uom:EPSG::9110'),
+    'longitudeOfNaturalOrigin' => UnitOfMeasureFactory::makeUnit(-92.134, 'urn:ogc:def:uom:EPSG::9110'),
+    'scaleFactorAtNaturalOrigin' => UnitOfMeasureFactory::makeUnit(1.0000362977, 'urn:ogc:def:uom:EPSG::9201'),
+    'falseEasting' => UnitOfMeasureFactory::makeUnit(171450.0, 'urn:ogc:def:uom:EPSG::9001'),
+    'falseNorthing' => UnitOfMeasureFactory::makeUnit(87630.0, 'urn:ogc:def:uom:EPSG::9001'),
+];

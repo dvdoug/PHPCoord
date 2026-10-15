@@ -30681,7 +30681,7 @@ Replaces NAD83(CORS96) / Oregon Coast (m) (CRS code 6840) from 2013-03-08. See N
 
 NAD83(2011) / Oregon Columbia River East zone (ft)
 --------------------------------------------------
-| Extent: USA - Oregon - Columbia River area between approximately 122°03'W and 118°53'W
+| Extent: USA - Oregon - Columbia River area between approximately 122°07'W and 118°20'W
 
 .. code-block:: php
 
@@ -30694,7 +30694,7 @@ State law defines use of International feet (note: not US survey feet). See NAD8
 
 NAD83(2011) / Oregon Columbia River East zone (m)
 -------------------------------------------------
-| Extent: USA - Oregon - Columbia River area between approximately 122°03'W and 118°53'W
+| Extent: USA - Oregon - Columbia River area between approximately 122°07'W and 118°20'W
 
 .. code-block:: php
 
@@ -34905,7 +34905,7 @@ See NAD83(CORS96) / Oregon Coast (ft) (CRS code 6841) for non-metric equivalent.
 
 NAD83(CORS96) / Oregon Columbia River East zone (ft)
 ----------------------------------------------------
-| Extent: USA - Oregon - Columbia River area between approximately 122°03'W and 118°53'W
+| Extent: USA - Oregon - Columbia River area between approximately 122°07'W and 118°20'W
 
 .. code-block:: php
 
@@ -34918,7 +34918,7 @@ State law defines use of International feet (note: not US survey feet). See NAD8
 
 NAD83(CORS96) / Oregon Columbia River East zone (m)
 ---------------------------------------------------
-| Extent: USA - Oregon - Columbia River area between approximately 122°03'W and 118°53'W
+| Extent: USA - Oregon - Columbia River area between approximately 122°07'W and 118°20'W
 
 .. code-block:: php
 
@@ -48054,6 +48054,32 @@ NATRF2022e2020 / Indiana Bartholomew (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). See code 22365 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana Benton
+-------------------------------
+| Extent: USA - Indiana - Benton county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_BENTON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22451')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_BENTON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22451')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22452 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Benton (ft)
+------------------------------------
+| Extent: USA - Indiana - Benton county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_BENTON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22452')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_BENTON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22452')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22451 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana Blackford-Delaware
 -------------------------------------------
 | Extent: USA - Indiana - counties of Blackford and Delaware
@@ -48210,6 +48236,32 @@ NATRF2022e2020 / Indiana Clark-Floyd-Scott (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22369 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana Clay
+-----------------------------
+| Extent: USA - Indiana - Clay county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_CLAY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22439')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_CLAY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22439')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22440 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Clay (ft)
+----------------------------------
+| Extent: USA - Indiana - Clay county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_CLAY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22440')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_CLAY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22440')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22439 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana Clinton
 --------------------------------
 | Extent: USA - Indiana - Clinton county
@@ -48261,6 +48313,32 @@ NATRF2022e2020 / Indiana Crawford-Lawrence-Orange (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22406')
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22405 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Daviess-Greene
+---------------------------------------
+| Extent: USA - Indiana - counties of Daviess and Greene
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DAVIESS_GREENE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22435')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DAVIESS_GREENE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22435')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22436 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Daviess-Greene (ft)
+--------------------------------------------
+| Extent: USA - Indiana - counties of Daviess and Greene
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DAVIESS_GREENE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22436')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DAVIESS_GREENE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22436')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22435 for equivalent CRS in meters.
 
 NATRF2022e2020 / Indiana DeKalb
 -------------------------------
@@ -48340,6 +48418,32 @@ NATRF2022e2020 / Indiana Decatur-Rush (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22327 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana Dubois-Martin
+--------------------------------------
+| Extent: USA - Indiana - counties of Dubois and Martin
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DUBOIS_MARTIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22429')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DUBOIS_MARTIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22429')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22430 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Dubois-Martin (ft)
+-------------------------------------------
+| Extent: USA - Indiana - counties of Dubois and Martin
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DUBOIS_MARTIN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22430')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_DUBOIS_MARTIN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22430')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22429 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana Elkhart-Kosciusko-Wabash
 -------------------------------------------------
 | Extent: USA - Indiana - counties of Elkhart, Kosciusko and Wabash
@@ -48392,6 +48496,32 @@ NATRF2022e2020 / Indiana Fayette-Franklin-Union (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22303 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana Fountain-Warren
+----------------------------------------
+| Extent: USA - Indiana - counties of Fountain and Warren
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_FOUNTAIN_WARREN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22453')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_FOUNTAIN_WARREN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22453')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22454 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Fountain-Warren (ft)
+---------------------------------------------
+| Extent: USA - Indiana - counties of Fountain and Warren
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_FOUNTAIN_WARREN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22454')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_FOUNTAIN_WARREN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22454')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22453 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana Fulton-Marshall-St Joseph
 --------------------------------------------------
 | Extent: USA - Indiana - counties of Fulton, Marshall and St Joseph
@@ -48417,6 +48547,32 @@ NATRF2022e2020 / Indiana Fulton-Marshall-St Joseph (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22384')
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22383 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Gibson
+-------------------------------
+| Extent: USA - Indiana - Gibson county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_GIBSON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22469')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_GIBSON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22469')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22470 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Gibson (ft)
+------------------------------------
+| Extent: USA - Indiana - Gibson county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_GIBSON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22470')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_GIBSON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22470')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22469 for equivalent CRS in meters.
 
 NATRF2022e2020 / Indiana Grant
 ------------------------------
@@ -48626,6 +48782,32 @@ NATRF2022e2020 / Indiana Jackson (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). See code 22373 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana Jasper-Porter
+--------------------------------------
+| Extent: USA - Indiana - counties of Jasper and Porter
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_JASPER_PORTER)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22447')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_JASPER_PORTER)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22447')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22448 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Jasper-Porter (ft)
+-------------------------------------------
+| Extent: USA - Indiana - counties of Jasper and Porter
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_JASPER_PORTER_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22448')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_JASPER_PORTER_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22448')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22447 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana Jay
 ----------------------------
 | Extent: USA - Indiana - Jay county
@@ -48730,6 +48912,32 @@ NATRF2022e2020 / Indiana Johnson-Marion (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22377 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana Knox
+-----------------------------
+| Extent: USA - Indiana - Knox county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_KNOX)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22467')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_KNOX)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22467')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22468 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Knox (ft)
+----------------------------------
+| Extent: USA - Indiana - Knox county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_KNOX_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22468')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_KNOX_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22468')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22467 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana LaGrange-Noble
 ---------------------------------------
 | Extent: USA - Indiana - counties of LaGrange and Noble
@@ -48756,6 +48964,58 @@ NATRF2022e2020 / Indiana LaGrange-Noble (ft)
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22343 for equivalent CRS in meters.
 
+NATRF2022e2020 / Indiana LaPorte-Pulaski-Starke
+-----------------------------------------------
+| Extent: USA - Indiana - counties of LaPorte, Pulaski and Starke
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAPORTE_PULASKI_STARKE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22445')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAPORTE_PULASKI_STARKE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22445')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22446 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana LaPorte-Pulaski-Starke (ft)
+----------------------------------------------------
+| Extent: USA - Indiana - counties of LaPorte, Pulaski and Starke
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAPORTE_PULASKI_STARKE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22446')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAPORTE_PULASKI_STARKE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22446')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22445 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Lake-Newton
+------------------------------------
+| Extent: USA - Indiana - counties of Lake and Newton
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAKE_NEWTON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22449')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAKE_NEWTON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22449')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22450 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Lake-Newton (ft)
+-----------------------------------------
+| Extent: USA - Indiana - counties of Lake and Newton
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAKE_NEWTON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22450')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_LAKE_NEWTON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22450')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22449 for equivalent CRS in meters.
+
 NATRF2022e2020 / Indiana Monroe-Morgan
 --------------------------------------
 | Extent: USA - Indiana - counties of Monroe and Morgan
@@ -48781,6 +49041,84 @@ NATRF2022e2020 / Indiana Monroe-Morgan (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22400')
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22399 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Montgomery-Putnam
+------------------------------------------
+| Extent: USA - Indiana - counties of Montgomery and Putnam
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_MONTGOMERY_PUTNAM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22441')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_MONTGOMERY_PUTNAM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22441')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22442 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Montgomery-Putnam (ft)
+-----------------------------------------------
+| Extent: USA - Indiana - counties of Montgomery and Putnam
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_MONTGOMERY_PUTNAM_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22442')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_MONTGOMERY_PUTNAM_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22442')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22441 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Owen
+-----------------------------
+| Extent: USA - Indiana - Owen county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_OWEN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22437')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_OWEN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22437')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22438 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Owen (ft)
+----------------------------------
+| Extent: USA - Indiana - Owen county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_OWEN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22438')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_OWEN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22438')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22437 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Parke-Vermillion
+-----------------------------------------
+| Extent: USA - Indiana - counties of Parke and Vermillion
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_PARKE_VERMILLION)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22455')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_PARKE_VERMILLION)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22455')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22456 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Parke-Vermillion (ft)
+----------------------------------------------
+| Extent: USA - Indiana - counties of Parke and Vermillion
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_PARKE_VERMILLION_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22456')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_PARKE_VERMILLION_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22456')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22455 for equivalent CRS in meters.
 
 NATRF2022e2020 / Indiana Perry
 ------------------------------
@@ -48833,6 +49171,32 @@ NATRF2022e2020 / Indiana Pike-Warrick (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22428')
 
 Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22427 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Posey
+------------------------------
+| Extent: USA - Indiana - Posey county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_POSEY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22473')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_POSEY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22473')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22474 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Posey (ft)
+-----------------------------------
+| Extent: USA - Indiana - Posey county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_POSEY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22474')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_POSEY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22474')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22473 for equivalent CRS in meters.
 
 NATRF2022e2020 / Indiana Randolph-Wayne
 ---------------------------------------
@@ -48963,6 +49327,110 @@ NATRF2022e2020 / Indiana Steuben (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22268')
 
 Part of the Indiana Geospatial Coordinate System (InGCS). See code 22267 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Sullivan
+---------------------------------
+| Extent: USA - Indiana - Sullivan county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_SULLIVAN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22459')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_SULLIVAN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22459')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22460 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Sullivan (ft)
+--------------------------------------
+| Extent: USA - Indiana - Sullivan county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_SULLIVAN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22460')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_SULLIVAN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22460')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22459 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Tippecanoe-White
+-----------------------------------------
+| Extent: USA - Indiana - counties of Tippecanoe and White
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_TIPPECANOE_WHITE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22443')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_TIPPECANOE_WHITE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22443')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22444 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Tippecanoe-White (ft)
+----------------------------------------------
+| Extent: USA - Indiana - counties of Tippecanoe and White
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_TIPPECANOE_WHITE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22444')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_TIPPECANOE_WHITE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22444')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). Defined by InDoT as separate zones for each county, these having identical parameter values. See code 22443 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Vanderburgh
+------------------------------------
+| Extent: USA - Indiana - Vanderburgh county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VANDERBURGH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22471')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VANDERBURGH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22471')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22472 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Vanderburgh (ft)
+-----------------------------------------
+| Extent: USA - Indiana - Vanderburgh county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VANDERBURGH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22472')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VANDERBURGH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22472')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22471 for equivalent CRS in meters.
+
+NATRF2022e2020 / Indiana Vigo
+-----------------------------
+| Extent: USA - Indiana - Vigo county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VIGO)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22457')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VIGO)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22457')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22458 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Indiana Vigo (ft)
+----------------------------------
+| Extent: USA - Indiana - Vigo county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VIGO_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22458')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_INDIANA_VIGO_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22458')
+
+Part of the Indiana Geospatial Coordinate System (InGCS). See code 22457 for equivalent CRS in meters.
 
 NATRF2022e2020 / Indiana Wells
 ------------------------------
@@ -49380,6 +49848,526 @@ NATRF2022e2020 / Iowa Waterloo (ft)
 
 Part of the Iowa Regional Coordinate System (IaRCS). See code 22485 for equivalent CRS in meters.
 
+NATRF2022e2020 / Kansas
+-----------------------
+| Extent: USA - Kansas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22511')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22511')
+
+See code 22512 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas (ft)
+----------------------------
+| Extent: USA - Kansas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22512')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22512')
+
+See code 22511 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Arkansas City
+-------------------------------------
+| Extent: USA - Kansas - counties of Cowley; Harper; Sumner
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ARKANSAS_CITY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22555')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ARKANSAS_CITY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22555')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22556 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Arkansas City (ft)
+------------------------------------------
+| Extent: USA - Kansas - counties of Cowley; Harper; Sumner
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ARKANSAS_CITY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22556')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ARKANSAS_CITY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22556')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22555 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Atchison
+--------------------------------
+| Extent: USA - Kansas - counties of Atchison; Brown; Doniphan; Jackson; Marshall; Nemaha
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ATCHISON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22539')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ATCHISON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22539')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22540 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Atchison (ft)
+-------------------------------------
+| Extent: USA - Kansas - counties of Atchison; Brown; Doniphan; Jackson; Marshall; Nemaha
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ATCHISON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22540')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ATCHISON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22540')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22539 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Beloit
+------------------------------
+| Extent: USA - Kansas - counties of Ellsworth; Jewell; Lincoln; Mitchell; Rice
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_BELOIT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22531')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_BELOIT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22531')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22532 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Beloit (ft)
+-----------------------------------
+| Extent: USA - Kansas - counties of Ellsworth; Jewell; Lincoln; Mitchell; Rice
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_BELOIT_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22532')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_BELOIT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22532')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22531 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Coffeyville
+-----------------------------------
+| Extent: USA - Kansas - counties of Chautauqua; Coffey; Elk; Greenwood; Montgomery; Osage; Wilson; Woodson
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COFFEYVILLE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22557')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COFFEYVILLE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22557')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22558 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Coffeyville (ft)
+----------------------------------------
+| Extent: USA - Kansas - counties of Chautauqua; Coffey; Elk; Greenwood; Montgomery; Osage; Wilson; Woodson
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COFFEYVILLE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22558')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COFFEYVILLE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22558')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22557 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Colby
+-----------------------------
+| Extent: USA - Kansas - counties of Logan; Rawlins; Thomas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COLBY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22515')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COLBY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22515')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22516 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Colby (ft)
+----------------------------------
+| Extent: USA - Kansas - counties of Logan; Rawlins; Thomas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COLBY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22516')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_COLBY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22516')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22515 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Dodge City
+----------------------------------
+| Extent: USA - Kansas - counties of Clark; Ford; Hodgeman; Ness
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_DODGE_CITY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22547')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_DODGE_CITY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22547')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22548 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Dodge City (ft)
+---------------------------------------
+| Extent: USA - Kansas - counties of Clark; Ford; Hodgeman; Ness
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_DODGE_CITY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22548')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_DODGE_CITY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22548')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22547 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Emporia
+-------------------------------
+| Extent: USA - Kansas - counties of Chase; Lyon; Morris
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_EMPORIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22537')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_EMPORIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22537')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22538 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Emporia (ft)
+------------------------------------
+| Extent: USA - Kansas - counties of Chase; Lyon; Morris
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_EMPORIA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22538')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_EMPORIA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22538')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22537 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Garden City
+-----------------------------------
+| Extent: USA - Kansas - counties of Finney; Gray; Haskell; Lane; Meade; Scott; Seward
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GARDEN_CITY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22545')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GARDEN_CITY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22545')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22546 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Garden City (ft)
+----------------------------------------
+| Extent: USA - Kansas - counties of Finney; Gray; Haskell; Lane; Meade; Scott; Seward
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GARDEN_CITY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22546')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GARDEN_CITY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22546')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22545 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Goodland
+--------------------------------
+| Extent: USA - Kansas - counties of Cheyenne; Sherman; Wallace
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GOODLAND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22513')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GOODLAND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22513')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22514 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Goodland (ft)
+-------------------------------------
+| Extent: USA - Kansas - counties of Cheyenne; Sherman; Wallace
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GOODLAND_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22514')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GOODLAND_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22514')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22513 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Great Bend
+----------------------------------
+| Extent: USA - Kansas - counties of Barton; Osborne; Russell; Smith
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GREAT_BEND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22527')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GREAT_BEND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22527')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22528 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Great Bend (ft)
+---------------------------------------
+| Extent: USA - Kansas - counties of Barton; Osborne; Russell; Smith
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GREAT_BEND_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22528')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_GREAT_BEND_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22528')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22527 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Hays
+----------------------------
+| Extent: USA - Kansas - counties of Ellis; Graham; Norton; Phillips; Rooks; Trego
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_HAYS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22519')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_HAYS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22519')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22520 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Hays (ft)
+---------------------------------
+| Extent: USA - Kansas - counties of Ellis; Graham; Norton; Phillips; Rooks; Trego
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_HAYS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22520')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_HAYS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22520')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22519 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Larned
+------------------------------
+| Extent: USA - Kansas - counties of Comanche; Edwards; Kiowa; Pawnee; Rush
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_LARNED)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22549')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_LARNED)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22549')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22550 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Larned (ft)
+-----------------------------------
+| Extent: USA - Kansas - counties of Comanche; Edwards; Kiowa; Pawnee; Rush
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_LARNED_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22550')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_LARNED_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22550')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22549 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Manhattan
+---------------------------------
+| Extent: USA - Kansas - counties of Geary; Pottawatomie; Riley; Wabaunsee
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_MANHATTAN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22535')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_MANHATTAN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22535')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22536 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Manhattan (ft)
+--------------------------------------
+| Extent: USA - Kansas - counties of Geary; Pottawatomie; Riley; Wabaunsee
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_MANHATTAN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22536')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_MANHATTAN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22536')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22535 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Oberlin
+-------------------------------
+| Extent: USA - Kansas - counties of Decatur; Gove; Sheridan
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_OBERLIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22517')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_OBERLIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22517')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22518 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Oberlin (ft)
+------------------------------------
+| Extent: USA - Kansas - counties of Decatur; Gove; Sheridan
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_OBERLIN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22518')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_OBERLIN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22518')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22517 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Pittsburg
+---------------------------------
+| Extent: USA - Kansas - counties of Allen; Anderson; Bourbon; Cherokee; Crawford; Franklin; Labette; Linn; Miami; Neosho
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PITTSBURG)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22559')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PITTSBURG)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22559')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22560 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Pittsburg (ft)
+--------------------------------------
+| Extent: USA - Kansas - counties of Allen; Anderson; Bourbon; Cherokee; Crawford; Franklin; Labette; Linn; Miami; Neosho
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PITTSBURG_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22560')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PITTSBURG_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22560')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22559 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Pratt
+-----------------------------
+| Extent: USA - Kansas - counties of Barber; Pratt; Stafford
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PRATT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22551')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PRATT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22551')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22552 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Pratt (ft)
+----------------------------------
+| Extent: USA - Kansas - counties of Barber; Pratt; Stafford
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PRATT_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22552')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_PRATT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22552')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22551 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Salina
+------------------------------
+| Extent: USA - Kansas - counties of Clay; Cloud; Dickinson; Marion; McPherson; Ottawa; Republic; Saline; Washington
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_SALINA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22533')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_SALINA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22533')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22534 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Salina (ft)
+-----------------------------------
+| Extent: USA - Kansas - counties of Clay; Cloud; Dickinson; Marion; McPherson; Ottawa; Republic; Saline; Washington
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_SALINA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22534')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_SALINA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22534')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22533 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Ulysses
+-------------------------------
+| Extent: USA - Kansas - counties of Grant; Greeley; Hamilton; Kearny; Morton; Stanton; Stevens; Wichita
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ULYSSES)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22543')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ULYSSES)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22543')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22544 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Ulysses (ft)
+------------------------------------
+| Extent: USA - Kansas - counties of Grant; Greeley; Hamilton; Kearny; Morton; Stanton; Stevens; Wichita
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ULYSSES_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22544')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_ULYSSES_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22544')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22543 for equivalent CRS in meters.
+
+NATRF2022e2020 / Kansas Wichita
+-------------------------------
+| Extent: USA - Kansas - counties of Butler; Harvey; Kingman; Reno; Sedgwick
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_WICHITA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22553')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_WICHITA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22553')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22554 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Kansas Wichita (ft)
+------------------------------------
+| Extent: USA - Kansas - counties of Butler; Harvey; Kingman; Reno; Sedgwick
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_WICHITA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22554')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_KANSAS_WICHITA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22554')
+
+Part of the Kansas Regional Coordinate System (KRCS). See code 22553 for equivalent CRS in meters.
+
 NATRF2022e2020 / Kentucky
 -------------------------
 | Extent: USA - Kentucky
@@ -49405,6 +50393,84 @@ NATRF2022e2020 / Kentucky (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22562')
 
 See code 22561 for equivalent CRS in meters.
+
+NATRF2022e2020 / Louisiana
+--------------------------
+| Extent: USA - Louisiana
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22577')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22577')
+
+See code 22578 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Louisiana (ft)
+-------------------------------
+| Extent: USA - Louisiana
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22578')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22578')
+
+See code 22577 for equivalent CRS in meters.
+
+NATRF2022e2020 / Louisiana North
+--------------------------------
+| Extent: USA - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne; Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches; Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_NORTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22579')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_NORTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22579')
+
+See code 22580 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Louisiana North (ft)
+-------------------------------------
+| Extent: USA - Louisiana - counties of Avoyelles; Bienville; Bossier; Caddo; Caldwell; Catahoula; Claiborne; Concordia; De Soto; East Carroll; Franklin; Grant; Jackson; La Salle; Lincoln; Madison; Morehouse; Natchitoches; Ouachita; Rapides; Red River; Richland; Sabine; Tensas; Union; Vernon; Webster; West Carroll; Winn
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_NORTH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22580')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_NORTH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22580')
+
+See code 22579 for equivalent CRS in meters.
+
+NATRF2022e2020 / Louisiana South
+--------------------------------
+| Extent: USA - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche; Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton Rouge; West Feliciana
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_SOUTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22581')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_SOUTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22581')
+
+See code 22582 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Louisiana South (ft)
+-------------------------------------
+| Extent: USA - Louisiana - counties of Acadia; Allen; Ascension; Assumption; Beauregard; Calcasieu; Cameron; East Baton Rouge; East Feliciana; Evangeline; Iberia; Iberville; Jefferson; Jefferson Davis; Lafayette; LaFourche; Livingston; Orleans; Plaquemines; Pointe Coupee; St Bernard; St Charles; St Helena; St James; St John the Baptist; St Landry; St Martin; St Mary; St Tammany; Tangipahoa; Terrebonne; Vermilion; Washington; West Baton Rouge; West Feliciana
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_SOUTH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22582')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_LOUISIANA_SOUTH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22582')
+
+See code 22581 for equivalent CRS in meters.
 
 NATRF2022e2020 / Maine
 ----------------------
@@ -49613,6 +50679,84 @@ NATRF2022e2020 / Minnesota (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22674')
 
 See code 22673 for equivalent CRS in meters.
+
+NATRF2022e2020 / Mississippi
+----------------------------
+| Extent: USA - Mississippi
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22775')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22775')
+
+See code 22776 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Mississippi (ft)
+---------------------------------
+| Extent: USA - Mississippi
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22776')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22776')
+
+See code 22775 for equivalent CRS in meters.
+
+NATRF2022e2020 / Mississippi East
+---------------------------------
+| Extent: USA - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay; Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette; Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River; Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_EAST)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22777')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_EAST)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22777')
+
+See code 22778 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Mississippi East (ft)
+--------------------------------------
+| Extent: USA - Mississippi - counties of Alcorn; Attala; Benton; Calhoun; Chickasaw; Choctaw; Clarke; Clay; Covington; Forrest; George; Greene; Hancock; Harrison; Itawamba; Jackson; Jasper; Jones; Kemper; Lafayette; Lamar; Lauderdale; Leake; Lee; Lowndes; Marshall; Monroe; Neshoba; Newton; Noxubee; Oktibbeha; Pearl River; Perry; Pontotoc; Prentiss; Scott; Smith; Stone; Tippah; Tishomingo; Union; Wayne; Webster; Winston
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_EAST_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22778')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_EAST_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22778')
+
+See code 22777 for equivalent CRS in meters.
+
+NATRF2022e2020 / Mississippi West
+---------------------------------
+| Extent: USA - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto; Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln; Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate; Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_WEST)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22781')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_WEST)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22781')
+
+See code 22782 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Mississippi West (ft)
+--------------------------------------
+| Extent: USA - Mississippi - counties of Adams; Amite; Bolivar; Carroll; Claiborne; Coahoma; Copiah; De Soto; Franklin; Grenada; Hinds; Holmes; Humphreys; Issaquena; Jefferson; Jefferson Davis; Lawrence; Leflore; Lincoln; Madison; Marion; Montgomery; Panola; Pike; Quitman; Rankin; Sharkey; Simpson; Sunflower; Tallahatchie; Tate; Tunica; Walthall; Warren; Washington; Wilkinson; Yalobusha; Yazoo
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_WEST_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::22782')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_MISSISSIPPI_WEST_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::22782')
+
+See code 22781 for equivalent CRS in meters.
 
 NATRF2022e2020 / Missouri
 -------------------------
@@ -52474,6 +53618,1046 @@ NATRF2022e2020 / Oklahoma (ft)
 
 See code 23271 for equivalent CRS in meters.
 
+NATRF2022e2020 / Oregon
+-----------------------
+| Extent: USA - Oregon
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23349')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23349')
+
+See code 23350 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon (ft)
+----------------------------
+| Extent: USA - Oregon
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23350')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23350')
+
+See code 23349 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Baker
+-----------------------------
+| Extent: USA - Oregon - Baker City area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BAKER)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23351')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BAKER)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23351')
+
+See code 23352 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Baker (ft)
+----------------------------------
+| Extent: USA - Oregon - Baker City area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BAKER_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23352')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BAKER_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23352')
+
+See code 23351 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Bend-Burns
+----------------------------------
+| Extent: USA - Oregon - Bend-Burns area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_BURNS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23353')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_BURNS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23353')
+
+See code 23354 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Bend-Burns (ft)
+---------------------------------------
+| Extent: USA - Oregon - Bend-Burns area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_BURNS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23354')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_BURNS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23354')
+
+See code 23353 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Bend-Klamath Falls
+------------------------------------------
+| Extent: USA - Oregon - Bend-Klamath Falls area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_KLAMATH_FALLS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23355')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_KLAMATH_FALLS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23355')
+
+See code 23356 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Bend-Klamath Falls (ft)
+-----------------------------------------------
+| Extent: USA - Oregon - Bend-Klamath Falls area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_KLAMATH_FALLS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23356')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_KLAMATH_FALLS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23356')
+
+See code 23355 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Bend-Redmond-Prineville
+-----------------------------------------------
+| Extent: USA - Oregon - Bend-Redmond-Prineville area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_REDMOND_PRINEVILLE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23357')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_REDMOND_PRINEVILLE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23357')
+
+See code 23358 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Bend-Redmond-Prineville (ft)
+----------------------------------------------------
+| Extent: USA - Oregon - Bend-Redmond-Prineville area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_REDMOND_PRINEVILLE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23358')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BEND_REDMOND_PRINEVILLE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23358')
+
+See code 23357 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Burns-Harper
+------------------------------------
+| Extent: USA - Oregon - Burns-Harper area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BURNS_HARPER)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23359')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BURNS_HARPER)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23359')
+
+See code 23360 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Burns-Harper (ft)
+-----------------------------------------
+| Extent: USA - Oregon - Burns-Harper area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BURNS_HARPER_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23360')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_BURNS_HARPER_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23360')
+
+See code 23359 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Canyon City-Burns
+-----------------------------------------
+| Extent: USA - Oregon - Canyon City-Burns area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYON_CITY_BURNS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23361')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYON_CITY_BURNS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23361')
+
+See code 23362 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Canyon City-Burns (ft)
+----------------------------------------------
+| Extent: USA - Oregon - Canyon City-Burns area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYON_CITY_BURNS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23362')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYON_CITY_BURNS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23362')
+
+See code 23361 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Canyonville-Grants Pass
+-----------------------------------------------
+| Extent: USA - Oregon - Canyonville-Grants Pass area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYONVILLE_GRANTS_PASS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23363')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYONVILLE_GRANTS_PASS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23363')
+
+See code 23364 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Canyonville-Grants Pass (ft)
+----------------------------------------------------
+| Extent: USA - Oregon - Canyonville-Grants Pass area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYONVILLE_GRANTS_PASS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23364')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_CANYONVILLE_GRANTS_PASS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23364')
+
+See code 23363 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Coast Range North
+-----------------------------------------
+| Extent: USA - Oregon - Coast Range North area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COAST_RANGE_NORTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23365')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COAST_RANGE_NORTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23365')
+
+See code 23366 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Coast Range North (ft)
+----------------------------------------------
+| Extent: USA - Oregon - Coast Range North area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COAST_RANGE_NORTH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23366')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COAST_RANGE_NORTH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23366')
+
+See code 23365 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Columbia River East
+-------------------------------------------
+| Extent: USA - Oregon - Columbia River area between approximately 122°07'W and 118°20'W
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_EAST)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23367')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_EAST)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23367')
+
+See code 23368 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Columbia River East (ft)
+------------------------------------------------
+| Extent: USA - Oregon - Columbia River area between approximately 122°07'W and 118°20'W
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_EAST_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23368')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_EAST_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23368')
+
+See code 23367 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Columbia River West
+-------------------------------------------
+| Extent: USA - Oregon - Columbia River area west of approximately 121°30'W
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_WEST)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23369')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_WEST)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23369')
+
+See code 23370 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Columbia River West (ft)
+------------------------------------------------
+| Extent: USA - Oregon - Columbia River area west of approximately 121°30'W
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_WEST_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23370')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COLUMBIA_RIVER_WEST_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23370')
+
+See code 23369 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Cottage Grove-Canyonville
+-------------------------------------------------
+| Extent: USA - Oregon - Cottage Grove-Canyonville area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COTTAGE_GROVE_CANYONVILLE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23371')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COTTAGE_GROVE_CANYONVILLE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23371')
+
+See code 23372 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Cottage Grove-Canyonville (ft)
+------------------------------------------------------
+| Extent: USA - Oregon - Cottage Grove-Canyonville area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COTTAGE_GROVE_CANYONVILLE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23372')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_COTTAGE_GROVE_CANYONVILLE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23372')
+
+See code 23371 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Dayville-Prairie City
+---------------------------------------------
+| Extent: USA - Oregon - Dayville-Prairie City area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DAYVILLE_PRAIRIE_CITY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23373')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DAYVILLE_PRAIRIE_CITY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23373')
+
+See code 23374 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Dayville-Prairie City (ft)
+--------------------------------------------------
+| Extent: USA - Oregon - Dayville-Prairie City area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DAYVILLE_PRAIRIE_CITY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23374')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DAYVILLE_PRAIRIE_CITY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23374')
+
+See code 23373 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Denio-Burns
+-----------------------------------
+| Extent: USA - Oregon - Denio-Burns area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DENIO_BURNS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23375')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DENIO_BURNS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23375')
+
+See code 23376 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Denio-Burns (ft)
+----------------------------------------
+| Extent: USA - Oregon - Denio-Burns area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DENIO_BURNS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23376')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DENIO_BURNS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23376')
+
+See code 23375 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Dufur-Madras
+------------------------------------
+| Extent: USA - Oregon - Dufur-Madras area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DUFUR_MADRAS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23377')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DUFUR_MADRAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23377')
+
+See code 23378 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Dufur-Madras (ft)
+-----------------------------------------
+| Extent: USA - Oregon - Dufur-Madras area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DUFUR_MADRAS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23378')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_DUFUR_MADRAS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23378')
+
+See code 23377 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Eugene
+------------------------------
+| Extent: USA - Oregon - Eugene area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_EUGENE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23379')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_EUGENE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23379')
+
+See code 23380 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Eugene (ft)
+-----------------------------------
+| Extent: USA - Oregon - Eugene area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_EUGENE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23380')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_EUGENE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23380')
+
+See code 23379 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Grants Pass-Ashland
+-------------------------------------------
+| Extent: USA - Oregon - Grants Pass-Ashland area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRANTS_PASS_ASHLAND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23381')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRANTS_PASS_ASHLAND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23381')
+
+See code 23382 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Grants Pass-Ashland (ft)
+------------------------------------------------
+| Extent: USA - Oregon - Grants Pass-Ashland area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRANTS_PASS_ASHLAND_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23382')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRANTS_PASS_ASHLAND_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23382')
+
+See code 23381 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Gresham-Warm Springs
+--------------------------------------------
+| Extent: USA - Oregon - Gresham-Warm Springs area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRESHAM_WARM_SPRINGS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23383')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRESHAM_WARM_SPRINGS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23383')
+
+See code 23384 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Gresham-Warm Springs (ft)
+-------------------------------------------------
+| Extent: USA - Oregon - Gresham-Warm Springs area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRESHAM_WARM_SPRINGS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23384')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_GRESHAM_WARM_SPRINGS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23384')
+
+See code 23383 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Halfway
+-------------------------------
+| Extent: USA - Oregon - Halfway area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_HALFWAY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23385')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_HALFWAY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23385')
+
+See code 23386 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Halfway (ft)
+------------------------------------
+| Extent: USA - Oregon - Halfway area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_HALFWAY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23386')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_HALFWAY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23386')
+
+See code 23385 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon La Grande
+---------------------------------
+| Extent: USA - Oregon - La Grande area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_LA_GRANDE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23387')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_LA_GRANDE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23387')
+
+See code 23388 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon La Grande (ft)
+--------------------------------------
+| Extent: USA - Oregon - La Grande area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_LA_GRANDE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23388')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_LA_GRANDE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23388')
+
+See code 23387 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Medford-Diamond Lake
+--------------------------------------------
+| Extent: USA - Oregon - Medford-Diamond Lake area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MEDFORD_DIAMOND_LAKE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23389')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MEDFORD_DIAMOND_LAKE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23389')
+
+See code 23390 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Medford-Diamond Lake (ft)
+-------------------------------------------------
+| Extent: USA - Oregon - Medford-Diamond Lake area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MEDFORD_DIAMOND_LAKE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23390')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MEDFORD_DIAMOND_LAKE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23390')
+
+See code 23389 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Mitchell
+--------------------------------
+| Extent: USA - Oregon - Mitchell area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MITCHELL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23395')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MITCHELL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23395')
+
+See code 23396 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Mitchell (ft)
+-------------------------------------
+| Extent: USA - Oregon - Mitchell area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MITCHELL_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23396')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_MITCHELL_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23396')
+
+See code 23395 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon North Central
+-------------------------------------
+| Extent: USA - Oregon - North Central area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_NORTH_CENTRAL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23397')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_NORTH_CENTRAL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23397')
+
+See code 23398 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon North Central (ft)
+------------------------------------------
+| Extent: USA - Oregon - North Central area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_NORTH_CENTRAL_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23398')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_NORTH_CENTRAL_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23398')
+
+See code 23397 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Ochoco Summit
+-------------------------------------
+| Extent: USA - Oregon - Ochoco Summit area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OCHOCO_SUMMIT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23399')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OCHOCO_SUMMIT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23399')
+
+See code 23400 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Ochoco Summit (ft)
+------------------------------------------
+| Extent: USA - Oregon - Ochoco Summit area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OCHOCO_SUMMIT_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23400')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OCHOCO_SUMMIT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23400')
+
+See code 23399 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Ontario
+-------------------------------
+| Extent: USA - Oregon - Ontario area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_ONTARIO)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23403')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_ONTARIO)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23403')
+
+See code 23404 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Ontario (ft)
+------------------------------------
+| Extent: USA - Oregon - Ontario area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_ONTARIO_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23404')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_ONTARIO_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23404')
+
+See code 23403 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Oregon Coast
+------------------------------------
+| Extent: USA - Oregon - coastal area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OREGON_COAST)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23405')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OREGON_COAST)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23405')
+
+See code 23406 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Oregon Coast (ft)
+-----------------------------------------
+| Extent: USA - Oregon - coastal area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OREGON_COAST_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23406')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OREGON_COAST_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23406')
+
+See code 23405 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Owyhee
+------------------------------
+| Extent: USA - Oregon - Owyhee area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OWYHEE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23407')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OWYHEE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23407')
+
+See code 23408 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Owyhee (ft)
+-----------------------------------
+| Extent: USA - Oregon - Owyhee area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OWYHEE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23408')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_OWYHEE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23408')
+
+See code 23407 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Pendleton
+---------------------------------
+| Extent: USA - Oregon - Pendleton area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23409')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23409')
+
+See code 23410 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Pendleton (ft)
+--------------------------------------
+| Extent: USA - Oregon - Pendleton area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23410')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23410')
+
+See code 23409 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Pendleton-La Grande
+-------------------------------------------
+| Extent: USA - Oregon - Pendleton-La Grande area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON_LA_GRANDE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23411')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON_LA_GRANDE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23411')
+
+See code 23412 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Pendleton-La Grande (ft)
+------------------------------------------------
+| Extent: USA - Oregon - Pendleton-La Grande area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON_LA_GRANDE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23412')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PENDLETON_LA_GRANDE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23412')
+
+See code 23411 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Pilot Rock-Ukiah
+----------------------------------------
+| Extent: USA - Oregon - Pilot Rock-Ukiah area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PILOT_ROCK_UKIAH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23413')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PILOT_ROCK_UKIAH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23413')
+
+See code 23414 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Pilot Rock-Ukiah (ft)
+---------------------------------------------
+| Extent: USA - Oregon - Pilot Rock-Ukiah area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PILOT_ROCK_UKIAH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23414')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PILOT_ROCK_UKIAH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23414')
+
+See code 23413 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Portland
+--------------------------------
+| Extent: USA - Oregon - Portland area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PORTLAND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23415')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PORTLAND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23415')
+
+See code 23416 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Portland (ft)
+-------------------------------------
+| Extent: USA - Oregon - Portland area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PORTLAND_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23416')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PORTLAND_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23416')
+
+See code 23415 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Prairie City-Brogan
+-------------------------------------------
+| Extent: USA - Oregon - Prairie City-Brogan area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PRAIRIE_CITY_BROGAN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23417')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PRAIRIE_CITY_BROGAN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23417')
+
+See code 23418 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Prairie City-Brogan (ft)
+------------------------------------------------
+| Extent: USA - Oregon - Prairie City-Brogan area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PRAIRIE_CITY_BROGAN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23418')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_PRAIRIE_CITY_BROGAN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23418')
+
+See code 23417 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Riley-Lakeview
+--------------------------------------
+| Extent: USA - Oregon - Riley-Lakeview area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_RILEY_LAKEVIEW)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23419')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_RILEY_LAKEVIEW)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23419')
+
+See code 23420 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Riley-Lakeview (ft)
+-------------------------------------------
+| Extent: USA - Oregon - Riley-Lakeview area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_RILEY_LAKEVIEW_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23420')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_RILEY_LAKEVIEW_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23420')
+
+See code 23419 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Salem
+-----------------------------
+| Extent: USA - Oregon - Salem area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SALEM)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23421')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SALEM)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23421')
+
+See code 23422 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Salem (ft)
+----------------------------------
+| Extent: USA - Oregon - Salem area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SALEM_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23422')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SALEM_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23422')
+
+See code 23421 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Santiam Pass
+------------------------------------
+| Extent: USA - Oregon - Sweet Home-Santiam Pass-Sisters area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SANTIAM_PASS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23423')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SANTIAM_PASS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23423')
+
+See code 23424 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Santiam Pass (ft)
+-----------------------------------------
+| Extent: USA - Oregon - Sweet Home-Santiam Pass-Sisters area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SANTIAM_PASS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23424')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SANTIAM_PASS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23424')
+
+See code 23423 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Siskiyou Pass
+-------------------------------------
+| Extent: USA - Oregon - Siskiyou Pass area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SISKIYOU_PASS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23425')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SISKIYOU_PASS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23425')
+
+See code 23426 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Siskiyou Pass (ft)
+------------------------------------------
+| Extent: USA - Oregon - Siskiyou Pass area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SISKIYOU_PASS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23426')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_SISKIYOU_PASS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23426')
+
+See code 23425 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Ukiah-Fox
+---------------------------------
+| Extent: USA - Oregon - Ukiah-Fox area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_UKIAH_FOX)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23427')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_UKIAH_FOX)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23427')
+
+See code 23428 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Ukiah-Fox (ft)
+--------------------------------------
+| Extent: USA - Oregon - Ukiah-Fox area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_UKIAH_FOX_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23428')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_UKIAH_FOX_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23428')
+
+See code 23427 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Wallowa
+-------------------------------
+| Extent: USA - Oregon - Wallowa area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WALLOWA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23429')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WALLOWA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23429')
+
+See code 23430 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Wallowa (ft)
+------------------------------------
+| Extent: USA - Oregon - Wallowa area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WALLOWA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23430')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WALLOWA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23430')
+
+See code 23429 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Warner Highway
+--------------------------------------
+| Extent: USA - Oregon - Warner Highway area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WARNER_HIGHWAY)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23435')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WARNER_HIGHWAY)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23435')
+
+See code 23436 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Warner Highway (ft)
+-------------------------------------------
+| Extent: USA - Oregon - Warner Highway area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WARNER_HIGHWAY_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23436')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WARNER_HIGHWAY_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23436')
+
+See code 23435 for equivalent CRS in meters.
+
+NATRF2022e2020 / Oregon Willamette Pass
+---------------------------------------
+| Extent: USA - Oregon - Willamette Pass area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WILLAMETTE_PASS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23437')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WILLAMETTE_PASS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23437')
+
+See code 23438 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Oregon Willamette Pass (ft)
+--------------------------------------------
+| Extent: USA - Oregon - Willamette Pass area
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WILLAMETTE_PASS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23438')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_OREGON_WILLAMETTE_PASS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23438')
+
+See code 23437 for equivalent CRS in meters.
+
 NATRF2022e2020 / Pennsylvania
 -----------------------------
 | Extent: USA - Pennsylvania
@@ -52603,6 +54787,162 @@ NATRF2022e2020 / Tennessee (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23510')
 
 See code 23509 for equivalent CRS in meters.
+
+NATRF2022e2020 / Texas
+----------------------
+| Extent: USA - Texas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23511')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23511')
+
+See code 23512 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Texas (ft)
+---------------------------
+| Extent: USA - Texas
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23512')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23512')
+
+See code 23511 for equivalent CRS in meters.
+
+NATRF2022e2020 / Texas Central
+------------------------------
+| Extent: USA - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson; Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls; Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble; Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland; Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine; San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler; Upton; Walker; Ward; Washington; Williamson; Winkler
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_CENTRAL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23517')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_CENTRAL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23517')
+
+See code 23518 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Texas Central (ft)
+-----------------------------------
+| Extent: USA - Texas - counties of Anderson; Angelina; Bastrop; Bell; Blanco; Bosque; Brazos; Brown; Burleson; Burnet; Cherokee; Coke; Coleman; Comanche; Concho; Coryell; Crane; Crockett; Culberson; Ector; El Paso; Falls; Freestone; Gillespie; Glasscock; Grimes; Hamilton; Hardin; Houston; Hudspeth; Irion; Jasper; Jeff Davis; Kimble; Lampasas; Lee; Leon; Liberty; Limestone; Llano; Loving; Madison; Mason; McCulloch; McLennan; Menard; Midland; Milam; Mills; Montgomery; Nacogdoches; Newton; Orange; Pecos; Polk; Reagan; Reeves; Robertson; Runnels; Sabine; San Augustine; San Jacinto; San Saba; Schleicher; Shelby; Sterling; Sutton; Tom Green; Travis; Trinity; Tyler; Upton; Walker; Ward; Washington; Williamson; Winkler
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_CENTRAL_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23518')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_CENTRAL_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23518')
+
+See code 23517 for equivalent CRS in meters.
+
+NATRF2022e2020 / Texas North
+----------------------------
+| Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23513')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23513')
+
+See code 23514 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Texas North (ft)
+---------------------------------
+| Extent: USA - Texas - counties of: Armstrong; Briscoe; Carson; Castro; Childress; Collingsworth; Dallam; Deaf Smith; Donley; Gray; Hall; Hansford; Hartley; Hemphill; Hutchinson; Lipscomb; Moore; Ochiltree; Oldham; Parmer; Potter; Randall; Roberts; Sherman; Swisher; Wheeler
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23514')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23514')
+
+See code 23513 for equivalent CRS in meters.
+
+NATRF2022e2020 / Texas North Central
+------------------------------------
+| Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay; Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin; Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson; Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb; Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker; Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor; Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH_CENTRAL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23515')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH_CENTRAL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23515')
+
+See code 23516 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Texas North Central (ft)
+-----------------------------------------
+| Extent: USA - Texas - counties of: Andrews; Archer; Bailey; Baylor; Borden; Bowie; Callahan; Camp; Cass; Clay; Cochran; Collin; Cooke; Cottle; Crosby; Dallas; Dawson; Delta; Denton; Dickens; Eastland; Ellis; Erath; Fannin; Fisher; Floyd; Foard; Franklin; Gaines; Garza; Grayson; Gregg; Hale; Hardeman; Harrison; Haskell; Henderson; Hill; Hockley; Hood; Hopkins; Howard; Hunt; Jack; Johnson; Jones; Kaufman; Kent; King; Knox; Lamar; Lamb; Lubbock; Lynn; Marion; Martin; Mitchell; Montague; Morris; Motley; Navarro; Nolan; Palo Pinto; Panola; Parker; Rains; Red River; Rockwall; Rusk; Scurry; Shackelford; Smith; Somervell; Stephens; Stonewall; Tarrant; Taylor; Terry; Throckmorton; Titus; Upshur; Van Zandt; Wichita; Wilbarger; Wise; Wood; Yoakum; Young
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH_CENTRAL_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23516')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_NORTH_CENTRAL_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23516')
+
+See code 23515 for equivalent CRS in meters.
+
+NATRF2022e2020 / Texas South
+----------------------------
+| Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces; San Patricio; Starr; Webb; Willacy; Zapata
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23521')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23521')
+
+See code 23522 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Texas South (ft)
+---------------------------------
+| Extent: USA - Texas - counties of Brooks; Cameron; Duval; Hidalgo; Jim Hogg; Jim Wells; Kenedy; Kleberg; Nueces; San Patricio; Starr; Webb; Willacy; Zapata
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23522')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23522')
+
+See code 23521 for equivalent CRS in meters.
+
+NATRF2022e2020 / Texas South Central
+------------------------------------
+| Extent: USA - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell; Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad; Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria; Waller; Wharton; Wilson; Zavala
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH_CENTRAL)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23519')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH_CENTRAL)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23519')
+
+See code 23520 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Texas South Central (ft)
+-----------------------------------------
+| Extent: USA - Texas - counties of Aransas; Atascosa; Austin; Bandera; Bee; Bexar; Brazoria; Brewster; Caldwell; Calhoun; Chambers; Colorado; Comal; De Witt; Dimmit; Edwards; Fayette; Fort Bend; Frio; Galveston; Goliad; Gonzales; Guadalupe; Harris; Hays; Jackson; Jefferson; Karnes; Kendall; Kerr; Kinney; La Salle; Lavaca; Live Oak; Matagorda; Maverick; McMullen; Medina; Presidio; Real; Refugio; Terrell; Uvalde; Val Verde; Victoria; Waller; Wharton; Wilson; Zavala
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH_CENTRAL_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::23520')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_TEXAS_SOUTH_CENTRAL_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::23520')
+
+See code 23519 for equivalent CRS in meters.
 
 NATRF2022e2020 / UTM zone 10N
 -----------------------------
@@ -53149,6 +55489,1566 @@ NATRF2022e2020 / West Virginia (ft)
     CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24116')
 
 See code 24115 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin
+--------------------------
+| Extent: USA - Wisconsin
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24117')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24117')
+
+See code 24118 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin (ft)
+-------------------------------
+| Extent: USA - Wisconsin
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24118')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24118')
+
+See code 24117 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Adams-Juneau
+---------------------------------------
+| Extent: USA - Wisconsin - counties of Adams and Juneau
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ADAMS_JUNEAU)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24119')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ADAMS_JUNEAU)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24119')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24120 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Adams-Juneau (ft)
+--------------------------------------------
+| Extent: USA - Wisconsin - counties of Adams and Juneau
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ADAMS_JUNEAU_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24120')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ADAMS_JUNEAU_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24120')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24119 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Ashland
+----------------------------------
+| Extent: USA - Wisconsin - Ashland county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ASHLAND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24121')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ASHLAND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24121')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24122 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Ashland (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Ashland county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ASHLAND_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24122')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ASHLAND_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24122')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24121 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Barron
+---------------------------------
+| Extent: USA - Wisconsin - Barron county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BARRON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24123')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BARRON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24123')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24124 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Barron (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Barron county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BARRON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24124')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BARRON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24124')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24123 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Bayfield
+-----------------------------------
+| Extent: USA - Wisconsin - Bayfield county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BAYFIELD)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24125')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BAYFIELD)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24125')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24126 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Bayfield (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Bayfield county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BAYFIELD_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24126')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BAYFIELD_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24126')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24125 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Brown
+--------------------------------
+| Extent: USA - Wisconsin - Brown county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BROWN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24127')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BROWN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24127')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24128 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Brown (ft)
+-------------------------------------
+| Extent: USA - Wisconsin - Brown county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BROWN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24128')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BROWN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24128')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24127 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Buffalo
+----------------------------------
+| Extent: USA - Wisconsin - Buffalo county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BUFFALO)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24131')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BUFFALO)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24131')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24132 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Buffalo (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Buffalo county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BUFFALO_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24132')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BUFFALO_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24132')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24131 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Burnett
+----------------------------------
+| Extent: USA - Wisconsin - Burnett county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BURNETT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24133')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BURNETT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24133')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24134 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Burnett (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Burnett county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BURNETT_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24134')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_BURNETT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24134')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24133 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Calumet-Fond du Lac-Outagamie-Winnebago
+------------------------------------------------------------------
+| Extent: USA - Wisconsin - counties of Calumet, Fond du Lac, Outagamie and Winnebago
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CALUMET_FOND_DU_LAC_OUTAGAMIE_WINNEBAGO)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24135')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CALUMET_FOND_DU_LAC_OUTAGAMIE_WINNEBAGO)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24135')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24136 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Calumet-Fond du Lac-Outagamie-Winnebago (ft)
+-----------------------------------------------------------------------
+| Extent: USA - Wisconsin - counties of Calumet, Fond du Lac, Outagamie and Winnebago
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CALUMET_FOND_DU_LAC_OUTAGAMIE_WINNEBAGO_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24136')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CALUMET_FOND_DU_LAC_OUTAGAMIE_WINNEBAGO_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24136')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24135 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Chippewa
+-----------------------------------
+| Extent: USA - Wisconsin - Chippewa county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CHIPPEWA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24137')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CHIPPEWA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24137')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24138 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Chippewa (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Chippewa county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CHIPPEWA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24138')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CHIPPEWA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24138')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24137 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Clark
+--------------------------------
+| Extent: USA - Wisconsin - Clark county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CLARK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24139')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CLARK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24139')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24140 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Clark (ft)
+-------------------------------------
+| Extent: USA - Wisconsin - Clark county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CLARK_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24140')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CLARK_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24140')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24139 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Columbia
+-----------------------------------
+| Extent: USA - Wisconsin - Columbia county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_COLUMBIA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24141')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_COLUMBIA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24141')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24142 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Columbia (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Columbia county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_COLUMBIA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24142')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_COLUMBIA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24142')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24141 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Crawford
+-----------------------------------
+| Extent: USA - Wisconsin - Crawford county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CRAWFORD)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24143')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CRAWFORD)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24143')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24144 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Crawford (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Crawford county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CRAWFORD_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24144')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_CRAWFORD_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24144')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24143 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Dane
+-------------------------------
+| Extent: USA - Wisconsin - Dane county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DANE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24145')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DANE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24145')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24146 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Dane (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Dane county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DANE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24146')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DANE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24146')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24145 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Dodge-Jefferson
+------------------------------------------
+| Extent: USA - Wisconsin - counties of Dodge and Jefferson
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DODGE_JEFFERSON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24147')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DODGE_JEFFERSON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24147')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24148 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Dodge-Jefferson (ft)
+-----------------------------------------------
+| Extent: USA - Wisconsin - counties of Dodge and Jefferson
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DODGE_JEFFERSON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24148')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DODGE_JEFFERSON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24148')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24147 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Door
+-------------------------------
+| Extent: USA - Wisconsin - Door county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOOR)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24149')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOOR)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24149')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24150 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Door (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Door county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOOR_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24150')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOOR_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24150')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24149 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Douglas
+----------------------------------
+| Extent: USA - Wisconsin - Douglas county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOUGLAS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24151')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOUGLAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24151')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24152 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Douglas (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Douglas county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOUGLAS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24152')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DOUGLAS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24152')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24151 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Dunn
+-------------------------------
+| Extent: USA - Wisconsin - Dunn county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DUNN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24153')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DUNN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24153')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24154 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Dunn (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Dunn county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DUNN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24154')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_DUNN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24154')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24153 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Eau Claire
+-------------------------------------
+| Extent: USA - Wisconsin - Eau Claire county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_EAU_CLAIRE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24155')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_EAU_CLAIRE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24155')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24156 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Eau Claire (ft)
+------------------------------------------
+| Extent: USA - Wisconsin - Eau Claire county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_EAU_CLAIRE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24156')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_EAU_CLAIRE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24156')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24155 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Florence
+-----------------------------------
+| Extent: USA - Wisconsin - Florence county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FLORENCE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24157')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FLORENCE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24157')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24158 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Florence (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Florence county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FLORENCE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24158')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FLORENCE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24158')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24157 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Forest
+---------------------------------
+| Extent: USA - Wisconsin - Forest county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FOREST)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24159')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FOREST)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24159')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24160 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Forest (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Forest county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FOREST_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24160')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_FOREST_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24160')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24159 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Grant
+--------------------------------
+| Extent: USA - Wisconsin - Grant county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GRANT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24161')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GRANT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24161')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24162 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Grant (ft)
+-------------------------------------
+| Extent: USA - Wisconsin - Grant county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GRANT_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24162')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GRANT_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24162')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24161 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Green Lake-Marquette
+-----------------------------------------------
+| Extent: USA - Wisconsin - counties of Green Lake and Marquette
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAKE_MARQUETTE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24165')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAKE_MARQUETTE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24165')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24166 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Green Lake-Marquette (ft)
+----------------------------------------------------
+| Extent: USA - Wisconsin - counties of Green Lake and Marquette
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAKE_MARQUETTE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24166')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAKE_MARQUETTE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24166')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24165 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Green-Lafayette
+------------------------------------------
+| Extent: USA - Wisconsin - counties of Green and Lafayette
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAFAYETTE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24163')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAFAYETTE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24163')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24164 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Green-Lafayette (ft)
+-----------------------------------------------
+| Extent: USA - Wisconsin - counties of Green and Lafayette
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAFAYETTE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24164')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_GREEN_LAFAYETTE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24164')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24163 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Iowa
+-------------------------------
+| Extent: USA - Wisconsin - Iowa county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IOWA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24167')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IOWA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24167')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24168 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Iowa (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Iowa county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IOWA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24168')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IOWA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24168')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24167 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Iron
+-------------------------------
+| Extent: USA - Wisconsin - Iron county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IRON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24169')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IRON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24169')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24170 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Iron (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Iron county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IRON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24170')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_IRON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24170')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24169 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Jackson
+----------------------------------
+| Extent: USA - Wisconsin - Jackson county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_JACKSON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24171')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_JACKSON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24171')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24172 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Jackson (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Jackson county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_JACKSON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24172')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_JACKSON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24172')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24171 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Kenosha-Milwaukee-Ozaukee-Racine
+-----------------------------------------------------------
+| Extent: USA - Wisconsin - counties of Kenosha, Milwaukee, Ozaukee and Racine
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KENOSHA_MILWAUKEE_OZAUKEE_RACINE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24173')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KENOSHA_MILWAUKEE_OZAUKEE_RACINE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24173')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24174 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Kenosha-Milwaukee-Ozaukee-Racine (ft)
+----------------------------------------------------------------
+| Extent: USA - Wisconsin - counties of Kenosha, Milwaukee, Ozaukee and Racine
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KENOSHA_MILWAUKEE_OZAUKEE_RACINE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24174')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KENOSHA_MILWAUKEE_OZAUKEE_RACINE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24174')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24173 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Kewaunee-Manitowoc-Sheboygan
+-------------------------------------------------------
+| Extent: USA - Wisconsin - counties of Kewaunee, Manitowoc and Sheboygan
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KEWAUNEE_MANITOWOC_SHEBOYGAN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24175')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KEWAUNEE_MANITOWOC_SHEBOYGAN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24175')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24176 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Kewaunee-Manitowoc-Sheboygan (ft)
+------------------------------------------------------------
+| Extent: USA - Wisconsin - counties of Kewaunee, Manitowoc and Sheboygan
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KEWAUNEE_MANITOWOC_SHEBOYGAN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24176')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_KEWAUNEE_MANITOWOC_SHEBOYGAN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24176')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24175 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin La Crosse
+------------------------------------
+| Extent: USA - Wisconsin - La Crosse county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LA_CROSSE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24177')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LA_CROSSE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24177')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24178 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin La Crosse (ft)
+-----------------------------------------
+| Extent: USA - Wisconsin - La Crosse county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LA_CROSSE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24178')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LA_CROSSE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24178')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24177 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Langlade
+-----------------------------------
+| Extent: USA - Wisconsin - Langlade county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LANGLADE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24179')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LANGLADE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24179')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24180 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Langlade (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Langlade county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LANGLADE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24180')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LANGLADE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24180')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24179 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Lincoln
+----------------------------------
+| Extent: USA - Wisconsin - Lincoln county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LINCOLN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24181')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LINCOLN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24181')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24182 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Lincoln (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Lincoln county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LINCOLN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24182')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_LINCOLN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24182')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24181 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Marathon
+-----------------------------------
+| Extent: USA - Wisconsin - Marathon county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARATHON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24183')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARATHON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24183')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24184 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Marathon (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Marathon county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARATHON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24184')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARATHON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24184')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24183 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Marinette
+------------------------------------
+| Extent: USA - Wisconsin - Marinette county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARINETTE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24185')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARINETTE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24185')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24186 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Marinette (ft)
+-----------------------------------------
+| Extent: USA - Wisconsin - Marinette county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARINETTE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24186')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MARINETTE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24186')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24185 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Menominee
+------------------------------------
+| Extent: USA - Wisconsin - Menominee county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MENOMINEE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24187')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MENOMINEE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24187')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24188 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Menominee (ft)
+-----------------------------------------
+| Extent: USA - Wisconsin - Menominee county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MENOMINEE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24188')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MENOMINEE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24188')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24187 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Monroe
+---------------------------------
+| Extent: USA - Wisconsin - Monroe county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MONROE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24189')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MONROE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24189')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24190 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Monroe (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Monroe county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MONROE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24190')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_MONROE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24190')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24189 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Oconto
+---------------------------------
+| Extent: USA - Wisconsin - Oconto county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_OCONTO)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24191')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_OCONTO)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24191')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24192 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Oconto (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Oconto county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_OCONTO_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24192')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_OCONTO_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24192')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24191 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Oneida
+---------------------------------
+| Extent: USA - Wisconsin - Oneida county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ONEIDA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24193')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ONEIDA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24193')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24194 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Oneida (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Oneida county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ONEIDA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24194')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ONEIDA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24194')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24193 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Pepin-Pierce
+---------------------------------------
+| Extent: USA - Wisconsin - counties of Pepin and Pierce
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PEPIN_PIERCE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24195')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PEPIN_PIERCE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24195')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24196 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Pepin-Pierce (ft)
+--------------------------------------------
+| Extent: USA - Wisconsin - counties of Pepin and Pierce
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PEPIN_PIERCE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24196')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PEPIN_PIERCE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24196')
+
+Part of the Wisconsin Grid Ground System (WIGGS). Defined by the Wisconsin State Cartographer’s Office as separate zones for each county, these having identical parameter values. See code 24195 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Polk
+-------------------------------
+| Extent: USA - Wisconsin - Polk county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_POLK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24197')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_POLK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24197')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24198 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Polk (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Polk county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_POLK_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24198')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_POLK_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24198')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24197 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Portage
+----------------------------------
+| Extent: USA - Wisconsin - Portage county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PORTAGE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24237')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PORTAGE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24237')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24238 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Portage (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Portage county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PORTAGE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24238')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PORTAGE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24238')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24237 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Price
+--------------------------------
+| Extent: USA - Wisconsin - Price county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PRICE)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24239')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PRICE)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24239')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24240 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Price (ft)
+-------------------------------------
+| Extent: USA - Wisconsin - Price county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PRICE_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24240')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_PRICE_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24240')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24239 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Richland
+-----------------------------------
+| Extent: USA - Wisconsin - Richland county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RICHLAND)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24241')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RICHLAND)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24241')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24242 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Richland (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Richland county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RICHLAND_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24242')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RICHLAND_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24242')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24241 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Rock
+-------------------------------
+| Extent: USA - Wisconsin - Rock county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ROCK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24243')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ROCK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24243')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24244 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Rock (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Rock county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ROCK_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24244')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ROCK_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24244')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24243 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Rusk
+-------------------------------
+| Extent: USA - Wisconsin - Rusk county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RUSK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24245')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RUSK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24245')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24246 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Rusk (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Rusk county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RUSK_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24246')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_RUSK_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24246')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24245 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Sauk
+-------------------------------
+| Extent: USA - Wisconsin - Sauk county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAUK)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24247')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAUK)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24247')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24248 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Sauk (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Sauk county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAUK_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24248')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAUK_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24248')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24247 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Sawyer
+---------------------------------
+| Extent: USA - Wisconsin - Sawyer county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAWYER)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24249')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAWYER)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24249')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24250 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Sawyer (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Sawyer county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAWYER_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24250')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SAWYER_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24250')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24249 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Shawano
+----------------------------------
+| Extent: USA - Wisconsin - Shawano county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SHAWANO)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24255')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SHAWANO)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24255')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24256 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Shawano (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Shawano county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SHAWANO_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24256')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_SHAWANO_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24256')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24255 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin St Croix
+-----------------------------------
+| Extent: USA - Wisconsin - St. Croix county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ST_CROIX)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24261')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ST_CROIX)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24261')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24262 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin St Croix (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - St. Croix county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ST_CROIX_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24262')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_ST_CROIX_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24262')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24261 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Taylor
+---------------------------------
+| Extent: USA - Wisconsin - Taylor county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TAYLOR)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24263')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TAYLOR)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24263')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24264 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Taylor (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Taylor county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TAYLOR_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24264')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TAYLOR_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24264')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24263 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Trempealeau
+--------------------------------------
+| Extent: USA - Wisconsin - Trempealeau county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TREMPEALEAU)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24265')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TREMPEALEAU)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24265')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24266 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Trempealeau (ft)
+-------------------------------------------
+| Extent: USA - Wisconsin - Trempealeau county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TREMPEALEAU_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24266')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_TREMPEALEAU_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24266')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24265 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Vernon
+---------------------------------
+| Extent: USA - Wisconsin - Vernon county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VERNON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24267')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VERNON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24267')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24268 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Vernon (ft)
+--------------------------------------
+| Extent: USA - Wisconsin - Vernon county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VERNON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24268')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VERNON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24268')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24267 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Vilas
+--------------------------------
+| Extent: USA - Wisconsin - Vilas county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VILAS)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24269')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VILAS)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24269')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24270 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Vilas (ft)
+-------------------------------------
+| Extent: USA - Wisconsin - Vilas county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VILAS_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24270')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_VILAS_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24270')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24269 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Walworth
+-----------------------------------
+| Extent: USA - Wisconsin - Walworth county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WALWORTH)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24271')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WALWORTH)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24271')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24272 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Walworth (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Walworth county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WALWORTH_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24272')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WALWORTH_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24272')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24271 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Washburn
+-----------------------------------
+| Extent: USA - Wisconsin - Washburn county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHBURN)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24273')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHBURN)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24273')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24274 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Washburn (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Washburn county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHBURN_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24274')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHBURN_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24274')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24273 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Washington
+-------------------------------------
+| Extent: USA - Wisconsin - Washington county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHINGTON)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24275')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHINGTON)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24275')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24276 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Washington (ft)
+------------------------------------------
+| Extent: USA - Wisconsin - Washington county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHINGTON_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24276')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WASHINGTON_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24276')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24275 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Waukesha
+-----------------------------------
+| Extent: USA - Wisconsin - Waukesha county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUKESHA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24277')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUKESHA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24277')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24278 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Waukesha (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Waukesha county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUKESHA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24278')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUKESHA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24278')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24277 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Waupaca
+----------------------------------
+| Extent: USA - Wisconsin - Waupaca county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUPACA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24279')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUPACA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24279')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24280 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Waupaca (ft)
+---------------------------------------
+| Extent: USA - Wisconsin - Waupaca county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUPACA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24280')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUPACA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24280')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24279 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Waushara
+-----------------------------------
+| Extent: USA - Wisconsin - Waushara county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUSHARA)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24281')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUSHARA)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24281')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24282 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Waushara (ft)
+----------------------------------------
+| Extent: USA - Wisconsin - Waushara county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUSHARA_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24282')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WAUSHARA_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24282')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24281 for equivalent CRS in meters.
+
+NATRF2022e2020 / Wisconsin Wood
+-------------------------------
+| Extent: USA - Wisconsin - Wood county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WOOD)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24283')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WOOD)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24283')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24284 for equivalent CRS in (international) feet.
+
+NATRF2022e2020 / Wisconsin Wood (ft)
+------------------------------------
+| Extent: USA - Wisconsin - Wood county
+
+.. code-block:: php
+
+    Projected::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WOOD_FT)
+    Projected::fromSRID('urn:ogc:def:crs:EPSG::24284')
+    CoordinateReferenceSystem::fromSRID(Projected::EPSG_NATRF2022E2020_WISCONSIN_WOOD_FT)
+    CoordinateReferenceSystem::fromSRID('urn:ogc:def:crs:EPSG::24284')
+
+Part of the Wisconsin Grid Ground System (WIGGS). See code 24283 for equivalent CRS in meters.
 
 NATRF2022e2020 / Wyoming
 ------------------------

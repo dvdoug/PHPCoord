@@ -12,6 +12,543 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait ProjectedConstantsChunk4
 {
     /**
+     * POSGAR 94 / Argentina 3
+     * Extent: Argentina - between 67°30'W and 64°30'W, onshore
+     * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 3 for scientific and many practical purposes
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
+     */
+    public const EPSG_POSGAR_94_ARGENTINA_3 = 'urn:ogc:def:crs:EPSG::22183';
+
+    /**
+     * POSGAR 94 / Argentina 4
+     * Extent: Argentina - between 64°30'W and 61°30'W, onshore
+     * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 4 for scientific and many practical purposes
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
+     */
+    public const EPSG_POSGAR_94_ARGENTINA_4 = 'urn:ogc:def:crs:EPSG::22184';
+
+    /**
+     * POSGAR 94 / Argentina 5
+     * Extent: Argentina - between 61°30'W and 58°30'W onshore
+     * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 5 for scientific and many practical purposes
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
+     */
+    public const EPSG_POSGAR_94_ARGENTINA_5 = 'urn:ogc:def:crs:EPSG::22185';
+
+    /**
+     * POSGAR 94 / Argentina 6
+     * Extent: Argentina - between 58°30'W and 55°30'W, onshore
+     * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 6 for scientific and many practical purposes
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
+     */
+    public const EPSG_POSGAR_94_ARGENTINA_6 = 'urn:ogc:def:crs:EPSG::22186';
+
+    /**
+     * POSGAR 94 / Argentina 7
+     * Extent: Argentina - east of 55°30'W, onshore
+     * Legally adopted in May 1997. Replaced by POSGAR 98 / Argentina 7 for scientific and many practical purposes
+     * until May 2009. Officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
+     */
+    public const EPSG_POSGAR_94_ARGENTINA_7 = 'urn:ogc:def:crs:EPSG::22187';
+
+    /**
+     * POSGAR 98 / Argentina 1
+     * Extent: Argentina - west of 70°30'W
+     * Replaced POSGAR 94 / Argentina 1 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 1 was officially replaced by POSGAR 2007 / Argentina 1 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_1 = 'urn:ogc:def:crs:EPSG::22171';
+
+    /**
+     * POSGAR 98 / Argentina 2
+     * Extent: Argentina - between 70°30'W and 67°30'W, onshore
+     * Replaced POSGAR 94 / Argentina 2 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 2 was officially replaced by POSGAR 2007 / Argentina 2 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_2 = 'urn:ogc:def:crs:EPSG::22172';
+
+    /**
+     * POSGAR 98 / Argentina 3
+     * Extent: Argentina - between 67°30'W and 64°30'W, onshore
+     * Replaced POSGAR 94 / Argentina 3 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 3 was officially replaced by POSGAR 2007 / Argentina 3 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_3 = 'urn:ogc:def:crs:EPSG::22173';
+
+    /**
+     * POSGAR 98 / Argentina 4
+     * Extent: Argentina - between 64°30'W and 61°30'W, onshore
+     * Replaced POSGAR 94 / Argentina 4 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 4 was officially replaced by POSGAR 2007 / Argentina 4 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_4 = 'urn:ogc:def:crs:EPSG::22174';
+
+    /**
+     * POSGAR 98 / Argentina 5
+     * Extent: Argentina - between 61°30'W and 58°30'W onshore
+     * Replaced POSGAR 94 / Argentina 5 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 5 was officially replaced by POSGAR 2007 / Argentina 5 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_5 = 'urn:ogc:def:crs:EPSG::22175';
+
+    /**
+     * POSGAR 98 / Argentina 6
+     * Extent: Argentina - between 58°30'W and 55°30'W, onshore
+     * Replaced POSGAR 94 / Argentina 6 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 6 was officially replaced by POSGAR 2007 / Argentina 6 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_6 = 'urn:ogc:def:crs:EPSG::22176';
+
+    /**
+     * POSGAR 98 / Argentina 7
+     * Extent: Argentina - east of 55°30'W, onshore
+     * Replaced POSGAR 94 / Argentina 7 for many practical purposes (but not as the legal system) until May 2009.
+     * POSGAR 94 / Argentina 7 was officially replaced by POSGAR 2007 / Argentina 7 in May 2009.
+     */
+    public const EPSG_POSGAR_98_ARGENTINA_7 = 'urn:ogc:def:crs:EPSG::22177';
+
+    /**
+     * PRS92 / Philippines zone 1
+     * Extent: Philippines - west of 118°E
+     * Replaces Luzon 1911 / Philippines zone I (CRS code 25391).
+     */
+    public const EPSG_PRS92_PHILIPPINES_ZONE_1 = 'urn:ogc:def:crs:EPSG::3121';
+
+    /**
+     * PRS92 / Philippines zone 2
+     * Extent: Philippines - approximately between 118°E and 120°E - Palawan; Calamian Islands
+     * Replaces Luzon 1911 / Philippines zone II (CRS code 25392).
+     */
+    public const EPSG_PRS92_PHILIPPINES_ZONE_2 = 'urn:ogc:def:crs:EPSG::3122';
+
+    /**
+     * PRS92 / Philippines zone 3
+     * Extent: Philippines - approximately between 120°E and 122°E. Luzon (west of 122°E); Mindoro
+     * Replaces Luzon 1911 / Philippines zone III (CRS code 25393).
+     */
+    public const EPSG_PRS92_PHILIPPINES_ZONE_3 = 'urn:ogc:def:crs:EPSG::3123';
+
+    /**
+     * PRS92 / Philippines zone 4
+     * Extent: Philippines - approximately between 122°E and 124°E - southeast Luzon (east of 122°E); Tablas;
+     * Masbate; Panay; Cebu; Negros; west Mindanao (west of 122°E)
+     * Replaces Luzon 1911 / Philippines zone IV (CRS code 25394).
+     */
+    public const EPSG_PRS92_PHILIPPINES_ZONE_4 = 'urn:ogc:def:crs:EPSG::3124';
+
+    /**
+     * PRS92 / Philippines zone 5
+     * Extent: Philippines - approximately between 124°E and 126°E, - east Mindanao (east of 124°E); Bohol; Samar
+     * Replaces Luzon 1911 / Philippines zone V (CRS code 25395).
+     */
+    public const EPSG_PRS92_PHILIPPINES_ZONE_5 = 'urn:ogc:def:crs:EPSG::3125';
+
+    /**
+     * PSAD56 / ICN Regional
+     * Extent: Venezuela - onshore.
+     */
+    public const EPSG_PSAD56_ICN_REGIONAL = 'urn:ogc:def:crs:EPSG::2317';
+
+    /**
+     * PSAD56 / Peru central zone
+     * Extent: Peru - between 79°W and 73°W, onshore.
+     */
+    public const EPSG_PSAD56_PERU_CENTRAL_ZONE = 'urn:ogc:def:crs:EPSG::24892';
+
+    /**
+     * PSAD56 / Peru east zone
+     * Extent: Peru - east of 73°W, onshore.
+     */
+    public const EPSG_PSAD56_PERU_EAST_ZONE = 'urn:ogc:def:crs:EPSG::24893';
+
+    /**
+     * PSAD56 / Peru west zone
+     * Extent: Peru - west of 79°W.
+     */
+    public const EPSG_PSAD56_PERU_WEST_ZONE = 'urn:ogc:def:crs:EPSG::24891';
+
+    /**
+     * PSAD56 / UTM zone 17N
+     * Extent: South America (Ecuador) between 84°W and 78°W, northern hemisphere, onshore.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_17N = 'urn:ogc:def:crs:EPSG::24817';
+
+    /**
+     * PSAD56 / UTM zone 17S
+     * Extent: South America (Ecuador and Peru) between 84°W and 78°W, southern hemisphere, onshore.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_17S = 'urn:ogc:def:crs:EPSG::24877';
+
+    /**
+     * PSAD56 / UTM zone 18N
+     * Extent: South America (Ecuador; Venezuela) between 78°W and 72°W, northern hemisphere, onshore
+     * In Venezuela also known as La Canoa / UTM zone 18N.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_18N = 'urn:ogc:def:crs:EPSG::24818';
+
+    /**
+     * PSAD56 / UTM zone 18S
+     * Extent: South America (Chile - north of 45°S; Ecuador; Peru) between 78°W and 72°W, southern hemisphere,
+     * onshore.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_18S = 'urn:ogc:def:crs:EPSG::24878';
+
+    /**
+     * PSAD56 / UTM zone 19N
+     * Extent: South America (Aruba; Bonaire; Curacao; Venezuela) between 72°W and 66°W, northern hemisphere, onshore
+     * In Venezuela also known as La Canoa / UTM zone 19N.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_19N = 'urn:ogc:def:crs:EPSG::24819';
+
+    /**
+     * PSAD56 / UTM zone 19S
+     * Extent: South America (Bolivia; Chile - north of 45°S; Peru) between 72°W and 66°W, southern hemisphere,
+     * onshore.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_19S = 'urn:ogc:def:crs:EPSG::24879';
+
+    /**
+     * PSAD56 / UTM zone 20N
+     * Extent: South America (Guyana; Venezuela) onshore between 66°W and 60°W, northern hemisphere
+     * In Venezuela also known as La Canoa / UTM zone 20N.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::24820';
+
+    /**
+     * PSAD56 / UTM zone 20S
+     * Extent: Bolivia between 66°W and 60°W.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_20S = 'urn:ogc:def:crs:EPSG::24880';
+
+    /**
+     * PSAD56 / UTM zone 21N
+     * Extent: South America (Guyana) onshore between 60°W and 54°W, northern hemisphere.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_21N = 'urn:ogc:def:crs:EPSG::24821';
+
+    /**
+     * PSAD56 / UTM zone 21S
+     * Extent: Bolivia - east of 60°W.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_21S = 'urn:ogc:def:crs:EPSG::24881';
+
+    /**
+     * PSAD56 / UTM zone 22S
+     * Extent: Brazil - offshore shelf - Amazon cone.
+     */
+    public const EPSG_PSAD56_UTM_ZONE_22S = 'urn:ogc:def:crs:EPSG::24882';
+
+    /**
+     * PSD93 / UTM zone 39N
+     * Extent: Oman - onshore west of 54°E
+     * Replaced Fahud / UTM zone 39N projCRS (code 23239) in 1993. Maximum differences to Fahud adjustment are 20
+     * metres.
+     */
+    public const EPSG_PSD93_UTM_ZONE_39N = 'urn:ogc:def:crs:EPSG::3439';
+
+    /**
+     * PSD93 / UTM zone 40N
+     * Extent: Oman - onshore east of 54°E. Includes Musandam and the Kuria Muria (Al Hallaniyah) islands
+     * Replaced Fahud / UTM zone 40N projCRS (code 23240) in 1993. Maximum differences to Fahud adjustment are 20
+     * metres.
+     */
+    public const EPSG_PSD93_UTM_ZONE_40N = 'urn:ogc:def:crs:EPSG::3440';
+
+    /**
+     * PTRA08 / LAEA Europe
+     * Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao
+     * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens
+     * At applicable scales and usages, may be considered consistent with ETRS89-extended / LAEA Europe (CRS code
+     * 3035): see CT 9045.
+     */
+    public const EPSG_PTRA08_LAEA_EUROPE = 'urn:ogc:def:crs:EPSG::5633';
+
+    /**
+     * PTRA08 / LCC Europe
+     * Extent: Portugal - Azores and Madeira island groups and surrounding EEZ - Flores, Corvo; Graciosa, Terceira, Sao
+     * Jorge, Pico, Faial; Sao Miguel, Santa Maria; Madeira, Porto Santo, Desertas; Selvagens
+     * At applicable scales (1:500,000 and smaller) may be considered consistent with ETRS89-extended / LCC Europe (CRS
+     * code 3034): see CT 9046.
+     */
+    public const EPSG_PTRA08_LCC_EUROPE = 'urn:ogc:def:crs:EPSG::5632';
+
+    /**
+     * PTRA08 / UTM zone 25N
+     * Extent: Portugal - west of 30°W - western Azores - Flores and Corvo islands and surrounding EEZ
+     * Replaces Azores Occidental 1939 / UTM zone 25N (CRS code 2188).
+     */
+    public const EPSG_PTRA08_UTM_ZONE_25N = 'urn:ogc:def:crs:EPSG::5014';
+
+    /**
+     * PTRA08 / UTM zone 26N
+     * Extent: Portugal - between 30°W and 24°W - central and eastern Azores - Graciosa, Terceira, Sao Jorge, Pico,
+     * Faial; Sao Miguel and Santa Maria islands and surrounding EEZ
+     * Replaces Azores Oriental 1995 / UTM zone 26N and Azores Central 1995 / UTM zone 26N (CRS codes 3062-63).
+     */
+    public const EPSG_PTRA08_UTM_ZONE_26N = 'urn:ogc:def:crs:EPSG::5015';
+
+    /**
+     * PTRA08 / UTM zone 28N
+     * Extent: Portugal - Madeira, Porto Santo, Desertas and Selvagens islands and surrounding EEZ east of 18°W
+     * Replaces Porto Santo 1995 / UTM zone 28N (CRS code 3061).
+     */
+    public const EPSG_PTRA08_UTM_ZONE_28N = 'urn:ogc:def:crs:EPSG::5016';
+
+    /**
+     * Puerto Rico State Plane CS of 1927
+     * Extent: Puerto Rico - onshore
+     * Sometimes erroneously referred to as NAD27 / Puerto Rico State Plane CS.
+     */
+    public const EPSG_PUERTO_RICO_STATE_PLANE_CS_OF_1927 = 'urn:ogc:def:crs:EPSG::3991';
+
+    /**
+     * Puerto Rico / St. Croix
+     * Extent: US Virgin Islands - onshore - St Croix, St John, and St Thomas
+     * Sometimes erroneously referred to as NAD27 / St. Croix State Plane CS.
+     */
+    public const EPSG_PUERTO_RICO_ST_CROIX = 'urn:ogc:def:crs:EPSG::3992';
+
+    /**
+     * Puerto Rico / UTM zone 20N
+     * Extent: British Virgin Islands - onshore - Anegada, Jost Van Dyke, Tortola, and Virgin Gorda
+     * NAD27 / UTM zone 20N (code 26720) used for military purposes. In 2002 replaced by NAD83 / UTM zone 20N (CRS code
+     * 26920).
+     */
+    public const EPSG_PUERTO_RICO_UTM_ZONE_20N = 'urn:ogc:def:crs:EPSG::3920';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 102E
+     * Extent: Russia - onshore between 100°30'E and 103°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 34 (code 2551).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_102E = 'urn:ogc:def:crs:EPSG::2610';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 105E
+     * Extent: Russia - onshore between 103°30'E and 106°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 35 (code 2552).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_105E = 'urn:ogc:def:crs:EPSG::2611';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 108E
+     * Extent: Russia - onshore between 106°30'E and 109°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 36 (code 2553).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_108E = 'urn:ogc:def:crs:EPSG::2612';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 111E
+     * Extent: Russia - onshore between 109°30'E and 112°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 37 (code 2554).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_111E = 'urn:ogc:def:crs:EPSG::2613';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 114E
+     * Extent: Russia - onshore between 112°30'E and 115°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 38 (code 2555).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_114E = 'urn:ogc:def:crs:EPSG::2614';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 117E
+     * Extent: Russia - onshore between 115°30'E and 118°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 39 (code 2556).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_117E = 'urn:ogc:def:crs:EPSG::2615';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 120E
+     * Extent: Russia - onshore between 118°30'E and 121°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 40 (code 2557).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_120E = 'urn:ogc:def:crs:EPSG::2616';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 123E
+     * Extent: Russia - onshore between 121°30'E and 124°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 41 (code 2558).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_123E = 'urn:ogc:def:crs:EPSG::2617';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 126E
+     * Extent: Russia - onshore between 124°30'E and 127°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 42 (code 2559).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_126E = 'urn:ogc:def:crs:EPSG::2618';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 129E
+     * Extent: Russia - onshore between 127°30'E and 130°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 43 (code 2560).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_129E = 'urn:ogc:def:crs:EPSG::2619';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 132E
+     * Extent: Russia - onshore between 130°30'E and 133°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 44 (code 2561).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_132E = 'urn:ogc:def:crs:EPSG::2620';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 135E
+     * Extent: Russia - onshore between 133°30'E and 136°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 45 (code 2562).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_135E = 'urn:ogc:def:crs:EPSG::2621';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 138E
+     * Extent: Russia - onshore between 136°30'E and 139°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 46 (code 2563).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_138E = 'urn:ogc:def:crs:EPSG::2622';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 141E
+     * Extent: Russia - onshore between 139°30'E and 142°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 47 (code 2564).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_141E = 'urn:ogc:def:crs:EPSG::2623';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 144E
+     * Extent: Russia - onshore between 142°30'E and 145°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 48 (code 2565).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_144E = 'urn:ogc:def:crs:EPSG::2624';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 147E
+     * Extent: Russia - onshore between 145°30'E and 148°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 49 (code 2566).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_147E = 'urn:ogc:def:crs:EPSG::2625';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 150E
+     * Extent: Russia - onshore between 148°30'E and 151°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 50 (code 2567).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_150E = 'urn:ogc:def:crs:EPSG::2626';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 153E
+     * Extent: Russia - onshore between 151°30'E and 154°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 51 (code 2568).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_153E = 'urn:ogc:def:crs:EPSG::2627';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 156E
+     * Extent: Russia - onshore between 154°30'E and 157°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 52 (code 2569).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_156E = 'urn:ogc:def:crs:EPSG::2628';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 159E
+     * Extent: Russia - onshore between 157°30'E and 160°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 53 (code 2570).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_159E = 'urn:ogc:def:crs:EPSG::2629';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 162E
+     * Extent: Russia - onshore between 160°30'E and 163°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 54 (code 2571).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_162E = 'urn:ogc:def:crs:EPSG::2630';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 165E
+     * Extent: Russia - onshore between 163°30'E and 166°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 55 (code 2572).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_165E = 'urn:ogc:def:crs:EPSG::2631';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 168E
+     * Extent: Russia - onshore between 166°30'E and 169°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 56 (code 2573).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_168E = 'urn:ogc:def:crs:EPSG::2632';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 168W
+     * Extent: Russia - onshore between 169°30'W and 166°30'W
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 64 (code 2581).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_168W = 'urn:ogc:def:crs:EPSG::2640';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 171E
+     * Extent: Russia - onshore between 169°30'E and 172°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 57 (code 2574).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_171E = 'urn:ogc:def:crs:EPSG::2633';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 171W
+     * Extent: Russia - onshore between 172°30'W and 169°30'W
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 63 (code 2580).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_171W = 'urn:ogc:def:crs:EPSG::2639';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 174E
+     * Extent: Russia - onshore between 172°30'E and 175°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 58 (code 2575).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_174E = 'urn:ogc:def:crs:EPSG::2634';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 174W
+     * Extent: Russia - onshore between 175°30'W and 172°30'W
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 62 (code 2579).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_174W = 'urn:ogc:def:crs:EPSG::2638';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 177E
+     * Extent: Russia - onshore between 175°30'E and 178°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 59 (code 2576).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_177E = 'urn:ogc:def:crs:EPSG::2635';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 177W
+     * Extent: Russia - onshore between 178°30'W and 175°30'W
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 61 (code 2578).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_177W = 'urn:ogc:def:crs:EPSG::2637';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 180E
+     * Extent: Russia - onshore between 178°30'E and 178°30'W
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 60 (code 3389).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_180E = 'urn:ogc:def:crs:EPSG::2636';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 21E
+     * Extent: Estonia, Latvia, Lithuania, Russia (Kaliningrad) and Ukraine - onshore between 19°30'E and 22°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 7 (code 2523).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_21E = 'urn:ogc:def:crs:EPSG::2582';
+
+    /**
+     * Pulkovo 1942 / 3-degree Gauss-Kruger CM 24E
+     * Extent: Belarus, Estonia, Latvia, Lithuania, Russia (Kaliningrad) and Ukraine - onshore between 22°30'E and
+     * 25°30'E
+     * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 8 (code 2524).
+     */
+    public const EPSG_PULKOVO_1942_3_DEGREE_GAUSS_KRUGER_CM_24E = 'urn:ogc:def:crs:EPSG::2583';
+
+    /**
      * Pulkovo 1942 / 3-degree Gauss-Kruger CM 27E
      * Extent: Belarus, Estonia, Latvia, Lithuania, Moldova, Russia and Ukraine - onshore between 25°30'E and 28°30'E
      * Truncated form of Pulkovo 1942 / 3-degree Gauss-Kruger zone 9 (code 2525).

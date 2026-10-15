@@ -5861,7 +5861,7 @@ class Datum
      * Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia, Nunavut,
      * Ontario, Prince Edward Island, Quebec, Saskatchewan and Yukon - plus offshore east coast west of 44°W and north
      * of 40°N. Cuba. El Salvador - onshore. Guatemala - onshore. Honduras - onshore. Panama - onshore. Puerto Rico -
-     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and.
+     * onshore. Mexico - onshore plus offshore east coast. Nicaragua - onshore. USA - Alaska and
      *
      * . US Virgin Islands - onshore
      * Fundamental point: Meade's Ranch. Latitude: 39°13'26.686"N, longitude: 98°32'30.506"W (of Greenwich).
