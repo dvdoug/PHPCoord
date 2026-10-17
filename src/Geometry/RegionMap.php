@@ -3703,7 +3703,7 @@ class RegionMap
         'urn:ogc:def:area:EPSG::4785' => self::REGION_EUROPE,
         'urn:ogc:def:area:EPSG::4786' => self::REGION_EUROPE,
         'urn:ogc:def:area:EPSG::4787' => self::REGION_EUROPE,
-        'urn:ogc:def:area:EPSG::4788' => self::REGION_EUROPE,
+        'urn:ogc:def:area:EPSG::4788' => self::REGION_NORTHAMERICA,
         'urn:ogc:def:area:EPSG::4789' => self::REGION_SOUTHAMERICA,
         'urn:ogc:def:area:EPSG::4790' => self::REGION_AFRICA,
         'urn:ogc:def:area:EPSG::4791' => self::REGION_AFRICA,
