@@ -1876,26 +1876,19 @@ class EPSGCodegenFromDataImport
     public function getBlacklistedOperations(): array
     {
         if ($this->blacklistedOperationsCache === null) {
-            $wgs84CopiesFromETRS89 = $this->determineOperationsToWGS84CopiedFromETRS89();
-            $etrs89CopiesFromWGS84 = $this->determineOperationsToETRS89CopiedFromWGS84();
-            $wgs84CopiesFromGDA94 = $this->determineOperationsToWGS84CopiedFromGDA94();
-            $wgs84CopiesFromSIRGAS = $this->determineOperationsToWGS84CopiedFromSIRGAS();
-            $wgs84CopiesFromNZGD = $this->determineOperationsToWGS84CopiedFromNZGD2000();
-            $projectedToProjected = $this->determineOperationsProjectedToProjected();
-            $blacklistedByScope = $this->determineOperationsInBlacklistedScopes();
-
             $this->blacklistedOperationsCache = [
                 ...self::BLACKLISTED_OPERATIONS,
                 ...$this->determineGridDepthOperations(),
                 ...$this->determineNonGridOperationsWithBetterSameExtentAlternative(),
-                ...$blacklistedByScope,
-                ...$wgs84CopiesFromETRS89,
-                ...$etrs89CopiesFromWGS84,
-                ...$wgs84CopiesFromGDA94,
+                ...$this->determineOperationsInBlacklistedScopes(),
+                ...$this->determineOperationsToWGS84CopiedFromETRS89(),
+                ...$this->determineOperationsToETRS89CopiedFromWGS84(),
+                ...$this->determineCrossYearETRFITRFOperations(),
+                ...$this->determineOperationsToWGS84CopiedFromGDA94(),
                 ...$this->determineOperationsToWGS84FromReplacedRealization(),
-                ...$wgs84CopiesFromSIRGAS,
-                ...$wgs84CopiesFromNZGD,
-                ...$projectedToProjected,
+                ...$this->determineOperationsToWGS84CopiedFromSIRGAS(),
+                ...$this->determineOperationsToWGS84CopiedFromNZGD2000(),
+                ...$this->determineOperationsProjectedToProjected(),
             ];
         }
 
@@ -1935,6 +1928,59 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $data[] = $row['coord_op_code'];
+        }
+
+        return $data;
+    }
+
+    /**
+     * Drop an ETRF↔ITRF operation when the frame years differ.
+     * Same-year ties stay, and so does ETRF2000↔ITRF2020.
+     * ETRF2000 because that's the recommended realization, ITRF2020 because it's the newest and is latest WGS84.
+     *
+     * @return list<int>
+     */
+    private function determineCrossYearETRFITRFOperations(): array
+    {
+        $sql = "
+            WITH frame AS (
+                SELECT datum_code,
+                       CASE
+                           WHEN datum_name LIKE 'European Terrestrial Reference Frame %' THEN 'ETRF'
+                           WHEN datum_name LIKE 'International Terrestrial Reference Frame %' THEN 'ITRF'
+                       END AS family,
+                       CASE
+                           WHEN datum_name LIKE 'European Terrestrial Reference Frame %'
+                               THEN substr(datum_name, length('European Terrestrial Reference Frame ') + 1)
+                           WHEN datum_name LIKE 'International Terrestrial Reference Frame %'
+                               THEN substr(datum_name, length('International Terrestrial Reference Frame ') + 1)
+                       END AS frame_year
+                FROM epsg_datum
+                WHERE datum_name LIKE 'European Terrestrial Reference Frame %'
+                   OR datum_name LIKE 'International Terrestrial Reference Frame %'
+            )
+            SELECT DISTINCT o.coord_op_code
+            FROM epsg_coordoperation o
+            JOIN epsg_coordinatereferencesystem sourcecrs ON sourcecrs.coord_ref_sys_code = o.source_crs_code
+            JOIN epsg_coordinatereferencesystem targetcrs ON targetcrs.coord_ref_sys_code = o.target_crs_code
+            JOIN frame sourceframe ON sourceframe.datum_code = sourcecrs.datum_code
+            JOIN frame targetframe ON targetframe.datum_code = targetcrs.datum_code
+            WHERE o.deprecated = 0
+              AND o.data_source != 'PHPCoord'
+              AND o.coord_op_type != 'conversion'
+              AND o.coord_op_type != 'concatenated operation'
+              AND sourceframe.family != targetframe.family
+              AND sourceframe.frame_year != targetframe.frame_year
+              AND NOT (
+                  (sourceframe.family = 'ETRF' AND sourceframe.frame_year = '2000' AND targetframe.family = 'ITRF' AND targetframe.frame_year = '2020')
+                  OR (targetframe.family = 'ETRF' AND targetframe.frame_year = '2000' AND sourceframe.family = 'ITRF' AND sourceframe.frame_year = '2020')
+              )
+            ";
+
+        $result = $this->dataDB->query($sql);
+        $data = [];
+        while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+            $data[] = (int) $row['coord_op_code'];
         }
 
         return $data;
