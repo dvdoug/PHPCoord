@@ -38,6 +38,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Coefficient;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use Psr\Log\LoggerInterface;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
 use function abs;
@@ -272,7 +273,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
         return GeographicPoint::create($geog3D, $geographic->getLatitude(), $geographic->getLongitude(), new Metre(0), $geographic->getCoordinateEpoch());
     }
 
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null, ?LoggerInterface $logger = null): Point
     {
         if ($to->getSRID() === $this->crs->getBaseCRS()->getSRID()) {
             $point = $this->asGeographicPoint();
@@ -283,7 +284,7 @@ class ProjectedPoint extends Point implements ConvertiblePoint
             return $point;
         }
 
-        return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+        return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
     }
 
     public function __toString(): string

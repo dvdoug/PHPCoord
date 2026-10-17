@@ -23,6 +23,7 @@ use PHPCoord\Geometry\Polygon;
 use PHPCoord\Geometry\Position;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Length\Length;
+use Psr\Log\LoggerInterface;
 
 use function str_replace;
 
@@ -120,9 +121,9 @@ class UTMPoint extends ProjectedPoint
         return $this->crs->getBaseCRS();
     }
 
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null, ?LoggerInterface $logger = null): Point
     {
-        return $this->asGeographicPoint()->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+        return $this->asGeographicPoint()->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
     }
 
     public function calculateDistance(Point $to): Length

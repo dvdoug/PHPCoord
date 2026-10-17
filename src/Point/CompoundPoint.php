@@ -34,6 +34,7 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
+use Psr\Log\LoggerInterface;
 use Throwable;
 
 use function assert;
@@ -134,23 +135,25 @@ class CompoundPoint extends Point implements ConvertiblePoint
         }
     }
 
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null, ?LoggerInterface $logger = null): Point
     {
         try {
-            return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+            return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
         } catch (UnknownConversionException $e) {
+            $logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
+
             // if 2D target, try again with just the horizontal component
             if ($to instanceof Geographic2D || $to instanceof Projected) {
-                return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
             }
 
             // try separate horizontal + vertical conversions and stitch results together
             if ($to instanceof Compound) {
                 /** @var GeographicPoint|ProjectedPoint $newHorizontalPoint */
-                $newHorizontalPoint = $this->horizontalPoint->convert($to->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                $newHorizontalPoint = $this->horizontalPoint->convert($to->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
 
                 if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
-                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions, maxChainDepth: $maxChainDepth);
+                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions, maxChainDepth: $maxChainDepth, logger: $logger);
 
                     if ($path) {
                         $newVerticalPoint = $this->verticalPoint;
@@ -159,6 +162,8 @@ class CompoundPoint extends Point implements ConvertiblePoint
                             /** @var VerticalPoint $newVerticalPoint */
                             $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), ['horizontalPoint' => $newHorizontalPoint]);
                         }
+
+                        $logger?->info('conversion path selected', ['steps' => $this->selectedConversionSteps($path)]);
 
                         return static::create($to, $newHorizontalPoint, $newVerticalPoint, $epoch ?? $this->epoch);
                     }
@@ -173,7 +178,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
                 try {
                     if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
                         /** @var GeographicPoint|ProjectedPoint $candidateHorizontalPoint */
-                        $candidateHorizontalPoint = $this->horizontalPoint->convert($candidateIntermediate->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                        $candidateHorizontalPoint = $this->horizontalPoint->convert($candidateIntermediate->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
                         $candidateIntermediatePoint = self::create(
                             $candidateIntermediate,
                             $candidateHorizontalPoint,
@@ -182,11 +187,12 @@ class CompoundPoint extends Point implements ConvertiblePoint
                         );
 
                         /** @var GeographicPoint $candidateBaseCRSPoint */
-                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
 
-                        return $candidateBaseCRSPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                        return $candidateBaseCRSPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
                     }
                 } catch (Throwable) {
+                    $logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
                 }
             }
             throw $e;

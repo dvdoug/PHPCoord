@@ -34,6 +34,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 use PHPCoord\Point\VerticalPoint;
+use Psr\Log\LoggerInterface;
 
 use function array_column;
 use function array_key_exists;
@@ -65,7 +66,7 @@ trait AutoConversion
     /**
      * @return ($to is Compound ? CompoundPoint : ($to is Geocentric ? GeocentricPoint : ($to is Geographic ? GeographicPoint : ($to is Projected ? ProjectedPoint : ($to is Vertical ? VerticalPoint: Point)))))
      */
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null, ?LoggerInterface $logger = null): Point
     {
         if ($this->getCRS() == $to) {
             if ($epoch) {
@@ -84,7 +85,7 @@ trait AutoConversion
         $sourceEpoch = $pointEpoch ? Year::fromDateTime($pointEpoch) : null;
         $targetEpoch = $epoch ? Year::fromDateTime($epoch) : $sourceEpoch;
 
-        $path = $this->findOperationPath($this->getCRS(), $to, $ignoreBoundaryRestrictions, $sourceEpoch, $targetEpoch, $maxChainDepth);
+        $path = $this->findOperationPath($this->getCRS(), $to, $ignoreBoundaryRestrictions, $sourceEpoch, $targetEpoch, $maxChainDepth, $logger);
 
         $point = $this;
         foreach ($path as $step) {
@@ -98,6 +99,8 @@ trait AutoConversion
                 $point = $point->atEpoch($step['slideAfter']->asDateTime());
             }
         }
+
+        $logger?->info('conversion path selected', ['steps' => $this->selectedConversionSteps($path)]);
 
         return $point;
     }
@@ -289,7 +292,7 @@ trait AutoConversion
     /**
      * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool, slideBefore: Year|null, slideAfter: Year|null}>
      */
-    protected function findOperationPath(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, bool $ignoreBoundaryRestrictions, ?Time $sourceEpoch = null, ?Time $targetEpoch = null, ?int $maxChainDepth = null): array
+    protected function findOperationPath(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $source, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $target, bool $ignoreBoundaryRestrictions, ?Time $sourceEpoch = null, ?Time $targetEpoch = null, ?int $maxChainDepth = null, ?LoggerInterface $logger = null): array
     {
         $boundaryCheckPoint = $ignoreBoundaryRestrictions ? null : $this->getPointForBoundaryCheck();
         $extentPoint = $boundaryCheckPoint ?? $this->getApproximatePointForExtentCheck();
@@ -304,7 +307,7 @@ trait AutoConversion
 
         $publishedYears = [];
         foreach ($candidatePaths as $candidatePath) {
-            $result = $this->validatePathForPoint($candidatePath['path'], $source, $target, $boundaryCheckPoint, $targetEpoch, $extentContainsCache);
+            $result = $this->validatePathForPoint($candidatePath['path'], $source, $target, $boundaryCheckPoint, $targetEpoch, $extentContainsCache, $logger);
             if (is_array($result)) {
                 return $result;
             }
@@ -344,6 +347,31 @@ trait AutoConversion
     }
 
     /**
+     * @param array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool, slideBefore: Year|null, slideAfter: Year|null}> $path
+     *
+     * @return list<array<string, mixed>>
+     */
+    private function selectedConversionSteps(array $path): array
+    {
+        $steps = [];
+        foreach ($path as $step) {
+            $steps[] = [
+                'operation' => $step['operation'],
+                'name' => $step['name'],
+                'source_crs' => $step['source_crs'],
+                'target_crs' => $step['target_crs'],
+                'accuracy' => $step['accuracy'],
+                'in_reverse' => $step['in_reverse'],
+                ...CoordinateOperations::getOperationData($step['operation']),
+                'slide_before' => $step['slideBefore']?->getValue(),
+                'slide_after' => $step['slideAfter']?->getValue(),
+            ];
+        }
+
+        return $steps;
+    }
+
+    /**
      * @param array<int, bool> $extentContainsCache
      *
      * @return array<int, array{operation: string, name: string, source_crs: string, target_crs: string, accuracy: float, in_reverse: bool, slideBefore: Year|null, slideAfter: Year|null}>|Year|null
@@ -355,6 +383,7 @@ trait AutoConversion
         ?GeographicValue $boundaryCheckPoint,
         ?Time $targetEpoch,
         array &$extentContainsCache,
+        ?LoggerInterface $logger = null,
     ): array|Year|null {
         $currentCRS = $source;
         $currentEpoch = $this->getCoordinateEpoch() ? Year::fromDateTime($this->getCoordinateEpoch()) : null;
@@ -377,6 +406,8 @@ trait AutoConversion
                 if (!$operation['extent'] instanceof BoundingArea) {
                     $bbox = BoundingArea::createFromExtentCodes($operation['extent'], true);
                     if (!$this->extentContainsPoint($bbox, $boundaryCheckPoint, $extentContainsCache)) {
+                        $logger?->debug('conversion path skipped', ['reason' => 'extent', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
                         return null;
                     }
                 }
@@ -384,6 +415,8 @@ trait AutoConversion
                 // Then (or only) check the point is inside the full, complex shape
                 $polygon = $operation['extent'] instanceof BoundingArea ? $operation['extent'] : BoundingArea::createFromExtentCodes($operation['extent']);
                 if ((!isset($bbox) || $polygon !== $bbox) && !$this->extentContainsPoint($polygon, $boundaryCheckPoint, $extentContainsCache)) {
+                    $logger?->debug('conversion path skipped', ['reason' => 'extent', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
                     return null;
                 }
             }
@@ -394,6 +427,8 @@ trait AutoConversion
                 if ($target instanceof Compound || count($target->getCoordinateSystem()->getAxes()) !== 2) {
                     $intermediateTarget = CoordinateReferenceSystem::fromSRID($pathStep['in_reverse'] ? $pathStep['source_crs'] : $pathStep['target_crs']);
                     if (!$intermediateTarget instanceof Compound && count($intermediateTarget->getCoordinateSystem()->getAxes()) === 2) {
+                        $logger?->debug('conversion path skipped', ['reason' => 'intermediate-2d', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
                         return null;
                     }
                 }
@@ -404,8 +439,17 @@ trait AutoConversion
             // filter out operations that require a grid file that we don't have, or where boundaries are not being
             // checked (a formula-based conversion will always return *a* result, outside a grid boundary does not...)
             foreach ($operationParams as $paramName => $paramValue) {
-                if (str_ends_with($paramName, 'File') && is_string($paramValue) && (!$boundaryCheckPoint || !class_exists($paramValue))) {
-                    return null;
+                if (str_ends_with($paramName, 'File') && is_string($paramValue)) {
+                    if (!$boundaryCheckPoint) {
+                        $logger?->debug('conversion path skipped', ['reason' => 'boundaries-ignored', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
+                        return null;
+                    }
+                    if (!class_exists($paramValue)) {
+                        $logger?->debug('conversion path skipped', ['reason' => 'grid-unavailable', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
+                        return null;
+                    }
                 }
             }
 
@@ -422,6 +466,8 @@ trait AutoConversion
                     $sourceAnchor = CoordinateReferenceSystem::fromSRID($pathStep['source_crs'])->getDatum()->getAnchorEpoch();
                     $targetAnchor = CoordinateReferenceSystem::fromSRID($pathStep['target_crs'])->getDatum()->getAnchorEpoch();
                     if (!$sourceAnchor || !$targetAnchor) {
+                        $logger?->debug('conversion path skipped', ['reason' => 'no-anchor-epoch', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
                         return null;
                     }
                     $stepSourceEpoch = $pathStep['in_reverse'] ? $targetAnchor : $sourceAnchor;
@@ -430,9 +476,13 @@ trait AutoConversion
                 $sentinelSource = $this->isUserDefinedEpoch($stepSourceEpoch);
                 $slideToSourceYear = !$sentinelSource && $currentEpoch != $stepSourceEpoch->asYears();
                 if ($sentinelSource && !$currentEpoch) {
+                    $logger?->debug('conversion path skipped', ['reason' => 'no-epoch', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
+
                     return null;  // No epoch, no point motion
                 }
                 if ($slideToSourceYear && !$this->lookupPointMotionOperation($currentCRS)) {
+                    $logger?->debug('conversion path skipped', ['reason' => 'no-point-motion', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => $stepSourceEpoch->getValue()]);
+
                     return null; // No point motion available
                 }
                 if ($slideToSourceYear) {
@@ -445,12 +495,16 @@ trait AutoConversion
                 $referenceYear = $operationParams['transformationReferenceEpoch']->asYears();
                 if ($currentEpoch != $referenceYear) {
                     // Other step(s) have epoch changes that conflict
+                    $logger?->debug('conversion path skipped', ['reason' => 'epoch-conflict', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => $referenceYear->getValue()]);
+
                     return null;
                 }
             } elseif (isset($operationParams['transformationReferenceEpoch'])) { // this step is only valid at one date
                 $referenceYear = $operationParams['transformationReferenceEpoch']->asYears();
                 if ($currentEpoch != $referenceYear) { // point's year is not that date
                     if (!$targetEpoch || $currentEpoch == $targetEpoch->asYears()) {
+                        $logger?->debug('conversion path skipped', ['reason' => 'epoch-fixed', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => $referenceYear->getValue()]);
+
                         return null; // so no plan B if none was named, or the named year is already the point's year.
                     }
                     $validAtCurrentEpoch = false; // we might be able to change epoch though, checked later
@@ -471,6 +525,12 @@ trait AutoConversion
                 $slideAfter = $targetEpoch->asYears();
             } elseif ($missesTargetYear) {
                 // There's a potential chain but only at the fixed epoch the CRS conversion targets. Return that year to caller
+                /** @var int $last */
+                $last = array_key_last($candidatePath);
+                if ($currentEpoch instanceof Year) {
+                    $logger?->debug('conversion path skipped', ['reason' => 'epoch-published', 'at' => $last, 'operation' => $candidatePath[$last]['operation'], 'accuracy' => $candidatePath[$last]['accuracy'], ...CoordinateOperations::getOperationData($candidatePath[$last]['operation']), 'year' => $currentEpoch->getValue()]);
+                }
+
                 return $currentEpoch;
             }
         } elseif ($targetEpoch && $currentEpoch != $targetEpoch->asYears()) {
@@ -481,6 +541,10 @@ trait AutoConversion
                 // Or convert at the point's date, then slide to the target epoch after the last hop.
                 $slideAfter = $targetEpoch->asYears();
             } else {
+                /** @var int $last */
+                $last = array_key_last($candidatePath);
+                $logger?->debug('conversion path skipped', ['reason' => 'epoch', 'at' => $last, 'operation' => $candidatePath[$last]['operation'], 'accuracy' => $candidatePath[$last]['accuracy'], ...CoordinateOperations::getOperationData($candidatePath[$last]['operation']), 'year' => null]);
+
                 return null; // Neither year is one this chain can run at
             }
         }
