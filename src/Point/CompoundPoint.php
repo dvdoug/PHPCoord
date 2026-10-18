@@ -34,7 +34,6 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Scale\Scale;
 use PHPCoord\UnitOfMeasure\Scale\Unity;
-use Psr\Log\LoggerInterface;
 use Throwable;
 
 use function assert;
@@ -135,25 +134,25 @@ class CompoundPoint extends Point implements ConvertiblePoint
         }
     }
 
-    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null, ?LoggerInterface $logger = null): Point
+    public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point
     {
         try {
-            return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
+            return $this->autoConvert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
         } catch (UnknownConversionException $e) {
-            $logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
+            $this->logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
 
             // if 2D target, try again with just the horizontal component
             if ($to instanceof Geographic2D || $to instanceof Projected) {
-                return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
+                return $this->convertHorizontal($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
             }
 
             // try separate horizontal + vertical conversions and stitch results together
             if ($to instanceof Compound) {
                 /** @var GeographicPoint|ProjectedPoint $newHorizontalPoint */
-                $newHorizontalPoint = $this->horizontalPoint->convert($to->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
+                $newHorizontalPoint = $this->convertHorizontal($to->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
 
                 if ($this->getCRS()->getVertical()->getSRID() !== $to->getVertical()->getSRID()) {
-                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions, maxChainDepth: $maxChainDepth, logger: $logger);
+                    $path = $this->findOperationPath($this->getCRS()->getVertical(), $to->getVertical(), $ignoreBoundaryRestrictions, maxChainDepth: $maxChainDepth);
 
                     if ($path) {
                         $newVerticalPoint = $this->verticalPoint;
@@ -163,7 +162,7 @@ class CompoundPoint extends Point implements ConvertiblePoint
                             $newVerticalPoint = $newVerticalPoint->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), ['horizontalPoint' => $newHorizontalPoint]);
                         }
 
-                        $logger?->info('conversion path selected', ['steps' => $this->selectedConversionSteps($path)]);
+                        $this->logger?->info('conversion path selected', ['steps' => $this->selectedConversionSteps($path)]);
 
                         return static::create($to, $newHorizontalPoint, $newVerticalPoint, $epoch ?? $this->epoch);
                     }
@@ -178,24 +177,40 @@ class CompoundPoint extends Point implements ConvertiblePoint
                 try {
                     if ($candidateIntermediate->getHorizontal() instanceof Geographic2D && $candidateIntermediate->getHorizontal()->getBaseCRS() instanceof Geographic3D) {
                         /** @var GeographicPoint|ProjectedPoint $candidateHorizontalPoint */
-                        $candidateHorizontalPoint = $this->horizontalPoint->convert($candidateIntermediate->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
+                        $candidateHorizontalPoint = $this->convertHorizontal($candidateIntermediate->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
                         $candidateIntermediatePoint = self::create(
                             $candidateIntermediate,
                             $candidateHorizontalPoint,
                             $this->verticalPoint,
                             $epoch ?? $this->epoch,
                         );
+                        $candidateIntermediatePoint->enableDebug($this->logger);
 
                         /** @var GeographicPoint $candidateBaseCRSPoint */
-                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
+                        $candidateBaseCRSPoint = $candidateIntermediatePoint->convert($candidateIntermediate->getHorizontal()->getBaseCRS(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                        $candidateBaseCRSPoint->enableDebug($this->logger);
 
-                        return $candidateBaseCRSPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth, $logger);
+                        return $candidateBaseCRSPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
                     }
                 } catch (Throwable) {
-                    $logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
+                    $this->logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
                 }
             }
             throw $e;
+        }
+    }
+
+    private function convertHorizontal(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions, ?DateTimeInterface $epoch, ?int $maxChainDepth): Point
+    {
+        if ($this->logger) {
+            $this->horizontalPoint->enableDebug($this->logger);
+        }
+        try {
+            return $this->horizontalPoint->convert($to, $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+        } finally {
+            if ($this->logger) {
+                $this->horizontalPoint->enableDebug(null);
+            }
         }
     }
 
