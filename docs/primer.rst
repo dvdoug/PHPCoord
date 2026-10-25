@@ -133,10 +133,10 @@ within a 3D space, it is of very limited practical use on the ground since the e
 
 Coordinate reference systems (CRSs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-A Coordinate Reference System, is the combination of a *Datum* and a *Coordinate System* which is the particular set of
+A Coordinate Reference System is the combination of a *Datum* and a *Coordinate System* which is the particular set of
 axes being used to measure distances on.
 
-It is very important to know the set of axes being used, because otherwise numbers are very prone to misintepretation -
+It is very important to know the set of axes being used, because otherwise numbers are very prone to misinterpretation -
 for example ``42.0669, 11.8128`` would be near Rome if the order is (latitude, longitude), but near Djibouti if the
 order is (longitude, latitude). That's assuming the measurement is in decimal degrees, and not some other unit such as
 gradians.
@@ -184,7 +184,7 @@ large scale e.g. maps that try to show entire countries at once. A well-produced
 such effects.
 
 Complicating things further, some projection methods work really well for tall, skinny areas (think Italy) but work much
-less well on a more square-like areas (think France) so there are many methods in use worldwide.
+less well on more square-like areas (think France) so there are many methods in use worldwide.
 
 .. note::
 
@@ -199,7 +199,7 @@ as "above sea level"). A vertical coordinate system is by its nature 1 dimension
 
 Compound
 """"""""
-A compound coordinate, is simply the combination of a 2D geographic or projected coordinate and 1D vertical coordinate.
+A compound coordinate is simply the combination of a 2D geographic or projected coordinate and 1D vertical coordinate.
 Such a system is called 2D+1D to distinguish it from an actual 3D system such as a geocentric coordinate or a geographic
 coordinate that includes an ellipsoid height.
 
@@ -257,7 +257,7 @@ However, if we introduce the concept of a hill to that mental model it starts to
 standing at the bottom of a hill, and another person is standing on it...are they at the same height (actual ground level)
 or is one of them higher than the other?
 
-Additionally, as any pirate who has every tried to look over the horizon from the crow's nest has figured out, the Earth
+Additionally, as any pirate who has ever tried to look over the horizon from the crow's nest has figured out, the Earth
 is not, in fact, flat. It's possible to have a mountain ("higher") located "below" the horizon.
 
 .. sidebar:: Up is the opposite of down
@@ -268,13 +268,13 @@ The actual, scientific answer to that conundrum is that "down" is the direction 
 of the Earth), and "up" is the same axis just going the other way. That is, every point on the Earth measures "height"
 in a slightly different direction from every other point. That's not as bad as it initially sounds for a surveyor though
 because they can use a spirit level to determine what direction that is. It's fiddly and requires a lot of care but is
-doable, and a spirit level is part of every surveyors toolkit.
+doable, and a spirit level is part of every surveyor's toolkit.
 
 The results of those measurements reveal that the Earth's gravity does not actually point at the centre of the Earth.
 At first glance that seems it must be wrong, but if you think back to how the Earth isn't actually a perfect ellipsoid,
-and nor is the landmass on it equally distributed it starts to makes sense. The line of 0m height that is produced by
+and nor is the landmass on it equally distributed it starts to make sense. The line of 0m height that is produced by
 keeping the spirit level level, is therefore not ellipsoidal but it also does not follow the contours of the Earth's
-physical surface. It is it's own unique imaginary shape (yes, another one) and is called the *local geoid*.
+physical surface. It is its own unique imaginary shape (yes, another one) and is called the *local geoid*.
 
 .. note::
     Confusingly, "geoid height" refers to the distance between the *geoid* and the *ellipsoid*. The distance between the
@@ -300,7 +300,7 @@ landmasses. This *global geoid* is defined as the geoid that most closely aligns
     rights to having the definition be based on their land, but it does involve measuring the entire ocean instead
     which obviously presents some practical difficulties.
 
-    Most national mapping therefore continue to use a local geoid, because it allows them to restrict the necessary
+    Most national mapping agencies therefore continue to use a local geoid, because it allows them to restrict the necessary
     survey work to within their own territory.
 
 In summary, coordinates can measure heights in any of the following ways:
