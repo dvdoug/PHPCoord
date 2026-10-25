@@ -96,7 +96,7 @@ The chosen location is called the *Prime Meridian*.
 The Ancient Greeks picked the westernmost point of the known world to be their Prime Meridian, which came with the
 helpful property for them that all longitudes were positive numbers. As map-making became more scientific in nature in
 the 18th century, many countries started using meridians that passed through their capital cities - e.g. French maps
-used Paris, German maps used Berlin. This was probably at least partially for reasons of national pride but also since
+used Paris, Italian maps used Rome. This was probably at least partially for reasons of national pride but also since
 longitude was more difficult to determine in those days, having the known 0 reference point inside the territory
 will have had practical benefits to those doing the measuring.
 
@@ -179,9 +179,9 @@ have a fixed scale which makes measuring distances between points in everyday un
 Unfortunately, there is no method of drawing out what is inherently a 3D shape onto a 2D surface whilst retaining full
 fidelity. There are ways of maintaining accuracy of shape, but they involve distorting size. There are also ways to
 maintain accurate size, but that involves some distortion of shape. Many mapmaking techniques aim for a compromise
-between the two. Usually, the technique (called a projection) is chosen so that distortions are only noticeable at very
-large scale e.g. maps that try to show entire countries at once. A well-produced map of e.g. a single town will not show
-such effects.
+between the two. Usually, the technique (called a projection) is chosen so that distortions are only noticeable when
+the map covers a very large area, e.g. an entire country at once. A well-produced map of e.g. a single town will not
+show such effects.
 
 Complicating things further, some projection methods work really well for tall, skinny areas (think Italy) but work much
 less well on more square-like areas (think France) so there are many methods in use worldwide.
@@ -226,10 +226,10 @@ heights from a spot near Marseille.
 
 .. admonition:: True Story
 
-    In 2015, the primary marker for the American Samoa Vertical Datum on the island of Tutuila was destroyed
-    in an earthquake. Other secondary markers with derived/calculated heights were present on the island, but the
-    earthquake meant that they had moved too much to be considered reliable indicators of their claimed position and
-    therefore could not safely be used to back-calculate where the original 0m height line was.
+    In 2015, the primary marker for the American Samoa Vertical Datum on the island of Tutuila was thought
+    to have been destroyed. Other secondary markers with derived heights were present on the island, but an
+    earthquake in 2009 had moved them too much to be reliable indicators of their claimed position, and they
+    could not safely be used to back-calculate where the original 0m height line was.
 
     As a result, the US was forced to declare the datum as obsolete and today when height information is needed
     fresh surveys have to be made based on a new 0m origin marker that has no relation to the previous origin.
@@ -330,12 +330,12 @@ portion of a coordinate is called an *epoch*.
 .. admonition:: True Story
 
     An operator of 2 oil platforms located near each other wanted to install a bridge between them.
-    The first platform was installed in the 1990s, the second was installed in the 2010s. Both platforms had accurate
-    locations recorded at time of installation, and so the corresponding distance and angle between them were calculated
-    and a bridge was pre-fabricated on-shore and brought to sea.
+    The first platform was installed in the 1990s, the second was installed in the 2010s. The accurate
+    location recorded for the first platform at time of installation was reused to calculate the
+    distance and angle to the second, and a bridge was pre-fabricated on-shore and brought to sea.
 
-    It didn't fit. The calculated gap between them was wrong because the coordinates of the two platforms were taken 20
-    years apart. This mistake cost **millions** to fix.
+    It didn't fit. The calculated gap between them was wrong because those coordinates were 20 years
+    old. This mistake cost **millions** to fix.
 
 .. tip::
     Geodesy tends to use decimal years for epochs, e.g. 2000.40, or 2021.00. For ease of use PHPCoord deviates from this
