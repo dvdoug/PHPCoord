@@ -19,6 +19,8 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
+# The sphinx-build entry point does not put the conf directory on sys.path.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 
 # -- General configuration ------------------------------------------------
@@ -30,7 +32,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['myst_parser']
+extensions = ['myst_parser', 'sphinx_llm.txt']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -80,6 +82,25 @@ todo_include_todos = False
 
 # Define the canonical URL if you are using a custom domain on Read the Docs
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+
+# Read the Docs serves /llms.txt from the domain root, while the generated
+# Markdown pages stay under the version path. Absolute links keep those
+# references working. Locally this is empty, so the links stay relative.
+markdown_http_base = html_baseurl
+
+llms_txt_description = (
+    "PHPCoord is a PHP library to aid in handling coordinates. It can convert "
+    "coordinates for a point from one system to another and also calculate "
+    "distance between points."
+)
+
+# The changelog and installation pages set their llms.txt summaries with an
+# HTML meta description. The Markdown builder has no representation for that
+# node. The index still reads the description from the HTML doctree.
+llms_txt_suppress_unknown_node_warnings = ["meta"]
+
+# The concatenated llms-full.txt file stays off. These catalogues are too
+# large for one context file. Agents follow llms.txt to individual pages.
 
 # Tell Jinja2 templates the build is running on Read the Docs
 if os.environ.get("READTHEDOCS", "") == "True":
@@ -177,5 +198,11 @@ texinfo_documents = [
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
+from llm_conversions import LlmConversionList
+
 # enable highlighting for PHP code not between ``<?php ... ?>`` by default
 lexers['php'] = PhpLexer(startinline=True)
+
+
+def setup(app):
+    app.add_directive('llm-conversion-list', LlmConversionList)

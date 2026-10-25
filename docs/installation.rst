@@ -1,6 +1,9 @@
 Installation
 ============
 
+.. meta::
+   :description: Install PHPCoord with Composer, and optional datapacks for higher-accuracy conversions.
+
 The recommended way to install PHPCoord is to use `Composer`_. From the command line simply execute the following to add
 ``php-coord/php-coord`` to your project's ``composer.json`` file. Composer will automatically take care of downloading the source
 and configuring an autoloader:

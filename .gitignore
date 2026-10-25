@@ -9,3 +9,5 @@
 /.phpunit.result.cache
 
 /resources/epsg/
+
+__pycache__
