@@ -58,5 +58,6 @@ return $config->setRules(
             ->in(__DIR__ . '/resources')
             ->in(__DIR__ . '/src')
             ->in(__DIR__ . '/tests')
+            ->in(__DIR__ . '/playground')
             ->append([__FILE__])
     );

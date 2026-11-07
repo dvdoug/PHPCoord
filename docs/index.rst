@@ -31,6 +31,7 @@ See `license.txt`_ for full details.
     primer
     creating_points
     coordinate_conversions
+    demo
     distance_calculations
 
 .. toctree::

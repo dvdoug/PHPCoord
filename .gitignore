@@ -11,3 +11,8 @@
 /resources/epsg/
 
 __pycache__
+
+/playground/node_modules
+/playground/php/library-manifest.json
+/playground/php/crs-index.json
+/docs/_static/js

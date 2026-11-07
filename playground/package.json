@@ -1,0 +1,20 @@
+{
+  "name": "phpcoord-playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/prepare.mjs && vite",
+    "build": "node scripts/prepare.mjs && tsc && vite build && node scripts/publish-datapacks.mjs",
+    "volumes": "node scripts/publish-datapacks.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@php-wasm/universal": "3.1.60",
+    "@php-wasm/web-8-5": "3.1.60"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

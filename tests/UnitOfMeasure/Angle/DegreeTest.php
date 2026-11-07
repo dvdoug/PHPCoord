@@ -405,4 +405,80 @@ class DegreeTest extends TestCase
         self::assertInstanceOf(Degree::class, $result);
         self::assertEquals(5, $result->getValue());
     }
+
+    public function testFormatStatueOfLiberty(): void
+    {
+        $latitude = new Degree(40.689167);
+        $longitude = new Degree(-74.044444);
+
+        self::assertSame('40.689167', $latitude->formatAs(Angle::EPSG_DEGREE, true));
+        self::assertSame('40.689167°N', $latitude->formatAs(Angle::EPSG_DEGREE_HEMISPHERE, true));
+        self::assertSame('N40.689167°', $latitude->formatAs(Angle::EPSG_HEMISPHERE_DEGREE, true));
+        self::assertSame('40°41′21.0012″', $latitude->formatAs(Angle::EPSG_DEGREE_MINUTE_SECOND, true));
+        self::assertSame('40°41′21.0012″N', $latitude->formatAs(Angle::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE, true));
+        self::assertSame('N40°41′21.0012″', $latitude->formatAs(Angle::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND, true));
+        self::assertSame('40.41210012', $latitude->formatAs(Angle::EPSG_SEXAGESIMAL_DMS, true));
+
+        self::assertSame('-74.044444', $longitude->formatAs(Angle::EPSG_DEGREE, false));
+        self::assertSame('74.044444°W', $longitude->formatAs(Angle::EPSG_DEGREE_HEMISPHERE, false));
+        self::assertSame('W74.044444°', $longitude->formatAs(Angle::EPSG_HEMISPHERE_DEGREE, false));
+        self::assertSame('-74°2′39.9984″', $longitude->formatAs(Angle::EPSG_DEGREE_MINUTE_SECOND, false));
+        self::assertSame('74°2′39.9984″W', $longitude->formatAs(Angle::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE, false));
+        self::assertSame('W74°2′39.9984″', $longitude->formatAs(Angle::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND, false));
+        self::assertSame('-74.02399984', $longitude->formatAs(Angle::EPSG_SEXAGESIMAL_DMS, false));
+    }
+
+    public function testFormatUsesTheRequestedDecimalPlaces(): void
+    {
+        $latitude = new Degree(-33.85859491);
+
+        self::assertSame('-33.8585949', $latitude->formatAs(Angle::EPSG_DEGREE, true, 7));
+        self::assertSame('33.8585949°S', $latitude->formatAs(Angle::EPSG_DEGREE_HEMISPHERE, true, 7));
+        self::assertSame('-33°51′30.942″', $latitude->formatAs(Angle::EPSG_DEGREE_MINUTE_SECOND, true, 7));
+        self::assertSame('-33.5130942', $latitude->formatAs(Angle::EPSG_SEXAGESIMAL_DMS, true, 7));
+    }
+
+    public function testFormatCarriesSecondsIntoTheNextMinute(): void
+    {
+        $angle = new Degree(59.99996 / 3600);
+
+        self::assertSame('0°1′0.0000″', $angle->formatAs(Angle::EPSG_DEGREE_MINUTE_SECOND, true));
+        self::assertSame('0.01000000', $angle->formatAs(Angle::EPSG_SEXAGESIMAL_DMS, true));
+    }
+
+    public function testFormatZeroHemisphereIsNorthOrEast(): void
+    {
+        $latitude = new Degree(0);
+        $longitude = new Degree(-0.0);
+
+        self::assertSame('0°N', $latitude->formatAs(Angle::EPSG_DEGREE_HEMISPHERE, true));
+        self::assertSame('E0°', $longitude->formatAs(Angle::EPSG_HEMISPHERE_DEGREE, false));
+    }
+
+    public function testFormatRoundTripsThroughMakeUnit(): void
+    {
+        $samples = [
+            [new Degree(40.689167), true],
+            [new Degree(-74.044444), false],
+            [new Degree(0), true],
+            [new Degree(-40.5), true],
+            [new Degree(180), false],
+        ];
+        $formats = [
+            Angle::EPSG_DEGREE,
+            Angle::EPSG_DEGREE_HEMISPHERE,
+            Angle::EPSG_HEMISPHERE_DEGREE,
+            Angle::EPSG_DEGREE_MINUTE_SECOND,
+            Angle::EPSG_DEGREE_MINUTE_SECOND_HEMISPHERE,
+            Angle::EPSG_HEMISPHERE_DEGREE_MINUTE_SECOND,
+            Angle::EPSG_SEXAGESIMAL_DMS,
+        ];
+
+        foreach ($samples as [$angle, $latitude]) {
+            foreach ($formats as $format) {
+                $parsed = Angle::makeUnit($angle->formatAs($format, $latitude), $format);
+                self::assertEqualsWithDelta($angle->getValue(), $parsed->getValue(), 0.0000001);
+            }
+        }
+    }
 }
