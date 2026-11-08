@@ -26,6 +26,7 @@ use PHPCoord\CoordinateSystem\Vertical as VerticalCS;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Datum\Ellipsoid;
 use PHPCoord\Datum\PrimeMeridian;
+use PHPCoord\Exception\InvalidGeometryException;
 use PHPCoord\Geometry\GeoJSON\GeoJSON;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
@@ -38,6 +39,7 @@ use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\ParserFactory;
 use ReflectionClassConstant;
 use SQLite3;
+use stdClass;
 
 use function array_map;
 use function array_unique;
@@ -50,6 +52,7 @@ use function file_get_contents;
 use function file_put_contents;
 use function glob;
 use function implode;
+use function json_decode;
 use function in_array;
 use function is_dir;
 use function lcfirst;
@@ -75,6 +78,7 @@ use function is_string;
 use function preg_match;
 use function preg_match_all;
 
+use const JSON_THROW_ON_ERROR;
 use const SQLITE3_ASSOC;
 use const SQLITE3_OPEN_READONLY;
 use const PHP_EOL;
@@ -1747,10 +1751,10 @@ class EPSGCodegenFromDataImport
             $bufferedFilename = $baseDir . "{$extentCode}.json";
             $bboxFilename = $boundingBoxOnly . "{$extentCode}.json";
 
-            file_put_contents($bufferedFilename, $bufferedGeoJSON);
+            $this->writeValidatedGeoJSON($bufferedFilename, $bufferedGeoJSON);
 
             if ($region !== RegionMap::REGION_GLOBAL) {
-                file_put_contents($bboxFilename, $bboxGeoJSON);
+                $this->writeValidatedGeoJSON($bboxFilename, $bboxGeoJSON);
             }
         }
 
@@ -2322,6 +2326,20 @@ class EPSGCodegenFromDataImport
         }
 
         return $data;
+    }
+
+    private function writeValidatedGeoJSON(string $filename, string $geoJSON): void
+    {
+        /** @var stdClass $document */
+        $document = json_decode($geoJSON, flags: JSON_THROW_ON_ERROR);
+
+        try {
+            GeoJSON::validate($document);
+        } catch (InvalidGeometryException $e) {
+            throw new InvalidGeometryException("{$filename}: {$e->getMessage()}", previous: $e);
+        }
+
+        file_put_contents($filename, $geoJSON);
     }
 
     private function addMetaDataToGeoJSON(string $geoJSONString, string $urn, string $title): string

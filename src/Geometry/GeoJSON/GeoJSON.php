@@ -46,10 +46,20 @@ class GeoJSON
 
     public static function readFile(string $path): Geometry
     {
-        return self::createFromString(file_get_contents($path) ?: throw new RuntimeException("{$path} does not exist"));
+        $rawGeoJSON = file_get_contents($path) ?: throw new RuntimeException("{$path} does not exist");
+
+        return self::createFromObject(self::decode($rawGeoJSON));
     }
 
     public static function createFromString(string $rawGeoJSON): Geometry
+    {
+        $geoJSON = self::decode($rawGeoJSON);
+        self::validate($geoJSON);
+
+        return self::createFromObject($geoJSON);
+    }
+
+    public static function validate(stdClass $geoJSON): void
     {
         if (!isset(self::$validator)) {
             self::$validator = new Validator();
@@ -59,15 +69,18 @@ class GeoJSON
             );
         }
 
-        /** @var stdClass $geoJSON */
-        $geoJSON = json_decode($rawGeoJSON, flags: JSON_THROW_ON_ERROR);
-
         $result = self::$validator->validate($geoJSON, self::SCHEMA_URI);
         if ($error = $result->error()) {
             throw new InvalidGeometryException($error->message());
         }
+    }
 
-        return self::createFromObject($geoJSON);
+    private static function decode(string $rawGeoJSON): stdClass
+    {
+        /** @var stdClass $geoJSON */
+        $geoJSON = json_decode($rawGeoJSON, flags: JSON_THROW_ON_ERROR);
+
+        return $geoJSON;
     }
 
     private static function createFromObject(stdClass $geoJSON): Geometry
