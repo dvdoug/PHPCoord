@@ -5,6 +5,7 @@
 - `Point::atEpoch()` to change coordinate epoch inside a CRS using an EPSG point-motion velocity grid
 - Optional `epoch:` argument on `Point::convert()` to change CRS and epoch together when a velocity model exists
 - Optional `maxChainDepth` argument on `Point::convert()` to raise (or lower) the automatic chain search limit
+- Support for USNG
 - Support for GeoTIFF (GTG) grids
 - Support for little-endian NADCON5 grid files
 ### Changed

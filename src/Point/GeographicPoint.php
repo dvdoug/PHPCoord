@@ -150,6 +150,10 @@ class GeographicPoint extends Point implements ConvertiblePoint
      */
     public static function create(Geographic2D|Geographic3D $crs, Angle $latitude, Angle $longitude, ?Length $height = null, ?DateTimeInterface $epoch = null): self
     {
+        if (NorthAmericanGeographicPoint::usesDatum($crs->getDatum())) {
+            return new NorthAmericanGeographicPoint($crs, $latitude, $longitude, $height, $epoch);
+        }
+
         return new self($crs, $latitude, $longitude, $height, $epoch);
     }
 

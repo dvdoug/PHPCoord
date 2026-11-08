@@ -71,3 +71,34 @@ Examples:
     $epoch = $point->getCoordinateEpoch(); // DateTimeImmutable|null
     $crs = $point->getCRS(); // Geographic2D|Geographic3D
     $asString = (string) $point; // '(40.689167, -74.044444)'
+
+US National Grid
+----------------
+A latitude and longitude on NAD27, NAD83 or one of the 2022
+terrestrial reference frames is a ``NorthAmericanGeographicPoint``. ``GeographicPoint::create`` returns that
+class for those datums.
+
+The US National Grid is a way of writing that latitude and longitude modelled on UTM.
+
+.. code-block:: php
+
+    use PHPCoord\CoordinateReferenceSystem\Geographic2D;
+    use PHPCoord\Point\GeographicPoint;
+    use PHPCoord\Point\NorthAmericanGeographicPoint;
+    use PHPCoord\UnitOfMeasure\Angle\Degree;
+
+    $point = GeographicPoint::create(
+        Geographic2D::fromSRID(Geographic2D::EPSG_NAD83_2011),
+        new Degree(38.8895),
+        new Degree(-77.0353),
+        null
+    );
+
+    $reference = $point->asUSNGWithSpaces(); // e.g. "18S UJ 2348 0647"
+    $again = NorthAmericanGeographicPoint::fromUSNG('18S UJ 2348 0647');
+
+``$digits`` is the number of numeric characters across both axes: 0, 2, 4, 6, 8 or 10. Ten is one metre. The value is
+the south-west corner of that square, truncated rather than rounded. An unlabelled reference means NAD83, and
+``fromUSNG`` reads it as NAD83(2011) unless another North American coordinate reference system is supplied.
+NAD27 is written ``18S UJ 2348 0647 (NAD 27)``. NATRF2022, CATRF2022, PATRF2022 and MATRF2022
+are named in the same way.
