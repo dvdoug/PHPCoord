@@ -150,10 +150,11 @@ class NorthAmericanGeographicPointTest extends TestCase
 
     public function testUSNGRejectsAPointOutsideTheUsNad83Areas(): void
     {
+        // St. John's is east of the NAD83(2011) bounding box, so this rejects with or without the North America datapack.
         $point = GeographicPoint::create(
             Geographic2D::fromSRID(Geographic2D::EPSG_NATRF2022E2020),
-            new Degree(43.6532),
-            new Degree(-79.3832),
+            new Degree(47.5615),
+            new Degree(-52.7126),
             null,
         );
 
@@ -166,7 +167,8 @@ class NorthAmericanGeographicPointTest extends TestCase
     {
         $this->expectException(InvalidCoordinateException::class);
 
-        NorthAmericanGeographicPoint::fromUSNG('17TPJ (NATRF2022)');
+        // 22TCT decodes to the Avalon Peninsula, east of that same box.
+        NorthAmericanGeographicPoint::fromUSNG('22TCT (NATRF2022)');
     }
 
     public function testSuppliedCrsMustMatchSuffix(): void
