@@ -60,7 +60,7 @@ const EXAMPLES: Example[] = [
         target: "urn:ogc:def:crs:EPSG::2263",
         values: {
             "Geodetic latitude": "40.689167",
-            "Geodetic longitude": "-74.044444",
+            "Geodetic longitude": "-74.044502",
         },
     },
     {
@@ -86,8 +86,8 @@ const EXAMPLES: Example[] = [
         source: "urn:ogc:def:crs:EPSG::4283",
         target: "urn:ogc:def:crs:EPSG::4326",
         values: {
-            "Geodetic latitude": "-33.858611",
-            "Geodetic longitude": "151.214167",
+            "Geodetic latitude": "-33.85681",
+            "Geodetic longitude": "151.21514",
         },
     },
     {
@@ -95,8 +95,8 @@ const EXAMPLES: Example[] = [
         source: "urn:ogc:def:crs:EPSG::6668",
         target: "urn:ogc:def:crs:EPSG::6677",
         values: {
-            "Geodetic latitude": "35.710139",
-            "Geodetic longitude": "139.810833",
+            "Geodetic latitude": "35.710064",
+            "Geodetic longitude": "139.810699",
         },
     },
 ];

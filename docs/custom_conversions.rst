@@ -87,7 +87,7 @@ than Greenwich:
     // step 3, use it
     $from = GeographicPoint::create(
         Geographic2D::fromSRID(Geographic2D::EPSG_GDA2020),
-        new Degree(-33.858611),
+        new Degree(-33.85681),
         new Degree(151.214167)
     );
     $to = $from->convert(
