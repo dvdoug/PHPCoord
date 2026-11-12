@@ -120,18 +120,20 @@ class CompoundPoint extends Point implements ConvertiblePoint
      */
     public function calculateDistance(Point $to): Length
     {
-        try {
-            if ($to instanceof ConvertiblePoint) {
+        if ($to instanceof ConvertiblePoint && $to->getCRS()->getSRID() !== $this->horizontalPoint->getCRS()->getSRID()) {
+            try {
                 $to = $to->convert($this->horizontalPoint->getCRS());
+            } catch (UnknownConversionException) {
+                // No path. The CRS check below reports that.
             }
-        } finally {
-            if ($to->getCRS()->getSRID() !== $this->horizontalPoint->getCRS()->getSRID()) {
-                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-            }
-
-            /* @var CompoundPoint $to */
-            return $this->horizontalPoint->calculateDistance($to);
         }
+
+        if ($to->getCRS()->getSRID() !== $this->horizontalPoint->getCRS()->getSRID()) {
+            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+        }
+
+        /* @var CompoundPoint $to */
+        return $this->horizontalPoint->calculateDistance($to);
     }
 
     public function convert(Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $ignoreBoundaryRestrictions = false, ?DateTimeInterface $epoch = null, ?int $maxChainDepth = null): Point

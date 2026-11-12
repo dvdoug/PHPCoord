@@ -28,6 +28,7 @@ use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Exception\UnknownAxisException;
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\Geometry\Geodesic;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
@@ -231,23 +232,25 @@ class ProjectedPoint extends Point implements ConvertiblePoint
      */
     public function calculateDistance(Point $to): Length
     {
-        try {
-            if ($to instanceof ConvertiblePoint) {
+        if ($to instanceof ConvertiblePoint && $to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+            try {
                 $to = $to->convert($this->crs);
+            } catch (UnknownConversionException) {
+                // No path. The CRS check below reports that.
             }
-        } finally {
-            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-            }
-
-            /** @var ProjectedPoint $to */
-            return new Metre(
-                sqrt(
-                    ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
-                    ($to->getNorthing()->getValue() - $this->getNorthing()->getValue()) ** 2
-                )
-            );
         }
+
+        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+        }
+
+        /** @var ProjectedPoint $to */
+        return new Metre(
+            sqrt(
+                ($to->getEasting()->getValue() - $this->getEasting()->getValue()) ** 2 +
+                ($to->getNorthing()->getValue() - $this->getNorthing()->getValue()) ** 2
+            )
+        );
     }
 
     public function asGeographicPoint(): GeographicPoint

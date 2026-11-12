@@ -25,6 +25,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\Geometry\Geodesic;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Angle\Radian;
@@ -137,20 +138,22 @@ class GeocentricPoint extends Point implements ConvertiblePoint
      */
     public function calculateDistance(Point $to): Length
     {
-        try {
-            if ($to instanceof ConvertiblePoint) {
+        if ($to instanceof ConvertiblePoint && $to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+            try {
                 $to = $to->convert($this->crs);
+            } catch (UnknownConversionException) {
+                // No path. The CRS check below reports that.
             }
-        } finally {
-            if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
-                throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
-            }
-
-            /** @var GeographicPoint $to */
-            $geodesic = new Geodesic($this->getCRS()->getDatum()->getEllipsoid());
-
-            return $geodesic->distance($this->asGeographicValue(), $to->asGeographicValue());
         }
+
+        if ($to->getCRS()->getSRID() !== $this->crs->getSRID()) {
+            throw new InvalidCoordinateReferenceSystemException('Can only calculate distances between two points in the same CRS');
+        }
+
+        /** @var GeographicPoint $to */
+        $geodesic = new Geodesic($this->getCRS()->getDatum()->getEllipsoid());
+
+        return $geodesic->distance($this->asGeographicValue(), $to->asGeographicValue());
     }
 
     public function __toString(): string
