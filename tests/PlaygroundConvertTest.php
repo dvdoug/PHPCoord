@@ -236,7 +236,7 @@ class PlaygroundConvertTest extends TestCase
             ['74.04444400°W', '-74°2′39.9984″', '74°2′39.9984″W', 'W74.04444400°', 'W74°2′39.9984″', '-74.02399984'],
             array_column($result['axes'][1]['formats'], 'value'),
         );
-        self::assertSame([], $result['notations']);
+        self::assertSame(['18T WL 80740 04691', '18TWL8074004691'], $result['notations']);
         self::assertSame(
             [
                 ['name' => 'Geodetic latitude', 'value' => '0', 'unitName' => 'degree'],
