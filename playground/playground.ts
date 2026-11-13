@@ -16,6 +16,7 @@ interface CrsRecord {
     name: string;
     kind: string;
     axes: AxisInfo[];
+    usng?: boolean;
 }
 
 interface AngleUnit {
@@ -694,7 +695,7 @@ interface UtmZone {
     prefixed: boolean;
 }
 
-type NotationKind = "british" | "irish" | "utm";
+type NotationKind = "british" | "irish" | "utm" | "usng";
 
 function utmZoneFromName(name: string): UtmZone | null {
     const zone = /UTM zone (\d{1,2})([NS])\b/i.exec(name) ?? /TMzn(\d{1,2})([NS])\b/.exec(name);
@@ -720,11 +721,18 @@ function notationKind(crs: CrsRecord): NotationKind | null {
     if (crs.srid === "urn:ogc:def:crs:EPSG::27700" || crs.name.includes("British National Grid")) {
         return "british";
     }
-    if (crs.srid === "urn:ogc:def:crs:EPSG::29903" || crs.name.includes("Irish Grid")) {
+    // TM65 / Irish Grid shares the name and does not accept a grid reference.
+    if (crs.srid === "urn:ogc:def:crs:EPSG::29903") {
         return "irish";
     }
     if (utmZoneFromName(crs.name)) {
         return "utm";
+    }
+    // The catalogue flag is the North American datum. Whether a particular
+    // latitude and longitude has a US National Grid reference is decided by
+    // the library output, not here.
+    if (crs.usng) {
+        return "usng";
     }
     return null;
 }
@@ -795,6 +803,9 @@ function notationHelp(crs: CrsRecord): string {
     if (kind === "irish") {
         return "One letter and an even number of digits, such as O 15904 34671. Stays in step with easting and northing.";
     }
+    if (kind === "usng") {
+        return "Zone, band, square and an even number of digits, such as 18S UJ 2348 0647. Stays in step with latitude and longitude.";
+    }
     const zone = utmZoneFromName(crs.name);
     const example = zone?.zone === null || zone?.zone === undefined
         ? `33${zone?.hemisphere ?? "N"} 291789 5034599`
@@ -809,6 +820,11 @@ function notationProblem(crs: CrsRecord, raw: string, strict: boolean): string |
     }
     const text = raw.trim();
     if (text === "") {
+        return null;
+    }
+    // A US National Grid reference is checked by the library. The area decision
+    // is whether that call returns a reference.
+    if (kind === "usng") {
         return null;
     }
     const state = kind === "utm"
@@ -1077,6 +1093,9 @@ function notationPlaceholder(crs: CrsRecord): string {
     if (kind === "irish") {
         return east === null || north === null ? "O 15904 34671" : irishReference(east, north) ?? "O 15904 34671";
     }
+    if (kind === "usng") {
+        return "18S UJ 2348 0647";
+    }
     const zone = utmZoneFromName(crs.name);
     if (!zone) {
         return "33N 291789 5034599";
@@ -1099,6 +1118,12 @@ function notationPlaceholder(crs: CrsRecord): string {
 }
 
 let notationText = "";
+let usngError = "";
+let usngTimer = 0;
+let usngGeneration = 0;
+let usngBlock: HTMLDivElement | null = null;
+let usngField: HTMLInputElement | null = null;
+let usngIssue: HTMLParagraphElement | null = null;
 
 function notationIsValid(crs: CrsRecord): boolean {
     return notationKind(crs) !== null && notationText.trim() !== "" && notationProblem(crs, notationText, true) === null;
@@ -1377,7 +1402,16 @@ for (const example of EXAMPLES) {
 }
 root.append(exampleRow);
 
-const sourcePicker = mountPicker("From", () => renderAxes());
+let previousSource = "";
+const sourcePicker = mountPicker("From", () => {
+    const next = sourcePicker.getCrs()?.srid ?? "";
+    if (next !== previousSource) {
+        previousSource = next;
+        notationText = "";
+        usngError = "";
+    }
+    renderAxes();
+});
 const swapRow = document.createElement("div");
 swapRow.className = "swap";
 const swapButton = document.createElement("button");
@@ -1566,7 +1600,135 @@ function presentEpoch(): void {
     optionsHint.textContent = mode === "output" ? outputEpochHint : mode === "none" ? boundaryHint : inputEpochHint;
 }
 
+function scheduleUsng(fromNotation: boolean): void {
+    const source = sourcePicker.getCrs();
+    if (!source || notationKind(source) !== "usng") {
+        return;
+    }
+    window.clearTimeout(usngTimer);
+    const request = ++usngGeneration;
+    usngTimer = window.setTimeout(() => {
+        void runUsng(request, fromNotation);
+    }, 300);
+}
+
+async function runUsng(request: number, fromNotation: boolean): Promise<void> {
+    const source = sourcePicker.getCrs();
+    if (!source || notationKind(source) !== "usng") {
+        return;
+    }
+    const latitudeAxis = source.axes.find((axis) => axis.name === "Geodetic latitude");
+    const longitudeAxis = source.axes.find((axis) => axis.name === "Geodetic longitude");
+    if (!latitudeAxis || !longitudeAxis || !usngBlock || !usngField || !usngIssue) {
+        return;
+    }
+    const notation = notationText.trim();
+    if (fromNotation && notation === "") {
+        if (request !== usngGeneration) {
+            return;
+        }
+        usngError = "";
+        writeUsngAxis(latitudeAxis.name, "");
+        writeUsngAxis(longitudeAxis.name, "");
+        usngIssue.hidden = true;
+        usngIssue.textContent = "";
+        usngField.setAttribute("aria-invalid", "false");
+        usngBlock.hidden = false;
+        return;
+    }
+    const latitude = (entered.get(latitudeAxis.name) ?? "").trim();
+    const longitude = (entered.get(longitudeAxis.name) ?? "").trim();
+    if (!fromNotation && (latitude === "" || longitude === "")) {
+        usngBlock.hidden = false;
+        return;
+    }
+    if (!fromNotation && (axisProblem(latitudeAxis, latitude, true) || axisProblem(longitudeAxis, longitude, true))) {
+        return;
+    }
+    let reading: { notations?: string[]; latitude?: string | null; longitude?: string | null; error?: string | null };
+    try {
+        await ensureBoot();
+        reading = await askWorker({
+            problem: {
+                probe: "usng",
+                source: source.srid,
+                target: source.srid,
+                values: fromNotation ? {} : {
+                    [latitudeAxis.name]: { value: latitude, unit: inputUnit(latitudeAxis) },
+                    [longitudeAxis.name]: { value: longitude, unit: inputUnit(longitudeAxis) },
+                },
+                notation: fromNotation ? notation : null,
+                epoch: epochMode() === "input" && epochInput.value !== "" ? epochInput.value : null,
+                targetEpoch: null,
+                ignoreBoundaryRestrictions: false,
+            },
+            packs: selectedPacks(),
+            volumeBase: volumeBaseUrl(),
+        });
+    } catch {
+        return;
+    }
+    if (request !== usngGeneration || !usngField || !usngIssue || !usngBlock) {
+        return;
+    }
+    if (fromNotation) {
+        if (reading.error) {
+            usngError = reading.error;
+            usngIssue.hidden = false;
+            usngIssue.textContent = reading.error;
+            usngField.setAttribute("aria-invalid", "true");
+            usngBlock.hidden = false;
+            return;
+        }
+        if (!reading.latitude || !reading.longitude) {
+            return;
+        }
+        usngError = "";
+        usngIssue.hidden = true;
+        usngIssue.textContent = "";
+        usngField.setAttribute("aria-invalid", "false");
+        writeUsngAxis(latitudeAxis.name, formatDegree(Number(reading.latitude), inputUnit(latitudeAxis), true));
+        writeUsngAxis(longitudeAxis.name, formatDegree(Number(reading.longitude), inputUnit(longitudeAxis), false));
+        usngBlock.hidden = false;
+        return;
+    }
+    if (reading.error) {
+        return;
+    }
+    const notations = reading.notations ?? [];
+    if (notations.length === 0) {
+        usngError = "";
+        notationText = "";
+        usngField.value = "";
+        usngIssue.hidden = true;
+        usngIssue.textContent = "";
+        usngField.setAttribute("aria-invalid", "false");
+        usngBlock.hidden = true;
+        return;
+    }
+    usngError = "";
+    usngBlock.hidden = false;
+    const spaced = notations[0] ?? "";
+    if (document.activeElement !== usngField && usngField.value !== spaced) {
+        notationText = spaced;
+        usngField.value = spaced;
+    }
+}
+
+function writeUsngAxis(name: string, value: string): void {
+    entered.set(name, value);
+    const field = document.querySelector<HTMLInputElement>(`#axis-${name.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`);
+    if (field) {
+        field.value = value;
+    }
+}
+
 function renderAxes(): void {
+    window.clearTimeout(usngTimer);
+    usngGeneration += 1;
+    usngBlock = null;
+    usngField = null;
+    usngIssue = null;
     const source = sourcePicker.getCrs();
     presentEpoch();
     axesHost.replaceChildren();
@@ -1651,6 +1813,7 @@ function renderAxes(): void {
             hint.textContent = help ?? "";
             input.placeholder = placeholderFor(axis);
         }
+        input.id = `axis-${axis.name.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
         input.addEventListener("input", () => {
             entered.set(axis.name, input.value);
             if (notationInput && (axis.name === "Easting" || axis.name === "Northing")) {
@@ -1659,6 +1822,9 @@ function renderAxes(): void {
                 return;
             }
             refreshField();
+            if (axis.name === "Geodetic latitude" || axis.name === "Geodetic longitude") {
+                scheduleUsng(false);
+            }
         });
         label.append(input);
         row.append(label);
@@ -1701,7 +1867,7 @@ function renderAxes(): void {
         const block = document.createElement("div");
         block.className = "axis";
         const label = document.createElement("label");
-        label.textContent = kind === "utm" ? "UTM reference" : "Grid reference";
+        label.textContent = kind === "usng" ? "US National Grid" : kind === "utm" ? "UTM reference" : "Grid reference";
         const input = document.createElement("input");
         input.type = "text";
         input.autocomplete = "off";
@@ -1715,6 +1881,11 @@ function renderAxes(): void {
         issue.className = "error";
         issue.setAttribute("role", "alert");
         notationInput = input;
+        if (kind === "usng") {
+            usngBlock = block;
+            usngField = input;
+            usngIssue = issue;
+        }
         refreshNotation = (): void => {
             const message = notationProblem(crs, notationText, false);
             issue.hidden = message === null;
@@ -1725,6 +1896,10 @@ function renderAxes(): void {
         };
         input.addEventListener("input", () => {
             notationText = input.value;
+            if (kind === "usng") {
+                scheduleUsng(true);
+                return;
+            }
             applyNotationToNumbers();
             refreshNotation();
         });
@@ -1732,6 +1907,9 @@ function renderAxes(): void {
         refreshNotation();
         block.append(label, hint, issue);
         axesHost.append(block);
+        if (kind === "usng") {
+            scheduleUsng(false);
+        }
     }
 }
 
@@ -1794,6 +1972,43 @@ function readProblem(): Problem {
     const target = targetPicker.getCrs();
     if (!source || !target) {
         throw new Error("Choose a source CRS and a target CRS");
+    }
+    if (notationKind(source) === "usng") {
+        const notation = notationText.trim();
+        if (usngError && notation !== "") {
+            throw new Error(usngError);
+        }
+        const latitude = (entered.get("Geodetic latitude") ?? "").trim();
+        const longitude = (entered.get("Geodetic longitude") ?? "").trim();
+        if (latitude === "" && longitude === "" && notation !== "") {
+            const values: Problem["values"] = {};
+            for (const axis of source.axes) {
+                if (axis.name === "Geodetic latitude" || axis.name === "Geodetic longitude") {
+                    continue;
+                }
+                const value = (entered.get(axis.name) ?? "").trim();
+                if (value === "") {
+                    throw new Error(`Enter a value for ${axisTitle(axis.name)}`);
+                }
+                const problem = axisProblem(axis, value, true);
+                if (problem) {
+                    throw new Error(problem);
+                }
+                values[axis.name] = {
+                    value,
+                    unit: inputUnit(axis),
+                };
+            }
+            return {
+                source: source.srid,
+                target: target.srid,
+                values,
+                notation,
+                epoch: epochMode() !== "none" && epochInput.value !== "" ? epochInput.value : null,
+                targetEpoch: epochMode() === "input" && targetEpochInput.value !== "" ? targetEpochInput.value : null,
+                ignoreBoundaryRestrictions: boundaryInput.checked,
+            };
+        }
     }
     const notation = notationText.trim();
     const hasNotation = notationKind(source) !== null && notation !== "";
@@ -1939,7 +2154,12 @@ function showResult(result: ConvertResult): void {
     const notations = result.notations ?? [];
     if (notations.length > 0) {
         const term = document.createElement("dt");
-        term.textContent = /^\d/.test(notations[0] ?? "") ? "UTM reference" : "Grid reference";
+        const targetCrs = targetPicker.getCrs();
+        term.textContent = targetCrs?.usng
+            ? "US National Grid"
+            : /^\d{1,2}[NS] \d/.test(notations[0] ?? "")
+                ? "UTM reference"
+                : "Grid reference";
         const description = document.createElement("dd");
         for (const notation of notations) {
             const line = document.createElement("div");

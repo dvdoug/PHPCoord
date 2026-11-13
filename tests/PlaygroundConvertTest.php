@@ -470,6 +470,74 @@ class PlaygroundConvertTest extends TestCase
         self::assertSame('5034599', $fromReference['axes'][1]['value']);
     }
 
+    public function testUsngAppearsForAPointInsideTheUs(): void
+    {
+        $result = $this->convert([
+            'probe' => 'usng',
+            'source' => 'urn:ogc:def:crs:EPSG::4269',
+            'values' => [
+                'Geodetic latitude' => ['value' => '40.689167', 'unit' => 'urn:ogc:def:uom:EPSG::9102'],
+                'Geodetic longitude' => ['value' => '-74.044444', 'unit' => 'urn:ogc:def:uom:EPSG::9102'],
+            ],
+            'epoch' => null,
+            'notation' => null,
+        ]);
+
+        self::assertNull($result['error']);
+        self::assertCount(2, $result['notations']);
+        self::assertSame(str_replace(' ', '', $result['notations'][0]), $result['notations'][1]);
+
+        $converted = $this->convert([
+            'source' => 'urn:ogc:def:crs:EPSG::4269',
+            'target' => 'urn:ogc:def:crs:EPSG::4269',
+            'values' => [
+                'Geodetic latitude' => ['value' => '40.689167', 'unit' => 'urn:ogc:def:uom:EPSG::9102'],
+                'Geodetic longitude' => ['value' => '-74.044444', 'unit' => 'urn:ogc:def:uom:EPSG::9102'],
+            ],
+            'epoch' => null,
+            'targetEpoch' => null,
+            'ignoreBoundaryRestrictions' => false,
+        ]);
+        self::assertNull($converted['error']);
+        self::assertSame($result['notations'], $converted['notations']);
+    }
+
+    public function testUsngIsAbsentOutsideTheUs(): void
+    {
+        // St. John's is outside the US National Grid areas. The empty list is what hides the field.
+        $result = $this->convert([
+            'probe' => 'usng',
+            'source' => 'urn:ogc:def:crs:EPSG::4269',
+            'values' => [
+                'Geodetic latitude' => ['value' => '47.5615', 'unit' => 'urn:ogc:def:uom:EPSG::9102'],
+                'Geodetic longitude' => ['value' => '-52.7126', 'unit' => 'urn:ogc:def:uom:EPSG::9102'],
+            ],
+            'epoch' => null,
+            'notation' => null,
+        ]);
+
+        self::assertNull($result['error']);
+        self::assertSame([], $result['notations']);
+    }
+
+    public function testUsngNotationBecomesLatitudeAndLongitude(): void
+    {
+        $result = $this->convert([
+            'probe' => 'usng',
+            'source' => 'urn:ogc:def:crs:EPSG::4269',
+            'values' => [],
+            'epoch' => null,
+            'notation' => '18S UJ 2348 0647',
+        ]);
+
+        self::assertNull($result['error']);
+        self::assertNotNull($result['latitude']);
+        self::assertNotNull($result['longitude']);
+        self::assertNotSame([], $result['notations']);
+        self::assertEqualsWithDelta(38.8895, (float) $result['latitude'], 0.02);
+        self::assertEqualsWithDelta(-77.035, (float) $result['longitude'], 0.02);
+    }
+
     private static function rounded(float $value, float $accuracy): string
     {
         $places = -(int) floor(log10($accuracy) + 1e-10);

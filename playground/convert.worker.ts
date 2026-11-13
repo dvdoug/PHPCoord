@@ -31,6 +31,7 @@ export interface Problem {
     epoch: string | null;
     targetEpoch: string | null;
     ignoreBoundaryRestrictions: boolean;
+    probe?: "usng";
 }
 
 export interface AxisFormat {
@@ -216,7 +217,16 @@ async function loadInputEpochSrids(php: PHP): Promise<string[]> {
     if (inputEpochSrids !== null) {
         return inputEpochSrids;
     }
-    const response = await php.run({ scriptPath: inputEpochPath });
+    // input-epoch.php prints only when this file is the main script.
+    // php.run() reports the request URI as SCRIPT_FILENAME, so the guard
+    // does not run. Load the function and call it.
+    const response = await php.run({
+        code: `<?php
+require ${JSON.stringify("/phpcoord/autoload.php")};
+require ${JSON.stringify(inputEpochPath)};
+echo json_encode(\\PHPCoord\\Playground\\crsInputEpochSrids(), JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES);
+`,
+    });
     const text = response.text.trim();
     if (text === "") {
         throw new Error(response.errors || "PHP produced no coordinate epoch list");

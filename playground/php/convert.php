@@ -22,11 +22,13 @@ use PHPCoord\CoordinateSystem\Axis;
 use PHPCoord\CoordinateSystem\CoordinateSystem;
 use PHPCoord\Exception\InvalidAxesException;
 use PHPCoord\Exception\InvalidCoordinateException;
+use PHPCoord\Exception\InvalidCoordinateReferenceSystemException;
 use PHPCoord\Point\BritishNationalGridPoint;
 use PHPCoord\Point\CompoundPoint;
 use PHPCoord\Point\GeocentricPoint;
 use PHPCoord\Point\GeographicPoint;
 use PHPCoord\Point\IrishGridPoint;
+use PHPCoord\Point\NorthAmericanGeographicPoint;
 use PHPCoord\Point\Point;
 use PHPCoord\Point\ProjectedPoint;
 use PHPCoord\Point\VerticalPoint;
@@ -256,7 +258,7 @@ function readDate(?string $value, string $label): ?DateTimeImmutable
  */
 function createPoint(CoordinateReferenceSystem $crs, array $values, ?DateTimeImmutable $epoch, ?string $notation = null): Point
 {
-    if ($notation !== null && !$crs instanceof Projected && !$crs instanceof Compound) {
+    if ($notation !== null && !$crs instanceof Projected && !$crs instanceof Compound && !$crs instanceof Geographic2D && !$crs instanceof Geographic3D) {
         throw new InvalidArgumentException('This coordinate reference system does not use a grid or UTM reference.');
     }
     if ($crs instanceof Compound) {
@@ -273,6 +275,10 @@ function createPoint(CoordinateReferenceSystem $crs, array $values, ?DateTimeImm
     }
 
     if ($crs instanceof Geographic2D || $crs instanceof Geographic3D) {
+        if ($notation !== null) {
+            return geographicPointFromNotation($crs, $notation, $values, $epoch);
+        }
+
         return GeographicPoint::create(
             $crs,
             angleValue($values, Axis::GEODETIC_LATITUDE),
@@ -373,6 +379,135 @@ function lengthValue(array $values, string $axisName): Length
     }
 
     return Length::makeUnit((float) $entry['value'], $entry['unit']);
+}
+
+/**
+ * @param array<mixed> $values
+ */
+function geographicPointFromNotation(Geographic2D|Geographic3D $crs, string $notation, array $values, ?DateTimeImmutable $epoch): GeographicPoint
+{
+    if (!NorthAmericanGeographicPoint::usesDatum($crs->getDatum())) {
+        throw new InvalidArgumentException('This coordinate reference system does not use a US National Grid reference.');
+    }
+    $parsed = NorthAmericanGeographicPoint::fromUSNG($notation, $epoch, null, usngGeographic2D($crs));
+    $height = $crs instanceof Geographic3D ? optionalLength($values, Axis::ELLIPSOIDAL_HEIGHT) : null;
+
+    return GeographicPoint::create($crs, $parsed->getLatitude(), $parsed->getLongitude(), $height, $epoch);
+}
+
+function usngGeographic2D(Geographic2D|Geographic3D $crs): Geographic2D
+{
+    if ($crs instanceof Geographic2D) {
+        return $crs;
+    }
+
+    return geographic2DForDatum($crs->getDatum()->getSRID());
+}
+
+function geographic2DForDatum(string $datum): Geographic2D
+{
+    static $byDatum = null;
+    if ($byDatum === null) {
+        $byDatum = [];
+        foreach (array_keys(Geographic2D::getSupportedSRIDs()) as $srid) {
+            $candidate = Geographic2D::fromSRID($srid);
+            $byDatum[$candidate->getDatum()->getSRID()] ??= $candidate;
+        }
+    }
+    $found = $byDatum[$datum] ?? null;
+    if (!$found instanceof Geographic2D) {
+        throw new InvalidArgumentException('US National Grid needs a geographic CRS on a North American datum.');
+    }
+
+    return $found;
+}
+
+/**
+ * @param array<mixed> $values
+ */
+function optionalLength(array $values, string $axisName): ?Length
+{
+    if (!isset($values[$axisName]) || !is_array($values[$axisName])) {
+        return null;
+    }
+    $entry = $values[$axisName];
+    if (!isset($entry['value']) || !is_string($entry['value']) || trim($entry['value']) === '') {
+        return null;
+    }
+
+    return lengthValue($values, $axisName);
+}
+
+/**
+ * US National Grid for the source point, without converting it.
+ * An empty notation list is a coordinate outside the grid. The caller hides
+ * the field from that, rather than from a separate area test.
+ *
+ * @param array<string, mixed> $problem
+ *
+ * @return array{notations: list<string>, latitude: string|null, longitude: string|null, error: string|null}
+ */
+function usngProbe(array $problem): array
+{
+    $source = CoordinateReferenceSystem::fromSRID(readSrid($problem, 'source'));
+    $geographic = $source instanceof Compound ? $source->getHorizontal() : $source;
+    if (!$geographic instanceof Geographic2D && !$geographic instanceof Geographic3D) {
+        return usngProbeResult([], null, null, null);
+    }
+    if (!NorthAmericanGeographicPoint::usesDatum($geographic->getDatum())) {
+        return usngProbeResult([], null, null, null);
+    }
+
+    $epoch = readDate(readOptionalString($problem, 'epoch'), 'Coordinate epoch');
+    $notation = readOptionalString($problem, 'notation');
+    if ($notation !== null) {
+        $notation = trim($notation);
+        if ($notation === '') {
+            $notation = null;
+        }
+    }
+    $values = isset($problem['values']) && is_array($problem['values']) ? $problem['values'] : [];
+
+    try {
+        if ($notation !== null) {
+            $parsed = NorthAmericanGeographicPoint::fromUSNG($notation, $epoch, null, usngGeographic2D($geographic));
+        } else {
+            $parsed = GeographicPoint::create(
+                usngGeographic2D($geographic),
+                angleValue($values, Axis::GEODETIC_LATITUDE),
+                angleValue($values, Axis::GEODETIC_LONGITUDE),
+                null,
+                $epoch,
+            );
+        }
+    } catch (InvalidArgumentException | InvalidAxesException | InvalidCoordinateException | InvalidCoordinateReferenceSystemException $exception) {
+        return usngProbeResult([], null, null, $exception->getMessage());
+    }
+    if (!$parsed instanceof NorthAmericanGeographicPoint) {
+        return usngProbeResult([], null, null, null);
+    }
+
+    return usngProbeResult(
+        usngNotations($parsed, 0.0),
+        formatExact($parsed->getLatitude()->asDegrees()->getValue()),
+        formatExact($parsed->getLongitude()->asDegrees()->getValue()),
+        null,
+    );
+}
+
+/**
+ * @param list<string> $notations
+ *
+ * @return array{notations: list<string>, latitude: string|null, longitude: string|null, error: string|null}
+ */
+function usngProbeResult(array $notations, ?string $latitude, ?string $longitude, ?string $error): array
+{
+    return [
+        'notations' => $notations,
+        'latitude' => $latitude,
+        'longitude' => $longitude,
+        'error' => $error,
+    ];
 }
 
 /**
@@ -499,6 +634,9 @@ function pointNotations(Point $point, float $metres): array
     if ($point instanceof CompoundPoint) {
         return pointNotations($point->getHorizontalPoint(), $metres);
     }
+    if ($point instanceof NorthAmericanGeographicPoint) {
+        return usngNotations($point, $metres);
+    }
     if (!$point instanceof ProjectedPoint) {
         return [];
     }
@@ -545,6 +683,23 @@ function gridNotations(ProjectedPoint $point, float $metres): array
     }
 
     return [$spaced, $compact];
+}
+
+/**
+ * Spaced US National Grid reference, then the same reference without spaces.
+ * Points outside the US National Grid areas produce none.
+ *
+ * @return list<string>
+ */
+function usngNotations(NorthAmericanGeographicPoint $point, float $metres): array
+{
+    $places = $metres > 0 ? placesForAccuracy($metres) : placesForMillimetre(0.001);
+    $length = gridFigureLength($places);
+    try {
+        return [$point->asUSNGWithSpaces($length), $point->asUSNG($length)];
+    } catch (InvalidCoordinateException) {
+        return [];
+    }
 }
 
 /**
@@ -1090,7 +1245,7 @@ if ($invokedDirectly || is_file('/phpcoord/problem.json')) {
         if (!is_array($decoded)) {
             throw new InvalidArgumentException('Problem must be a JSON object');
         }
-        emit(convertProblem($decoded));
+        emit(($decoded['probe'] ?? null) === 'usng' ? usngProbe($decoded) : convertProblem($decoded));
     } catch (Throwable $exception) {
         emit(failed($exception->getMessage()));
     }

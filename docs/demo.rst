@@ -15,7 +15,7 @@ This page runs PHPCoord in your browser. Choose a source and a target coordinate
         (function () {
             var loader = document.createElement("script");
             loader.type = "module";
-            loader.src = "_static/js/playground.js?v=20";
+            loader.src = "_static/js/playground.js?v=21";
             document.currentScript.parentNode.appendChild(loader);
         })();
     </script>

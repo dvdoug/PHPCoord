@@ -35,6 +35,7 @@ use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Geometry\ExtentInteriorPoints;
 use PHPCoord\Point\GeocentricPoint;
 use PHPCoord\Point\GeographicPoint;
+use PHPCoord\Point\NorthAmericanGeographicPoint;
 use PHPCoord\Point\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Angle\Angle;
 use PHPCoord\UnitOfMeasure\Length\Length;
@@ -174,6 +175,14 @@ foreach ($kinds as $kind => $class) {
             'name' => $row['name'],
             'axes' => $axesFor($row['coordinate_system']),
         ];
+        if (
+            ($kind === 'geographic2d' || $kind === 'geographic3d')
+            && isset($row['datum'])
+            && is_string($row['datum'])
+            && NorthAmericanGeographicPoint::usesDatum(Datum::fromSRID($row['datum']))
+        ) {
+            $bySrid[$srid]['usng'] = true;
+        }
         $scopesBySrid[$srid] = usageScopes($row);
     }
 }
@@ -210,6 +219,9 @@ foreach (sridRows(Compound::class) as $srid => $row) {
             ...$axesFor($vertical['coordinate_system']),
         ],
     ];
+    if (!empty($bySrid[$row['horizontal_crs']]['usng'])) {
+        $bySrid[$srid]['usng'] = true;
+    }
     $scopesBySrid[$srid] = usageScopes($row);
 }
 foreach ($bySrid as $srid => $entry) {
@@ -307,13 +319,17 @@ foreach ($bySrid as $srid => $entry) {
         }
         $axes[] = $axis;
     }
-    $crs[] = [
+    $record = [
         'srid' => $srid,
         'code' => codeOf($srid),
         'name' => $entry['name'],
         'kind' => $entry['kind'],
         'axes' => $axes,
     ];
+    if (!empty($entry['usng'])) {
+        $record['usng'] = true;
+    }
+    $crs[] = $record;
 }
 usort($crs, static fn (array $left, array $right): int => [$left['name'], $left['code']] <=> [$right['name'], $right['code']]);
 
