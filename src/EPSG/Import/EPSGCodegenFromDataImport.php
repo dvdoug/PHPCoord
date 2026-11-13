@@ -335,12 +335,10 @@ class EPSGCodegenFromDataImport
     ];
 
     private const BLACKLISTED_OPERATION_SCOPES = [
-        1029, // Engineering survey
         1138, // Engineering survey, harbour hydrography.
         1139, // Engineering survey and construction for Fehmarnbelt tunnel.
         1140, // Engineering survey for onshore facilities for South Pars phase 11 and Pars LNG.
         1141, // Engineering survey and topographic mapping for railway applications.
-        1145, // Engineering survey 2011 to 2015.
         1149, // Exploration and production operations in Brunei. Formerly also topographic mapping (large and medium scale) and engineering survey.
         1196, // Highway engineering.
         1206, // KOC survey control and facilities engineering.
