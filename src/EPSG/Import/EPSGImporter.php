@@ -81,6 +81,7 @@ class EPSGImporter
         $sqlite->exec('DELETE FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_code = 10480;'); // deprecated, but never in a release
         $sqlite->exec('DELETE FROM epsg_coordinatereferencesystem WHERE coord_ref_sys_code = 10788;'); // deprecated, but never in a release
         $sqlite->exec("DELETE FROM epsg_usage WHERE object_table_name = 'epsg_coordoperation' AND object_code = 1240 AND extent_code = 4780;"); // Global, but also listed as Vietnam-specific
+        $sqlite->exec("INSERT INTO epsg_usage (object_table_name, object_code, extent_code, scope_code) VALUES ('epsg_coordinatereferencesystem', 10993, 4822, 1297);"); // Xrail 3D is transport, 2D is missing it
 
         /*
          * AusGeoidv2 abuses the NTv2 file format to have very large files, and a confusing implementation (latitude shifts are actually height offsets),

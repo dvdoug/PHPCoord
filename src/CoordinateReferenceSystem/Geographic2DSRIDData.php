@@ -7352,6 +7352,7 @@ trait Geographic2DSRIDData
             'extent_name' => 'UK - Greater London',
             'scope' => [
                 1183,
+                1297,
             ],
             'help' => '',
         ],
