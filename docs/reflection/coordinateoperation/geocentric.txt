@@ -1773,6 +1773,9 @@ to ITRF2020 (Geocentric)
 
     "
 
+ETRF2005
+--------
+``Geocentric::fromSRID(Geocentric::EPSG_ETRF2005)``
 
 to ETRF2000 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2082,6 +2085,9 @@ to ITRF2020 (Geocentric)
 
     "
 
+ETRF89
+------
+``Geocentric::fromSRID(Geocentric::EPSG_ETRF89)``
 
 to ETRF2000 (Geocentric)
 ^^^^^^^^^^^^^^^^^^^^^^^^
