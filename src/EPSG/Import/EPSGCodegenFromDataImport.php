@@ -59,6 +59,7 @@ use function lcfirst;
 use function str_contains;
 use function str_ends_with;
 use function str_replace;
+use function sort;
 use function strlen;
 use function strtolower;
 use function substr;
@@ -334,7 +335,7 @@ class EPSGCodegenFromDataImport
         10155, // TXT VORF-UK08_ETRF_to_CD.vrf
     ];
 
-    private const BLACKLISTED_OPERATION_SCOPES = [
+    public const BLACKLISTED_OPERATION_SCOPES = [
         1138, // Engineering survey, harbour hydrography.
         1139, // Engineering survey and construction for Fehmarnbelt tunnel.
         1140, // Engineering survey for onshore facilities for South Pars phase 11 and Pars LNG.
@@ -897,6 +898,7 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
+                GROUP_CONCAT(DISTINCT u.scope_code) AS scope,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -916,6 +918,7 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
+            $row['scope'] = $this->usageScopeCodes(is_string($row['scope']) ? $row['scope'] : null);
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -937,6 +940,7 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
+                GROUP_CONCAT(DISTINCT u.scope_code) AS scope,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -956,6 +960,7 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
+            $row['scope'] = $this->usageScopeCodes(is_string($row['scope']) ? $row['scope'] : null);
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -978,6 +983,7 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
+                GROUP_CONCAT(DISTINCT u.scope_code) AS scope,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -997,6 +1003,7 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
+            $row['scope'] = $this->usageScopeCodes(is_string($row['scope']) ? $row['scope'] : null);
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1019,6 +1026,7 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
+                GROUP_CONCAT(DISTINCT u.scope_code) AS scope,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1038,6 +1046,7 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
+            $row['scope'] = $this->usageScopeCodes(is_string($row['scope']) ? $row['scope'] : null);
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -1060,6 +1069,7 @@ class EPSGCodegenFromDataImport
                 GROUP_CONCAT(DISTINCT 'urn:ogc:def:area:EPSG::' || e.extent_code) AS extent,
                 GROUP_CONCAT(e.extent_name, '|') AS extent_name,
                 GROUP_CONCAT(e.extent_description, '|') AS extent_description,
+                GROUP_CONCAT(DISTINCT u.scope_code) AS scope,
                 crs.remarks AS doc_help,
                 crs.deprecated
             FROM epsg_coordinatereferencesystem crs
@@ -1080,6 +1090,7 @@ class EPSGCodegenFromDataImport
         $data = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
             $row['extent'] = array_values(array_unique(explode(',', $row['extent'])));
+            $row['scope'] = $this->usageScopeCodes(is_string($row['scope']) ? $row['scope'] : null);
             $data[$row['urn']] = $row;
             unset($data[$row['urn']]['urn']);
         }
@@ -2304,6 +2315,22 @@ class EPSGCodegenFromDataImport
         }
 
         return $data;
+    }
+
+    /**
+     * @return list<int>
+     */
+    private function usageScopeCodes(?string $codes): array
+    {
+        if ($codes === null || $codes === '') {
+            return [];
+        }
+
+        $scopes = array_map(static fn (string $code): int => (int) $code, explode(',', $codes));
+        $scopes = array_values(array_unique($scopes));
+        sort($scopes);
+
+        return $scopes;
     }
 
     private function determineOperationsInBlacklistedScopes(): array

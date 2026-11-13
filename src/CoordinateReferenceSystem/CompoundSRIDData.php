@@ -18,7 +18,7 @@ namespace PHPCoord\CoordinateReferenceSystem;
 trait CompoundSRIDData
 {
     /**
-     * @var array<string, array{name: string, horizontal_crs: string, horizontal_crs_type: string, vertical_crs: string, extent: array<string>, extent_description: string, help: string}>
+     * @var array<string, array{name: string, horizontal_crs: string, horizontal_crs_type: string, vertical_crs: string, extent: array<string>, extent_description: string, scope: list<int>, help: string}>
      */
     protected static array $sridData = [
         'urn:ogc:def:crs:EPSG::3901' => [
@@ -28,6 +28,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5717',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaced by EUREF-FIN / TM35FIN(N,E) + N60 height (CRS code 3902).',
         ],
         'urn:ogc:def:crs:EPSG::3902' => [
@@ -37,6 +40,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5717',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaces YKJ/N60 (CRS code 3901). Replaced by ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N2000 height (CRS code 3903).',
         ],
         'urn:ogc:def:crs:EPSG::3903' => [
@@ -46,6 +52,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N60 height (CRS code 3902). Use now generally replaced by ETRS89-FIN [EUREF-FIN / TM35FIN(E,N) + N2000 height (code10774) in which horizontal axis order is reversed to easting-northing.',
         ],
         'urn:ogc:def:crs:EPSG::4097' => [
@@ -55,6 +64,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::3631'],
             'extent_name' => 'Denmark - onshore Jutland west of 10°E',
+            'scope' => [
+                1029,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4098' => [
@@ -64,6 +76,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::3632'],
             'extent_name' => 'Denmark - onshore Jutland east of 9°E and Funen',
+            'scope' => [
+                1029,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4099' => [
@@ -73,6 +88,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::2532'],
             'extent_name' => 'Denmark - onshore Zealand and Lolland',
+            'scope' => [
+                1029,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4100' => [
@@ -82,6 +100,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::2533'],
             'extent_name' => 'Denmark - onshore Bornholm',
+            'scope' => [
+                1029,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5318' => [
@@ -91,6 +112,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5317',
             'extent' => ['urn:ogc:def:area:EPSG::3248'],
             'extent_name' => 'Faroe Islands - onshore',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Introduced in 2010.',
         ],
         'urn:ogc:def:crs:EPSG::5498' => [
@@ -100,6 +124,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::3664'],
             'extent_name' => 'USA - CONUS and Alaska - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5499' => [
@@ -109,6 +136,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::1323'],
             'extent_name' => 'USA - CONUS - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5500' => [
@@ -118,6 +148,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::1323'],
             'extent_name' => 'USA - CONUS - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5554' => [
@@ -127,6 +160,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3901'],
             'extent_name' => 'Germany - onshore west of 6°E',
+            'scope' => [
+                1190,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5555' => [
@@ -136,6 +172,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3904'],
             'extent_name' => 'Germany - onshore between 6°E and 12°E',
+            'scope' => [
+                1190,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5556' => [
@@ -145,6 +184,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3879'],
             'extent_name' => 'Germany - onshore east of 12°E',
+            'scope' => [
+                1190,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5598' => [
@@ -154,6 +196,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5597',
             'extent' => ['urn:ogc:def:area:EPSG::3890'],
             'extent_name' => 'Europe - Fehmarnbelt inner',
+            'scope' => [
+                1139,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5628' => [
@@ -163,6 +208,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::3313'],
             'extent_name' => 'Sweden - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5698' => [
@@ -172,6 +220,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaced by ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2010-06-18.',
         ],
         'urn:ogc:def:crs:EPSG::5699' => [
@@ -181,6 +232,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaced by ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2010-06-18.',
         ],
         'urn:ogc:def:crs:EPSG::5707' => [
@@ -190,6 +244,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1731'],
             'extent_name' => 'France - mainland north of 48.15°N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5708' => [
@@ -199,6 +256,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5832' => [
@@ -208,6 +268,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::1624'],
             'extent_name' => 'Germany - West Germany - west of 7.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5833' => [
@@ -217,6 +280,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3993'],
             'extent_name' => 'Germany - onshore 7.5°E to 10.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5834' => [
@@ -226,6 +292,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3996'],
             'extent_name' => 'Germany - onshore 10.5°E to 13.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5835' => [
@@ -235,6 +304,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5783',
             'extent' => ['urn:ogc:def:area:EPSG::3998'],
             'extent_name' => 'Germany - onshore east of 13.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5845' => [
@@ -244,6 +316,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::3313'],
             'extent_name' => 'Sweden - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5846' => [
@@ -253,6 +328,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2833'],
             'extent_name' => 'Sweden - 12 00',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5847' => [
@@ -262,6 +340,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2834'],
             'extent_name' => 'Sweden - 13 30',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5848' => [
@@ -271,6 +352,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2835'],
             'extent_name' => 'Sweden - 15 00',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5849' => [
@@ -280,6 +364,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2836'],
             'extent_name' => 'Sweden - 16 30',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5850' => [
@@ -289,6 +376,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2837'],
             'extent_name' => 'Sweden - 18 00',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5851' => [
@@ -298,6 +388,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2838'],
             'extent_name' => 'Sweden - 14 15',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5852' => [
@@ -307,6 +400,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2839'],
             'extent_name' => 'Sweden - 15 45',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5853' => [
@@ -316,6 +412,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2840'],
             'extent_name' => 'Sweden - 17 15',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5854' => [
@@ -325,6 +424,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2841'],
             'extent_name' => 'Sweden - 18 45',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5855' => [
@@ -334,6 +436,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2842'],
             'extent_name' => 'Sweden - 20 15',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5856' => [
@@ -343,6 +448,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2843'],
             'extent_name' => 'Sweden - 21 45',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5857' => [
@@ -352,6 +460,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5613',
             'extent' => ['urn:ogc:def:area:EPSG::2844'],
             'extent_name' => 'Sweden - 23 15',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5942' => [
@@ -361,6 +472,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRS89 + NN54 height. Replaced by ETRS89-NOR [EUREF89] + NN2000:2025 height.',
         ],
         'urn:ogc:def:crs:EPSG::5945' => [
@@ -370,6 +484,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3636'],
             'extent_name' => 'Norway - onshore - west of 6°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 5 + NN54 height (compound CRS code 6145). Replaced by ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000:2025 height (compound CRS code 11435).',
         ],
         'urn:ogc:def:crs:EPSG::5946' => [
@@ -379,6 +496,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3639'],
             'extent_name' => 'Norway - onshore - 6°E to 7°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 6 + NN54 height (compound CRS code 6146). Replaced by ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000:2025 height (compound CRS code 11436).',
         ],
         'urn:ogc:def:crs:EPSG::5947' => [
@@ -388,6 +508,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3647'],
             'extent_name' => 'Norway - onshore - 7°E to 8°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 7 + NN54 height (compound CRS code 6147). Replaced by ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000:2025 height (compound CRS code 11437).',
         ],
         'urn:ogc:def:crs:EPSG::5948' => [
@@ -397,6 +520,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3648'],
             'extent_name' => 'Norway - onshore - 8°E to 9°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 8 + NN54 height (compound CRS code 6148). Replaced by ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000:2025 height (compound CRS code 11408).',
         ],
         'urn:ogc:def:crs:EPSG::5949' => [
@@ -406,6 +532,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3649'],
             'extent_name' => 'Norway - onshore - 9°E to 10°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 9 + NN54 height (compound CRS code 6149). Replaced by ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000:2025 height (compound CRS code 11409).',
         ],
         'urn:ogc:def:crs:EPSG::5950' => [
@@ -415,6 +544,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3650'],
             'extent_name' => 'Norway - onshore - 10°E to 11°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 10 + NN54 height (compound CRS code 6150). Replaced by ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000:2025 height (compound CRS code 11410).',
         ],
         'urn:ogc:def:crs:EPSG::5951' => [
@@ -424,6 +556,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3651'],
             'extent_name' => 'Norway - onshore - 11°E to 12°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 11 + NN54 height (compound CRS code 6151). Replaced by ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000:2025 height (compound CRS code 11411).',
         ],
         'urn:ogc:def:crs:EPSG::5952' => [
@@ -433,6 +568,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3653'],
             'extent_name' => 'Norway - onshore - 12°E to 13°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 12 + NN54 height (compound CRS code 6152). Replaced by ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000:2025 height (compound CRS code 11412).',
         ],
         'urn:ogc:def:crs:EPSG::5953' => [
@@ -442,6 +580,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3654'],
             'extent_name' => 'Norway - onshore - 13°E to 14°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 13 + NN54 height (compound CRS code 6153). Replaced by ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000:2025 height (compound CRS code 11413).',
         ],
         'urn:ogc:def:crs:EPSG::5954' => [
@@ -451,6 +592,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3655'],
             'extent_name' => 'Norway - onshore - 14°E to 15°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 14 + NN54 height (compound CRS code 6154). Replaced by ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000:2025 height (compound CRS code 11414).',
         ],
         'urn:ogc:def:crs:EPSG::5955' => [
@@ -460,6 +604,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3656'],
             'extent_name' => 'Norway - onshore - 15°E to 16°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 15 + NN54 height (compound CRS code 6155). Replaced by ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000:2025 height (compound CRS code 11415).',
         ],
         'urn:ogc:def:crs:EPSG::5956' => [
@@ -469,6 +616,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3657'],
             'extent_name' => 'Norway - onshore - 16°E to 17°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 16 + NN54 height (compound CRS code 6156). Replaced by ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000:2025 height (compound CRS code 11416).',
         ],
         'urn:ogc:def:crs:EPSG::5957' => [
@@ -478,6 +628,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3658'],
             'extent_name' => 'Norway - onshore - 17°E to 18°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 17 + NN54 height (compound CRS code 6157). Replaced by ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000:2025 height (compound CRS code 11417).',
         ],
         'urn:ogc:def:crs:EPSG::5958' => [
@@ -487,6 +640,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3660'],
             'extent_name' => 'Norway - onshore - 18°E to 19°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 18 + NN54 height (compound CRS code 6158). Replaced by ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000:2025 height (compound CRS code 11418).',
         ],
         'urn:ogc:def:crs:EPSG::5959' => [
@@ -496,6 +652,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3661'],
             'extent_name' => 'Norway - onshore - 19°E to 20°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 19 + NN54 height (compound CRS code 6159). Replaced by ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000:2025 height (compound CRS code 11419).',
         ],
         'urn:ogc:def:crs:EPSG::5960' => [
@@ -505,6 +664,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3662'],
             'extent_name' => 'Norway - onshore - 20°E to 21°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 20 + NN54 height (compound CRS code 6160). Replaced by ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000:2025 height (compound CRS code 11420).',
         ],
         'urn:ogc:def:crs:EPSG::5961' => [
@@ -514,6 +676,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3663'],
             'extent_name' => 'Norway - onshore - 21°E to 22°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 21 + NN54 height (compound CRS code 6161). Replaced by ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000:2025 height (compound CRS code 11421).',
         ],
         'urn:ogc:def:crs:EPSG::5962' => [
@@ -523,6 +688,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3665'],
             'extent_name' => 'Norway - onshore - 22°E to 23°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 22 + NN54 height (compound CRS code 6162). Replaced by ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000:2025 height (compound CRS code 11422).',
         ],
         'urn:ogc:def:crs:EPSG::5963' => [
@@ -532,6 +700,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3667'],
             'extent_name' => 'Norway - onshore - 23°E to 24°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 23 + NN54 height (compound CRS code 6163). Replaced by ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000:2025 height (compound CRS code 11423).',
         ],
         'urn:ogc:def:crs:EPSG::5964' => [
@@ -541,6 +712,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3668'],
             'extent_name' => 'Norway - onshore - 24°E to 25°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 24 + NN54 height (compound CRS code 6164). Replaced by ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000:2025 height (compound CRS code 11424).',
         ],
         'urn:ogc:def:crs:EPSG::5965' => [
@@ -550,6 +724,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3669'],
             'extent_name' => 'Norway - onshore - 25°E to 26°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 25 + NN54 height (compound CRS code 6165). Replaced by ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000:2025 height (compound CRS code 11425).',
         ],
         'urn:ogc:def:crs:EPSG::5966' => [
@@ -559,6 +736,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3671'],
             'extent_name' => 'Norway - onshore - 26°E to 27°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 26 + NN54 height (compound CRS code 6166). Replaced by ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000:2025 height (compound CRS code 11426).',
         ],
         'urn:ogc:def:crs:EPSG::5967' => [
@@ -568,6 +748,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3672'],
             'extent_name' => 'Norway - onshore - 27°E to 28°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 27 + NN54 height (compound CRS code 6167). Replaced by ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000:2025 height (compound CRS code 11427).',
         ],
         'urn:ogc:def:crs:EPSG::5968' => [
@@ -577,6 +760,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3673'],
             'extent_name' => 'Norway - onshore - 28°E to 29°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 28 + NN54 height (compound CRS code 6168). Replaced by ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000:2025 height (compound CRS code 11428).',
         ],
         'urn:ogc:def:crs:EPSG::5969' => [
@@ -586,6 +772,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3674'],
             'extent_name' => 'Norway - onshore - 29°E to 30°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 29 + NN54 height (compound CRS code 6169). Replaced by ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000:2025 height (compound CRS code 11429).',
         ],
         'urn:ogc:def:crs:EPSG::5970' => [
@@ -595,6 +784,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3676'],
             'extent_name' => 'Norway - onshore - east of 30°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 30 + NN54 height (compound CRS code 6170). Replaced by ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000:2025 height (compound CRS code 11430).',
         ],
         'urn:ogc:def:crs:EPSG::5971' => [
@@ -604,6 +796,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3636'],
             'extent_name' => 'Norway - onshore - west of 6°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5972' => [
@@ -613,6 +808,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::4066'],
             'extent_name' => 'Norway - onshore - 6°E to 12°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5973' => [
@@ -622,6 +820,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::4067'],
             'extent_name' => 'Norway - onshore - 12°E to 18°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5974' => [
@@ -631,6 +832,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::4068'],
             'extent_name' => 'Norway - onshore - 18°E to 24°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5975' => [
@@ -640,6 +844,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::4069'],
             'extent_name' => 'Norway - onshore - 24°E to 30°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5976' => [
@@ -649,6 +856,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::3676'],
             'extent_name' => 'Norway - onshore - east of 30°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6144' => [
@@ -658,6 +868,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ETRS89 + NN2000:2018 height (compound CRS code 5942).',
         ],
         'urn:ogc:def:crs:EPSG::6145' => [
@@ -667,6 +880,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3636'],
             'extent_name' => 'Norway - onshore - west of 6°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000 height (compound CRS code 5945).',
         ],
         'urn:ogc:def:crs:EPSG::6146' => [
@@ -676,6 +892,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3639'],
             'extent_name' => 'Norway - onshore - 6°E to 7°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000 height (compound CRS code 5946).',
         ],
         'urn:ogc:def:crs:EPSG::6147' => [
@@ -685,6 +904,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3647'],
             'extent_name' => 'Norway - onshore - 7°E to 8°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000 height (compound CRS code 5947).',
         ],
         'urn:ogc:def:crs:EPSG::6148' => [
@@ -694,6 +916,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3648'],
             'extent_name' => 'Norway - onshore - 8°E to 9°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000 height (compound CRS code 5948).',
         ],
         'urn:ogc:def:crs:EPSG::6149' => [
@@ -703,6 +928,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3649'],
             'extent_name' => 'Norway - onshore - 9°E to 10°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000 height (compound CRS code 5949).',
         ],
         'urn:ogc:def:crs:EPSG::6150' => [
@@ -712,6 +940,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3650'],
             'extent_name' => 'Norway - onshore - 10°E to 11°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000 height (compound CRS code 5950).',
         ],
         'urn:ogc:def:crs:EPSG::6151' => [
@@ -721,6 +952,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3651'],
             'extent_name' => 'Norway - onshore - 11°E to 12°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000 height (compound CRS code 5951).',
         ],
         'urn:ogc:def:crs:EPSG::6152' => [
@@ -730,6 +964,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3653'],
             'extent_name' => 'Norway - onshore - 12°E to 13°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000 height (compound CRS code 5952).',
         ],
         'urn:ogc:def:crs:EPSG::6153' => [
@@ -739,6 +976,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3654'],
             'extent_name' => 'Norway - onshore - 13°E to 14°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000 height (compound CRS code 5953).',
         ],
         'urn:ogc:def:crs:EPSG::6154' => [
@@ -748,6 +988,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3655'],
             'extent_name' => 'Norway - onshore - 14°E to 15°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000 height (compound CRS code 5954).',
         ],
         'urn:ogc:def:crs:EPSG::6155' => [
@@ -757,6 +1000,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3656'],
             'extent_name' => 'Norway - onshore - 15°E to 16°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000 height (compound CRS code 5955).',
         ],
         'urn:ogc:def:crs:EPSG::6156' => [
@@ -766,6 +1012,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3657'],
             'extent_name' => 'Norway - onshore - 16°E to 17°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000 height (compound CRS code 5956).',
         ],
         'urn:ogc:def:crs:EPSG::6157' => [
@@ -775,6 +1024,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3658'],
             'extent_name' => 'Norway - onshore - 17°E to 18°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000 height (compound CRS code 5957).',
         ],
         'urn:ogc:def:crs:EPSG::6158' => [
@@ -784,6 +1036,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3660'],
             'extent_name' => 'Norway - onshore - 18°E to 19°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000 height (compound CRS code 5958).',
         ],
         'urn:ogc:def:crs:EPSG::6159' => [
@@ -793,6 +1048,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3661'],
             'extent_name' => 'Norway - onshore - 19°E to 20°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000 height (compound CRS code 5959).',
         ],
         'urn:ogc:def:crs:EPSG::6160' => [
@@ -802,6 +1060,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3662'],
             'extent_name' => 'Norway - onshore - 20°E to 21°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000 height (compound CRS code 5960).',
         ],
         'urn:ogc:def:crs:EPSG::6161' => [
@@ -811,6 +1072,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3663'],
             'extent_name' => 'Norway - onshore - 21°E to 22°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000 height (compound CRS code 5961).',
         ],
         'urn:ogc:def:crs:EPSG::6162' => [
@@ -820,6 +1084,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3665'],
             'extent_name' => 'Norway - onshore - 22°E to 23°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000 height (compound CRS code 5962).',
         ],
         'urn:ogc:def:crs:EPSG::6163' => [
@@ -829,6 +1096,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3667'],
             'extent_name' => 'Norway - onshore - 23°E to 24°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000 height (compound CRS code 5963).',
         ],
         'urn:ogc:def:crs:EPSG::6164' => [
@@ -838,6 +1108,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3668'],
             'extent_name' => 'Norway - onshore - 24°E to 25°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000 height (compound CRS code 5964).',
         ],
         'urn:ogc:def:crs:EPSG::6165' => [
@@ -847,6 +1120,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3669'],
             'extent_name' => 'Norway - onshore - 25°E to 26°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000 height (compound CRS code 5965).',
         ],
         'urn:ogc:def:crs:EPSG::6166' => [
@@ -856,6 +1132,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3671'],
             'extent_name' => 'Norway - onshore - 26°E to 27°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000 height (compound CRS code 5966).',
         ],
         'urn:ogc:def:crs:EPSG::6167' => [
@@ -865,6 +1144,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3672'],
             'extent_name' => 'Norway - onshore - 27°E to 28°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000 height (compound CRS code 5967).',
         ],
         'urn:ogc:def:crs:EPSG::6168' => [
@@ -874,6 +1156,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3673'],
             'extent_name' => 'Norway - onshore - 28°E to 29°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000 height (compound CRS code 5968).',
         ],
         'urn:ogc:def:crs:EPSG::6169' => [
@@ -883,6 +1168,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3674'],
             'extent_name' => 'Norway - onshore - 29°E to 30°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000 height (compound CRS code 5969).',
         ],
         'urn:ogc:def:crs:EPSG::6170' => [
@@ -892,6 +1180,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3676'],
             'extent_name' => 'Norway - onshore - east of 30°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000 height (compound CRS code 5970).',
         ],
         'urn:ogc:def:crs:EPSG::6171' => [
@@ -901,6 +1192,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3636'],
             'extent_name' => 'Norway - onshore - west of 6°E',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / UTM zone 31N + NN2000 height (compound CRS code 5971).',
         ],
         'urn:ogc:def:crs:EPSG::6172' => [
@@ -910,6 +1204,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::4066'],
             'extent_name' => 'Norway - onshore - 6°E to 12°E',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / UTM zone 32N + NN2000 height (compound CRS code 5972).',
         ],
         'urn:ogc:def:crs:EPSG::6173' => [
@@ -919,6 +1216,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::4067'],
             'extent_name' => 'Norway - onshore - 12°E to 18°E',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / UTM zone 33N + NN2000 height (compound CRS code 5973).',
         ],
         'urn:ogc:def:crs:EPSG::6174' => [
@@ -928,6 +1228,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::4068'],
             'extent_name' => 'Norway - onshore - 18°E to 24°E',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / UTM zone 34N + NN2000 height (compound CRS code 5974).',
         ],
         'urn:ogc:def:crs:EPSG::6175' => [
@@ -937,6 +1240,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::4069'],
             'extent_name' => 'Norway - onshore - 24°E to 30°E',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / UTM zone 35N + NN2000 height (compound CRS code 5975).',
         ],
         'urn:ogc:def:crs:EPSG::6176' => [
@@ -946,6 +1252,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::3676'],
             'extent_name' => 'Norway - onshore - east of 30°E',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] / UTM zone 36N + NN2000 height (compound CRS code 5976).',
         ],
         'urn:ogc:def:crs:EPSG::6190' => [
@@ -955,6 +1264,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'extent' => ['urn:ogc:def:area:EPSG::1347'],
             'extent_name' => 'Belgium - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6349' => [
@@ -964,6 +1276,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::3664'],
             'extent_name' => 'USA - CONUS and Alaska - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaces NAD83(NSRS2007) + NAVD88 height',
         ],
         'urn:ogc:def:crs:EPSG::6649' => [
@@ -973,6 +1288,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6650' => [
@@ -982,6 +1300,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3409'],
             'extent_name' => 'Canada - 144°W to 138°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6651' => [
@@ -991,6 +1312,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3410'],
             'extent_name' => 'Canada - 138°W to 132°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6652' => [
@@ -1000,6 +1324,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3411'],
             'extent_name' => 'Canada - 132°W to 126°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6653' => [
@@ -1009,6 +1336,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3412'],
             'extent_name' => 'Canada - 126°W to 120°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6654' => [
@@ -1018,6 +1348,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3528'],
             'extent_name' => 'Canada - 120°W to 114°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6655' => [
@@ -1027,6 +1360,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3527'],
             'extent_name' => 'Canada - 114°W to 108°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6656' => [
@@ -1036,6 +1372,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3526'],
             'extent_name' => 'Canada - 108°W to 102°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6657' => [
@@ -1045,6 +1384,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3413'],
             'extent_name' => 'Canada - 102°W to 96°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6658' => [
@@ -1054,6 +1396,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3414'],
             'extent_name' => 'Canada - 96°W to 90°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6659' => [
@@ -1063,6 +1408,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3415'],
             'extent_name' => 'Canada - 90°W to 84°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6660' => [
@@ -1072,6 +1420,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3416'],
             'extent_name' => 'Canada - 84°W to 78°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6661' => [
@@ -1081,6 +1432,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3417'],
             'extent_name' => 'Canada - 78°W to 72°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6662' => [
@@ -1090,6 +1444,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3524'],
             'extent_name' => 'Canada - 72°W to 66°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6663' => [
@@ -1099,6 +1456,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::3525'],
             'extent_name' => 'Canada - 66°W to 60°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6664' => [
@@ -1108,6 +1468,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::2151'],
             'extent_name' => 'Canada - 60°W to 54°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6665' => [
@@ -1117,6 +1480,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::2152'],
             'extent_name' => 'Canada - 54°W to 48°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6696' => [
@@ -1126,6 +1492,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6694',
             'extent' => ['urn:ogc:def:area:EPSG::3263'],
             'extent_name' => 'Japan - onshore mainland',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaces Tokyo + JSLD69 height and Tokyo + JSLD72 height (CRS codes 7414 and 6700) from April 2002. Replaced by JGD2011 + JGD2011 (vertical) height (CRS code 6697) with effect from 21st October 2011.',
         ],
         'urn:ogc:def:crs:EPSG::6697' => [
@@ -1135,6 +1504,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::3263'],
             'extent_name' => 'Japan - onshore mainland',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaces JGD2000 + JGD2000 (vertical) height (CRS code 6696) with effect from 21st October 2011. With the introduction of JGD2024 (vertical) with effect from 1st April 2025 the JGD2011 geometric CRS was renamed as JGD2024; JGD2011 (vertical) CRS is unchanged.',
         ],
         'urn:ogc:def:crs:EPSG::6700' => [
@@ -1144,6 +1516,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6693',
             'extent' => ['urn:ogc:def:area:EPSG::4168'],
             'extent_name' => 'Japan - onshore - Hokkaido',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).',
         ],
         'urn:ogc:def:crs:EPSG::6893' => [
@@ -1153,6 +1528,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3855',
             'extent' => ['urn:ogc:def:area:EPSG::3391'],
             'extent_name' => 'World - between 80°S and 84°N',
+            'scope' => [
+                1229,
+            ],
             'help' => 'Note: for preliminary concept visualisation only. Detailed design will require use of appropriate low-distortion local projected and vertical CRSs.',
         ],
         'urn:ogc:def:crs:EPSG::6917' => [
@@ -1162,6 +1540,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6916',
             'extent' => ['urn:ogc:def:area:EPSG::1210'],
             'extent_name' => 'Singapore',
+            'scope' => [
+                1144,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6927' => [
@@ -1171,6 +1552,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6916',
             'extent' => ['urn:ogc:def:area:EPSG::1210'],
             'extent_name' => 'Singapore',
+            'scope' => [
+                1144,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7400' => [
@@ -1180,6 +1564,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7404' => [
@@ -1189,6 +1576,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5718',
             'extent' => ['urn:ogc:def:area:EPSG::3313'],
             'extent_name' => 'Sweden - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'When combined with geoid model RN92 forms geographic 3D CRS RR92.',
         ],
         'urn:ogc:def:crs:EPSG::7405' => [
@@ -1198,6 +1588,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::2792'],
             'extent_name' => 'UK - Great Britain mainland onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7406' => [
@@ -1207,6 +1600,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5702',
             'extent' => ['urn:ogc:def:area:EPSG::1323'],
             'extent_name' => 'USA - CONUS - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7407' => [
@@ -1216,6 +1612,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5702',
             'extent' => ['urn:ogc:def:area:EPSG::2253'],
             'extent_name' => 'USA - Texas - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7409' => [
@@ -1225,6 +1624,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5730',
             'extent' => ['urn:ogc:def:area:EPSG::1299'],
             'extent_name' => 'Europe - EVRF2000',
+            'scope' => [
+                1161,
+            ],
             'help' => 'Replaced by ETRS89 + EVRF2007 height (CRS code 7423).',
         ],
         'urn:ogc:def:crs:EPSG::7410' => [
@@ -1234,6 +1636,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5724',
             'extent' => ['urn:ogc:def:area:EPSG::3288'],
             'extent_name' => 'Oman - onshore',
+            'scope' => [
+                1136,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7411' => [
@@ -1243,6 +1648,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5719',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7414' => [
@@ -1252,6 +1660,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5723',
             'extent' => ['urn:ogc:def:area:EPSG::4166'],
             'extent_name' => 'Japan - onshore - Honshu, Shikoku, Kyushu',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaced by JGD2000 + JGD2000 (vertical) (CRS code 6696) from April 2002).',
         ],
         'urn:ogc:def:crs:EPSG::7415' => [
@@ -1261,6 +1672,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5709',
             'extent' => ['urn:ogc:def:area:EPSG::1172'],
             'extent_name' => 'Netherlands',
+            'scope' => [
+                1056,
+            ],
             'help' => 'From 2008, use of RD extended offshore. From 2018, use of NAP extended offshore through application of the official transformation RDNAPTRANS(TM).',
         ],
         'urn:ogc:def:crs:EPSG::7416' => [
@@ -1270,6 +1684,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::3471'],
             'extent_name' => 'Denmark - onshore west of 12°E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7417' => [
@@ -1279,6 +1696,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::3472'],
             'extent_name' => 'Denmark - onshore east of 12°E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7418' => [
@@ -1288,6 +1708,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::2531'],
             'extent_name' => 'Denmark - onshore Jutland and Funen',
+            'scope' => [
+                1209,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7419' => [
@@ -1297,6 +1720,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::2532'],
             'extent_name' => 'Denmark - onshore Zealand and Lolland',
+            'scope' => [
+                1209,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7420' => [
@@ -1306,6 +1732,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5799',
             'extent' => ['urn:ogc:def:area:EPSG::2533'],
             'extent_name' => 'Denmark - onshore Bornholm',
+            'scope' => [
+                1209,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7421' => [
@@ -1315,6 +1744,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7422' => [
@@ -1324,6 +1756,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1733'],
             'extent_name' => 'France - mainland south of 45.45°N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7423' => [
@@ -1333,6 +1768,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5621',
             'extent' => ['urn:ogc:def:area:EPSG::3594'],
             'extent_name' => 'Europe - EVRF2007',
+            'scope' => [
+                1161,
+            ],
             'help' => 'Replaces ETRS89 + EVRF2000 height (CRS code 7409).',
         ],
         'urn:ogc:def:crs:EPSG::7954' => [
@@ -1342,6 +1780,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7888',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7955' => [
@@ -1351,6 +1792,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7889',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
+            'scope' => [
+                1146,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7956' => [
@@ -1360,6 +1804,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7890',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8349' => [
@@ -1369,6 +1816,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8266',
             'extent' => ['urn:ogc:def:area:EPSG::4461'],
             'extent_name' => 'Greenland - 59°N to 84°N',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaced by GR96 + GVR2016 height (CRS code 8350).',
         ],
         'urn:ogc:def:crs:EPSG::8350' => [
@@ -1378,6 +1828,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8267',
             'extent' => ['urn:ogc:def:area:EPSG::4454'],
             'extent_name' => 'Greenland - 58°N to 85°N',
+            'scope' => [
+                1153,
+            ],
             'help' => 'Replaces GR96 + GVR2000 height (CRS code 8349).',
         ],
         'urn:ogc:def:crs:EPSG::8360' => [
@@ -1387,6 +1840,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8357',
             'extent' => ['urn:ogc:def:area:EPSG::1306'],
             'extent_name' => 'Europe - Czechoslovakia',
+            'scope' => [
+                1203,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8370' => [
@@ -1396,6 +1852,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'extent' => ['urn:ogc:def:area:EPSG::1347'],
             'extent_name' => 'Belgium - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8700' => [
@@ -1405,6 +1864,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2167'],
             'extent_name' => 'USA - Arizona - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8701' => [
@@ -1414,6 +1876,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2166'],
             'extent_name' => 'USA - Arizona - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8702' => [
@@ -1423,6 +1888,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2168'],
             'extent_name' => 'USA - Arizona - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8703' => [
@@ -1432,6 +1900,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::1723'],
             'extent_name' => 'USA - Michigan - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8704' => [
@@ -1441,6 +1912,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::1724'],
             'extent_name' => 'USA - Michigan - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8705' => [
@@ -1450,6 +1924,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::1725'],
             'extent_name' => 'USA - Michigan - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8706' => [
@@ -1459,6 +1936,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::1395'],
             'extent_name' => 'USA - Montana',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8707' => [
@@ -1468,6 +1948,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2237'],
             'extent_name' => 'USA - North Dakota - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8708' => [
@@ -1477,6 +1960,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2238'],
             'extent_name' => 'USA - North Dakota - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8709' => [
@@ -1486,6 +1972,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2243'],
             'extent_name' => 'USA - Oregon - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8710' => [
@@ -1495,6 +1984,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::2244'],
             'extent_name' => 'USA - Oregon - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8711' => [
@@ -1504,6 +1996,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8228',
             'extent' => ['urn:ogc:def:area:EPSG::1409'],
             'extent_name' => 'USA - South Carolina',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8712' => [
@@ -1513,6 +2008,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::4861'],
             'extent_name' => 'USA - Arkansas - SPCS83 - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8713' => [
@@ -1522,6 +2020,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::4862'],
             'extent_name' => 'USA - Arkansas - SPCS83 - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8714' => [
@@ -1531,6 +2032,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2175'],
             'extent_name' => 'USA - California - SPCS - 1',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8715' => [
@@ -1540,6 +2044,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2176'],
             'extent_name' => 'USA - California - SPCS - 2',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8716' => [
@@ -1549,6 +2056,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2177'],
             'extent_name' => 'USA - California - SPCS - 3',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8717' => [
@@ -1558,6 +2068,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2178'],
             'extent_name' => 'USA - California - SPCS - 4',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8718' => [
@@ -1567,6 +2080,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2182'],
             'extent_name' => 'USA - California - SPCS - 5',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8719' => [
@@ -1576,6 +2092,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2180'],
             'extent_name' => 'USA - California - SPCS - 6',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8720' => [
@@ -1585,6 +2104,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2184'],
             'extent_name' => 'USA - Colorado - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8721' => [
@@ -1594,6 +2116,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2183'],
             'extent_name' => 'USA - Colorado - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8722' => [
@@ -1603,6 +2128,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2185'],
             'extent_name' => 'USA - Colorado - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8723' => [
@@ -1612,6 +2140,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1377'],
             'extent_name' => 'USA - Connecticut',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8724' => [
@@ -1621,6 +2152,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1378'],
             'extent_name' => 'USA - Delaware',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8725' => [
@@ -1630,6 +2164,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2187'],
             'extent_name' => 'USA - Florida - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8726' => [
@@ -1639,6 +2176,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2186'],
             'extent_name' => 'USA - Florida - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8727' => [
@@ -1648,6 +2188,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2188'],
             'extent_name' => 'USA - Florida - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8728' => [
@@ -1657,6 +2200,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2189'],
             'extent_name' => 'USA - Georgia - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8729' => [
@@ -1666,6 +2212,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2190'],
             'extent_name' => 'USA - Georgia - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8730' => [
@@ -1675,6 +2224,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2192'],
             'extent_name' => 'USA - Idaho - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8731' => [
@@ -1684,6 +2236,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2191'],
             'extent_name' => 'USA - Idaho - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8732' => [
@@ -1693,6 +2248,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2193'],
             'extent_name' => 'USA - Idaho - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8733' => [
@@ -1702,6 +2260,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2194'],
             'extent_name' => 'USA - Illinois - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8734' => [
@@ -1711,6 +2272,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2195'],
             'extent_name' => 'USA - Illinois - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8735' => [
@@ -1720,6 +2284,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2196'],
             'extent_name' => 'USA - Indiana - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8736' => [
@@ -1729,6 +2296,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2197'],
             'extent_name' => 'USA - Indiana - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8737' => [
@@ -1738,6 +2308,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2198'],
             'extent_name' => 'USA - Iowa - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8738' => [
@@ -1747,6 +2320,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2199'],
             'extent_name' => 'USA - Iowa - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8739' => [
@@ -1756,6 +2332,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2200'],
             'extent_name' => 'USA - Kansas - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8740' => [
@@ -1765,6 +2344,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2201'],
             'extent_name' => 'USA - Kansas - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8741' => [
@@ -1774,6 +2356,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2202'],
             'extent_name' => 'USA - Kentucky - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8742' => [
@@ -1783,6 +2368,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2203'],
             'extent_name' => 'USA - Kentucky - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8743' => [
@@ -1792,6 +2380,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2204'],
             'extent_name' => 'USA - Louisiana - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8744' => [
@@ -1801,6 +2392,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2529'],
             'extent_name' => 'USA - Louisiana - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8745' => [
@@ -1810,6 +2404,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2206'],
             'extent_name' => 'USA - Maine - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8746' => [
@@ -1819,6 +2416,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2207'],
             'extent_name' => 'USA - Maine - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8747' => [
@@ -1828,6 +2428,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1389'],
             'extent_name' => 'USA - Maryland and DC',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8748' => [
@@ -1837,6 +2440,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2209'],
             'extent_name' => 'USA - Massachusetts - SPCS - mainland',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8749' => [
@@ -1846,6 +2452,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2208'],
             'extent_name' => 'USA - Massachusetts - SPCS - islands',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8750' => [
@@ -1855,6 +2464,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2214'],
             'extent_name' => 'USA - Minnesota - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8751' => [
@@ -1864,6 +2476,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2213'],
             'extent_name' => 'USA - Minnesota - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8752' => [
@@ -1873,6 +2488,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2215'],
             'extent_name' => 'USA - Minnesota - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8753' => [
@@ -1882,6 +2500,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2216'],
             'extent_name' => 'USA - Mississippi - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8754' => [
@@ -1891,6 +2512,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2217'],
             'extent_name' => 'USA - Mississippi - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8755' => [
@@ -1900,6 +2524,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1396'],
             'extent_name' => 'USA - Nebraska',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8756' => [
@@ -1909,6 +2536,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2224'],
             'extent_name' => 'USA - Nevada - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8757' => [
@@ -1918,6 +2548,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2223'],
             'extent_name' => 'USA - Nevada - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8758' => [
@@ -1927,6 +2560,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2225'],
             'extent_name' => 'USA - Nevada - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8759' => [
@@ -1936,6 +2572,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1398'],
             'extent_name' => 'USA - New Hampshire',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8760' => [
@@ -1945,6 +2584,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1399'],
             'extent_name' => 'USA - New Jersey',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8761' => [
@@ -1954,6 +2596,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2228'],
             'extent_name' => 'USA - New Mexico - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8762' => [
@@ -1963,6 +2608,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2231'],
             'extent_name' => 'USA - New Mexico - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8763' => [
@@ -1972,6 +2620,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2232'],
             'extent_name' => 'USA - New Mexico - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8764' => [
@@ -1981,6 +2632,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2234'],
             'extent_name' => 'USA - New York - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8765' => [
@@ -1990,6 +2644,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2233'],
             'extent_name' => 'USA - New York - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8766' => [
@@ -1999,6 +2656,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2236'],
             'extent_name' => 'USA - New York - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8767' => [
@@ -2008,6 +2668,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2235'],
             'extent_name' => 'USA - New York - SPCS - Long Island',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8768' => [
@@ -2017,6 +2680,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1402'],
             'extent_name' => 'USA - North Carolina',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8769' => [
@@ -2026,6 +2692,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2239'],
             'extent_name' => 'USA - Ohio - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8770' => [
@@ -2035,6 +2704,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2240'],
             'extent_name' => 'USA - Ohio - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8771' => [
@@ -2044,6 +2716,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2241'],
             'extent_name' => 'USA - Oklahoma - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8772' => [
@@ -2053,6 +2728,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2242'],
             'extent_name' => 'USA - Oklahoma - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8773' => [
@@ -2062,6 +2740,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2245'],
             'extent_name' => 'USA - Pennsylvania - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8774' => [
@@ -2071,6 +2752,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2246'],
             'extent_name' => 'USA - Pennsylvania - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8775' => [
@@ -2080,6 +2764,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1408'],
             'extent_name' => 'USA - Rhode Island',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8776' => [
@@ -2089,6 +2776,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2249'],
             'extent_name' => 'USA - South Dakota - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8777' => [
@@ -2098,6 +2788,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2250'],
             'extent_name' => 'USA - South Dakota - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8778' => [
@@ -2107,6 +2800,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1411'],
             'extent_name' => 'USA - Tennessee',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8779' => [
@@ -2116,6 +2812,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2253'],
             'extent_name' => 'USA - Texas - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8780' => [
@@ -2125,6 +2824,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2254'],
             'extent_name' => 'USA - Texas - SPCS - NC',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8781' => [
@@ -2134,6 +2836,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2252'],
             'extent_name' => 'USA - Texas - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8782' => [
@@ -2143,6 +2848,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2527'],
             'extent_name' => 'USA - Texas - SPCS - SC',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8783' => [
@@ -2152,6 +2860,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2528'],
             'extent_name' => 'USA - Texas - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8784' => [
@@ -2161,6 +2872,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2258'],
             'extent_name' => 'USA - Utah - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8785' => [
@@ -2170,6 +2884,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2257'],
             'extent_name' => 'USA - Utah - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8786' => [
@@ -2179,6 +2896,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2259'],
             'extent_name' => 'USA - Utah - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8787' => [
@@ -2188,6 +2908,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::1414'],
             'extent_name' => 'USA - Vermont',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8788' => [
@@ -2197,6 +2920,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2260'],
             'extent_name' => 'USA - Virginia - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8789' => [
@@ -2206,6 +2932,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2261'],
             'extent_name' => 'USA - Virginia - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8790' => [
@@ -2215,6 +2944,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2273'],
             'extent_name' => 'USA - Washington - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8791' => [
@@ -2224,6 +2956,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2274'],
             'extent_name' => 'USA - Washington - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8792' => [
@@ -2233,6 +2968,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2264'],
             'extent_name' => 'USA - West Virginia - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8793' => [
@@ -2242,6 +2980,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2265'],
             'extent_name' => 'USA - West Virginia - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8794' => [
@@ -2251,6 +2992,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2267'],
             'extent_name' => 'USA - Wisconsin - SPCS - N',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8795' => [
@@ -2260,6 +3004,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2266'],
             'extent_name' => 'USA - Wisconsin - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8796' => [
@@ -2269,6 +3016,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2268'],
             'extent_name' => 'USA - Wisconsin - SPCS - S',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8797' => [
@@ -2278,6 +3028,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2269'],
             'extent_name' => 'USA - Wyoming - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8798' => [
@@ -2287,6 +3040,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2270'],
             'extent_name' => 'USA - Wyoming - SPCS - EC',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8799' => [
@@ -2296,6 +3052,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2272'],
             'extent_name' => 'USA - Wyoming - SPCS - WC',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8800' => [
@@ -2305,6 +3064,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6360',
             'extent' => ['urn:ogc:def:area:EPSG::2271'],
             'extent_name' => 'USA - Wyoming - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8801' => [
@@ -2314,6 +3076,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2154'],
             'extent_name' => 'USA - Alabama - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8802' => [
@@ -2323,6 +3088,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2155'],
             'extent_name' => 'USA - Alabama - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8803' => [
@@ -2332,6 +3100,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2156'],
             'extent_name' => 'USA - Alaska - Panhandle',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8804' => [
@@ -2341,6 +3112,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2158'],
             'extent_name' => 'USA - Alaska - 144°W to 141°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8805' => [
@@ -2350,6 +3124,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2159'],
             'extent_name' => 'USA - Alaska - 148°W to 144°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8806' => [
@@ -2359,6 +3136,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2160'],
             'extent_name' => 'USA - Alaska - 152°W to 148°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8807' => [
@@ -2368,6 +3148,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2161'],
             'extent_name' => 'USA - Alaska - 156°W to 152°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8808' => [
@@ -2377,6 +3160,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2162'],
             'extent_name' => 'USA - Alaska - 160°W to 156°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8809' => [
@@ -2386,6 +3172,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2163'],
             'extent_name' => 'USA - Alaska - 164°W to 160°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8810' => [
@@ -2395,6 +3184,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2164'],
             'extent_name' => 'USA - Alaska - north of 54.5°N; 168°W to 164°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8811' => [
@@ -2404,6 +3196,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2165'],
             'extent_name' => 'USA - Alaska - north of 54.5°N; west of 168°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8812' => [
@@ -2413,6 +3208,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2157'],
             'extent_name' => 'USA - Alaska - Aleutian Islands',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8813' => [
@@ -2422,6 +3220,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2219'],
             'extent_name' => 'USA - Missouri - SPCS - E',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8814' => [
@@ -2431,6 +3232,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2218'],
             'extent_name' => 'USA - Missouri - SPCS - C',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8815' => [
@@ -2440,6 +3244,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::2220'],
             'extent_name' => 'USA - Missouri - SPCS - W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8912' => [
@@ -2449,6 +3256,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8911',
             'extent' => ['urn:ogc:def:area:EPSG::3232'],
             'extent_name' => 'Costa Rica - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'With geoid model and gravity, part of official national dynamic geodetic framework from April 2018.',
         ],
         'urn:ogc:def:crs:EPSG::9286' => [
@@ -2458,6 +3268,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5709',
             'extent' => ['urn:ogc:def:area:EPSG::1172'],
             'extent_name' => 'Netherlands',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9289' => [
@@ -2467,6 +3280,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9287',
             'extent' => ['urn:ogc:def:area:EPSG::4859'],
             'extent_name' => 'Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°',
+            'scope' => [
+                1198,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9290' => [
@@ -2476,6 +3292,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9288',
             'extent' => ['urn:ogc:def:area:EPSG::4859'],
             'extent_name' => 'Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°',
+            'scope' => [
+                1265,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9306' => [
@@ -2485,6 +3304,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9303',
             'extent' => ['urn:ogc:def:area:EPSG::4582'],
             'extent_name' => 'UK - London to Birmingham and Crewe',
+            'scope' => [
+                1260,
+            ],
             'help' => 'Realized by use of HS2TN15 transformation and HS2GM15 geoid model from ETRS89 OSNet v2009.',
         ],
         'urn:ogc:def:crs:EPSG::9368' => [
@@ -2494,6 +3316,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4583'],
             'extent_name' => 'UK - Liverpool to Leeds',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9374' => [
@@ -2503,6 +3328,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4588'],
             'extent_name' => 'UK - London to Sheffield',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9388' => [
@@ -2512,6 +3340,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4589'],
             'extent_name' => 'UK - Aberdeen to Inverness',
+            'scope' => [
+                1196,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9422' => [
@@ -2521,6 +3352,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9389',
             'extent' => ['urn:ogc:def:area:EPSG::4609'],
             'extent_name' => 'Europe - ETRF EVRF2019',
+            'scope' => [
+                1261,
+            ],
             'help' => 'Replaces ETRS89 + EVRF2007 height (CRS code 7423). See also ETRS89 + EVRF2019 mean-tide height (CRS code 9423).',
         ],
         'urn:ogc:def:crs:EPSG::9423' => [
@@ -2530,6 +3364,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9390',
             'extent' => ['urn:ogc:def:area:EPSG::4609'],
             'extent_name' => 'Europe - ETRF EVRF2019',
+            'scope' => [
+                1262,
+            ],
             'help' => 'See also ETRS89 + EVRF2019 (CRS code 9422).',
         ],
         'urn:ogc:def:crs:EPSG::9424' => [
@@ -2539,6 +3376,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::2792'],
             'extent_name' => 'UK - Great Britain mainland onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9425' => [
@@ -2548,6 +3388,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7707',
             'extent' => ['urn:ogc:def:area:EPSG::4391'],
             'extent_name' => 'UK - offshore 49°45\'N to 61°N, 9°W to 2°E',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9426' => [
@@ -2557,6 +3400,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5740',
             'extent' => ['urn:ogc:def:area:EPSG::2793'],
             'extent_name' => 'UK - Orkney Islands onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9427' => [
@@ -2566,6 +3412,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5742',
             'extent' => ['urn:ogc:def:area:EPSG::2795'],
             'extent_name' => 'UK - Shetland Islands onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9428' => [
@@ -2575,6 +3424,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5746',
             'extent' => ['urn:ogc:def:area:EPSG::2799'],
             'extent_name' => 'UK - Outer Hebrides onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9429' => [
@@ -2584,6 +3436,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5750',
             'extent' => ['urn:ogc:def:area:EPSG::2803'],
             'extent_name' => 'Isle of Man',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9430' => [
@@ -2593,6 +3448,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5749',
             'extent' => ['urn:ogc:def:area:EPSG::2802'],
             'extent_name' => 'UK - Scilly Isles onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9449' => [
@@ -2602,6 +3460,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5731',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9450' => [
@@ -2611,6 +3472,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5732',
             'extent' => ['urn:ogc:def:area:EPSG::2530'],
             'extent_name' => 'UK - Northern Ireland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9452' => [
@@ -2620,6 +3484,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9451',
             'extent' => ['urn:ogc:def:area:EPSG::4606'],
             'extent_name' => 'Europe - British Isles - UK and Ireland onshore, UKCS',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9457' => [
@@ -2629,6 +3496,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4607'],
             'extent_name' => 'UK - Glasgow to Kilmarnock',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9462' => [
@@ -2638,6 +3508,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9458',
             'extent' => ['urn:ogc:def:area:EPSG::4177'],
             'extent_name' => 'Australia - GDA',
+            'scope' => [
+                1267,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9463' => [
@@ -2647,6 +3520,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5711',
             'extent' => ['urn:ogc:def:area:EPSG::4493'],
             'extent_name' => 'Australia Christmas and Cocos - onshore',
+            'scope' => [
+                1263,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9464' => [
@@ -2656,6 +3532,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5711',
             'extent' => ['urn:ogc:def:area:EPSG::4493'],
             'extent_name' => 'Australia Christmas and Cocos - onshore',
+            'scope' => [
+                1263,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9500' => [
@@ -2665,6 +3544,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9274',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9501' => [
@@ -2674,6 +3556,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9274',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9502' => [
@@ -2683,6 +3568,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6132',
             'extent' => ['urn:ogc:def:area:EPSG::3207'],
             'extent_name' => 'Cayman Islands - Cayman Brac',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9503' => [
@@ -2692,6 +3580,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6130',
             'extent' => ['urn:ogc:def:area:EPSG::3185'],
             'extent_name' => 'Cayman Islands - Grand Cayman',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9504' => [
@@ -2701,6 +3592,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6131',
             'extent' => ['urn:ogc:def:area:EPSG::4121'],
             'extent_name' => 'Cayman Islands - Little Cayman',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9505' => [
@@ -2710,6 +3604,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5782',
             'extent' => ['urn:ogc:def:area:EPSG::4188'],
             'extent_name' => 'Spain and Gibraltar - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9506' => [
@@ -2719,6 +3616,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9402',
             'extent' => ['urn:ogc:def:area:EPSG::4590'],
             'extent_name' => 'Spain - Ceuta',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9507' => [
@@ -2728,6 +3628,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9394',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
             'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9508' => [
@@ -2737,6 +3640,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9392',
             'extent' => ['urn:ogc:def:area:EPSG::4602'],
             'extent_name' => 'Spain - Balearic Islands - Mallorca',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9509' => [
@@ -2746,6 +3652,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9393',
             'extent' => ['urn:ogc:def:area:EPSG::4603'],
             'extent_name' => 'Spain - Balearic Islands - Menorca',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9510' => [
@@ -2755,6 +3664,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9401',
             'extent' => ['urn:ogc:def:area:EPSG::4597'],
             'extent_name' => 'Spain - Canary Islands - El Hierro',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9511' => [
@@ -2764,6 +3676,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9396',
             'extent' => ['urn:ogc:def:area:EPSG::4592'],
             'extent_name' => 'Spain - Canary Islands - Fuerteventura',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9512' => [
@@ -2773,6 +3688,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9397',
             'extent' => ['urn:ogc:def:area:EPSG::4593'],
             'extent_name' => 'Spain - Canary Islands - Gran Canaria',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9513' => [
@@ -2782,6 +3700,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9399',
             'extent' => ['urn:ogc:def:area:EPSG::4595'],
             'extent_name' => 'Spain - Canary Islands - La Gomera',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9514' => [
@@ -2791,6 +3712,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9400',
             'extent' => ['urn:ogc:def:area:EPSG::4596'],
             'extent_name' => 'Spain - Canary Islands - La Palma',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9515' => [
@@ -2800,6 +3724,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9395',
             'extent' => ['urn:ogc:def:area:EPSG::4591'],
             'extent_name' => 'Spain - Canary Islands - Lanzarote',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9516' => [
@@ -2809,6 +3736,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9398',
             'extent' => ['urn:ogc:def:area:EPSG::4594'],
             'extent_name' => 'Spain - Canary Islands - Tenerife',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9517' => [
@@ -2818,6 +3748,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7890',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9518' => [
@@ -2827,6 +3760,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3855',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9519' => [
@@ -2836,6 +3772,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5597',
             'extent' => ['urn:ogc:def:area:EPSG::3890'],
             'extent_name' => 'Europe - Fehmarnbelt inner',
+            'scope' => [
+                1139,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9520' => [
@@ -2845,6 +3784,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9335',
             'extent' => ['urn:ogc:def:area:EPSG::3303'],
             'extent_name' => 'Saudi Arabia - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9521' => [
@@ -2854,6 +3796,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9255',
             'extent' => ['urn:ogc:def:area:EPSG::4573'],
             'extent_name' => 'Argentina - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9522' => [
@@ -2863,6 +3808,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6641',
             'extent' => ['urn:ogc:def:area:EPSG::3294'],
             'extent_name' => 'Puerto Rico - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9523' => [
@@ -2872,6 +3820,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6642',
             'extent' => ['urn:ogc:def:area:EPSG::3330'],
             'extent_name' => 'Virgin Islands, US - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9524' => [
@@ -2881,6 +3832,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6644',
             'extent' => ['urn:ogc:def:area:EPSG::3255'],
             'extent_name' => 'Guam - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9525' => [
@@ -2890,6 +3844,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6640',
             'extent' => ['urn:ogc:def:area:EPSG::4171'],
             'extent_name' => 'Northern Mariana Islands - Rota, Saipan and Tinian',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9526' => [
@@ -2899,6 +3856,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6643',
             'extent' => ['urn:ogc:def:area:EPSG::2288'],
             'extent_name' => 'American Samoa - Tutuila island',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9527' => [
@@ -2908,6 +3868,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::4440',
             'extent' => ['urn:ogc:def:area:EPSG::1175'],
             'extent_name' => 'New Zealand',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9528' => [
@@ -2917,6 +3880,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'extent' => ['urn:ogc:def:area:EPSG::1175'],
             'extent_name' => 'New Zealand',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9529' => [
@@ -2926,6 +3892,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9471',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9530' => [
@@ -2935,6 +3904,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5755',
             'extent' => ['urn:ogc:def:area:EPSG::3146'],
             'extent_name' => 'French Guiana - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9531' => [
@@ -2944,6 +3916,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5757',
             'extent' => ['urn:ogc:def:area:EPSG::2892'],
             'extent_name' => 'Guadeloupe - Grande-Terre and Basse-Terre - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9532' => [
@@ -2953,6 +3928,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5616',
             'extent' => ['urn:ogc:def:area:EPSG::2895'],
             'extent_name' => 'Guadeloupe - Les Saintes - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9533' => [
@@ -2962,6 +3940,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5617',
             'extent' => ['urn:ogc:def:area:EPSG::2894'],
             'extent_name' => 'Guadeloupe - Marie-Galante - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9534' => [
@@ -2971,6 +3952,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5619',
             'extent' => ['urn:ogc:def:area:EPSG::2891'],
             'extent_name' => 'Guadeloupe - St Barthelemy - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9535' => [
@@ -2980,6 +3964,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5620',
             'extent' => ['urn:ogc:def:area:EPSG::2890'],
             'extent_name' => 'Guadeloupe - St Martin - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9536' => [
@@ -2989,6 +3976,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9130',
             'extent' => ['urn:ogc:def:area:EPSG::2893'],
             'extent_name' => 'Guadeloupe - La Desirade - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9537' => [
@@ -2998,6 +3988,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5756',
             'extent' => ['urn:ogc:def:area:EPSG::3276'],
             'extent_name' => 'Martinique - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9538' => [
@@ -3007,6 +4000,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9539' => [
@@ -3016,6 +4012,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9540' => [
@@ -3025,6 +4024,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9351',
             'extent' => ['urn:ogc:def:area:EPSG::3430'],
             'extent_name' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9541' => [
@@ -3034,6 +4036,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5792',
             'extent' => ['urn:ogc:def:area:EPSG::3299'],
             'extent_name' => 'St Pierre and Miquelon - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9542' => [
@@ -3043,6 +4048,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9130',
             'extent' => ['urn:ogc:def:area:EPSG::2893'],
             'extent_name' => 'Guadeloupe - La Desirade - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9543' => [
@@ -3052,6 +4060,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9279',
             'extent' => ['urn:ogc:def:area:EPSG::3309'],
             'extent_name' => 'South Africa - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9544' => [
@@ -3061,6 +4072,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9656' => [
@@ -3070,6 +4084,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9650',
             'extent' => ['urn:ogc:def:area:EPSG::3293'],
             'extent_name' => 'Poland - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9657' => [
@@ -3079,6 +4096,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9651',
             'extent' => ['urn:ogc:def:area:EPSG::3293'],
             'extent_name' => 'Poland - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9705' => [
@@ -3088,6 +4108,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5714',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1026,
+            ],
             'help' => 'Component vertical CRS is not specific to any location or epoch.',
         ],
         'urn:ogc:def:crs:EPSG::9707' => [
@@ -3097,6 +4120,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5773',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9711' => [
@@ -3106,6 +4132,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::2153'],
             'extent_name' => 'Canada - 48°W to 42°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9714' => [
@@ -3115,6 +4144,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::4617'],
             'extent_name' => 'Canada - east of 42°W',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9715' => [
@@ -3124,6 +4156,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9245',
             'extent' => ['urn:ogc:def:area:EPSG::3414'],
             'extent_name' => 'Canada - 96°W to 90°W',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaces NAD83(CSRS) / UTM zone 15N + CGVD2013 height (CCRS code 6658).',
         ],
         'urn:ogc:def:crs:EPSG::9723' => [
@@ -3133,6 +4168,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'extent' => ['urn:ogc:def:area:EPSG::3736'],
             'extent_name' => 'Italy - mainland and Sicily',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9724' => [
@@ -3142,6 +4180,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9721',
             'extent' => ['urn:ogc:def:area:EPSG::2340'],
             'extent_name' => 'Italy - Sicily onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9725' => [
@@ -3151,6 +4192,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9722',
             'extent' => ['urn:ogc:def:area:EPSG::2339'],
             'extent_name' => 'Italy - Sardinia onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9742' => [
@@ -3160,6 +4204,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4620'],
             'extent_name' => 'UK - Tweedmouth to Aberdeen',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9762' => [
@@ -3169,6 +4216,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4621'],
             'extent_name' => 'UK - Newcastle to Ashington',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9767' => [
@@ -3178,6 +4228,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4622'],
             'extent_name' => 'UK - Oxford to Bedford',
+            'scope' => [
+                1141,
+            ],
             'help' => 'In 2024 the horizontal component of this compound CRS, EWR2 Grid (ETRS89 / EWR2 SnakeGrid), was extended eastwards as the EWR3 Grid (ETRS89 / EWR3 SnakeGrid) (CRS code 10851). To the west of Bedford the EWR2 Grid is an exact subset of the EWR3 Grid; over this extent EWR3 Grid + ODN height (CRS code 10852) replaces EWR2 Grid + ODN height.',
         ],
         'urn:ogc:def:crs:EPSG::9785' => [
@@ -3187,6 +4240,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9870' => [
@@ -3196,6 +4252,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4652'],
             'extent_name' => 'UK - Cardiff to Lincoln',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9881' => [
@@ -3205,6 +4264,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4655'],
             'extent_name' => 'UK - Manchester to Dore',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9883' => [
@@ -3214,6 +4276,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9672',
             'extent' => ['urn:ogc:def:area:EPSG::4656'],
             'extent_name' => 'Norway - inshore and nearshore',
+            'scope' => [
+                1198,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9897' => [
@@ -3223,6 +4288,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5774',
             'extent' => ['urn:ogc:def:area:EPSG::1146'],
             'extent_name' => 'Luxembourg',
+            'scope' => [
+                1029,
+            ],
             'help' => 'For purposes with lower height accuracy requirements, may be approximated (to 5-15cm in height) by projected 3D CRS code 9895.',
         ],
         'urn:ogc:def:crs:EPSG::9907' => [
@@ -3232,6 +4300,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'extent' => ['urn:ogc:def:area:EPSG::1347'],
             'extent_name' => 'Belgium - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9920' => [
@@ -3241,6 +4312,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9451',
             'extent' => ['urn:ogc:def:area:EPSG::4390'],
             'extent_name' => 'UK - Britain and UKCS 49°45\'N to 61°N, 9°W to 2°E',
+            'scope' => [
+                1026,
+            ],
             'help' => 'BI height is based on an ensemble including ODN, ODN (Offshore) and island vertical datums.',
         ],
         'urn:ogc:def:crs:EPSG::9922' => [
@@ -3250,6 +4324,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9451',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9924' => [
@@ -3259,6 +4336,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7837',
             'extent' => ['urn:ogc:def:area:EPSG::3339'],
             'extent_name' => 'Germany - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9928' => [
@@ -3268,6 +4348,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9923',
             'extent' => ['urn:ogc:def:area:EPSG::1624'],
             'extent_name' => 'Germany - West Germany - west of 7.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 2 (CRS code 9932).',
         ],
         'urn:ogc:def:crs:EPSG::9929' => [
@@ -3277,6 +4360,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9923',
             'extent' => ['urn:ogc:def:area:EPSG::3993'],
             'extent_name' => 'Germany - onshore 7.5°E to 10.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 3 (CRS code 9933).',
         ],
         'urn:ogc:def:crs:EPSG::9930' => [
@@ -3286,6 +4372,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9923',
             'extent' => ['urn:ogc:def:area:EPSG::3996'],
             'extent_name' => 'Germany - onshore 10.5°E to 13.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 4 (CRS code 9934).',
         ],
         'urn:ogc:def:crs:EPSG::9931' => [
@@ -3295,6 +4384,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9923',
             'extent' => ['urn:ogc:def:area:EPSG::3998'],
             'extent_name' => 'Germany - onshore east of 13.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'On the introduction of DB_REF2016 height, this compound CRS replaced by DB_REF2016 zone 5 (CRS code 9935).',
         ],
         'urn:ogc:def:crs:EPSG::9932' => [
@@ -3304,6 +4396,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9927',
             'extent' => ['urn:ogc:def:area:EPSG::1624'],
             'extent_name' => 'Germany - West Germany - west of 7.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'Replaces DB_REF2003 zone 2 (compound CRS code 9928).',
         ],
         'urn:ogc:def:crs:EPSG::9933' => [
@@ -3313,6 +4408,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9927',
             'extent' => ['urn:ogc:def:area:EPSG::3993'],
             'extent_name' => 'Germany - onshore 7.5°E to 10.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'Replaces DB_REF2003 zone 3 (compound CRS code 9929).',
         ],
         'urn:ogc:def:crs:EPSG::9934' => [
@@ -3322,6 +4420,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9927',
             'extent' => ['urn:ogc:def:area:EPSG::3996'],
             'extent_name' => 'Germany - onshore 10.5°E to 13.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'Replaces DB_REF2003 zone 4 (compound CRS code 9930).',
         ],
         'urn:ogc:def:crs:EPSG::9935' => [
@@ -3331,6 +4432,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9927',
             'extent' => ['urn:ogc:def:area:EPSG::3998'],
             'extent_name' => 'Germany - onshore east of 13.5°E',
+            'scope' => [
+                1141,
+            ],
             'help' => 'Replaces DB_REF2003 zone 5 (compound CRS code 9931).',
         ],
         'urn:ogc:def:crs:EPSG::9944' => [
@@ -3340,6 +4444,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4661'],
             'extent_name' => 'UK - Newport to Ebbw Vale',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9948' => [
@@ -3349,6 +4456,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => 'Replaced by ISN2004 + ISH2004 height (CRS code 9949).',
         ],
         'urn:ogc:def:crs:EPSG::9949' => [
@@ -3358,6 +4468,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => 'Replaces ISN93 + ISH2004 height (CRS code 9948). Replaced by ISN2016 + ISH2004 height (CRS code 9950).',
         ],
         'urn:ogc:def:crs:EPSG::9950' => [
@@ -3367,6 +4480,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => 'Replaces ISN2004 + ISH2004 height (CRS code 9949).',
         ],
         'urn:ogc:def:crs:EPSG::9951' => [
@@ -3376,6 +4492,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
+            'scope' => [
+                1056,
+            ],
             'help' => 'Replaced by ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).',
         ],
         'urn:ogc:def:crs:EPSG::9952' => [
@@ -3385,6 +4504,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
+            'scope' => [
+                1056,
+            ],
             'help' => 'Replaces ISN93 / Lambert 1993 + ISH2004 height (CRS code 9951). Replaced by ISN2016 / Lambert 2016 + ISH2004 height (CRS code 9953).',
         ],
         'urn:ogc:def:crs:EPSG::9953' => [
@@ -3394,6 +4516,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8089',
             'extent' => ['urn:ogc:def:area:EPSG::4662'],
             'extent_name' => 'Iceland - onshore',
+            'scope' => [
+                1056,
+            ],
             'help' => 'Replaces ISN2004 / Lambert 2004 + ISH2004 height (CRS code 9952).',
         ],
         'urn:ogc:def:crs:EPSG::9968' => [
@@ -3403,6 +4528,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4663'],
             'extent_name' => 'UK - Leeds to Hull',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9973' => [
@@ -3412,6 +4540,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4665'],
             'extent_name' => 'UK - Motherwell to Inverness',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9978' => [
@@ -3421,6 +4552,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4664'],
             'extent_name' => 'UK - Inverness to Thurso',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10156' => [
@@ -3430,6 +4564,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10150',
             'extent' => ['urn:ogc:def:area:EPSG::4668'],
             'extent_name' => 'Europe - Ireland and UK offshore',
+            'scope' => [
+                1198,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10157' => [
@@ -3439,6 +4576,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10151',
             'extent' => ['urn:ogc:def:area:EPSG::4668'],
             'extent_name' => 'Europe - Ireland and UK offshore',
+            'scope' => [
+                1198,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10162' => [
@@ -3448,6 +4588,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4670'],
             'extent_name' => 'Japan - zone I - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10163' => [
@@ -3457,6 +4600,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4671'],
             'extent_name' => 'Japan - zone II - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10164' => [
@@ -3466,6 +4612,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4672'],
             'extent_name' => 'Japan - zone III - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10165' => [
@@ -3475,6 +4624,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::1857'],
             'extent_name' => 'Japan - zone IV',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10166' => [
@@ -3484,6 +4636,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::1858'],
             'extent_name' => 'Japan - zone V',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10167' => [
@@ -3493,6 +4648,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::1859'],
             'extent_name' => 'Japan - zone VI',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10168' => [
@@ -3502,6 +4660,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::1860'],
             'extent_name' => 'Japan - zone VII',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10169' => [
@@ -3511,6 +4672,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4673'],
             'extent_name' => 'Japan - zone VIII - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10170' => [
@@ -3520,6 +4684,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4674'],
             'extent_name' => 'Japan - zone IX - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10171' => [
@@ -3529,6 +4696,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::1863'],
             'extent_name' => 'Japan - zone X',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10172' => [
@@ -3538,6 +4708,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4675'],
             'extent_name' => 'Japan - zone XI - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10173' => [
@@ -3547,6 +4720,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::4676'],
             'extent_name' => 'Japan - zone XII - onshore mainland',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10174' => [
@@ -3556,6 +4732,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::6695',
             'extent' => ['urn:ogc:def:area:EPSG::1866'],
             'extent_name' => 'Japan - zone XIII',
+            'scope' => [
+                1092,
+            ],
             'help' => 'On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this CRS was changed from JGD2011... to JGD2024...; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::10184' => [
@@ -3565,6 +4744,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4686'],
             'extent_name' => 'UK - Dovey Junction to Pwllheli',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10189' => [
@@ -3574,6 +4756,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4687'],
             'extent_name' => 'UK - Shrewsbury to Aberystwyth',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10195' => [
@@ -3583,6 +4768,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4677'],
             'extent_name' => 'UK - Crewe to Holyhead',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10200' => [
@@ -3592,6 +4780,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4678'],
             'extent_name' => 'UK - Chester to Shrewsbury',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10208' => [
@@ -3601,6 +4792,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4681'],
             'extent_name' => 'UK - Didcot to Banbury',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10213' => [
@@ -3610,6 +4804,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4685'],
             'extent_name' => 'UK - London to Swansea',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10218' => [
@@ -3619,6 +4816,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4684'],
             'extent_name' => 'UK - Cardiff and the valleys',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10223' => [
@@ -3628,6 +4828,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4683'],
             'extent_name' => 'UK - Swansea to Fishguard',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10228' => [
@@ -3637,6 +4840,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4682'],
             'extent_name' => 'UK - London to Leamington Spa',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10236' => [
@@ -3646,6 +4852,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4680'],
             'extent_name' => 'UK - Oxford to Worcester',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10241' => [
@@ -3655,6 +4864,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4679'],
             'extent_name' => 'UK - Shrewsbury to Crewe',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10245' => [
@@ -3664,6 +4876,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8690',
             'extent' => ['urn:ogc:def:area:EPSG::3307'],
             'extent_name' => 'Slovenia - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10246' => [
@@ -3673,6 +4888,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8690',
             'extent' => ['urn:ogc:def:area:EPSG::3307'],
             'extent_name' => 'Slovenia - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10276' => [
@@ -3682,6 +4900,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4688'],
             'extent_name' => 'UK - Okehampton to Penstone',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10281' => [
@@ -3691,6 +4912,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4689'],
             'extent_name' => 'UK - Reading to Penzance',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10293' => [
@@ -3700,6 +4924,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7837',
             'extent' => ['urn:ogc:def:area:EPSG::1103'],
             'extent_name' => 'Germany',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10318' => [
@@ -3709,6 +4936,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9351',
             'extent' => ['urn:ogc:def:area:EPSG::3430'],
             'extent_name' => 'New Caledonia - Belep, Grande Terre, Ile des Pins, Loyalty Islands',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10355' => [
@@ -3718,6 +4948,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10352',
             'extent' => ['urn:ogc:def:area:EPSG::4739'],
             'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10356' => [
@@ -3727,6 +4960,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10353',
             'extent' => ['urn:ogc:def:area:EPSG::4741'],
             'extent_name' => 'Spain - Alboran',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10357' => [
@@ -3736,6 +4972,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10354',
             'extent' => ['urn:ogc:def:area:EPSG::4740'],
             'extent_name' => 'Spain - Melilla',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10365' => [
@@ -3745,6 +4984,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5193',
             'extent' => ['urn:ogc:def:area:EPSG::3266'],
             'extent_name' => 'South Korea - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10472' => [
@@ -3754,6 +4996,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4743'],
             'extent_name' => 'UK - Coventry',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10486' => [
@@ -3763,6 +5008,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10483',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10487' => [
@@ -3772,6 +5020,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10484',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10488' => [
@@ -3781,6 +5032,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10485',
             'extent' => ['urn:ogc:def:area:EPSG::3237'],
             'extent_name' => 'Denmark - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10497' => [
@@ -3790,6 +5044,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => 'Replaces ETRS89-FRA [RGF93 v1] / Lambert-93 + NGF-IGN69 height (CRS code 5698) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] / Lambert-93 + NGF-IGN69 height (CRS code 10499) from 2021-01-05.',
         ],
         'urn:ogc:def:crs:EPSG::10498' => [
@@ -3799,6 +5056,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => 'Replaces ETRS89-FRA [RGF93 v1] / Lambert-93 + NGF-IGN78 height (CRS code 5699) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] / Lambert-93 + NGF-IGN78 height (CRS code 10500) from 2021-01-05.',
         ],
         'urn:ogc:def:crs:EPSG::10499' => [
@@ -3808,6 +5068,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5720',
             'extent' => ['urn:ogc:def:area:EPSG::1326'],
             'extent_name' => 'France - mainland onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => 'Replaces ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN69 height (CRS code 10497) from 2021-01-05.',
         ],
         'urn:ogc:def:crs:EPSG::10500' => [
@@ -3817,6 +5080,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => 'Replaces ETRS89-FRA [RGF93 v2] / Lambert-93 + NGF-IGN78 height (CRS code 10498) from 2021-01-05.',
         ],
         'urn:ogc:def:crs:EPSG::10507' => [
@@ -3826,6 +5092,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5721',
             'extent' => ['urn:ogc:def:area:EPSG::1327'],
             'extent_name' => 'France - Corsica onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10545' => [
@@ -3835,6 +5104,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5780',
             'extent' => ['urn:ogc:def:area:EPSG::1294'],
             'extent_name' => 'Portugal - mainland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10553' => [
@@ -3844,6 +5116,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10547',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10554' => [
@@ -3853,6 +5128,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10548',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10555' => [
@@ -3862,6 +5140,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10549',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10556' => [
@@ -3871,6 +5152,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10550',
             'extent' => ['urn:ogc:def:area:EPSG::4756'],
             'extent_name' => 'Denmark - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10627' => [
@@ -3880,6 +5164,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4774'],
             'extent_name' => 'UK - London to Edinburgh',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10633' => [
@@ -3889,6 +5176,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5756',
             'extent' => ['urn:ogc:def:area:EPSG::3276'],
             'extent_name' => 'Martinique - onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10643' => [
@@ -3898,6 +5188,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10642',
             'extent' => ['urn:ogc:def:area:EPSG::4757'],
             'extent_name' => 'BES Islands - Saba onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10644' => [
@@ -3907,6 +5200,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10642',
             'extent' => ['urn:ogc:def:area:EPSG::4757'],
             'extent_name' => 'BES Islands - Saba onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10645' => [
@@ -3916,6 +5212,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10642',
             'extent' => ['urn:ogc:def:area:EPSG::4757'],
             'extent_name' => 'BES Islands - Saba onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10651' => [
@@ -3925,6 +5224,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10649',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10652' => [
@@ -3934,6 +5236,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10650',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10659' => [
@@ -3943,6 +5248,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5787',
             'extent' => ['urn:ogc:def:area:EPSG::1119'],
             'extent_name' => 'Hungary',
+            'scope' => [
+                1181,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10660' => [
@@ -3952,6 +5260,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5787',
             'extent' => ['urn:ogc:def:area:EPSG::1119'],
             'extent_name' => 'Hungary',
+            'scope' => [
+                1056,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10679' => [
@@ -3961,6 +5272,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10678',
             'extent' => ['urn:ogc:def:area:EPSG::4779'],
             'extent_name' => 'Europe - Baltic Sea',
+            'scope' => [
+                1291,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10686' => [
@@ -3970,6 +5284,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5779',
             'extent' => ['urn:ogc:def:area:EPSG::3307'],
             'extent_name' => 'Slovenia - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10687' => [
@@ -3979,6 +5296,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5779',
             'extent' => ['urn:ogc:def:area:EPSG::3307'],
             'extent_name' => 'Slovenia - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10691' => [
@@ -3988,6 +5308,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5717',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10692' => [
@@ -3997,6 +5320,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10741' => [
@@ -4006,6 +5332,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10740',
             'extent' => ['urn:ogc:def:area:EPSG::4788'],
             'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10742' => [
@@ -4015,6 +5344,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10740',
             'extent' => ['urn:ogc:def:area:EPSG::4788'],
             'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10746' => [
@@ -4024,6 +5356,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10740',
             'extent' => ['urn:ogc:def:area:EPSG::4788'],
             'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10747' => [
@@ -4033,6 +5368,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10740',
             'extent' => ['urn:ogc:def:area:EPSG::4788'],
             'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10764' => [
@@ -4042,6 +5380,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10763',
             'extent' => ['urn:ogc:def:area:EPSG::3822'],
             'extent_name' => 'BES Islands - Bonaire onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10765' => [
@@ -4051,6 +5392,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10763',
             'extent' => ['urn:ogc:def:area:EPSG::3822'],
             'extent_name' => 'BES Islands - Bonaire onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10774' => [
@@ -4060,6 +5404,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3333'],
             'extent_name' => 'Finland - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Now used in preference to ETRS89-FIN [EUREF-FIN] / TM35FIN(N,E) + N2000 height (CRS code 3903) in which the horizontal axis order is reversed to northing-easting.',
         ],
         'urn:ogc:def:crs:EPSG::10826' => [
@@ -4069,6 +5416,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7700',
             'extent' => ['urn:ogc:def:area:EPSG::3268'],
             'extent_name' => 'Latvia - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => 'Replaced by ETRS89-LVA [LKS-2020] + Latvia 2000 height (CRS code 10839) from 2026-10-01.',
         ],
         'urn:ogc:def:crs:EPSG::10839' => [
@@ -4078,6 +5428,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7700',
             'extent' => ['urn:ogc:def:area:EPSG::3268'],
             'extent_name' => 'Latvia - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => 'Replaces ETRS89-LVA [LKS-92] + Latvia 2000 height (CRS code 10826) from 2026-10-01.',
         ],
         'urn:ogc:def:crs:EPSG::10852' => [
@@ -4087,6 +5440,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4799'],
             'extent_name' => 'UK - Oxford to Cambridge',
+            'scope' => [
+                1141,
+            ],
             'help' => 'The EWR3 Grid (ETRS89 / EWR3 SnakeGrid) is an extension to the EWR2 Grid (ETRS89 / EWR2 SnakeGrid); west of Bedford the two grids are identical.',
         ],
         'urn:ogc:def:crs:EPSG::10864' => [
@@ -4096,6 +5452,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4801'],
             'extent_name' => 'UK - Sneatonthorpe to Redcar',
+            'scope' => [
+                1293,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10865' => [
@@ -4105,6 +5464,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7446',
             'extent' => ['urn:ogc:def:area:EPSG::3236'],
             'extent_name' => 'Cyprus - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10904' => [
@@ -4114,6 +5476,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10900',
             'extent' => ['urn:ogc:def:area:EPSG::4805'],
             'extent_name' => 'Germany - Lower Saxony - Asse',
+            'scope' => [
+                1144,
+            ],
             'help' => 'Used in 3-dimensional transformation from ETRS89/DREF91 Realization 2016 (see CT 10905) to Asse 2025 horizontal and Asse 2025 height vertical CRSs, Coordinate values are close to but not identical to DHDN + DHHN12 height.',
         ],
         'urn:ogc:def:crs:EPSG::10906' => [
@@ -4123,6 +5488,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10900',
             'extent' => ['urn:ogc:def:area:EPSG::4805'],
             'extent_name' => 'Germany - Lower Saxony - Asse',
+            'scope' => [
+                1144,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10920' => [
@@ -4132,6 +5500,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10918',
             'extent' => ['urn:ogc:def:area:EPSG::1375'],
             'extent_name' => 'USA - California',
+            'scope' => [
+                1270,
+            ],
             'help' => 'Replaces NAD83(2011) + NAVD88 height in California.',
         ],
         'urn:ogc:def:crs:EPSG::10997' => [
@@ -4141,6 +5512,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10989',
             'extent' => ['urn:ogc:def:area:EPSG::4822'],
             'extent_name' => 'UK - Greater London',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11000' => [
@@ -4150,6 +5524,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10999',
             'extent' => ['urn:ogc:def:area:EPSG::4831'],
             'extent_name' => 'Svalbard',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11006' => [
@@ -4159,6 +5536,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10989',
             'extent' => ['urn:ogc:def:area:EPSG::4822'],
             'extent_name' => 'UK - Greater London',
+            'scope' => [
+                1297,
+            ],
             'help' => 'Replaces the London Survey Grid (LSG), which was formerly also known as the LU Grid, the LUL Grid or the Crossrail Grid. The LSG2025 is a re-baselined definition of LSG which recognises the CORS network revision from OSNet v2001 to OSNet v2009 made in 2016 but maintains the original map projection and transformation parameter values. Due to the differences in coordinate values derived from the original Xrail84 control network, through OSNet v2001 or through OSNet v2009, horizontal positions of old data may differ from LSG2025 by up to 12mm in Eastings and 2mm in Northings. Vertically, LSG2025 maintains LSG heights (derived by applying the OSGM02 geoid model to OSNet v2001 ellipsoidal coordinates) through use of the LGGM2025 geoid model applied to ETRS89-GBR [OSNet v2009].',
         ],
         'urn:ogc:def:crs:EPSG::11120' => [
@@ -4168,6 +5548,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5317',
             'extent' => ['urn:ogc:def:area:EPSG::3248'],
             'extent_name' => 'Faroe Islands - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11158' => [
@@ -4177,6 +5560,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11157',
             'extent' => ['urn:ogc:def:area:EPSG::3340'],
             'extent_name' => 'Mayotte - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11169' => [
@@ -4186,6 +5572,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3595'],
             'extent_name' => 'Finland - west of 19.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11170' => [
@@ -4195,6 +5584,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3596'],
             'extent_name' => 'Finland - 19.5°E to 20.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11171' => [
@@ -4204,6 +5596,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3597'],
             'extent_name' => 'Finland - 20.5°E to 21.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11172' => [
@@ -4213,6 +5608,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3598'],
             'extent_name' => 'Finland - 21.5°E to 22.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11173' => [
@@ -4222,6 +5620,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3599'],
             'extent_name' => 'Finland - 22.5°E to 23.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11174' => [
@@ -4231,6 +5632,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3600'],
             'extent_name' => 'Finland - 23.5°E to 24.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11175' => [
@@ -4240,6 +5644,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3601'],
             'extent_name' => 'Finland - 24.5°E to 25.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11176' => [
@@ -4249,6 +5656,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3099'],
             'extent_name' => 'Finland - 25.5°E to 26.5°E onshore',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11177' => [
@@ -4258,6 +5668,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3603'],
             'extent_name' => 'Finland - 26.5°E to 27.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11178' => [
@@ -4267,6 +5680,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3604'],
             'extent_name' => 'Finland - 27.5°E to 28.5°E onshore nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11179' => [
@@ -4276,6 +5692,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3605'],
             'extent_name' => 'Finland - 28.5°E to 29.5°E nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11180' => [
@@ -4285,6 +5704,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3606'],
             'extent_name' => 'Finland - 29.5°E to 30.5°E nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11181' => [
@@ -4294,6 +5716,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::3900',
             'extent' => ['urn:ogc:def:area:EPSG::3607'],
             'extent_name' => 'Finland - east of 30.5°E nominal',
+            'scope' => [
+                1055,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11274' => [
@@ -4303,6 +5728,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20036',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11311' => [
@@ -4312,6 +5740,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8357',
             'extent' => ['urn:ogc:def:area:EPSG::1079'],
             'extent_name' => 'Czechia',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11312' => [
@@ -4321,6 +5752,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::8357',
             'extent' => ['urn:ogc:def:area:EPSG::1211'],
             'extent_name' => 'Slovakia',
+            'scope' => [
+                1203,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11314' => [
@@ -4330,6 +5764,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5621',
             'extent' => ['urn:ogc:def:area:EPSG::1211'],
             'extent_name' => 'Slovakia',
+            'scope' => [
+                1161,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11318' => [
@@ -4339,6 +5776,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1129'],
             'extent_name' => 'Japan',
+            'scope' => [
+                1142,
+            ],
             'help' => 'Replaces JGD2011 + JGD2011 (vertical) height (CRS code 6696) with effect from 1st April 2025.',
         ],
         'urn:ogc:def:crs:EPSG::11319' => [
@@ -4348,6 +5788,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1854'],
             'extent_name' => 'Japan - zone I',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11320' => [
@@ -4357,6 +5800,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1855'],
             'extent_name' => 'Japan - zone II',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11321' => [
@@ -4366,6 +5812,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1856'],
             'extent_name' => 'Japan - zone III',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11322' => [
@@ -4375,6 +5824,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1857'],
             'extent_name' => 'Japan - zone IV',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11323' => [
@@ -4384,6 +5836,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1858'],
             'extent_name' => 'Japan - zone V',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11324' => [
@@ -4393,6 +5848,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1859'],
             'extent_name' => 'Japan - zone VI',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11325' => [
@@ -4402,6 +5860,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1860'],
             'extent_name' => 'Japan - zone VII',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11326' => [
@@ -4411,6 +5872,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1861'],
             'extent_name' => 'Japan - zone VIII',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11327' => [
@@ -4420,6 +5884,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1862'],
             'extent_name' => 'Japan - zone IX',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11328' => [
@@ -4429,6 +5896,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1863'],
             'extent_name' => 'Japan - zone X',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11329' => [
@@ -4438,6 +5908,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1864'],
             'extent_name' => 'Japan - zone XI',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11330' => [
@@ -4447,6 +5920,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1865'],
             'extent_name' => 'Japan - zone XII',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11333' => [
@@ -4456,6 +5932,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1866'],
             'extent_name' => 'Japan - zone XIII',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11336' => [
@@ -4465,6 +5944,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1867'],
             'extent_name' => 'Japan - zone XIV',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11383' => [
@@ -4474,6 +5956,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11338',
             'extent' => ['urn:ogc:def:area:EPSG::1048'],
             'extent_name' => 'Bhutan',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11385' => [
@@ -4483,6 +5968,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5703',
             'extent' => ['urn:ogc:def:area:EPSG::3278'],
             'extent_name' => 'Mexico - onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11399' => [
@@ -4492,6 +5980,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] + NN2000:2018 height.',
         ],
         'urn:ogc:def:crs:EPSG::11400' => [
@@ -4501,6 +5992,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3636'],
             'extent_name' => 'Norway - onshore - west of 6°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11403' => [
@@ -4510,6 +6004,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::4066'],
             'extent_name' => 'Norway - onshore - 6°E to 12°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11404' => [
@@ -4519,6 +6016,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::4067'],
             'extent_name' => 'Norway - onshore - 12°E to 18°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11405' => [
@@ -4528,6 +6028,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::4068'],
             'extent_name' => 'Norway - onshore - 18°E to 24°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11406' => [
@@ -4537,6 +6040,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::4069'],
             'extent_name' => 'Norway - onshore - 24°E to 30°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11407' => [
@@ -4546,6 +6052,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3676'],
             'extent_name' => 'Norway - onshore - east of 30°E',
+            'scope' => [
+                1153,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11408' => [
@@ -4555,6 +6064,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3648'],
             'extent_name' => 'Norway - onshore - 8°E to 9°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 8 + NN2000:2018 height (compound CRS code 5948).',
         ],
         'urn:ogc:def:crs:EPSG::11409' => [
@@ -4564,6 +6076,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3649'],
             'extent_name' => 'Norway - onshore - 9°E to 10°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 9 + NN2000:2018 height (compound CRS code 5949).',
         ],
         'urn:ogc:def:crs:EPSG::11410' => [
@@ -4573,6 +6088,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3650'],
             'extent_name' => 'Norway - onshore - 10°E to 11°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 10 + NN2000:2018 height (compound CRS code 5950).',
         ],
         'urn:ogc:def:crs:EPSG::11411' => [
@@ -4582,6 +6100,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3651'],
             'extent_name' => 'Norway - onshore - 11°E to 12°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 11 + NN2000:2018 height (compound CRS code 6151).',
         ],
         'urn:ogc:def:crs:EPSG::11412' => [
@@ -4591,6 +6112,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3653'],
             'extent_name' => 'Norway - onshore - 12°E to 13°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 12 + NN2000:2018 height (compound CRS code 5952).',
         ],
         'urn:ogc:def:crs:EPSG::11413' => [
@@ -4600,6 +6124,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3654'],
             'extent_name' => 'Norway - onshore - 13°E to 14°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 13 + NN2000:2018 height (compound CRS code 5953).',
         ],
         'urn:ogc:def:crs:EPSG::11414' => [
@@ -4609,6 +6136,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3655'],
             'extent_name' => 'Norway - onshore - 14°E to 15°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 14 + NN2000:2018 height (compound CRS code 5954).',
         ],
         'urn:ogc:def:crs:EPSG::11415' => [
@@ -4618,6 +6148,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3656'],
             'extent_name' => 'Norway - onshore - 15°E to 16°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 15 + NN2000:2018 height (compound CRS code 5955).',
         ],
         'urn:ogc:def:crs:EPSG::11416' => [
@@ -4627,6 +6160,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3657'],
             'extent_name' => 'Norway - onshore - 16°E to 17°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 16 + NN2000:2018 height (compound CRS code 5956).',
         ],
         'urn:ogc:def:crs:EPSG::11417' => [
@@ -4636,6 +6172,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3658'],
             'extent_name' => 'Norway - onshore - 17°E to 18°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 17 + NN2000:2018 height (compound CRS code 5957).',
         ],
         'urn:ogc:def:crs:EPSG::11418' => [
@@ -4645,6 +6184,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3660'],
             'extent_name' => 'Norway - onshore - 18°E to 19°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 18 + NN2000:2018 height (compound CRS code 5958).',
         ],
         'urn:ogc:def:crs:EPSG::11419' => [
@@ -4654,6 +6196,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3661'],
             'extent_name' => 'Norway - onshore - 19°E to 20°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 19 + NN2000:2018 height (compound CRS code 5959).',
         ],
         'urn:ogc:def:crs:EPSG::11420' => [
@@ -4663,6 +6208,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3662'],
             'extent_name' => 'Norway - onshore - 20°E to 21°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 20 + NN2000:2018 height (compound CRS code 5960).',
         ],
         'urn:ogc:def:crs:EPSG::11421' => [
@@ -4672,6 +6220,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3663'],
             'extent_name' => 'Norway - onshore - 21°E to 22°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 21 + NN2000:2018 height (compound CRS code 5961).',
         ],
         'urn:ogc:def:crs:EPSG::11422' => [
@@ -4681,6 +6232,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3665'],
             'extent_name' => 'Norway - onshore - 22°E to 23°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 22 + NN2000:2018 height (compound CRS code 5962).',
         ],
         'urn:ogc:def:crs:EPSG::11423' => [
@@ -4690,6 +6244,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3667'],
             'extent_name' => 'Norway - onshore - 23°E to 24°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 23 + NN2000:2018 height (compound CRS code 5963).',
         ],
         'urn:ogc:def:crs:EPSG::11424' => [
@@ -4699,6 +6256,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3668'],
             'extent_name' => 'Norway - onshore - 24°E to 25°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 24 + NN2000:2018 height (compound CRS code 5964).',
         ],
         'urn:ogc:def:crs:EPSG::11425' => [
@@ -4708,6 +6268,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3669'],
             'extent_name' => 'Norway - onshore - 25°E to 26°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 25 + NN2000:2018 height (compound CRS code 5965).',
         ],
         'urn:ogc:def:crs:EPSG::11426' => [
@@ -4717,6 +6280,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3671'],
             'extent_name' => 'Norway - onshore - 26°E to 27°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 26 + NN2000:2018 height (compound CRS code 5966).',
         ],
         'urn:ogc:def:crs:EPSG::11427' => [
@@ -4726,6 +6292,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3672'],
             'extent_name' => 'Norway - onshore - 27°E to 28°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 27 + NN2000:2018 height (compound CRS code 5967).',
         ],
         'urn:ogc:def:crs:EPSG::11428' => [
@@ -4735,6 +6304,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3673'],
             'extent_name' => 'Norway - onshore - 28°E to 29°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 28 + NN2000:2018 height (compound CRS code 5968).',
         ],
         'urn:ogc:def:crs:EPSG::11429' => [
@@ -4744,6 +6316,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3674'],
             'extent_name' => 'Norway - onshore - 29°E to 30°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 29 + NN2000:2018 height (compound CRS code 5969).',
         ],
         'urn:ogc:def:crs:EPSG::11430' => [
@@ -4753,6 +6328,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3676'],
             'extent_name' => 'Norway - onshore - east of 30°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 30 + NN2000:2018 height (compound CRS code 5970).',
         ],
         'urn:ogc:def:crs:EPSG::11434' => [
@@ -4762,6 +6340,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1868'],
             'extent_name' => 'Japan - zone XV',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11435' => [
@@ -4771,6 +6352,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3636'],
             'extent_name' => 'Norway - onshore - west of 6°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 5 + NN2000:2018 height (compound CRS code 5945).',
         ],
         'urn:ogc:def:crs:EPSG::11436' => [
@@ -4780,6 +6364,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3639'],
             'extent_name' => 'Norway - onshore - 6°E to 7°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 6 + NN2000:2018 height (compound CRS code 5946).',
         ],
         'urn:ogc:def:crs:EPSG::11437' => [
@@ -4789,6 +6376,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11394',
             'extent' => ['urn:ogc:def:area:EPSG::3647'],
             'extent_name' => 'Norway - onshore - 7°E to 8°E',
+            'scope' => [
+                1029,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] / NTM zone 7 + NN2000:2018 height (compound CRS code 5947).',
         ],
         'urn:ogc:def:crs:EPSG::11442' => [
@@ -4798,6 +6388,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1869'],
             'extent_name' => 'Japan - zone XVI',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11443' => [
@@ -4807,6 +6400,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1870'],
             'extent_name' => 'Japan - zone XVII',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11444' => [
@@ -4816,6 +6412,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1871'],
             'extent_name' => 'Japan - zone XVIII',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11445' => [
@@ -4825,6 +6424,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11317',
             'extent' => ['urn:ogc:def:area:EPSG::1872'],
             'extent_name' => 'Japan - Minamitori-shima (Marcus Island) - onshore',
+            'scope' => [
+                1092,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11447' => [
@@ -4834,6 +6436,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11446',
             'extent' => ['urn:ogc:def:area:EPSG::4855'],
             'extent_name' => 'Wallis and Futuna - Futuna and Alofi',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11452' => [
@@ -4843,6 +6448,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11450',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11453' => [
@@ -4852,6 +6460,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11451',
             'extent' => ['urn:ogc:def:area:EPSG::4776'],
             'extent_name' => 'Greenland - offshore',
+            'scope' => [
+                1272,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11460' => [
@@ -4861,6 +6472,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::7839',
             'extent' => ['urn:ogc:def:area:EPSG::3973'],
             'extent_name' => 'New Zealand - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11465' => [
@@ -4870,6 +6484,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5731',
             'extent' => ['urn:ogc:def:area:EPSG::4858'],
             'extent_name' => 'Ireland - Dublin area',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11470' => [
@@ -4879,6 +6496,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4863'],
             'extent_name' => 'UK - Sizewell',
+            'scope' => [
+                1144,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11484' => [
@@ -4888,6 +6508,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5709',
             'extent' => ['urn:ogc:def:area:EPSG::1172'],
             'extent_name' => 'Netherlands',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11499' => [
@@ -4897,6 +6520,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5750',
             'extent' => ['urn:ogc:def:area:EPSG::2803'],
             'extent_name' => 'Isle of Man',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11500' => [
@@ -4906,6 +6532,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9274',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11511' => [
@@ -4915,6 +6544,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5742',
             'extent' => ['urn:ogc:def:area:EPSG::2795'],
             'extent_name' => 'UK - Shetland Islands onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11512' => [
@@ -4924,6 +6556,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'extent' => ['urn:ogc:def:area:EPSG::1347'],
             'extent_name' => 'Belgium - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11533' => [
@@ -4933,6 +6568,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5787',
             'extent' => ['urn:ogc:def:area:EPSG::1119'],
             'extent_name' => 'Hungary',
+            'scope' => [
+                1181,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11558' => [
@@ -4942,6 +6580,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5941',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRS89-NOR [EUREF89] + NN54 height. Replaced by ETRS89-NOR [EUREF89] + NN2000:2025 height.',
         ],
         'urn:ogc:def:crs:EPSG::11560' => [
@@ -4951,6 +6592,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5776',
             'extent' => ['urn:ogc:def:area:EPSG::1352'],
             'extent_name' => 'Norway - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ETRS89-NOR [EUREF89] + NN2000:2018 height (compound CRS code 5942).',
         ],
         'urn:ogc:def:crs:EPSG::11563' => [
@@ -4960,6 +6604,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20000',
             'extent' => ['urn:ogc:def:area:EPSG::4860'],
             'extent_name' => 'Svalbard - onshore and offshore - west of 37.91° between 76.21° and 81.12°',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11565' => [
@@ -4969,6 +6616,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9672',
             'extent' => ['urn:ogc:def:area:EPSG::4656'],
             'extent_name' => 'Norway - inshore and nearshore',
+            'scope' => [
+                1198,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11579' => [
@@ -4978,6 +6628,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5780',
             'extent' => ['urn:ogc:def:area:EPSG::1294'],
             'extent_name' => 'Portugal - mainland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11584' => [
@@ -4987,6 +6640,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10353',
             'extent' => ['urn:ogc:def:area:EPSG::4741'],
             'extent_name' => 'Spain - Alboran',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11585' => [
@@ -4996,6 +6652,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5782',
             'extent' => ['urn:ogc:def:area:EPSG::4188'],
             'extent_name' => 'Spain and Gibraltar - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11586' => [
@@ -5005,6 +6664,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9402',
             'extent' => ['urn:ogc:def:area:EPSG::4590'],
             'extent_name' => 'Spain - Ceuta',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11587' => [
@@ -5014,6 +6676,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10352',
             'extent' => ['urn:ogc:def:area:EPSG::4739'],
             'extent_name' => 'Spain - Balearic Islands - Formentera',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11588' => [
@@ -5023,6 +6688,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9394',
             'extent' => ['urn:ogc:def:area:EPSG::4604'],
             'extent_name' => 'Spain - Balearic Islands - Ibiza',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11589' => [
@@ -5032,6 +6700,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9392',
             'extent' => ['urn:ogc:def:area:EPSG::4602'],
             'extent_name' => 'Spain - Balearic Islands - Mallorca',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11590' => [
@@ -5041,6 +6712,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::10354',
             'extent' => ['urn:ogc:def:area:EPSG::4740'],
             'extent_name' => 'Spain - Melilla',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11591' => [
@@ -5050,6 +6724,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9393',
             'extent' => ['urn:ogc:def:area:EPSG::4603'],
             'extent_name' => 'Spain - Balearic Islands - Menorca',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11819' => [
@@ -5059,6 +6736,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::2792'],
             'extent_name' => 'UK - Great Britain mainland onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11820' => [
@@ -5068,6 +6748,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5740',
             'extent' => ['urn:ogc:def:area:EPSG::2793'],
             'extent_name' => 'UK - Orkney Islands onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11821' => [
@@ -5077,6 +6760,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5749',
             'extent' => ['urn:ogc:def:area:EPSG::2802'],
             'extent_name' => 'UK - Scilly Isles onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11822' => [
@@ -5086,6 +6772,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5746',
             'extent' => ['urn:ogc:def:area:EPSG::2799'],
             'extent_name' => 'UK - Outer Hebrides onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11895' => [
@@ -5095,6 +6784,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11513',
             'extent' => ['urn:ogc:def:area:EPSG::3229'],
             'extent_name' => 'Colombia - mainland',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12209' => [
@@ -5104,6 +6796,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::11157',
             'extent' => ['urn:ogc:def:area:EPSG::3340'],
             'extent_name' => 'Mayotte - onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => 'Replaces RGM04 / UTM zone 38S + Mayotte 1950 height (code 26006).',
         ],
         'urn:ogc:def:crs:EPSG::12215' => [
@@ -5113,6 +6808,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9287',
             'extent' => ['urn:ogc:def:area:EPSG::4859'],
             'extent_name' => 'Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°',
+            'scope' => [
+                1198,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12216' => [
@@ -5122,6 +6820,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9288',
             'extent' => ['urn:ogc:def:area:EPSG::4859'],
             'extent_name' => 'Netherlands - offshore and nearshore - east of 2.54° and south of 55.7625°',
+            'scope' => [
+                1265,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12229' => [
@@ -5131,6 +6832,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5731',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12230' => [
@@ -5140,6 +6844,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5732',
             'extent' => ['urn:ogc:def:area:EPSG::2530'],
             'extent_name' => 'UK - Northern Ireland - onshore',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12245' => [
@@ -5149,6 +6856,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5214',
             'extent' => ['urn:ogc:def:area:EPSG::3736'],
             'extent_name' => 'Italy - mainland and Sicily',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12248' => [
@@ -5158,6 +6868,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::9722',
             'extent' => ['urn:ogc:def:area:EPSG::2339'],
             'extent_name' => 'Italy - Sardinia onshore',
+            'scope' => [
+                1270,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::12293' => [
@@ -5167,6 +6880,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5710',
             'extent' => ['urn:ogc:def:area:EPSG::1347'],
             'extent_name' => 'Belgium - onshore',
+            'scope' => [
+                1142,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20001' => [
@@ -5176,6 +6892,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20000',
             'extent' => ['urn:ogc:def:area:EPSG::4860'],
             'extent_name' => 'Svalbard - onshore and offshore - west of 37.91° between 76.21° and 81.12°',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20003' => [
@@ -5185,6 +6904,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5701',
             'extent' => ['urn:ogc:def:area:EPSG::4666'],
             'extent_name' => 'UK - Manchester, Wigan and Chester',
+            'scope' => [
+                1141,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20037' => [
@@ -5194,6 +6916,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20034',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20038' => [
@@ -5203,6 +6928,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20035',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::20043' => [
@@ -5212,6 +6940,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::20036',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
+            'scope' => [
+                1026,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::26006' => [
@@ -5221,6 +6952,9 @@ trait CompoundSRIDData
             'vertical_crs' => 'urn:ogc:def:crs:EPSG::5793',
             'extent' => ['urn:ogc:def:area:EPSG::3340'],
             'extent_name' => 'Mayotte - onshore',
+            'scope' => [
+                1178,
+            ],
             'help' => 'Replaced by RGM23 / UTM zone 38S + IGN 2023 Mayotte height (code 12209) on 2025-03-15.',
         ],
     ];

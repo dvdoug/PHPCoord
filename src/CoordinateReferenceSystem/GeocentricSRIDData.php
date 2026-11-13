@@ -20,7 +20,7 @@ use PHPCoord\Geometry\BoundingArea;
 trait GeocentricSRIDData
 {
     /**
-     * @var array<string, array{name: string, coordinate_system: string, datum: string, extent: BoundingArea|array<string>, extent_description: string, help: string}>
+     * @var array<string, array{name: string, coordinate_system: string, datum: string, extent: BoundingArea|array<string>, extent_description: string, scope: list<int>, help: string}>
      */
     protected static array $sridData = [
         'urn:ogc:def:crs:EPSG::3822' => [
@@ -29,6 +29,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1026',
             'extent' => ['urn:ogc:def:area:EPSG::1228'],
             'extent_name' => 'Taiwan',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::3887' => [
@@ -37,6 +40,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1029',
             'extent' => ['urn:ogc:def:area:EPSG::1124'],
             'extent_name' => 'Iraq',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4000' => [
@@ -45,6 +51,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1032',
             'extent' => ['urn:ogc:def:area:EPSG::1162'],
             'extent_name' => 'Moldova',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4039' => [
@@ -53,6 +62,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1033',
             'extent' => ['urn:ogc:def:area:EPSG::3613'],
             'extent_name' => 'Congo DR (Zaire) - south',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4073' => [
@@ -61,6 +73,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1034',
             'extent' => ['urn:ogc:def:area:EPSG::4543'],
             'extent_name' => 'Serbia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ETRS89-SRB [STRS00] (CRS code 8683).',
         ],
         'urn:ogc:def:crs:EPSG::4079' => [
@@ -69,6 +84,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1035',
             'extent' => ['urn:ogc:def:area:EPSG::3199'],
             'extent_name' => 'Spain - Canary Islands',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4465' => [
@@ -77,6 +95,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1038',
             'extent' => ['urn:ogc:def:area:EPSG::1220'],
             'extent_name' => 'St Pierre and Miquelon',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4468' => [
@@ -85,6 +106,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1036',
             'extent' => ['urn:ogc:def:area:EPSG::1159'],
             'extent_name' => 'Mayotte',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by RGM23 (CRS code 10669) with effect from 2023-01-01.',
         ],
         'urn:ogc:def:crs:EPSG::4473' => [
@@ -93,6 +117,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1037',
             'extent' => ['urn:ogc:def:area:EPSG::3340'],
             'extent_name' => 'Mayotte - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4479' => [
@@ -101,6 +128,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1043',
             'extent' => ['urn:ogc:def:area:EPSG::1067'],
             'extent_name' => 'China',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4481' => [
@@ -109,6 +139,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1042',
             'extent' => ['urn:ogc:def:area:EPSG::1160'],
             'extent_name' => 'Mexico',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by Mexico ITRF2008 (CRS code 6363) from December 2010.',
         ],
         'urn:ogc:def:crs:EPSG::4556' => [
@@ -117,6 +150,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1047',
             'extent' => ['urn:ogc:def:area:EPSG::2824'],
             'extent_name' => 'Caribbean - French Antilles',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces older local geographic 2D systems Fort Marigot and Sainte Anne CRS (codes 4621-22) in Guadeloupe and Fort Desaix (CRS code 4625) in Martinique. Replaced by RGAF09 (CRS code 5487).',
         ],
         'urn:ogc:def:crs:EPSG::4882' => [
@@ -125,6 +161,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6765',
             'extent' => ['urn:ogc:def:area:EPSG::1212'],
             'extent_name' => 'Slovenia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'The CORS station coordinates in the D96 SIGNAL network have been referenced to D96-17 since 2020-01-01. For practical purposes D96-17 is considered to be consistent with D96.',
         ],
         'urn:ogc:def:crs:EPSG::4884' => [
@@ -133,6 +172,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6764',
             'extent' => ['urn:ogc:def:area:EPSG::3558'],
             'extent_name' => 'Antarctica - Ross Sea Region',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4886' => [
@@ -141,6 +183,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6762',
             'extent' => ['urn:ogc:def:area:EPSG::1047'],
             'extent_name' => 'Bermuda',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4888' => [
@@ -149,6 +194,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6761',
             'extent' => ['urn:ogc:def:area:EPSG::1076'],
             'extent_name' => 'Croatia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4890' => [
@@ -157,6 +205,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6760',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by WGS 72.',
         ],
         'urn:ogc:def:crs:EPSG::4892' => [
@@ -165,6 +216,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6759',
             'extent' => ['urn:ogc:def:area:EPSG::1511'],
             'extent_name' => 'USA - CONUS and Alaska; PRVI',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(HARN) and NAD83(FBN). Replaced by NAD83(2011).',
         ],
         'urn:ogc:def:crs:EPSG::4894' => [
@@ -173,6 +227,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6758',
             'extent' => ['urn:ogc:def:area:EPSG::1128'],
             'extent_name' => 'Jamaica',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4896' => [
@@ -181,6 +238,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6896',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF2000 (CRS code 4919). Replaced by ITRF2008 (CRS code 5332).',
         ],
         'urn:ogc:def:crs:EPSG::4897' => [
@@ -189,6 +249,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6755',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4899' => [
@@ -197,6 +260,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6754',
             'extent' => ['urn:ogc:def:area:EPSG::1143'],
             'extent_name' => 'Libya',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4906' => [
@@ -205,6 +271,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6749',
             'extent' => ['urn:ogc:def:area:EPSG::1174'],
             'extent_name' => 'New Caledonia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces older local geographic 2D systems IGN56 Lifou, IGN72 Grande Terre, ST87 Ouvea, IGN53 Mare, ST84 Ile des Pins, ST71 Belep and NEA74 Noumea (CRS codes 4633, 4641-44, 4662 and 4750). Replaced by RGNC15 (CRS code 10308).',
         ],
         'urn:ogc:def:crs:EPSG::4908' => [
@@ -213,6 +282,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1421',
             'extent' => ['urn:ogc:def:area:EPSG::1107'],
             'extent_name' => 'Greenland',
+            'scope' => [
+                1056,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4910' => [
@@ -221,6 +293,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6647',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ITRF89 (code 4911).',
         ],
         'urn:ogc:def:crs:EPSG::4911' => [
@@ -229,6 +304,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6648',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF88 (code 4910). Replaced by ITRF90 (code 4912).',
         ],
         'urn:ogc:def:crs:EPSG::4912' => [
@@ -237,6 +315,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6649',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF89 (code 4911). Replaced by ITRF91 (code 4913).',
         ],
         'urn:ogc:def:crs:EPSG::4913' => [
@@ -245,6 +326,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6650',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF90 (code 4912). Replaced by ITRF92 (code 4914).',
         ],
         'urn:ogc:def:crs:EPSG::4914' => [
@@ -253,6 +337,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6651',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF91 (code 4913). Replaced by ITRF93 (code 4915).',
         ],
         'urn:ogc:def:crs:EPSG::4915' => [
@@ -261,6 +348,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6652',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF92 (code 4914). Replaced by ITRF94 (code 4916).',
         ],
         'urn:ogc:def:crs:EPSG::4916' => [
@@ -269,6 +359,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6653',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF93 (code 4915). Replaced by ITRF96 (code 4917).',
         ],
         'urn:ogc:def:crs:EPSG::4917' => [
@@ -277,6 +370,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6654',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF94 (code 4916). Replaced by ITRF97 (code 4918).',
         ],
         'urn:ogc:def:crs:EPSG::4918' => [
@@ -285,6 +381,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6655',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF96 (code 4917). Replaced by ITRF2000 (code 4919).',
         ],
         'urn:ogc:def:crs:EPSG::4919' => [
@@ -293,6 +392,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6656',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF97 (code 4918). Replaced by ITRF2005 (code 4896).',
         ],
         'urn:ogc:def:crs:EPSG::4920' => [
@@ -301,6 +403,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6742',
             'extent' => ['urn:ogc:def:area:EPSG::1151'],
             'extent_name' => 'Malaysia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by GDM2000 (2006).',
         ],
         'urn:ogc:def:crs:EPSG::4922' => [
@@ -309,6 +414,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6740',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1177,
+            ],
             'help' => 'Replaced by PZ-90.02 from 2007-09-20.',
         ],
         'urn:ogc:def:crs:EPSG::4924' => [
@@ -317,6 +425,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6702',
             'extent' => ['urn:ogc:def:area:EPSG::1157'],
             'extent_name' => 'Mauritania',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4926' => [
@@ -325,6 +436,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6737',
             'extent' => ['urn:ogc:def:area:EPSG::1135'],
             'extent_name' => 'South Korea',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4928' => [
@@ -333,6 +447,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6694',
             'extent' => ['urn:ogc:def:area:EPSG::1033'],
             'extent_name' => 'Argentina',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Legally adopted in May 1997. Replaced by POSGAR 98 for scientific and many practical purposes until May 2009. Officially replaced by POSGAR 2007 in May 2009.',
         ],
         'urn:ogc:def:crs:EPSG::4930' => [
@@ -341,6 +458,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6176',
             'extent' => ['urn:ogc:def:area:EPSG::1278'],
             'extent_name' => 'Antarctica - Australian sector',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4932' => [
@@ -349,6 +469,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6151',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Referenced to ETRF93 at epoch 1993.0. First realized through CHTRF95 and subsequently CHTRF98, with an aim to re-measure every 6 years. CHTRF98, CHTRF2004, CHTRF2010 and CHTRF2016 are all within 2cm of CHTRF95 and used for scientific applications, but for most practical purposes differences are considered insignificant. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).',
         ],
         'urn:ogc:def:crs:EPSG::4934' => [
@@ -357,6 +480,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6180',
             'extent' => ['urn:ogc:def:area:EPSG::1090'],
             'extent_name' => 'Estonia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4936' => [
@@ -365,6 +491,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6258',
             'extent' => ['urn:ogc:def:area:EPSG::4755'],
             'extent_name' => 'Europe - ETRF by country',
+            'scope' => [
+                1026,
+            ],
             'help' => 'Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This \'ensemble\' covers any or all of these realizations without distinction.',
         ],
         'urn:ogc:def:crs:EPSG::4938' => [
@@ -373,6 +502,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6283',
             'extent' => ['urn:ogc:def:area:EPSG::4177'],
             'extent_name' => 'Australia - GDA',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4940' => [
@@ -381,6 +513,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6148',
             'extent' => ['urn:ogc:def:area:EPSG::4540'],
             'extent_name' => 'Africa - South Africa, Lesotho and Eswatini',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4942' => [
@@ -389,6 +524,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6173',
             'extent' => ['urn:ogc:def:area:EPSG::1305'],
             'extent_name' => 'Europe - Ireland (Republic and Ulster) - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4944' => [
@@ -397,6 +535,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6659',
             'extent' => ['urn:ogc:def:area:EPSG::1120'],
             'extent_name' => 'Iceland',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ISN2004 (CRS code 5322).',
         ],
         'urn:ogc:def:crs:EPSG::4946' => [
@@ -405,6 +546,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6612',
             'extent' => ['urn:ogc:def:area:EPSG::1129'],
             'extent_name' => 'Japan',
+            'scope' => [
+                1027,
+            ],
             'help' => 'From 21st October 2011 replaced by JGD2011 (CRS code 6666).',
         ],
         'urn:ogc:def:crs:EPSG::4948' => [
@@ -413,6 +557,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6661',
             'extent' => ['urn:ogc:def:area:EPSG::1139'],
             'extent_name' => 'Latvia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ETRS89-LVA [LKS-2020] (CRS code 10303) from 2026-10-01.',
         ],
         'urn:ogc:def:crs:EPSG::4950' => [
@@ -421,6 +568,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6126',
             'extent' => ['urn:ogc:def:area:EPSG::1145'],
             'extent_name' => 'Lithuania',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4952' => [
@@ -429,6 +579,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6130',
             'extent' => ['urn:ogc:def:area:EPSG::1167'],
             'extent_name' => 'Mozambique',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4954' => [
@@ -437,6 +590,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6140',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1189,
+            ],
             'help' => 'Includes all versions of NAD83(CSRS) from v2 [CSRS98] onwards without specific identification. As such it has an accuracy of approximately 1m.',
         ],
         'urn:ogc:def:crs:EPSG::4956' => [
@@ -445,6 +601,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6152',
             'extent' => ['urn:ogc:def:area:EPSG::1337'],
             'extent_name' => 'USA - HARN',
+            'scope' => [
+                1027,
+            ],
             'help' => 'In CONUS and Hawaii replaces NAD83 for applications with an accuracy of better than 1m. Replaced by NAD83(FBN) in CONUS, American Samoa and Guam/NMI, by NAD83(NSRS2007) in Alaska, by NAD83(PA11) in Hawaii and by NAD83(HARN Corrected) in PRVI.',
         ],
         'urn:ogc:def:crs:EPSG::4958' => [
@@ -453,6 +612,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6167',
             'extent' => ['urn:ogc:def:area:EPSG::1175'],
             'extent_name' => 'New Zealand',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4960' => [
@@ -461,6 +623,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6190',
             'extent' => ['urn:ogc:def:area:EPSG::1033'],
             'extent_name' => 'Argentina',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification in Argentina of SIRGAS 1995. Until May 2009 replaced POSGAR 94 for many practical purposes (but not as the legal system). POSGAR 94 was officially replaced by POSGAR 2007 in May 2009.',
         ],
         'urn:ogc:def:crs:EPSG::4962' => [
@@ -469,6 +634,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6189',
             'extent' => ['urn:ogc:def:area:EPSG::1251'],
             'extent_name' => 'Venezuela',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification in Venezuela of SIRGAS.',
         ],
         'urn:ogc:def:crs:EPSG::4964' => [
@@ -477,6 +645,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6171',
             'extent' => ['urn:ogc:def:area:EPSG::1096'],
             'extent_name' => 'France',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ETRS89-FRA [RGF93 v2] (CRS code 9775) from 2010-06-18.',
         ],
         'urn:ogc:def:crs:EPSG::4966' => [
@@ -485,6 +656,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6624',
             'extent' => ['urn:ogc:def:area:EPSG::1097'],
             'extent_name' => 'French Guiana',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4970' => [
@@ -493,6 +667,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6627',
             'extent' => ['urn:ogc:def:area:EPSG::3902'],
             'extent_name' => 'Reunion',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4974' => [
@@ -501,6 +678,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6170',
             'extent' => ['urn:ogc:def:area:EPSG::3448'],
             'extent_name' => 'South America - SIRGAS 1995 by country',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by SIRGAS 2000 (CRS code 4988).',
         ],
         'urn:ogc:def:crs:EPSG::4976' => [
@@ -509,6 +689,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6619',
             'extent' => ['urn:ogc:def:area:EPSG::1225'],
             'extent_name' => 'Sweden',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4978' => [
@@ -517,6 +700,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6326',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4980' => [
@@ -525,6 +711,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6163',
             'extent' => ['urn:ogc:def:area:EPSG::1257'],
             'extent_name' => 'Yemen',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4982' => [
@@ -533,6 +722,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6670',
             'extent' => ['urn:ogc:def:area:EPSG::3343'],
             'extent_name' => 'Italy - including San Marino and Vatican',
+            'scope' => [
+                1180,
+            ],
             'help' => 'Replaced by ETRS89-ITA [RDN2008] (CRS code 6704) from 2011-11-10.',
         ],
         'urn:ogc:def:crs:EPSG::4984' => [
@@ -541,6 +733,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6322',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by WGS 84.',
         ],
         'urn:ogc:def:crs:EPSG::4986' => [
@@ -549,6 +744,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6324',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Broadcast ephemeris. Replaced by WGS 84.',
         ],
         'urn:ogc:def:crs:EPSG::4988' => [
@@ -557,6 +755,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6674',
             'extent' => ['urn:ogc:def:area:EPSG::3418'],
             'extent_name' => 'Latin America - SIRGAS 2000 by country',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS 1995 system (CRS code 4974) for South America; expands SIRGAS to Central America.',
         ],
         'urn:ogc:def:crs:EPSG::4990' => [
@@ -565,6 +766,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6677',
             'extent' => ['urn:ogc:def:area:EPSG::1138'],
             'extent_name' => 'Laos',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by Lao 1997. Lao 1993 coordinate values are within 1m of Lao 1997 values.',
         ],
         'urn:ogc:def:crs:EPSG::4992' => [
@@ -573,6 +777,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6678',
             'extent' => ['urn:ogc:def:area:EPSG::1138'],
             'extent_name' => 'Laos',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces Lao 1993. Lao 1993 coordinate values are within 1m of Lao 1997 values.',
         ],
         'urn:ogc:def:crs:EPSG::4994' => [
@@ -581,6 +788,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6683',
             'extent' => ['urn:ogc:def:area:EPSG::1190'],
             'extent_name' => 'Philippines',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::4996' => [
@@ -589,6 +799,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6686',
             'extent' => ['urn:ogc:def:area:EPSG::1070'],
             'extent_name' => 'Colombia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'For high accuracy purposes replaced by MAGNA-SIRGAS 2018 (code 20044).',
         ],
         'urn:ogc:def:crs:EPSG::4998' => [
@@ -597,6 +810,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6687',
             'extent' => ['urn:ogc:def:area:EPSG::1098'],
             'extent_name' => 'French Polynesia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5011' => [
@@ -605,6 +821,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1041',
             'extent' => ['urn:ogc:def:area:EPSG::3670'],
             'extent_name' => 'Portugal - Azores and Madeira',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5244' => [
@@ -613,6 +832,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1056',
             'extent' => ['urn:ogc:def:area:EPSG::1055'],
             'extent_name' => 'Brunei',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5250' => [
@@ -621,6 +843,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1057',
             'extent' => ['urn:ogc:def:area:EPSG::1237'],
             'extent_name' => 'Turkey',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5262' => [
@@ -629,6 +854,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1058',
             'extent' => ['urn:ogc:def:area:EPSG::1048'],
             'extent_name' => 'Bhutan',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by DrukRef23 (CRS code 11224).',
         ],
         'urn:ogc:def:crs:EPSG::5322' => [
@@ -637,6 +865,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1060',
             'extent' => ['urn:ogc:def:area:EPSG::1120'],
             'extent_name' => 'Iceland',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ISN93 (CRS code 4944). Replaced by ISN2016 (CRS code 8084).',
         ],
         'urn:ogc:def:crs:EPSG::5332' => [
@@ -645,6 +876,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1061',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF2005 (CRS code 4896). Replaced by ITRF2014 (CRS code 7789).',
         ],
         'urn:ogc:def:crs:EPSG::5341' => [
@@ -653,6 +887,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1062',
             'extent' => ['urn:ogc:def:area:EPSG::1033'],
             'extent_name' => 'Argentina',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted as official replacement of POSGAR 94 in May 2009. Also replaces de facto use of POSGAR 98 as of same date.',
         ],
         'urn:ogc:def:crs:EPSG::5352' => [
@@ -661,6 +898,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1063',
             'extent' => ['urn:ogc:def:area:EPSG::1049'],
             'extent_name' => 'Bolivia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5358' => [
@@ -669,6 +909,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1064',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS 2000 within Chile. Replaced by SIRGAS-Chile 2013 (CRS code 9146).',
         ],
         'urn:ogc:def:crs:EPSG::5363' => [
@@ -677,6 +920,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1065',
             'extent' => ['urn:ogc:def:area:EPSG::1074'],
             'extent_name' => 'Costa Rica',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by CR-SIRGAS epoch 2014.59 (CRS code 8905) from April 2018.',
         ],
         'urn:ogc:def:crs:EPSG::5368' => [
@@ -685,6 +931,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1066',
             'extent' => ['urn:ogc:def:area:EPSG::1186'],
             'extent_name' => 'Panama',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS 2000 within Panama.',
         ],
         'urn:ogc:def:crs:EPSG::5369' => [
@@ -693,6 +942,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1067',
             'extent' => ['urn:ogc:def:area:EPSG::1189'],
             'extent_name' => 'Peru',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS95 in Peru.',
         ],
         'urn:ogc:def:crs:EPSG::5379' => [
@@ -701,6 +953,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1068',
             'extent' => ['urn:ogc:def:area:EPSG::1247'],
             'extent_name' => 'Uruguay',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5391' => [
@@ -709,6 +964,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1069',
             'extent' => ['urn:ogc:def:area:EPSG::1087'],
             'extent_name' => 'El Salvador',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS 2000 within El Salvador.',
         ],
         'urn:ogc:def:crs:EPSG::5487' => [
@@ -717,6 +975,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1073',
             'extent' => ['urn:ogc:def:area:EPSG::2824'],
             'extent_name' => 'Caribbean - French Antilles',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces RRAF 1991 (CRS code 4556).',
         ],
         'urn:ogc:def:crs:EPSG::5544' => [
@@ -725,6 +986,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1076',
             'extent' => ['urn:ogc:def:area:EPSG::1187'],
             'extent_name' => 'Papua New Guinea',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::5558' => [
@@ -733,6 +997,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1077',
             'extent' => ['urn:ogc:def:area:EPSG::1242'],
             'extent_name' => 'Ukraine',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted 1st January 2007. Defined through transformation code 7817 at epoch 2005.0.',
         ],
         'urn:ogc:def:crs:EPSG::5591' => [
@@ -741,6 +1008,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1078',
             'extent' => ['urn:ogc:def:area:EPSG::3889'],
             'extent_name' => 'Europe - Fehmarnbelt outer',
+            'scope' => [
+                1139,
+            ],
             'help' => 'Trans-national system created due to small (but unacceptable for engineering tolerance) differences between the German and Danish realisations of ETRS89.',
         ],
         'urn:ogc:def:crs:EPSG::5828' => [
@@ -749,6 +1019,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1081',
             'extent' => ['urn:ogc:def:area:EPSG::3339'],
             'extent_name' => 'Germany - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Geometric component of both DB_REF2003 and DB_REF2016 systems. Derived from ETRS89 through transformation code 5826.',
         ],
         'urn:ogc:def:crs:EPSG::5884' => [
@@ -757,6 +1030,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1095',
             'extent' => ['urn:ogc:def:area:EPSG::1234'],
             'extent_name' => 'Tonga',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6133' => [
@@ -765,6 +1041,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1100',
             'extent' => ['urn:ogc:def:area:EPSG::1063'],
             'extent_name' => 'Cayman Islands',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6309' => [
@@ -773,6 +1052,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1112',
             'extent' => ['urn:ogc:def:area:EPSG::3236'],
             'extent_name' => 'Cyprus - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::6317' => [
@@ -781,6 +1063,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1116',
             'extent' => ['urn:ogc:def:area:EPSG::1511'],
             'extent_name' => 'USA - CONUS and Alaska; PRVI',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(CORS96) and NAD83(NSRS2007) (CRS codes 6781 and 4892).',
         ],
         'urn:ogc:def:crs:EPSG::6320' => [
@@ -789,6 +1074,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1117',
             'extent' => ['urn:ogc:def:area:EPSG::4162'],
             'extent_name' => 'Pacific - US interests Pacific plate',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa.',
         ],
         'urn:ogc:def:crs:EPSG::6323' => [
@@ -797,6 +1085,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1118',
             'extent' => ['urn:ogc:def:area:EPSG::4167'],
             'extent_name' => 'Pacific - US interests Mariana plate',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam.',
         ],
         'urn:ogc:def:crs:EPSG::6363' => [
@@ -805,6 +1096,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1120',
             'extent' => ['urn:ogc:def:area:EPSG::1160'],
             'extent_name' => 'Mexico',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces Mexico ITRF92 (CRS code 4481) from December 2010.',
         ],
         'urn:ogc:def:crs:EPSG::6666' => [
@@ -813,6 +1107,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1128',
             'extent' => ['urn:ogc:def:area:EPSG::1129'],
             'extent_name' => 'Japan',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces JGD2000 (CRS code 4946) with effect from 21st October 2011. On adoption of JGD2024 (vertical) with effect from 1st April 2025, the name of this geodetic CRS was changed from JGD2011 to JGD2024; there is no change of definition or of coordinate values.',
         ],
         'urn:ogc:def:crs:EPSG::6704' => [
@@ -821,6 +1118,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1132',
             'extent' => ['urn:ogc:def:area:EPSG::3343'],
             'extent_name' => 'Italy - including San Marino and Vatican',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRS89-ITA [IGM95] (CRS code 4982) from 2011-11-10.',
         ],
         'urn:ogc:def:crs:EPSG::6781' => [
@@ -829,6 +1129,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1133',
             'extent' => ['urn:ogc:def:area:EPSG::1511'],
             'extent_name' => 'USA - CONUS and Alaska; PRVI',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by NAD83(2011) (CRS code 6317) from 2011-09-06.',
         ],
         'urn:ogc:def:crs:EPSG::6934' => [
@@ -837,6 +1140,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1141',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Used for products from International GNSS Service (IGS) analysis centres from 2011-04-17 through 2012-10-06. Replaces IGS05 (code 9010). Replaced by IGb08 (code 9015). For most practical purposes IGS08 is equivalent to ITRF2008.',
         ],
         'urn:ogc:def:crs:EPSG::6981' => [
@@ -845,6 +1151,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1142',
             'extent' => ['urn:ogc:def:area:EPSG::2603'],
             'extent_name' => 'Asia - Middle East - Israel and Palestine onshore',
+            'scope' => [
+                1203,
+            ],
             'help' => 'Intermediate system not used for spatial referencing - use IGD05 (CRS code 6978).',
         ],
         'urn:ogc:def:crs:EPSG::6988' => [
@@ -853,6 +1162,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1144',
             'extent' => ['urn:ogc:def:area:EPSG::2603'],
             'extent_name' => 'Asia - Middle East - Israel and Palestine onshore',
+            'scope' => [
+                1203,
+            ],
             'help' => 'Intermediate system not used for spatial referencing - use IGD05/12 (CRS code 6985).',
         ],
         'urn:ogc:def:crs:EPSG::7071' => [
@@ -861,6 +1173,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1113',
             'extent' => ['urn:ogc:def:area:EPSG::4246'],
             'extent_name' => 'French Southern and Antarctic Territories',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7134' => [
@@ -869,6 +1184,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1114',
             'extent' => ['urn:ogc:def:area:EPSG::1126'],
             'extent_name' => 'Israel',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by IGD05/12 (CRS code 7137).',
         ],
         'urn:ogc:def:crs:EPSG::7137' => [
@@ -877,6 +1195,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1115',
             'extent' => ['urn:ogc:def:area:EPSG::1126'],
             'extent_name' => 'Israel',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces IGD05 (CRS code 7134).',
         ],
         'urn:ogc:def:crs:EPSG::7371' => [
@@ -885,6 +1206,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1147',
             'extent' => ['urn:ogc:def:area:EPSG::1183'],
             'extent_name' => 'Oman',
+            'scope' => [
+                1027,
+            ],
             'help' => 'In Oman replaces usage of WGS 84 (G873) from 2014. Replaced by ONGD17 (CRS code 9292) from March 2019.',
         ],
         'urn:ogc:def:crs:EPSG::7656' => [
@@ -893,6 +1217,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1152',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (Transit) (CRS code 7815) from 1994-06-29. Replaced by WGS84 (G873) (CRS code 7658) from 1997-01-29.',
         ],
         'urn:ogc:def:crs:EPSG::7658' => [
@@ -901,6 +1228,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1153',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (G730) (CRS code 7656) from 1997-01-29. Replaced by WGS 84 (G1150) (CRS code 7660) from 2002-01-20.',
         ],
         'urn:ogc:def:crs:EPSG::7660' => [
@@ -909,6 +1239,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1154',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (G873) (CRS code 7658) from 2002-01-20. Replaced by WGS 84 (G1674) (CRS code 7662) from 2012-02-08.',
         ],
         'urn:ogc:def:crs:EPSG::7662' => [
@@ -917,6 +1250,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1155',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (G1150) (CRS code 7660) from 2012-02-08. Replaced by WGS 84 (G1762) (CRS code 7664) from 2013-10-16.',
         ],
         'urn:ogc:def:crs:EPSG::7664' => [
@@ -925,6 +1261,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1156',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (G1674) (CRS code 7662) from 2013-10-16. Redesignated WGS 84 (G1762\') in 2015 after changes to 7 NGA tracking station locations and antennas. Replaced by WGS 84 (G2139) (CRS code 9753) from 2021-01-03.',
         ],
         'urn:ogc:def:crs:EPSG::7677' => [
@@ -933,6 +1272,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1157',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1177,
+            ],
             'help' => 'Replaces PZ-90 (CRS code 4922) from 2007-09-20. Replaced by PZ-90.11 (CRS code 7679) from 2014-01-15.',
         ],
         'urn:ogc:def:crs:EPSG::7679' => [
@@ -941,6 +1283,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1158',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1177,
+            ],
             'help' => 'Replaces PZ-90.02 (CRS code 7677) from 2014-01-15.',
         ],
         'urn:ogc:def:crs:EPSG::7681' => [
@@ -949,6 +1294,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1159',
             'extent' => ['urn:ogc:def:area:EPSG::1198'],
             'extent_name' => 'Russia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7684' => [
@@ -957,6 +1305,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1160',
             'extent' => ['urn:ogc:def:area:EPSG::1137'],
             'extent_name' => 'Kyrgyzstan',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7789' => [
@@ -965,6 +1316,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1165',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF2008 (CRS code 5332). Replaced by ITRF2020 (CRS code 9988).',
         ],
         'urn:ogc:def:crs:EPSG::7796' => [
@@ -973,6 +1327,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1167',
             'extent' => ['urn:ogc:def:area:EPSG::1056'],
             'extent_name' => 'Bulgaria',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted 2010-07-29.',
         ],
         'urn:ogc:def:crs:EPSG::7815' => [
@@ -981,6 +1338,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1166',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaced by WGS84 (G730) (CRS code 7656) from 1994-06-29.',
         ],
         'urn:ogc:def:crs:EPSG::7842' => [
@@ -989,6 +1349,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1168',
             'extent' => ['urn:ogc:def:area:EPSG::4177'],
             'extent_name' => 'Australia - GDA',
+            'scope' => [
+                1181,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7879' => [
@@ -997,6 +1360,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1173',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
+            'scope' => [
+                1146,
+            ],
             'help' => 'Replaced by SHGD2015 (CRS code 7884) from 2015.',
         ],
         'urn:ogc:def:crs:EPSG::7884' => [
@@ -1005,6 +1371,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1174',
             'extent' => ['urn:ogc:def:area:EPSG::3183'],
             'extent_name' => 'St Helena - St Helena Island',
+            'scope' => [
+                1146,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::7914' => [
@@ -1013,6 +1382,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1178',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by ETRF90 (code 7916).',
         ],
         'urn:ogc:def:crs:EPSG::7916' => [
@@ -1021,6 +1393,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1179',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF89 (code 7914). Replaced by ETRF91 (code 7918).',
         ],
         'urn:ogc:def:crs:EPSG::7918' => [
@@ -1029,6 +1404,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1180',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF90 (code 7916). Replaced by ETRF92 (code 7920).',
         ],
         'urn:ogc:def:crs:EPSG::7920' => [
@@ -1037,6 +1415,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1181',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF91 (code 7918). Replaced by ETRF93 (code 7922).',
         ],
         'urn:ogc:def:crs:EPSG::7922' => [
@@ -1045,6 +1426,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1182',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF92 (code 7920). Replaced by ETRF94 (code 7924).',
         ],
         'urn:ogc:def:crs:EPSG::7924' => [
@@ -1053,6 +1437,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1183',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF93 (code 7922). Replaced by ETRF96 (code 7926).',
         ],
         'urn:ogc:def:crs:EPSG::7926' => [
@@ -1061,6 +1448,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1184',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF94 (code 7924). Replaced by ETRF97 (code 7928).',
         ],
         'urn:ogc:def:crs:EPSG::7928' => [
@@ -1069,6 +1459,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1185',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF96 (code 7926). Replaced by ETRF2000 (code 7930).',
         ],
         'urn:ogc:def:crs:EPSG::7930' => [
@@ -1077,6 +1470,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1186',
             'extent' => ['urn:ogc:def:area:EPSG::4755'],
             'extent_name' => 'Europe - ETRF by country',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF97 (code 7928). On the publication of ETRF2005 the EUREF Technical Working Group recommended ETRF2000 be the realization of ETRS89. ETRF2014 and ETRF2020 (codes 8401 and 10569) are technically superior to all earlier realizations of ETRS89.',
         ],
         'urn:ogc:def:crs:EPSG::8084' => [
@@ -1085,6 +1481,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1187',
             'extent' => ['urn:ogc:def:area:EPSG::1120'],
             'extent_name' => 'Iceland',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ISN2004 (CRS code 5322) from September 2017.',
         ],
         'urn:ogc:def:crs:EPSG::8227' => [
@@ -1093,6 +1492,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1191',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Used for products from the International GNSS Service (IGS) from 2017-01-29 to 2020-05-16. Replaces IGb08 (code 9015), replaced by IGb14 (code 9378). For most practical purposes IGS14 is equivalent to ITRF2014.',
         ],
         'urn:ogc:def:crs:EPSG::8230' => [
@@ -1101,6 +1503,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1192',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 1996-01-01. Replaced by NAD83(CSRS)v2 (CRS code 8233).',
         ],
         'urn:ogc:def:crs:EPSG::8233' => [
@@ -1109,6 +1514,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1193',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 1998-01-01 and by the provincial governments of British Columbia, New Brunswick, Prince Edward Island and Quebec. Replaces NAD83(CSRS96). Replaced by NAD83(CSRS)v3 (CRS code 8238).',
         ],
         'urn:ogc:def:crs:EPSG::8238' => [
@@ -1117,6 +1525,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1194',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 1999-01-01 and by the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Saskatchewan. Replaces NAD83(CSRS)v2. Replaced by NAD83(CSRS)v4.',
         ],
         'urn:ogc:def:crs:EPSG::8242' => [
@@ -1125,6 +1536,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1195',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 2002-01-01 and by the provincial governments of Alberta and British Columbia. Replaces NAD83(CSRS)v3. Replaced by NAD83(CSRS)v5 (CRS code 8247).',
         ],
         'urn:ogc:def:crs:EPSG::8247' => [
@@ -1133,6 +1547,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1196',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 2006-01-01. Replaces NAD83(CSRS)v4. Replaced by NAD83(CSRS)v6 (CRS code 8250).',
         ],
         'urn:ogc:def:crs:EPSG::8250' => [
@@ -1141,6 +1558,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1197',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 2010-01-01 and the provincial governments of Alberta, British Columbia, Manitoba, Newfoundland and Labrador, Nova Scotia, Ontario and Prince Edward Island. Replaces NAD83(CSRS)v5. Replaced by NAD83(CSRS)v7.',
         ],
         'urn:ogc:def:crs:EPSG::8253' => [
@@ -1149,6 +1569,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1198',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 2017-05-01 and the provincial government of Alberta. Replaces NAD83(CSRS)v6. Replaced by NAD83(CSRS)v8.',
         ],
         'urn:ogc:def:crs:EPSG::8397' => [
@@ -1157,6 +1580,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1204',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'On publication in 2007 of this CRS, the EUREF Technical Working Group recommended that ETRF2000 (EPSG code 7930) remained as the preferred realization of ETRS89. Replaced by ETRF2014 (code 8401).',
         ],
         'urn:ogc:def:crs:EPSG::8401' => [
@@ -1165,6 +1591,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1206',
             'extent' => ['urn:ogc:def:area:EPSG::1298'],
             'extent_name' => 'Europe - ETRF',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF2005 (code 8397). ETRF2014 is technically superior to ETRF2000 but ETRF2000 and other previous realizations may be preferred for backward compatibility reasons. Differences between ETRF2014 and ETRF2000 can reach 7cm.',
         ],
         'urn:ogc:def:crs:EPSG::8425' => [
@@ -1173,6 +1602,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1209',
             'extent' => ['urn:ogc:def:area:EPSG::1118'],
             'extent_name' => 'Hong Kong',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Locally sometimes referred to as ITRF96 or WGS 84, these are not strictly correct.',
         ],
         'urn:ogc:def:crs:EPSG::8429' => [
@@ -1181,6 +1613,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1208',
             'extent' => ['urn:ogc:def:area:EPSG::1147'],
             'extent_name' => 'Macao',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Locally sometimes referred to as ITRF2005, this is not strictly correct.',
         ],
         'urn:ogc:def:crs:EPSG::8541' => [
@@ -1189,6 +1624,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1211',
             'extent' => ['urn:ogc:def:area:EPSG::4515'],
             'extent_name' => 'USA - FBN',
+            'scope' => [
+                1027,
+            ],
             'help' => 'In Continental US, American Samoa, Guam/NMI and PRVI, replaces NAD83(HARN). In Continental US, Puerto Rico and US Virgin Islands replaced by NAD83(NSRS2007). In American Samoa and Hawaii replaced by NAD83(PA11). In Guam/NMI replaced by NAD83(MA11).',
         ],
         'urn:ogc:def:crs:EPSG::8543' => [
@@ -1197,6 +1635,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1212',
             'extent' => ['urn:ogc:def:area:EPSG::3634'],
             'extent_name' => 'Caribbean - Puerto Rico and US Virgin Islands - onshore',
+            'scope' => [
+                1027,
+            ],
             'help' => 'In PRVI replaces NAD83(HARN) = NAD83(1993 PRVI) to correct errors. Replaced by NAD83(FBN) = NAD83(2002 PRVI).',
         ],
         'urn:ogc:def:crs:EPSG::8683' => [
@@ -1205,6 +1646,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1214',
             'extent' => ['urn:ogc:def:area:EPSG::4543'],
             'extent_name' => 'Serbia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SREF98 (CRS code 4073).',
         ],
         'urn:ogc:def:crs:EPSG::8697' => [
@@ -1213,6 +1657,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1220',
             'extent' => ['urn:ogc:def:area:EPSG::1029'],
             'extent_name' => 'Angola',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8816' => [
@@ -1221,6 +1668,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1218',
             'extent' => ['urn:ogc:def:area:EPSG::1206'],
             'extent_name' => 'Saudi Arabia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8898' => [
@@ -1229,6 +1679,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1223',
             'extent' => ['urn:ogc:def:area:EPSG::1255'],
             'extent_name' => 'Wallis and Futuna',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::8905' => [
@@ -1237,6 +1690,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1225',
             'extent' => ['urn:ogc:def:area:EPSG::1074'],
             'extent_name' => 'Costa Rica',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces CR05 (CRS code 5363) from April 2018.',
         ],
         'urn:ogc:def:crs:EPSG::8915' => [
@@ -1245,6 +1701,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1227',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaced by SIRGAS-CON DGF01P01 (CRS code 8917).',
         ],
         'urn:ogc:def:crs:EPSG::8917' => [
@@ -1253,6 +1712,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1228',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF00P01 (CRS code 8915). Replaced by SIRGAS-CON DGF01P02 (CRS code 8919).',
         ],
         'urn:ogc:def:crs:EPSG::8919' => [
@@ -1261,6 +1723,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1229',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF01P01 (CRS code 8917). Replaced by SIRGAS-CON DGF02P01 (CRS code 8921).',
         ],
         'urn:ogc:def:crs:EPSG::8921' => [
@@ -1269,6 +1734,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1230',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF01P02 (CRS code 8919). Replaced by SIRGAS-CON DGF04P01 (CRS code 8923).',
         ],
         'urn:ogc:def:crs:EPSG::8923' => [
@@ -1277,6 +1745,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1231',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF02P01 (CRS code 8921). Replaced by SIRGAS-CON DGF05P01 (CRS code 8925).',
         ],
         'urn:ogc:def:crs:EPSG::8925' => [
@@ -1285,6 +1756,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1232',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF04P01 (CRS code 8923). Replaced by SIRGAS-CON DGF06P01 (CRS code 8927).',
         ],
         'urn:ogc:def:crs:EPSG::8927' => [
@@ -1293,6 +1767,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1233',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF05P01 (CRS code 8925). Replaced by SIRGAS-CON DGF07P01 (CRS code 8929).',
         ],
         'urn:ogc:def:crs:EPSG::8929' => [
@@ -1301,6 +1778,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1234',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF06P01 (CRS code 8927). Replaced by SIRGAS-CON DGF08P01 (CRS code 8931).',
         ],
         'urn:ogc:def:crs:EPSG::8931' => [
@@ -1309,6 +1789,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1235',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF07P01 (CRS code 8929). Replaced by SIRGAS-CON SIR09P01 (CRS code 8933).',
         ],
         'urn:ogc:def:crs:EPSG::8933' => [
@@ -1317,6 +1800,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1236',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON DGF08P01 (CRS code 8931). Replaced by SIRGAS-CON SIR10P01 (CRS code 8935).',
         ],
         'urn:ogc:def:crs:EPSG::8935' => [
@@ -1325,6 +1811,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1237',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON SIR09P01 (CRS code 8933). Replaced by SIRGAS-CON SIR11P01 (CRS code 8937).',
         ],
         'urn:ogc:def:crs:EPSG::8937' => [
@@ -1333,6 +1822,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1238',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON SIR10P01 (CRS code 8935). Replaced by SIRGAS-CON SIR13P01 (CRS code 8939).',
         ],
         'urn:ogc:def:crs:EPSG::8939' => [
@@ -1341,6 +1833,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1239',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON SIR11P01 (CRS code 8937). Replaced by SIRGAS-CON SIR14P01 (CRS code 8941).',
         ],
         'urn:ogc:def:crs:EPSG::8941' => [
@@ -1349,6 +1844,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1240',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON SIR13P01 (CRS code 8939). Replaced by SIRGAS-CON SIR15P01 (CRS code 8943).',
         ],
         'urn:ogc:def:crs:EPSG::8943' => [
@@ -1357,6 +1855,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1241',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON SIR14P01 (CRS code 8941). Replaced by SIRGAS-CON SIR17P01 (CRS code 8945).',
         ],
         'urn:ogc:def:crs:EPSG::8945' => [
@@ -1365,6 +1866,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1242',
             'extent' => ['urn:ogc:def:area:EPSG::4530'],
             'extent_name' => 'Latin America - Central America and South America',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces SIRGAS-CON SIR15P01 (CRS code 8943).',
         ],
         'urn:ogc:def:crs:EPSG::8947' => [
@@ -1373,6 +1877,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1243',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS-CON within Chile at epoch 2010.00. Replaces SIRGAS-Chile 2002 (CRS code 5358), replaced by SIRGAS-Chile 2013 (CRS code 9146) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::9001' => [
@@ -1381,6 +1888,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1244',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the International GNSS Service (IGS) from 2000-06-04 through 2001-12-01. Replaced by IGS00 (CRS code 9004). For all practical purposes IGS97 is equivalent to ITRF97.',
         ],
         'urn:ogc:def:crs:EPSG::9004' => [
@@ -1389,6 +1899,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1245',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the International GNSS Service (IGS) from 2001-12-02 through 2004-01-10. Replaces IGS97, replaced by IGb00 (CRS codes 9001 and 9007). For all practical purposes IGS00 is equivalent to ITRF2000.',
         ],
         'urn:ogc:def:crs:EPSG::9007' => [
@@ -1397,6 +1910,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1246',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the International GNSS Service (IGS) from 2004-01-11 through 2006-11-04. Replaces IGS00, replaced by IGS05 (CRS codes 9004 and 9010). For all practical purposes IGb00 is equivalent to ITRF2000.',
         ],
         'urn:ogc:def:crs:EPSG::9010' => [
@@ -1405,6 +1921,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1247',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the International GNSS Service (IGS) from 2006-11-05 through 2011-04-16. Replaces IGb00, replaced by IGS08 (CRS codes 9007 and 6834). For all practical purposes IGS05 is equivalent to ITRF2005.',
         ],
         'urn:ogc:def:crs:EPSG::9015' => [
@@ -1413,6 +1932,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1248',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the International GNSS Service (IGS) from 2012-10-07 through 2017-01-28. Replaces IGS08, replaced by IGS14 (CRS codes 6934 and 8227). For all practical purposes IGb08 is equivalent to ITRF2008.',
         ],
         'urn:ogc:def:crs:EPSG::9070' => [
@@ -1421,6 +1943,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1221',
             'extent' => ['urn:ogc:def:area:EPSG::4167'],
             'extent_name' => 'Pacific - US interests Mariana plate',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(HARN) (GGN93) and NAD83(FBN) in Guam. Replaced by NAD83(MA11).',
         ],
         'urn:ogc:def:crs:EPSG::9073' => [
@@ -1429,6 +1954,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1249',
             'extent' => ['urn:ogc:def:area:EPSG::4162'],
             'extent_name' => 'Pacific - US interests Pacific plate',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(HARN) and NAD83(FBN) in Hawaii and American Samoa. Replaced by NAD83(PA11).',
         ],
         'urn:ogc:def:crs:EPSG::9138' => [
@@ -1437,6 +1965,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1251',
             'extent' => ['urn:ogc:def:area:EPSG::4542'],
             'extent_name' => 'Kosovo',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9146' => [
@@ -1445,6 +1976,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1252',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS-CON within Chile at epoch 2013.00. Replaces SIRGAS-Chile 2002 (CRS code 5358), replaced by SIRGAS-Chile 2016 (CRS code 9151) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::9151' => [
@@ -1453,6 +1987,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1253',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS-CON within Chile at epoch 2016.00. Replaces SIRGAS-Chile 2013 (CRS code 9146), replaced by SIRGAS-Chile 2021 (CRS code 20039) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::9266' => [
@@ -1461,6 +1998,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6312',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9292' => [
@@ -1469,6 +2009,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1263',
             'extent' => ['urn:ogc:def:area:EPSG::1183'],
             'extent_name' => 'Oman',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ONGD14 (CRS code 7371) from March 2019.',
         ],
         'urn:ogc:def:crs:EPSG::9307' => [
@@ -1477,6 +2020,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1291',
             'extent' => ['urn:ogc:def:area:EPSG::4177'],
             'extent_name' => 'Australia - GDA',
+            'scope' => [
+                1267,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9331' => [
@@ -1485,6 +2031,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1268',
             'extent' => ['urn:ogc:def:area:EPSG::1206'],
             'extent_name' => 'Saudi Arabia',
+            'scope' => [
+                1181,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9378' => [
@@ -1493,6 +2042,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1272',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Used for products from the International GNSS Service (IGS) from 2020-05-17. Replaces IGS14 (code 8227), replaced by IGS20 (code 10176). For most practical purposes IGb14 is equivalent to ITRF2014.',
         ],
         'urn:ogc:def:crs:EPSG::9468' => [
@@ -1501,6 +2053,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1293',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Geometric component of national geodetic control network (JKG). Adopted 2013-10-11. Replaces DGN95 and all older systems.',
         ],
         'urn:ogc:def:crs:EPSG::9545' => [
@@ -1509,6 +2064,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1295',
             'extent' => ['urn:ogc:def:area:EPSG::4613'],
             'extent_name' => 'Europe - Lyon-Turin',
+            'scope' => [
+                1271,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9694' => [
@@ -1517,6 +2075,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1304',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1188,
+            ],
             'help' => 'REDGEOMIN coordinates are updated on a biannual basis identified using syntax "REDGEOMIN([frame]@[epoch]", e.g. REDGEOMIN(IGS20@2024.0), REDGEOMIN(IGS20@2024.5), etc. This EPSG record references any of these updates without distinction. Users should include the update used in the metadata of  their spatial data metadata. Data should be reduced to this epoch using the ADELA deformation model.',
         ],
         'urn:ogc:def:crs:EPSG::9700' => [
@@ -1525,6 +2086,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1305',
             'extent' => ['urn:ogc:def:area:EPSG::1192'],
             'extent_name' => 'Poland',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted from 2012-12-01.',
         ],
         'urn:ogc:def:crs:EPSG::9753' => [
@@ -1533,6 +2097,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1309',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (G1762) (CRS code 7664) from 2021-01-03. Replaced by WGS 84 (G2296) (CRS code 10604) from 2024-01-07.',
         ],
         'urn:ogc:def:crs:EPSG::9775' => [
@@ -1541,6 +2108,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1312',
             'extent' => ['urn:ogc:def:area:EPSG::1096'],
             'extent_name' => 'France',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRS89-FRA [RGF93 v1] (CRS code 4964) from 2010-06-18. Replaced by ETRS89-FRA [RGF93 v2b] (CRS code 9780) from 2021-01-05.',
         ],
         'urn:ogc:def:crs:EPSG::9780' => [
@@ -1549,6 +2119,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1313',
             'extent' => ['urn:ogc:def:area:EPSG::1096'],
             'extent_name' => 'France',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRS89-FRA [RGF93 v2] (CRS code 9775) from 2021-01-05.',
         ],
         'urn:ogc:def:crs:EPSG::9892' => [
@@ -1557,6 +2130,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::6181',
             'extent' => ['urn:ogc:def:area:EPSG::1146'],
             'extent_name' => 'Luxembourg',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::9988' => [
@@ -1565,6 +2141,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1322',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF2014 (CRS code 7789). Updated through ITRF2020-u2023 from December 2024 and through ITRF2020-u2024 from October 2025. Users referencing updates should include this information in their metadata.',
         ],
         'urn:ogc:def:crs:EPSG::10176' => [
@@ -1573,6 +2152,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1333',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'For most practical purposes IGS20 is equivalent to ITRF2020. Replaces IGb14 (code 9378). Used for products from the International GNSS Service (IGS) from 2022-11-27: IGS20 used from 2022-11-27 to 2025-02-01 (GPS weeks 2238 through 2351); IGb20 (extract from ITRF2020-u2023) used from 2025-02-02 to 2026-01-10 (GPS weeks 2352 through 2400); IGc20 used from 2026-01-11 (GPS week 2401). Users referencing updates should include this information in their metadata.',
         ],
         'urn:ogc:def:crs:EPSG::10282' => [
@@ -1581,6 +2163,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1353',
             'extent' => ['urn:ogc:def:area:EPSG::1103'],
             'extent_name' => 'Germany',
+            'scope' => [
+                1027,
+            ],
             'help' => 'German national realization of ETRS89.  Replaces ETRS89-DEU [ETRS89/DREF91/2002] from 2016-12-01. Replaced by ETRS89-DEU [ETRS89/DREF91/2025] from 2025-07-01.',
         ],
         'urn:ogc:def:crs:EPSG::10297' => [
@@ -1589,6 +2174,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1355',
             'extent' => ['urn:ogc:def:area:EPSG::1026'],
             'extent_name' => 'Algeria',
+            'scope' => [
+                1136,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10303' => [
@@ -1597,6 +2185,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1356',
             'extent' => ['urn:ogc:def:area:EPSG::1139'],
             'extent_name' => 'Latvia',
+            'scope' => [
+                1026,
+            ],
             'help' => 'Replaces ETRS89-LVA [LKS-92] (CRS code 4948) from 2026-10-01.',
         ],
         'urn:ogc:def:crs:EPSG::10308' => [
@@ -1605,6 +2196,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1357',
             'extent' => ['urn:ogc:def:area:EPSG::1174'],
             'extent_name' => 'New Caledonia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces RGNC91-93 (CRS code 4906).',
         ],
         'urn:ogc:def:crs:EPSG::10326' => [
@@ -1613,6 +2207,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1358',
             'extent' => ['urn:ogc:def:area:EPSG::1050'],
             'extent_name' => 'Bosnia and Herzegovina',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10412' => [
@@ -1621,6 +2218,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1365',
             'extent' => ['urn:ogc:def:area:EPSG::1061'],
             'extent_name' => 'Canada',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Adopted by the Canadian federal government from 2022-11-27. Replaces NAD83(CSRS)v7.',
         ],
         'urn:ogc:def:crs:EPSG::10473' => [
@@ -1629,6 +2229,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1367',
             'extent' => ['urn:ogc:def:area:EPSG::4744'],
             'extent_name' => 'Europe - Brenner',
+            'scope' => [
+                1285,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10569' => [
@@ -1637,6 +2240,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1382',
             'extent' => ['urn:ogc:def:area:EPSG::4755'],
             'extent_name' => 'Europe - ETRF by country',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ETRF2014 (code 8401). ETRF2020 is technically superior to ETRF2000 but ETRF2000 and other previous realizations may be preferred for backward compatibility reasons. Differences between ETRF2020 and ETRF2000 can reach 7cm.',
         ],
         'urn:ogc:def:crs:EPSG::10604' => [
@@ -1645,6 +2251,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1383',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1176,
+            ],
             'help' => 'Replaces WGS 84 (G2139) (CRS code 9753) from 2024-01-07.',
         ],
         'urn:ogc:def:crs:EPSG::10634' => [
@@ -1653,6 +2262,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1379',
             'extent' => ['urn:ogc:def:area:EPSG::4757'],
             'extent_name' => 'BES Islands - Saba onshore',
+            'scope' => [
+                1269,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10637' => [
@@ -1661,6 +2273,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1380',
             'extent' => ['urn:ogc:def:area:EPSG::4757'],
             'extent_name' => 'BES Islands - Saba onshore',
+            'scope' => [
+                1179,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10669' => [
@@ -1669,6 +2284,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1389',
             'extent' => ['urn:ogc:def:area:EPSG::1159'],
             'extent_name' => 'Mayotte',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces RGM04 (CRS code 4468) with effect from 2023-01-01.',
         ],
         'urn:ogc:def:crs:EPSG::10688' => [
@@ -1677,6 +2295,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1391',
             'extent' => ['urn:ogc:def:area:EPSG::1095'],
             'extent_name' => 'Finland',
+            'scope' => [
+                1181,
+            ],
             'help' => 'EUREF-FIN is the national realization of ETRS89 in Finland.',
         ],
         'urn:ogc:def:crs:EPSG::10723' => [
@@ -1685,6 +2306,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1392',
             'extent' => ['urn:ogc:def:area:EPSG::1248'],
             'extent_name' => 'Uzbekistan',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10734' => [
@@ -1693,6 +2317,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1393',
             'extent' => ['urn:ogc:def:area:EPSG::4788'],
             'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'scope' => [
+                1269,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10737' => [
@@ -1701,6 +2328,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1394',
             'extent' => ['urn:ogc:def:area:EPSG::4788'],
             'extent_name' => 'BES Islands - Sint Eustatius - onshore',
+            'scope' => [
+                1179,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10760' => [
@@ -1709,6 +2339,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1397',
             'extent' => ['urn:ogc:def:area:EPSG::3822'],
             'extent_name' => 'BES Islands - Bonaire onshore',
+            'scope' => [
+                1179,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10779' => [
@@ -1717,6 +2350,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1399',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces ITRF2020 (CRS code 9988).',
         ],
         'urn:ogc:def:crs:EPSG::10783' => [
@@ -1725,6 +2361,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1400',
             'extent' => ['urn:ogc:def:area:EPSG::1262'],
             'extent_name' => 'World',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Used for products from the International GNSS Service (IGS) from 2025-02-02. Replaces IGS20 (code 10176). For most practical purposes IGb20 is equivalent to ITRF2020-u2023.',
         ],
         'urn:ogc:def:crs:EPSG::10789' => [
@@ -1733,6 +2372,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1401',
             'extent' => ['urn:ogc:def:area:EPSG::1241'],
             'extent_name' => 'Uganda',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10798' => [
@@ -1741,6 +2383,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1402',
             'extent' => ['urn:ogc:def:area:EPSG::1142'],
             'extent_name' => 'Liberia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10805' => [
@@ -1749,6 +2394,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1403',
             'extent' => ['urn:ogc:def:area:EPSG::4795'],
             'extent_name' => 'Europe - Nordic and Baltic countries',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Used as hub for NKG2020 transformations. Replaces NKG_ETRF00 (ETRF2000 at epoch 2000.0).',
         ],
         'urn:ogc:def:crs:EPSG::10829' => [
@@ -1757,6 +2405,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1404',
             'extent' => ['urn:ogc:def:area:EPSG::1102'],
             'extent_name' => 'Georgia',
+            'scope' => [
+                1181,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10873' => [
@@ -1765,6 +2416,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1407',
             'extent' => ['urn:ogc:def:area:EPSG::1182'],
             'extent_name' => 'Norway',
+            'scope' => [
+                1181,
+            ],
             'help' => 'EUREF89 is the national realization of ETRS89 in Norway.',
         ],
         'urn:ogc:def:crs:EPSG::10878' => [
@@ -1773,6 +2427,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1410',
             'extent' => ['urn:ogc:def:area:EPSG::4884'],
             'extent_name' => 'Pacific - American Samoa, US (Hawaii), US outlying islands',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(PA11).',
         ],
         'urn:ogc:def:crs:EPSG::10881' => [
@@ -1781,6 +2438,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1411',
             'extent' => ['urn:ogc:def:area:EPSG::4883'],
             'extent_name' => 'Pacific - Guam and NMI',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(MA11).',
         ],
         'urn:ogc:def:crs:EPSG::10884' => [
@@ -1789,6 +2449,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1409',
             'extent' => ['urn:ogc:def:area:EPSG::2251'],
             'extent_name' => 'Caribbean - Puerto Rico and US Virgin Islands',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(2011) in Puerto Rico and US Virgin Islands.',
         ],
         'urn:ogc:def:crs:EPSG::10890' => [
@@ -1797,6 +2460,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1412',
             'extent' => ['urn:ogc:def:area:EPSG::1080'],
             'extent_name' => 'Denmark',
+            'scope' => [
+                1027,
+            ],
             'help' => 'ETRS89-DNK is the national realization of ETRS89 in Denmark.',
         ],
         'urn:ogc:def:crs:EPSG::10908' => [
@@ -1805,6 +2471,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1414',
             'extent' => ['urn:ogc:def:area:EPSG::1375'],
             'extent_name' => 'USA - California',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces NAD83(2011) in California. Supersedes  CSRS epoch 2017.5 (NAD83 2011) from 2025-06-15.',
         ],
         'urn:ogc:def:crs:EPSG::10939' => [
@@ -1813,6 +2482,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1417',
             'extent' => ['urn:ogc:def:area:EPSG::1131'],
             'extent_name' => 'Kazakhstan',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10950' => [
@@ -1821,6 +2493,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1418',
             'extent' => ['urn:ogc:def:area:EPSG::1375'],
             'extent_name' => 'USA - California',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Californian \'snapshot\' of ITRF2020 taking into account local tectonic plate movement and deformation. Supersedes CSRS epoch 2017.5 (ITRF2014) from 2025-06-15.',
         ],
         'urn:ogc:def:crs:EPSG::10954' => [
@@ -1829,6 +2504,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1420',
             'extent' => ['urn:ogc:def:area:EPSG::1107'],
             'extent_name' => 'Greenland',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10957' => [
@@ -1837,6 +2515,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1419',
             'extent' => ['urn:ogc:def:area:EPSG::1107'],
             'extent_name' => 'Greenland',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10966' => [
@@ -1845,6 +2526,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1422',
             'extent' => ['urn:ogc:def:area:EPSG::4803'],
             'extent_name' => 'North America - Canada, USA (Conus+AK)',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::10991' => [
@@ -1853,6 +2537,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1408',
             'extent' => ['urn:ogc:def:area:EPSG::4822'],
             'extent_name' => 'UK - Greater London',
+            'scope' => [
+                1297,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11007' => [
@@ -1861,6 +2548,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1425',
             'extent' => ['urn:ogc:def:area:EPSG::1264'],
             'extent_name' => 'UK - Great Britain onshore and nearshore; Isle of Man',
+            'scope' => [
+                1295,
+            ],
             'help' => 'Second national realization of ETRS89 in Great Britain. Replaces ETRS89-GBR [OSNet v2001] from 2016.',
         ],
         'urn:ogc:def:crs:EPSG::11029' => [
@@ -1869,6 +2559,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1426',
             'extent' => ['urn:ogc:def:area:EPSG::1122'],
             'extent_name' => 'Indonesia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Static snapshot at epoch 2021.0 of SRGI2013 dynamic CRS (CRS code 9468). Geometric component of national control network (JKG). Replaces SRGI2013 epoch 2012.0 coordinates of INACORS GNSS reference stations from 2025-02-25T14:10Z.',
         ],
         'urn:ogc:def:crs:EPSG::11035' => [
@@ -1877,6 +2570,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1427',
             'extent' => ['urn:ogc:def:area:EPSG::1172'],
             'extent_name' => 'Netherlands',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in the Netherlands, aligned to ETRF2000.',
         ],
         'urn:ogc:def:crs:EPSG::11041' => [
@@ -1885,6 +2581,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1428',
             'extent' => ['urn:ogc:def:area:EPSG::1074'],
             'extent_name' => 'Costa Rica',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
         'urn:ogc:def:crs:EPSG::11045' => [
@@ -1893,6 +2592,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1429',
             'extent' => ['urn:ogc:def:area:EPSG::1025'],
             'extent_name' => 'Albania',
+            'scope' => [
+                1181,
+            ],
             'help' => 'National realization of ETRS89 in Albania. The active GNSS network uses ETRS89-ALB [KRGJSH 2014] (CRS code 11051).',
         ],
         'urn:ogc:def:crs:EPSG::11051' => [
@@ -1901,6 +2603,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1430',
             'extent' => ['urn:ogc:def:area:EPSG::1025'],
             'extent_name' => 'Albania',
+            'scope' => [
+                1295,
+            ],
             'help' => 'Used for the coordinates of the 27 reference stations of the active ALBCORS network in Albania. Differences with the 2008 realization (CRS code 11045) used for other spatial referencing are negligible (5-7 mm for all components).',
         ],
         'urn:ogc:def:crs:EPSG::11055' => [
@@ -1909,6 +2614,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1431',
             'extent' => ['urn:ogc:def:area:EPSG::1037'],
             'extent_name' => 'Austria',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Austria.',
         ],
         'urn:ogc:def:crs:EPSG::11061' => [
@@ -1917,6 +2625,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1432',
             'extent' => ['urn:ogc:def:area:EPSG::1044'],
             'extent_name' => 'Belgium',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Belgium. Replaced by BEREF2011 (CRS code 11213).',
         ],
         'urn:ogc:def:crs:EPSG::11068' => [
@@ -1925,6 +2636,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1433',
             'extent' => ['urn:ogc:def:area:EPSG::1079'],
             'extent_name' => 'Czechia',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Czechia.',
         ],
         'urn:ogc:def:crs:EPSG::11074' => [
@@ -1933,6 +2647,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1434',
             'extent' => ['urn:ogc:def:area:EPSG::1211'],
             'extent_name' => 'Slovakia',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Slovakia. From 2024-04-01 replaced by ETRS89-SVK [SKTRF2022] (CRS code 11077).',
         ],
         'urn:ogc:def:crs:EPSG::11077' => [
@@ -1941,6 +2658,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1435',
             'extent' => ['urn:ogc:def:area:EPSG::1211'],
             'extent_name' => 'Slovakia',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Slovakia. Replaces ETRS89-SVK [SKTRF09] (CRS code 11074) from 2024-04-01.',
         ],
         'urn:ogc:def:crs:EPSG::11085' => [
@@ -1949,6 +2669,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1436',
             'extent' => ['urn:ogc:def:area:EPSG::1093'],
             'extent_name' => 'Faroe Islands',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in the Faroe Islands.',
         ],
         'urn:ogc:def:crs:EPSG::11091' => [
@@ -1957,6 +2680,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1437',
             'extent' => ['urn:ogc:def:area:EPSG::1106'],
             'extent_name' => 'Greece',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Greece.',
         ],
         'urn:ogc:def:crs:EPSG::11097' => [
@@ -1965,6 +2691,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1438',
             'extent' => ['urn:ogc:def:area:EPSG::1148'],
             'extent_name' => 'North Macedonia',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in North Macedonia.',
         ],
         'urn:ogc:def:crs:EPSG::11106' => [
@@ -1973,6 +2702,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1439',
             'extent' => ['urn:ogc:def:area:EPSG::4832'],
             'extent_name' => 'Portugal - mainland - onshore and offshore',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in continental Portugal.',
         ],
         'urn:ogc:def:crs:EPSG::11112' => [
@@ -1981,6 +2713,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1440',
             'extent' => ['urn:ogc:def:area:EPSG::1197'],
             'extent_name' => 'Romania',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Romania.',
         ],
         'urn:ogc:def:crs:EPSG::11126' => [
@@ -1989,6 +2724,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1442',
             'extent' => ['urn:ogc:def:area:EPSG::4833'],
             'extent_name' => 'Spain - mainland and Balearic Islands',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in peninsula Spain. Replaces ETRS89-ESP [REGENTE] for CORS services from 2018-03-15.',
         ],
         'urn:ogc:def:crs:EPSG::11129' => [
@@ -1997,6 +2735,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1441',
             'extent' => ['urn:ogc:def:area:EPSG::4833'],
             'extent_name' => 'Spain - mainland and Balearic Islands',
+            'scope' => [
+                1181,
+            ],
             'help' => 'National realization of ETRS89 in Spain. For GNSS CORS services, replaced by ETRS89-ESP [ERGNSS] (code 11126) from 2018-03-25. For most purposes the offset of approximately 2cm is considered insignificant.',
         ],
         'urn:ogc:def:crs:EPSG::11161' => [
@@ -2005,6 +2746,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1444',
             'extent' => ['urn:ogc:def:area:EPSG::1119'],
             'extent_name' => 'Hungary',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Hungary.',
         ],
         'urn:ogc:def:crs:EPSG::11187' => [
@@ -2013,6 +2757,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1445',
             'extent' => ['urn:ogc:def:area:EPSG::1076'],
             'extent_name' => 'Croatia',
+            'scope' => [
+                1295,
+            ],
             'help' => 'ETRS89-HRV [HTRS96] (CRS code 4888) used for national spatial referencing.',
         ],
         'urn:ogc:def:crs:EPSG::11197' => [
@@ -2021,6 +2768,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1446',
             'extent' => ['urn:ogc:def:area:EPSG::1103'],
             'extent_name' => 'Germany',
+            'scope' => [
+                1027,
+            ],
             'help' => 'German national realization of ETRS89. Replaces ETRS89/DREF91 Realization 2016 from 2025-07-01.',
         ],
         'urn:ogc:def:crs:EPSG::11213' => [
@@ -2029,6 +2779,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1447',
             'extent' => ['urn:ogc:def:area:EPSG::1044'],
             'extent_name' => 'Belgium',
+            'scope' => [
+                1295,
+            ],
             'help' => 'Second national realization of ETRS89 in Belgium. Replaces BEREF2002 (CRS code 11061). Used by the Belgian Active GNSS Network consisting of the Flemish positioning system (FLEPOS), the Wallonia continuously operating reference system (WALCORS) and GPSBru in the Brussels region.',
         ],
         'urn:ogc:def:crs:EPSG::11222' => [
@@ -2037,6 +2790,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1449',
             'extent' => ['urn:ogc:def:area:EPSG::1286'],
             'extent_name' => 'Europe - Liechtenstein and Switzerland',
+            'scope' => [
+                1027,
+            ],
             'help' => 'First realization of CHTRS95. For CRS used for topographic and cadastral purposes see CH1903+ (CRS code 4150).',
         ],
         'urn:ogc:def:crs:EPSG::11224' => [
@@ -2045,6 +2801,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1448',
             'extent' => ['urn:ogc:def:area:EPSG::1048'],
             'extent_name' => 'Bhutan',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Replaces DRUKREF 03 (CRS code 5262).',
         ],
         'urn:ogc:def:crs:EPSG::11391' => [
@@ -2053,6 +2812,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1453',
             'extent' => ['urn:ogc:def:area:EPSG::1146'],
             'extent_name' => 'Luxembourg',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2013] from 2021-10-31. Replaced by ETRS89-LUX [2025] from 2026-10-31.',
         ],
         'urn:ogc:def:crs:EPSG::11471' => [
@@ -2061,6 +2823,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1462',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS-CON within Chile at epoch 2025.00. Replaces SIRGAS-Chile 2021 (CRS code 20039) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::11545' => [
@@ -2069,6 +2834,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1463',
             'extent' => ['urn:ogc:def:area:EPSG::1146'],
             'extent_name' => 'Luxembourg',
+            'scope' => [
+                1295,
+            ],
             'help' => 'National realization of ETRS89 in Luxembourg. Replaces ETRS89-LUX [2020] from 2026-10-31.',
         ],
         'urn:ogc:def:crs:EPSG::12276' => [
@@ -2077,6 +2845,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1468',
             'extent' => ['urn:ogc:def:area:EPSG::1151'],
             'extent_name' => 'Malaysia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Update to GDM2000 coordinates for effects of the December 2004 Indian Ocean and March 2005 Nias-Simeulue (Aceh, Indonesia) earthquakes. In Peninsular Malaysia coordinate displacements caused by the two earthquakes vary, between 1 and 17 cm and between 1 and 7 cm respectively. In Sabah and Sarawak displacements were insignificant and GDM2000 (2006) coordinates were constrained to previous GDM2000 coordinate values. For the MyRTK active GNSS network used from 2007-07-01, replacing GDM2000, to 2016-11-01 when replaced by GDM2000 (2016). Used for the National Digital Cadastral Survey Database (NDCDB) from 2007-07-01 to 2021-10-14 when replaced by GDM2020.',
         ],
         'urn:ogc:def:crs:EPSG::12279' => [
@@ -2085,6 +2856,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1469',
             'extent' => ['urn:ogc:def:area:EPSG::1151'],
             'extent_name' => 'Malaysia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Update of GDM2000 (2006) station coordinates for effects of September 2007 Sumatra earthquake. Not adopted for MyRTKnet because National Digital Cadastral Survey Database (NDCDB) based on previous adjustment GDM2000 (2006).',
         ],
         'urn:ogc:def:crs:EPSG::12282' => [
@@ -2093,6 +2867,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1470',
             'extent' => ['urn:ogc:def:area:EPSG::1151'],
             'extent_name' => 'Malaysia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Update to GDM2000 (2009) coordinates for effects of April 2012 Indian Ocean earthquakes. Used for the MyRTK active GNSS network from 2016-11-01 to 2021-10-15, replacing GDM2000 (2006), replaced by GDM2020.',
         ],
         'urn:ogc:def:crs:EPSG::12285' => [
@@ -2101,6 +2878,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1471',
             'extent' => ['urn:ogc:def:area:EPSG::1151'],
             'extent_name' => 'Malaysia',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Static snapshot at epoch 2020.0 of dynamic CRS GDM2020. Adopted 2021-10-15. Replaces GDM2000, GDM2000 (2006) and GDM2000 (2016).',
         ],
         'urn:ogc:def:crs:EPSG::20039' => [
@@ -2109,6 +2889,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1327',
             'extent' => ['urn:ogc:def:area:EPSG::1066'],
             'extent_name' => 'Chile',
+            'scope' => [
+                1027,
+            ],
             'help' => 'Densification of SIRGAS-CON within Chile at epoch 2021.00. Replaces SIRGAS-Chile 2016 (CRS code 9151) and replaced by SIRGAS-Chile 2025 (CRS code 11471) due to significant tectonic deformation.',
         ],
         'urn:ogc:def:crs:EPSG::20044' => [
@@ -2117,6 +2900,9 @@ trait GeocentricSRIDData
             'datum' => 'urn:ogc:def:datum:EPSG::1329',
             'extent' => ['urn:ogc:def:area:EPSG::1070'],
             'extent_name' => 'Colombia',
+            'scope' => [
+                1027,
+            ],
             'help' => '',
         ],
     ];

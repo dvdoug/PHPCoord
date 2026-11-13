@@ -29,6 +29,7 @@ use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\CoordinateSystem\Ellipsoidal;
 use PHPCoord\CoordinateSystem\Vertical as VerticalCoordinateSystem;
 use PHPCoord\Datum\Datum;
+use PHPCoord\EPSG\Import\EPSGCodegenFromDataImport;
 use PHPCoord\Exception\UnknownCoordinateSystemException;
 use PHPCoord\Geometry\BoundingArea;
 use PHPCoord\Geometry\ExtentInteriorPoints;
@@ -43,6 +44,7 @@ use ReflectionProperty;
 use RuntimeException;
 use Throwable;
 
+use function array_fill_keys;
 use function chdir;
 use function count;
 use function dirname;
@@ -50,6 +52,7 @@ use function file_put_contents;
 use function fwrite;
 use function ini_set;
 use function is_array;
+use function is_int;
 use function is_file;
 use function is_finite;
 use function is_string;
@@ -150,6 +153,8 @@ $axesFor = static function (string $coordinateSystem) use (&$coordinateSystemAxe
 
 /** @var array<string, array{kind: string, name: string, axes: list<array{name: string, abbreviation: string, unit: string, kind: string}>}> $bySrid */
 $bySrid = [];
+/** @var array<string, list<int>> $scopesBySrid */
+$scopesBySrid = [];
 $kinds = [
     'geographic2d' => Geographic2D::class,
     'geographic3d' => Geographic3D::class,
@@ -169,6 +174,7 @@ foreach ($kinds as $kind => $class) {
             'name' => $row['name'],
             'axes' => $axesFor($row['coordinate_system']),
         ];
+        $scopesBySrid[$srid] = usageScopes($row);
     }
 }
 
@@ -204,11 +210,25 @@ foreach (sridRows(Compound::class) as $srid => $row) {
             ...$axesFor($vertical['coordinate_system']),
         ],
     ];
+    $scopesBySrid[$srid] = usageScopes($row);
 }
 foreach ($bySrid as $srid => $entry) {
     if ($entry['kind'] !== 'compound' && !isset($endpoints[$srid])) {
         unset($bySrid[$srid]);
         ++$omitted;
+    }
+}
+// A blacklisted usage scope marks a project grid or a closed survey frame.
+// The CRS and its projection conversion stay in the library.
+$blacklistedScopes = array_fill_keys(EPSGCodegenFromDataImport::BLACKLISTED_OPERATION_SCOPES, true);
+$scopeOmitted = 0;
+foreach ($bySrid as $srid => $entry) {
+    foreach ($scopesBySrid[$srid] ?? [] as $scope) {
+        if (isset($blacklistedScopes[$scope])) {
+            unset($bySrid[$srid]);
+            ++$scopeOmitted;
+            break;
+        }
     }
 }
 
@@ -311,7 +331,7 @@ if (file_put_contents($destination, $encoded) === false) {
     throw new RuntimeException('Could not write ' . $destination);
 }
 
-echo 'Wrote ' . count($crs) . ' coordinate reference systems to ' . $destination . ' (' . $omitted . " omitted with no shipped operation)\n";
+echo 'Wrote ' . count($crs) . ' coordinate reference systems to ' . $destination . ' (' . $omitted . ' omitted with no shipped operation, ' . $scopeOmitted . " omitted with a blacklisted scope)\n";
 
 /**
  * @return array<string, true>
@@ -352,6 +372,27 @@ function sridRows(string $class): array
     }
 
     return $rows;
+}
+
+/**
+ * @param array<string, mixed> $row
+ *
+ * @return list<int>
+ */
+function usageScopes(array $row): array
+{
+    if (!isset($row['scope']) || !is_array($row['scope'])) {
+        return [];
+    }
+
+    $scopes = [];
+    foreach ($row['scope'] as $scope) {
+        if (is_int($scope)) {
+            $scopes[] = $scope;
+        }
+    }
+
+    return $scopes;
 }
 
 function codeOf(string $srid): string
