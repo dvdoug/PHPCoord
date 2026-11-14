@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\DATMAGNASIRGAS2018COLGVD2023Provider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::20046',
 ];

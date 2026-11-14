@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\GeoTiffGVR2016GreenlandProvider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::4747',
 ];

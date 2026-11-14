@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'offsetsFile' => 'PHPCoord\\CoordinateOperation\\IGNFGeocentricTranslationIGN72GrandeTerreRGNC9193Provider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::4749',
 ];

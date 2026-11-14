@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGF93v2bNGFIGN69FranceProvider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::9782',
 ];

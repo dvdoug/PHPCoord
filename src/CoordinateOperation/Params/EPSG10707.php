@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'pointMotionVelocityGridFile' => 'PHPCoord\\CoordinateOperation\\NTv2VelNAD83CSRSv8CanadaProvider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::10414',
 ];

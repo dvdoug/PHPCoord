@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\GTXGEOID18CONUSProvider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::10910',
 ];

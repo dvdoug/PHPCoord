@@ -19,4 +19,5 @@ use PHPCoord\UnitOfMeasure\UnitOfMeasureFactory;
     'pointMotionVelocityGridFile' => 'PHPCoord\\CoordinateOperation\\GeoTiffNKGRF17velEuropeProvider',
     'sourceEpoch' => UnitOfMeasureFactory::makeUnit(2000.0, 'urn:ogc:def:uom:EPSG::1029'),
     'targetEpoch' => UnitOfMeasureFactory::makeUnit(2003.75, 'urn:ogc:def:uom:EPSG::1029'),
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::10807',
 ];

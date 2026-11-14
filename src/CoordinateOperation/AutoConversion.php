@@ -98,15 +98,24 @@ trait AutoConversion
         $path = $this->findOperationPath($this->getCRS(), $to, $ignoreBoundaryRestrictions, $sourceEpoch, $targetEpoch, $maxChainDepth);
 
         $point = $this;
+        // A vertical or geocentric result has no latitude or longitude. Keep the previous position.
+        $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : null);
         foreach ($path as $step) {
             // Before this hop: its source year, or the target epoch ahead of the first hop. After the last hop: the target epoch when the chain landed elsewhere.
             if ($step['slideBefore']) {
                 $point = $point->atEpoch($step['slideBefore']->asDateTime());
+                $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
             }
             $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
-            $point = $point->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']));
+            $additionalParams = [];
+            if ($horizontal !== null) {
+                $additionalParams['horizontalPoint'] = $horizontal;
+            }
+            $point = $point->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), $additionalParams);
+            $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
             if ($step['slideAfter']) {
                 $point = $point->atEpoch($step['slideAfter']->asDateTime());
+                $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
             }
         }
 

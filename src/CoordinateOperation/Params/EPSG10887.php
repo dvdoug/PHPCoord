@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\IGNFHeightRGAF09IGN1988SaintMartin2023Provider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::5489',
 ];

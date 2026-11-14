@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'offsetsFile' => 'PHPCoord\\CoordinateOperation\\GeoTiffDVR90EVRF2019MeanTideDenmarkProvider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::4258',
 ];

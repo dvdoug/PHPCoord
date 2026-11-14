@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'offsetsFile' => 'PHPCoord\\CoordinateOperation\\GUGiKHeightEVRF2007Baltic1986PolandProvider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::9702',
 ];

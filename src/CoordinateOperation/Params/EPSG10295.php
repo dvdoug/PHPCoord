@@ -9,4 +9,5 @@ declare(strict_types=1);
 
 /** @internal */ return [
     'geoidHeightCorrectionModelFile' => 'PHPCoord\\CoordinateOperation\\DATETRS89DHHN2016Provider',
+    'EPSGCodeForInterpolationCRS' => 'urn:ogc:def:crs:EPSG::10284',
 ];

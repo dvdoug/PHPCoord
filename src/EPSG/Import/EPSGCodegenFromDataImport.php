@@ -1434,8 +1434,9 @@ class EPSGCodegenFromDataImport
         $paramsSeen = [];
         foreach ($data as $operation => $operationData) {
             $params = [];
-            // The point methods do not take these, so they are left out of the generated parameter files.
-            // They name an interpolation CRS, or an operation a grid reverse could call instead of iterating.
+            // Point methods do not take these parameters, so they are left out of the generated files.
+            // 1062 names an operation a grid reverse could call instead of iterating.
+            // 1070 and 1071 name interpolation CRSs for geocentric-translation and point-motion grids.
             $paramsSql = "
                     SELECT
                         'urn:ogc:def:coordinateOperation:EPSG::' || pv.coord_op_code AS operation_code,
@@ -1446,7 +1447,7 @@ class EPSGCodegenFromDataImport
                         CASE WHEN pu.param_sign_reversal = 'Yes' THEN 1 ELSE 0 END AS reverses
                     FROM epsg_coordoperationparamvalue pv
                     JOIN epsg_coordoperationparamusage pu ON pv.coord_op_method_code = pu.coord_op_method_code AND pv.parameter_code = pu.parameter_code
-                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code AND p.parameter_code NOT IN (1048, 1062, 1070, 1071)
+                    JOIN epsg_coordoperationparam p ON pv.parameter_code = p.parameter_code AND p.parameter_code NOT IN (1062, 1070, 1071)
                     WHERE operation_code = '{$operation}'
                     GROUP BY pv.coord_op_code, p.parameter_code
                     ORDER BY pu.sort_order

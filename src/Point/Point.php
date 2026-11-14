@@ -57,6 +57,8 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON,
         CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL,
     ];
@@ -83,6 +85,8 @@ abstract class Point implements Stringable
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_BEV_AT,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_ASC,
         CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_PATCHJGD,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_NZLVD,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON => CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_BY_GRID_INTERPOLATION_VERTCON,
         CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN => CoordinateOperationMethods::EPSG_VERTICAL_CHANGE_BY_GEOID_GRID_DIFFERENCE_NRCAN,
         CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2 => CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_2,
         CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6 => CoordinateOperationMethods::EPSG_GENERAL_POLYNOMIAL_OF_DEGREE_6,
@@ -124,7 +128,7 @@ abstract class Point implements Stringable
 
     /**
      * @internal
-     * @param array{horizontalPoint?: Point, targetEpoch?: Time} $additionalParams
+     * @param array{horizontalPoint?: GeographicPoint|ProjectedPoint, targetEpoch?: Time} $additionalParams
      */
     public function performOperation(string $srid, Compound|Geocentric|Geographic2D|Geographic3D|Projected|Vertical $to, bool $inReverse, Length $accuracy, array $additionalParams = []): self
     {
@@ -140,11 +144,21 @@ abstract class Point implements Stringable
             return $point;
         }
 
+        $needsHorizontalPoint = isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']]);
+
         $method = CoordinateOperationMethods::getFunctionName($operation['method']);
         $params = self::resolveParamsByOperation($srid, $operation['method'], $inReverse);
+        // Point methods sample latitude and longitude. This says which datum those degrees belong to.
+        $interpolationCrs = $params['EPSGCodeForInterpolationCRS'] ?? null;
+        unset($params['EPSGCodeForInterpolationCRS']);
 
-        if (isset(self::METHODS_REQUIRING_HORIZONTAL_POINT[$operation['method']]) && isset($additionalParams['horizontalPoint'])) {
-            $params['horizontalPoint'] = $additionalParams['horizontalPoint'];
+        if ($needsHorizontalPoint) {
+            $namedCrs = $params['EPSGCodeForHorizontalCRS'] ?? $interpolationCrs;
+            $horizontalPoint = $additionalParams['horizontalPoint']; // @phpstan-ignore offsetAccess.notFound
+            $params['horizontalPoint'] = self::horizontalPointForVerticalOperation(
+                $horizontalPoint,
+                is_string($namedCrs) ? $namedCrs : null,
+            );
         }
         if (isset($additionalParams['targetEpoch'])) {
             $params['targetEpoch'] = $additionalParams['targetEpoch'];
@@ -194,6 +208,21 @@ abstract class Point implements Stringable
         }
 
         return $params;
+    }
+
+    private static function horizontalPointForVerticalOperation(GeographicPoint|ProjectedPoint $horizontalPoint, ?string $crsSrid): GeographicPoint
+    {
+        if ($crsSrid !== null && $horizontalPoint->getCRS()->getSRID() !== $crsSrid) {
+            /** @var GeographicPoint $horizontalPoint */
+            $horizontalPoint = $horizontalPoint->convert(CoordinateReferenceSystem::fromSRID($crsSrid));
+
+            return $horizontalPoint;
+        }
+        if ($horizontalPoint instanceof ProjectedPoint) {
+            return $horizontalPoint->asGeographicPoint();
+        }
+
+        return $horizontalPoint;
     }
 
     protected static function sign(float $number): int

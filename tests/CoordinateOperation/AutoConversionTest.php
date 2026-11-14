@@ -45,6 +45,7 @@ use function explode;
 use function fgetcsv;
 use function fopen;
 use function array_map;
+use function abs;
 
 require_once __DIR__ . '/../Geometry/ExtentInteriorPoints.php';
 
@@ -586,6 +587,105 @@ class AutoConversionTest extends TestCase
         $to = $from->convert($toCRS);
 
         self::assertEqualsWithDelta(24.555, $to->getHeight()->getValue(), 0.001);
+    }
+
+    public function testNZGD2000ToDunedin1958AppliesTheNZVD2016Grid(): void
+    {
+        if (!class_exists(GTXNZGeoid2016Provider::class) || !class_exists(GTXDunedin1958NZVD2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-oceania');
+        }
+
+        $from = GeographicPoint::create(
+            Geographic3D::fromSRID(Geographic3D::EPSG_NZGD2000),
+            new Degree(-44.42),
+            new Degree(168.92),
+            new Metre(100)
+        );
+        $nzvd2016 = $from->convert(Vertical::fromSRID(Vertical::EPSG_NZVD2016_HEIGHT));
+        $dunedin = $from->convert(Vertical::fromSRID(Vertical::EPSG_DUNEDIN_1958_HEIGHT));
+
+        self::assertInstanceOf(VerticalPoint::class, $nzvd2016);
+        self::assertInstanceOf(VerticalPoint::class, $dunedin);
+        // NZVD2016 height 50 m at this point is Dunedin 1958 height 50.304 m.
+        self::assertEqualsWithDelta(0.304, $dunedin->getHeight()->asMetres()->getValue() - $nzvd2016->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testNAD832011ToNGVD29AppliesVertcon(): void
+    {
+        if (!class_exists(GTXGEOID18CONUSProvider::class) || !class_exists(GTXNGVD29NAVD88CONUSCentralProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-northamerica');
+        }
+
+        $from = GeographicPoint::create(
+            Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_2011),
+            new Degree(29.4667897),
+            new Degree(-98.4803739),
+            new Metre(100)
+        );
+        $navd88 = $from->convert(Vertical::fromSRID(Vertical::EPSG_NAVD88_HEIGHT));
+        $ngvd29 = $from->convert(Vertical::fromSRID(Vertical::EPSG_NGVD29_HEIGHT_M));
+
+        self::assertInstanceOf(VerticalPoint::class, $navd88);
+        self::assertInstanceOf(VerticalPoint::class, $ngvd29);
+        // NGVD29 height 247.47 m at this point is NAVD88 height 247.599 m.
+        self::assertEqualsWithDelta(0.129, $navd88->getHeight()->asMetres()->getValue() - $ngvd29->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testETRS89DEUToEVRF2007AppliesTheSlopeFromDHHN2016(): void
+    {
+        if (!class_exists(DATETRS89DHHN2016Provider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+
+        $from = GeographicPoint::create(
+            Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_DEU_ETRS89_DREF91_2016),
+            new Degree(51.03),
+            new Degree(10.13),
+            new Metre(100)
+        );
+        $dhhn2016 = $from->convert(Vertical::fromSRID(Vertical::EPSG_DHHN2016_HEIGHT));
+        $evrf2007 = $from->convert(Vertical::fromSRID(Vertical::EPSG_EVRF2007_HEIGHT));
+
+        self::assertInstanceOf(VerticalPoint::class, $dhhn2016);
+        self::assertInstanceOf(VerticalPoint::class, $evrf2007);
+        // At the slope's evaluation point the latitude and longitude terms are zero and the offset is 0.014 m.
+        self::assertEqualsWithDelta(0.014, $evrf2007->getHeight()->asMetres()->getValue() - $dhhn2016->getHeight()->asMetres()->getValue(), 0.001);
+    }
+
+    public function testETRS89AUTToGHAHeightSamplesTheMGIGrid(): void
+    {
+        if (!class_exists(BEVHeightETRS89EVRF2000AustriaProvider::class) || !class_exists(BEVHeightGHAEVRF2000AustriaProvider::class)) {
+            self::markTestSkipped('Requires phpcoord/datapack-europe');
+        }
+
+        // Same degrees on ETRS89-AUT and on MGI disagree by a few millimetres on this grid.
+        $from = GeographicPoint::create(
+            Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_AUT_2002),
+            new Degree(46.7708333),
+            new Degree(12.8125),
+            new Metre(200)
+        );
+        $gha = $from->convert(Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT));
+        $evrfAustria = $from->convert(Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT));
+        $mgi = $from->convert(Geographic2D::fromSRID(Geographic2D::EPSG_MGI));
+        $etrs = GeographicPoint::create(
+            Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_AUT_2002),
+            new Degree(46.7708333),
+            new Degree(12.8125),
+            null
+        );
+
+        self::assertInstanceOf(VerticalPoint::class, $gha);
+        self::assertInstanceOf(VerticalPoint::class, $evrfAustria);
+        self::assertInstanceOf(GeographicPoint::class, $mgi);
+
+        $grid = (new BEVHeightGHAEVRF2000AustriaProvider())->provideGrid();
+        $evrfPoint = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT), $evrfAustria->getHeight());
+        $viaMgi = $evrfPoint->offsetFromGrid(Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT), $grid, true, $mgi);
+        $viaEtrs = $evrfPoint->offsetFromGrid(Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT), $grid, true, $etrs);
+
+        self::assertEqualsWithDelta($viaMgi->getHeight()->asMetres()->getValue(), $gha->getHeight()->asMetres()->getValue(), 0.001);
+        self::assertGreaterThan(0.001, abs($viaEtrs->getHeight()->asMetres()->getValue() - $viaMgi->getHeight()->asMetres()->getValue()));
     }
 
     public function testETRS89ToETRS89PlusNAP(): void
