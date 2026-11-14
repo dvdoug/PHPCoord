@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace PHPCoord\CoordinateOperation;
 
+use PHPCoord\Exception\UnknownConversionException;
 use PHPCoord\UnitOfMeasure\Angle\ArcSecond;
 
 use function assert;
@@ -104,6 +105,10 @@ class NTv2Grid extends GeographicGrid
             } elseif ($latitude >= $subFileMetaDatum['S_LAT'] && $latitude <= $subFileMetaDatum['N_LAT'] && $longitude >= $subFileMetaDatum['E_LONG'] && $longitude <= $subFileMetaDatum['W_LONG']) {
                 $possibleGrids[] = [self::FLAG_WITHIN_LIMITS, $subFileMetaDatum];
             }
+        }
+
+        if ($possibleGrids === []) {
+            throw new UnknownConversionException('Coordinate is outside the grid');
         }
 
         usort($possibleGrids, static fn ($a, $b) => $a[0] <=> $b[0] ?: $a[1]['LAT_INC'] <=> $b[1]['LAT_INC'] ?: $a[1]['LONG_INC'] <=> $b[1]['LONG_INC']);
