@@ -95,33 +95,53 @@ trait AutoConversion
         $sourceEpoch = $pointEpoch ? Year::fromDateTime($pointEpoch) : null;
         $targetEpoch = $epoch ? Year::fromDateTime($epoch) : $sourceEpoch;
 
-        $path = $this->findOperationPath($this->getCRS(), $to, $ignoreBoundaryRestrictions, $sourceEpoch, $targetEpoch, $maxChainDepth);
+        try {
+            $path = $this->findOperationPath($this->getCRS(), $to, $ignoreBoundaryRestrictions, $sourceEpoch, $targetEpoch, $maxChainDepth);
 
-        $point = $this;
-        // A vertical or geocentric result has no latitude or longitude. Keep the previous position.
-        $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : null);
-        foreach ($path as $step) {
-            // Before this hop: its source year, or the target epoch ahead of the first hop. After the last hop: the target epoch when the chain landed elsewhere.
-            if ($step['slideBefore']) {
-                $point = $point->atEpoch($step['slideBefore']->asDateTime());
+            $point = $this;
+            // A vertical or geocentric result has no latitude or longitude. Keep the previous position.
+            $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : null);
+            foreach ($path as $step) {
+                // Before this hop: its source year, or the target epoch ahead of the first hop. After the last hop: the target epoch when the chain landed elsewhere.
+                if ($step['slideBefore']) {
+                    $point = $point->atEpoch($step['slideBefore']->asDateTime());
+                    $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
+                }
+                $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
+                $additionalParams = [];
+                if ($horizontal !== null) {
+                    $additionalParams['horizontalPoint'] = $horizontal;
+                }
+                $point = $point->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), $additionalParams);
                 $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
+                if ($step['slideAfter']) {
+                    $point = $point->atEpoch($step['slideAfter']->asDateTime());
+                    $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
+                }
             }
-            $target = CoordinateReferenceSystem::fromSRID($step['in_reverse'] ? $step['source_crs'] : $step['target_crs']);
-            $additionalParams = [];
-            if ($horizontal !== null) {
-                $additionalParams['horizontalPoint'] = $horizontal;
+
+            $this->logger?->info('conversion path selected', ['steps' => $this->selectedConversionSteps($path)]);
+
+            return $point;
+        } catch (UnknownConversionException $e) {
+            if ($to instanceof Compound && !$this instanceof CompoundPoint) {
+                $this->logger?->debug('conversion path skipped', ['reason' => 'compound-retry']);
+
+                // try separate horizontal + vertical conversions and stitch results together
+                try {
+                    /** @var GeographicPoint|ProjectedPoint $horizontalPoint */
+                    $horizontalPoint = $this->convert($to->getHorizontal(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                    /** @var VerticalPoint $verticalPoint */
+                    $verticalPoint = $this->convert($to->getVertical(), $ignoreBoundaryRestrictions, $epoch, $maxChainDepth);
+                } catch (UnknownConversionException) {
+                    throw $e;
+                }
+
+                return CompoundPoint::create($to, $horizontalPoint, $verticalPoint, $epoch ?? $this->getCoordinateEpoch());
             }
-            $point = $point->performOperation($step['operation'], $target, $step['in_reverse'], new Metre($step['accuracy']), $additionalParams);
-            $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
-            if ($step['slideAfter']) {
-                $point = $point->atEpoch($step['slideAfter']->asDateTime());
-                $horizontal = $point instanceof GeographicPoint || $point instanceof ProjectedPoint ? $point : ($point instanceof CompoundPoint ? $point->getHorizontalPoint() : $horizontal);
-            }
+
+            throw $e;
         }
-
-        $this->logger?->info('conversion path selected', ['steps' => $this->selectedConversionSteps($path)]);
-
-        return $point;
     }
 
     /**
