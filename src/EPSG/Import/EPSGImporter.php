@@ -301,7 +301,7 @@ class EPSGImporter
                 $extentDB->exec("UPDATE extent SET bbox = '{$bbox}' WHERE extent_code = {$extentMetaData['extent_code']}");
             }
 
-            $extentDB->exec('UPDATE extent SET interior_lon = ST_X(ST_PointOnSurface(GeomFromGeoJSON(buffered))), interior_lat = ST_Y(ST_PointOnSurface(GeomFromGeoJSON(buffered))) WHERE interior_lat IS NULL AND extent_code=' . $extentMetaData['extent_code']);
+            $extentDB->exec('UPDATE extent SET interior_lon = ST_X(ST_PointOnSurface(GeomFromGeoJSON(original))), interior_lat = ST_Y(ST_PointOnSurface(GeomFromGeoJSON(original))) WHERE interior_lat IS NULL AND extent_code=' . $extentMetaData['extent_code']);
 
             // Area 1159 is the Mayotte maritime polygon. Its surface point is in the sea east of Grande-Terre, outside the RGM04 grid. Use the onshore area's surface point.
             if ((int) $extentMetaData['extent_code'] === 1159) {
