@@ -76,6 +76,7 @@ use function strtoupper;
 use function strrpos;
 use function substr;
 use function trim;
+use function array_keys;
 
 use const JSON_THROW_ON_ERROR;
 use const JSON_UNESCAPED_SLASHES;
@@ -480,7 +481,7 @@ function usngProbe(array $problem): array
                 $epoch,
             );
         }
-    } catch (InvalidArgumentException | InvalidAxesException | InvalidCoordinateException | InvalidCoordinateReferenceSystemException $exception) {
+    } catch (InvalidArgumentException|InvalidAxesException|InvalidCoordinateException|InvalidCoordinateReferenceSystemException $exception) {
         return usngProbeResult([], null, null, $exception->getMessage());
     }
     if (!$parsed instanceof NorthAmericanGeographicPoint) {

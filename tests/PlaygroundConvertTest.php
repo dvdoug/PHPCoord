@@ -38,6 +38,7 @@ use function sys_get_temp_dir;
 use function unlink;
 use function max;
 use function var_export;
+use function str_replace;
 
 use const JSON_THROW_ON_ERROR;
 use const PHP_BINARY;
