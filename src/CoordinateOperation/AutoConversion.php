@@ -607,7 +607,18 @@ trait AutoConversion
     {
         $sourceSRID = $source->getSRID();
         $targetSRID = $target->getSRID();
-        $regions = array_values(array_unique([$source->getBoundingArea()->getRegion(), $target->getBoundingArea()->getRegion(), RegionMap::REGION_GLOBAL]));
+        $regions = [
+            $source->getBoundingArea()->getRegion(),
+            $target->getBoundingArea()->getRegion(),
+            RegionMap::REGION_GLOBAL,
+        ];
+        if ($source instanceof Projected) {
+            $regions[] = $source->getBaseCRS()->getBoundingArea()->getRegion();
+        }
+        if ($target instanceof Projected) {
+            $regions[] = $target->getBaseCRS()->getBoundingArea()->getRegion();
+        }
+        $regions = array_values(array_unique($regions));
         sort($regions); // stable graph-cache key: BNG→WGS84 and WGS84→BNG load the same files
 
         $customTransformations = CoordinateOperations::getCustomTransformations();

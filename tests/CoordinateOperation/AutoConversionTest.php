@@ -821,6 +821,26 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(4984392.8341967016, $to->getZ()->asMetres()->getValue(), 0.00001);
     }
 
+    public function testWGS84ToNAD83CSRSArcticZone(): void
+    {
+        $from = GeographicPoint::create(
+            Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84),
+            new Degree(75.49),
+            new Degree(-79.0),
+            null,
+        );
+        $zone = Projected::fromSRID(Projected::EPSG_NAD83_CSRS_EPSG_ARCTIC_ZONE_4_18);
+        $direct = $from->convert($zone);
+        $viaBase = $from->convert(Geographic2D::fromSRID('urn:ogc:def:crs:EPSG::4617'))->convert($zone);
+
+        self::assertEqualsWithDelta($viaBase->getEasting()->asMetres()->getValue(), $direct->getEasting()->asMetres()->getValue(), 0.001);
+        self::assertEqualsWithDelta($viaBase->getNorthing()->asMetres()->getValue(), $direct->getNorthing()->asMetres()->getValue(), 0.001);
+
+        $back = $direct->convert(Geographic2D::fromSRID(Geographic2D::EPSG_WGS_84));
+        self::assertEqualsWithDelta(75.49, $back->getLatitude()->getValue(), 0.0000001);
+        self::assertEqualsWithDelta(-79.0, $back->getLongitude()->getValue(), 0.0000001);
+    }
+
     public function testNAD83NAD27SouthCarolina(): void
     {
         if (!class_exists(NADCON5NAD832007NAD832011CONUSLatitudeProvider::class)) {

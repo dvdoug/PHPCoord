@@ -9,6 +9,7 @@
 - Support for GeoTIFF (GTG) grids
 - Support for little-endian NADCON5 grid files
 ### Changed
+- Improved chain searches for projected and compound CRSs
 - Updates to data for Albania, American Samoa, Argentina, Austria, Belgium, Bhutan, Bosnia and Herzegovina, Bulgaria,
   Canada, Chile, Colombia, Costa Rica, Croatia, Czechia, Denmark, Estonia, Faroe Islands, Finland, France, Germany,
   Greece, Greenland, Guam, Hungary, Indonesia, Ireland, Italy, Japan, Kosovo, Latvia, Lithuania, Luxembourg, Malaysia,
