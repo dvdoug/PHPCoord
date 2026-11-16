@@ -17,6 +17,7 @@ use PHPCoord\UnitOfMeasure\Length\Metre;
 
 use function floor;
 use function implode;
+use function intdiv;
 use function str_pad;
 use function str_replace;
 use function strlen;
@@ -96,23 +97,21 @@ class IrishGridPoint extends ProjectedPoint
             throw new InvalidCoordinateException('Grid squares are 100,000m wide, max precision is 10');
         }
 
-        $halfLength = $length / 2;
+        $halfLength = intdiv($length, 2);
 
-        $x = $this->easting->asMetres()->getValue();
-        $y = $this->northing->asMetres()->getValue();
-        $easting = str_pad((string) (int) $x, $halfLength + 1, '0', STR_PAD_LEFT);
-        $northing = str_pad((string) (int) $y, $halfLength + 1, '0', STR_PAD_LEFT);
+        $easting = (int) $this->easting->asMetres()->getValue();
+        $northing = (int) $this->northing->asMetres()->getValue();
 
         // second (minor) letter is 100km grid sq, origin at 0,0 of this square
-        $minorSquaresEast = (int) $easting[0] % 5;
-        $minorSquaresNorth = (int) $northing[0] % 5;
+        $minorSquaresEast = intdiv($easting, 100000) % 5;
+        $minorSquaresNorth = intdiv($northing, 100000) % 5;
         $minorLetterIndex = (5 * $minorSquaresNorth + $minorSquaresEast);
         $minorLetter = substr(self::GRID_LETTERS, $minorLetterIndex, 1);
 
         return [
             $minorLetter,
-            substr($easting, 1, $halfLength),
-            substr($northing, 1, $halfLength),
+            substr(str_pad((string) ($easting % 100000), 5, '0', STR_PAD_LEFT), 0, $halfLength),
+            substr(str_pad((string) ($northing % 100000), 5, '0', STR_PAD_LEFT), 0, $halfLength),
         ];
     }
 }

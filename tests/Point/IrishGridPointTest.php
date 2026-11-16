@@ -35,6 +35,17 @@ class IrishGridPointTest extends TestCase
         self::assertEquals($expected, $point);
     }
 
+    public function testGridReferenceWhenComponentIsBelowOneHundredKilometres(): void
+    {
+        $point = new IrishGridPoint(new Metre(167500), new Metre(71800));
+        self::assertEquals('W675718', $point->asGridReference(6));
+        self::assertEquals('W 67500 71800', $point->asGridReferenceWithSpaces(10));
+
+        $point = new IrishGridPoint(new Metre(4500), new Metre(80000));
+        self::assertEquals('V045800', $point->asGridReference(6));
+        self::assertEquals('V 045 800', $point->asGridReferenceWithSpaces(6));
+    }
+
     public function testToSixFigureRef(): void
     {
         $point = new IrishGridPoint(new Metre(315904), new Metre(234671));

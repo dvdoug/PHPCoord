@@ -126,6 +126,31 @@ class BritishNationalGridPointTest extends TestCase
         self::assertEquals($expected, $point->asGridReference(2));
     }
 
+    public function testGridReferenceWhenComponentIsOutsideSixDigits(): void
+    {
+        // Northing >= 1000000: the old code treated the millions digit as the 100km digit.
+        $kirkwall = new BritishNationalGridPoint(new Metre(344909), new Metre(1011238));
+        self::assertEquals('HY4490911238', $kirkwall->asGridReference(10));
+        self::assertEquals('HY 449 112', $kirkwall->asGridReferenceWithSpaces(6));
+
+        $lerwick = new BritishNationalGridPoint(new Metre(447000), new Metre(1141000));
+        self::assertEquals('HU4700041000', $lerwick->asGridReference(10));
+        self::assertEquals('HU 470 410', $lerwick->asGridReferenceWithSpaces(6));
+
+        $unst = new BritishNationalGridPoint(new Metre(460000), new Metre(1210000));
+        self::assertEquals('HP6000010000', $unst->asGridReference(10));
+        self::assertEquals('HP 600 100', $unst->asGridReferenceWithSpaces(6));
+
+        // Easting or northing < 100000 was only padded out to six digits at length 10.
+        $southDevon = new BritishNationalGridPoint(new Metre(270000), new Metre(30000));
+        self::assertEquals('SX700300', $southDevon->asGridReference(6));
+        self::assertEquals('SX 70 30', $southDevon->asGridReferenceWithSpaces(4));
+
+        $westernIsles = new BritishNationalGridPoint(new Metre(90000), new Metre(870000));
+        self::assertEquals('NF900700', $westernIsles->asGridReference(6));
+        self::assertEquals('NF 90 70', $westernIsles->asGridReferenceWithSpaces(4));
+    }
+
     public function testRoundTripping1(): void
     {
         $point = BritishNationalGridPoint::fromGridReference('SX 70000 30000');

@@ -15,6 +15,8 @@
   Mayotte, Mexico, Moldova, Mozambique, Netherlands, New Zealand, North Macedonia, Northern Mariana Islands, Norway,
   Poland, Portugal, Puerto Rico, Romania, Serbia, Slovakia, Slovenia, South Africa, Spain, Switzerland, Svalbard,
   Sweden, UK, US Minor Outlying Islands, US Virgin Islands, USA and Wallis and Futuna.
+### Fixed
+- British National Grid references for northings of 1000km or more, and British and Irish grid references when an easting or northing is below 100km
 
 ## [5.11.1] - 2025-08-14
 ### Changed
