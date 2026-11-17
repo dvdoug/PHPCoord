@@ -635,9 +635,8 @@ trait AutoConversion
             }
         }
 
-        // A depth of 6 allows a chain to pass through a geocentric hub. If we are already
-        // starting or finishing at one, that budget is not needed.
-        $maxChainDepth ??= ($source instanceof Geocentric || $target instanceof Geocentric) ? 4 : 6;
+        // Chain depth 7: the source CRS, 5 intermediate CRSs, and the target CRS.
+        $maxChainDepth ??= 6;
 
         $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth);
         $cached = AutoConversionCache::getCachedPaths($pathKey);

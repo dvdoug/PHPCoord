@@ -950,8 +950,7 @@ class AutoConversionTest extends TestCase
     }
 
     /**
-     * EPSG:9104 NAD27 to ITRF2014 (2), Gulf of Mexico. The target is geocentric, so the default cap is 4.
-     * The chain that reaches it is 5 hops.
+     * EPSG:9104 NAD27 to ITRF2014 (2), Gulf of Mexico. The chain is 5 edges.
      */
     #[Group('integration')]
     public function testNAD27ToITRF2014GulfOfMexico(): void

@@ -108,8 +108,7 @@ Example, NAD83(CSRS)v8 (Canada velocity grid v8, North America datapack):
 
     Calculating every single possible permutation of chain between two CRSs is very computationally expensive
     and so for practicality PHPCoord ordinarily limits the chain depth to 7 (i.e. the source CRS, 5 intermediate CRSs and
-    the target CRS). If the source or target is a geocentric CRS the limit is 5 (source, 3 intermediates, and
-    the target). If you know a transformation should be possible, but PHPCoord cannot find it you may wish
+    the target CRS). If you know a transformation should be possible, but PHPCoord cannot find it you may wish
     to try an explicit 2-stage conversion (e.g. NAD27 to NAD83, NAD83 to ITRF), or pass a larger ``maxChainDepth``.
 
 Boundaries
