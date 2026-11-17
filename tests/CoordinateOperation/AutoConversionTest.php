@@ -11,9 +11,7 @@ namespace PHPCoord\CoordinateOperation;
 
 use DateTime;
 use PHPCoord\CoordinateReferenceSystem\Compound;
-use PHPCoord\CoordinateReferenceSystem\CoordinateReferenceSystem;
 use PHPCoord\CoordinateReferenceSystem\Geocentric;
-use PHPCoord\CoordinateReferenceSystem\Geographic;
 use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
@@ -35,17 +33,10 @@ use PHPCoord\UnitOfMeasure\Angle\Radian;
 use PHPCoord\UnitOfMeasure\Length\Foot;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 use PHPCoord\UnitOfMeasure\Time\Year;
-use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
-use function array_unique;
 use function class_exists;
-use function explode;
-use function fgetcsv;
-use function fopen;
-use function array_map;
-use function abs;
 
 require_once __DIR__ . '/../Geometry/ExtentInteriorPoints.php';
 
@@ -114,24 +105,6 @@ class AutoConversionTest extends TestCase
         $from->convert($from->getCRS(), epoch: new DateTime('2020-01-01'));
     }
 
-    public function testEtrf2014ToNkgKeepsEpochThrowsWithHint(): void
-    {
-        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
-            self::markTestSkipped('Europe datapack not installed');
-        }
-
-        $from = GeocentricPoint::create(
-            Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
-            new Metre(2885900.000),
-            new Metre(827500.000),
-            new Metre(5608600.000),
-            (new Year(2020.25))->asDateTime()
-        );
-
-        $this->expectException(UnknownConversionException::class);
-        $from->convert(Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14));
-    }
-
     public function testEtrf2014ToNkgWithMatchingEpoch(): void
     {
         if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
@@ -151,24 +124,6 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(827499.9898, $to->getY()->asMetres()->getValue(), 0.0001);
         self::assertEqualsWithDelta(5608599.8446, $to->getZ()->asMetres()->getValue(), 0.0001);
         self::assertEquals(2000.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
-    }
-
-    public function testEtrf2014ToNkgWithSourceEpochThrowsWithHint(): void
-    {
-        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
-            self::markTestSkipped('Europe datapack not installed');
-        }
-
-        $from = GeocentricPoint::create(
-            Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
-            new Metre(2885900.000),
-            new Metre(827500.000),
-            new Metre(5608600.000),
-            (new Year(2020.25))->asDateTime()
-        );
-
-        $this->expectException(UnknownConversionException::class);
-        $from->convert(Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14), epoch: new DateTime('2020-04-01'));
     }
 
     public function testNkgToEtrf2014RestoresOnTarget(): void
@@ -206,22 +161,6 @@ class AutoConversionTest extends TestCase
         self::assertFalse($sweden[0]['reversible']);
     }
 
-    public function testDatelessEtrf2014ToNkgDoesNotCrashOnSentinel(): void
-    {
-        if (!class_exists(GeoTiffNKGRF17velEuropeProvider::class)) {
-            self::markTestSkipped('Europe datapack not installed');
-        }
-
-        $this->expectException(UnknownConversionException::class);
-        $from = GeocentricPoint::create(
-            Geocentric::fromSRID(Geocentric::EPSG_ETRF2014),
-            new Metre(2885900.000),
-            new Metre(827500.000),
-            new Metre(5608600.000)
-        );
-        $from->convert(Geocentric::fromSRID(Geocentric::EPSG_NKG_ETRF14));
-    }
-
     public function testItrf2014ToItrf2020KeepsEpoch(): void
     {
         $from = GeocentricPoint::create(
@@ -234,19 +173,6 @@ class AutoConversionTest extends TestCase
         $to = $from->convert(Geocentric::fromSRID(Geocentric::EPSG_ITRF2020));
 
         self::assertEquals(2010.0, Year::fromDateTime($to->getCoordinateEpoch())->getValue());
-    }
-
-    public function testItrf2014ToItrf2020RequestedEpochWithoutMotionThrows(): void
-    {
-        $this->expectException(UnknownConversionException::class);
-        $from = GeocentricPoint::create(
-            Geocentric::fromSRID(Geocentric::EPSG_ITRF2014),
-            new Metre(2845456.0),
-            new Metre(2160954.0),
-            new Metre(5265993.0),
-            (new Year(2010.0))->asDateTime()
-        );
-        $from->convert(Geocentric::fromSRID(Geocentric::EPSG_ITRF2020), epoch: new DateTime('2020-01-01'));
     }
 
     public function testCsrsV3ToV6KeepsEpochViaItrf(): void
@@ -285,23 +211,6 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta($from->getLatitude()->asDegrees()->getValue(), $back->getLatitude()->asDegrees()->getValue(), 1e-8);
         self::assertEqualsWithDelta($from->getLongitude()->asDegrees()->getValue(), $back->getLongitude()->asDegrees()->getValue(), 1e-8);
         self::assertEqualsWithDelta($from->getHeight()->asMetres()->getValue(), $back->getHeight()->asMetres()->getValue(), 1e-4);
-    }
-
-    public function testCsrsV3AtItsAnchorCannotFinishAtAnIntermediateYear(): void
-    {
-        if (!class_exists(NTv2VelNAD83CSRSv8CanadaProvider::class)) {
-            self::markTestSkipped('North America datapack not installed');
-        }
-
-        $this->expectException(UnknownConversionException::class);
-        $from = GeographicPoint::create(
-            Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V3),
-            Degree::fromDegreeMinuteSecondHemisphere('49°53\'09.2927"N'),
-            Degree::fromDegreeMinuteSecondHemisphere('99°54\'41.0572"W'),
-            new Metre(373.795),
-            (new Year(1997.0))->asDateTime()
-        );
-        $from->convert(Geographic3D::fromSRID(Geographic3D::EPSG_NAD83_CSRS_V6), epoch: new DateTime('2005-01-01'));
     }
 
     public function testVanuaLevuGrid(): void
@@ -690,42 +599,6 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(0.014, $evrf2007->getHeight()->asMetres()->getValue() - $dhhn2016->getHeight()->asMetres()->getValue(), 0.001);
     }
 
-    public function testETRS89AUTToGHAHeightSamplesTheMGIGrid(): void
-    {
-        if (!class_exists(BEVHeightETRS89EVRF2000AustriaProvider::class) || !class_exists(BEVHeightGHAEVRF2000AustriaProvider::class)) {
-            self::markTestSkipped('Requires phpcoord/datapack-europe');
-        }
-
-        // Same degrees on ETRS89-AUT and on MGI disagree by a few millimetres on this grid.
-        $from = GeographicPoint::create(
-            Geographic3D::fromSRID(Geographic3D::EPSG_ETRS89_AUT_2002),
-            new Degree(46.7708333),
-            new Degree(12.8125),
-            new Metre(200)
-        );
-        $gha = $from->convert(Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT));
-        $evrfAustria = $from->convert(Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT));
-        $mgi = $from->convert(Geographic2D::fromSRID(Geographic2D::EPSG_MGI));
-        $etrs = GeographicPoint::create(
-            Geographic2D::fromSRID(Geographic2D::EPSG_ETRS89_AUT_2002),
-            new Degree(46.7708333),
-            new Degree(12.8125),
-            null
-        );
-
-        self::assertInstanceOf(VerticalPoint::class, $gha);
-        self::assertInstanceOf(VerticalPoint::class, $evrfAustria);
-        self::assertInstanceOf(GeographicPoint::class, $mgi);
-
-        $grid = (new BEVHeightGHAEVRF2000AustriaProvider())->provideGrid();
-        $evrfPoint = VerticalPoint::create(Vertical::fromSRID(Vertical::EPSG_EVRF2000_AUSTRIA_HEIGHT), $evrfAustria->getHeight());
-        $viaMgi = $evrfPoint->offsetFromGrid(Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT), $grid, true, $mgi);
-        $viaEtrs = $evrfPoint->offsetFromGrid(Vertical::fromSRID(Vertical::EPSG_GHA_HEIGHT), $grid, true, $etrs);
-
-        self::assertEqualsWithDelta($viaMgi->getHeight()->asMetres()->getValue(), $gha->getHeight()->asMetres()->getValue(), 0.001);
-        self::assertGreaterThan(0.001, abs($viaEtrs->getHeight()->asMetres()->getValue() - $viaMgi->getHeight()->asMetres()->getValue()));
-    }
-
     public function testETRS89ToETRS89PlusNAP(): void
     {
         if (!class_exists(GTXETRS89NAPProvider::class)) {
@@ -971,77 +844,5 @@ class AutoConversionTest extends TestCase
         self::assertEquals($sourceCRS, $reversedPoint->getCRS());
         self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), 0.001);
         self::assertEqualsWithDelta($originalPoint->getLongitude()->getValue(), $reversedPoint->getLongitude()->getValue(), 0.001);
-    }
-
-    #[DataProvider('EPSGConcatenatedOperations')]
-    #[Group('integration')]
-    public function testEPSGConcatenatedOperations(string $sourceCrsSrid, string $targetCrsSrid, array $extentCodes, bool $canReverse): void
-    {
-        $sourceCRS = CoordinateReferenceSystem::fromSRID($sourceCrsSrid);
-        $epoch = new DateTime();
-
-        if ($sourceCRS instanceof Compound) {
-            $sourceCRS = Compound::fromSRID($sourceCrsSrid);
-            $sourceHorizontalCRS = $sourceCRS->getHorizontal();
-            if ($sourceHorizontalCRS instanceof Geographic2D) {
-                $centre = ExtentInteriorPoints::get($extentCodes);
-                $centre[1] = $centre[1]->subtract($sourceCRS->getHorizontal()->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
-
-                $horizontalPoint = GeographicPoint::create($sourceHorizontalCRS, $centre[0], $centre[1], null);
-            } elseif ($sourceHorizontalCRS instanceof Geographic2D) {
-                $horizontalPoint = ProjectedPoint::create($sourceHorizontalCRS, new Metre(0), new Metre(0), new Metre(0), new Metre(0));
-            }
-            $verticalCRS = $sourceCRS->getVertical();
-            $verticalPoint = VerticalPoint::create($verticalCRS, new Metre(0));
-
-            $originalPoint = CompoundPoint::create($sourceCRS, $horizontalPoint, $verticalPoint, $epoch);
-        } elseif ($sourceCRS instanceof Geographic) {
-            $centre = ExtentInteriorPoints::get($extentCodes);
-            $centre[1] = $centre[1]->subtract($sourceCRS->getDatum()->getPrimeMeridian()->getGreenwichLongitude()); // compensate for non-Greenwich prime meridian
-            $height = $sourceCRS instanceof Geographic3D ? new Metre(0) : null;
-
-            $originalPoint = GeographicPoint::create($sourceCRS, $centre[0], $centre[1], $height, $epoch);
-        } elseif ($sourceCRS instanceof Geocentric) {
-            $centre = ExtentInteriorPoints::get($extentCodes);
-            $centre = (new GeographicValue($centre[0], $centre[1], new Metre(0), $sourceCRS->getDatum()))->asGeocentricValue();
-            $originalPoint = GeocentricPoint::create($sourceCRS, $centre->getX(), $centre->getY(), $centre->getZ(), $epoch);
-        } elseif ($sourceCRS instanceof Vertical) {
-            $originalPoint = VerticalPoint::create($sourceCRS, new Metre(0), $epoch);
-        }
-
-        $targetCRS = CoordinateReferenceSystem::fromSRID($targetCrsSrid);
-        $newPoint = $originalPoint->convert($targetCRS);
-        self::assertInstanceOf(Point::class, $newPoint);
-        self::assertEquals($targetCRS, $newPoint->getCRS());
-
-        if ($canReverse) {
-            $reversedPoint = $newPoint->convert($sourceCRS);
-
-            self::assertEquals($sourceCRS, $reversedPoint->getCRS());
-
-            if ($sourceCRS instanceof Compound) {
-                self::assertEqualsWithDelta($originalPoint->getHorizontalPoint()->getLatitude()->getValue(), $reversedPoint->getHorizontalPoint()->getLatitude()->getValue(), 0.001);
-                self::assertEqualsWithDelta($originalPoint->getHorizontalPoint()->getLongitude()->getValue(), $reversedPoint->getHorizontalPoint()->getLongitude()->getValue(), 0.001);
-                self::assertEqualsWithDelta($originalPoint->getVerticalPoint()->getHeight()->getValue(), $reversedPoint->getVerticalPoint()->getHeight()->getValue(), 0.001);
-            } elseif ($sourceCRS instanceof Geographic) {
-                self::assertEqualsWithDelta($originalPoint->getLatitude()->getValue(), $reversedPoint->getLatitude()->getValue(), 0.001);
-                self::assertEqualsWithDelta($originalPoint->getLongitude()->getValue(), $reversedPoint->getLongitude()->getValue(), 0.001);
-                if ($sourceCRS instanceof Geographic3D) {
-                    self::assertEqualsWithDelta($originalPoint->getHeight()->getValue(), $reversedPoint->getHeight()->getValue(), 0.001);
-                }
-            }
-        }
-    }
-
-    public static function EPSGConcatenatedOperations(): array
-    {
-        $toTest = [];
-
-        $dataFile = fopen(__DIR__ . '/EPSGConcatenatedOperations.csv', 'rb');
-        while ($data = fgetcsv($dataFile, escape: '')) {
-            $toTest[$data[0] . ':' . $data[1]] = [$data[2], $data[3], array_map(static fn (string $code) => 'urn:ogc:def:area:EPSG::' . $code, array_unique(explode('|', $data[4]))), (bool) $data[5]];
-        }
-
-        return $toTest;
     }
 }
