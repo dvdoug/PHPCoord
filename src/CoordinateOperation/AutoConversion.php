@@ -20,6 +20,7 @@ use PHPCoord\CoordinateReferenceSystem\Geographic2D;
 use PHPCoord\CoordinateReferenceSystem\Geographic3D;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\CoordinateReferenceSystem\Vertical;
+use PHPCoord\CoordinateSystem\Cartesian;
 use PHPCoord\Datum\Datum;
 use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\Exception\UnknownConversionException;
@@ -459,19 +460,6 @@ trait AutoConversion
                 }
             }
 
-            // filter out operations that use a 2D CRS as intermediate where this is a 3D point
-            $pointCRS = $this->getCRS();
-            if ($pointCRS instanceof Compound || count($pointCRS->getCoordinateSystem()->getAxes()) === 3) {
-                if ($target instanceof Compound || count($target->getCoordinateSystem()->getAxes()) !== 2) {
-                    $intermediateTarget = CoordinateReferenceSystem::fromSRID($pathStep['in_reverse'] ? $pathStep['source_crs'] : $pathStep['target_crs']);
-                    if (!$intermediateTarget instanceof Compound && count($intermediateTarget->getCoordinateSystem()->getAxes()) === 2) {
-                        $this->logger?->debug('conversion path skipped', ['reason' => 'intermediate-2d', 'at' => $i, 'operation' => $pathStep['operation'], 'accuracy' => $pathStep['accuracy'], ...$operation, 'year' => null]);
-
-                        return null;
-                    }
-                }
-            }
-
             $operationParams = CoordinateOperations::getParamData($pathStep['operation']);
 
             // filter out operations that require a grid file that we don't have, or where boundaries are not being
@@ -668,6 +656,13 @@ trait AutoConversion
             );
         }
 
+        // A geographic 2D or 2-axis projected CRS has nowhere to put the height.
+        $twoAxisCrs = [];
+        if (($source instanceof Compound || count($source->getCoordinateSystem()->getAxes()) === 3)
+            && ($target instanceof Compound || count($target->getCoordinateSystem()->getAxes()) !== 2)) {
+            $twoAxisCrs = $this->twoAxisCrsInGraph($transformationsByCRS);
+        }
+
         $iterations = 0;
         $previousSimplePaths = [[$sourceSRID]];
         $completePaths = [];
@@ -679,9 +674,10 @@ trait AutoConversion
                     $completePaths[] = $simplePath;
                 } elseif (isset($transformationsByCRS[$current])) {
                     foreach ($transformationsByCRS[$current] as $next) {
-                        if (!in_array($next, $simplePath, true)) {
-                            $simplePaths[] = [...$simplePath, $next];
+                        if (isset($twoAxisCrs[$next]) || in_array($next, $simplePath, true)) {
+                            continue;
                         }
+                        $simplePaths[] = [...$simplePath, $next];
                     }
                 }
             }
@@ -711,6 +707,45 @@ trait AutoConversion
         AutoConversionCache::setCachedPaths($pathKey, $paths);
 
         return $paths;
+    }
+
+    /**
+     * Geographic 2D and 2-axis projected SRIDs that appear in this graph.
+     *
+     * @param  array<string, array<string, string>> $byCRS
+     * @return array<string, true>
+     */
+    private function twoAxisCrsInGraph(array $byCRS): array
+    {
+        $twoAxis = [];
+        $seen = [];
+        $twoAxisCs = [];
+        foreach ($byCRS as $from => $targets) {
+            $targets[$from] = $from;
+            foreach ($targets as $srid) {
+                if (isset($seen[$srid])) {
+                    continue;
+                }
+                $seen[$srid] = true;
+                if (Geographic2D::getSRIDData($srid) !== null) {
+                    $twoAxis[$srid] = true;
+                    continue;
+                }
+                $projected = Projected::getSRIDData($srid);
+                if ($projected === null) {
+                    continue;
+                }
+                $cs = $projected['coordinate_system'];
+                if (!array_key_exists($cs, $twoAxisCs)) {
+                    $twoAxisCs[$cs] = count(Cartesian::fromSRID($cs)->getAxes()) === 2;
+                }
+                if ($twoAxisCs[$cs]) {
+                    $twoAxis[$srid] = true;
+                }
+            }
+        }
+
+        return $twoAxis;
     }
 
     /**

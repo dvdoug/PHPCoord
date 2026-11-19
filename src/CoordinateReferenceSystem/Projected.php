@@ -73,6 +73,16 @@ class Projected extends CoordinateReferenceSystem
     }
 
     /**
+     * @internal CRS table row without constructing the object (avoids loading bounding polygons)
+     *
+     * @return array<string, mixed>|null
+     */
+    public static function getSRIDData(string $srid): ?array
+    {
+        return static::$sridData[$srid] ?? null;
+    }
+
+    /**
      * @return array<string, string>
      */
     public static function getSupportedSRIDs(): array
