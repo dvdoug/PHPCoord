@@ -16,6 +16,7 @@ use PHPCoord\Point\ProjectedPoint;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
 use function abs;
+use function str_getcsv;
 
 class OSTNOSGM15Grid extends Grid
 {
@@ -92,7 +93,7 @@ class OSTNOSGM15Grid extends Grid
 
         $this->gridFile->seek($record);
         /** @var array<int, string> $rawData */
-        $rawData = $this->gridFile->fgetcsv(escape: '');
+        $rawData = str_getcsv($this->gridFile->fgets(), escape: '');
 
         return new GridValues((float) $rawData[1], (float) $rawData[2], [(float) $rawData[3], (float) $rawData[4], (float) $rawData[5]]);
     }
