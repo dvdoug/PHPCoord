@@ -123,7 +123,7 @@ jobs:
 
     - name: PHPUnit (Unit)
       run: |
-        if [ "${{ matrix.php-version }}" = "8.5" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
+        if [ "${{ matrix.php-version }}" = "8.6" ] && [ "${{ matrix.dependencies }}" = "highest" ]; then
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration --exclude-group=gigs;
         else
           php -dmemory_limit=-1 vendor/phpunit/phpunit/phpunit --exclude-group=integration --exclude-group=gigs --no-coverage;
