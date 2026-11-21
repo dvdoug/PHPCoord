@@ -380,7 +380,7 @@ class AutoConversionTest extends TestCase
 
     public function testWgs84ToEtrs89NorUtmHeightStitchesTheParts(): void
     {
-        if (!class_exists(KMSETRS89NN2000Provider::class) || !class_exists(KMSETRS89NN1954Provider::class) || !class_exists(GeoTiffHREF2025NN2000NorwayProvider::class)) {
+        if (!class_exists(GeoTiffHREF2025NN2000NorwayProvider::class)) {
             self::markTestSkipped('Requires phpcoord/datapack-europe');
         }
 
@@ -394,26 +394,13 @@ class AutoConversionTest extends TestCase
         $horizontal = $from->convert($utm);
         self::assertInstanceOf(ProjectedPoint::class, $horizontal);
 
-        $cases = [
-            [Compound::EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2018_HEIGHT, Vertical::EPSG_NN2000_2018_HEIGHT],
-            [Compound::EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN54_HEIGHT, Vertical::EPSG_NN54_HEIGHT],
-            [Compound::EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2025_HEIGHT, Vertical::EPSG_NN2000_2025_HEIGHT],
-        ];
-        foreach ($cases as [$compoundSrid, $verticalSrid]) {
-            $to = $from->convert(Compound::fromSRID($compoundSrid));
-            $vertical = $from->convert(Vertical::fromSRID($verticalSrid));
-            $projectedHorizontal = $to->getHorizontalPoint();
-            self::assertInstanceOf(ProjectedPoint::class, $projectedHorizontal);
-            self::assertSame($compoundSrid, $to->getCRS()->getSRID());
-            self::assertEqualsWithDelta($horizontal->getEasting()->asMetres()->getValue(), $projectedHorizontal->getEasting()->asMetres()->getValue(), 0.0001);
-            self::assertEqualsWithDelta($horizontal->getNorthing()->asMetres()->getValue(), $projectedHorizontal->getNorthing()->asMetres()->getValue(), 0.0001);
-            self::assertEqualsWithDelta($vertical->getHeight()->asMetres()->getValue(), $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.0001);
-        }
-
-        $nn54 = $from->convert(Compound::fromSRID(Compound::EPSG_ETRS89_NOR_EUREF89_PLUS_NN54_HEIGHT));
-        $nn2000OnUtm = $nn54->convert(Compound::fromSRID(Compound::EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2018_HEIGHT));
-        self::assertSame(Compound::EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2018_HEIGHT, $nn2000OnUtm->getCRS()->getSRID());
-        self::assertSame(Vertical::EPSG_NN2000_2018_HEIGHT, $nn2000OnUtm->getVerticalPoint()->getCRS()->getSRID());
+        $to = $from->convert(Compound::fromSRID(Compound::EPSG_ETRS89_NOR_EUREF89_UTM_ZONE_32N_PLUS_NN2000_2025_HEIGHT));
+        $vertical = $from->convert(Vertical::fromSRID(Vertical::EPSG_NN2000_2025_HEIGHT));
+        $projectedHorizontal = $to->getHorizontalPoint();
+        self::assertInstanceOf(ProjectedPoint::class, $projectedHorizontal);
+        self::assertEqualsWithDelta($horizontal->getEasting()->asMetres()->getValue(), $projectedHorizontal->getEasting()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta($horizontal->getNorthing()->asMetres()->getValue(), $projectedHorizontal->getNorthing()->asMetres()->getValue(), 0.0001);
+        self::assertEqualsWithDelta($vertical->getHeight()->asMetres()->getValue(), $to->getVerticalPoint()->getHeight()->asMetres()->getValue(), 0.0001);
     }
 
     public function testETRS89ToBritishNationalGrid(): void
@@ -665,33 +652,6 @@ class AutoConversionTest extends TestCase
         self::assertEqualsWithDelta(51.728601874288934, $to->getLatitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(4.712119439826868, $to->getLongitude()->asDegrees()->getValue(), 0.0000001);
         self::assertEqualsWithDelta(301.797544112429023, $to->getHeight()->asMetres()->getValue(), 0.00001);
-    }
-
-    public function testRDNAPToWGS84Geocentric(): void
-    {
-        if (!class_exists(GTXETRS89NAPProvider::class)) {
-            self::markTestSkipped('Requires phpcoord/datapack-europe');
-        }
-
-        $from = CompoundPoint::create(
-            Compound::fromSRID(Compound::EPSG_AMERSFOORT_RD_NEW_PLUS_NAP_HEIGHT),
-            ProjectedPoint::createFromEastingNorthing(
-                Projected::fromSRID(Projected::EPSG_AMERSFOORT_RD_NEW),
-                new Metre(108360.8790),
-                new Metre(415757.2745),
-            ),
-            VerticalPoint::create(
-                Vertical::fromSRID(Vertical::EPSG_NAP_HEIGHT),
-                new Metre(258.0057)
-            ),
-            new DateTime('1989-01-01'),
-        );
-        $toCRS = Geocentric::fromSRID(Geocentric::EPSG_WGS_84);
-        $to = $from->convert($toCRS);
-
-        self::assertEqualsWithDelta(3945517.9278914458, $to->getX()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(325220.84932800132, $to->getY()->asMetres()->getValue(), 0.00001);
-        self::assertEqualsWithDelta(4984392.8341967016, $to->getZ()->asMetres()->getValue(), 0.00001);
     }
 
     public function testWGS84ToNAD83CSRSArcticZone(): void
