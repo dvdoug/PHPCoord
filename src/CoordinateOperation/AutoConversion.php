@@ -623,8 +623,7 @@ trait AutoConversion
             }
         }
 
-        // Chain depth 7: the source CRS, 5 intermediate CRSs, and the target CRS.
-        $maxChainDepth ??= 6;
+        $maxChainDepth ??= ($source instanceof Projected || $target instanceof Projected) ? 7 : 6;
 
         $pathKey = AutoConversionCache::pathCacheKey($sourceSRID, $targetSRID, $overlayIds, count($customTransformations), $maxChainDepth);
         $cached = AutoConversionCache::getCachedPaths($pathKey);
