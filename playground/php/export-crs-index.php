@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace PHPCoord\Playground;
 
+use PHPCoord\CoordinateOperation\CoordinateOperationMethods;
+use PHPCoord\CoordinateOperation\CoordinateOperations;
 use PHPCoord\CoordinateOperation\CRSTransformationsAfrica;
 use PHPCoord\CoordinateOperation\CRSTransformationsAntarctic;
 use PHPCoord\CoordinateOperation\CRSTransformationsArctic;
@@ -46,6 +48,8 @@ use RuntimeException;
 use Throwable;
 
 use function array_fill_keys;
+use function array_keys;
+use function array_pop;
 use function chdir;
 use function count;
 use function dirname;
@@ -156,6 +160,10 @@ $axesFor = static function (string $coordinateSystem) use (&$coordinateSystemAxe
 $bySrid = [];
 /** @var array<string, list<int>> $scopesBySrid */
 $scopesBySrid = [];
+/** @var array<string, string> $datumOf */
+$datumOf = [];
+/** @var array<string, string> $projectedBase */
+$projectedBase = [];
 $kinds = [
     'geographic2d' => Geographic2D::class,
     'geographic3d' => Geographic3D::class,
@@ -184,14 +192,39 @@ foreach ($kinds as $kind => $class) {
             $bySrid[$srid]['usng'] = true;
         }
         $scopesBySrid[$srid] = usageScopes($row);
+        if (isset($row['datum']) && is_string($row['datum'])) {
+            $datumOf[$srid] = $row['datum'];
+        } elseif ($kind === 'projected' && isset($row['base_crs']) && is_string($row['base_crs'])) {
+            $projectedBase[$srid] = $row['base_crs'];
+        }
     }
 }
+foreach ($projectedBase as $srid => $base) {
+    if (isset($datumOf[$base])) {
+        $datumOf[$srid] = $datumOf[$base];
+    }
+}
+unset($projectedBase);
 
 $verticalRows = sridRows(Vertical::class);
-// A CRS that is not an endpoint of a shipped operation cannot be converted.
+// One set of operations answers both questions: does this CRS have an operation,
+// and which datum component is it in. An alias only renames a CRS. A transform
+// that needs a date on the point, one published year or any year, is not a way
+// to reach another datum. A time-dependent Helmert still runs without a date.
 // A compound that is not itself an endpoint still converts when both of its
 // components have operations. A component that only had a missing grid does not.
-$endpoints = operationEndpoints();
+$disregarded = disregardedOperationIds();
+$endpoints = operationEndpoints($disregarded);
+// A component that names only one datum has no path to any other datum.
+$islands = singleDatumIslands($datumOf, $disregarded);
+unset($datumOf);
+$islandOmitted = 0;
+foreach (array_keys($bySrid) as $srid) {
+    if (isset($islands[$srid])) {
+        unset($bySrid[$srid], $scopesBySrid[$srid]);
+        ++$islandOmitted;
+    }
+}
 $omitted = 0;
 foreach (sridRows(Compound::class) as $srid => $row) {
     if (isset($bySrid[$srid])) {
@@ -201,7 +234,15 @@ foreach (sridRows(Compound::class) as $srid => $row) {
         throw new RuntimeException('Compound CRS ' . $srid . ' is missing a component');
     }
     if (!isset($bySrid[$row['horizontal_crs']])) {
+        if (isset($islands[$row['horizontal_crs']]) || isset($islands[$srid])) {
+            ++$islandOmitted;
+            continue;
+        }
         throw new RuntimeException('Compound CRS ' . $srid . ' has an unknown horizontal CRS');
+    }
+    if (isset($islands[$srid])) {
+        ++$islandOmitted;
+        continue;
     }
     $vertical = $verticalRows[$row['vertical_crs']] ?? null;
     if (!is_array($vertical) || !isset($vertical['coordinate_system']) || !is_string($vertical['coordinate_system'])) {
@@ -243,6 +284,19 @@ foreach ($bySrid as $srid => $entry) {
         }
     }
 }
+// An alias names this CRS as another one. Drop it when that other CRS was already dropped.
+$aliasOmitted = 0;
+$aliasEdges = aliasEdges();
+do {
+    $removedAlias = false;
+    foreach ($aliasEdges as [$source, $target]) {
+        if (isset($bySrid[$source]) && !isset($bySrid[$target])) {
+            unset($bySrid[$source], $scopesBySrid[$source]);
+            ++$aliasOmitted;
+            $removedAlias = true;
+        }
+    }
+} while ($removedAlias);
 
 // getParamData() loads operation files from the CoordinateOperation directory.
 chdir($repoRoot . '/src/CoordinateOperation');
@@ -347,15 +401,118 @@ if (file_put_contents($destination, $encoded) === false) {
     throw new RuntimeException('Could not write ' . $destination);
 }
 
-echo 'Wrote ' . count($crs) . ' coordinate reference systems to ' . $destination . ' (' . $omitted . ' omitted with no shipped operation, ' . $scopeOmitted . " omitted with a blacklisted scope)\n";
+echo 'Wrote ' . count($crs) . ' coordinate reference systems to ' . $destination . ' (' . $omitted . ' omitted with no shipped operation, ' . $scopeOmitted . ' omitted with a blacklisted scope, ' . $islandOmitted . ' omitted as a single-datum island, ' . $aliasOmitted . " omitted as an alias of an excluded CRS)\n";
+
+/**
+ * Shipped alias operations, source CRS then the CRS it is an alias of.
+ *
+ * @return list<array{string, string}>
+ */
+function aliasEdges(): array
+{
+    $aliasOperations = aliasOperationIds();
+    $edges = [];
+    foreach (transformationClasses() as $class) {
+        foreach ($class::getSupportedTransformations() as $transformation) {
+            if (!isset($aliasOperations[$transformation['operation']])) {
+                continue;
+            }
+            $edges[] = [$transformation['source_crs'], $transformation['target_crs']];
+        }
+    }
+
+    return $edges;
+}
 
 /**
  * @return array<string, true>
  */
-function operationEndpoints(): array
+function aliasOperationIds(): array
+{
+    $aliasOperations = [];
+    foreach (sridRows(CoordinateOperations::class) as $urn => $row) {
+        if (is_array($row) && ($row['method'] ?? '') === CoordinateOperationMethods::EPSG_ALIAS) {
+            $aliasOperations[$urn] = true;
+        }
+    }
+
+    return $aliasOperations;
+}
+
+/**
+ * Operations a dateless point cannot run.
+ *
+ * A time-specific transform is valid at one year. An epoch-changing velocity
+ * step and a point-motion step need some year on the point.
+ *
+ * @return array<string, true>
+ */
+function dateRequiringOperationIds(): array
+{
+    $methods = [
+        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_POSITION_VECTOR_TRANSFORM_GEOCEN => true,
+        CoordinateOperationMethods::EPSG_TIME_SPECIFIC_COORDINATE_FRAME_ROTATION_GEOCEN => true,
+        CoordinateOperationMethods::EPSG_GEOCENTRIC_TRANSLATIONS_USING_NEU_VELOCITY_GRID_GTG => true,
+        CoordinateOperationMethods::EPSG_GEOCEN_TRANSLATIONS_BY_GRID_GTG_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => true,
+        CoordinateOperationMethods::EPSG_POSITION_VECTOR_GEOCEN_AND_GEOCEN_TRANSLATIONS_NEU_VELOCITIES_GTG => true,
+        CoordinateOperationMethods::EPSG_GEOGRAPHIC3D_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => true,
+        CoordinateOperationMethods::EPSG_VERTICAL_OFFSET_USING_NEU_VELOCITY_GRID_NTV2_VEL => true,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITIES => true,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_NEU_VELOCITIES => true,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOCEN_DOMAIN_USING_XYZ_VELOCITY_GRID_BGN => true,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITIES => true,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_NTV2_VEL => true,
+        CoordinateOperationMethods::EPSG_POINT_MOTION_GEOG3D_DOMAIN_USING_NEU_VELOCITY_GRID_GTG => true,
+    ];
+    $operations = [];
+    foreach (sridRows(CoordinateOperations::class) as $urn => $row) {
+        if (is_array($row) && isset($methods[$row['method'] ?? ''])) {
+            $operations[$urn] = true;
+        }
+    }
+
+    return $operations;
+}
+
+/**
+ * Operations that do not count toward reachability.
+ *
+ * @return array<string, true>
+ */
+function disregardedOperationIds(): array
+{
+    return aliasOperationIds() + dateRequiringOperationIds();
+}
+
+/**
+ * Endpoints of the operations that count toward reachability.
+ *
+ * @param array<string, true> $disregarded
+ *
+ * @return array<string, true>
+ */
+function operationEndpoints(array $disregarded): array
 {
     $endpoints = [];
-    foreach ([
+    foreach (transformationClasses() as $class) {
+        foreach ($class::getSupportedTransformations() as $transformation) {
+            if (isset($disregarded[$transformation['operation']])) {
+                continue;
+            }
+            $endpoints[$transformation['source_crs']] = true;
+            $endpoints[$transformation['target_crs']] = true;
+        }
+    }
+
+    return $endpoints;
+}
+
+/**
+ * @return list<class-string>
+ */
+function transformationClasses(): array
+{
+    return [
         CRSTransformationsGlobal::class,
         CRSTransformationsAfrica::class,
         CRSTransformationsAntarctic::class,
@@ -365,14 +522,67 @@ function operationEndpoints(): array
         CRSTransformationsNorthAmerica::class,
         CRSTransformationsOceania::class,
         CRSTransformationsSouthAmerica::class,
-    ] as $class) {
+    ];
+}
+
+/**
+ * Members of a component that names only one datum.
+ *
+ * The edges are the same operations that count as endpoints. A geographic or geocentric CRS contributes its own
+ * datum, and a projected CRS contributes the datum of its base. A vertical CRS contributes none, so a height tied
+ * to an island does not by itself connect that island to another datum.
+ *
+ * @param array<string, string> $datumOf
+ * @param array<string, true>   $disregarded
+ *
+ * @return array<string, true>
+ */
+function singleDatumIslands(array $datumOf, array $disregarded): array
+{
+    $adjacent = [];
+    foreach (transformationClasses() as $class) {
         foreach ($class::getSupportedTransformations() as $transformation) {
-            $endpoints[$transformation['source_crs']] = true;
-            $endpoints[$transformation['target_crs']] = true;
+            if (isset($disregarded[$transformation['operation']])) {
+                continue;
+            }
+            $source = $transformation['source_crs'];
+            $target = $transformation['target_crs'];
+            $adjacent[$source][$target] = true;
+            $adjacent[$target][$source] = true;
         }
     }
 
-    return $endpoints;
+    $islands = [];
+    $seen = [];
+    foreach (array_keys($datumOf) as $start) {
+        if (isset($seen[$start]) || !isset($adjacent[$start])) {
+            continue;
+        }
+        $members = [];
+        $datums = [];
+        $pending = [$start];
+        $seen[$start] = true;
+        while ($pending) {
+            $srid = array_pop($pending);
+            $members[] = $srid;
+            if (isset($datumOf[$srid])) {
+                $datums[$datumOf[$srid]] = true;
+            }
+            foreach (array_keys($adjacent[$srid]) as $next) {
+                if (!isset($seen[$next])) {
+                    $seen[$next] = true;
+                    $pending[] = $next;
+                }
+            }
+        }
+        if (count($datums) === 1) {
+            foreach ($members as $member) {
+                $islands[$member] = true;
+            }
+        }
+    }
+
+    return $islands;
 }
 
 /**
