@@ -11,8 +11,8 @@ to another and also calculate distance between points.
 
 <!-- numOfCRS -->8343 different coordinate systems are supported, covering the entire globe. Some common systems supported include:
  - WGS84 (GPS)
- - OSGB36 (Great Britain)
- - NAD27, NAD83 and NATRF2022 (North America)
+ - OSGB36 including British National Grid (Great Britain)
+ - NAD27, NAD83 and NATRF2022 including State Plane and US National Grid (North America)
  - UTM (Universal Transverse Mercator)
  - ED50 and ETRS89 (Europe)
  - GDA94 and GDA2020 (Australia)
