@@ -58,6 +58,8 @@ use function asinh;
 use function atan;
 use function atan2;
 use function atanh;
+use function class_alias;
+use function class_exists;
 use function cos;
 use function cosh;
 use function count;
@@ -2761,4 +2763,8 @@ class GeographicPoint extends Point implements ConvertiblePoint
 
         return new UTMPoint($this->crs, $asProjected->getEasting(), $asProjected->getNorthing(), $zone, $hemisphere, $this->epoch);
     }
+}
+
+if (!class_exists('PHPCoord\GeographicPoint', false)) {
+    class_alias(GeographicPoint::class, 'PHPCoord\GeographicPoint');
 }

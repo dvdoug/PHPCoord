@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+### Fixed
+- Backwards compatible class aliases for the old `PHPCoord\*Point` namespace are now declared lazily, so including
+  Composer's autoloader no longer loads all point and CRS classes (saving ~20 MB of memory)
 
 ## [5.12.0] - 2026-11-22
 ### Added

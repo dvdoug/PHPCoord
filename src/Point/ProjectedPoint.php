@@ -46,6 +46,8 @@ use function asinh;
 use function atan;
 use function atan2;
 use function atanh;
+use function class_alias;
+use function class_exists;
 use function cos;
 use function cosh;
 use function count;
@@ -2343,4 +2345,8 @@ class ProjectedPoint extends Point implements ConvertiblePoint
 
         return GeographicPoint::create($to, new Radian($latitude), new Radian($longitude), null, $this->epoch);
     }
+}
+
+if (!class_exists('PHPCoord\ProjectedPoint', false)) {
+    class_alias(ProjectedPoint::class, 'PHPCoord\ProjectedPoint');
 }

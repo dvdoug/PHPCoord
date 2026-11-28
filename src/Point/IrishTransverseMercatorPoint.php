@@ -13,6 +13,9 @@ use DateTimeInterface;
 use PHPCoord\CoordinateReferenceSystem\Projected;
 use PHPCoord\UnitOfMeasure\Length\Length;
 
+use function class_alias;
+use function class_exists;
+
 /**
  * N.B. This is the current ITM system, for the older 1975 system @see IrishGridPoint.
  */
@@ -22,4 +25,8 @@ class IrishTransverseMercatorPoint extends ProjectedPoint
     {
         parent::__construct(Projected::fromSRID(Projected::EPSG_IRENET95_IRISH_TRANSVERSE_MERCATOR), $easting, $northing, null, null, $epoch, null, $accuracy);
     }
+}
+
+if (!class_exists('PHPCoord\IrishTransverseMercatorPoint', false)) {
+    class_alias(IrishTransverseMercatorPoint::class, 'PHPCoord\IrishTransverseMercatorPoint');
 }

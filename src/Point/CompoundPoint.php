@@ -37,6 +37,8 @@ use PHPCoord\UnitOfMeasure\Scale\Unity;
 use Throwable;
 
 use function assert;
+use function class_alias;
+use function class_exists;
 
 /**
  * Coordinate representing a point expressed in 2 different CRSs (2D horizontal + 1D Vertical).
@@ -373,4 +375,8 @@ class CompoundPoint extends Point implements ConvertiblePoint
             $inReverse
         );
     }
+}
+
+if (!class_exists('PHPCoord\CompoundPoint', false)) {
+    class_alias(CompoundPoint::class, 'PHPCoord\CompoundPoint');
 }

@@ -24,6 +24,8 @@ use PHPCoord\Geometry\Position;
 use PHPCoord\Geometry\RegionMap;
 use PHPCoord\UnitOfMeasure\Length\Length;
 
+use function class_alias;
+use function class_exists;
 use function str_replace;
 
 class UTMPoint extends ProjectedPoint
@@ -143,4 +145,8 @@ class UTMPoint extends ProjectedPoint
     {
         return $this->getZone() . $this->getHemisphere() . ' ' . (int) $this->easting->getValue() . ' ' . (int) $this->northing->getValue();
     }
+}
+
+if (!class_exists('PHPCoord\UTMPoint', false)) {
+    class_alias(UTMPoint::class, 'PHPCoord\UTMPoint');
 }
