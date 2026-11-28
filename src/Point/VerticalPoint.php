@@ -23,6 +23,8 @@ use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
 use function abs;
+use function class_alias;
+use function class_exists;
 use function cos;
 use function sin;
 use function sqrt;
@@ -242,4 +244,8 @@ class VerticalPoint extends Point
             $targetAnchor->asDateTime()
         );
     }
+}
+
+if (!class_exists('PHPCoord\VerticalPoint', false)) {
+    class_alias(VerticalPoint::class, 'PHPCoord\VerticalPoint');
 }

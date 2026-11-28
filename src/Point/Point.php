@@ -35,6 +35,7 @@ use function asin;
 use function assert;
 use function atan;
 use function atan2;
+use function class_alias;
 use function class_exists;
 use function is_string;
 use function property_exists;
@@ -446,4 +447,8 @@ abstract class Point implements Stringable
     abstract public function getAccuracy(): ?Length;
 
     abstract public function calculateDistance(self $to): Length;
+}
+
+if (!class_exists('PHPCoord\Point', false)) {
+    class_alias(Point::class, 'PHPCoord\Point');
 }

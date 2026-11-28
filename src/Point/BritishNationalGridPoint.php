@@ -15,6 +15,8 @@ use PHPCoord\Exception\InvalidCoordinateException;
 use PHPCoord\UnitOfMeasure\Length\Length;
 use PHPCoord\UnitOfMeasure\Length\Metre;
 
+use function class_alias;
+use function class_exists;
 use function floor;
 use function implode;
 use function intdiv;
@@ -124,4 +126,8 @@ class BritishNationalGridPoint extends ProjectedPoint
             substr(str_pad((string) ($northing % 100000), 5, '0', STR_PAD_LEFT), 0, $halfLength),
         ];
     }
+}
+
+if (!class_exists('PHPCoord\BritishNationalGridPoint', false)) {
+    class_alias(BritishNationalGridPoint::class, 'PHPCoord\BritishNationalGridPoint');
 }

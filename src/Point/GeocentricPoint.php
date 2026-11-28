@@ -38,6 +38,8 @@ use PHPCoord\UnitOfMeasure\Time\Time;
 use PHPCoord\UnitOfMeasure\Time\Year;
 
 use function abs;
+use function class_alias;
+use function class_exists;
 use function cos;
 use function sin;
 use function sprintf;
@@ -847,4 +849,8 @@ class GeocentricPoint extends Point implements ConvertiblePoint
     {
         return (new GeocentricValue($this->x, $this->y, $this->z, $this->getCRS()->getDatum()))->asGeographicValue();
     }
+}
+
+if (!class_exists('PHPCoord\GeocentricPoint', false)) {
+    class_alias(GeocentricPoint::class, 'PHPCoord\GeocentricPoint');
 }
